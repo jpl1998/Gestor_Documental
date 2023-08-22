@@ -1,0 +1,136 @@
+{
+  "17c8d167-044a-47fe-bc8d-da15ce1f963d": {
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Usuários do Office 365",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1649/1.0.1649.3368/office365users/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365users",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "UsuáriosdoOffice365"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "17c8d167-044a-47fe-bc8d-da15ce1f963d"
+  },
+  "e241a094-95cf-481b-a881-88d66c95707a": {
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/shgogna/globalperconnector-train1/1.0.1639.3310/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://luzdelsurlds.sharepoint.com/sites/DEV-Gestindocumental": {
+        "dataSources": {
+          "DEV_Acta_Aprobacion": {
+            "tableName": "5844848c-32f2-47b9-b105-e97b5212a31d"
+          },
+          "DEV_Actor": {
+            "tableName": "93a3afbc-b526-497a-bb9b-7729540c13b7"
+          },
+          "DEV_Alcance": {
+            "tableName": "284f073c-62fb-4d83-b8c7-3bbae9d51c93"
+          },
+          "DEV_ArchivoPrincipal": {
+            "tableName": "c5a1aaf8-1c99-4ca9-9de7-5d2204695491"
+          },
+          "DEV_CECO": {
+            "tableName": "c0d7fe35-ca72-405c-9693-7098f37f164a"
+          },
+          "DEV_Departamento": {
+            "tableName": "13162dda-600e-4267-9b38-099cea675570"
+          },
+          "DEV_Documento": {
+            "tableName": "e0a36371-d54b-4414-b538-830f3503fdfd"
+          },
+          "DEV_Empresa": {
+            "tableName": "80057c46-79d6-4c25-a2e0-8c73f8afae11"
+          },
+          "DEV_Estatus_archivos": {
+            "tableName": "7bf751f9-93b8-4cfc-a612-e7cef9dd6088"
+          },
+          "DEV_Estatus_proceso_doc": {
+            "tableName": "bae78152-b17f-4a53-a02a-cb3c2c852ae8"
+          },
+          "DEV_Estructura_Organizativa": {
+            "tableName": "0fcc1785-e40f-4c4a-b9ac-dfa65a8a2275"
+          },
+          "DEV_Flujograma": {
+            "tableName": "c239fba5-54af-4d79-9850-337e50b25fb0"
+          },
+          "DEV_Funcion": {
+            "tableName": "a84a0bad-9ec2-4401-bd22-e2e26e96e8f5"
+          },
+          "DEV_Gerencia": {
+            "tableName": "0a12fa0c-7829-4a2b-bcf5-41e7a6aff688"
+          },
+          "DEV_Interlocutor": {
+            "tableName": "de5e067d-22ee-4427-bc9e-8ffa0deeb1ab"
+          },
+          "DEV_Interlocutor_funcion": {
+            "tableName": "e5036e1d-5d07-4f86-9cfd-08ec349577f3"
+          },
+          "DEV_Macroproceso": {
+            "tableName": "ea7fd8ae-9484-4319-b23b-89f6d065e803"
+          },
+          "DEV_Modificacion_estatus_documento": {
+            "tableName": "bde00fb2-6169-44d6-8114-2a7572a6429f"
+          },
+          "DEV_Modificacion_estatus_proceso_doc": {
+            "tableName": "5894b276-516f-4fa0-843d-f155b6101ac8"
+          },
+          "DEV_Posicion": {
+            "tableName": "9dcb6923-7a2f-4925-9d1d-6893cc0fd807"
+          },
+          "DEV_Proceso": {
+            "tableName": "035955bd-b156-4984-8526-88d5b99fff18"
+          },
+          "DEV_RCKI": {
+            "tableName": "3b49e144-e642-4cbf-bef3-7b40ddf2960e"
+          },
+          "DEV_Subgerencia": {
+            "tableName": "9c6d15e2-be4f-4807-b86f-1a48c5c4779a"
+          },
+          "DEV_TipoDocumento": {
+            "tableName": "a2ed46bf-c4db-48ca-99f4-5c3086b127a3"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "DEV_Actor",
+      "DEV_Alcance",
+      "DEV_ArchivoPrincipal",
+      "DEV_CECO",
+      "DEV_Departamento",
+      "DEV_Acta_Aprobacion",
+      "DEV_Documento",
+      "DEV_Empresa",
+      "DEV_Estatus_archivos",
+      "DEV_Estatus_proceso_doc",
+      "DEV_Estructura_Organizativa",
+      "DEV_Flujograma",
+      "DEV_Funcion",
+      "DEV_Gerencia",
+      "DEV_Interlocutor",
+      "DEV_Interlocutor_funcion",
+      "DEV_Macroproceso",
+      "DEV_Modificacion_estatus_documento",
+      "DEV_Modificacion_estatus_proceso_doc",
+      "DEV_Posicion",
+      "DEV_Proceso",
+      "DEV_RCKI",
+      "DEV_Subgerencia",
+      "DEV_TipoDocumento"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "e241a094-95cf-481b-a881-88d66c95707a"
+  }
+}
