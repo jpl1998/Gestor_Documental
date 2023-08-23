@@ -1,6 +1,6 @@
 "'Home OP' As screen.'autoLayout_Sidebar_ver1.0'":
 
-    ScreenContainer1 As groupContainer.verticalAutoLayoutContainer:
+    main_home_op As groupContainer.verticalAutoLayoutContainer:
         Fill: =RGBA(245, 245, 245, 1)
         Height: =Parent.Height
         LayoutAlignItems: =LayoutAlignItems.Stretch
@@ -9,7 +9,8 @@
         Width: =Parent.Width
         ZIndex: =1
 
-        HeaderContainer1 As groupContainer.horizontalAutoLayoutContainer:
+        header_home_op As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
             Fill: =RGBA(255, 255, 255, 1)
             FillPortions: =0
             Height: =75
@@ -27,7 +28,6 @@
             ZIndex: =2
 
             Image1 As image:
-                AlignInContainer: =AlignInContainer.Stretch
                 Height: =50
                 Image: =LogoLuzDelSur
                 LayoutMinHeight: =50
@@ -35,6 +35,7 @@
                 ZIndex: =1
 
             Container1 As groupContainer.horizontalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
                 DropShadow: =DropShadow.None
                 FillPortions: =0.5
                 LayoutAlignItems: =LayoutAlignItems.Center
@@ -87,7 +88,8 @@
                     Width: =Self.Height
                     ZIndex: =2
 
-        BottomContainer1 As groupContainer.horizontalAutoLayoutContainer:
+        body_home_op As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
             DropShadow: =DropShadow.None
             Fill: =RGBA(245, 245, 245, 1)
             LayoutAlignItems: =LayoutAlignItems.Stretch
@@ -101,7 +103,8 @@
             PaddingTop: =2
             ZIndex: =3
 
-            SidebarContainer1 As groupContainer.verticalAutoLayoutContainer:
+            sidebar_home_op As groupContainer.verticalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
                 Fill: =RGBA(255, 255, 255, 1)
                 FillPortions: =1.5
                 LayoutDirection: =LayoutDirection.Vertical
@@ -116,8 +119,7 @@
                 RadiusTopRight: =0
                 ZIndex: =4
 
-                Label1_2 As label:
-                    AlignInContainer: =AlignInContainer.Stretch
+                menu_title_home_op As label:
                     Color: =secondarytext
                     Font: =Font.'Segoe UI'
                     LayoutMinHeight: =20
@@ -125,7 +127,7 @@
                     Text: ="MENU"
                     ZIndex: =1
 
-                Gallery1 As gallery.galleryVertical:
+                menu_itens_home_op As gallery.galleryVertical:
                     DelayItemLoading: =true
                     FillPortions: =0
                     Items: |-
@@ -141,13 +143,13 @@
                     TemplateSize: =50  
                     ZIndex: =2
 
-                    Container4 As groupContainer.manualLayoutContainer:
+                    menu_item_home_op As groupContainer.manualLayoutContainer:
                         DropShadow: =DropShadow.None
                         Height: =Parent.TemplateHeight
                         Width: =Parent.TemplateWidth
                         ZIndex: =2
 
-                        Container3 As groupContainer.horizontalAutoLayoutContainer:
+                        div_menu_item_home_op As groupContainer.horizontalAutoLayoutContainer:
                             DropShadow: =DropShadow.None
                             Fill: =If(ThisItem.Name="Home",primary , Color.Transparent)
                             Height: =Parent.Height
@@ -156,21 +158,21 @@
                             Width: =Parent.Width
                             ZIndex: =1
 
-                            Image3 As image:
+                            icon_menu_home_op As image:
                                 AlignInContainer: =AlignInContainer.Stretch
                                 Image: =ThisItem.Logo
                                 LayoutMinHeight: =50
                                 Width: =40
                                 ZIndex: =1
 
-                            Label2 As label:
+                            txt_menu_home_op As label:
                                 Color: =If(ThisItem.Name = "Home" , Color.White,secondarytext)
                                 FillPortions: =1
                                 Size: =12
                                 Text: =ThisItem.Name
                                 ZIndex: =2
 
-                        Button1 As button:
+                        bt_menu_item_home_op As button:
                             Fill: =RGBA(0, 0, 0, 0)
                             Height: =Parent.Height
                             HoverFill: =
@@ -180,7 +182,8 @@
                             Width: =Parent.Width
                             ZIndex: =2
 
-            MainContainer1 As groupContainer.verticalAutoLayoutContainer:
+            section_home_op As groupContainer.verticalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
                 Fill: =RGBA(246, 247, 251, 1)
                 FillPortions: =7
                 LayoutDirection: =LayoutDirection.Vertical
@@ -193,7 +196,8 @@
                 RadiusTopRight: =0
                 ZIndex: =5
 
-                Canvas1_1 As fluidGrid.fluidGridWithBlankCard:
+                scroll_home_op As fluidGrid.fluidGridWithBlankCard:
+                    AlignInContainer: =AlignInContainer.SetByContainer
                     BorderThickness: =0
                     Height: =Parent.Height - Self.Y
                     LayoutMinHeight: =250
@@ -201,7 +205,7 @@
                     Width: =Parent.Width
                     ZIndex: =1
 
-                    DataCard1_1 As dataCard:
+                    card_title_home_op As dataCard:
                         BorderColor: =RGBA(0, 0, 0, 1)
                         BorderStyle: =BorderStyle.Solid
                         BorderThickness: =0
@@ -213,7 +217,7 @@
                         Y: =0
                         ZIndex: =1
 
-                        Container6 As groupContainer.horizontalAutoLayoutContainer:
+                        div_title_home_op As groupContainer.horizontalAutoLayoutContainer:
                             DropShadow: =DropShadow.None
                             Height: =170
                             LayoutGap: =20
@@ -225,7 +229,7 @@
                             Width: =Parent.Width
                             ZIndex: =1
 
-                            Container7 As groupContainer.horizontalAutoLayoutContainer:
+                            card1_div_title_home_op As groupContainer.horizontalAutoLayoutContainer:
                                 Fill: =RGBA(255, 255, 255, 1)
                                 LayoutAlignItems: =LayoutAlignItems.Center
                                 LayoutJustifyContent: =LayoutJustifyContent.Center
@@ -236,7 +240,7 @@
                                 PaddingRight: =15
                                 ZIndex: =1
 
-                                Image4 As image:
+                                icon_card1_div_home_op As image:
                                     BorderColor: =RGBA(0, 13, 75, 1)
                                     Height: =80
                                     Image: ='Document Sync (1)'
@@ -276,7 +280,7 @@
                                         Text: ="Documentos en Proceso"
                                         ZIndex: =2
 
-                            Container7_1 As groupContainer.horizontalAutoLayoutContainer:
+                            card2_div_title_home_op As groupContainer.horizontalAutoLayoutContainer:
                                 Fill: =RGBA(255, 255, 255, 1)
                                 LayoutAlignItems: =LayoutAlignItems.Center
                                 LayoutJustifyContent: =LayoutJustifyContent.Center
@@ -295,6 +299,7 @@
                                     ZIndex: =1
 
                                 Container8_1 As groupContainer.verticalAutoLayoutContainer:
+                                    AlignInContainer: =AlignInContainer.SetByContainer
                                     DropShadow: =DropShadow.None
                                     FillPortions: =0
                                     LayoutDirection: =LayoutDirection.Vertical
@@ -327,7 +332,7 @@
                                         Text: ="Documentos por Revisar"
                                         ZIndex: =2
 
-                            Container7_2 As groupContainer.horizontalAutoLayoutContainer:
+                            card3_div_title_home_op As groupContainer.horizontalAutoLayoutContainer:
                                 Fill: =RGBA(255, 255, 255, 1)
                                 LayoutAlignItems: =LayoutAlignItems.Center
                                 LayoutJustifyContent: =LayoutJustifyContent.Center
@@ -346,6 +351,7 @@
                                     ZIndex: =1
 
                                 Container8_2 As groupContainer.verticalAutoLayoutContainer:
+                                    AlignInContainer: =AlignInContainer.SetByContainer
                                     DropShadow: =DropShadow.None
                                     FillPortions: =0
                                     LayoutDirection: =LayoutDirection.Vertical
@@ -378,7 +384,7 @@
                                         Text: ="Documentos por Aprobar"
                                         ZIndex: =2
 
-                    DataCard2_1 As dataCard.blankCard:
+                    card_doc_rev_home_op As dataCard.blankCard:
                         BorderColor: =RGBA(0, 0, 0, 1)
                         BorderStyle: =BorderStyle.Solid
                         DisplayMode: =DisplayMode.Edit
@@ -666,7 +672,7 @@
                                                     Y: =(Parent.Height-Self.Height)/2
                                                     ZIndex: =1
 
-                    DataCard3 As dataCard.blankCard:
+                    card_doc_ofi_home_op As dataCard.blankCard:
                         BorderColor: =RGBA(0, 0, 0, 1)
                         BorderStyle: =BorderStyle.Solid
                         DisplayMode: =DisplayMode.Edit
