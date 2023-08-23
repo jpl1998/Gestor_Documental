@@ -1,0 +1,1719 @@
+"'Home RA' As screen.'autoLayout_Sidebar_ver1.0'":
+
+    main_home_ra As groupContainer.verticalAutoLayoutContainer:
+        Fill: =RGBA(245, 245, 245, 1)
+        Height: =Parent.Height
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =Parent.Width
+        ZIndex: =1
+
+        header_home_ra As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            Fill: =RGBA(255, 255, 255, 1)
+            FillPortions: =0
+            Height: =75
+            LayoutGap: =20
+            LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            PaddingLeft: =10
+            PaddingRight: =10
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            ZIndex: =2
+
+            main_logo_ra As image:
+                AlignInContainer: =AlignInContainer.Stretch
+                Height: =50
+                Image: =LogoLuzDelSur
+                LayoutMinHeight: =50
+                Width: =180
+                ZIndex: =1
+
+            main_usuario_ra As groupContainer.horizontalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                DropShadow: =DropShadow.None
+                FillPortions: =0.5
+                Height: =75
+                LayoutAlignItems: =LayoutAlignItems.Center
+                LayoutGap: =5
+                LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+                LayoutMinHeight: =50
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                ZIndex: =3
+
+                main_usuario_datos_ra As groupContainer.verticalAutoLayoutContainer:
+                    DropShadow: =DropShadow.None
+                    LayoutAlignItems: =LayoutAlignItems.End
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =50
+                    LayoutMinWidth: =150
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =5
+                    PaddingTop: =5
+                    Width: =200
+                    ZIndex: =1
+
+                    Label1_2 As label:
+                        Align: =Align.Right
+                        AlignInContainer: =AlignInContainer.Stretch
+                        FillPortions: =1
+                        Font: =Font.'Segoe UI'
+                        LayoutMinHeight: =20
+                        Text: =User().FullName
+                        ZIndex: =1
+
+                    Label1_12 As label:
+                        Align: =Align.Right
+                        AlignInContainer: =AlignInContainer.Stretch
+                        FillPortions: =1
+                        Font: =Font.'Segoe UI'
+                        LayoutMinHeight: =20
+                        Size: =9
+                        Text: =UsuáriosdoOffice365.MyProfileV2().department
+                        ZIndex: =2
+
+                Image1_5 As image:
+                    Height: =50
+                    Image: =User().Image
+                    LayoutMinHeight: =50
+                    RadiusBottomLeft: =30
+                    RadiusBottomRight: =30
+                    RadiusTopLeft: =30
+                    RadiusTopRight: =30
+                    Width: =Self.Height
+                    ZIndex: =2
+
+        body_home_ra As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            DropShadow: =DropShadow.None
+            Fill: =RGBA(245, 245, 245, 1)
+            LayoutAlignItems: =LayoutAlignItems.Stretch
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            LayoutWrap: =true
+            PaddingBottom: =2
+            PaddingLeft: =2
+            PaddingRight: =2
+            PaddingTop: =2
+            ZIndex: =3
+
+            sidebar_home_ra As groupContainer.verticalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                Fill: =RGBA(255, 255, 255, 1)
+                FillPortions: =1.5
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =100
+                LayoutMode: =LayoutMode.Auto
+                PaddingLeft: =10
+                PaddingRight: =10
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                ZIndex: =4
+
+                menu_title_home_ra As label:
+                    AlignInContainer: =AlignInContainer.Stretch
+                    Color: =secondarytext
+                    Font: =Font.'Segoe UI'
+                    LayoutMinHeight: =20
+                    Size: =9
+                    Text: ="MENU"
+                    ZIndex: =1
+
+                menu_itens_home_ra As gallery.galleryVertical:
+                    DelayItemLoading: =true
+                    FillPortions: =0
+                    Items: |-
+                        =Table({Name:"Home",Logo: Home, Tela: 'Home RA'},
+                        {Name: "Doc. por Revisar",Logo: 'Document Sync', Tela: 'DocPorRevisar RA' },
+                        {Name: "Doc. por Aprobar", Logo:'Document Text' },
+                        {Name: "Doc. Publicados", Logo:'Document Search' })
+                    Layout: =Layout.Vertical
+                    LayoutMinHeight: =287
+                    LayoutMinWidth: =50
+                    LoadingSpinner: =LoadingSpinner.Data
+                    TemplatePadding: =3
+                    TemplateSize: =50  
+                    ZIndex: =2
+
+                    menu_item_home_ra As groupContainer.manualLayoutContainer:
+                        DropShadow: =DropShadow.None
+                        Height: =Parent.TemplateHeight
+                        Width: =Parent.TemplateWidth
+                        ZIndex: =2
+
+                        div_menu_item_home_ra As groupContainer.horizontalAutoLayoutContainer:
+                            DropShadow: =DropShadow.None
+                            Fill: =If(ThisItem.Name="Home",primary , Color.Transparent)
+                            Height: =Parent.Height
+                            LayoutAlignItems: =LayoutAlignItems.Center
+                            LayoutMode: =LayoutMode.Auto
+                            Width: =Parent.Width
+                            ZIndex: =1
+
+                            icon_menu_home_ra As image:
+                                AlignInContainer: =AlignInContainer.Stretch
+                                Image: =ThisItem.Logo
+                                LayoutMinHeight: =50
+                                Width: =40
+                                ZIndex: =1
+
+                            txt_menu_home_ra As label:
+                                Align: =Align.Justify
+                                Color: =If(ThisItem.Name = "Home" , Color.White,secondarytext)
+                                FillPortions: =1
+                                Size: =12
+                                Text: =ThisItem.Name
+                                ZIndex: =2
+
+                        bt_menu_item_home_ra As button:
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =Parent.Height
+                            HoverFill: =
+                            OnSelect: =Navigate(ThisItem.Tela,ScreenTransition.Fade)
+                            PressedFill: =
+                            Text: =""
+                            Width: =Parent.Width
+                            ZIndex: =2
+
+            section_home_ra As groupContainer.verticalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                Fill: =RGBA(246, 247, 251, 1)
+                FillPortions: =7
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                ZIndex: =5
+
+                scroll_home_ra As fluidGrid.fluidGridWithBlankCard:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    BorderThickness: =0
+                    Height: =Parent.Height - Self.Y
+                    LayoutMinHeight: =250
+                    LayoutMinWidth: =100
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                    card_title_home_ra As dataCard:
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        BorderStyle: =BorderStyle.Solid
+                        BorderThickness: =0
+                        DisplayMode: =DisplayMode.Edit
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =154
+                        Width: =Parent.Width
+                        X: =0
+                        Y: =0
+                        ZIndex: =1
+
+                        div_title_home_ra As groupContainer.horizontalAutoLayoutContainer:
+                            DropShadow: =DropShadow.None
+                            Height: =170
+                            LayoutGap: =20
+                            LayoutMode: =LayoutMode.Auto
+                            PaddingBottom: =10
+                            PaddingLeft: =20
+                            PaddingRight: =20
+                            PaddingTop: =10
+                            Width: =Parent.Width
+                            ZIndex: =1
+
+                            card1_div_title_home_ra As groupContainer.horizontalAutoLayoutContainer:
+                                AlignInContainer: =AlignInContainer.SetByContainer
+                                Fill: =RGBA(255, 255, 255, 1)
+                                Height: =140
+                                LayoutAlignItems: =LayoutAlignItems.Center
+                                LayoutDirection: =LayoutDirection.Vertical
+                                LayoutJustifyContent: =LayoutJustifyContent.Center
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                PaddingLeft: =15
+                                PaddingRight: =15
+                                ZIndex: =1
+
+                                Container8_3 As groupContainer.verticalAutoLayoutContainer:
+                                    AlignInContainer: =AlignInContainer.SetByContainer
+                                    DropShadow: =DropShadow.None
+                                    FillPortions: =0
+                                    Height: =64
+                                    LayoutAlignItems: =LayoutAlignItems.Center
+                                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                                    LayoutMinHeight: =100
+                                    LayoutMinWidth: =250
+                                    LayoutMode: =LayoutMode.Auto
+                                    PaddingBottom: =20
+                                    PaddingTop: =20
+                                    Width: =200
+                                    ZIndex: =2
+
+                                    icon_card1_div_home_op_1 As image:
+                                        BorderColor: =RGBA(0, 13, 75, 1)
+                                        Height: =64
+                                        Image: ='Document Checkmark'
+                                        Width: =64
+                                        ZIndex: =1
+
+                                    Label1_13 As label:
+                                        Align: =Align.Center
+                                        Color: =primarytext
+                                        Font: =Font.Arial
+                                        FontWeight: =FontWeight.Semibold
+                                        LayoutMinHeight: =20
+                                        Size: =32
+                                        Text: ="15"
+                                        Width: =90
+                                        ZIndex: =2
+
+                                Label1_14 As label:
+                                    Align: =Align.Center
+                                    AlignInContainer: =AlignInContainer.Center
+                                    Color: =primarytext
+                                    Font: =Font.Arial
+                                    Height: =24
+                                    LayoutMinHeight: =20
+                                    Size: =12
+                                    Text: ="Documentos por Revisar"
+                                    Width: =220
+                                    ZIndex: =3
+
+                            card2_div_title_home_ra As groupContainer.horizontalAutoLayoutContainer:
+                                AlignInContainer: =AlignInContainer.SetByContainer
+                                Fill: =RGBA(255, 255, 255, 1)
+                                Height: =140
+                                LayoutAlignItems: =LayoutAlignItems.Center
+                                LayoutDirection: =LayoutDirection.Vertical
+                                LayoutJustifyContent: =LayoutJustifyContent.Center
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                PaddingLeft: =15
+                                PaddingRight: =15
+                                ZIndex: =5
+
+                                Container8_7 As groupContainer.verticalAutoLayoutContainer:
+                                    AlignInContainer: =AlignInContainer.SetByContainer
+                                    DropShadow: =DropShadow.None
+                                    FillPortions: =0
+                                    Height: =64
+                                    LayoutAlignItems: =LayoutAlignItems.Center
+                                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                                    LayoutMinHeight: =100
+                                    LayoutMinWidth: =250
+                                    LayoutMode: =LayoutMode.Auto
+                                    PaddingBottom: =20
+                                    PaddingTop: =20
+                                    Width: =200
+                                    ZIndex: =2
+
+                                    icon_card1_div_home_op_5 As image:
+                                        BorderColor: =RGBA(0, 13, 75, 1)
+                                        Height: =64
+                                        Image: ='Document Ribbon'
+                                        Width: =64
+                                        ZIndex: =1
+
+                                    Label1_21 As label:
+                                        Align: =Align.Center
+                                        Color: =primarytext
+                                        Font: =Font.Arial
+                                        FontWeight: =FontWeight.Semibold
+                                        LayoutMinHeight: =20
+                                        Size: =32
+                                        Text: ="5"
+                                        Width: =90
+                                        ZIndex: =2
+
+                                Label1_22 As label:
+                                    Align: =Align.Center
+                                    Color: =primarytext
+                                    Font: =Font.Arial
+                                    Height: =24
+                                    LayoutMinHeight: =20
+                                    Size: =12
+                                    Text: ="Documentos por Aprobar"
+                                    Width: =220
+                                    ZIndex: =3
+
+                            card3_div_title_home_ra As groupContainer.horizontalAutoLayoutContainer:
+                                AlignInContainer: =AlignInContainer.SetByContainer
+                                Fill: =RGBA(255, 255, 255, 1)
+                                Height: =140
+                                LayoutAlignItems: =LayoutAlignItems.Center
+                                LayoutDirection: =LayoutDirection.Vertical
+                                LayoutJustifyContent: =LayoutJustifyContent.Center
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                PaddingLeft: =15
+                                PaddingRight: =15
+                                ZIndex: =6
+
+                                Container8_4 As groupContainer.verticalAutoLayoutContainer:
+                                    AlignInContainer: =AlignInContainer.SetByContainer
+                                    DropShadow: =DropShadow.None
+                                    FillPortions: =0
+                                    Height: =64
+                                    LayoutAlignItems: =LayoutAlignItems.Center
+                                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                                    LayoutMinHeight: =100
+                                    LayoutMinWidth: =250
+                                    LayoutMode: =LayoutMode.Auto
+                                    PaddingBottom: =20
+                                    PaddingTop: =20
+                                    Width: =200
+                                    ZIndex: =2
+
+                                    icon_card1_div_home_op_2 As image:
+                                        BorderColor: =RGBA(0, 13, 75, 1)
+                                        Height: =64
+                                        Image: ='Document Sync (1)'
+                                        Width: =64
+                                        ZIndex: =1
+
+                                    Label1_15 As label:
+                                        Align: =Align.Center
+                                        Color: =primarytext
+                                        Font: =Font.Arial
+                                        FontWeight: =FontWeight.Semibold
+                                        LayoutMinHeight: =20
+                                        Size: =32
+                                        Text: ="5"
+                                        Width: =90
+                                        ZIndex: =2
+
+                                Label1_16 As label:
+                                    Align: =Align.Center
+                                    Color: =primarytext
+                                    Font: =Font.Arial
+                                    Height: =24
+                                    LayoutMinHeight: =20
+                                    Size: =12
+                                    Text: ="Docs. Revisados por Aprobar"
+                                    Width: =220
+                                    ZIndex: =3
+
+                            card4_div_title_home_ra As groupContainer.horizontalAutoLayoutContainer:
+                                AlignInContainer: =AlignInContainer.SetByContainer
+                                Fill: =RGBA(255, 255, 255, 1)
+                                Height: =140
+                                LayoutAlignItems: =LayoutAlignItems.Center
+                                LayoutDirection: =LayoutDirection.Vertical
+                                LayoutJustifyContent: =LayoutJustifyContent.Center
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                PaddingLeft: =15
+                                PaddingRight: =15
+                                ZIndex: =7
+
+                                Container8_5 As groupContainer.verticalAutoLayoutContainer:
+                                    AlignInContainer: =AlignInContainer.SetByContainer
+                                    DropShadow: =DropShadow.None
+                                    FillPortions: =0
+                                    Height: =64
+                                    LayoutAlignItems: =LayoutAlignItems.Center
+                                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                                    LayoutMinHeight: =100
+                                    LayoutMinWidth: =250
+                                    LayoutMode: =LayoutMode.Auto
+                                    PaddingBottom: =20
+                                    PaddingTop: =20
+                                    Width: =200
+                                    ZIndex: =2
+
+                                    icon_card1_div_home_op_3 As image:
+                                        BorderColor: =RGBA(0, 13, 75, 1)
+                                        Height: =64
+                                        Image: ='Document Published'
+                                        Width: =64
+                                        ZIndex: =1
+
+                                    Label1_17 As label:
+                                        Align: =Align.Center
+                                        Color: =primarytext
+                                        Font: =Font.Arial
+                                        FontWeight: =FontWeight.Semibold
+                                        LayoutMinHeight: =20
+                                        Size: =32
+                                        Text: ="250"
+                                        Width: =90
+                                        ZIndex: =2
+
+                                Label1_18 As label:
+                                    Align: =Align.Center
+                                    Color: =primarytext
+                                    Font: =Font.Arial
+                                    Height: =24
+                                    LayoutMinHeight: =20
+                                    Size: =12
+                                    Text: ="Documentos Publicados"
+                                    Width: =220
+                                    ZIndex: =3
+
+                    card_doc_rev_home_ra As dataCard.blankCard:
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        BorderStyle: =BorderStyle.Solid
+                        DisplayMode: =DisplayMode.Edit
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =370
+                        Width: =Parent.Width
+                        X: =0
+                        Y: =1
+                        ZIndex: =2
+
+                        Container9_3 As groupContainer.verticalAutoLayoutContainer:
+                            DropShadow: =DropShadow.None
+                            Height: =356
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutGap: =20
+                            LayoutMode: =LayoutMode.Auto
+                            PaddingLeft: =20
+                            PaddingRight: =20
+                            PaddingTop: =10
+                            Width: =Parent.Width
+                            ZIndex: =1
+
+                            Label3_5 As label:
+                                AlignInContainer: =AlignInContainer.Stretch
+                                FontWeight: =FontWeight.Semibold
+                                PaddingBottom: =0
+                                Size: =18
+                                Text: ="Documentos por Revisar más Antiguos"
+                                ZIndex: =1
+
+                            Container10_3 As groupContainer.verticalAutoLayoutContainer:
+                                DropShadow: =DropShadow.None
+                                LayoutDirection: =LayoutDirection.Vertical
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                X: =40
+                                Y: =40
+                                ZIndex: =5
+
+                                Container12_5 As groupContainer.horizontalAutoLayoutContainer:
+                                    BorderColor: =RGBA(116, 116, 116, 1)
+                                    BorderThickness: =1
+                                    Fill: =RGBA(234, 237, 241, 1)
+                                    FillPortions: =0
+                                    Height: =36
+                                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                                    LayoutMinHeight: =100
+                                    LayoutMinWidth: =250
+                                    LayoutMode: =LayoutMode.Auto
+                                    RadiusTopLeft: =5
+                                    RadiusTopRight: =5
+                                    Width: =Parent.Width
+                                    ZIndex: =1
+
+                                    Label2_48 As label:
+                                        Color: =primarytext
+                                        FillPortions: =1
+                                        FontWeight: =FontWeight.Semibold
+                                        LayoutMinHeight: =30
+                                        PaddingLeft: =15
+                                        Size: =10
+                                        Text: ="Código"
+                                        ZIndex: =1
+
+                                    Label2_51 As label:
+                                        Color: =primarytext
+                                        FillPortions: =2
+                                        FontWeight: =FontWeight.Semibold
+                                        LayoutMinHeight: =30
+                                        PaddingLeft: =15
+                                        Size: =10
+                                        Text: ="Nombre"
+                                        ZIndex: =2
+
+                                    Label2_52 As label:
+                                        Align: =Align.Center
+                                        Color: =primarytext
+                                        FillPortions: =1.2
+                                        FontWeight: =FontWeight.Semibold
+                                        LayoutMinHeight: =30
+                                        PaddingLeft: =15
+                                        Size: =10
+                                        Text: ="Tipo Documento"
+                                        ZIndex: =3
+
+                                    Label2_53 As label:
+                                        Align: =Align.Center
+                                        Color: =primarytext
+                                        FillPortions: =1
+                                        FontWeight: =FontWeight.Semibold
+                                        LayoutMinHeight: =30
+                                        PaddingLeft: =15
+                                        Size: =10
+                                        Text: ="F. Solicitud Aprobación"
+                                        ZIndex: =4
+
+                                    Label2_54 As label:
+                                        Align: =Align.Center
+                                        Color: =primarytext
+                                        FillPortions: =1
+                                        FontWeight: =FontWeight.Semibold
+                                        LayoutMinHeight: =30
+                                        PaddingLeft: =15
+                                        Size: =10
+                                        Text: ="Estado"
+                                        ZIndex: =6
+
+                                    Label2_55 As label:
+                                        Color: =primarytext
+                                        FontWeight: =FontWeight.Semibold
+                                        PaddingLeft: =15
+                                        Size: =10
+                                        Text: =""
+                                        Width: =80
+                                        ZIndex: =7
+
+                                Container4_6 As groupContainer.manualLayoutContainer:
+                                    LayoutMinHeight: =50
+                                    LayoutMinWidth: =250
+                                    ZIndex: =2
+
+                                    Button4_6 As button:
+                                        BorderColor: =ColorFade(Self.Fill,-20%)
+                                        Fill: =Color.White
+                                        Height: =Parent.Height - 30
+                                        HoverFill: =Self.Fill
+                                        PressedFill: =Self.Fill
+                                        RadiusTopLeft: =0
+                                        RadiusTopRight: =0
+                                        Text: =""
+                                        Width: =Parent.Width - 2* Self.BorderThickness
+                                        X: =(Parent.Width-Self.Width)/2
+                                        ZIndex: =1
+
+                                    "Gallery1_5 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+                                        DelayItemLoading: =true
+                                        Height: =Button4_6.Height
+                                        Items: =DEV_Documento
+                                        Layout: =Layout.Vertical
+                                        LoadingSpinner: =LoadingSpinner.Data
+                                        TemplatePadding: =0
+                                        TemplateSize: =45
+                                        Width: =Parent.Width
+                                        ZIndex: =2
+
+                                        Separator1_4 As rectangle:
+                                            Fill: =RGBA(149, 149, 149, 1)
+                                            Height: =1
+                                            OnSelect: =Select(Parent)
+                                            Width: =Parent.TemplateWidth
+                                            Y: =Parent.TemplateHeight - 1
+                                            ZIndex: =5
+
+                                        Container3_5 As groupContainer.horizontalAutoLayoutContainer:
+                                            Height: =Parent.TemplateHeight
+                                            LayoutMode: =LayoutMode.Auto
+                                            Width: =Parent.TemplateWidth
+                                            ZIndex: =6
+
+                                            Container9_20 As groupContainer.manualLayoutContainer:
+                                                LayoutMinHeight: =40
+                                                LayoutMinWidth: =150
+                                                ZIndex: =1
+
+                                                Image4_8 As image:
+                                                    Height: =Parent.Height*70%
+                                                    Image: =Folder
+                                                    PaddingBottom: =2
+                                                    PaddingLeft: =2
+                                                    PaddingRight: =2
+                                                    PaddingTop: =2
+                                                    RadiusBottomLeft: =35
+                                                    RadiusBottomRight: =35
+                                                    RadiusTopLeft: =35
+                                                    RadiusTopRight: =35
+                                                    Width: =Self.Height
+                                                    X: =10
+                                                    Y: =(Parent.Height-Self.Height)/2
+                                                    ZIndex: =1
+
+                                                Label4_14 As label:
+                                                    Color: =secondarytext
+                                                    Font: =Font.'Segoe UI'
+                                                    FontWeight: =FontWeight.Semibold
+                                                    Height: =Parent.Height
+                                                    PaddingLeft: =10
+                                                    Size: =9.5
+                                                    Text: =ThisItem.codigo
+                                                    Width: =Parent.Width-Self.X
+                                                    X: =45
+                                                    ZIndex: =2
+
+                                            Label3_7 As label:
+                                                AlignInContainer: =AlignInContainer.Stretch
+                                                Color: =secondarytext
+                                                FillPortions: =2
+                                                Font: =Font.'Segoe UI'
+                                                FontWeight: =FontWeight.Semibold
+                                                PaddingLeft: =15
+                                                Size: =9.5
+                                                Text: =ThisItem.Nombre
+                                                ZIndex: =2
+
+                                            Label4_15 As label:
+                                                Align: =Align.Center
+                                                Color: =secondarytext
+                                                FillPortions: =1.2
+                                                Font: =Font.'Segoe UI'
+                                                FontWeight: =FontWeight.Semibold
+                                                Height: =Parent.Height
+                                                PaddingLeft: =10
+                                                Size: =9.5
+                                                Text: =LookUp(DEV_TipoDocumento, ID =  ThisItem.id_tipo_docu.Id,Descripcion)
+                                                Width: =140
+                                                X: =50
+                                                ZIndex: =3
+
+                                            Label4_16 As label:
+                                                Align: =Align.Center
+                                                Color: =secondarytext
+                                                FillPortions: =1
+                                                Font: =Font.'Segoe UI'
+                                                FontWeight: =FontWeight.Semibold
+                                                Height: =Parent.Height
+                                                PaddingLeft: =10
+                                                Size: =9.5
+                                                Text: =ThisItem.fecha
+                                                Width: =140
+                                                X: =50
+                                                ZIndex: =4
+
+                                            Container13_11 As groupContainer.manualLayoutContainer:
+                                                LayoutMinHeight: =40
+                                                LayoutMinWidth: =40
+                                                Width: =80
+                                                ZIndex: =5
+
+                                                Button2_3 As button:
+                                                    BorderColor: =Self.Color
+                                                    BorderStyle: =BorderStyle.None
+                                                    Color: |-
+                                                        =Switch(LookUp(DEV_Estatus_archivos, ID = First(Filter(DEV_Modificacion_estatus_documento,codigo=ThisItem.codigo,ind_mod = "i")).id_status_archivo.Value,descripcion),
+                                                        "Por aprobar", RGBA(180, 130, 0, 1),
+                                                        "Por revisar",RGBA(180, 130, 0, 1),
+                                                        "Observado", RGBA(214, 0, 0, 1),
+                                                        "Aprobado",RGBA(44, 143, 112, 1))
+                                                    DisplayMode: =DisplayMode.View
+                                                    Fill: |-
+                                                        =Switch(LookUp(DEV_Estatus_archivos, ID = First(Filter(DEV_Modificacion_estatus_documento,codigo=ThisItem.codigo,ind_mod = "i")).id_status_archivo.Value,descripcion),
+                                                        "Por aprobar", RGBA(249, 249, 249, 1),
+                                                        "Por revisar",RGBA(249, 249, 249, 1),
+                                                        "Observado", RGBA(245, 218, 216, 1),
+                                                        "Aprobado", RGBA(219, 238, 233, 1))
+                                                    Font: =Font.Arial
+                                                    FontWeight: =FontWeight.Normal
+                                                    Height: =Parent.Height*60%
+                                                    RadiusBottomLeft: =5
+                                                    RadiusBottomRight: =5
+                                                    RadiusTopLeft: =5
+                                                    RadiusTopRight: =5
+                                                    Size: =11
+                                                    Text: =LookUp(DEV_Estatus_archivos, ID = First(Filter(DEV_Modificacion_estatus_documento,codigo=ThisItem.codigo,ind_mod = "i")).id_status_archivo.Value,descripcion)
+                                                    Width: =Parent.Width*80%
+                                                    X: =(Parent.Width-Self.Width)/2
+                                                    Y: =(Parent.Height-Self.Height)/2
+                                                    ZIndex: =1
+
+                                            Container13_12 As groupContainer.manualLayoutContainer:
+                                                FillPortions: =0
+                                                LayoutMinHeight: =40
+                                                LayoutMinWidth: =50
+                                                Width: =80
+                                                ZIndex: =6
+
+                                                Icon1_5 As icon.Edit:
+                                                    Height: =Parent.Height*60%
+                                                    Icon: =Icon.View
+                                                    PaddingBottom: =3
+                                                    PaddingLeft: =3
+                                                    PaddingRight: =3
+                                                    PaddingTop: =3
+                                                    Width: =Parent.Height*60%
+                                                    X: =(Parent.Width-Self.Width)/2
+                                                    Y: =(Parent.Height-Self.Height)/2
+                                                    ZIndex: =1
+
+                    card_doc_apr_home_ra As dataCard.blankCard:
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        BorderStyle: =BorderStyle.Solid
+                        DisplayMode: =DisplayMode.Edit
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =100
+                        Width: =1122
+                        X: =0
+                        Y: =2
+                        ZIndex: =3
+
+                        Container9_4 As groupContainer.verticalAutoLayoutContainer:
+                            DropShadow: =DropShadow.None
+                            Height: =356
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutGap: =20
+                            LayoutMode: =LayoutMode.Auto
+                            PaddingLeft: =20
+                            PaddingRight: =20
+                            PaddingTop: =10
+                            Width: =Parent.Width
+                            ZIndex: =1
+
+                            Label3_8 As label:
+                                AlignInContainer: =AlignInContainer.Stretch
+                                FontWeight: =FontWeight.Semibold
+                                PaddingBottom: =0
+                                Size: =18
+                                Text: ="Documentos por Aprobar más Antiguos"
+                                ZIndex: =1
+
+                            Container10_4 As groupContainer.verticalAutoLayoutContainer:
+                                DropShadow: =DropShadow.None
+                                LayoutDirection: =LayoutDirection.Vertical
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                X: =40
+                                Y: =40
+                                ZIndex: =5
+
+                                Container12_6 As groupContainer.horizontalAutoLayoutContainer:
+                                    BorderColor: =RGBA(116, 116, 116, 1)
+                                    BorderThickness: =1
+                                    Fill: =RGBA(234, 237, 241, 1)
+                                    FillPortions: =0
+                                    Height: =36
+                                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                                    LayoutMinHeight: =100
+                                    LayoutMinWidth: =250
+                                    LayoutMode: =LayoutMode.Auto
+                                    RadiusTopLeft: =5
+                                    RadiusTopRight: =5
+                                    Width: =Parent.Width
+                                    ZIndex: =1
+
+                                    Label2_56 As label:
+                                        Color: =primarytext
+                                        FillPortions: =1
+                                        FontWeight: =FontWeight.Semibold
+                                        LayoutMinHeight: =30
+                                        PaddingLeft: =15
+                                        Size: =10
+                                        Text: ="Código"
+                                        ZIndex: =1
+
+                                    Label2_57 As label:
+                                        Color: =primarytext
+                                        FillPortions: =2
+                                        FontWeight: =FontWeight.Semibold
+                                        LayoutMinHeight: =30
+                                        PaddingLeft: =15
+                                        Size: =10
+                                        Text: ="Nombre"
+                                        ZIndex: =2
+
+                                    Label2_58 As label:
+                                        Align: =Align.Center
+                                        Color: =primarytext
+                                        FillPortions: =1.2
+                                        FontWeight: =FontWeight.Semibold
+                                        LayoutMinHeight: =30
+                                        PaddingLeft: =15
+                                        Size: =10
+                                        Text: ="Tipo Documento"
+                                        ZIndex: =3
+
+                                    Label2_59 As label:
+                                        Align: =Align.Center
+                                        Color: =primarytext
+                                        FillPortions: =1
+                                        FontWeight: =FontWeight.Semibold
+                                        LayoutMinHeight: =30
+                                        PaddingLeft: =15
+                                        Size: =10
+                                        Text: ="F. Solicitud Aprobación"
+                                        ZIndex: =4
+
+                                    Label2_60 As label:
+                                        Align: =Align.Center
+                                        Color: =primarytext
+                                        FillPortions: =1
+                                        FontWeight: =FontWeight.Semibold
+                                        LayoutMinHeight: =30
+                                        PaddingLeft: =15
+                                        Size: =10
+                                        Text: ="Estado"
+                                        ZIndex: =6
+
+                                    Label2_61 As label:
+                                        Color: =primarytext
+                                        FontWeight: =FontWeight.Semibold
+                                        PaddingLeft: =15
+                                        Size: =10
+                                        Text: =""
+                                        Width: =80
+                                        ZIndex: =7
+
+                                Container4_7 As groupContainer.manualLayoutContainer:
+                                    LayoutMinHeight: =50
+                                    LayoutMinWidth: =250
+                                    ZIndex: =2
+
+                                    Button4_7 As button:
+                                        BorderColor: =ColorFade(Self.Fill,-20%)
+                                        Fill: =Color.White
+                                        Height: =Parent.Height - 30
+                                        HoverFill: =Self.Fill
+                                        PressedFill: =Self.Fill
+                                        RadiusTopLeft: =0
+                                        RadiusTopRight: =0
+                                        Text: =""
+                                        Width: =Parent.Width - 2* Self.BorderThickness
+                                        X: =(Parent.Width-Self.Width)/2
+                                        ZIndex: =1
+
+                                    "Gallery1_6 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+                                        DelayItemLoading: =true
+                                        Height: =Button4_7.Height
+                                        Items: |-
+                                            =Table( {
+                                                    Código: "LDS-PA-134",
+                                                    Nombre: "Carga del Presupuesto Anual a los sistemas inf...",
+                                                    'Tipo Documento': "Procedimiento Administrativo",
+                                                    'F. Solicitud Aprobación': "22/03/2023",
+                                                    Estado: "Aprobado"
+                                                },
+                                                {
+                                                    Código: "LDS-PA-134",
+                                                    Nombre: "Carga del Presupuesto Anual a los sistemas inf...",
+                                                    'Tipo Documento': "Procedimiento Administrativo",
+                                                    'F. Solicitud Aprobación': "22/03/2023",
+                                                    Estado: "Aprobado"
+                                                },
+                                                {
+                                                    Código: "LDS-PA-134",
+                                                    Nombre: "Carga del Presupuesto Anual a los sistemas inf...",
+                                                    'Tipo Documento': "Procedimiento Administrativo",
+                                                    'F. Solicitud Aprobación': "22/03/2023",
+                                                    Estado: "Aprobado"
+                                                },
+                                                {
+                                                    Código: "LDS-PA-134",
+                                                    Nombre: "Carga del Presupuesto Anual a los sistemas inf...",
+                                                    'Tipo Documento': "Procedimiento Administrativo",
+                                                    'F. Solicitud Aprobación': "22/03/2023",
+                                                    Estado: "Aprobado"
+                                                },
+                                                {
+                                                    Código: "LDS-PA-134",
+                                                    Nombre: "Carga del Presupuesto Anual a los sistemas inf...",
+                                                    'Tipo Documento': "Procedimiento Administrativo",
+                                                    'F. Solicitud Aprobación': "22/03/2023",
+                                                    Estado: "Aprobado"
+                                                })
+                                        Layout: =Layout.Vertical
+                                        LoadingSpinner: =LoadingSpinner.Data
+                                        TemplatePadding: =0
+                                        TemplateSize: =45
+                                        Width: =Parent.Width
+                                        ZIndex: =2
+
+                                        Separator1_5 As rectangle:
+                                            Fill: =RGBA(149, 149, 149, 1)
+                                            Height: =1
+                                            OnSelect: =Select(Parent)
+                                            Width: =Parent.TemplateWidth
+                                            Y: =Parent.TemplateHeight - 1
+                                            ZIndex: =5
+
+                                        Container3_6 As groupContainer.horizontalAutoLayoutContainer:
+                                            Height: =Parent.TemplateHeight
+                                            LayoutMode: =LayoutMode.Auto
+                                            Width: =Parent.TemplateWidth
+                                            ZIndex: =6
+
+                                            Container9_21 As groupContainer.manualLayoutContainer:
+                                                LayoutMinHeight: =40
+                                                LayoutMinWidth: =150
+                                                ZIndex: =1
+
+                                                Image4_9 As image:
+                                                    Height: =Parent.Height*70%
+                                                    Image: =Folder
+                                                    PaddingBottom: =2
+                                                    PaddingLeft: =2
+                                                    PaddingRight: =2
+                                                    PaddingTop: =2
+                                                    RadiusBottomLeft: =35
+                                                    RadiusBottomRight: =35
+                                                    RadiusTopLeft: =35
+                                                    RadiusTopRight: =35
+                                                    Width: =Self.Height
+                                                    X: =10
+                                                    Y: =(Parent.Height-Self.Height)/2
+                                                    ZIndex: =1
+
+                                                Label4_17 As label:
+                                                    Color: =secondarytext
+                                                    Font: =Font.'Segoe UI'
+                                                    FontWeight: =FontWeight.Semibold
+                                                    Height: =Parent.Height
+                                                    PaddingLeft: =10
+                                                    Size: =9.5
+                                                    Text: =ThisItem.Código
+                                                    Width: =Parent.Width-Self.X
+                                                    X: =45
+                                                    ZIndex: =2
+
+                                            Label3_9 As label:
+                                                AlignInContainer: =AlignInContainer.Stretch
+                                                Color: =secondarytext
+                                                FillPortions: =2
+                                                Font: =Font.'Segoe UI'
+                                                FontWeight: =FontWeight.Semibold
+                                                PaddingLeft: =15
+                                                Size: =9.5
+                                                Text: =ThisItem.Nombre
+                                                ZIndex: =2
+
+                                            Label4_18 As label:
+                                                Align: =Align.Center
+                                                Color: =secondarytext
+                                                FillPortions: =1.2
+                                                Font: =Font.'Segoe UI'
+                                                FontWeight: =FontWeight.Semibold
+                                                Height: =Parent.Height
+                                                PaddingLeft: =10
+                                                Size: =9.5
+                                                Text: =ThisItem.'Tipo Documento'
+                                                Width: =140
+                                                X: =50
+                                                ZIndex: =3
+
+                                            Label4_19 As label:
+                                                Align: =Align.Center
+                                                Color: =secondarytext
+                                                FillPortions: =1
+                                                Font: =Font.'Segoe UI'
+                                                FontWeight: =FontWeight.Semibold
+                                                Height: =Parent.Height
+                                                PaddingLeft: =10
+                                                Size: =9.5
+                                                Text: =ThisItem.'F. Solicitud Aprobación'
+                                                Width: =140
+                                                X: =50
+                                                ZIndex: =4
+
+                                            Container13_13 As groupContainer.manualLayoutContainer:
+                                                LayoutMinHeight: =40
+                                                LayoutMinWidth: =40
+                                                Width: =80
+                                                ZIndex: =5
+
+                                                Button2_4 As button:
+                                                    BorderColor: =Self.Color
+                                                    BorderStyle: =BorderStyle.None
+                                                    Color: |-
+                                                        =Switch(ThisItem.Estado,
+                                                        "Por aprobar", RGBA(180, 130, 0, 1),
+                                                        "Observado", RGBA(214, 0, 0, 1),
+                                                        "Aprobado",RGBA(44, 143, 112, 1))
+                                                    DisplayMode: =DisplayMode.View
+                                                    Fill: |-
+                                                        =Switch(ThisItem.Estado,
+                                                        "Por aprobar", RGBA(249, 249, 249, 1),
+                                                        "Observado", RGBA(245, 218, 216, 1),
+                                                        "Aprobado", RGBA(219, 238, 233, 1))
+                                                    Font: =Font.Arial
+                                                    FontWeight: =FontWeight.Normal
+                                                    Height: =Parent.Height*60%
+                                                    RadiusBottomLeft: =5
+                                                    RadiusBottomRight: =5
+                                                    RadiusTopLeft: =5
+                                                    RadiusTopRight: =5
+                                                    Size: =11
+                                                    Text: =ThisItem.Estado
+                                                    Width: =Parent.Width*80%
+                                                    X: =(Parent.Width-Self.Width)/2
+                                                    Y: =(Parent.Height-Self.Height)/2
+                                                    ZIndex: =1
+
+                                            Container13_14 As groupContainer.manualLayoutContainer:
+                                                FillPortions: =0
+                                                LayoutMinHeight: =40
+                                                LayoutMinWidth: =50
+                                                Width: =80
+                                                ZIndex: =6
+
+                                                Icon1_6 As icon.Edit:
+                                                    Height: =Parent.Height*60%
+                                                    Icon: =Icon.View
+                                                    PaddingBottom: =3
+                                                    PaddingLeft: =3
+                                                    PaddingRight: =3
+                                                    PaddingTop: =3
+                                                    Width: =Parent.Height*60%
+                                                    X: =(Parent.Width-Self.Width)/2
+                                                    Y: =(Parent.Height-Self.Height)/2
+                                                    ZIndex: =1
+
+                    card_doc_rev_apr_home_ra As dataCard.blankCard:
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        BorderStyle: =BorderStyle.Solid
+                        DisplayMode: =DisplayMode.Edit
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =100
+                        Width: =1122
+                        X: =0
+                        Y: =3
+                        ZIndex: =4
+
+                        Container9_5 As groupContainer.verticalAutoLayoutContainer:
+                            DropShadow: =DropShadow.None
+                            Height: =356
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutGap: =20
+                            LayoutMode: =LayoutMode.Auto
+                            PaddingLeft: =20
+                            PaddingRight: =20
+                            PaddingTop: =10
+                            Width: =Parent.Width
+                            ZIndex: =1
+
+                            Label3_10 As label:
+                                AlignInContainer: =AlignInContainer.Stretch
+                                FontWeight: =FontWeight.Semibold
+                                PaddingBottom: =0
+                                Size: =18
+                                Text: ="Documentos Revisados que Faltan Aprobar"
+                                ZIndex: =1
+
+                            Container10_5 As groupContainer.verticalAutoLayoutContainer:
+                                DropShadow: =DropShadow.None
+                                LayoutDirection: =LayoutDirection.Vertical
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                X: =40
+                                Y: =40
+                                ZIndex: =5
+
+                                Container12_7 As groupContainer.horizontalAutoLayoutContainer:
+                                    BorderColor: =RGBA(116, 116, 116, 1)
+                                    BorderThickness: =1
+                                    Fill: =RGBA(234, 237, 241, 1)
+                                    FillPortions: =0
+                                    Height: =36
+                                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                                    LayoutMinHeight: =100
+                                    LayoutMinWidth: =250
+                                    LayoutMode: =LayoutMode.Auto
+                                    RadiusTopLeft: =5
+                                    RadiusTopRight: =5
+                                    Width: =Parent.Width
+                                    ZIndex: =1
+
+                                    Label2_62 As label:
+                                        Color: =primarytext
+                                        FillPortions: =1
+                                        FontWeight: =FontWeight.Semibold
+                                        LayoutMinHeight: =30
+                                        PaddingLeft: =15
+                                        Size: =10
+                                        Text: ="Código"
+                                        ZIndex: =1
+
+                                    Label2_63 As label:
+                                        Color: =primarytext
+                                        FillPortions: =2
+                                        FontWeight: =FontWeight.Semibold
+                                        LayoutMinHeight: =30
+                                        PaddingLeft: =15
+                                        Size: =10
+                                        Text: ="Nombre"
+                                        ZIndex: =2
+
+                                    Label2_64 As label:
+                                        Align: =Align.Center
+                                        Color: =primarytext
+                                        FillPortions: =1.2
+                                        FontWeight: =FontWeight.Semibold
+                                        LayoutMinHeight: =30
+                                        PaddingLeft: =15
+                                        Size: =10
+                                        Text: ="Tipo Documento"
+                                        ZIndex: =3
+
+                                    Label2_65 As label:
+                                        Align: =Align.Center
+                                        Color: =primarytext
+                                        FillPortions: =1
+                                        FontWeight: =FontWeight.Semibold
+                                        LayoutMinHeight: =30
+                                        PaddingLeft: =15
+                                        Size: =10
+                                        Text: ="F. Solicitud Aprobación"
+                                        ZIndex: =4
+
+                                    Label2_66 As label:
+                                        Align: =Align.Center
+                                        Color: =primarytext
+                                        FillPortions: =1
+                                        FontWeight: =FontWeight.Semibold
+                                        LayoutMinHeight: =30
+                                        PaddingLeft: =15
+                                        Size: =10
+                                        Text: ="Estado"
+                                        ZIndex: =6
+
+                                    Label2_67 As label:
+                                        Color: =primarytext
+                                        FontWeight: =FontWeight.Semibold
+                                        PaddingLeft: =15
+                                        Size: =10
+                                        Text: =""
+                                        Width: =80
+                                        ZIndex: =7
+
+                                Container4_8 As groupContainer.manualLayoutContainer:
+                                    LayoutMinHeight: =50
+                                    LayoutMinWidth: =250
+                                    ZIndex: =2
+
+                                    Button4_8 As button:
+                                        BorderColor: =ColorFade(Self.Fill,-20%)
+                                        Fill: =Color.White
+                                        Height: =Parent.Height - 30
+                                        HoverFill: =Self.Fill
+                                        PressedFill: =Self.Fill
+                                        RadiusTopLeft: =0
+                                        RadiusTopRight: =0
+                                        Text: =""
+                                        Width: =Parent.Width - 2* Self.BorderThickness
+                                        X: =(Parent.Width-Self.Width)/2
+                                        ZIndex: =1
+
+                                    "Gallery1_7 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+                                        DelayItemLoading: =true
+                                        Height: =Button4_8.Height
+                                        Items: |-
+                                            =Table( {
+                                                    Código: "LDS-PA-134",
+                                                    Nombre: "Carga del Presupuesto Anual a los sistemas inf...",
+                                                    'Tipo Documento': "Procedimiento Administrativo",
+                                                    'F. Solicitud Aprobación': "22/03/2023",
+                                                    Estado: "Aprobado"
+                                                },
+                                                {
+                                                    Código: "LDS-PA-134",
+                                                    Nombre: "Carga del Presupuesto Anual a los sistemas inf...",
+                                                    'Tipo Documento': "Procedimiento Administrativo",
+                                                    'F. Solicitud Aprobación': "22/03/2023",
+                                                    Estado: "Aprobado"
+                                                },
+                                                {
+                                                    Código: "LDS-PA-134",
+                                                    Nombre: "Carga del Presupuesto Anual a los sistemas inf...",
+                                                    'Tipo Documento': "Procedimiento Administrativo",
+                                                    'F. Solicitud Aprobación': "22/03/2023",
+                                                    Estado: "Aprobado"
+                                                },
+                                                {
+                                                    Código: "LDS-PA-134",
+                                                    Nombre: "Carga del Presupuesto Anual a los sistemas inf...",
+                                                    'Tipo Documento': "Procedimiento Administrativo",
+                                                    'F. Solicitud Aprobación': "22/03/2023",
+                                                    Estado: "Aprobado"
+                                                },
+                                                {
+                                                    Código: "LDS-PA-134",
+                                                    Nombre: "Carga del Presupuesto Anual a los sistemas inf...",
+                                                    'Tipo Documento': "Procedimiento Administrativo",
+                                                    'F. Solicitud Aprobación': "22/03/2023",
+                                                    Estado: "Aprobado"
+                                                })
+                                        Layout: =Layout.Vertical
+                                        LoadingSpinner: =LoadingSpinner.Data
+                                        TemplatePadding: =0
+                                        TemplateSize: =45
+                                        Width: =Parent.Width
+                                        ZIndex: =2
+
+                                        Separator1_6 As rectangle:
+                                            Fill: =RGBA(149, 149, 149, 1)
+                                            Height: =1
+                                            OnSelect: =Select(Parent)
+                                            Width: =Parent.TemplateWidth
+                                            Y: =Parent.TemplateHeight - 1
+                                            ZIndex: =5
+
+                                        Container3_7 As groupContainer.horizontalAutoLayoutContainer:
+                                            Height: =Parent.TemplateHeight
+                                            LayoutMode: =LayoutMode.Auto
+                                            Width: =Parent.TemplateWidth
+                                            ZIndex: =6
+
+                                            Container9_22 As groupContainer.manualLayoutContainer:
+                                                LayoutMinHeight: =40
+                                                LayoutMinWidth: =150
+                                                ZIndex: =1
+
+                                                Image4_10 As image:
+                                                    Height: =Parent.Height*70%
+                                                    Image: =Folder
+                                                    PaddingBottom: =2
+                                                    PaddingLeft: =2
+                                                    PaddingRight: =2
+                                                    PaddingTop: =2
+                                                    RadiusBottomLeft: =35
+                                                    RadiusBottomRight: =35
+                                                    RadiusTopLeft: =35
+                                                    RadiusTopRight: =35
+                                                    Width: =Self.Height
+                                                    X: =10
+                                                    Y: =(Parent.Height-Self.Height)/2
+                                                    ZIndex: =1
+
+                                                Label4_20 As label:
+                                                    Color: =secondarytext
+                                                    Font: =Font.'Segoe UI'
+                                                    FontWeight: =FontWeight.Semibold
+                                                    Height: =Parent.Height
+                                                    PaddingLeft: =10
+                                                    Size: =9.5
+                                                    Text: =ThisItem.Código
+                                                    Width: =Parent.Width-Self.X
+                                                    X: =45
+                                                    ZIndex: =2
+
+                                            Label3_11 As label:
+                                                AlignInContainer: =AlignInContainer.Stretch
+                                                Color: =secondarytext
+                                                FillPortions: =2
+                                                Font: =Font.'Segoe UI'
+                                                FontWeight: =FontWeight.Semibold
+                                                PaddingLeft: =15
+                                                Size: =9.5
+                                                Text: =ThisItem.Nombre
+                                                ZIndex: =2
+
+                                            Label4_21 As label:
+                                                Align: =Align.Center
+                                                Color: =secondarytext
+                                                FillPortions: =1.2
+                                                Font: =Font.'Segoe UI'
+                                                FontWeight: =FontWeight.Semibold
+                                                Height: =Parent.Height
+                                                PaddingLeft: =10
+                                                Size: =9.5
+                                                Text: =ThisItem.'Tipo Documento'
+                                                Width: =140
+                                                X: =50
+                                                ZIndex: =3
+
+                                            Label4_22 As label:
+                                                Align: =Align.Center
+                                                Color: =secondarytext
+                                                FillPortions: =1
+                                                Font: =Font.'Segoe UI'
+                                                FontWeight: =FontWeight.Semibold
+                                                Height: =Parent.Height
+                                                PaddingLeft: =10
+                                                Size: =9.5
+                                                Text: =ThisItem.'F. Solicitud Aprobación'
+                                                Width: =140
+                                                X: =50
+                                                ZIndex: =4
+
+                                            Container13_15 As groupContainer.manualLayoutContainer:
+                                                LayoutMinHeight: =40
+                                                LayoutMinWidth: =40
+                                                Width: =80
+                                                ZIndex: =5
+
+                                                Button2_5 As button:
+                                                    BorderColor: =Self.Color
+                                                    BorderStyle: =BorderStyle.None
+                                                    Color: |-
+                                                        =Switch(ThisItem.Estado,
+                                                        "Por aprobar", RGBA(180, 130, 0, 1),
+                                                        "Observado", RGBA(214, 0, 0, 1),
+                                                        "Aprobado",RGBA(44, 143, 112, 1))
+                                                    DisplayMode: =DisplayMode.View
+                                                    Fill: |-
+                                                        =Switch(ThisItem.Estado,
+                                                        "Por aprobar", RGBA(249, 249, 249, 1),
+                                                        "Observado", RGBA(245, 218, 216, 1),
+                                                        "Aprobado", RGBA(219, 238, 233, 1))
+                                                    Font: =Font.Arial
+                                                    FontWeight: =FontWeight.Normal
+                                                    Height: =Parent.Height*60%
+                                                    RadiusBottomLeft: =5
+                                                    RadiusBottomRight: =5
+                                                    RadiusTopLeft: =5
+                                                    RadiusTopRight: =5
+                                                    Size: =11
+                                                    Text: =ThisItem.Estado
+                                                    Width: =Parent.Width*80%
+                                                    X: =(Parent.Width-Self.Width)/2
+                                                    Y: =(Parent.Height-Self.Height)/2
+                                                    ZIndex: =1
+
+                                            Container13_16 As groupContainer.manualLayoutContainer:
+                                                FillPortions: =0
+                                                LayoutMinHeight: =40
+                                                LayoutMinWidth: =50
+                                                Width: =80
+                                                ZIndex: =6
+
+                                                Icon1_7 As icon.Edit:
+                                                    Height: =Parent.Height*60%
+                                                    Icon: =Icon.View
+                                                    PaddingBottom: =3
+                                                    PaddingLeft: =3
+                                                    PaddingRight: =3
+                                                    PaddingTop: =3
+                                                    Width: =Parent.Height*60%
+                                                    X: =(Parent.Width-Self.Width)/2
+                                                    Y: =(Parent.Height-Self.Height)/2
+                                                    ZIndex: =1
+
+                    card_doc_publ_home_ra As dataCard.blankCard:
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        BorderStyle: =BorderStyle.Solid
+                        DisplayMode: =DisplayMode.Edit
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =100
+                        Width: =1122
+                        X: =0
+                        Y: =4
+                        ZIndex: =5
+
+                        cont_doc_publ_home_ra As groupContainer.verticalAutoLayoutContainer:
+                            DropShadow: =DropShadow.None
+                            Height: =356
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutGap: =20
+                            LayoutMode: =LayoutMode.Auto
+                            PaddingLeft: =20
+                            PaddingRight: =20
+                            PaddingTop: =10
+                            Width: =Parent.Width
+                            ZIndex: =1
+
+                            title_doc_publ_home_ra As label:
+                                AlignInContainer: =AlignInContainer.Stretch
+                                FontWeight: =FontWeight.Semibold
+                                PaddingBottom: =0
+                                Size: =18
+                                Text: ="Documentos Publicados más Recientes"
+                                ZIndex: =1
+
+                            cont_table_doc_publ_home_ra As groupContainer.verticalAutoLayoutContainer:
+                                DropShadow: =DropShadow.None
+                                LayoutDirection: =LayoutDirection.Vertical
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                X: =40
+                                Y: =40
+                                ZIndex: =5
+
+                                cont_header_publ_home_ra As groupContainer.horizontalAutoLayoutContainer:
+                                    BorderColor: =RGBA(116, 116, 116, 1)
+                                    BorderThickness: =1
+                                    Fill: =RGBA(234, 237, 241, 1)
+                                    FillPortions: =0
+                                    Height: =36
+                                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                                    LayoutMinHeight: =100
+                                    LayoutMinWidth: =250
+                                    LayoutMode: =LayoutMode.Auto
+                                    RadiusTopLeft: =5
+                                    RadiusTopRight: =5
+                                    Width: =Parent.Width
+                                    ZIndex: =1
+
+                                    title_codigo_publ_home_ra As label:
+                                        Color: =primarytext
+                                        FillPortions: =1
+                                        FontWeight: =FontWeight.Semibold
+                                        LayoutMinHeight: =30
+                                        PaddingLeft: =15
+                                        Size: =10
+                                        Text: ="Código"
+                                        ZIndex: =1
+
+                                    title_nombre_publ_home_ra As label:
+                                        Color: =primarytext
+                                        FillPortions: =2
+                                        FontWeight: =FontWeight.Semibold
+                                        LayoutMinHeight: =30
+                                        PaddingLeft: =15
+                                        Size: =10
+                                        Text: ="Nombre"
+                                        ZIndex: =2
+
+                                    title_tipodoc_publ_home_ra As label:
+                                        Align: =Align.Center
+                                        Color: =primarytext
+                                        FillPortions: =1.2
+                                        FontWeight: =FontWeight.Semibold
+                                        LayoutMinHeight: =30
+                                        PaddingLeft: =15
+                                        Size: =10
+                                        Text: ="Tipo Documento"
+                                        ZIndex: =3
+
+                                    title_fsolicitud_publ_home_ra As label:
+                                        Align: =Align.Center
+                                        Color: =primarytext
+                                        FillPortions: =1
+                                        FontWeight: =FontWeight.Semibold
+                                        LayoutMinHeight: =30
+                                        PaddingLeft: =15
+                                        Size: =10
+                                        Text: ="F. Solicitud Aprobación"
+                                        ZIndex: =4
+
+                                    title_estado_publ_home_ra As label:
+                                        Align: =Align.Center
+                                        Color: =primarytext
+                                        FillPortions: =1
+                                        FontWeight: =FontWeight.Semibold
+                                        LayoutMinHeight: =30
+                                        PaddingLeft: =15
+                                        Size: =10
+                                        Text: ="Estado"
+                                        ZIndex: =6
+
+                                    title_view_publ_home_ra As label:
+                                        Color: =primarytext
+                                        FontWeight: =FontWeight.Semibold
+                                        PaddingLeft: =15
+                                        Size: =10
+                                        Text: =""
+                                        Width: =80
+                                        ZIndex: =7
+
+                                Container4_9 As groupContainer.manualLayoutContainer:
+                                    LayoutMinHeight: =50
+                                    LayoutMinWidth: =250
+                                    ZIndex: =2
+
+                                    Button4_9 As button:
+                                        BorderColor: =ColorFade(Self.Fill,-20%)
+                                        Fill: =Color.White
+                                        Height: =Parent.Height - 30
+                                        HoverFill: =Self.Fill
+                                        PressedFill: =Self.Fill
+                                        RadiusTopLeft: =0
+                                        RadiusTopRight: =0
+                                        Text: =""
+                                        Width: =Parent.Width - 2* Self.BorderThickness
+                                        X: =(Parent.Width-Self.Width)/2
+                                        ZIndex: =1
+
+                                    "gallery_doc_publ_home_ra As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+                                        DelayItemLoading: =true
+                                        Height: =Button4_9.Height
+                                        Items: |-
+                                            =Table( {
+                                                    Código: "LDS-PA-134",
+                                                    Nombre: "Carga del Presupuesto Anual a los sistemas inf...",
+                                                    'Tipo Documento': "Procedimiento Administrativo",
+                                                    'F. Solicitud Aprobación': "22/03/2023",
+                                                    Estado: "Aprobado"
+                                                },
+                                                {
+                                                    Código: "LDS-PA-134",
+                                                    Nombre: "Carga del Presupuesto Anual a los sistemas inf...",
+                                                    'Tipo Documento': "Procedimiento Administrativo",
+                                                    'F. Solicitud Aprobación': "22/03/2023",
+                                                    Estado: "Aprobado"
+                                                },
+                                                {
+                                                    Código: "LDS-PA-134",
+                                                    Nombre: "Carga del Presupuesto Anual a los sistemas inf...",
+                                                    'Tipo Documento': "Procedimiento Administrativo",
+                                                    'F. Solicitud Aprobación': "22/03/2023",
+                                                    Estado: "Aprobado"
+                                                },
+                                                {
+                                                    Código: "LDS-PA-134",
+                                                    Nombre: "Carga del Presupuesto Anual a los sistemas inf...",
+                                                    'Tipo Documento': "Procedimiento Administrativo",
+                                                    'F. Solicitud Aprobación': "22/03/2023",
+                                                    Estado: "Aprobado"
+                                                },
+                                                {
+                                                    Código: "LDS-PA-134",
+                                                    Nombre: "Carga del Presupuesto Anual a los sistemas inf...",
+                                                    'Tipo Documento': "Procedimiento Administrativo",
+                                                    'F. Solicitud Aprobación': "22/03/2023",
+                                                    Estado: "Aprobado"
+                                                })
+                                        Layout: =Layout.Vertical
+                                        LoadingSpinner: =LoadingSpinner.Data
+                                        TemplatePadding: =0
+                                        TemplateSize: =45
+                                        Width: =Parent.Width
+                                        ZIndex: =2
+
+                                        Separator1_7 As rectangle:
+                                            Fill: =RGBA(149, 149, 149, 1)
+                                            Height: =1
+                                            OnSelect: =Select(Parent)
+                                            Width: =Parent.TemplateWidth
+                                            Y: =Parent.TemplateHeight - 1
+                                            ZIndex: =5
+
+                                        Container3_8 As groupContainer.horizontalAutoLayoutContainer:
+                                            Height: =Parent.TemplateHeight
+                                            LayoutMode: =LayoutMode.Auto
+                                            Width: =Parent.TemplateWidth
+                                            ZIndex: =6
+
+                                            Container9_23 As groupContainer.manualLayoutContainer:
+                                                LayoutMinHeight: =40
+                                                LayoutMinWidth: =150
+                                                ZIndex: =1
+
+                                                Image4_11 As image:
+                                                    Height: =Parent.Height*70%
+                                                    Image: =Folder
+                                                    PaddingBottom: =2
+                                                    PaddingLeft: =2
+                                                    PaddingRight: =2
+                                                    PaddingTop: =2
+                                                    RadiusBottomLeft: =35
+                                                    RadiusBottomRight: =35
+                                                    RadiusTopLeft: =35
+                                                    RadiusTopRight: =35
+                                                    Width: =Self.Height
+                                                    X: =10
+                                                    Y: =(Parent.Height-Self.Height)/2
+                                                    ZIndex: =1
+
+                                                Label4_23 As label:
+                                                    Color: =secondarytext
+                                                    Font: =Font.'Segoe UI'
+                                                    FontWeight: =FontWeight.Semibold
+                                                    Height: =Parent.Height
+                                                    PaddingLeft: =10
+                                                    Size: =9.5
+                                                    Text: =ThisItem.Código
+                                                    Width: =Parent.Width-Self.X
+                                                    X: =45
+                                                    ZIndex: =2
+
+                                            Label3_13 As label:
+                                                AlignInContainer: =AlignInContainer.Stretch
+                                                Color: =secondarytext
+                                                FillPortions: =2
+                                                Font: =Font.'Segoe UI'
+                                                FontWeight: =FontWeight.Semibold
+                                                PaddingLeft: =15
+                                                Size: =9.5
+                                                Text: =ThisItem.Nombre
+                                                ZIndex: =2
+
+                                            Label4_24 As label:
+                                                Align: =Align.Center
+                                                Color: =secondarytext
+                                                FillPortions: =1.2
+                                                Font: =Font.'Segoe UI'
+                                                FontWeight: =FontWeight.Semibold
+                                                Height: =Parent.Height
+                                                PaddingLeft: =10
+                                                Size: =9.5
+                                                Text: =ThisItem.'Tipo Documento'
+                                                Width: =140
+                                                X: =50
+                                                ZIndex: =3
+
+                                            Label4_25 As label:
+                                                Align: =Align.Center
+                                                Color: =secondarytext
+                                                FillPortions: =1
+                                                Font: =Font.'Segoe UI'
+                                                FontWeight: =FontWeight.Semibold
+                                                Height: =Parent.Height
+                                                PaddingLeft: =10
+                                                Size: =9.5
+                                                Text: =ThisItem.'F. Solicitud Aprobación'
+                                                Width: =140
+                                                X: =50
+                                                ZIndex: =4
+
+                                            Container13_17 As groupContainer.manualLayoutContainer:
+                                                LayoutMinHeight: =40
+                                                LayoutMinWidth: =40
+                                                Width: =80
+                                                ZIndex: =5
+
+                                                Button2_6 As button:
+                                                    BorderColor: =Self.Color
+                                                    BorderStyle: =BorderStyle.None
+                                                    Color: |-
+                                                        =Switch(ThisItem.Estado,
+                                                        "Por aprobar", RGBA(180, 130, 0, 1),
+                                                        "Observado", RGBA(214, 0, 0, 1),
+                                                        "Aprobado",RGBA(44, 143, 112, 1))
+                                                    DisplayMode: =DisplayMode.View
+                                                    Fill: |-
+                                                        =Switch(ThisItem.Estado,
+                                                        "Por aprobar", RGBA(249, 249, 249, 1),
+                                                        "Observado", RGBA(245, 218, 216, 1),
+                                                        "Aprobado", RGBA(219, 238, 233, 1))
+                                                    Font: =Font.Arial
+                                                    FontWeight: =FontWeight.Normal
+                                                    Height: =Parent.Height*60%
+                                                    RadiusBottomLeft: =5
+                                                    RadiusBottomRight: =5
+                                                    RadiusTopLeft: =5
+                                                    RadiusTopRight: =5
+                                                    Size: =11
+                                                    Text: =ThisItem.Estado
+                                                    Width: =Parent.Width*80%
+                                                    X: =(Parent.Width-Self.Width)/2
+                                                    Y: =(Parent.Height-Self.Height)/2
+                                                    ZIndex: =1
+
+                                            Container13_18 As groupContainer.manualLayoutContainer:
+                                                FillPortions: =0
+                                                LayoutMinHeight: =40
+                                                LayoutMinWidth: =50
+                                                Width: =80
+                                                ZIndex: =6
+
+                                                Icon1_8 As icon.Edit:
+                                                    Height: =Parent.Height*60%
+                                                    Icon: =Icon.View
+                                                    PaddingBottom: =3
+                                                    PaddingLeft: =3
+                                                    PaddingRight: =3
+                                                    PaddingTop: =3
+                                                    Width: =Parent.Height*60%
+                                                    X: =(Parent.Width-Self.Width)/2
+                                                    Y: =(Parent.Height-Self.Height)/2
+                                                    ZIndex: =1
+

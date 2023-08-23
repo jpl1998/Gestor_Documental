@@ -130,6 +130,8 @@
   },
   "ScreenOrder": [
     "Home OP",
-    "DocProcessoOP"
+    "DocProcessoOP",
+    "Home RA",
+    "DocPorRevisar RA"
   ]
 }
