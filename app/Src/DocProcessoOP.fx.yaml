@@ -1953,8 +1953,8 @@
                     LayoutMinWidth: =250
                     LayoutMode: =LayoutMode.Auto
                     PaddingBottom: =20
-                    PaddingLeft: =20
-                    PaddingRight: =20
+                    PaddingLeft: =40
+                    PaddingRight: =40
                     PaddingTop: =20
                     Width: =602
                     X: =736
@@ -1969,10 +1969,6 @@
                         LayoutMinHeight: =30
                         Text: ="Documento Pincipal *"
                         ZIndex: =2
-
-                    upload_doc As import:
-                        Text: ="Importar Dados"
-                        ZIndex: =3
 
                     Container3 As groupContainer.manualLayoutContainer:
                         DropShadow: =DropShadow.None
@@ -1991,12 +1987,34 @@
                             BorderStyle: =BorderStyle.Dashed
                             Color: =primary
                             Fill: =RGBA(255, 255, 255, 1)
+                            FontWeight: =FontWeight.Bold
                             Height: =Parent.Height*90%
-                            Text: =upload_doc.Text
+                            OnSelect: =
+                            Text: ="Subir Archivo"
                             Width: =Parent.Width*95%
                             X: =(Parent.Width-Self.Width)/2
                             Y: =(Parent.Height-Self.Height)/2
                             ZIndex: =1
+
+                        adjuntos_doc_op As attachments:
+                            BorderColor: =
+                            DisplayMode: =Parent.DisplayMode
+                            Height: =80
+                            IsInDataCard: =true
+                            Items: =
+                            MaxAttachments: =1
+                            MaxAttachmentSize: =20
+                            OnAddFile: =
+                            OnSelect: =
+                            PaddingBottom: =5
+                            PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                            PaddingRight: =5
+                            PaddingTop: =5
+                            Tooltip: =
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =
+                            ZIndex: =2
 
                 Container14_18 As groupContainer.horizontalAutoLayoutContainer:
                     DropShadow: =DropShadow.None
