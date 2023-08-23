@@ -1908,3 +1908,172 @@
                 Y: =18
                 ZIndex: =2
 
+    popupupload As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(51, 51, 51, 0.27)
+        Height: =Parent.Height
+        Width: =Parent.Width
+        ZIndex: =6
+
+        Container22_1 As groupContainer.manualLayoutContainer:
+            DropShadow: =DropShadow.Semibold
+            Fill: =RGBA(246, 247, 251, 1)
+            Height: =Parent.Height*60%
+            Width: =Parent.Width*65%
+            X: =(Parent.Width-Self.Width)/2
+            Y: =(Parent.Height-Self.Height)/2
+            ZIndex: =3
+
+            Container13_11 As groupContainer.verticalAutoLayoutContainer:
+                DropShadow: =DropShadow.None
+                Height: =Parent.Height
+                LayoutAlignItems: =LayoutAlignItems.Stretch
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutGap: =10
+                LayoutMode: =LayoutMode.Auto
+                PaddingBottom: =20
+                PaddingLeft: =20
+                PaddingRight: =20
+                PaddingTop: =10
+                Width: =Parent.Width
+                ZIndex: =1
+
+                Label4_14 As label:
+                    Align: =Align.Center
+                    FontWeight: =FontWeight.Bold
+                    Size: =18
+                    Text: ="Nuevo Documento"
+                    ZIndex: =1
+
+                Container13_12 As groupContainer.verticalAutoLayoutContainer:
+                    DropShadow: =DropShadow.None
+                    Height: =452
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutGap: =10
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =20
+                    PaddingLeft: =20
+                    PaddingRight: =20
+                    PaddingTop: =20
+                    Width: =602
+                    X: =736
+                    Y: =207
+                    ZIndex: =2
+
+                    Label2_48 As label:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        Color: =primarytext
+                        FontWeight: =FontWeight.Bold
+                        Height: =30
+                        LayoutMinHeight: =30
+                        Text: ="Documento Pincipal *"
+                        ZIndex: =2
+
+                    upload_doc As import:
+                        Text: ="Importar Dados"
+                        ZIndex: =3
+
+                    Container3 As groupContainer.manualLayoutContainer:
+                        DropShadow: =DropShadow.None
+                        FillPortions: =0
+                        Height: =80
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        PaddingBottom: =5
+                        PaddingLeft: =5
+                        PaddingRight: =5
+                        PaddingTop: =5
+                        ZIndex: =4
+
+                        Button1 As button:
+                            BorderColor: =primary
+                            BorderStyle: =BorderStyle.Dashed
+                            Color: =primary
+                            Fill: =RGBA(255, 255, 255, 1)
+                            Height: =Parent.Height*90%
+                            Text: =upload_doc.Text
+                            Width: =Parent.Width*95%
+                            X: =(Parent.Width-Self.Width)/2
+                            Y: =(Parent.Height-Self.Height)/2
+                            ZIndex: =1
+
+                Container14_18 As groupContainer.horizontalAutoLayoutContainer:
+                    DropShadow: =DropShadow.None
+                    FillPortions: =0
+                    Height: =70
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    ZIndex: =3
+
+                    Container15_37 As groupContainer.verticalAutoLayoutContainer:
+                        DropShadow: =DropShadow.None
+                        Height: =100
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =50
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingBottom: =10
+                        PaddingLeft: =10
+                        PaddingRight: =10
+                        PaddingTop: =10
+                        ZIndex: =1
+
+                    Container15_38 As groupContainer.verticalAutoLayoutContainer:
+                        DropShadow: =DropShadow.None
+                        Height: =100
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutJustifyContent: =LayoutJustifyContent.Center
+                        LayoutMinHeight: =50
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingBottom: =10
+                        PaddingLeft: =10
+                        PaddingRight: =10
+                        PaddingTop: =10
+                        ZIndex: =2
+
+                        Label4_15 As label:
+                            Align: =Align.Center
+                            FontWeight: =FontWeight.Semibold
+                            Text: ="2/3"
+                            ZIndex: =1
+
+                    Container15_39 As groupContainer.verticalAutoLayoutContainer:
+                        DropShadow: =DropShadow.None
+                        Height: =100
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =30
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingBottom: =10
+                        PaddingLeft: =10
+                        PaddingRight: =10
+                        PaddingTop: =10
+                        ZIndex: =3
+
+                        Button3_5 As button:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            Fill: =primary
+                            FillPortions: =1
+                            LayoutMinHeight: =30
+                            OnSelect: =Set(varpopupformdoc,false)
+                            RadiusBottomLeft: =5
+                            RadiusBottomRight: =5
+                            RadiusTopLeft: =5
+                            RadiusTopRight: =5
+                            Size: =14
+                            Text: ="Siguiente"
+                            ZIndex: =1
+
+            Icon1_5 As icon.Cancel:
+                Height: =25
+                Icon: =Icon.Cancel
+                OnSelect: =Set(varpopupformdoc,false)
+                Width: =25
+                X: =834
+                Y: =18
+                ZIndex: =2
+
