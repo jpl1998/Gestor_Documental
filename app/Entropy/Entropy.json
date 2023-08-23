@@ -261,11 +261,11 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "08/23/2023 11:30:39",
+  "HeaderLastSavedDateTimeUTC": "08/23/2023 14:43:07",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
-    "17c8d167-044a-47fe-bc8d-da15ce1f963d": "\"/providers/microsoft.powerapps/apis/shared_office365users/connections/b2b8a24a0eb54c20aacf1f9988d8a3f8\"",
-    "e241a094-95cf-481b-a881-88d66c95707a": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/12ea9f9c199e405e89a88660a79ef8c9\""
+    "17c8d167-044a-47fe-bc8d-da15ce1f963d": "\"/providers/microsoft.powerapps/apis/shared_office365users/connections/2b0a98068e3a4a498a721c4ad5e551e2\"",
+    "e241a094-95cf-481b-a881-88d66c95707a": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/9473f6582abb479b9695ab4767c70269\""
   },
   "LocalDatabaseReferencesAsEmpty": false,
   "LocalResourceFileNames": {
@@ -285,20 +285,20 @@
     "Text Number List": "04c68b12-08e9-4fe7-a687-c8d3736fa05c.svg"
   },
   "LocalResourceRootPaths": {
-    "Document Checkmark": "https://docserverpwaprodsbr.blob.core.windows.net/d7fd5d3c-09c1-4ddf-a700-8e3c72e51740-1/resource/Assets0Images0a28e7dc2-54bf-46d3-85e3-a9680c3d747a.svg?sv=2018-03-28&sr=b&sig=NgEHw2vuTXhittYIOqO5RV3gVK5x8Dv3GaxJ6tPODwE%3D&spr=https&se=2023-08-24T11%3A36%3A02Z&sp=r",
-    "Document Ribbon": "https://docserverpwaprodsbr.blob.core.windows.net/d7fd5d3c-09c1-4ddf-a700-8e3c72e51740-1/resource/Assets0Images0df2d68aa-80f1-41b7-9772-fc5c52d5ee38.svg?sv=2018-03-28&sr=b&sig=6uYdLem9UiLsLcECRPZFbqRx4J%2B5tTQKzRq2KoRaoPI%3D&spr=https&se=2023-08-24T11%3A36%3A02Z&sp=r",
-    "Document Search": "https://docserverpwaprodsbr.blob.core.windows.net/d7fd5d3c-09c1-4ddf-a700-8e3c72e51740-1/resource/Assets0Images07890c170-8b8b-4ce8-81f2-667ca1de7f3f.svg?sv=2018-03-28&sr=b&sig=6JEHU7O3kRtGIMoJpozpxtCFJshVInJnsOu%2BoayQMCo%3D&spr=https&se=2023-08-24T11%3A36%3A02Z&sp=r",
-    "Document Sync": "https://docserverpwaprodsbr.blob.core.windows.net/d7fd5d3c-09c1-4ddf-a700-8e3c72e51740-1/resource/Assets0Images0ea29abdc-e2ac-49b1-96af-05da3249d289.svg?sv=2018-03-28&sr=b&sig=yNIzD%2BvDckuuzsGEeLjMnzsuFTWRbdaykzO4QMc9ais%3D&spr=https&se=2023-08-24T11%3A36%3A02Z&sp=r",
-    "Document Sync (1)": "https://docserverpwaprodsbr.blob.core.windows.net/d7fd5d3c-09c1-4ddf-a700-8e3c72e51740-1/resource/Assets0Images01f597449-974d-4160-91db-78353b726505.svg?sv=2018-03-28&sr=b&sig=h2fpU5GZZxmGpAKB871hRd8gLBS2MHLFR481OVWsrnc%3D&spr=https&se=2023-08-24T11%3A36%3A02Z&sp=r",
-    "Document Sync (2)": "https://docserverpwaprodsbr.blob.core.windows.net/d7fd5d3c-09c1-4ddf-a700-8e3c72e51740-1/resource/Assets0Images0fff3e859-d2c3-435e-93d1-60dcad6b3939.svg?sv=2018-03-28&sr=b&sig=OCyagj52YLQRkMaLukhF37YuACVNf%2F7RIOZG53IfDfo%3D&spr=https&se=2023-08-24T11%3A36%3A02Z&sp=r",
-    "Document Text": "https://docserverpwaprodsbr.blob.core.windows.net/d7fd5d3c-09c1-4ddf-a700-8e3c72e51740-1/resource/Assets0Images0613ef143-88b0-4350-ab27-43ed5e574d9a.svg?sv=2018-03-28&sr=b&sig=UlfEIbxzne0jp8BbrQu6oJkiZnroqbSifhisFLZ76KI%3D&spr=https&se=2023-08-24T11%3A36%3A02Z&sp=r",
-    "Folder": "https://docserverpwaprodsbr.blob.core.windows.net/d7fd5d3c-09c1-4ddf-a700-8e3c72e51740-1/resource/Assets0Images087014c79-b9d2-4641-86f8-cfdac1f11408.png?sv=2018-03-28&sr=b&sig=rVwKTriTc8R40TWl5XWURGRIMEde0hIIXh%2BB1LP2a94%3D&spr=https&se=2023-08-24T11%3A36%3A02Z&sp=r",
-    "Home": "https://docserverpwaprodsbr.blob.core.windows.net/d7fd5d3c-09c1-4ddf-a700-8e3c72e51740-1/resource/Assets0Images096510b40-3858-4f30-92a5-da15fa5d9441.svg?sv=2018-03-28&sr=b&sig=9%2B%2FvuLdlUuhtYzhWmx078YelpZfK7qICX8P5MKYYMjM%3D&spr=https&se=2023-08-24T11%3A36%3A02Z&sp=r",
-    "Home (1)": "https://docserverpwaprodsbr.blob.core.windows.net/d7fd5d3c-09c1-4ddf-a700-8e3c72e51740-1/resource/Assets0Images0ee1f1d0f-0e28-418a-9138-dc01fd841210.svg?sv=2018-03-28&sr=b&sig=Udh%2BFqRFPpC3AHmtIH1S5KA6LJYMDtmw2uDeCvD%2BYX8%3D&spr=https&se=2023-08-24T11%3A36%3A02Z&sp=r",
-    "LogoLuzDelSur": "https://docserverpwaprodsbr.blob.core.windows.net/d7fd5d3c-09c1-4ddf-a700-8e3c72e51740-1/resource/Assets0Images09ee2faa9-a3ab-4e6f-a79f-5fb0c733d75f.png?sv=2018-03-28&sr=b&sig=mepGTEDDux8vl1%2BCqFlvt3FwY0R8fa58wx1FyRgz1Lc%3D&spr=https&se=2023-08-24T11%3A36%3A02Z&sp=r",
-    "People Audience": "https://docserverpwaprodsbr.blob.core.windows.net/d7fd5d3c-09c1-4ddf-a700-8e3c72e51740-1/resource/Assets0Images0b0ecdc29-4ed9-4bbd-a563-0ddea677e65a.svg?sv=2018-03-28&sr=b&sig=QL9WvogjTsheJtugP%2Bjh5OLRiMVCYL3szliZrRpqExs%3D&spr=https&se=2023-08-24T11%3A36%3A02Z&sp=r",
-    "Receipt Add": "https://docserverpwaprodsbr.blob.core.windows.net/d7fd5d3c-09c1-4ddf-a700-8e3c72e51740-1/resource/Assets0Images0225937a1-d694-4138-b160-882f7ad950b3.svg?sv=2018-03-28&sr=b&sig=j4kXSRQN2GZafq%2FYRgijaf0aBkAoSd7dqpBqtB8IGYU%3D&spr=https&se=2023-08-24T11%3A36%3A02Z&sp=r",
-    "Text Number List": "https://docserverpwaprodsbr.blob.core.windows.net/d7fd5d3c-09c1-4ddf-a700-8e3c72e51740-1/resource/Assets0Images004c68b12-08e9-4fe7-a687-c8d3736fa05c.svg?sv=2018-03-28&sr=b&sig=%2BLITHDoAxVNTz5ieAD1A%2F2HmGjHxDF3jEFmfNcVOuXA%3D&spr=https&se=2023-08-24T11%3A36%3A02Z&sp=r"
+    "Document Checkmark": "https://docserverpwaprodsbr.blob.core.windows.net/c91698ae-8c9c-4949-abb1-ec5b19f820b4-1/resource/Assets0Images0a28e7dc2-54bf-46d3-85e3-a9680c3d747a.svg?sv=2018-03-28&sr=b&sig=GUcSIQMDmWCUE9uKPxGRu%2Fr%2BgJL3XhNHwnjjRPQukSU%3D&spr=https&se=2023-08-24T14%3A57%3A24Z&sp=r",
+    "Document Ribbon": "https://docserverpwaprodsbr.blob.core.windows.net/c91698ae-8c9c-4949-abb1-ec5b19f820b4-1/resource/Assets0Images0df2d68aa-80f1-41b7-9772-fc5c52d5ee38.svg?sv=2018-03-28&sr=b&sig=DnRaslQ1YHKHgtVq9ioacEsQNyPRrJ75i6pUgb%2F%2BquU%3D&spr=https&se=2023-08-24T14%3A57%3A24Z&sp=r",
+    "Document Search": "https://docserverpwaprodsbr.blob.core.windows.net/c91698ae-8c9c-4949-abb1-ec5b19f820b4-1/resource/Assets0Images07890c170-8b8b-4ce8-81f2-667ca1de7f3f.svg?sv=2018-03-28&sr=b&sig=XyGJv5643Z%2Bz%2F4228n%2BX6h74bQEiJoi7SdjDf0F1NMc%3D&spr=https&se=2023-08-24T14%3A57%3A24Z&sp=r",
+    "Document Sync": "https://docserverpwaprodsbr.blob.core.windows.net/c91698ae-8c9c-4949-abb1-ec5b19f820b4-1/resource/Assets0Images0ea29abdc-e2ac-49b1-96af-05da3249d289.svg?sv=2018-03-28&sr=b&sig=7r0NeDkk7fMHSdb%2FIRfKALGCVD0vxgu5krbzEI1zIeM%3D&spr=https&se=2023-08-24T14%3A57%3A24Z&sp=r",
+    "Document Sync (1)": "https://docserverpwaprodsbr.blob.core.windows.net/c91698ae-8c9c-4949-abb1-ec5b19f820b4-1/resource/Assets0Images01f597449-974d-4160-91db-78353b726505.svg?sv=2018-03-28&sr=b&sig=ZfdFkHj2E%2BYek0cb7eqxnTG11ti06WJxbSQy%2BSY844U%3D&spr=https&se=2023-08-24T14%3A57%3A24Z&sp=r",
+    "Document Sync (2)": "https://docserverpwaprodsbr.blob.core.windows.net/c91698ae-8c9c-4949-abb1-ec5b19f820b4-1/resource/Assets0Images0fff3e859-d2c3-435e-93d1-60dcad6b3939.svg?sv=2018-03-28&sr=b&sig=iCycusMb08TGi6E4GP7Zz78PAJMYAoYvwiUWTpYicsw%3D&spr=https&se=2023-08-24T14%3A57%3A24Z&sp=r",
+    "Document Text": "https://docserverpwaprodsbr.blob.core.windows.net/c91698ae-8c9c-4949-abb1-ec5b19f820b4-1/resource/Assets0Images0613ef143-88b0-4350-ab27-43ed5e574d9a.svg?sv=2018-03-28&sr=b&sig=YK0TU%2BD47B60p3eBugwOIXTH8tThQyXNuwGGgVv1i7w%3D&spr=https&se=2023-08-24T14%3A57%3A24Z&sp=r",
+    "Folder": "https://docserverpwaprodsbr.blob.core.windows.net/c91698ae-8c9c-4949-abb1-ec5b19f820b4-1/resource/Assets0Images087014c79-b9d2-4641-86f8-cfdac1f11408.png?sv=2018-03-28&sr=b&sig=K1yg%2BjRqSvd2GmFrpwBTDrdirr0kGjdbgZBDeY6jb%2FU%3D&spr=https&se=2023-08-24T14%3A57%3A24Z&sp=r",
+    "Home": "https://docserverpwaprodsbr.blob.core.windows.net/c91698ae-8c9c-4949-abb1-ec5b19f820b4-1/resource/Assets0Images096510b40-3858-4f30-92a5-da15fa5d9441.svg?sv=2018-03-28&sr=b&sig=A%2Bm7Ib3sctiDIn1yx8E6QGF%2B3qWNKyNyax2gpYxIrJA%3D&spr=https&se=2023-08-24T14%3A57%3A24Z&sp=r",
+    "Home (1)": "https://docserverpwaprodsbr.blob.core.windows.net/c91698ae-8c9c-4949-abb1-ec5b19f820b4-1/resource/Assets0Images0ee1f1d0f-0e28-418a-9138-dc01fd841210.svg?sv=2018-03-28&sr=b&sig=Mj5t1FQ%2FLkCsKqp2xhNCklmTjmRu%2B%2BZHjVuRMChShEU%3D&spr=https&se=2023-08-24T14%3A57%3A24Z&sp=r",
+    "LogoLuzDelSur": "https://docserverpwaprodsbr.blob.core.windows.net/c91698ae-8c9c-4949-abb1-ec5b19f820b4-1/resource/Assets0Images09ee2faa9-a3ab-4e6f-a79f-5fb0c733d75f.png?sv=2018-03-28&sr=b&sig=FciGt0sWDBFGnU2NVgmhskXqTfgv5pVgnztAnJLFdI4%3D&spr=https&se=2023-08-24T14%3A57%3A24Z&sp=r",
+    "People Audience": "https://docserverpwaprodsbr.blob.core.windows.net/c91698ae-8c9c-4949-abb1-ec5b19f820b4-1/resource/Assets0Images0b0ecdc29-4ed9-4bbd-a563-0ddea677e65a.svg?sv=2018-03-28&sr=b&sig=ehlAAz9addVIeeeEFQRpyCbXmNIe3fCPoevAPhE7yOM%3D&spr=https&se=2023-08-24T14%3A57%3A24Z&sp=r",
+    "Receipt Add": "https://docserverpwaprodsbr.blob.core.windows.net/c91698ae-8c9c-4949-abb1-ec5b19f820b4-1/resource/Assets0Images0225937a1-d694-4138-b160-882f7ad950b3.svg?sv=2018-03-28&sr=b&sig=Z2%2F2iO2NJVK9BnvVAeL2W0ohLFkfVbHI9EUUutpMFj0%3D&spr=https&se=2023-08-24T14%3A57%3A24Z&sp=r",
+    "Text Number List": "https://docserverpwaprodsbr.blob.core.windows.net/c91698ae-8c9c-4949-abb1-ec5b19f820b4-1/resource/Assets0Images004c68b12-08e9-4fe7-a687-c8d3736fa05c.svg?sv=2018-03-28&sr=b&sig=1UZjZFasYzpq2%2FvFcJD6uN03ls62%2FK%2FxdgLUA4cACHg%3D&spr=https&se=2023-08-24T14%3A57%3A24Z&sp=r"
   },
   "OrderComponentMetadata": {},
   "OrderComponentTemplate": {},
@@ -886,7 +886,7 @@
   "RuleScreenIdWithoutScreen": {},
   "TemplateVersions": {},
   "VolatileProperties": {
-    "AnalysisLoadTime": 1.378342,
+    "AnalysisLoadTime": 1.3042823,
     "ControlCount": {
       "button": 14,
       "combobox": 13,
@@ -903,7 +903,7 @@
       "screen": 2,
       "text": 4
     },
-    "DeserializationLoadTime": 3.8835677
+    "DeserializationLoadTime": 3.2368954
   },
   "WasLocalDatabaseReferencesEmpty": true
 }
