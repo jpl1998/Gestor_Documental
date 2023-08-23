@@ -117,7 +117,6 @@
     "Container4_3": 53,
     "Container4_4": 80,
     "Container4_5": 134,
-    "Container8": 28,
     "Container8_1": 33,
     "Container8_2": 38,
     "Container9": 43,
@@ -257,11 +256,12 @@
     "TextInput2": 217,
     "TextInput2_1": 224,
     "TextInput2_2": 238,
-    "txt_menu_home_op": 21
+    "txt_menu_home_op": 21,
+    "value_card1_div_home_op": 28
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "08/23/2023 11:30:39",
+  "HeaderLastSavedDateTimeUTC": "08/23/2023 18:28:20",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "17c8d167-044a-47fe-bc8d-da15ce1f963d": "\"/providers/microsoft.powerapps/apis/shared_office365users/connections/b2b8a24a0eb54c20aacf1f9988d8a3f8\"",
@@ -464,7 +464,6 @@
     "Container4_3": {},
     "Container4_4": {},
     "Container4_5": {},
-    "Container8": {},
     "Container8_1": {},
     "Container8_2": {},
     "Container9": {},
@@ -604,7 +603,8 @@
     "TextInput2": {},
     "TextInput2_1": {},
     "TextInput2_2": {},
-    "txt_menu_home_op": {}
+    "txt_menu_home_op": {},
+    "value_card1_div_home_op": {}
   },
   "PCFDynamicSchemaForIRRetrievalEntry": {},
   "PCFTemplateEntry": {},
@@ -724,7 +724,6 @@
     "Container4_3": 48,
     "Container4_4": 75,
     "Container4_5": 128,
-    "Container8": 23,
     "Container8_1": 28,
     "Container8_2": 33,
     "Container9": 38,
@@ -864,7 +863,8 @@
     "TextInput2": 211,
     "TextInput2_1": 218,
     "TextInput2_2": 232,
-    "txt_menu_home_op": 16
+    "txt_menu_home_op": 16,
+    "value_card1_div_home_op": 23
   },
   "ResourcesJsonIndices": {
     "Image-Document Checkmark": 7,

@@ -247,9 +247,10 @@
                                     Width: =80
                                     ZIndex: =1
 
-                                Container8 As groupContainer.verticalAutoLayoutContainer:
+                                value_card1_div_home_op As groupContainer.verticalAutoLayoutContainer:
                                     DropShadow: =DropShadow.None
                                     FillPortions: =0
+                                    LayoutAlignItems: =LayoutAlignItems.Stretch
                                     LayoutDirection: =LayoutDirection.Vertical
                                     LayoutJustifyContent: =LayoutJustifyContent.Center
                                     LayoutMinHeight: =100
@@ -257,12 +258,11 @@
                                     LayoutMode: =LayoutMode.Auto
                                     PaddingBottom: =20
                                     PaddingTop: =20
-                                    Width: =200
+                                    Width: =230
                                     ZIndex: =2
 
                                     Label1_3 As label:
                                         Align: =Align.Center
-                                        AlignInContainer: =AlignInContainer.Stretch
                                         Color: =primarytext
                                         Font: =Font.Arial
                                         FontWeight: =FontWeight.Semibold
@@ -273,7 +273,6 @@
 
                                     Label1_4 As label:
                                         Align: =Align.Center
-                                        AlignInContainer: =AlignInContainer.Stretch
                                         Color: =primarytext
                                         Font: =Font.Arial
                                         LayoutMinHeight: =20
@@ -299,7 +298,6 @@
                                     ZIndex: =1
 
                                 Container8_1 As groupContainer.verticalAutoLayoutContainer:
-                                    AlignInContainer: =AlignInContainer.SetByContainer
                                     DropShadow: =DropShadow.None
                                     FillPortions: =0
                                     LayoutDirection: =LayoutDirection.Vertical
