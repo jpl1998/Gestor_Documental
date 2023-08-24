@@ -1183,7 +1183,7 @@
                 Visible: =items_menu_sidebar_docRev_ra.Selected.Value="Archivos"
                 ZIndex: =3
 
-                Gallery2 As gallery.galleryVertical:
+                archivos_gallery_sidebar_docRev_ra As gallery.galleryVertical:
                     DelayItemLoading: =true
                     Items: =CustomGallerySample
                     Layout: =Layout.Vertical
@@ -1193,7 +1193,7 @@
                     TemplateSize: =40
                     ZIndex: =1
 
-                    Container18 As groupContainer.horizontalAutoLayoutContainer:
+                    container_archivos_gallery_sidebar As groupContainer.horizontalAutoLayoutContainer:
                         DropShadow: =DropShadow.None
                         Height: =40
                         LayoutMode: =LayoutMode.Auto
@@ -1207,6 +1207,7 @@
                             ZIndex: =1
 
                         Label10 As label:
+                            AlignInContainer: =AlignInContainer.Stretch
                             Text: ="Text"
                             Width: =304
                             ZIndex: =2
