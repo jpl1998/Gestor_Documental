@@ -2233,24 +2233,22 @@
                                     ChevronHoverBackground: =
                                     ChevronHoverFill: =primary
                                     Color: =secondarytext
-                                    DisplayFields: =["ComplianceAssetId"]
                                     FillPortions: =1
                                     HoverBorderColor: =
                                     HoverColor: =RGBA(26, 26, 26, 1)
                                     HoverFill: =RGBA(215, 223, 240, 1)
                                     InputTextPlaceholder: ="Seleccione Opción"
-                                    Items: =DEV_Acta_Aprobacion
+                                    Items: =ComboBoxSample
                                     LayoutMinWidth: =50
                                     PressedBorderColor: =secondarytext
                                     PressedColor: =RGBA(26, 26, 26, 1)
                                     PressedFill: =RGBA(0, 0, 0, 0)
-                                    SearchFields: =["ComplianceAssetId"]
-                                    SearchItems: =Search(DEV_Acta_Aprobacion,ComboBox2_19.SearchText,"ComplianceAssetId")
+                                    SearchItems: =Search(ComboBoxSample,ComboBox2_19.SearchText,"Value1")
                                     SelectMultiple: =false
                                     Size: =10
                                     ZIndex: =2
 
-                            elaborador1_1 As groupContainer.horizontalAutoLayoutContainer:
+                            elaborador2 As groupContainer.horizontalAutoLayoutContainer:
                                 DropShadow: =DropShadow.None
                                 FillPortions: =0
                                 Height: =50
@@ -2265,7 +2263,6 @@
                                 ZIndex: =4
 
                                 Label2_71 As label:
-                                    AlignInContainer: =AlignInContainer.Stretch
                                     Color: =primarytext
                                     FontWeight: =FontWeight.Bold
                                     Height: =30
@@ -2275,7 +2272,6 @@
                                     ZIndex: =1
 
                                 ComboBox2_22 As combobox:
-                                    AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =secondarytext
                                     BorderThickness: =1
                                     ChevronBackground: =RGBA(255, 255, 255, 1)
@@ -2283,24 +2279,22 @@
                                     ChevronHoverBackground: =
                                     ChevronHoverFill: =primary
                                     Color: =secondarytext
-                                    DisplayFields: =["ComplianceAssetId"]
                                     FillPortions: =1
                                     HoverBorderColor: =
                                     HoverColor: =RGBA(26, 26, 26, 1)
                                     HoverFill: =RGBA(215, 223, 240, 1)
                                     InputTextPlaceholder: ="Seleccione Opción"
-                                    Items: =DEV_Acta_Aprobacion
+                                    Items: =ComboBoxSample
                                     LayoutMinWidth: =50
                                     PressedBorderColor: =secondarytext
                                     PressedColor: =RGBA(26, 26, 26, 1)
                                     PressedFill: =RGBA(0, 0, 0, 0)
-                                    SearchFields: =["ComplianceAssetId"]
-                                    SearchItems: =Search(DEV_Acta_Aprobacion,ComboBox2_22.SearchText,"ComplianceAssetId")
+                                    SearchItems: =Search(ComboBoxSample,ComboBox2_22.SearchText,"Value1")
                                     SelectMultiple: =false
                                     Size: =10
                                     ZIndex: =2
 
-                            elaborador1_2 As groupContainer.horizontalAutoLayoutContainer:
+                            elaborador3 As groupContainer.horizontalAutoLayoutContainer:
                                 DropShadow: =DropShadow.None
                                 FillPortions: =0
                                 Height: =50
@@ -2315,7 +2309,6 @@
                                 ZIndex: =5
 
                                 Label2_72 As label:
-                                    AlignInContainer: =AlignInContainer.Stretch
                                     Color: =primarytext
                                     FontWeight: =FontWeight.Bold
                                     Height: =30
@@ -2325,7 +2318,6 @@
                                     ZIndex: =1
 
                                 ComboBox2_23 As combobox:
-                                    AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =secondarytext
                                     BorderThickness: =1
                                     ChevronBackground: =RGBA(255, 255, 255, 1)
@@ -2333,24 +2325,22 @@
                                     ChevronHoverBackground: =
                                     ChevronHoverFill: =primary
                                     Color: =secondarytext
-                                    DisplayFields: =["ComplianceAssetId"]
                                     FillPortions: =1
                                     HoverBorderColor: =
                                     HoverColor: =RGBA(26, 26, 26, 1)
                                     HoverFill: =RGBA(215, 223, 240, 1)
                                     InputTextPlaceholder: ="Seleccione Opción"
-                                    Items: =DEV_Acta_Aprobacion
+                                    Items: =ComboBoxSample
                                     LayoutMinWidth: =50
                                     PressedBorderColor: =secondarytext
                                     PressedColor: =RGBA(26, 26, 26, 1)
                                     PressedFill: =RGBA(0, 0, 0, 0)
-                                    SearchFields: =["ComplianceAssetId"]
-                                    SearchItems: =Search(DEV_Acta_Aprobacion,ComboBox2_23.SearchText,"ComplianceAssetId")
+                                    SearchItems: =Search(ComboBoxSample,ComboBox2_23.SearchText,"Value1")
                                     SelectMultiple: =false
                                     Size: =10
                                     ZIndex: =2
 
-                            elaborador1_3 As groupContainer.horizontalAutoLayoutContainer:
+                            elaborador4 As groupContainer.horizontalAutoLayoutContainer:
                                 DropShadow: =DropShadow.None
                                 FillPortions: =0
                                 Height: =50
@@ -2365,7 +2355,6 @@
                                 ZIndex: =6
 
                                 Label2_83 As label:
-                                    AlignInContainer: =AlignInContainer.Stretch
                                     Color: =primarytext
                                     FontWeight: =FontWeight.Bold
                                     Height: =30
@@ -2375,7 +2364,6 @@
                                     ZIndex: =1
 
                                 ComboBox2_24 As combobox:
-                                    AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =secondarytext
                                     BorderThickness: =1
                                     ChevronBackground: =RGBA(255, 255, 255, 1)
@@ -2383,24 +2371,22 @@
                                     ChevronHoverBackground: =
                                     ChevronHoverFill: =primary
                                     Color: =secondarytext
-                                    DisplayFields: =["ComplianceAssetId"]
                                     FillPortions: =1
                                     HoverBorderColor: =
                                     HoverColor: =RGBA(26, 26, 26, 1)
                                     HoverFill: =RGBA(215, 223, 240, 1)
                                     InputTextPlaceholder: ="Seleccione Opción"
-                                    Items: =DEV_Acta_Aprobacion
+                                    Items: =ComboBoxSample
                                     LayoutMinWidth: =50
                                     PressedBorderColor: =secondarytext
                                     PressedColor: =RGBA(26, 26, 26, 1)
                                     PressedFill: =RGBA(0, 0, 0, 0)
-                                    SearchFields: =["ComplianceAssetId"]
-                                    SearchItems: =Search(DEV_Acta_Aprobacion,ComboBox2_24.SearchText,"ComplianceAssetId")
+                                    SearchItems: =Search(ComboBoxSample,ComboBox2_24.SearchText,"Value1")
                                     SelectMultiple: =false
                                     Size: =10
                                     ZIndex: =2
 
-                            elaborador1_4 As groupContainer.horizontalAutoLayoutContainer:
+                            elaborador5 As groupContainer.horizontalAutoLayoutContainer:
                                 DropShadow: =DropShadow.None
                                 FillPortions: =0
                                 Height: =50
@@ -2415,7 +2401,6 @@
                                 ZIndex: =7
 
                                 Label2_84 As label:
-                                    AlignInContainer: =AlignInContainer.Stretch
                                     Color: =primarytext
                                     FontWeight: =FontWeight.Bold
                                     Height: =30
@@ -2425,7 +2410,6 @@
                                     ZIndex: =1
 
                                 ComboBox2_25 As combobox:
-                                    AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =secondarytext
                                     BorderThickness: =1
                                     ChevronBackground: =RGBA(255, 255, 255, 1)
@@ -2433,24 +2417,22 @@
                                     ChevronHoverBackground: =
                                     ChevronHoverFill: =primary
                                     Color: =secondarytext
-                                    DisplayFields: =["ComplianceAssetId"]
                                     FillPortions: =1
                                     HoverBorderColor: =
                                     HoverColor: =RGBA(26, 26, 26, 1)
                                     HoverFill: =RGBA(215, 223, 240, 1)
                                     InputTextPlaceholder: ="Seleccione Opción"
-                                    Items: =DEV_Acta_Aprobacion
+                                    Items: =ComboBoxSample
                                     LayoutMinWidth: =50
                                     PressedBorderColor: =secondarytext
                                     PressedColor: =RGBA(26, 26, 26, 1)
                                     PressedFill: =RGBA(0, 0, 0, 0)
-                                    SearchFields: =["ComplianceAssetId"]
-                                    SearchItems: =Search(DEV_Acta_Aprobacion,ComboBox2_25.SearchText,"ComplianceAssetId")
+                                    SearchItems: =Search(ComboBoxSample,ComboBox2_25.SearchText,"Value1")
                                     SelectMultiple: =false
                                     Size: =10
                                     ZIndex: =2
 
-                            elaborador1_5 As groupContainer.horizontalAutoLayoutContainer:
+                            elaborador6 As groupContainer.horizontalAutoLayoutContainer:
                                 DropShadow: =DropShadow.None
                                 FillPortions: =0
                                 Height: =50
@@ -2465,7 +2447,6 @@
                                 ZIndex: =8
 
                                 Label2_85 As label:
-                                    AlignInContainer: =AlignInContainer.Stretch
                                     Color: =primarytext
                                     FontWeight: =FontWeight.Bold
                                     Height: =30
@@ -2475,7 +2456,6 @@
                                     ZIndex: =1
 
                                 ComboBox2_26 As combobox:
-                                    AlignInContainer: =AlignInContainer.Stretch
                                     BorderColor: =secondarytext
                                     BorderThickness: =1
                                     ChevronBackground: =RGBA(255, 255, 255, 1)
@@ -2483,19 +2463,17 @@
                                     ChevronHoverBackground: =
                                     ChevronHoverFill: =primary
                                     Color: =secondarytext
-                                    DisplayFields: =["ComplianceAssetId"]
                                     FillPortions: =1
                                     HoverBorderColor: =
                                     HoverColor: =RGBA(26, 26, 26, 1)
                                     HoverFill: =RGBA(215, 223, 240, 1)
                                     InputTextPlaceholder: ="Seleccione Opción"
-                                    Items: =DEV_Acta_Aprobacion
+                                    Items: =ComboBoxSample
                                     LayoutMinWidth: =50
                                     PressedBorderColor: =secondarytext
                                     PressedColor: =RGBA(26, 26, 26, 1)
                                     PressedFill: =RGBA(0, 0, 0, 0)
-                                    SearchFields: =["ComplianceAssetId"]
-                                    SearchItems: =Search(DEV_Acta_Aprobacion,ComboBox2_26.SearchText,"ComplianceAssetId")
+                                    SearchItems: =Search(ComboBoxSample,ComboBox2_26.SearchText,"Value1")
                                     SelectMultiple: =false
                                     Size: =10
                                     ZIndex: =2
@@ -2529,28 +2507,283 @@
                                 Text: ="Revisado por"
                                 ZIndex: =1
 
-                            ComboBox2_20 As combobox:
-                                AlignInContainer: =AlignInContainer.Stretch
-                                BorderColor: =secondarytext
-                                BorderThickness: =1
-                                ChevronBackground: =RGBA(255, 255, 255, 1)
-                                ChevronFill: =primary
-                                ChevronHoverBackground: =
-                                ChevronHoverFill: =primary
-                                Color: =secondarytext
-                                HoverBorderColor: =
-                                HoverColor: =RGBA(26, 26, 26, 1)
-                                HoverFill: =RGBA(215, 223, 240, 1)
-                                InputTextPlaceholder: ="Seleccione Opción"
-                                Items: =ComboBoxSample
-                                LayoutMinWidth: =50
-                                PressedBorderColor: =secondarytext
-                                PressedColor: =RGBA(26, 26, 26, 1)
-                                PressedFill: =RGBA(0, 0, 0, 0)
-                                SearchItems: =Search(ComboBoxSample,ComboBox2_20.SearchText,"Value1")
-                                SelectMultiple: =false
-                                Size: =10
+                            revisor1 As groupContainer.horizontalAutoLayoutContainer:
+                                DropShadow: =DropShadow.None
+                                FillPortions: =0
+                                Height: =50
+                                LayoutGap: =10
+                                LayoutMinHeight: =50
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                PaddingBottom: =5
+                                PaddingLeft: =5
+                                PaddingRight: =5
+                                PaddingTop: =5
                                 ZIndex: =2
+
+                                Label2_86 As label:
+                                    Color: =primarytext
+                                    FontWeight: =FontWeight.Bold
+                                    Height: =30
+                                    LayoutMinHeight: =30
+                                    Text: ="1"
+                                    Width: =20
+                                    ZIndex: =1
+
+                                ComboBox2_20 As combobox:
+                                    BorderColor: =secondarytext
+                                    BorderThickness: =1
+                                    ChevronBackground: =RGBA(255, 255, 255, 1)
+                                    ChevronFill: =primary
+                                    ChevronHoverBackground: =
+                                    ChevronHoverFill: =primary
+                                    Color: =secondarytext
+                                    FillPortions: =1
+                                    HoverBorderColor: =
+                                    HoverColor: =RGBA(26, 26, 26, 1)
+                                    HoverFill: =RGBA(215, 223, 240, 1)
+                                    InputTextPlaceholder: ="Seleccione Opción"
+                                    Items: =ComboBoxSample
+                                    LayoutMinWidth: =50
+                                    PressedBorderColor: =secondarytext
+                                    PressedColor: =RGBA(26, 26, 26, 1)
+                                    PressedFill: =RGBA(0, 0, 0, 0)
+                                    SearchItems: =Search(ComboBoxSample,ComboBox2_20.SearchText,"Value1")
+                                    SelectMultiple: =false
+                                    Size: =10
+                                    ZIndex: =2
+
+                            revisor2 As groupContainer.horizontalAutoLayoutContainer:
+                                DropShadow: =DropShadow.None
+                                FillPortions: =0
+                                Height: =50
+                                LayoutGap: =10
+                                LayoutMinHeight: =50
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                PaddingBottom: =5
+                                PaddingLeft: =5
+                                PaddingRight: =5
+                                PaddingTop: =5
+                                ZIndex: =3
+
+                                Label2_87 As label:
+                                    Color: =primarytext
+                                    FontWeight: =FontWeight.Bold
+                                    Height: =30
+                                    LayoutMinHeight: =30
+                                    Text: ="2"
+                                    Width: =20
+                                    ZIndex: =1
+
+                                ComboBox2_27 As combobox:
+                                    BorderColor: =secondarytext
+                                    BorderThickness: =1
+                                    ChevronBackground: =RGBA(255, 255, 255, 1)
+                                    ChevronFill: =primary
+                                    ChevronHoverBackground: =
+                                    ChevronHoverFill: =primary
+                                    Color: =secondarytext
+                                    FillPortions: =1
+                                    HoverBorderColor: =
+                                    HoverColor: =RGBA(26, 26, 26, 1)
+                                    HoverFill: =RGBA(215, 223, 240, 1)
+                                    InputTextPlaceholder: ="Seleccione Opción"
+                                    Items: =ComboBoxSample
+                                    LayoutMinWidth: =50
+                                    PressedBorderColor: =secondarytext
+                                    PressedColor: =RGBA(26, 26, 26, 1)
+                                    PressedFill: =RGBA(0, 0, 0, 0)
+                                    SearchItems: =Search(ComboBoxSample,ComboBox2_27.SearchText,"Value1")
+                                    SelectMultiple: =false
+                                    Size: =10
+                                    ZIndex: =2
+
+                            revisor3 As groupContainer.horizontalAutoLayoutContainer:
+                                DropShadow: =DropShadow.None
+                                FillPortions: =0
+                                Height: =50
+                                LayoutGap: =10
+                                LayoutMinHeight: =50
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                PaddingBottom: =5
+                                PaddingLeft: =5
+                                PaddingRight: =5
+                                PaddingTop: =5
+                                ZIndex: =4
+
+                                Label2_88 As label:
+                                    Color: =primarytext
+                                    FontWeight: =FontWeight.Bold
+                                    Height: =30
+                                    LayoutMinHeight: =30
+                                    Text: ="3"
+                                    Width: =20
+                                    ZIndex: =1
+
+                                ComboBox2_28 As combobox:
+                                    BorderColor: =secondarytext
+                                    BorderThickness: =1
+                                    ChevronBackground: =RGBA(255, 255, 255, 1)
+                                    ChevronFill: =primary
+                                    ChevronHoverBackground: =
+                                    ChevronHoverFill: =primary
+                                    Color: =secondarytext
+                                    FillPortions: =1
+                                    HoverBorderColor: =
+                                    HoverColor: =RGBA(26, 26, 26, 1)
+                                    HoverFill: =RGBA(215, 223, 240, 1)
+                                    InputTextPlaceholder: ="Seleccione Opción"
+                                    Items: =ComboBoxSample
+                                    LayoutMinWidth: =50
+                                    PressedBorderColor: =secondarytext
+                                    PressedColor: =RGBA(26, 26, 26, 1)
+                                    PressedFill: =RGBA(0, 0, 0, 0)
+                                    SearchItems: =Search(ComboBoxSample,ComboBox2_28.SearchText,"Value1")
+                                    SelectMultiple: =false
+                                    Size: =10
+                                    ZIndex: =2
+
+                            revisor4 As groupContainer.horizontalAutoLayoutContainer:
+                                DropShadow: =DropShadow.None
+                                FillPortions: =0
+                                Height: =50
+                                LayoutGap: =10
+                                LayoutMinHeight: =50
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                PaddingBottom: =5
+                                PaddingLeft: =5
+                                PaddingRight: =5
+                                PaddingTop: =5
+                                ZIndex: =5
+
+                                Label2_89 As label:
+                                    Color: =primarytext
+                                    FontWeight: =FontWeight.Bold
+                                    Height: =30
+                                    LayoutMinHeight: =30
+                                    Text: ="4"
+                                    Width: =20
+                                    ZIndex: =1
+
+                                ComboBox2_29 As combobox:
+                                    BorderColor: =secondarytext
+                                    BorderThickness: =1
+                                    ChevronBackground: =RGBA(255, 255, 255, 1)
+                                    ChevronFill: =primary
+                                    ChevronHoverBackground: =
+                                    ChevronHoverFill: =primary
+                                    Color: =secondarytext
+                                    FillPortions: =1
+                                    HoverBorderColor: =
+                                    HoverColor: =RGBA(26, 26, 26, 1)
+                                    HoverFill: =RGBA(215, 223, 240, 1)
+                                    InputTextPlaceholder: ="Seleccione Opción"
+                                    Items: =ComboBoxSample
+                                    LayoutMinWidth: =50
+                                    PressedBorderColor: =secondarytext
+                                    PressedColor: =RGBA(26, 26, 26, 1)
+                                    PressedFill: =RGBA(0, 0, 0, 0)
+                                    SearchItems: =Search(ComboBoxSample,ComboBox2_29.SearchText,"Value1")
+                                    SelectMultiple: =false
+                                    Size: =10
+                                    ZIndex: =2
+
+                            revisor5 As groupContainer.horizontalAutoLayoutContainer:
+                                DropShadow: =DropShadow.None
+                                FillPortions: =0
+                                Height: =50
+                                LayoutAlignItems: =LayoutAlignItems.Stretch
+                                LayoutGap: =10
+                                LayoutMinHeight: =50
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                PaddingBottom: =5
+                                PaddingLeft: =5
+                                PaddingRight: =5
+                                PaddingTop: =5
+                                ZIndex: =6
+
+                                Label2_90 As label:
+                                    Color: =primarytext
+                                    FontWeight: =FontWeight.Bold
+                                    Height: =30
+                                    LayoutMinHeight: =30
+                                    Text: ="5"
+                                    Width: =20
+                                    ZIndex: =1
+
+                                ComboBox2_30 As combobox:
+                                    BorderColor: =secondarytext
+                                    BorderThickness: =1
+                                    ChevronBackground: =RGBA(255, 255, 255, 1)
+                                    ChevronFill: =primary
+                                    ChevronHoverBackground: =
+                                    ChevronHoverFill: =primary
+                                    Color: =secondarytext
+                                    FillPortions: =1
+                                    HoverBorderColor: =
+                                    HoverColor: =RGBA(26, 26, 26, 1)
+                                    HoverFill: =RGBA(215, 223, 240, 1)
+                                    InputTextPlaceholder: ="Seleccione Opción"
+                                    Items: =ComboBoxSample
+                                    LayoutMinWidth: =50
+                                    PressedBorderColor: =secondarytext
+                                    PressedColor: =RGBA(26, 26, 26, 1)
+                                    PressedFill: =RGBA(0, 0, 0, 0)
+                                    SearchItems: =Search(ComboBoxSample,ComboBox2_30.SearchText,"Value1")
+                                    SelectMultiple: =false
+                                    Size: =10
+                                    ZIndex: =2
+
+                            revisor6 As groupContainer.horizontalAutoLayoutContainer:
+                                DropShadow: =DropShadow.None
+                                FillPortions: =0
+                                Height: =50
+                                LayoutAlignItems: =LayoutAlignItems.Stretch
+                                LayoutGap: =10
+                                LayoutMinHeight: =50
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                PaddingBottom: =5
+                                PaddingLeft: =5
+                                PaddingRight: =5
+                                PaddingTop: =5
+                                ZIndex: =7
+
+                                Label2_91 As label:
+                                    Color: =primarytext
+                                    FontWeight: =FontWeight.Bold
+                                    Height: =30
+                                    LayoutMinHeight: =30
+                                    Text: ="6"
+                                    Width: =20
+                                    ZIndex: =1
+
+                                ComboBox2_31 As combobox:
+                                    BorderColor: =secondarytext
+                                    BorderThickness: =1
+                                    ChevronBackground: =RGBA(255, 255, 255, 1)
+                                    ChevronFill: =primary
+                                    ChevronHoverBackground: =
+                                    ChevronHoverFill: =primary
+                                    Color: =secondarytext
+                                    FillPortions: =1
+                                    HoverBorderColor: =
+                                    HoverColor: =RGBA(26, 26, 26, 1)
+                                    HoverFill: =RGBA(215, 223, 240, 1)
+                                    InputTextPlaceholder: ="Seleccione Opción"
+                                    Items: =ComboBoxSample
+                                    LayoutMinWidth: =50
+                                    PressedBorderColor: =secondarytext
+                                    PressedColor: =RGBA(26, 26, 26, 1)
+                                    PressedFill: =RGBA(0, 0, 0, 0)
+                                    SearchItems: =Search(ComboBoxSample,ComboBox2_31.SearchText,"Value1")
+                                    SelectMultiple: =false
+                                    Size: =10
+                                    ZIndex: =2
 
                         separator_revisores_op_1 As rectangle:
                             AlignInContainer: =AlignInContainer.Stretch
@@ -2581,28 +2814,287 @@
                                 Text: ="Aprobado por"
                                 ZIndex: =1
 
-                            ComboBox2_21 As combobox:
-                                AlignInContainer: =AlignInContainer.Stretch
-                                BorderColor: =secondarytext
-                                BorderThickness: =1
-                                ChevronBackground: =RGBA(255, 255, 255, 1)
-                                ChevronFill: =primary
-                                ChevronHoverBackground: =
-                                ChevronHoverFill: =primary
-                                Color: =secondarytext
-                                HoverBorderColor: =
-                                HoverColor: =RGBA(26, 26, 26, 1)
-                                HoverFill: =RGBA(215, 223, 240, 1)
-                                InputTextPlaceholder: ="Seleccione Opción"
-                                Items: =ComboBoxSample
-                                LayoutMinWidth: =50
-                                PressedBorderColor: =secondarytext
-                                PressedColor: =RGBA(26, 26, 26, 1)
-                                PressedFill: =RGBA(0, 0, 0, 0)
-                                SearchItems: =Search(ComboBoxSample,ComboBox2_21.SearchText,"Value1")
-                                SelectMultiple: =false
-                                Size: =10
+                            aprobador1 As groupContainer.horizontalAutoLayoutContainer:
+                                DropShadow: =DropShadow.None
+                                FillPortions: =0
+                                Height: =50
+                                LayoutAlignItems: =LayoutAlignItems.Stretch
+                                LayoutGap: =10
+                                LayoutMinHeight: =50
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                PaddingBottom: =5
+                                PaddingLeft: =5
+                                PaddingRight: =5
+                                PaddingTop: =5
                                 ZIndex: =2
+
+                                Label2_92 As label:
+                                    Color: =primarytext
+                                    FontWeight: =FontWeight.Bold
+                                    Height: =30
+                                    LayoutMinHeight: =30
+                                    Text: ="1"
+                                    Width: =20
+                                    ZIndex: =1
+
+                                ComboBox2_21 As combobox:
+                                    BorderColor: =secondarytext
+                                    BorderThickness: =1
+                                    ChevronBackground: =RGBA(255, 255, 255, 1)
+                                    ChevronFill: =primary
+                                    ChevronHoverBackground: =
+                                    ChevronHoverFill: =primary
+                                    Color: =secondarytext
+                                    FillPortions: =1
+                                    HoverBorderColor: =
+                                    HoverColor: =RGBA(26, 26, 26, 1)
+                                    HoverFill: =RGBA(215, 223, 240, 1)
+                                    InputTextPlaceholder: ="Seleccione Opción"
+                                    Items: =ComboBoxSample
+                                    LayoutMinWidth: =50
+                                    PressedBorderColor: =secondarytext
+                                    PressedColor: =RGBA(26, 26, 26, 1)
+                                    PressedFill: =RGBA(0, 0, 0, 0)
+                                    SearchItems: =Search(ComboBoxSample,ComboBox2_21.SearchText,"Value1")
+                                    SelectMultiple: =false
+                                    Size: =10
+                                    ZIndex: =2
+
+                            aprobador2 As groupContainer.horizontalAutoLayoutContainer:
+                                DropShadow: =DropShadow.None
+                                FillPortions: =0
+                                Height: =50
+                                LayoutAlignItems: =LayoutAlignItems.Stretch
+                                LayoutGap: =10
+                                LayoutMinHeight: =50
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                PaddingBottom: =5
+                                PaddingLeft: =5
+                                PaddingRight: =5
+                                PaddingTop: =5
+                                ZIndex: =3
+
+                                Label2_93 As label:
+                                    Color: =primarytext
+                                    FontWeight: =FontWeight.Bold
+                                    Height: =30
+                                    LayoutMinHeight: =30
+                                    Text: ="2"
+                                    Width: =20
+                                    ZIndex: =1
+
+                                ComboBox2_32 As combobox:
+                                    BorderColor: =secondarytext
+                                    BorderThickness: =1
+                                    ChevronBackground: =RGBA(255, 255, 255, 1)
+                                    ChevronFill: =primary
+                                    ChevronHoverBackground: =
+                                    ChevronHoverFill: =primary
+                                    Color: =secondarytext
+                                    FillPortions: =1
+                                    HoverBorderColor: =
+                                    HoverColor: =RGBA(26, 26, 26, 1)
+                                    HoverFill: =RGBA(215, 223, 240, 1)
+                                    InputTextPlaceholder: ="Seleccione Opción"
+                                    Items: =ComboBoxSample
+                                    LayoutMinWidth: =50
+                                    PressedBorderColor: =secondarytext
+                                    PressedColor: =RGBA(26, 26, 26, 1)
+                                    PressedFill: =RGBA(0, 0, 0, 0)
+                                    SearchItems: =Search(ComboBoxSample,ComboBox2_32.SearchText,"Value1")
+                                    SelectMultiple: =false
+                                    Size: =10
+                                    ZIndex: =2
+
+                            aprobador3 As groupContainer.horizontalAutoLayoutContainer:
+                                DropShadow: =DropShadow.None
+                                FillPortions: =0
+                                Height: =50
+                                LayoutAlignItems: =LayoutAlignItems.Stretch
+                                LayoutGap: =10
+                                LayoutMinHeight: =50
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                PaddingBottom: =5
+                                PaddingLeft: =5
+                                PaddingRight: =5
+                                PaddingTop: =5
+                                ZIndex: =4
+
+                                Label2_94 As label:
+                                    Color: =primarytext
+                                    FontWeight: =FontWeight.Bold
+                                    Height: =30
+                                    LayoutMinHeight: =30
+                                    Text: ="3"
+                                    Width: =20
+                                    ZIndex: =1
+
+                                ComboBox2_33 As combobox:
+                                    BorderColor: =secondarytext
+                                    BorderThickness: =1
+                                    ChevronBackground: =RGBA(255, 255, 255, 1)
+                                    ChevronFill: =primary
+                                    ChevronHoverBackground: =
+                                    ChevronHoverFill: =primary
+                                    Color: =secondarytext
+                                    FillPortions: =1
+                                    HoverBorderColor: =
+                                    HoverColor: =RGBA(26, 26, 26, 1)
+                                    HoverFill: =RGBA(215, 223, 240, 1)
+                                    InputTextPlaceholder: ="Seleccione Opción"
+                                    Items: =ComboBoxSample
+                                    LayoutMinWidth: =50
+                                    PressedBorderColor: =secondarytext
+                                    PressedColor: =RGBA(26, 26, 26, 1)
+                                    PressedFill: =RGBA(0, 0, 0, 0)
+                                    SearchItems: =Search(ComboBoxSample,ComboBox2_33.SearchText,"Value1")
+                                    SelectMultiple: =false
+                                    Size: =10
+                                    ZIndex: =2
+
+                            aprobador4 As groupContainer.horizontalAutoLayoutContainer:
+                                DropShadow: =DropShadow.None
+                                FillPortions: =0
+                                Height: =50
+                                LayoutAlignItems: =LayoutAlignItems.Stretch
+                                LayoutGap: =10
+                                LayoutMinHeight: =50
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                PaddingBottom: =5
+                                PaddingLeft: =5
+                                PaddingRight: =5
+                                PaddingTop: =5
+                                ZIndex: =5
+
+                                Label2_95 As label:
+                                    Color: =primarytext
+                                    FontWeight: =FontWeight.Bold
+                                    Height: =30
+                                    LayoutMinHeight: =30
+                                    Text: ="4"
+                                    Width: =20
+                                    ZIndex: =1
+
+                                ComboBox2_34 As combobox:
+                                    BorderColor: =secondarytext
+                                    BorderThickness: =1
+                                    ChevronBackground: =RGBA(255, 255, 255, 1)
+                                    ChevronFill: =primary
+                                    ChevronHoverBackground: =
+                                    ChevronHoverFill: =primary
+                                    Color: =secondarytext
+                                    FillPortions: =1
+                                    HoverBorderColor: =
+                                    HoverColor: =RGBA(26, 26, 26, 1)
+                                    HoverFill: =RGBA(215, 223, 240, 1)
+                                    InputTextPlaceholder: ="Seleccione Opción"
+                                    Items: =ComboBoxSample
+                                    LayoutMinWidth: =50
+                                    PressedBorderColor: =secondarytext
+                                    PressedColor: =RGBA(26, 26, 26, 1)
+                                    PressedFill: =RGBA(0, 0, 0, 0)
+                                    SearchItems: =Search(ComboBoxSample,ComboBox2_34.SearchText,"Value1")
+                                    SelectMultiple: =false
+                                    Size: =10
+                                    ZIndex: =2
+
+                            aprobador5 As groupContainer.horizontalAutoLayoutContainer:
+                                DropShadow: =DropShadow.None
+                                FillPortions: =0
+                                Height: =50
+                                LayoutAlignItems: =LayoutAlignItems.Stretch
+                                LayoutGap: =10
+                                LayoutMinHeight: =50
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                PaddingBottom: =5
+                                PaddingLeft: =5
+                                PaddingRight: =5
+                                PaddingTop: =5
+                                ZIndex: =6
+
+                                Label2_96 As label:
+                                    Color: =primarytext
+                                    FontWeight: =FontWeight.Bold
+                                    Height: =30
+                                    LayoutMinHeight: =30
+                                    Text: ="5"
+                                    Width: =20
+                                    ZIndex: =1
+
+                                ComboBox2_35 As combobox:
+                                    BorderColor: =secondarytext
+                                    BorderThickness: =1
+                                    ChevronBackground: =RGBA(255, 255, 255, 1)
+                                    ChevronFill: =primary
+                                    ChevronHoverBackground: =
+                                    ChevronHoverFill: =primary
+                                    Color: =secondarytext
+                                    FillPortions: =1
+                                    HoverBorderColor: =
+                                    HoverColor: =RGBA(26, 26, 26, 1)
+                                    HoverFill: =RGBA(215, 223, 240, 1)
+                                    InputTextPlaceholder: ="Seleccione Opción"
+                                    Items: =ComboBoxSample
+                                    LayoutMinWidth: =50
+                                    PressedBorderColor: =secondarytext
+                                    PressedColor: =RGBA(26, 26, 26, 1)
+                                    PressedFill: =RGBA(0, 0, 0, 0)
+                                    SearchItems: =Search(ComboBoxSample,ComboBox2_35.SearchText,"Value1")
+                                    SelectMultiple: =false
+                                    Size: =10
+                                    ZIndex: =2
+
+                            aprobador6 As groupContainer.horizontalAutoLayoutContainer:
+                                DropShadow: =DropShadow.None
+                                FillPortions: =0
+                                Height: =50
+                                LayoutAlignItems: =LayoutAlignItems.Stretch
+                                LayoutGap: =10
+                                LayoutMinHeight: =50
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                PaddingBottom: =5
+                                PaddingLeft: =5
+                                PaddingRight: =5
+                                PaddingTop: =5
+                                ZIndex: =7
+
+                                Label2_97 As label:
+                                    Color: =primarytext
+                                    FontWeight: =FontWeight.Bold
+                                    Height: =30
+                                    LayoutMinHeight: =30
+                                    Text: ="6"
+                                    Width: =20
+                                    ZIndex: =1
+
+                                ComboBox2_36 As combobox:
+                                    BorderColor: =secondarytext
+                                    BorderThickness: =1
+                                    ChevronBackground: =RGBA(255, 255, 255, 1)
+                                    ChevronFill: =primary
+                                    ChevronHoverBackground: =
+                                    ChevronHoverFill: =primary
+                                    Color: =secondarytext
+                                    FillPortions: =1
+                                    HoverBorderColor: =
+                                    HoverColor: =RGBA(26, 26, 26, 1)
+                                    HoverFill: =RGBA(215, 223, 240, 1)
+                                    InputTextPlaceholder: ="Seleccione Opción"
+                                    Items: =ComboBoxSample
+                                    LayoutMinWidth: =50
+                                    PressedBorderColor: =secondarytext
+                                    PressedColor: =RGBA(26, 26, 26, 1)
+                                    PressedFill: =RGBA(0, 0, 0, 0)
+                                    SearchItems: =Search(ComboBoxSample,ComboBox2_36.SearchText,"Value1")
+                                    SelectMultiple: =false
+                                    Size: =10
+                                    ZIndex: =2
 
                 Container14_24 As groupContainer.horizontalAutoLayoutContainer:
                     DropShadow: =DropShadow.None
