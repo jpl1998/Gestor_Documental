@@ -1890,7 +1890,9 @@
                             Fill: =primary
                             FillPortions: =1
                             LayoutMinHeight: =30
-                            OnSelect: =Set(varpopupformdoc,false)
+                            OnSelect: |-
+                                =Set(varpopupformdoc,false);
+                                Set(varpopupuploaddoc,true)
                             RadiusBottomLeft: =5
                             RadiusBottomRight: =5
                             RadiusTopLeft: =5
@@ -1911,6 +1913,7 @@
     popupupload As groupContainer.manualLayoutContainer:
         Fill: =RGBA(51, 51, 51, 0.27)
         Height: =Parent.Height
+        Visible: =varpopupuploaddoc
         Width: =Parent.Width
         ZIndex: =6
 
@@ -2041,8 +2044,13 @@
                             Color: =primary
                             Fill: =RGBA(255, 255, 255, 1)
                             FillPortions: =1
+                            HoverColor: =primary
+                            HoverFill: =RGBA(255, 255, 255, 1)
                             LayoutMinHeight: =30
-                            OnSelect: =Set(varpopupformdoc,false)
+                            OnSelect: |-
+                                =Set(varpopupuploaddoc,false);
+                                Set(varpopupformdoc,true)
+                            PressedFill: =RGBA(255, 255, 255, 1)
                             RadiusBottomLeft: =5
                             RadiusBottomRight: =5
                             RadiusTopLeft: =5
@@ -2090,7 +2098,7 @@
                             Fill: =primary
                             FillPortions: =1
                             LayoutMinHeight: =30
-                            OnSelect: =Set(varpopupformdoc,false)
+                            OnSelect: =Set(varpopupuploaddoc,false)
                             RadiusBottomLeft: =5
                             RadiusBottomRight: =5
                             RadiusTopLeft: =5
@@ -2098,4 +2106,13 @@
                             Size: =14
                             Text: ="Siguiente"
                             ZIndex: =1
+
+            Icon1_5 As icon.Cancel:
+                Height: =25
+                Icon: =Icon.Cancel
+                OnSelect: =Set(varpopupuploaddoc,false)
+                Width: =25
+                X: =843
+                Y: =15
+                ZIndex: =2
 
