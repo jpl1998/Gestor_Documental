@@ -8046,6 +8046,18 @@
               "message": {
                 "text": "Error occurred running rule app-InefficientDelayLoading."
               }
+            },
+            {
+              "associatedRule": {
+                "id": "app-InefficientDelayLoading",
+                "index": 6
+              },
+              "descriptor": {
+                "id": "app-InefficientDelayLoading"
+              },
+              "message": {
+                "text": "Error occurred running rule app-InefficientDelayLoading."
+              }
             }
           ]
         }
@@ -11488,6 +11500,126 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'DocPorRevisar RA'.ScreenContainer_docRev_ra.BottomContainer_docRev_ra.MainContainer_docRev_ra.MainCont_docRev_ra.Container_table_docRev_ra.Container_tablecontent_docRev_ra.tablecontent_docRev_ra.Container3_10.Container13_20.Icon1_9.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPorRevisar RA'.ScreenContainer_docRev_ra.BottomContainer_docRev_ra.MainContainer_docRev_ra.MainCont_docRev_ra.Container_table_docRev_ra.Container_tablecontent_docRev_ra.tablecontent_docRev_ra.Container3_10.Container13_20.Icon1_9.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "DocPorRevisar RA",
+                "type": "'DocPorRevisar RA'.ScreenContainer_docRev_ra.BottomContainer_docRev_ra.MainContainer_docRev_ra.MainCont_docRev_ra.Container_table_docRev_ra.Container_tablecontent_docRev_ra.tablecontent_docRev_ra.Container3_10.Container13_20.Icon1_9"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'DocPorRevisar RA'.ScreenContainer_docRev_ra.BottomContainer_docRev_ra.MainContainer_docRev_ra.MainCont_docRev_ra.Container_table_docRev_ra.Container_tablecontent_docRev_ra.tablecontent_docRev_ra.Container3_10.Container13_20.Icon1_9.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPorRevisar RA'.ScreenContainer_docRev_ra.BottomContainer_docRev_ra.MainContainer_docRev_ra.MainCont_docRev_ra.Container_table_docRev_ra.Container_tablecontent_docRev_ra.tablecontent_docRev_ra.Container3_10.Container13_20.Icon1_9.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "DocPorRevisar RA",
+                "type": "'DocPorRevisar RA'.ScreenContainer_docRev_ra.BottomContainer_docRev_ra.MainContainer_docRev_ra.MainCont_docRev_ra.Container_table_docRev_ra.Container_tablecontent_docRev_ra.tablecontent_docRev_ra.Container3_10.Container13_20.Icon1_9"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'DocPorRevisar RA'.SideBar_ra.Rectangle3.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPorRevisar RA'.SideBar_ra.Rectangle3.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "DocPorRevisar RA",
+                "type": "'DocPorRevisar RA'.SideBar_ra.Rectangle3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'DocPorRevisar RA'.SideBar_ra.Rectangle3.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPorRevisar RA'.SideBar_ra.Rectangle3.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "DocPorRevisar RA",
+                "type": "'DocPorRevisar RA'.SideBar_ra.Rectangle3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.People Audience"
                 }
               ],
@@ -11843,7 +11975,7 @@
                 ],
                 "level": "Medium",
                 "primaryCategory": "performance",
-                "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"DocPorRevisar RA\" is 330, which exceeds the maximum threshold recommended (300)."
+                "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"DocPorRevisar RA\" is 331, which exceeds the maximum threshold recommended (300)."
               }
             },
             {
