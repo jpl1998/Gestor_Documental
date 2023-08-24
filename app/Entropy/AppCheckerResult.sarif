@@ -11188,19 +11188,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.archivos_container_sidebar_docRev_ra.archivos_gallery_sidebar_docRev_ra.AccessibleLabel"
+                  "fullyQualifiedName": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.archivos_container_sidebar_docRev_ra.Gallery2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.archivos_container_sidebar_docRev_ra.archivos_gallery_sidebar_docRev_ra.AccessibleLabel",
+                  "fullyQualifiedName": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.archivos_container_sidebar_docRev_ra.Gallery2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "DocPorRevisar RA",
-                "type": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.archivos_container_sidebar_docRev_ra.archivos_gallery_sidebar_docRev_ra"
+                "type": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.archivos_container_sidebar_docRev_ra.Gallery2"
               }
             }
           ],
@@ -11218,19 +11218,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.archivos_container_sidebar_docRev_ra.archivos_gallery_sidebar_docRev_ra.TabIndex"
+                  "fullyQualifiedName": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.archivos_container_sidebar_docRev_ra.Gallery2.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.archivos_container_sidebar_docRev_ra.archivos_gallery_sidebar_docRev_ra.TabIndex",
+                  "fullyQualifiedName": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.archivos_container_sidebar_docRev_ra.Gallery2.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "DocPorRevisar RA",
-                "type": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.archivos_container_sidebar_docRev_ra.archivos_gallery_sidebar_docRev_ra"
+                "type": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.archivos_container_sidebar_docRev_ra.Gallery2"
               }
             }
           ],
