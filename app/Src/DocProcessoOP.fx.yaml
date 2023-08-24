@@ -2036,6 +2036,21 @@
                         PaddingTop: =10
                         ZIndex: =1
 
+                        bt_atras_upload_op As button:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            Color: =primary
+                            Fill: =RGBA(255, 255, 255, 1)
+                            FillPortions: =1
+                            LayoutMinHeight: =30
+                            OnSelect: =Set(varpopupformdoc,false)
+                            RadiusBottomLeft: =5
+                            RadiusBottomRight: =5
+                            RadiusTopLeft: =5
+                            RadiusTopRight: =5
+                            Size: =14
+                            Text: ="Atras"
+                            ZIndex: =1
+
                     Container15_48 As groupContainer.verticalAutoLayoutContainer:
                         DropShadow: =DropShadow.None
                         Height: =100
@@ -2054,7 +2069,7 @@
                         Label4_15 As label:
                             Align: =Align.Center
                             FontWeight: =FontWeight.Semibold
-                            Text: ="1/3"
+                            Text: ="2/3"
                             ZIndex: =1
 
                     Container15_49 As groupContainer.verticalAutoLayoutContainer:
@@ -2070,7 +2085,7 @@
                         PaddingTop: =10
                         ZIndex: =3
 
-                        Button3_5 As button:
+                        bt_seguiente_upload_op As button:
                             AlignInContainer: =AlignInContainer.Stretch
                             Fill: =primary
                             FillPortions: =1
