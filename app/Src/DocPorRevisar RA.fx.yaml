@@ -1192,10 +1192,13 @@
                         ZIndex: =2
 
             evaluacion_container_sidebar_docRev_ra As groupContainer.verticalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
                 DropShadow: =DropShadow.None
                 Height: =540
                 LayoutAlignItems: =LayoutAlignItems.Stretch
                 LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =540
+                LayoutMinWidth: =250
                 LayoutMode: =LayoutMode.Auto
                 Visible: =items_menu_sidebar_docRev_ra.Selected.Value="Evaluación"
                 Width: =420
@@ -1204,8 +1207,11 @@
                 menu_filter_evaluacion_sidebar_ra As gallery.galleryHorizontal:
                     AlignInContainer: =AlignInContainer.SetByContainer
                     DelayItemLoading: =true
+                    FillPortions: =0
                     Height: =40
                     Items: =["Elaborado por", "Revisado por", "Aprobado por", "Registro"]
+                    LayoutMinHeight: =60
+                    LayoutMinWidth: =320
                     LoadingSpinner: =LoadingSpinner.Data
                     ShowScrollbar: =false
                     TemplateSize: =100
