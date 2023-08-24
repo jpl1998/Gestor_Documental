@@ -1113,8 +1113,8 @@
             PaddingLeft: =20
             PaddingRight: =20
             PaddingTop: =20
-            Width: =430
-            X: =936
+            Width: =460
+            X: =906
             ZIndex: =1
 
             container_title_sidebar_docRev_ra As groupContainer.manualLayoutContainer:
@@ -1172,6 +1172,109 @@
                         Y: =38
                         ZIndex: =2
 
+            archivos_container_sidebar_docRev_ra As groupContainer.verticalAutoLayoutContainer:
+                DropShadow: =DropShadow.None
+                FillPortions: =0
+                Height: =540
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                Visible: =items_menu_sidebar_docRev_ra.Selected.Value="Archivos"
+                ZIndex: =3
+
+                Gallery2 As gallery.galleryVertical:
+                    DelayItemLoading: =true
+                    Items: =CustomGallerySample
+                    Layout: =Layout.Vertical
+                    LayoutMinHeight: =287
+                    LayoutMinWidth: =320
+                    LoadingSpinner: =LoadingSpinner.Data
+                    TemplateSize: =40
+                    ZIndex: =1
+
+                    Container18 As groupContainer.horizontalAutoLayoutContainer:
+                        DropShadow: =DropShadow.None
+                        Height: =40
+                        LayoutMode: =LayoutMode.Auto
+                        Width: =410
+                        ZIndex: =1
+
+                        Image3 As image:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            LayoutMinHeight: =24
+                            Width: =24
+                            ZIndex: =1
+
+                        Label10 As label:
+                            Text: ="Text"
+                            Width: =304
+                            ZIndex: =2
+
+                        Container23 As groupContainer.manualLayoutContainer:
+                            DropShadow: =DropShadow.None
+                            LayoutMinHeight: =24
+                            LayoutMinWidth: =24
+                            ZIndex: =3
+
+                            Icon3 As icon.OpenInNewWindow:
+                                Height: =16
+                                Icon: =Icon.OpenInNewWindow
+                                Width: =16
+                                X: =(Parent.Width-Self.Width)/2
+                                Y: =(Parent.Height-Self.Height)/2
+                                ZIndex: =1
+
+                            Button5 As button:
+                                BorderColor: =primary
+                                BorderThickness: =1.5
+                                Fill: =RGBA(0, 0, 0, 0)
+                                FocusedBorderThickness: =1.5
+                                Height: =25
+                                HoverFill: =RGBA(0, 0, 0, 0.13)
+                                PressedFill: =
+                                RadiusBottomLeft: =5
+                                RadiusBottomRight: =5
+                                RadiusTopLeft: =5
+                                RadiusTopRight: =5
+                                Text: =""
+                                Width: =25
+                                X: =(Parent.Width-Self.Width)/2
+                                Y: =(Parent.Height-Self.Height)/2
+                                ZIndex: =2
+
+                        Container24 As groupContainer.manualLayoutContainer:
+                            DropShadow: =DropShadow.None
+                            LayoutMinHeight: =24
+                            LayoutMinWidth: =24
+                            ZIndex: =4
+
+                            Icon3_1 As icon.OpenInNewWindow:
+                                Height: =16
+                                Icon: =Icon.Download
+                                Width: =16
+                                X: =(Parent.Width-Self.Width)/2
+                                Y: =(Parent.Height-Self.Height)/2
+                                ZIndex: =1
+
+                            Button5_1 As button:
+                                BorderColor: =primary
+                                BorderThickness: =1.5
+                                Fill: =RGBA(0, 0, 0, 0)
+                                FocusedBorderThickness: =1.5
+                                Height: =25
+                                HoverFill: =RGBA(0, 0, 0, 0.13)
+                                PressedFill: =
+                                RadiusBottomLeft: =5
+                                RadiusBottomRight: =5
+                                RadiusTopLeft: =5
+                                RadiusTopRight: =5
+                                Text: =""
+                                Width: =25
+                                X: =(Parent.Width-Self.Width)/2
+                                Y: =(Parent.Height-Self.Height)/2
+                                ZIndex: =2
+
             informacion_container_sidebar_docRev_ra As groupContainer.verticalAutoLayoutContainer:
                 DropShadow: =DropShadow.None
                 FillPortions: =0
@@ -1181,7 +1284,7 @@
                 LayoutMinWidth: =250
                 LayoutMode: =LayoutMode.Auto
                 Visible: =items_menu_sidebar_docRev_ra.Selected.Value="Información"
-                ZIndex: =3
+                ZIndex: =4
 
                 item_informacion_sidebar_docRev_ra As groupContainer.horizontalAutoLayoutContainer:
                     DropShadow: =DropShadow.None
@@ -1480,13 +1583,13 @@
                         Width: =(Parent.Width/3)*2 -20
                         ZIndex: =2
 
-            Container6 As groupContainer.manualLayoutContainer:
+            botton_sidebar_docRev_ra As groupContainer.manualLayoutContainer:
                 DropShadow: =DropShadow.None
                 LayoutMinHeight: =50
                 LayoutMinWidth: =250
-                ZIndex: =4
+                ZIndex: =5
 
-                Button1 As button:
+                empezar_revision_button_sidebar As button:
                     BorderColor: =primary
                     Color: =primary
                     Fill: =RGBA(255, 255, 255, 1)
