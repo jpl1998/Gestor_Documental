@@ -8058,6 +8058,18 @@
               "message": {
                 "text": "Error occurred running rule app-InefficientDelayLoading."
               }
+            },
+            {
+              "associatedRule": {
+                "id": "app-InefficientDelayLoading",
+                "index": 6
+              },
+              "descriptor": {
+                "id": "app-InefficientDelayLoading"
+              },
+              "message": {
+                "text": "Error occurred running rule app-InefficientDelayLoading."
+              }
             }
           ]
         }
@@ -11620,6 +11632,66 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.container_title_sidebar_docRev_ra.close_icon_sidebar_docRev_ra.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.container_title_sidebar_docRev_ra.close_icon_sidebar_docRev_ra.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "DocPorRevisar RA",
+                "type": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.container_title_sidebar_docRev_ra.close_icon_sidebar_docRev_ra"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.container_title_sidebar_docRev_ra.close_icon_sidebar_docRev_ra.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.container_title_sidebar_docRev_ra.close_icon_sidebar_docRev_ra.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "DocPorRevisar RA",
+                "type": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.container_title_sidebar_docRev_ra.close_icon_sidebar_docRev_ra"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.People Audience"
                 }
               ],
@@ -11975,7 +12047,7 @@
                 ],
                 "level": "Medium",
                 "primaryCategory": "performance",
-                "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"DocPorRevisar RA\" is 331, which exceeds the maximum threshold recommended (300)."
+                "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"DocPorRevisar RA\" is 332, which exceeds the maximum threshold recommended (300)."
               }
             },
             {
