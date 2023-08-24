@@ -1200,6 +1200,76 @@
                         Width: =410
                         ZIndex: =1
 
+                        archivo_image_sidebar_docRev_ra As image:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            Height: =24
+                            LayoutMinHeight: =24
+                            Width: =24
+                            ZIndex: =1
+
+                        archivo_title_sidebar_docRev_ra As label:
+                            Text: ="Text"
+                            Width: =304
+                            ZIndex: =2
+
+                        archivo_open_container_sidebar_ra As groupContainer.manualLayoutContainer:
+                            DropShadow: =DropShadow.None
+                            LayoutMinHeight: =24
+                            LayoutMinWidth: =24
+                            ZIndex: =3
+
+                            open_archivo_icon_sidebar As icon.OpenInNewWindow:
+                                Height: =16
+                                Icon: =Icon.OpenInNewWindow
+                                Width: =16
+                                X: =(Parent.Width-Self.Width)/2
+                                Y: =(Parent.Height-Self.Height)/2
+                                ZIndex: =1
+
+                            open_archivo_button_sidebar As button:
+                                BorderColor: =primary
+                                BorderThickness: =1.5
+                                Fill: =RGBA(0, 0, 0, 0)
+                                Height: =25
+                                RadiusBottomLeft: =5
+                                RadiusBottomRight: =5
+                                RadiusTopLeft: =5
+                                RadiusTopRight: =5
+                                Text: =""
+                                Width: =25
+                                X: =(Parent.Width-Self.Width)/2
+                                Y: =(Parent.Height-Self.Height)/2
+                                ZIndex: =2
+
+                        archivo_download_container_sidebar_ra As groupContainer.manualLayoutContainer:
+                            DropShadow: =DropShadow.None
+                            LayoutMinHeight: =24
+                            LayoutMinWidth: =24
+                            ZIndex: =4
+
+                            download_archivo_icon_sidebar As icon.OpenInNewWindow:
+                                Height: =16
+                                Icon: =Icon.Download
+                                Width: =16
+                                X: =(Parent.Width-Self.Width)/2
+                                Y: =(Parent.Height-Self.Height)/2
+                                ZIndex: =1
+
+                            download_archivo_button_sidebar As button:
+                                BorderColor: =primary
+                                BorderThickness: =1.5
+                                Fill: =RGBA(0, 0, 0, 0)
+                                Height: =25
+                                RadiusBottomLeft: =5
+                                RadiusBottomRight: =5
+                                RadiusTopLeft: =5
+                                RadiusTopRight: =5
+                                Text: =""
+                                Width: =25
+                                X: =(Parent.Width-Self.Width)/2
+                                Y: =(Parent.Height-Self.Height)/2
+                                ZIndex: =2
+
             informacion_container_sidebar_docRev_ra As groupContainer.verticalAutoLayoutContainer:
                 DropShadow: =DropShadow.None
                 FillPortions: =0
