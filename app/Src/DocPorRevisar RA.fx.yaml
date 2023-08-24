@@ -1174,22 +1174,19 @@
 
             evaluacion_container_sidebar_docRev_ra As groupContainer.verticalAutoLayoutContainer:
                 DropShadow: =DropShadow.None
-                FillPortions: =0
                 Height: =540
+                LayoutAlignItems: =LayoutAlignItems.Stretch
                 LayoutDirection: =LayoutDirection.Vertical
-                LayoutMinHeight: =540
-                LayoutMinWidth: =250
                 LayoutMode: =LayoutMode.Auto
                 Visible: =items_menu_sidebar_docRev_ra.Selected.Value="Evaluación"
+                Width: =420
                 ZIndex: =3
 
-                Gallery1 As gallery.galleryHorizontal:
+                menu_filter_evaluacion_sidebar_ra As gallery.galleryHorizontal:
+                    AlignInContainer: =AlignInContainer.SetByContainer
                     DelayItemLoading: =true
-                    FillPortions: =0
                     Height: =40
                     Items: =["Elaborado por", "Revisado por", "Aprobado por", "Registro"]
-                    LayoutMinHeight: =287
-                    LayoutMinWidth: =320
                     LoadingSpinner: =LoadingSpinner.Data
                     ShowScrollbar: =false
                     TemplateSize: =100
@@ -1208,15 +1205,67 @@
                         Y: =2.5
                         ZIndex: =1
 
-                Gallery2 As gallery.galleryVertical:
+                "persola_evaluacion_sidebar_ra As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
                     DelayItemLoading: =true
                     Items: =CustomGallerySample
                     Layout: =Layout.Vertical
                     LayoutMinHeight: =287
                     LayoutMinWidth: =320
                     LoadingSpinner: =LoadingSpinner.Data
-                    TemplateSize: =60
+                    TemplatePadding: =0
+                    TemplateSize: =80
                     ZIndex: =2
+
+                    Image4 As image:
+                        Height: =32
+                        OnSelect: =Select(Parent)
+                        RadiusBottomLeft: =8
+                        RadiusBottomRight: =8
+                        RadiusTopLeft: =8
+                        RadiusTopRight: =8
+                        Width: =32
+                        X: =16
+                        Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+                        ZIndex: =1
+
+                    Title1 As label:
+                        FontWeight: =FontWeight.Semibold
+                        Height: =Self.Size * 1.8
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =12
+                        Text: =ThisItem.SampleHeading
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =Parent.TemplateWidth - 173
+                        X: =73
+                        Y: =(Parent.TemplateHeight - (Self.Size * 1.8 + Subtitle1.Size * 1.8)) / 2
+                        ZIndex: =2
+
+                    Subtitle1 As label:
+                        Height: =Self.Size * 1.8
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =8
+                        Text: =ThisItem.SampleText
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =Title1.Width
+                        X: =Title1.X
+                        Y: =Title1.Y + Title1.Height
+                        ZIndex: =3
+
+                    Separator1 As rectangle:
+                        Fill: =placeholder
+                        Height: =1
+                        OnSelect: =Select(Parent)
+                        Width: =Parent.TemplateWidth
+                        Y: =Parent.TemplateHeight - Self.Height
+                        ZIndex: =5
 
             archivos_container_sidebar_docRev_ra As groupContainer.verticalAutoLayoutContainer:
                 DropShadow: =DropShadow.None

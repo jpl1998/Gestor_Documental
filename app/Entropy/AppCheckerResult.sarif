@@ -7998,6 +7998,54 @@
               "message": {
                 "text": "Error occurred running rule app-InefficientDelayLoading."
               }
+            },
+            {
+              "associatedRule": {
+                "id": "app-InefficientDelayLoading",
+                "index": 6
+              },
+              "descriptor": {
+                "id": "app-InefficientDelayLoading"
+              },
+              "message": {
+                "text": "Error occurred running rule app-InefficientDelayLoading."
+              }
+            },
+            {
+              "associatedRule": {
+                "id": "app-InefficientDelayLoading",
+                "index": 6
+              },
+              "descriptor": {
+                "id": "app-InefficientDelayLoading"
+              },
+              "message": {
+                "text": "Error occurred running rule app-InefficientDelayLoading."
+              }
+            },
+            {
+              "associatedRule": {
+                "id": "app-InefficientDelayLoading",
+                "index": 6
+              },
+              "descriptor": {
+                "id": "app-InefficientDelayLoading"
+              },
+              "message": {
+                "text": "Error occurred running rule app-InefficientDelayLoading."
+              }
+            },
+            {
+              "associatedRule": {
+                "id": "app-InefficientDelayLoading",
+                "index": 6
+              },
+              "descriptor": {
+                "id": "app-InefficientDelayLoading"
+              },
+              "message": {
+                "text": "Error occurred running rule app-InefficientDelayLoading."
+              }
             }
           ]
         }
@@ -11320,49 +11368,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.evaluacion_container_sidebar_docRev_ra.Gallery1.AccessibleLabel"
+                  "fullyQualifiedName": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.evaluacion_container_sidebar_docRev_ra.menu_filter_evaluacion_sidebar_ra.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.evaluacion_container_sidebar_docRev_ra.Gallery1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "DocPorRevisar RA",
-                "type": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.evaluacion_container_sidebar_docRev_ra.Gallery1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.evaluacion_container_sidebar_docRev_ra.Gallery1.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.evaluacion_container_sidebar_docRev_ra.Gallery1.TabIndex",
+                  "fullyQualifiedName": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.evaluacion_container_sidebar_docRev_ra.menu_filter_evaluacion_sidebar_ra.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "DocPorRevisar RA",
-                "type": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.evaluacion_container_sidebar_docRev_ra.Gallery1"
+                "type": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.evaluacion_container_sidebar_docRev_ra.menu_filter_evaluacion_sidebar_ra"
               }
             }
           ],
@@ -11380,19 +11398,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.evaluacion_container_sidebar_docRev_ra.Gallery2.AccessibleLabel"
+                  "fullyQualifiedName": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.evaluacion_container_sidebar_docRev_ra.menu_filter_evaluacion_sidebar_ra.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.evaluacion_container_sidebar_docRev_ra.Gallery2.AccessibleLabel",
+                  "fullyQualifiedName": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.evaluacion_container_sidebar_docRev_ra.menu_filter_evaluacion_sidebar_ra.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "DocPorRevisar RA",
-                "type": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.evaluacion_container_sidebar_docRev_ra.Gallery2"
+                "type": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.evaluacion_container_sidebar_docRev_ra.menu_filter_evaluacion_sidebar_ra"
               }
             }
           ],
@@ -11410,19 +11428,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.evaluacion_container_sidebar_docRev_ra.Gallery2.TabIndex"
+                  "fullyQualifiedName": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.evaluacion_container_sidebar_docRev_ra.persola_evaluacion_sidebar_ra.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.evaluacion_container_sidebar_docRev_ra.Gallery2.TabIndex",
+                  "fullyQualifiedName": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.evaluacion_container_sidebar_docRev_ra.persola_evaluacion_sidebar_ra.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "DocPorRevisar RA",
-                "type": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.evaluacion_container_sidebar_docRev_ra.Gallery2"
+                "type": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.evaluacion_container_sidebar_docRev_ra.persola_evaluacion_sidebar_ra"
               }
             }
           ],
@@ -11434,6 +11452,36 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.evaluacion_container_sidebar_docRev_ra.persola_evaluacion_sidebar_ra.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.evaluacion_container_sidebar_docRev_ra.persola_evaluacion_sidebar_ra.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "DocPorRevisar RA",
+                "type": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.evaluacion_container_sidebar_docRev_ra.persola_evaluacion_sidebar_ra"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -11795,7 +11843,7 @@
                 ],
                 "level": "Medium",
                 "primaryCategory": "performance",
-                "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"DocPorRevisar RA\" is 310, which exceeds the maximum threshold recommended (300)."
+                "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"DocPorRevisar RA\" is 330, which exceeds the maximum threshold recommended (300)."
               }
             },
             {
