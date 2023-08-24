@@ -1724,3 +1724,243 @@
             Width: =906
             ZIndex: =2
 
+    popup_revision_doc_ra As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(0, 0, 0, 0.1)
+        Height: =768
+        Width: =1366
+        ZIndex: =4
+
+        Container4 As groupContainer.verticalAutoLayoutContainer:
+            Fill: =background
+            Height: =489
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMode: =LayoutMode.Auto
+            Width: =460
+            X: =(Parent.Width-Self.Width)/2
+            Y: =(Parent.Height-Self.Height)/2
+            ZIndex: =1
+
+            Container5 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.None
+                FillPortions: =0
+                Height: =60
+                LayoutMinHeight: =50
+                LayoutMinWidth: =250
+                ZIndex: =1
+
+            Container6 As groupContainer.verticalAutoLayoutContainer:
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                ZIndex: =2
+
+                Label5 As label:
+                    AlignInContainer: =AlignInContainer.Stretch
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Semibold
+                    Size: =12
+                    Text: ="Documento Principal"
+                    ZIndex: =1
+
+                Container7 As groupContainer.horizontalAutoLayoutContainer:
+                    DropShadow: =DropShadow.None
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    ZIndex: =2
+
+                    archivos_gallery_sidebar_docRev_ra_1 As gallery.galleryVertical:
+                        DelayItemLoading: =true
+                        Items: =["sample"]
+                        Layout: =Layout.Vertical
+                        LayoutMinHeight: =287
+                        LayoutMinWidth: =320
+                        LoadingSpinner: =LoadingSpinner.Data
+                        TemplateSize: =50
+                        ZIndex: =1
+
+                        container_archivos_gallery_sidebar_1 As groupContainer.horizontalAutoLayoutContainer:
+                            DropShadow: =DropShadow.None
+                            Height: =50
+                            LayoutMode: =LayoutMode.Auto
+                            Width: =450
+                            ZIndex: =1
+
+                            archivo_image_sidebar_docRev_ra_1 As image:
+                                AlignInContainer: =AlignInContainer.Stretch
+                                Height: =24
+                                LayoutMinHeight: =24
+                                Width: =24
+                                ZIndex: =1
+
+                            archivo_title_sidebar_docRev_ra_1 As label:
+                                AlignInContainer: =AlignInContainer.Stretch
+                                Font: =Font.'Segoe UI'
+                                Size: =12
+                                Text: ="Text"
+                                Width: =220
+                                ZIndex: =2
+
+                            archivo_open_container_sidebar_ra_1 As groupContainer.manualLayoutContainer:
+                                DropShadow: =DropShadow.None
+                                LayoutMinHeight: =24
+                                LayoutMinWidth: =24
+                                ZIndex: =3
+
+                                open_archivo_icon_sidebar_1 As icon.OpenInNewWindow:
+                                    Height: =16
+                                    Icon: =Icon.OpenInNewWindow
+                                    Width: =16
+                                    X: =(Parent.Width-Self.Width)/2
+                                    Y: =(Parent.Height-Self.Height)/2
+                                    ZIndex: =1
+
+                                open_archivo_button_sidebar_1 As button:
+                                    BorderColor: =primary
+                                    BorderThickness: =1.5
+                                    Fill: =RGBA(0, 0, 0, 0)
+                                    Height: =25
+                                    HoverFill: =RGBA(0, 0, 0, 0.14)
+                                    PressedFill: =
+                                    RadiusBottomLeft: =5
+                                    RadiusBottomRight: =5
+                                    RadiusTopLeft: =5
+                                    RadiusTopRight: =5
+                                    Text: =""
+                                    Width: =25
+                                    X: =(Parent.Width-Self.Width)/2
+                                    Y: =(Parent.Height-Self.Height)/2
+                                    ZIndex: =2
+
+                            archivo_download_container_sidebar_ra_1 As groupContainer.manualLayoutContainer:
+                                DropShadow: =DropShadow.None
+                                LayoutMinHeight: =24
+                                LayoutMinWidth: =24
+                                ZIndex: =4
+
+                                download_archivo_icon_sidebar_1 As icon.OpenInNewWindow:
+                                    Height: =16
+                                    Icon: =Icon.Download
+                                    Width: =16
+                                    X: =(Parent.Width-Self.Width)/2
+                                    Y: =(Parent.Height-Self.Height)/2
+                                    ZIndex: =1
+
+                                download_archivo_button_sidebar_1 As button:
+                                    BorderColor: =primary
+                                    BorderThickness: =1.5
+                                    Fill: =RGBA(0, 0, 0, 0)
+                                    Height: =25
+                                    HoverFill: =RGBA(0, 0, 0, 0.15)
+                                    PressedFill: =
+                                    RadiusBottomLeft: =5
+                                    RadiusBottomRight: =5
+                                    RadiusTopLeft: =5
+                                    RadiusTopRight: =5
+                                    Text: =""
+                                    Width: =25
+                                    X: =(Parent.Width-Self.Width)/2
+                                    Y: =(Parent.Height-Self.Height)/2
+                                    ZIndex: =2
+
+                            revisionOptions_container_ra As groupContainer.verticalAutoLayoutContainer:
+                                DropShadow: =DropShadow.None
+                                LayoutDirection: =LayoutDirection.Vertical
+                                LayoutMinHeight: =30
+                                LayoutMinWidth: =110
+                                LayoutMode: =LayoutMode.Auto
+                                PaddingBottom: =1
+                                PaddingLeft: =1
+                                PaddingRight: =1
+                                PaddingTop: =1
+                                ZIndex: =5
+
+                                observarOption_container_ra As groupContainer.manualLayoutContainer:
+                                    BorderColor: =placeholder
+                                    BorderThickness: =1
+                                    DropShadow: =DropShadow.None
+                                    Fill: =RGBA(255, 255, 255, 1)
+                                    LayoutMinHeight: =10
+                                    LayoutMinWidth: =10
+                                    RadiusBottomLeft: =0
+                                    RadiusBottomRight: =0
+                                    ZIndex: =1
+
+                                    observar_icon_ra As icon.Information:
+                                        Color: =red
+                                        Height: =16
+                                        Icon: =Icon.Information
+                                        Width: =16
+                                        X: =10
+                                        Y: =(Parent.Height-Self.Height)/2
+                                        ZIndex: =1
+
+                                    observar_label_ra As label:
+                                        Color: =red
+                                        Font: =Font.'Segoe UI'
+                                        Height: =24
+                                        Size: =9
+                                        Text: ="Observar"
+                                        Width: =77
+                                        X: =31
+                                        ZIndex: =2
+
+                                    observar_button_ra As button:
+                                        BorderStyle: =BorderStyle.None
+                                        Fill: =RGBA(0, 0, 0, 0)
+                                        Height: =24
+                                        HoverFill: =RGBA(168, 0, 0, 0.46)
+                                        PressedFill: =
+                                        RadiusBottomLeft: =0
+                                        RadiusBottomRight: =0
+                                        RadiusTopLeft: =4
+                                        RadiusTopRight: =4
+                                        Text: =""
+                                        Width: =108
+                                        ZIndex: =3
+
+                                conformeOption_container_ra As groupContainer.manualLayoutContainer:
+                                    BorderColor: =placeholder
+                                    BorderThickness: =1
+                                    DropShadow: =DropShadow.None
+                                    Fill: =RGBA(255, 255, 255, 1)
+                                    LayoutMinHeight: =10
+                                    LayoutMinWidth: =10
+                                    RadiusTopLeft: =0
+                                    RadiusTopRight: =0
+                                    ZIndex: =2
+
+                                    conforme_icon_ra As icon.Information:
+                                        Color: =green
+                                        Height: =16
+                                        Icon: =Icon.CheckBadge
+                                        Width: =16
+                                        X: =10
+                                        Y: =(Parent.Height-Self.Height)/2
+                                        ZIndex: =1
+
+                                    conforme_label_ra As label:
+                                        Color: =green
+                                        Font: =Font.'Segoe UI'
+                                        Height: =24
+                                        Size: =9
+                                        Text: ="Conforme"
+                                        Width: =77
+                                        X: =31
+                                        ZIndex: =2
+
+                                    conforme_button_ra As button:
+                                        BorderStyle: =BorderStyle.None
+                                        Fill: =RGBA(0, 0, 0, 0)
+                                        Height: =24
+                                        HoverFill: =RGBA(141, 198, 63, 0.49)
+                                        PressedFill: =
+                                        RadiusBottomLeft: =0
+                                        RadiusBottomRight: =0
+                                        RadiusTopLeft: =4
+                                        RadiusTopRight: =4
+                                        Text: =""
+                                        Width: =108
+                                        ZIndex: =3
+

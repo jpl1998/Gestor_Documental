@@ -6,6 +6,11 @@ App As appinfo:
         Set(seconday,RGBA(252,195,48,1));
         Set(primarytext,RGBA(33,33,33,1));
         Set(placeholder, ColorValue("#939393"));
+        Set(background, ColorValue("#F6F7FB"));
+        Set(red, ColorValue("#D60000"));
+        Set(companyRed, ColorValue("#F5DAD8"));
+        Set(green, ColorValue("#2C8F70"));
+        Set(companyGreen, ColorValue("#DBEEE9"));
         
         ClearCollect(
             Table,
