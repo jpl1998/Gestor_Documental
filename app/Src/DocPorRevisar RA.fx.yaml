@@ -1172,6 +1172,52 @@
                         Y: =38
                         ZIndex: =2
 
+            evaluacion_container_sidebar_docRev_ra As groupContainer.verticalAutoLayoutContainer:
+                DropShadow: =DropShadow.None
+                FillPortions: =0
+                Height: =540
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =540
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                Visible: =items_menu_sidebar_docRev_ra.Selected.Value="Evaluación"
+                ZIndex: =3
+
+                Gallery1 As gallery.galleryHorizontal:
+                    DelayItemLoading: =true
+                    FillPortions: =0
+                    Height: =40
+                    Items: =["Elaborado por", "Revisado por", "Aprobado por", "Registro"]
+                    LayoutMinHeight: =287
+                    LayoutMinWidth: =320
+                    LoadingSpinner: =LoadingSpinner.Data
+                    ShowScrollbar: =false
+                    TemplateSize: =100
+                    ZIndex: =1
+
+                    Button5 As button:
+                        BorderColor: =If(ThisItem.IsSelected, primary,Color.Transparent)
+                        Color: =If(ThisItem.IsSelected, primary, placeholder)
+                        Fill: =If(ThisItem.IsSelected, ColorFade(primary,0.9), Color.White)
+                        FocusedBorderThickness: =2
+                        Height: =24
+                        OnSelect: =Select(Parent)
+                        Size: =8
+                        Text: =ThisItem.Value
+                        Width: =97
+                        Y: =2.5
+                        ZIndex: =1
+
+                Gallery2 As gallery.galleryVertical:
+                    DelayItemLoading: =true
+                    Items: =CustomGallerySample
+                    Layout: =Layout.Vertical
+                    LayoutMinHeight: =287
+                    LayoutMinWidth: =320
+                    LoadingSpinner: =LoadingSpinner.Data
+                    TemplateSize: =60
+                    ZIndex: =2
+
             archivos_container_sidebar_docRev_ra As groupContainer.verticalAutoLayoutContainer:
                 DropShadow: =DropShadow.None
                 FillPortions: =0
@@ -1181,7 +1227,7 @@
                 LayoutMinWidth: =250
                 LayoutMode: =LayoutMode.Auto
                 Visible: =items_menu_sidebar_docRev_ra.Selected.Value="Archivos"
-                ZIndex: =3
+                ZIndex: =4
 
                 archivos_gallery_sidebar_docRev_ra As gallery.galleryVertical:
                     DelayItemLoading: =true
@@ -1279,7 +1325,7 @@
                 LayoutMinWidth: =250
                 LayoutMode: =LayoutMode.Auto
                 Visible: =items_menu_sidebar_docRev_ra.Selected.Value="Información"
-                ZIndex: =4
+                ZIndex: =5
 
                 item_informacion_sidebar_docRev_ra As groupContainer.horizontalAutoLayoutContainer:
                     DropShadow: =DropShadow.None
@@ -1582,7 +1628,7 @@
                 DropShadow: =DropShadow.None
                 LayoutMinHeight: =50
                 LayoutMinWidth: =250
-                ZIndex: =5
+                ZIndex: =6
 
                 empezar_revision_button_sidebar As button:
                     BorderColor: =primary
