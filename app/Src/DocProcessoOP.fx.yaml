@@ -3167,7 +3167,7 @@
                             RadiusTopLeft: =5
                             RadiusTopRight: =5
                             Size: =14
-                            Text: ="Siguiente"
+                            Text: ="Enviar Documento para Revisión"
                             ZIndex: =1
 
             Icon1_10 As icon.Cancel:
