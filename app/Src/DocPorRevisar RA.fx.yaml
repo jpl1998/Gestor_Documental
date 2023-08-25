@@ -1424,7 +1424,7 @@
                         Font: =Font.'Segoe UI'
                         Height: =24
                         Size: =12
-                        Text: =varSelectedDoc.'Created By'.DisplayName
+                        Text: =varSelectedDoc.'Criado por'.DisplayName
                         Width: =(Parent.Width/3)*2 -20
                         ZIndex: =2
 
