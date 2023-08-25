@@ -40,9 +40,6 @@
           "DEV_ArchivoPrincipal": {
             "tableName": "c5a1aaf8-1c99-4ca9-9de7-5d2204695491"
           },
-          "DEV_Archivos": {
-            "tableName": "9e90cb69-4469-49b1-b5e6-a7a12fea3f54"
-          },
           "DEV_CECO": {
             "tableName": "c0d7fe35-ca72-405c-9693-7098f37f164a"
           },
@@ -130,8 +127,7 @@
       "DEV_Proceso",
       "DEV_RCKI",
       "DEV_Subgerencia",
-      "DEV_TipoDocumento",
-      "DEV_Archivos"
+      "DEV_TipoDocumento"
     ],
     "dependencies": {},
     "dependents": [],

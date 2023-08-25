@@ -1241,57 +1241,6 @@
                     TemplateSize: =80
                     ZIndex: =2
 
-                    Image4 As image:
-                        Height: =32
-                        OnSelect: =Select(Parent)
-                        RadiusBottomLeft: =8
-                        RadiusBottomRight: =8
-                        RadiusTopLeft: =8
-                        RadiusTopRight: =8
-                        Width: =32
-                        X: =16
-                        Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
-                        ZIndex: =1
-
-                    Title1 As label:
-                        FontWeight: =FontWeight.Semibold
-                        Height: =Self.Size * 1.8
-                        OnSelect: =Select(Parent)
-                        PaddingBottom: =0
-                        PaddingLeft: =0
-                        PaddingRight: =0
-                        PaddingTop: =0
-                        Size: =12
-                        Text: =ThisItem.Title
-                        VerticalAlign: =VerticalAlign.Top
-                        Width: =Parent.TemplateWidth - 173
-                        X: =73
-                        Y: =(Parent.TemplateHeight - (Self.Size * 1.8 + Subtitle1.Size * 1.8)) / 2
-                        ZIndex: =2
-
-                    Subtitle1 As label:
-                        Height: =Self.Size * 1.8
-                        OnSelect: =Select(Parent)
-                        PaddingBottom: =0
-                        PaddingLeft: =0
-                        PaddingRight: =0
-                        PaddingTop: =0
-                        Size: =8
-                        Text: =ThisItem.ID
-                        VerticalAlign: =VerticalAlign.Top
-                        Width: =Title1.Width
-                        X: =Title1.X
-                        Y: =Title1.Y + Title1.Height
-                        ZIndex: =3
-
-                    Separator1 As rectangle:
-                        Fill: =placeholder
-                        Height: =1
-                        OnSelect: =Select(Parent)
-                        Width: =Parent.TemplateWidth
-                        Y: =Parent.TemplateHeight - Self.Height
-                        ZIndex: =5
-
             archivos_container_sidebar_docRev_ra As groupContainer.verticalAutoLayoutContainer:
                 DropShadow: =DropShadow.None
                 FillPortions: =0
