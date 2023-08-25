@@ -1279,6 +1279,7 @@
 
                         archivo_title_sidebar_docRev_ra As label:
                             Font: =Font.'Segoe UI'
+                            Size: =12
                             Text: =ThisItem.descripcion
                             Width: =304
                             ZIndex: =2
