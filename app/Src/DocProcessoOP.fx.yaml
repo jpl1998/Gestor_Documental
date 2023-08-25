@@ -3429,97 +3429,6 @@
                         Y: =38
                         ZIndex: =2
 
-            Container3 As groupContainer.horizontalAutoLayoutContainer:
-                DropShadow: =DropShadow.None
-                FillPortions: =0
-                Height: =40
-                LayoutAlignItems: =LayoutAlignItems.Stretch
-                LayoutGap: =10
-                LayoutJustifyContent: =LayoutJustifyContent.Center
-                LayoutMinHeight: =50
-                LayoutMinWidth: =250
-                LayoutMode: =LayoutMode.Auto
-                PaddingBottom: =5
-                PaddingTop: =5
-                ZIndex: =3
-
-                observarOption_container_ra_3 As groupContainer.manualLayoutContainer:
-                    BorderColor: =placeholder
-                    DropShadow: =DropShadow.None
-                    Fill: =RGBA(255, 255, 255, 1)
-                    LayoutMinHeight: =10
-                    LayoutMinWidth: =10
-                    RadiusBottomLeft: =0
-                    RadiusBottomRight: =0
-                    ZIndex: =1
-
-                    observar_button_ra_3 As button:
-                        BorderColor: =primary
-                        Color: =primary
-                        Fill: =RGBA(0, 0, 0, 0)
-                        Height: =Parent.Height*98%
-                        HoverColor: =ColorFade(primary,-5%)
-                        HoverFill: =RGBA(255, 255, 255, 1)
-                        PaddingBottom: =0
-                        PaddingLeft: =0
-                        PaddingRight: =0
-                        PaddingTop: =0
-                        PressedFill: =
-                        RadiusBottomLeft: =5
-                        RadiusBottomRight: =5
-                        RadiusTopLeft: =5
-                        RadiusTopRight: =5
-                        Size: =11
-                        Text: ="Editar Información"
-                        Width: =Parent.Width
-                        ZIndex: =1
-
-                    observar_icon_ra_3 As icon.Information:
-                        Color: =primary
-                        Height: =20
-                        Icon: =Icon.Edit
-                        Width: =20
-                        X: =10
-                        Y: =(Parent.Height-Self.Height)/2
-                        ZIndex: =2
-
-                observarOption_container_ra_4 As groupContainer.manualLayoutContainer:
-                    AlignInContainer: =AlignInContainer.SetByContainer
-                    BorderColor: =placeholder
-                    DropShadow: =DropShadow.None
-                    Fill: =RGBA(255, 255, 255, 1)
-                    LayoutMinHeight: =10
-                    LayoutMinWidth: =10
-                    RadiusBottomLeft: =0
-                    RadiusBottomRight: =0
-                    ZIndex: =2
-
-                    observar_button_ra_4 As button:
-                        BorderColor: =primary
-                        Color: =primary
-                        Fill: =RGBA(0, 0, 0, 0)
-                        Height: =Parent.Height*98%
-                        HoverColor: =ColorFade(primary,-5%)
-                        HoverFill: =RGBA(255, 255, 255, 1)
-                        PressedFill: =
-                        RadiusBottomLeft: =5
-                        RadiusBottomRight: =5
-                        RadiusTopLeft: =5
-                        RadiusTopRight: =5
-                        Size: =11
-                        Text: ="Registro Edición"
-                        Width: =Parent.Width
-                        ZIndex: =1
-
-                    observar_icon_ra_4 As icon.Information:
-                        Color: =primary
-                        Height: =20
-                        Icon: =Icon.DocumentWithContent
-                        Width: =20
-                        X: =10
-                        Y: =(Parent.Height-Self.Height)/2
-                        ZIndex: =2
-
             evaluacion_container_sidebar_docRev_op As groupContainer.verticalAutoLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer
                 DropShadow: =DropShadow.None
@@ -3574,6 +3483,7 @@
                     LoadingSpinner: =LoadingSpinner.Data
                     TemplatePadding: =0
                     TemplateSize: =80
+                    Visible: =menu_filter_evaluacion_sidebar_op.Selected.Value="Elaborado por"
                     ZIndex: =2
 
                     Image4_7 As image:
@@ -3623,6 +3533,74 @@
                         ZIndex: =3
 
                     Separator1_9 As rectangle:
+                        Fill: =placeholder
+                        Height: =1
+                        OnSelect: =Select(Parent)
+                        Width: =Parent.TemplateWidth
+                        Y: =Parent.TemplateHeight - Self.Height
+                        ZIndex: =5
+
+                "persola_evaluacion_sidebar_op_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    DelayItemLoading: =true
+                    Items: |-
+                        =UsuáriosdoOffice365.SearchUser({searchTerm:"ematos@luzdelsur.com.pe"})
+                    Layout: =Layout.Vertical
+                    LayoutMinHeight: =287
+                    LayoutMinWidth: =320
+                    LoadingSpinner: =LoadingSpinner.Data
+                    TemplatePadding: =0
+                    TemplateSize: =80
+                    Visible: =menu_filter_evaluacion_sidebar_op.Selected.Value="Revisado por"
+                    ZIndex: =3
+
+                    Image4_12 As image:
+                        Height: =32
+                        Image: =UsuáriosdoOffice365.UserPhoto(ThisItem.Id)
+                        OnSelect: =Select(Parent)
+                        RadiusBottomLeft: =30
+                        RadiusBottomRight: =30
+                        RadiusTopLeft: =30
+                        RadiusTopRight: =30
+                        Width: =32
+                        X: =16
+                        Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+                        ZIndex: =1
+
+                    Title1_2 As label:
+                        Color: =secondarytext
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =Self.Size * 1.8
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =11
+                        Text: =ThisItem.DisplayName
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =Parent.TemplateWidth - 173
+                        X: =73
+                        Y: =(Parent.TemplateHeight - (Self.Size * 1.8 + Subtitle1.Size * 1.8)) / 2
+                        ZIndex: =2
+
+                    Subtitle1_2 As label:
+                        Height: =Self.Size * 1.8
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =6
+                        Text: =ThisItem.JobTitle
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =Title1_2.Width
+                        X: =Title1_2.X
+                        Y: =Title1_2.Y + Title1_2.Height
+                        ZIndex: =3
+
+                    Separator1_10 As rectangle:
                         Fill: =placeholder
                         Height: =1
                         OnSelect: =Select(Parent)
@@ -3928,6 +3906,97 @@
                 Visible: =items_menu_sidebar_docRev_op.Selected.Value="Información"
                 ZIndex: =6
 
+                Container3 As groupContainer.horizontalAutoLayoutContainer:
+                    DropShadow: =DropShadow.None
+                    FillPortions: =0
+                    Height: =40
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutGap: =10
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =50
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =5
+                    PaddingTop: =5
+                    ZIndex: =1
+
+                    observarOption_container_ra_3 As groupContainer.manualLayoutContainer:
+                        BorderColor: =placeholder
+                        DropShadow: =DropShadow.None
+                        Fill: =RGBA(255, 255, 255, 1)
+                        LayoutMinHeight: =10
+                        LayoutMinWidth: =10
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        ZIndex: =1
+
+                        observar_button_ra_3 As button:
+                            BorderColor: =primary
+                            Color: =primary
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =Parent.Height*98%
+                            HoverColor: =ColorFade(primary,-5%)
+                            HoverFill: =RGBA(255, 255, 255, 1)
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            PressedFill: =
+                            RadiusBottomLeft: =5
+                            RadiusBottomRight: =5
+                            RadiusTopLeft: =5
+                            RadiusTopRight: =5
+                            Size: =11
+                            Text: ="Editar Información"
+                            Width: =Parent.Width
+                            ZIndex: =1
+
+                        observar_icon_ra_3 As icon.Information:
+                            Color: =primary
+                            Height: =20
+                            Icon: =Icon.Edit
+                            Width: =20
+                            X: =10
+                            Y: =(Parent.Height-Self.Height)/2
+                            ZIndex: =2
+
+                    observarOption_container_ra_4 As groupContainer.manualLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderColor: =placeholder
+                        DropShadow: =DropShadow.None
+                        Fill: =RGBA(255, 255, 255, 1)
+                        LayoutMinHeight: =10
+                        LayoutMinWidth: =10
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        ZIndex: =2
+
+                        observar_button_ra_4 As button:
+                            BorderColor: =primary
+                            Color: =primary
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =Parent.Height*98%
+                            HoverColor: =ColorFade(primary,-5%)
+                            HoverFill: =RGBA(255, 255, 255, 1)
+                            PressedFill: =
+                            RadiusBottomLeft: =5
+                            RadiusBottomRight: =5
+                            RadiusTopLeft: =5
+                            RadiusTopRight: =5
+                            Size: =11
+                            Text: ="Registro Edición"
+                            Width: =Parent.Width
+                            ZIndex: =1
+
+                        observar_icon_ra_4 As icon.Information:
+                            Color: =primary
+                            Height: =20
+                            Icon: =Icon.DocumentWithContent
+                            Width: =20
+                            X: =10
+                            Y: =(Parent.Height-Self.Height)/2
+                            ZIndex: =2
+
                 item_informacion_sidebar_docRev_op As groupContainer.horizontalAutoLayoutContainer:
                     DropShadow: =DropShadow.None
                     LayoutAlignItems: =LayoutAlignItems.Stretch
@@ -3935,7 +4004,7 @@
                     LayoutMinHeight: =24
                     LayoutMinWidth: =250
                     LayoutMode: =LayoutMode.Auto
-                    ZIndex: =1
+                    ZIndex: =2
 
                     item_informacion_sidebar_ra_1 As label:
                         Font: =Font.'Segoe UI'
@@ -3962,7 +4031,7 @@
                     LayoutMinHeight: =24
                     LayoutMinWidth: =250
                     LayoutMode: =LayoutMode.Auto
-                    ZIndex: =2
+                    ZIndex: =3
 
                     item2_informacion_sidebar_op As label:
                         Font: =Font.'Segoe UI'
@@ -3989,7 +4058,7 @@
                     LayoutMinHeight: =24
                     LayoutMinWidth: =250
                     LayoutMode: =LayoutMode.Auto
-                    ZIndex: =3
+                    ZIndex: =4
 
                     item3_informacion_sidebar_op As label:
                         Font: =Font.'Segoe UI'
@@ -4016,7 +4085,7 @@
                     LayoutMinHeight: =24
                     LayoutMinWidth: =250
                     LayoutMode: =LayoutMode.Auto
-                    ZIndex: =4
+                    ZIndex: =5
 
                     item4_informacion_sidebar_ra_1 As label:
                         Font: =Font.'Segoe UI'
@@ -4043,7 +4112,7 @@
                     LayoutMinHeight: =24
                     LayoutMinWidth: =250
                     LayoutMode: =LayoutMode.Auto
-                    ZIndex: =5
+                    ZIndex: =6
 
                     item5_informacion_sidebar_ra_1 As label:
                         Font: =Font.'Segoe UI'
@@ -4070,7 +4139,7 @@
                     LayoutMinHeight: =24
                     LayoutMinWidth: =250
                     LayoutMode: =LayoutMode.Auto
-                    ZIndex: =6
+                    ZIndex: =7
 
                     item6_informacion_sidebar_ra_1 As label:
                         Font: =Font.'Segoe UI'
@@ -4097,7 +4166,7 @@
                     LayoutMinHeight: =24
                     LayoutMinWidth: =250
                     LayoutMode: =LayoutMode.Auto
-                    ZIndex: =7
+                    ZIndex: =8
 
                     item7_informacion_sidebar_ra_1 As label:
                         Font: =Font.'Segoe UI'
@@ -4124,7 +4193,7 @@
                     LayoutMinHeight: =24
                     LayoutMinWidth: =250
                     LayoutMode: =LayoutMode.Auto
-                    ZIndex: =8
+                    ZIndex: =9
 
                     item8_informacion_sidebar_ra_1 As label:
                         Font: =Font.'Segoe UI'
@@ -4151,7 +4220,7 @@
                     LayoutMinHeight: =24
                     LayoutMinWidth: =250
                     LayoutMode: =LayoutMode.Auto
-                    ZIndex: =9
+                    ZIndex: =10
 
                     item9_informacion_sidebar_ra_1 As label:
                         Font: =Font.'Segoe UI'
@@ -4178,7 +4247,7 @@
                     LayoutMinHeight: =24
                     LayoutMinWidth: =250
                     LayoutMode: =LayoutMode.Auto
-                    ZIndex: =10
+                    ZIndex: =11
 
                     item10_informacion_sidebar_ra_1 As label:
                         Font: =Font.'Segoe UI'
@@ -4205,7 +4274,7 @@
                     LayoutMinHeight: =24
                     LayoutMinWidth: =250
                     LayoutMode: =LayoutMode.Auto
-                    ZIndex: =11
+                    ZIndex: =12
 
                     item11_informacion_sidebar_ra_1 As label:
                         Font: =Font.'Segoe UI'
