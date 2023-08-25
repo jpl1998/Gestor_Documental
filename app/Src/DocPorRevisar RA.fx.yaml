@@ -130,8 +130,8 @@
                     Items: |-
                         =Table({Name:"Home",Logo: 'Home (1)',Tela:'Home RA'},
                         {Name: "Doc. por Revisar",Logo: 'Document Sync (2)', Tela:'DocPorRevisar RA' },
-                        {Name: "Doc. por Aprobar", Logo:'Document Text' },
-                        {Name: "Doc. Publicados", Logo:'Document Search' })
+                        {Name: "Doc. por Aprobar", Logo:'Document Ribbon Grey', Tela: 'DocPorAprobar RA' },
+                        {Name: "Doc. Publicados", Logo:'Document Text', Tela:'DocPublicados RA' })
                     Layout: =Layout.Vertical
                     LayoutMinHeight: =287
                     LayoutMinWidth: =50
@@ -555,14 +555,14 @@
                                             BorderColor: =Self.Color
                                             BorderStyle: =BorderStyle.None
                                             Color: |-
-                                                =Switch(LookUp(DEV_Estatus_archivos, ID = First(Filter(DEV_Modificacion_estatus_documento,codigo=ThisItem.codigo,ind_mod = "i")).id_status_archivo.Value,descripcion),
+                                                =Switch(LookUp(DEV_Estatus_archivos, ID = Value(First(Filter(DEV_Modificacion_estatus_documento,codigo=ThisItem.codigo,ind_mod = "i")).id_status_archivo.Value),descripcion),
                                                 "Por aprobar", RGBA(180, 130, 0, 1),
                                                 "Por revisar",RGBA(180, 130, 0, 1),
                                                 "Observado", RGBA(214, 0, 0, 1),
                                                 "Aprobado",RGBA(44, 143, 112, 1))
                                             DisplayMode: =DisplayMode.View
                                             Fill: |-
-                                                =Switch(LookUp(DEV_Estatus_archivos, ID = First(Filter(DEV_Modificacion_estatus_documento,codigo=ThisItem.codigo,ind_mod = "i")).id_status_archivo.Value,descripcion),
+                                                =Switch(LookUp(DEV_Estatus_archivos, ID = Value(First(Filter(DEV_Modificacion_estatus_documento,codigo=ThisItem.codigo,ind_mod = "i")).id_status_archivo.Value),descripcion),
                                                 "Por aprobar", RGBA(249, 249, 249, 1),
                                                 "Por revisar",RGBA(249, 249, 249, 1),
                                                 "Observado", RGBA(245, 218, 216, 1),
@@ -575,7 +575,7 @@
                                             RadiusTopLeft: =5
                                             RadiusTopRight: =5
                                             Size: =11
-                                            Text: =LookUp(DEV_Estatus_archivos, ID = First(Filter(DEV_Modificacion_estatus_documento,codigo=ThisItem.codigo,ind_mod = "i")).id_status_archivo.Value,descripcion)
+                                            Text: =LookUp(DEV_Estatus_archivos, ID = Value(First(Filter(DEV_Modificacion_estatus_documento,codigo=ThisItem.codigo,ind_mod = "i")).id_status_archivo.Value),descripcion)
                                             Width: =Parent.Width*80%
                                             X: =(Parent.Width-Self.Width)/2
                                             Y: =(Parent.Height-Self.Height)/2
@@ -1424,7 +1424,7 @@
                         Font: =Font.'Segoe UI'
                         Height: =24
                         Size: =12
-                        Text: ="Text"
+                        Text: =varSelectedDoc.'Created By'.DisplayName
                         Width: =(Parent.Width/3)*2 -20
                         ZIndex: =2
 
@@ -1505,7 +1505,7 @@
                         Font: =Font.'Segoe UI'
                         Height: =24
                         Size: =12
-                        Text: ="Text"
+                        Text: =varSelectedDoc.codigo
                         Width: =(Parent.Width/3)*2 -20
                         ZIndex: =2
 
@@ -1532,7 +1532,7 @@
                         Font: =Font.'Segoe UI'
                         Height: =24
                         Size: =12
-                        Text: ="Text"
+                        Text: =varSelectedDoc.Nombre
                         Width: =(Parent.Width/3)*2 -20
                         ZIndex: =2
 
@@ -1559,7 +1559,7 @@
                         Font: =Font.'Segoe UI'
                         Height: =24
                         Size: =12
-                        Text: ="Text"
+                        Text: =varSelectedDoc.id_tipo_docu.Value
                         Width: =(Parent.Width/3)*2 -20
                         ZIndex: =2
 

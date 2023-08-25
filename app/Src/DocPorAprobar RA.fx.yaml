@@ -129,9 +129,9 @@
                     FillPortions: =0
                     Items: |-
                         =Table({Name:"Home",Logo: 'Home (1)',Tela:'Home RA'},
-                        {Name: "Doc. por Revisar",Logo: 'Document Sync (2)', Tela:'DocPorAprobar RA' },
-                        {Name: "Doc. por Aprobar", Logo:'Document Text' },
-                        {Name: "Doc. Publicados", Logo:'Document Search' })
+                        {Name: "Doc. por Revisar",Logo: 'Document Sync', Tela:'DocPorRevisar RA' },
+                        {Name: "Doc. por Aprobar", Logo:'Document Ribbon_1', Tela: 'DocPorAprobar RA' },
+                        {Name: "Doc. Publicados", Logo:'Document Text', Tela:'DocPublicados RA' })
                     Layout: =Layout.Vertical
                     LayoutMinHeight: =287
                     LayoutMinWidth: =50
@@ -148,7 +148,7 @@
 
                         Container3_11 As groupContainer.horizontalAutoLayoutContainer:
                             DropShadow: =DropShadow.None
-                            Fill: =If(ThisItem.Name="Doc. por Revisar",primary , Color.Transparent)
+                            Fill: =If(ThisItem.Name="Doc. por Aprobar",primary , Color.Transparent)
                             Height: =Parent.Height
                             LayoutAlignItems: =LayoutAlignItems.Center
                             LayoutMode: =LayoutMode.Auto
@@ -163,7 +163,7 @@
                                 ZIndex: =1
 
                             Label2_3 As label:
-                                Color: =If(ThisItem.Name = "Doc. por Revisar" , Color.White,secondarytext)
+                                Color: =If(ThisItem.Name = "Doc. por Aprobar" , Color.White,secondarytext)
                                 FillPortions: =1
                                 Size: =12
                                 Text: =ThisItem.Name
