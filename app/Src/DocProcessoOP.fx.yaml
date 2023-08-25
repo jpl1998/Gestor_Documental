@@ -3343,7 +3343,7 @@
         Width: =Parent.Width
         ZIndex: =10
 
-        SideBar_Container_docRev_ra_1 As groupContainer.verticalAutoLayoutContainer:
+        SideBar_Container_docRev_op As groupContainer.verticalAutoLayoutContainer:
             DropShadow: =DropShadow.Regular
             Fill: =RGBA(255, 255, 255, 1)
             Height: =Parent.Height
@@ -3357,7 +3357,8 @@
             X: =906
             ZIndex: =1
 
-            container_title_sidebar_docRev_ra_1 As groupContainer.manualLayoutContainer:
+            container_title_sidebar_docRev_op As groupContainer.manualLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
                 DropShadow: =DropShadow.None
                 FillPortions: =0
                 Height: =60
@@ -3365,7 +3366,7 @@
                 LayoutMinWidth: =250
                 ZIndex: =1
 
-                title_sidebar_docRev_ra_1 As label:
+                title_sidebar_docRev_op As label:
                     Align: =Align.Center
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Semibold
@@ -3375,7 +3376,7 @@
                     Y: =10
                     ZIndex: =1
 
-                close_icon_sidebar_docRev_ra_1 As icon.Cancel:
+                close_icon_sidebar_docRev_op As icon.Cancel:
                     Color: =RGBA(0, 0, 0, 1)
                     Height: =30
                     Icon: =Icon.Cancel
@@ -3390,7 +3391,8 @@
                     Y: =(Parent.Height-Self.Height)/2
                     ZIndex: =2
 
-            menu_sidebar_docRev_ra_1 As groupContainer.manualLayoutContainer:
+            menu_sidebar_docRev_op As groupContainer.manualLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
                 DropShadow: =DropShadow.None
                 FillPortions: =0
                 Height: =50
@@ -3398,7 +3400,7 @@
                 LayoutMinWidth: =250
                 ZIndex: =2
 
-                items_menu_sidebar_docRev_ra_1 As gallery.galleryHorizontal:
+                items_menu_sidebar_docRev_op As gallery.galleryHorizontal:
                     DelayItemLoading: =true
                     Height: =50
                     Items: =["Información","Archivos","Evaluación"]
@@ -3407,7 +3409,7 @@
                     Width: =390
                     ZIndex: =1
 
-                    item_menu_sidebar_ra_1 As label:
+                    item_menu_sidebar_op As label:
                         Align: =Align.Center
                         Color: =If(ThisItem.IsSelected, primary, placeholder)
                         Font: =Font.'Segoe UI'
@@ -3418,7 +3420,7 @@
                         Width: =120
                         ZIndex: =1
 
-                    line_menu_sidebar_ra_1 As rectangle:
+                    line_menu_sidebar_op As rectangle:
                         Fill: =seconday
                         Height: =2
                         OnSelect: =Select(Parent)
@@ -3427,7 +3429,7 @@
                         Y: =38
                         ZIndex: =2
 
-            evaluacion_container_sidebar_docRev_ra_1 As groupContainer.verticalAutoLayoutContainer:
+            evaluacion_container_sidebar_docRev_op As groupContainer.verticalAutoLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer
                 DropShadow: =DropShadow.None
                 Height: =540
@@ -3436,11 +3438,11 @@
                 LayoutMinHeight: =540
                 LayoutMinWidth: =250
                 LayoutMode: =LayoutMode.Auto
-                Visible: =items_menu_sidebar_docRev_ra_1.Selected.Value="Evaluación"
+                Visible: =items_menu_sidebar_docRev_op.Selected.Value="Evaluación"
                 Width: =420
                 ZIndex: =3
 
-                menu_filter_evaluacion_sidebar_ra_1 As gallery.galleryHorizontal:
+                menu_filter_evaluacion_sidebar_op As gallery.galleryHorizontal:
                     AlignInContainer: =AlignInContainer.SetByContainer
                     DelayItemLoading: =true
                     FillPortions: =0
@@ -3466,7 +3468,8 @@
                         Y: =2.5
                         ZIndex: =1
 
-                "persola_evaluacion_sidebar_ra_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+                "persola_evaluacion_sidebar_op As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+                    AlignInContainer: =AlignInContainer.SetByContainer
                     DelayItemLoading: =true
                     Items: =CustomGallerySample
                     Layout: =Layout.Vertical
@@ -3528,7 +3531,8 @@
                         Y: =Parent.TemplateHeight - Self.Height
                         ZIndex: =5
 
-            archivos_container_sidebar_docRev_ra_1 As groupContainer.verticalAutoLayoutContainer:
+            archivos_container_sidebar_docRev_op As groupContainer.verticalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
                 DropShadow: =DropShadow.None
                 FillPortions: =0
                 Height: =540
@@ -3536,10 +3540,11 @@
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
                 LayoutMode: =LayoutMode.Auto
-                Visible: =items_menu_sidebar_docRev_ra_1.Selected.Value="Archivos"
+                Visible: =items_menu_sidebar_docRev_op.Selected.Value="Archivos"
                 ZIndex: =4
 
-                archivos_gallery_sidebar_docRev_ra_1 As gallery.galleryVertical:
+                archivos_gallery_sidebar_docRev_op As gallery.galleryVertical:
+                    AlignInContainer: =AlignInContainer.SetByContainer
                     DelayItemLoading: =true
                     Items: =CustomGallerySample
                     Layout: =Layout.Vertical
@@ -3556,19 +3561,19 @@
                         Width: =410
                         ZIndex: =1
 
-                        archivo_image_sidebar_docRev_ra_4 As image:
+                        archivo_image_sidebar_docRev_op As image:
                             AlignInContainer: =AlignInContainer.Stretch
                             Height: =24
                             LayoutMinHeight: =24
                             Width: =24
                             ZIndex: =1
 
-                        archivo_title_sidebar_docRev_ra_4 As label:
+                        archivo_title_sidebar_docRev_op As label:
                             Text: ="Text"
                             Width: =304
                             ZIndex: =2
 
-                        archivo_open_container_sidebar_ra_4 As groupContainer.manualLayoutContainer:
+                        archivo_open_container_sidebar_op As groupContainer.manualLayoutContainer:
                             DropShadow: =DropShadow.None
                             LayoutMinHeight: =24
                             LayoutMinWidth: =24
@@ -3597,7 +3602,7 @@
                                 Y: =(Parent.Height-Self.Height)/2
                                 ZIndex: =2
 
-                        archivo_download_container_sidebar_ra_4 As groupContainer.manualLayoutContainer:
+                        archivo_download_container_sidebar_op As groupContainer.manualLayoutContainer:
                             DropShadow: =DropShadow.None
                             LayoutMinHeight: =24
                             LayoutMinWidth: =24
@@ -3626,7 +3631,8 @@
                                 Y: =(Parent.Height-Self.Height)/2
                                 ZIndex: =2
 
-            informacion_container_sidebar_docRev_ra_1 As groupContainer.verticalAutoLayoutContainer:
+            informacion_container_sidebar_docRev_op As groupContainer.verticalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
                 DropShadow: =DropShadow.None
                 FillPortions: =0
                 Height: =540
@@ -3634,10 +3640,11 @@
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
                 LayoutMode: =LayoutMode.Auto
-                Visible: =items_menu_sidebar_docRev_ra_1.Selected.Value="Información"
+                Visible: =items_menu_sidebar_docRev_op.Selected.Value="Información"
                 ZIndex: =5
 
-                item_informacion_sidebar_docRev_ra_11 As groupContainer.horizontalAutoLayoutContainer:
+                item_informacion_sidebar_docRev_op As groupContainer.horizontalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
                     DropShadow: =DropShadow.None
                     LayoutAlignItems: =LayoutAlignItems.Stretch
                     LayoutJustifyContent: =LayoutJustifyContent.Center
@@ -3664,7 +3671,8 @@
                         Width: =(Parent.Width/3)*2 -20
                         ZIndex: =2
 
-                item_informacion_sidebar_docRev_ra_12 As groupContainer.horizontalAutoLayoutContainer:
+                item_informacion_sidebar_docRev_op_1 As groupContainer.horizontalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
                     DropShadow: =DropShadow.None
                     LayoutAlignItems: =LayoutAlignItems.Stretch
                     LayoutJustifyContent: =LayoutJustifyContent.Center
@@ -3673,7 +3681,7 @@
                     LayoutMode: =LayoutMode.Auto
                     ZIndex: =2
 
-                    item2_informacion_sidebar_ra_1 As label:
+                    item2_informacion_sidebar_op As label:
                         Font: =Font.'Segoe UI'
                         FontWeight: =FontWeight.Semibold
                         Height: =24
@@ -3683,7 +3691,7 @@
                         Width: =(Parent.Width/3)+20
                         ZIndex: =1
 
-                    cont2_informacion_sidebar_ra_1 As label:
+                    cont2_informacion_sidebar_op As label:
                         Font: =Font.'Segoe UI'
                         Height: =24
                         Size: =12
@@ -3691,7 +3699,8 @@
                         Width: =(Parent.Width/3)*2 -20
                         ZIndex: =2
 
-                item_informacion_sidebar_docRev_ra_13 As groupContainer.horizontalAutoLayoutContainer:
+                item_informacion_sidebar_docRev_op_2 As groupContainer.horizontalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
                     DropShadow: =DropShadow.None
                     LayoutAlignItems: =LayoutAlignItems.Stretch
                     LayoutJustifyContent: =LayoutJustifyContent.Center
@@ -3700,7 +3709,7 @@
                     LayoutMode: =LayoutMode.Auto
                     ZIndex: =3
 
-                    item3_informacion_sidebar_ra_1 As label:
+                    item3_informacion_sidebar_op As label:
                         Font: =Font.'Segoe UI'
                         FontWeight: =FontWeight.Semibold
                         Height: =24
@@ -3710,7 +3719,7 @@
                         Width: =(Parent.Width/3)+20
                         ZIndex: =1
 
-                    cont3_informacion_sidebar_ra_1 As label:
+                    cont3_informacion_sidebar_op As label:
                         Font: =Font.'Segoe UI'
                         Height: =24
                         Size: =12
@@ -3719,6 +3728,7 @@
                         ZIndex: =2
 
                 item_informacion_sidebar_docRev_ra_14 As groupContainer.horizontalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
                     DropShadow: =DropShadow.None
                     LayoutAlignItems: =LayoutAlignItems.Stretch
                     LayoutJustifyContent: =LayoutJustifyContent.Center
@@ -3746,6 +3756,7 @@
                         ZIndex: =2
 
                 item_informacion_sidebar_docRev_ra_15 As groupContainer.horizontalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
                     DropShadow: =DropShadow.None
                     LayoutAlignItems: =LayoutAlignItems.Stretch
                     LayoutJustifyContent: =LayoutJustifyContent.Center
@@ -3773,6 +3784,7 @@
                         ZIndex: =2
 
                 item_informacion_sidebar_docRev_ra_16 As groupContainer.horizontalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
                     DropShadow: =DropShadow.None
                     LayoutAlignItems: =LayoutAlignItems.Stretch
                     LayoutJustifyContent: =LayoutJustifyContent.Center
@@ -3800,6 +3812,7 @@
                         ZIndex: =2
 
                 item_informacion_sidebar_docRev_ra_17 As groupContainer.horizontalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
                     DropShadow: =DropShadow.None
                     LayoutAlignItems: =LayoutAlignItems.Stretch
                     LayoutJustifyContent: =LayoutJustifyContent.Center
@@ -3827,6 +3840,7 @@
                         ZIndex: =2
 
                 item_informacion_sidebar_docRev_ra_18 As groupContainer.horizontalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
                     DropShadow: =DropShadow.None
                     LayoutAlignItems: =LayoutAlignItems.Stretch
                     LayoutJustifyContent: =LayoutJustifyContent.Center
@@ -3854,6 +3868,7 @@
                         ZIndex: =2
 
                 item_informacion_sidebar_docRev_ra_19 As groupContainer.horizontalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
                     DropShadow: =DropShadow.None
                     LayoutAlignItems: =LayoutAlignItems.Stretch
                     LayoutJustifyContent: =LayoutJustifyContent.Center
@@ -3881,6 +3896,7 @@
                         ZIndex: =2
 
                 item_informacion_sidebar_docRev_ra_20 As groupContainer.horizontalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
                     DropShadow: =DropShadow.None
                     LayoutAlignItems: =LayoutAlignItems.Stretch
                     LayoutJustifyContent: =LayoutJustifyContent.Center
@@ -3908,6 +3924,7 @@
                         ZIndex: =2
 
                 item_informacion_sidebar_docRev_ra_21 As groupContainer.horizontalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
                     DropShadow: =DropShadow.None
                     LayoutAlignItems: =LayoutAlignItems.Stretch
                     LayoutJustifyContent: =LayoutJustifyContent.Center
@@ -3934,20 +3951,40 @@
                         Width: =(Parent.Width/3)*2 -20
                         ZIndex: =2
 
-            botton_sidebar_docRev_ra_1 As groupContainer.manualLayoutContainer:
-                DropShadow: =DropShadow.None
-                LayoutMinHeight: =50
-                LayoutMinWidth: =250
+            Container13_7 As groupContainer.manualLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                LayoutMinHeight: =40
+                LayoutMinWidth: =40
+                Width: =80
                 ZIndex: =6
 
-                empezar_revision_button_sidebar_1 As button:
-                    BorderColor: =primary
-                    Color: =primary
-                    Fill: =RGBA(255, 255, 255, 1)
-                    Height: =52
-                    Text: ="Empezar Revisión"
-                    Width: =384
-                    X: =5
+                Button2_8 As button:
+                    BorderColor: =Self.Color
+                    BorderStyle: =BorderStyle.None
+                    Color: |-
+                        =Switch(Self.Text,
+                        "Documento por Aprobar", RGBA(180, 130, 0, 1),
+                        "Por revisar",RGBA(180, 130, 0, 1),
+                        "Observado", RGBA(214, 0, 0, 1),
+                        "Aprobado",RGBA(44, 143, 112, 1))
+                    DisplayMode: =DisplayMode.View
+                    Fill: |-
+                        =Switch(Self.Text,
+                        "Documento por Aprobar", RGBA(249, 249, 249, 1),
+                        "Por revisar",RGBA(249, 249, 249, 1),
+                        "Observado", RGBA(245, 218, 216, 1),
+                        "Aprobado", RGBA(219, 238, 233, 1))
+                    Font: =Font.Arial
+                    FontWeight: =FontWeight.Normal
+                    Height: =Parent.Height*60%
+                    RadiusBottomLeft: =5
+                    RadiusBottomRight: =5
+                    RadiusTopLeft: =5
+                    RadiusTopRight: =5
+                    Size: =11
+                    Text: ="Documento por Aprobar"
+                    Width: =Parent.Width*80%
+                    X: =(Parent.Width-Self.Width)/2
                     Y: =(Parent.Height-Self.Height)/2
                     ZIndex: =1
 
