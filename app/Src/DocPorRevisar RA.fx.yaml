@@ -1773,7 +1773,7 @@
 
                     docPrincipal_revision_ra As gallery.galleryVertical:
                         DelayItemLoading: =true
-                        Items: =["sample"]
+                        Items: =Filter(DEV_Archivos, id_documento.Value = Text(varSelectedDoc.ID), tipo_documento="Principal")
                         Layout: =Layout.Vertical
                         LayoutMinHeight: =50
                         LayoutMinWidth: =300
@@ -1791,6 +1791,7 @@
                             archivo_image_sidebar_docRev_ra_1 As image:
                                 AlignInContainer: =AlignInContainer.Stretch
                                 Height: =24
+                                Image: =word
                                 LayoutMinHeight: =24
                                 Width: =24
                                 ZIndex: =1
