@@ -3429,6 +3429,97 @@
                         Y: =38
                         ZIndex: =2
 
+            Container3 As groupContainer.horizontalAutoLayoutContainer:
+                DropShadow: =DropShadow.None
+                FillPortions: =0
+                Height: =40
+                LayoutAlignItems: =LayoutAlignItems.Stretch
+                LayoutGap: =10
+                LayoutJustifyContent: =LayoutJustifyContent.Center
+                LayoutMinHeight: =50
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                PaddingBottom: =5
+                PaddingTop: =5
+                ZIndex: =3
+
+                observarOption_container_ra_3 As groupContainer.manualLayoutContainer:
+                    BorderColor: =placeholder
+                    DropShadow: =DropShadow.None
+                    Fill: =RGBA(255, 255, 255, 1)
+                    LayoutMinHeight: =10
+                    LayoutMinWidth: =10
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    ZIndex: =1
+
+                    observar_button_ra_3 As button:
+                        BorderColor: =primary
+                        Color: =primary
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =Parent.Height*98%
+                        HoverColor: =ColorFade(primary,-5%)
+                        HoverFill: =RGBA(255, 255, 255, 1)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        PressedFill: =
+                        RadiusBottomLeft: =5
+                        RadiusBottomRight: =5
+                        RadiusTopLeft: =5
+                        RadiusTopRight: =5
+                        Size: =11
+                        Text: ="Editar Información"
+                        Width: =Parent.Width
+                        ZIndex: =1
+
+                    observar_icon_ra_3 As icon.Information:
+                        Color: =primary
+                        Height: =20
+                        Icon: =Icon.Edit
+                        Width: =20
+                        X: =10
+                        Y: =(Parent.Height-Self.Height)/2
+                        ZIndex: =2
+
+                observarOption_container_ra_4 As groupContainer.manualLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    BorderColor: =placeholder
+                    DropShadow: =DropShadow.None
+                    Fill: =RGBA(255, 255, 255, 1)
+                    LayoutMinHeight: =10
+                    LayoutMinWidth: =10
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    ZIndex: =2
+
+                    observar_button_ra_4 As button:
+                        BorderColor: =primary
+                        Color: =primary
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =Parent.Height*98%
+                        HoverColor: =ColorFade(primary,-5%)
+                        HoverFill: =RGBA(255, 255, 255, 1)
+                        PressedFill: =
+                        RadiusBottomLeft: =5
+                        RadiusBottomRight: =5
+                        RadiusTopLeft: =5
+                        RadiusTopRight: =5
+                        Size: =11
+                        Text: ="Registro Edición"
+                        Width: =Parent.Width
+                        ZIndex: =1
+
+                    observar_icon_ra_4 As icon.Information:
+                        Color: =primary
+                        Height: =20
+                        Icon: =Icon.DocumentWithContent
+                        Width: =20
+                        X: =10
+                        Y: =(Parent.Height-Self.Height)/2
+                        ZIndex: =2
+
             evaluacion_container_sidebar_docRev_op As groupContainer.verticalAutoLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer
                 DropShadow: =DropShadow.None
@@ -3440,7 +3531,7 @@
                 LayoutMode: =LayoutMode.Auto
                 Visible: =items_menu_sidebar_docRev_op.Selected.Value="Evaluación"
                 Width: =420
-                ZIndex: =3
+                ZIndex: =4
 
                 menu_filter_evaluacion_sidebar_op As gallery.galleryHorizontal:
                     AlignInContainer: =AlignInContainer.SetByContainer
@@ -3462,6 +3553,10 @@
                         FocusedBorderThickness: =2
                         Height: =24
                         OnSelect: =Select(Parent)
+                        RadiusBottomLeft: =5
+                        RadiusBottomRight: =5
+                        RadiusTopLeft: =5
+                        RadiusTopRight: =5
                         Size: =8
                         Text: =ThisItem.Value
                         Width: =97
@@ -3471,7 +3566,8 @@
                 "persola_evaluacion_sidebar_op As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
                     AlignInContainer: =AlignInContainer.SetByContainer
                     DelayItemLoading: =true
-                    Items: =CustomGallerySample
+                    Items: |-
+                        =UsuáriosdoOffice365.SearchUser({searchTerm:"ematos@luzdelsur.com.pe"})
                     Layout: =Layout.Vertical
                     LayoutMinHeight: =287
                     LayoutMinWidth: =320
@@ -3482,17 +3578,20 @@
 
                     Image4_7 As image:
                         Height: =32
+                        Image: =UsuáriosdoOffice365.UserPhoto(ThisItem.Id)
                         OnSelect: =Select(Parent)
-                        RadiusBottomLeft: =8
-                        RadiusBottomRight: =8
-                        RadiusTopLeft: =8
-                        RadiusTopRight: =8
+                        RadiusBottomLeft: =30
+                        RadiusBottomRight: =30
+                        RadiusTopLeft: =30
+                        RadiusTopRight: =30
                         Width: =32
                         X: =16
                         Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
                         ZIndex: =1
 
                     Title1_1 As label:
+                        Color: =secondarytext
+                        Font: =Font.'Segoe UI'
                         FontWeight: =FontWeight.Semibold
                         Height: =Self.Size * 1.8
                         OnSelect: =Select(Parent)
@@ -3500,8 +3599,8 @@
                         PaddingLeft: =0
                         PaddingRight: =0
                         PaddingTop: =0
-                        Size: =12
-                        Text: =ThisItem.SampleHeading
+                        Size: =11
+                        Text: =ThisItem.DisplayName
                         VerticalAlign: =VerticalAlign.Top
                         Width: =Parent.TemplateWidth - 173
                         X: =73
@@ -3515,8 +3614,8 @@
                         PaddingLeft: =0
                         PaddingRight: =0
                         PaddingTop: =0
-                        Size: =8
-                        Text: =ThisItem.SampleText
+                        Size: =6
+                        Text: =ThisItem.JobTitle
                         VerticalAlign: =VerticalAlign.Top
                         Width: =Title1_1.Width
                         X: =Title1_1.X
@@ -3532,7 +3631,6 @@
                         ZIndex: =5
 
             archivos_container_sidebar_docRev_op As groupContainer.verticalAutoLayoutContainer:
-                AlignInContainer: =AlignInContainer.SetByContainer
                 DropShadow: =DropShadow.None
                 FillPortions: =0
                 Height: =540
@@ -3541,95 +3639,283 @@
                 LayoutMinWidth: =250
                 LayoutMode: =LayoutMode.Auto
                 Visible: =items_menu_sidebar_docRev_op.Selected.Value="Archivos"
-                ZIndex: =4
+                ZIndex: =5
 
-                archivos_gallery_sidebar_docRev_op As gallery.galleryVertical:
-                    AlignInContainer: =AlignInContainer.SetByContainer
-                    DelayItemLoading: =true
-                    Items: =CustomGallerySample
-                    Layout: =Layout.Vertical
-                    LayoutMinHeight: =287
-                    LayoutMinWidth: =320
-                    LoadingSpinner: =LoadingSpinner.Data
-                    TemplateSize: =40
+                container_archivos_gallery_sidebar_4 As groupContainer.horizontalAutoLayoutContainer:
+                    DropShadow: =DropShadow.None
+                    FillPortions: =0
+                    Height: =50
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =410
                     ZIndex: =1
 
-                    container_archivos_gallery_sidebar_4 As groupContainer.horizontalAutoLayoutContainer:
-                        DropShadow: =DropShadow.None
-                        Height: =40
-                        LayoutMode: =LayoutMode.Auto
-                        Width: =410
+                    archivo_image_sidebar_docRev_op As image:
+                        Height: =24
+                        Image: =word
+                        LayoutMinHeight: =24
+                        Width: =30
                         ZIndex: =1
 
-                        archivo_image_sidebar_docRev_op As image:
-                            AlignInContainer: =AlignInContainer.Stretch
-                            Height: =24
-                            LayoutMinHeight: =24
-                            Width: =24
+                    archivo_title_sidebar_docRev_op As label:
+                        PaddingLeft: =10
+                        Size: =10
+                        Text: ="LDS-PA-134 Carga del Presupuesto Anual a los sistemas informáticos.docx"
+                        Width: =304
+                        Wrap: =false
+                        ZIndex: =2
+
+                    archivo_open_container_sidebar_op As groupContainer.manualLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        DropShadow: =DropShadow.None
+                        LayoutMinHeight: =24
+                        LayoutMinWidth: =24
+                        ZIndex: =3
+
+                        open_archivo_icon_sidebar_4 As icon.OpenInNewWindow:
+                            Height: =16
+                            Icon: =Icon.OpenInNewWindow
+                            Width: =16
+                            X: =(Parent.Width-Self.Width)/2
+                            Y: =(Parent.Height-Self.Height)/2
                             ZIndex: =1
 
-                        archivo_title_sidebar_docRev_op As label:
-                            Text: ="Text"
-                            Width: =304
+                        open_archivo_button_sidebar_4 As button:
+                            BorderColor: =primary
+                            BorderThickness: =1.5
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =25
+                            HoverFill: =
+                            RadiusBottomLeft: =5
+                            RadiusBottomRight: =5
+                            RadiusTopLeft: =5
+                            RadiusTopRight: =5
+                            Text: =""
+                            Width: =25
+                            X: =(Parent.Width-Self.Width)/2
+                            Y: =(Parent.Height-Self.Height)/2
                             ZIndex: =2
 
-                        archivo_open_container_sidebar_op As groupContainer.manualLayoutContainer:
-                            DropShadow: =DropShadow.None
-                            LayoutMinHeight: =24
-                            LayoutMinWidth: =24
-                            ZIndex: =3
+                    archivo_download_container_sidebar_op As groupContainer.manualLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        DropShadow: =DropShadow.None
+                        LayoutMinHeight: =24
+                        LayoutMinWidth: =24
+                        ZIndex: =4
 
-                            open_archivo_icon_sidebar_4 As icon.OpenInNewWindow:
-                                Height: =16
-                                Icon: =Icon.OpenInNewWindow
-                                Width: =16
-                                X: =(Parent.Width-Self.Width)/2
-                                Y: =(Parent.Height-Self.Height)/2
-                                ZIndex: =1
+                        download_archivo_icon_sidebar_4 As icon.OpenInNewWindow:
+                            Height: =16
+                            Icon: =Icon.Download
+                            Width: =16
+                            X: =(Parent.Width-Self.Width)/2
+                            Y: =(Parent.Height-Self.Height)/2
+                            ZIndex: =1
 
-                            open_archivo_button_sidebar_4 As button:
-                                BorderColor: =primary
-                                BorderThickness: =1.5
-                                Fill: =RGBA(0, 0, 0, 0)
-                                Height: =25
-                                RadiusBottomLeft: =5
-                                RadiusBottomRight: =5
-                                RadiusTopLeft: =5
-                                RadiusTopRight: =5
-                                Text: =""
-                                Width: =25
-                                X: =(Parent.Width-Self.Width)/2
-                                Y: =(Parent.Height-Self.Height)/2
-                                ZIndex: =2
+                        download_archivo_button_sidebar_4 As button:
+                            BorderColor: =primary
+                            BorderThickness: =1.5
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =25
+                            HoverFill: =
+                            RadiusBottomLeft: =5
+                            RadiusBottomRight: =5
+                            RadiusTopLeft: =5
+                            RadiusTopRight: =5
+                            Text: =""
+                            Width: =25
+                            X: =(Parent.Width-Self.Width)/2
+                            Y: =(Parent.Height-Self.Height)/2
+                            ZIndex: =2
 
-                        archivo_download_container_sidebar_op As groupContainer.manualLayoutContainer:
-                            DropShadow: =DropShadow.None
-                            LayoutMinHeight: =24
-                            LayoutMinWidth: =24
-                            ZIndex: =4
+                separator_archives_op As rectangle:
+                    AlignInContainer: =AlignInContainer.Center
+                    Fill: =secondarytext
+                    Height: =1
+                    Width: =Parent.Width*95%
+                    ZIndex: =2
 
-                            download_archivo_icon_sidebar_4 As icon.OpenInNewWindow:
-                                Height: =16
-                                Icon: =Icon.Download
-                                Width: =16
-                                X: =(Parent.Width-Self.Width)/2
-                                Y: =(Parent.Height-Self.Height)/2
-                                ZIndex: =1
+                container_archivos_gallery_sidebar_5 As groupContainer.horizontalAutoLayoutContainer:
+                    DropShadow: =DropShadow.None
+                    FillPortions: =0
+                    Height: =50
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =410
+                    ZIndex: =3
 
-                            download_archivo_button_sidebar_4 As button:
-                                BorderColor: =primary
-                                BorderThickness: =1.5
-                                Fill: =RGBA(0, 0, 0, 0)
-                                Height: =25
-                                RadiusBottomLeft: =5
-                                RadiusBottomRight: =5
-                                RadiusTopLeft: =5
-                                RadiusTopRight: =5
-                                Text: =""
-                                Width: =25
-                                X: =(Parent.Width-Self.Width)/2
-                                Y: =(Parent.Height-Self.Height)/2
-                                ZIndex: =2
+                    archivo_image_sidebar_docRev_op_1 As image:
+                        Height: =24
+                        Image: =visio
+                        LayoutMinHeight: =24
+                        Width: =30
+                        ZIndex: =1
+
+                    archivo_title_sidebar_docRev_op_1 As label:
+                        PaddingLeft: =10
+                        Size: =10
+                        Text: ="LDS-PA-134 Flujograma.vsdx"
+                        Width: =304
+                        ZIndex: =2
+
+                    archivo_open_container_sidebar_op_1 As groupContainer.manualLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        DropShadow: =DropShadow.None
+                        LayoutMinHeight: =24
+                        LayoutMinWidth: =24
+                        ZIndex: =3
+
+                        open_archivo_icon_sidebar_5 As icon.OpenInNewWindow:
+                            Height: =16
+                            Icon: =Icon.OpenInNewWindow
+                            Width: =16
+                            X: =(Parent.Width-Self.Width)/2
+                            Y: =(Parent.Height-Self.Height)/2
+                            ZIndex: =1
+
+                        open_archivo_button_sidebar_5 As button:
+                            BorderColor: =primary
+                            BorderThickness: =1.5
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =25
+                            HoverFill: =
+                            RadiusBottomLeft: =5
+                            RadiusBottomRight: =5
+                            RadiusTopLeft: =5
+                            RadiusTopRight: =5
+                            Text: =""
+                            Width: =25
+                            X: =(Parent.Width-Self.Width)/2
+                            Y: =(Parent.Height-Self.Height)/2
+                            ZIndex: =2
+
+                    archivo_download_container_sidebar_op_1 As groupContainer.manualLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        DropShadow: =DropShadow.None
+                        LayoutMinHeight: =24
+                        LayoutMinWidth: =24
+                        ZIndex: =4
+
+                        download_archivo_icon_sidebar_5 As icon.OpenInNewWindow:
+                            Height: =16
+                            Icon: =Icon.Download
+                            Width: =16
+                            X: =(Parent.Width-Self.Width)/2
+                            Y: =(Parent.Height-Self.Height)/2
+                            ZIndex: =1
+
+                        download_archivo_button_sidebar_5 As button:
+                            BorderColor: =primary
+                            BorderThickness: =1.5
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =25
+                            HoverFill: =
+                            RadiusBottomLeft: =5
+                            RadiusBottomRight: =5
+                            RadiusTopLeft: =5
+                            RadiusTopRight: =5
+                            Text: =""
+                            Width: =25
+                            X: =(Parent.Width-Self.Width)/2
+                            Y: =(Parent.Height-Self.Height)/2
+                            ZIndex: =2
+
+                separator_archives_op_2 As rectangle:
+                    AlignInContainer: =AlignInContainer.Center
+                    Fill: =secondarytext
+                    Height: =1
+                    Width: =Parent.Width*95%
+                    ZIndex: =4
+
+                container_archivos_gallery_sidebar_6 As groupContainer.horizontalAutoLayoutContainer:
+                    DropShadow: =DropShadow.None
+                    FillPortions: =0
+                    Height: =50
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =410
+                    ZIndex: =5
+
+                    archivo_image_sidebar_docRev_op_2 As image:
+                        Height: =24
+                        Image: =excel
+                        LayoutMinHeight: =24
+                        Width: =30
+                        ZIndex: =1
+
+                    archivo_title_sidebar_docRev_op_2 As label:
+                        PaddingLeft: =10
+                        Size: =10
+                        Text: ="LDS-PA-134 RCKI.xlsx"
+                        Width: =304
+                        ZIndex: =2
+
+                    archivo_open_container_sidebar_op_2 As groupContainer.manualLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        DropShadow: =DropShadow.None
+                        LayoutMinHeight: =24
+                        LayoutMinWidth: =24
+                        ZIndex: =3
+
+                        open_archivo_icon_sidebar_6 As icon.OpenInNewWindow:
+                            Height: =16
+                            Icon: =Icon.OpenInNewWindow
+                            Width: =16
+                            X: =(Parent.Width-Self.Width)/2
+                            Y: =(Parent.Height-Self.Height)/2
+                            ZIndex: =1
+
+                        open_archivo_button_sidebar_6 As button:
+                            BorderColor: =primary
+                            BorderThickness: =1.5
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =25
+                            HoverFill: =
+                            RadiusBottomLeft: =5
+                            RadiusBottomRight: =5
+                            RadiusTopLeft: =5
+                            RadiusTopRight: =5
+                            Text: =""
+                            Width: =25
+                            X: =(Parent.Width-Self.Width)/2
+                            Y: =(Parent.Height-Self.Height)/2
+                            ZIndex: =2
+
+                    archivo_download_container_sidebar_op_2 As groupContainer.manualLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        DropShadow: =DropShadow.None
+                        LayoutMinHeight: =24
+                        LayoutMinWidth: =24
+                        ZIndex: =4
+
+                        download_archivo_icon_sidebar_6 As icon.OpenInNewWindow:
+                            Height: =16
+                            Icon: =Icon.Download
+                            Width: =16
+                            X: =(Parent.Width-Self.Width)/2
+                            Y: =(Parent.Height-Self.Height)/2
+                            ZIndex: =1
+
+                        download_archivo_button_sidebar_6 As button:
+                            BorderColor: =primary
+                            BorderThickness: =1.5
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =25
+                            HoverFill: =
+                            RadiusBottomLeft: =5
+                            RadiusBottomRight: =5
+                            RadiusTopLeft: =5
+                            RadiusTopRight: =5
+                            Text: =""
+                            Width: =25
+                            X: =(Parent.Width-Self.Width)/2
+                            Y: =(Parent.Height-Self.Height)/2
+                            ZIndex: =2
 
             informacion_container_sidebar_docRev_op As groupContainer.verticalAutoLayoutContainer:
                 DropShadow: =DropShadow.None
@@ -3640,7 +3926,7 @@
                 LayoutMinWidth: =250
                 LayoutMode: =LayoutMode.Auto
                 Visible: =items_menu_sidebar_docRev_op.Selected.Value="Información"
-                ZIndex: =5
+                ZIndex: =6
 
                 item_informacion_sidebar_docRev_op As groupContainer.horizontalAutoLayoutContainer:
                     DropShadow: =DropShadow.None
@@ -3943,7 +4229,7 @@
                 LayoutMinHeight: =40
                 LayoutMinWidth: =40
                 Width: =80
-                ZIndex: =6
+                ZIndex: =7
 
                 Button2_8 As button:
                     BorderColor: =Self.Color
