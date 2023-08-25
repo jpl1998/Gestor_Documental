@@ -16480,6 +16480,129 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_table_docRev_ra_1.Container_tablecontent_docRev_ra_1.tablecontent_docRev_ra_1.Container3_12.Container13_22.Button2_9.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_table_docRev_ra_1.Container_tablecontent_docRev_ra_1.tablecontent_docRev_ra_1.Container3_12.Container13_22.Button2_9.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 32,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "DocPorAprobar RA",
+                "type": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_table_docRev_ra_1.Container_tablecontent_docRev_ra_1.tablecontent_docRev_ra_1.Container3_12.Container13_22.Button2_9"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Number",
+              "Text"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_table_docRev_ra_1.Container_tablecontent_docRev_ra_1.tablecontent_docRev_ra_1.Container3_12.Container13_22.Button2_9.Fill"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_table_docRev_ra_1.Container_tablecontent_docRev_ra_1.tablecontent_docRev_ra_1.Container3_12.Container13_22.Button2_9.Fill",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 39,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "Fill",
+                "module": "DocPorAprobar RA",
+                "type": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_table_docRev_ra_1.Container_tablecontent_docRev_ra_1.tablecontent_docRev_ra_1.Container3_12.Container13_22.Button2_9"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Number",
+              "Text"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_table_docRev_ra_1.Container_tablecontent_docRev_ra_1.tablecontent_docRev_ra_1.Container3_12.Container13_22.Button2_9.Color"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_table_docRev_ra_1.Container_tablecontent_docRev_ra_1.tablecontent_docRev_ra_1.Container3_12.Container13_22.Button2_9.Color",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 39,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "Color",
+                "module": "DocPorAprobar RA",
+                "type": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_table_docRev_ra_1.Container_tablecontent_docRev_ra_1.tablecontent_docRev_ra_1.Container3_12.Container13_22.Button2_9"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Number",
+              "Text"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "DocProcessoOP.ScreenContainer1_1.BottomContainer1_1.MainContainer1_1.Container9_2.Container10_2.Container4_5.Gallery1_4.Container3_4.Container13_5.Button2_2.Text"
                 }
               ],
@@ -16582,6 +16705,129 @@
                 "member": "Fill",
                 "module": "DocProcessoOP",
                 "type": "DocProcessoOP.ScreenContainer1_1.BottomContainer1_1.MainContainer1_1.Container9_2.Container10_2.Container4_5.Gallery1_4.Container3_4.Container13_5.Button2_2"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Number",
+              "Text"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'DocPublicados RA'.ScreenContainer_docRev_ra_2.BottomContainer_docRev_ra_2.MainContainer_docRev_ra_2.MainCont_docRev_ra_2.Container_table_docRev_ra_2.Container_tablecontent_docRev_ra_2.tablecontent_docRev_ra_2.Container3_14.Container13_32.Button2_10.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPublicados RA'.ScreenContainer_docRev_ra_2.BottomContainer_docRev_ra_2.MainContainer_docRev_ra_2.MainCont_docRev_ra_2.Container_table_docRev_ra_2.Container_tablecontent_docRev_ra_2.tablecontent_docRev_ra_2.Container3_14.Container13_32.Button2_10.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 32,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "DocPublicados RA",
+                "type": "'DocPublicados RA'.ScreenContainer_docRev_ra_2.BottomContainer_docRev_ra_2.MainContainer_docRev_ra_2.MainCont_docRev_ra_2.Container_table_docRev_ra_2.Container_tablecontent_docRev_ra_2.tablecontent_docRev_ra_2.Container3_14.Container13_32.Button2_10"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Number",
+              "Text"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'DocPublicados RA'.ScreenContainer_docRev_ra_2.BottomContainer_docRev_ra_2.MainContainer_docRev_ra_2.MainCont_docRev_ra_2.Container_table_docRev_ra_2.Container_tablecontent_docRev_ra_2.tablecontent_docRev_ra_2.Container3_14.Container13_32.Button2_10.Fill"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPublicados RA'.ScreenContainer_docRev_ra_2.BottomContainer_docRev_ra_2.MainContainer_docRev_ra_2.MainCont_docRev_ra_2.Container_table_docRev_ra_2.Container_tablecontent_docRev_ra_2.tablecontent_docRev_ra_2.Container3_14.Container13_32.Button2_10.Fill",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 39,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "Fill",
+                "module": "DocPublicados RA",
+                "type": "'DocPublicados RA'.ScreenContainer_docRev_ra_2.BottomContainer_docRev_ra_2.MainContainer_docRev_ra_2.MainCont_docRev_ra_2.Container_table_docRev_ra_2.Container_tablecontent_docRev_ra_2.tablecontent_docRev_ra_2.Container3_14.Container13_32.Button2_10"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Number",
+              "Text"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'DocPublicados RA'.ScreenContainer_docRev_ra_2.BottomContainer_docRev_ra_2.MainContainer_docRev_ra_2.MainCont_docRev_ra_2.Container_table_docRev_ra_2.Container_tablecontent_docRev_ra_2.tablecontent_docRev_ra_2.Container3_14.Container13_32.Button2_10.Color"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPublicados RA'.ScreenContainer_docRev_ra_2.BottomContainer_docRev_ra_2.MainContainer_docRev_ra_2.MainCont_docRev_ra_2.Container_table_docRev_ra_2.Container_tablecontent_docRev_ra_2.tablecontent_docRev_ra_2.Container3_14.Container13_32.Button2_10.Color",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 39,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "Color",
+                "module": "DocPublicados RA",
+                "type": "'DocPublicados RA'.ScreenContainer_docRev_ra_2.BottomContainer_docRev_ra_2.MainContainer_docRev_ra_2.MainCont_docRev_ra_2.Container_table_docRev_ra_2.Container_tablecontent_docRev_ra_2.tablecontent_docRev_ra_2.Container3_14.Container13_32.Button2_10"
               }
             }
           ],
@@ -16849,246 +17095,1260 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_table_docRev_ra_1.Container_tablecontent_docRev_ra_1.tablecontent_docRev_ra_1.Container3_12.Container13_22.Button2_9.Text"
+                  "fullyQualifiedName": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.sidebar_docRev_ra_1.menu_items_docRev_ra_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_table_docRev_ra_1.Container_tablecontent_docRev_ra_1.tablecontent_docRev_ra_1.Container3_12.Container13_22.Button2_9.Text",
+                  "fullyQualifiedName": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.sidebar_docRev_ra_1.menu_items_docRev_ra_1.AccessibleLabel",
                   "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 1,
-                  "charOffset": 32,
-                  "snippet": {
-                    "text": "="
-                  }
                 }
               },
               "properties": {
-                "member": "Text",
+                "member": "AccessibleLabel",
                 "module": "DocPorAprobar RA",
-                "type": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_table_docRev_ra_1.Container_tablecontent_docRev_ra_1.tablecontent_docRev_ra_1.Container3_12.Container13_22.Button2_9"
+                "type": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.sidebar_docRev_ra_1.menu_items_docRev_ra_1"
               }
             }
           ],
           "message": {
-            "arguments": [
-              "Number",
-              "Text"
-            ],
             "id": "issue"
           },
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
-          "ruleIndex": 0
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_table_docRev_ra_1.Container_tablecontent_docRev_ra_1.tablecontent_docRev_ra_1.Container3_12.Container13_22.Button2_9.Fill"
+                  "fullyQualifiedName": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.sidebar_docRev_ra_1.menu_items_docRev_ra_1.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_table_docRev_ra_1.Container_tablecontent_docRev_ra_1.tablecontent_docRev_ra_1.Container3_12.Container13_22.Button2_9.Fill",
+                  "fullyQualifiedName": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.sidebar_docRev_ra_1.menu_items_docRev_ra_1.TabIndex",
                   "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 1,
-                  "charOffset": 39,
-                  "snippet": {
-                    "text": "="
-                  }
                 }
               },
               "properties": {
-                "member": "Fill",
+                "member": "TabIndex",
                 "module": "DocPorAprobar RA",
-                "type": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_table_docRev_ra_1.Container_tablecontent_docRev_ra_1.tablecontent_docRev_ra_1.Container3_12.Container13_22.Button2_9"
+                "type": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.sidebar_docRev_ra_1.menu_items_docRev_ra_1"
               }
             }
           ],
           "message": {
-            "arguments": [
-              "Number",
-              "Text"
-            ],
             "id": "issue"
           },
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
-          "ruleIndex": 0
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 2
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_table_docRev_ra_1.Container_tablecontent_docRev_ra_1.tablecontent_docRev_ra_1.Container3_12.Container13_22.Button2_9.Color"
+                  "fullyQualifiedName": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_filter_docRev_ra_1.menu_filter_docRev_ra_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_table_docRev_ra_1.Container_tablecontent_docRev_ra_1.tablecontent_docRev_ra_1.Container3_12.Container13_22.Button2_9.Color",
+                  "fullyQualifiedName": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_filter_docRev_ra_1.menu_filter_docRev_ra_1.AccessibleLabel",
                   "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 1,
-                  "charOffset": 39,
-                  "snippet": {
-                    "text": "="
-                  }
                 }
               },
               "properties": {
-                "member": "Color",
+                "member": "AccessibleLabel",
                 "module": "DocPorAprobar RA",
-                "type": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_table_docRev_ra_1.Container_tablecontent_docRev_ra_1.tablecontent_docRev_ra_1.Container3_12.Container13_22.Button2_9"
+                "type": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_filter_docRev_ra_1.menu_filter_docRev_ra_1"
               }
             }
           ],
           "message": {
-            "arguments": [
-              "Number",
-              "Text"
-            ],
             "id": "issue"
           },
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
-          "ruleIndex": 0
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'DocPublicados RA'.ScreenContainer_docRev_ra_2.BottomContainer_docRev_ra_2.MainContainer_docRev_ra_2.MainCont_docRev_ra_2.Container_table_docRev_ra_2.Container_tablecontent_docRev_ra_2.tablecontent_docRev_ra_2.Container3_14.Container13_32.Button2_10.Text"
+                  "fullyQualifiedName": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_filter_docRev_ra_1.menu_filter_docRev_ra_1.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'DocPublicados RA'.ScreenContainer_docRev_ra_2.BottomContainer_docRev_ra_2.MainContainer_docRev_ra_2.MainCont_docRev_ra_2.Container_table_docRev_ra_2.Container_tablecontent_docRev_ra_2.tablecontent_docRev_ra_2.Container3_14.Container13_32.Button2_10.Text",
+                  "fullyQualifiedName": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_filter_docRev_ra_1.menu_filter_docRev_ra_1.TabIndex",
                   "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 1,
-                  "charOffset": 32,
-                  "snippet": {
-                    "text": "="
-                  }
                 }
               },
               "properties": {
-                "member": "Text",
-                "module": "DocPublicados RA",
-                "type": "'DocPublicados RA'.ScreenContainer_docRev_ra_2.BottomContainer_docRev_ra_2.MainContainer_docRev_ra_2.MainCont_docRev_ra_2.Container_table_docRev_ra_2.Container_tablecontent_docRev_ra_2.tablecontent_docRev_ra_2.Container3_14.Container13_32.Button2_10"
+                "member": "TabIndex",
+                "module": "DocPorAprobar RA",
+                "type": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_filter_docRev_ra_1.menu_filter_docRev_ra_1"
               }
             }
           ],
           "message": {
-            "arguments": [
-              "Number",
-              "Text"
-            ],
             "id": "issue"
           },
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
-          "ruleIndex": 0
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 2
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'DocPublicados RA'.ScreenContainer_docRev_ra_2.BottomContainer_docRev_ra_2.MainContainer_docRev_ra_2.MainCont_docRev_ra_2.Container_table_docRev_ra_2.Container_tablecontent_docRev_ra_2.tablecontent_docRev_ra_2.Container3_14.Container13_32.Button2_10.Fill"
+                  "fullyQualifiedName": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_searchbar_docRev_ra_1.cont_searchbar_docRev_ra_1.searchbar_docRev_ra_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'DocPublicados RA'.ScreenContainer_docRev_ra_2.BottomContainer_docRev_ra_2.MainContainer_docRev_ra_2.MainCont_docRev_ra_2.Container_table_docRev_ra_2.Container_tablecontent_docRev_ra_2.tablecontent_docRev_ra_2.Container3_14.Container13_32.Button2_10.Fill",
+                  "fullyQualifiedName": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_searchbar_docRev_ra_1.cont_searchbar_docRev_ra_1.searchbar_docRev_ra_1.AccessibleLabel",
                   "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 1,
-                  "charOffset": 39,
-                  "snippet": {
-                    "text": "="
-                  }
                 }
               },
               "properties": {
-                "member": "Fill",
-                "module": "DocPublicados RA",
-                "type": "'DocPublicados RA'.ScreenContainer_docRev_ra_2.BottomContainer_docRev_ra_2.MainContainer_docRev_ra_2.MainCont_docRev_ra_2.Container_table_docRev_ra_2.Container_tablecontent_docRev_ra_2.tablecontent_docRev_ra_2.Container3_14.Container13_32.Button2_10"
+                "member": "AccessibleLabel",
+                "module": "DocPorAprobar RA",
+                "type": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_searchbar_docRev_ra_1.cont_searchbar_docRev_ra_1.searchbar_docRev_ra_1"
               }
             }
           ],
           "message": {
-            "arguments": [
-              "Number",
-              "Text"
-            ],
             "id": "issue"
           },
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
-          "ruleIndex": 0
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'DocPublicados RA'.ScreenContainer_docRev_ra_2.BottomContainer_docRev_ra_2.MainContainer_docRev_ra_2.MainCont_docRev_ra_2.Container_table_docRev_ra_2.Container_tablecontent_docRev_ra_2.tablecontent_docRev_ra_2.Container3_14.Container13_32.Button2_10.Color"
+                  "fullyQualifiedName": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_searchbar_docRev_ra_1.cont_filter_docRev_ra_1.filter_icon_docRev_ra_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'DocPublicados RA'.ScreenContainer_docRev_ra_2.BottomContainer_docRev_ra_2.MainContainer_docRev_ra_2.MainCont_docRev_ra_2.Container_table_docRev_ra_2.Container_tablecontent_docRev_ra_2.tablecontent_docRev_ra_2.Container3_14.Container13_32.Button2_10.Color",
+                  "fullyQualifiedName": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_searchbar_docRev_ra_1.cont_filter_docRev_ra_1.filter_icon_docRev_ra_1.AccessibleLabel",
                   "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 1,
-                  "charOffset": 39,
-                  "snippet": {
-                    "text": "="
-                  }
                 }
               },
               "properties": {
-                "member": "Color",
-                "module": "DocPublicados RA",
-                "type": "'DocPublicados RA'.ScreenContainer_docRev_ra_2.BottomContainer_docRev_ra_2.MainContainer_docRev_ra_2.MainCont_docRev_ra_2.Container_table_docRev_ra_2.Container_tablecontent_docRev_ra_2.tablecontent_docRev_ra_2.Container3_14.Container13_32.Button2_10"
+                "member": "AccessibleLabel",
+                "module": "DocPorAprobar RA",
+                "type": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_searchbar_docRev_ra_1.cont_filter_docRev_ra_1.filter_icon_docRev_ra_1"
               }
             }
           ],
           "message": {
-            "arguments": [
-              "Number",
-              "Text"
-            ],
             "id": "issue"
           },
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
-          "ruleIndex": 0
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_searchbar_docRev_ra_1.cont_filter_docRev_ra_1.filter_icon_docRev_ra_1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_searchbar_docRev_ra_1.cont_filter_docRev_ra_1.filter_icon_docRev_ra_1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "DocPorAprobar RA",
+                "type": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_searchbar_docRev_ra_1.cont_filter_docRev_ra_1.filter_icon_docRev_ra_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_table_docRev_ra_1.Container_tablecontent_docRev_ra_1.tablecontent_docRev_ra_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_table_docRev_ra_1.Container_tablecontent_docRev_ra_1.tablecontent_docRev_ra_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "DocPorAprobar RA",
+                "type": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_table_docRev_ra_1.Container_tablecontent_docRev_ra_1.tablecontent_docRev_ra_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_table_docRev_ra_1.Container_tablecontent_docRev_ra_1.tablecontent_docRev_ra_1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_table_docRev_ra_1.Container_tablecontent_docRev_ra_1.tablecontent_docRev_ra_1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "DocPorAprobar RA",
+                "type": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_table_docRev_ra_1.Container_tablecontent_docRev_ra_1.tablecontent_docRev_ra_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_table_docRev_ra_1.Container_tablecontent_docRev_ra_1.tablecontent_docRev_ra_1.Container3_12.Container13_29.Icon1_14.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_table_docRev_ra_1.Container_tablecontent_docRev_ra_1.tablecontent_docRev_ra_1.Container3_12.Container13_29.Icon1_14.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "DocPorAprobar RA",
+                "type": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_table_docRev_ra_1.Container_tablecontent_docRev_ra_1.tablecontent_docRev_ra_1.Container3_12.Container13_29.Icon1_14"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_table_docRev_ra_1.Container_tablecontent_docRev_ra_1.tablecontent_docRev_ra_1.Container3_12.Container13_29.Icon1_14.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_table_docRev_ra_1.Container_tablecontent_docRev_ra_1.tablecontent_docRev_ra_1.Container3_12.Container13_29.Icon1_14.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "DocPorAprobar RA",
+                "type": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_table_docRev_ra_1.Container_tablecontent_docRev_ra_1.tablecontent_docRev_ra_1.Container3_12.Container13_29.Icon1_14"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.PopupFilter_ra_1.Container13_30.Container14_18.Container15_36.ComboBox2_37.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.PopupFilter_ra_1.Container13_30.Container14_18.Container15_36.ComboBox2_37.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "DocPorAprobar RA",
+                "type": "'DocPorAprobar RA'.PopupFilter_ra_1.Container13_30.Container14_18.Container15_36.ComboBox2_37"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.PopupFilter_ra_1.Container13_30.Container14_18.Container15_39.ComboBox2_38.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.PopupFilter_ra_1.Container13_30.Container14_18.Container15_39.ComboBox2_38.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "DocPorAprobar RA",
+                "type": "'DocPorAprobar RA'.PopupFilter_ra_1.Container13_30.Container14_18.Container15_39.ComboBox2_38"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.PopupFilter_ra_1.Container13_30.Container14_19.Container15_40.ComboBox2_39.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.PopupFilter_ra_1.Container13_30.Container14_19.Container15_40.ComboBox2_39.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "DocPorAprobar RA",
+                "type": "'DocPorAprobar RA'.PopupFilter_ra_1.Container13_30.Container14_19.Container15_40.ComboBox2_39"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.PopupFilter_ra_1.Container13_30.Container14_19.Container15_41.ComboBox2_40.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.PopupFilter_ra_1.Container13_30.Container14_19.Container15_41.ComboBox2_40.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "DocPorAprobar RA",
+                "type": "'DocPorAprobar RA'.PopupFilter_ra_1.Container13_30.Container14_19.Container15_41.ComboBox2_40"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.PopupFilter_ra_1.Container13_30.Container14_20.Container15_42.ComboBox2_41.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.PopupFilter_ra_1.Container13_30.Container14_20.Container15_42.ComboBox2_41.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "DocPorAprobar RA",
+                "type": "'DocPorAprobar RA'.PopupFilter_ra_1.Container13_30.Container14_20.Container15_42.ComboBox2_41"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.PopupFilter_ra_1.Container13_30.Container14_20.Container15_44.ComboBox2_42.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.PopupFilter_ra_1.Container13_30.Container14_20.Container15_44.ComboBox2_42.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "DocPorAprobar RA",
+                "type": "'DocPorAprobar RA'.PopupFilter_ra_1.Container13_30.Container14_20.Container15_44.ComboBox2_42"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.PopupFilter_ra_1.Container13_30.Container14_21.Container15_45.Container16_2.Container17_4.DatePicker1_4.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.PopupFilter_ra_1.Container13_30.Container14_21.Container15_45.Container16_2.Container17_4.DatePicker1_4.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "DocPorAprobar RA",
+                "type": "'DocPorAprobar RA'.PopupFilter_ra_1.Container13_30.Container14_21.Container15_45.Container16_2.Container17_4.DatePicker1_4"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.PopupFilter_ra_1.Container13_30.Container14_21.Container15_45.Container16_2.Container17_5.DatePicker1_6.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.PopupFilter_ra_1.Container13_30.Container14_21.Container15_45.Container16_2.Container17_5.DatePicker1_6.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "DocPorAprobar RA",
+                "type": "'DocPorAprobar RA'.PopupFilter_ra_1.Container13_30.Container14_21.Container15_45.Container16_2.Container17_5.DatePicker1_6"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.SideBar_ra_1.Rectangle3_2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.SideBar_ra_1.Rectangle3_2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "DocPorAprobar RA",
+                "type": "'DocPorAprobar RA'.SideBar_ra_1.Rectangle3_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.SideBar_ra_1.Rectangle3_2.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.SideBar_ra_1.Rectangle3_2.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "DocPorAprobar RA",
+                "type": "'DocPorAprobar RA'.SideBar_ra_1.Rectangle3_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.SideBar_ra_1.SideBar_Container_docRev_ra_1.evaluacion_container_sidebar_docRev_ra_1.menu_filter_evaluacion_sidebar_ra_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.SideBar_ra_1.SideBar_Container_docRev_ra_1.evaluacion_container_sidebar_docRev_ra_1.menu_filter_evaluacion_sidebar_ra_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "DocPorAprobar RA",
+                "type": "'DocPorAprobar RA'.SideBar_ra_1.SideBar_Container_docRev_ra_1.evaluacion_container_sidebar_docRev_ra_1.menu_filter_evaluacion_sidebar_ra_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.SideBar_ra_1.SideBar_Container_docRev_ra_1.evaluacion_container_sidebar_docRev_ra_1.menu_filter_evaluacion_sidebar_ra_1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.SideBar_ra_1.SideBar_Container_docRev_ra_1.evaluacion_container_sidebar_docRev_ra_1.menu_filter_evaluacion_sidebar_ra_1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "DocPorAprobar RA",
+                "type": "'DocPorAprobar RA'.SideBar_ra_1.SideBar_Container_docRev_ra_1.evaluacion_container_sidebar_docRev_ra_1.menu_filter_evaluacion_sidebar_ra_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.SideBar_ra_1.SideBar_Container_docRev_ra_1.evaluacion_container_sidebar_docRev_ra_1.persola_evaluacion_sidebar_ra_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.SideBar_ra_1.SideBar_Container_docRev_ra_1.evaluacion_container_sidebar_docRev_ra_1.persola_evaluacion_sidebar_ra_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "DocPorAprobar RA",
+                "type": "'DocPorAprobar RA'.SideBar_ra_1.SideBar_Container_docRev_ra_1.evaluacion_container_sidebar_docRev_ra_1.persola_evaluacion_sidebar_ra_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.SideBar_ra_1.SideBar_Container_docRev_ra_1.evaluacion_container_sidebar_docRev_ra_1.persola_evaluacion_sidebar_ra_1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.SideBar_ra_1.SideBar_Container_docRev_ra_1.evaluacion_container_sidebar_docRev_ra_1.persola_evaluacion_sidebar_ra_1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "DocPorAprobar RA",
+                "type": "'DocPorAprobar RA'.SideBar_ra_1.SideBar_Container_docRev_ra_1.evaluacion_container_sidebar_docRev_ra_1.persola_evaluacion_sidebar_ra_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.SideBar_ra_1.SideBar_Container_docRev_ra_1.archivos_container_sidebar_docRev_ra_1.archivos_gallery_sidebar_docRev_ra_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.SideBar_ra_1.SideBar_Container_docRev_ra_1.archivos_container_sidebar_docRev_ra_1.archivos_gallery_sidebar_docRev_ra_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "DocPorAprobar RA",
+                "type": "'DocPorAprobar RA'.SideBar_ra_1.SideBar_Container_docRev_ra_1.archivos_container_sidebar_docRev_ra_1.archivos_gallery_sidebar_docRev_ra_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.SideBar_ra_1.SideBar_Container_docRev_ra_1.archivos_container_sidebar_docRev_ra_1.archivos_gallery_sidebar_docRev_ra_1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.SideBar_ra_1.SideBar_Container_docRev_ra_1.archivos_container_sidebar_docRev_ra_1.archivos_gallery_sidebar_docRev_ra_1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "DocPorAprobar RA",
+                "type": "'DocPorAprobar RA'.SideBar_ra_1.SideBar_Container_docRev_ra_1.archivos_container_sidebar_docRev_ra_1.archivos_gallery_sidebar_docRev_ra_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.SideBar_ra_1.SideBar_Container_docRev_ra_1.container_title_sidebar_docRev_ra_1.close_icon_sidebar_docRev_ra_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.SideBar_ra_1.SideBar_Container_docRev_ra_1.container_title_sidebar_docRev_ra_1.close_icon_sidebar_docRev_ra_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "DocPorAprobar RA",
+                "type": "'DocPorAprobar RA'.SideBar_ra_1.SideBar_Container_docRev_ra_1.container_title_sidebar_docRev_ra_1.close_icon_sidebar_docRev_ra_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.SideBar_ra_1.SideBar_Container_docRev_ra_1.container_title_sidebar_docRev_ra_1.close_icon_sidebar_docRev_ra_1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.SideBar_ra_1.SideBar_Container_docRev_ra_1.container_title_sidebar_docRev_ra_1.close_icon_sidebar_docRev_ra_1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "DocPorAprobar RA",
+                "type": "'DocPorAprobar RA'.SideBar_ra_1.SideBar_Container_docRev_ra_1.container_title_sidebar_docRev_ra_1.close_icon_sidebar_docRev_ra_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.SideBar_ra_1.SideBar_Container_docRev_ra_1.menu_sidebar_docRev_ra_1.items_menu_sidebar_docRev_ra_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.SideBar_ra_1.SideBar_Container_docRev_ra_1.menu_sidebar_docRev_ra_1.items_menu_sidebar_docRev_ra_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "DocPorAprobar RA",
+                "type": "'DocPorAprobar RA'.SideBar_ra_1.SideBar_Container_docRev_ra_1.menu_sidebar_docRev_ra_1.items_menu_sidebar_docRev_ra_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.SideBar_ra_1.SideBar_Container_docRev_ra_1.menu_sidebar_docRev_ra_1.items_menu_sidebar_docRev_ra_1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.SideBar_ra_1.SideBar_Container_docRev_ra_1.menu_sidebar_docRev_ra_1.items_menu_sidebar_docRev_ra_1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "DocPorAprobar RA",
+                "type": "'DocPorAprobar RA'.SideBar_ra_1.SideBar_Container_docRev_ra_1.menu_sidebar_docRev_ra_1.items_menu_sidebar_docRev_ra_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.popup_revision_doc_ra_1.container_popup_revision_doc_ra_1.documento_principal_revision_popup_1.container_docPrincipal_revision_ra_1.docPrincipal_revision_ra_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.popup_revision_doc_ra_1.container_popup_revision_doc_ra_1.documento_principal_revision_popup_1.container_docPrincipal_revision_ra_1.docPrincipal_revision_ra_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "DocPorAprobar RA",
+                "type": "'DocPorAprobar RA'.popup_revision_doc_ra_1.container_popup_revision_doc_ra_1.documento_principal_revision_popup_1.container_docPrincipal_revision_ra_1.docPrincipal_revision_ra_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.popup_revision_doc_ra_1.container_popup_revision_doc_ra_1.documento_principal_revision_popup_1.container_docPrincipal_revision_ra_1.docPrincipal_revision_ra_1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.popup_revision_doc_ra_1.container_popup_revision_doc_ra_1.documento_principal_revision_popup_1.container_docPrincipal_revision_ra_1.docPrincipal_revision_ra_1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "DocPorAprobar RA",
+                "type": "'DocPorAprobar RA'.popup_revision_doc_ra_1.container_popup_revision_doc_ra_1.documento_principal_revision_popup_1.container_docPrincipal_revision_ra_1.docPrincipal_revision_ra_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.popup_revision_doc_ra_1.container_popup_revision_doc_ra_1.documento_flujograma_revision_popup_1.container_flujograma_revision_ra_1.archivos_gallery_sidebar_docRev_ra_4.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.popup_revision_doc_ra_1.container_popup_revision_doc_ra_1.documento_flujograma_revision_popup_1.container_flujograma_revision_ra_1.archivos_gallery_sidebar_docRev_ra_4.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "DocPorAprobar RA",
+                "type": "'DocPorAprobar RA'.popup_revision_doc_ra_1.container_popup_revision_doc_ra_1.documento_flujograma_revision_popup_1.container_flujograma_revision_ra_1.archivos_gallery_sidebar_docRev_ra_4"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.popup_revision_doc_ra_1.container_popup_revision_doc_ra_1.documento_flujograma_revision_popup_1.container_flujograma_revision_ra_1.archivos_gallery_sidebar_docRev_ra_4.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.popup_revision_doc_ra_1.container_popup_revision_doc_ra_1.documento_flujograma_revision_popup_1.container_flujograma_revision_ra_1.archivos_gallery_sidebar_docRev_ra_4.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "DocPorAprobar RA",
+                "type": "'DocPorAprobar RA'.popup_revision_doc_ra_1.container_popup_revision_doc_ra_1.documento_flujograma_revision_popup_1.container_flujograma_revision_ra_1.archivos_gallery_sidebar_docRev_ra_4"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.popup_revision_doc_ra_1.container_popup_revision_doc_ra_1.documento_rcki_revision_popup_1.container_rcki_revision_ra_1.archivos_gallery_sidebar_docRev_ra_5.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.popup_revision_doc_ra_1.container_popup_revision_doc_ra_1.documento_rcki_revision_popup_1.container_rcki_revision_ra_1.archivos_gallery_sidebar_docRev_ra_5.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "DocPorAprobar RA",
+                "type": "'DocPorAprobar RA'.popup_revision_doc_ra_1.container_popup_revision_doc_ra_1.documento_rcki_revision_popup_1.container_rcki_revision_ra_1.archivos_gallery_sidebar_docRev_ra_5"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.popup_revision_doc_ra_1.container_popup_revision_doc_ra_1.documento_rcki_revision_popup_1.container_rcki_revision_ra_1.archivos_gallery_sidebar_docRev_ra_5.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.popup_revision_doc_ra_1.container_popup_revision_doc_ra_1.documento_rcki_revision_popup_1.container_rcki_revision_ra_1.archivos_gallery_sidebar_docRev_ra_5.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "DocPorAprobar RA",
+                "type": "'DocPorAprobar RA'.popup_revision_doc_ra_1.container_popup_revision_doc_ra_1.documento_rcki_revision_popup_1.container_rcki_revision_ra_1.archivos_gallery_sidebar_docRev_ra_5"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.popup_observacion_ra_1.container_popup_observacion_ra_1.cancel_icon_revision_popup_ra_3.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.popup_observacion_ra_1.container_popup_observacion_ra_1.cancel_icon_revision_popup_ra_3.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "DocPorAprobar RA",
+                "type": "'DocPorAprobar RA'.popup_observacion_ra_1.container_popup_observacion_ra_1.cancel_icon_revision_popup_ra_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.popup_observacion_ra_1.container_popup_observacion_ra_1.cancel_icon_revision_popup_ra_3.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.popup_observacion_ra_1.container_popup_observacion_ra_1.cancel_icon_revision_popup_ra_3.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "DocPorAprobar RA",
+                "type": "'DocPorAprobar RA'.popup_observacion_ra_1.container_popup_observacion_ra_1.cancel_icon_revision_popup_ra_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.popup_observacion_ra_1.container_popup_observacion_ra_1.comentario_observacion_ra_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.popup_observacion_ra_1.container_popup_observacion_ra_1.comentario_observacion_ra_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "DocPorAprobar RA",
+                "type": "'DocPorAprobar RA'.popup_observacion_ra_1.container_popup_observacion_ra_1.comentario_observacion_ra_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.popup_resultado_enviado_1.Icon1_15.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.popup_resultado_enviado_1.Icon1_15.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "DocPorAprobar RA",
+                "type": "'DocPorAprobar RA'.popup_resultado_enviado_1.Icon1_15"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.popup_resultado_enviado_1.Icon1_15.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.popup_resultado_enviado_1.Icon1_15.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "DocPorAprobar RA",
+                "type": "'DocPorAprobar RA'.popup_resultado_enviado_1.Icon1_15"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -17905,19 +19165,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.evaluacion_container_sidebar_docRev_ra.persola_evaluacion_sidebar_ra.AccessibleLabel"
+                  "fullyQualifiedName": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.evaluacion_container_sidebar_docRev_ra.persona_evaluacion_sidebar_ra.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.evaluacion_container_sidebar_docRev_ra.persola_evaluacion_sidebar_ra.AccessibleLabel",
+                  "fullyQualifiedName": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.evaluacion_container_sidebar_docRev_ra.persona_evaluacion_sidebar_ra.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "DocPorRevisar RA",
-                "type": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.evaluacion_container_sidebar_docRev_ra.persola_evaluacion_sidebar_ra"
+                "type": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.evaluacion_container_sidebar_docRev_ra.persona_evaluacion_sidebar_ra"
               }
             }
           ],
@@ -17935,19 +19195,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.evaluacion_container_sidebar_docRev_ra.persola_evaluacion_sidebar_ra.TabIndex"
+                  "fullyQualifiedName": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.evaluacion_container_sidebar_docRev_ra.persona_evaluacion_sidebar_ra.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.evaluacion_container_sidebar_docRev_ra.persola_evaluacion_sidebar_ra.TabIndex",
+                  "fullyQualifiedName": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.evaluacion_container_sidebar_docRev_ra.persona_evaluacion_sidebar_ra.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "DocPorRevisar RA",
-                "type": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.evaluacion_container_sidebar_docRev_ra.persola_evaluacion_sidebar_ra"
+                "type": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.evaluacion_container_sidebar_docRev_ra.persona_evaluacion_sidebar_ra"
               }
             }
           ],
@@ -18188,6 +19448,66 @@
                 "member": "TabIndex",
                 "module": "DocPorRevisar RA",
                 "type": "'DocPorRevisar RA'.popup_revision_doc_ra.container_popup_revision_doc_ra.documento_rcki_revision_popup.container_rcki_revision_ra.archivos_gallery_sidebar_docRev_ra_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'DocPorRevisar RA'.popup_observacion_ra.container_popup_observacion_ra.cancel_icon_revision_popup_ra_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPorRevisar RA'.popup_observacion_ra.container_popup_observacion_ra.cancel_icon_revision_popup_ra_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "DocPorRevisar RA",
+                "type": "'DocPorRevisar RA'.popup_observacion_ra.container_popup_observacion_ra.cancel_icon_revision_popup_ra_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'DocPorRevisar RA'.popup_observacion_ra.container_popup_observacion_ra.cancel_icon_revision_popup_ra_1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPorRevisar RA'.popup_observacion_ra.container_popup_observacion_ra.cancel_icon_revision_popup_ra_1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "DocPorRevisar RA",
+                "type": "'DocPorRevisar RA'.popup_observacion_ra.container_popup_observacion_ra.cancel_icon_revision_popup_ra_1"
               }
             }
           ],
@@ -20365,1806 +21685,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Home OP'.main_home_op.body_home_op.sidebar_home_op.menu_itens_home_op.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Home OP'.main_home_op.body_home_op.sidebar_home_op.menu_itens_home_op.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Home OP",
-                "type": "'Home OP'.main_home_op.body_home_op.sidebar_home_op.menu_itens_home_op"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Home OP'.main_home_op.body_home_op.sidebar_home_op.menu_itens_home_op.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Home OP'.main_home_op.body_home_op.sidebar_home_op.menu_itens_home_op.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Home OP",
-                "type": "'Home OP'.main_home_op.body_home_op.sidebar_home_op.menu_itens_home_op"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Home OP'.main_home_op.body_home_op.section_home_op.scroll_home_op.card_doc_rev_home_op.Container9.Container10.Container4_3.Gallery1_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Home OP'.main_home_op.body_home_op.section_home_op.scroll_home_op.card_doc_rev_home_op.Container9.Container10.Container4_3.Gallery1_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Home OP",
-                "type": "'Home OP'.main_home_op.body_home_op.section_home_op.scroll_home_op.card_doc_rev_home_op.Container9.Container10.Container4_3.Gallery1_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Home OP'.main_home_op.body_home_op.section_home_op.scroll_home_op.card_doc_rev_home_op.Container9.Container10.Container4_3.Gallery1_1.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Home OP'.main_home_op.body_home_op.section_home_op.scroll_home_op.card_doc_rev_home_op.Container9.Container10.Container4_3.Gallery1_1.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Home OP",
-                "type": "'Home OP'.main_home_op.body_home_op.section_home_op.scroll_home_op.card_doc_rev_home_op.Container9.Container10.Container4_3.Gallery1_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Home OP'.main_home_op.body_home_op.section_home_op.scroll_home_op.card_doc_ofi_home_op.Container9_1.Container10_1.Container4_4.Gallery1_2.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Home OP'.main_home_op.body_home_op.section_home_op.scroll_home_op.card_doc_ofi_home_op.Container9_1.Container10_1.Container4_4.Gallery1_2.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Home OP",
-                "type": "'Home OP'.main_home_op.body_home_op.section_home_op.scroll_home_op.card_doc_ofi_home_op.Container9_1.Container10_1.Container4_4.Gallery1_2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Home OP'.main_home_op.body_home_op.section_home_op.scroll_home_op.card_doc_ofi_home_op.Container9_1.Container10_1.Container4_4.Gallery1_2.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Home OP'.main_home_op.body_home_op.section_home_op.scroll_home_op.card_doc_ofi_home_op.Container9_1.Container10_1.Container4_4.Gallery1_2.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Home OP",
-                "type": "'Home OP'.main_home_op.body_home_op.section_home_op.scroll_home_op.card_doc_ofi_home_op.Container9_1.Container10_1.Container4_4.Gallery1_2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.sidebar_home_ra.menu_itens_home_ra.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.sidebar_home_ra.menu_itens_home_ra.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Home RA",
-                "type": "'Home RA'.main_home_ra.body_home_ra.sidebar_home_ra.menu_itens_home_ra"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.sidebar_home_ra.menu_itens_home_ra.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.sidebar_home_ra.menu_itens_home_ra.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Home RA",
-                "type": "'Home RA'.main_home_ra.body_home_ra.sidebar_home_ra.menu_itens_home_ra"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_rev_home_ra.Container9_3.Container10_3.Container4_6.Gallery1_5.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_rev_home_ra.Container9_3.Container10_3.Container4_6.Gallery1_5.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Home RA",
-                "type": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_rev_home_ra.Container9_3.Container10_3.Container4_6.Gallery1_5"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_rev_home_ra.Container9_3.Container10_3.Container4_6.Gallery1_5.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_rev_home_ra.Container9_3.Container10_3.Container4_6.Gallery1_5.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Home RA",
-                "type": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_rev_home_ra.Container9_3.Container10_3.Container4_6.Gallery1_5"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_apr_home_ra.Container9_4.Container10_4.Container4_7.Gallery1_6.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_apr_home_ra.Container9_4.Container10_4.Container4_7.Gallery1_6.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Home RA",
-                "type": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_apr_home_ra.Container9_4.Container10_4.Container4_7.Gallery1_6"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_apr_home_ra.Container9_4.Container10_4.Container4_7.Gallery1_6.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_apr_home_ra.Container9_4.Container10_4.Container4_7.Gallery1_6.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Home RA",
-                "type": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_apr_home_ra.Container9_4.Container10_4.Container4_7.Gallery1_6"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_rev_apr_home_ra.Container9_5.Container10_5.Container4_8.Gallery1_7.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_rev_apr_home_ra.Container9_5.Container10_5.Container4_8.Gallery1_7.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Home RA",
-                "type": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_rev_apr_home_ra.Container9_5.Container10_5.Container4_8.Gallery1_7"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_rev_apr_home_ra.Container9_5.Container10_5.Container4_8.Gallery1_7.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_rev_apr_home_ra.Container9_5.Container10_5.Container4_8.Gallery1_7.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Home RA",
-                "type": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_rev_apr_home_ra.Container9_5.Container10_5.Container4_8.Gallery1_7"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_publ_home_ra.cont_doc_publ_home_ra.cont_table_doc_publ_home_ra.Container4_9.gallery_doc_publ_home_ra.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_publ_home_ra.cont_doc_publ_home_ra.cont_table_doc_publ_home_ra.Container4_9.gallery_doc_publ_home_ra.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Home RA",
-                "type": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_publ_home_ra.cont_doc_publ_home_ra.cont_table_doc_publ_home_ra.Container4_9.gallery_doc_publ_home_ra"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_publ_home_ra.cont_doc_publ_home_ra.cont_table_doc_publ_home_ra.Container4_9.gallery_doc_publ_home_ra.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_publ_home_ra.cont_doc_publ_home_ra.cont_table_doc_publ_home_ra.Container4_9.gallery_doc_publ_home_ra.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Home RA",
-                "type": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_publ_home_ra.cont_doc_publ_home_ra.cont_table_doc_publ_home_ra.Container4_9.gallery_doc_publ_home_ra"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'DocPorRevisar RA'.popup_observacion_ra.container_popup_observacion_ra.cancel_icon_revision_popup_ra_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'DocPorRevisar RA'.popup_observacion_ra.container_popup_observacion_ra.cancel_icon_revision_popup_ra_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "DocPorRevisar RA",
-                "type": "'DocPorRevisar RA'.popup_observacion_ra.container_popup_observacion_ra.cancel_icon_revision_popup_ra_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'DocPorRevisar RA'.popup_observacion_ra.container_popup_observacion_ra.cancel_icon_revision_popup_ra_1.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'DocPorRevisar RA'.popup_observacion_ra.container_popup_observacion_ra.cancel_icon_revision_popup_ra_1.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "DocPorRevisar RA",
-                "type": "'DocPorRevisar RA'.popup_observacion_ra.container_popup_observacion_ra.cancel_icon_revision_popup_ra_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.sidebar_docRev_ra_1.menu_items_docRev_ra_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.sidebar_docRev_ra_1.menu_items_docRev_ra_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "DocPorAprobar RA",
-                "type": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.sidebar_docRev_ra_1.menu_items_docRev_ra_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.sidebar_docRev_ra_1.menu_items_docRev_ra_1.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.sidebar_docRev_ra_1.menu_items_docRev_ra_1.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "DocPorAprobar RA",
-                "type": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.sidebar_docRev_ra_1.menu_items_docRev_ra_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_filter_docRev_ra_1.menu_filter_docRev_ra_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_filter_docRev_ra_1.menu_filter_docRev_ra_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "DocPorAprobar RA",
-                "type": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_filter_docRev_ra_1.menu_filter_docRev_ra_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_filter_docRev_ra_1.menu_filter_docRev_ra_1.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_filter_docRev_ra_1.menu_filter_docRev_ra_1.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "DocPorAprobar RA",
-                "type": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_filter_docRev_ra_1.menu_filter_docRev_ra_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_searchbar_docRev_ra_1.cont_searchbar_docRev_ra_1.searchbar_docRev_ra_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_searchbar_docRev_ra_1.cont_searchbar_docRev_ra_1.searchbar_docRev_ra_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "DocPorAprobar RA",
-                "type": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_searchbar_docRev_ra_1.cont_searchbar_docRev_ra_1.searchbar_docRev_ra_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_searchbar_docRev_ra_1.cont_filter_docRev_ra_1.filter_icon_docRev_ra_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_searchbar_docRev_ra_1.cont_filter_docRev_ra_1.filter_icon_docRev_ra_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "DocPorAprobar RA",
-                "type": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_searchbar_docRev_ra_1.cont_filter_docRev_ra_1.filter_icon_docRev_ra_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_searchbar_docRev_ra_1.cont_filter_docRev_ra_1.filter_icon_docRev_ra_1.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_searchbar_docRev_ra_1.cont_filter_docRev_ra_1.filter_icon_docRev_ra_1.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "DocPorAprobar RA",
-                "type": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_searchbar_docRev_ra_1.cont_filter_docRev_ra_1.filter_icon_docRev_ra_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_table_docRev_ra_1.Container_tablecontent_docRev_ra_1.tablecontent_docRev_ra_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_table_docRev_ra_1.Container_tablecontent_docRev_ra_1.tablecontent_docRev_ra_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "DocPorAprobar RA",
-                "type": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_table_docRev_ra_1.Container_tablecontent_docRev_ra_1.tablecontent_docRev_ra_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_table_docRev_ra_1.Container_tablecontent_docRev_ra_1.tablecontent_docRev_ra_1.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_table_docRev_ra_1.Container_tablecontent_docRev_ra_1.tablecontent_docRev_ra_1.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "DocPorAprobar RA",
-                "type": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_table_docRev_ra_1.Container_tablecontent_docRev_ra_1.tablecontent_docRev_ra_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_table_docRev_ra_1.Container_tablecontent_docRev_ra_1.tablecontent_docRev_ra_1.Container3_12.Container13_29.Icon1_14.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_table_docRev_ra_1.Container_tablecontent_docRev_ra_1.tablecontent_docRev_ra_1.Container3_12.Container13_29.Icon1_14.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "DocPorAprobar RA",
-                "type": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_table_docRev_ra_1.Container_tablecontent_docRev_ra_1.tablecontent_docRev_ra_1.Container3_12.Container13_29.Icon1_14"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_table_docRev_ra_1.Container_tablecontent_docRev_ra_1.tablecontent_docRev_ra_1.Container3_12.Container13_29.Icon1_14.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_table_docRev_ra_1.Container_tablecontent_docRev_ra_1.tablecontent_docRev_ra_1.Container3_12.Container13_29.Icon1_14.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "DocPorAprobar RA",
-                "type": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_1.BottomContainer_docRev_ra_1.MainContainer_docRev_ra_1.MainCont_docRev_ra_1.Container_table_docRev_ra_1.Container_tablecontent_docRev_ra_1.tablecontent_docRev_ra_1.Container3_12.Container13_29.Icon1_14"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.PopupFilter_ra_1.Container13_30.Container14_18.Container15_36.ComboBox2_37.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.PopupFilter_ra_1.Container13_30.Container14_18.Container15_36.ComboBox2_37.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "DocPorAprobar RA",
-                "type": "'DocPorAprobar RA'.PopupFilter_ra_1.Container13_30.Container14_18.Container15_36.ComboBox2_37"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.PopupFilter_ra_1.Container13_30.Container14_18.Container15_39.ComboBox2_38.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.PopupFilter_ra_1.Container13_30.Container14_18.Container15_39.ComboBox2_38.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "DocPorAprobar RA",
-                "type": "'DocPorAprobar RA'.PopupFilter_ra_1.Container13_30.Container14_18.Container15_39.ComboBox2_38"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.PopupFilter_ra_1.Container13_30.Container14_19.Container15_40.ComboBox2_39.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.PopupFilter_ra_1.Container13_30.Container14_19.Container15_40.ComboBox2_39.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "DocPorAprobar RA",
-                "type": "'DocPorAprobar RA'.PopupFilter_ra_1.Container13_30.Container14_19.Container15_40.ComboBox2_39"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.PopupFilter_ra_1.Container13_30.Container14_19.Container15_41.ComboBox2_40.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.PopupFilter_ra_1.Container13_30.Container14_19.Container15_41.ComboBox2_40.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "DocPorAprobar RA",
-                "type": "'DocPorAprobar RA'.PopupFilter_ra_1.Container13_30.Container14_19.Container15_41.ComboBox2_40"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.PopupFilter_ra_1.Container13_30.Container14_20.Container15_42.ComboBox2_41.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.PopupFilter_ra_1.Container13_30.Container14_20.Container15_42.ComboBox2_41.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "DocPorAprobar RA",
-                "type": "'DocPorAprobar RA'.PopupFilter_ra_1.Container13_30.Container14_20.Container15_42.ComboBox2_41"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.PopupFilter_ra_1.Container13_30.Container14_20.Container15_44.ComboBox2_42.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.PopupFilter_ra_1.Container13_30.Container14_20.Container15_44.ComboBox2_42.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "DocPorAprobar RA",
-                "type": "'DocPorAprobar RA'.PopupFilter_ra_1.Container13_30.Container14_20.Container15_44.ComboBox2_42"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.PopupFilter_ra_1.Container13_30.Container14_21.Container15_45.Container16_2.Container17_4.DatePicker1_4.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.PopupFilter_ra_1.Container13_30.Container14_21.Container15_45.Container16_2.Container17_4.DatePicker1_4.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "DocPorAprobar RA",
-                "type": "'DocPorAprobar RA'.PopupFilter_ra_1.Container13_30.Container14_21.Container15_45.Container16_2.Container17_4.DatePicker1_4"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.PopupFilter_ra_1.Container13_30.Container14_21.Container15_45.Container16_2.Container17_5.DatePicker1_6.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.PopupFilter_ra_1.Container13_30.Container14_21.Container15_45.Container16_2.Container17_5.DatePicker1_6.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "DocPorAprobar RA",
-                "type": "'DocPorAprobar RA'.PopupFilter_ra_1.Container13_30.Container14_21.Container15_45.Container16_2.Container17_5.DatePicker1_6"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.SideBar_ra_1.Rectangle3_2.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.SideBar_ra_1.Rectangle3_2.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "DocPorAprobar RA",
-                "type": "'DocPorAprobar RA'.SideBar_ra_1.Rectangle3_2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.SideBar_ra_1.Rectangle3_2.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.SideBar_ra_1.Rectangle3_2.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "DocPorAprobar RA",
-                "type": "'DocPorAprobar RA'.SideBar_ra_1.Rectangle3_2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.SideBar_ra_1.SideBar_Container_docRev_ra_1.evaluacion_container_sidebar_docRev_ra_1.menu_filter_evaluacion_sidebar_ra_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.SideBar_ra_1.SideBar_Container_docRev_ra_1.evaluacion_container_sidebar_docRev_ra_1.menu_filter_evaluacion_sidebar_ra_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "DocPorAprobar RA",
-                "type": "'DocPorAprobar RA'.SideBar_ra_1.SideBar_Container_docRev_ra_1.evaluacion_container_sidebar_docRev_ra_1.menu_filter_evaluacion_sidebar_ra_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.SideBar_ra_1.SideBar_Container_docRev_ra_1.evaluacion_container_sidebar_docRev_ra_1.menu_filter_evaluacion_sidebar_ra_1.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.SideBar_ra_1.SideBar_Container_docRev_ra_1.evaluacion_container_sidebar_docRev_ra_1.menu_filter_evaluacion_sidebar_ra_1.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "DocPorAprobar RA",
-                "type": "'DocPorAprobar RA'.SideBar_ra_1.SideBar_Container_docRev_ra_1.evaluacion_container_sidebar_docRev_ra_1.menu_filter_evaluacion_sidebar_ra_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.SideBar_ra_1.SideBar_Container_docRev_ra_1.evaluacion_container_sidebar_docRev_ra_1.persola_evaluacion_sidebar_ra_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.SideBar_ra_1.SideBar_Container_docRev_ra_1.evaluacion_container_sidebar_docRev_ra_1.persola_evaluacion_sidebar_ra_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "DocPorAprobar RA",
-                "type": "'DocPorAprobar RA'.SideBar_ra_1.SideBar_Container_docRev_ra_1.evaluacion_container_sidebar_docRev_ra_1.persola_evaluacion_sidebar_ra_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.SideBar_ra_1.SideBar_Container_docRev_ra_1.evaluacion_container_sidebar_docRev_ra_1.persola_evaluacion_sidebar_ra_1.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.SideBar_ra_1.SideBar_Container_docRev_ra_1.evaluacion_container_sidebar_docRev_ra_1.persola_evaluacion_sidebar_ra_1.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "DocPorAprobar RA",
-                "type": "'DocPorAprobar RA'.SideBar_ra_1.SideBar_Container_docRev_ra_1.evaluacion_container_sidebar_docRev_ra_1.persola_evaluacion_sidebar_ra_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.SideBar_ra_1.SideBar_Container_docRev_ra_1.archivos_container_sidebar_docRev_ra_1.archivos_gallery_sidebar_docRev_ra_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.SideBar_ra_1.SideBar_Container_docRev_ra_1.archivos_container_sidebar_docRev_ra_1.archivos_gallery_sidebar_docRev_ra_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "DocPorAprobar RA",
-                "type": "'DocPorAprobar RA'.SideBar_ra_1.SideBar_Container_docRev_ra_1.archivos_container_sidebar_docRev_ra_1.archivos_gallery_sidebar_docRev_ra_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.SideBar_ra_1.SideBar_Container_docRev_ra_1.archivos_container_sidebar_docRev_ra_1.archivos_gallery_sidebar_docRev_ra_1.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.SideBar_ra_1.SideBar_Container_docRev_ra_1.archivos_container_sidebar_docRev_ra_1.archivos_gallery_sidebar_docRev_ra_1.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "DocPorAprobar RA",
-                "type": "'DocPorAprobar RA'.SideBar_ra_1.SideBar_Container_docRev_ra_1.archivos_container_sidebar_docRev_ra_1.archivos_gallery_sidebar_docRev_ra_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.SideBar_ra_1.SideBar_Container_docRev_ra_1.container_title_sidebar_docRev_ra_1.close_icon_sidebar_docRev_ra_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.SideBar_ra_1.SideBar_Container_docRev_ra_1.container_title_sidebar_docRev_ra_1.close_icon_sidebar_docRev_ra_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "DocPorAprobar RA",
-                "type": "'DocPorAprobar RA'.SideBar_ra_1.SideBar_Container_docRev_ra_1.container_title_sidebar_docRev_ra_1.close_icon_sidebar_docRev_ra_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.SideBar_ra_1.SideBar_Container_docRev_ra_1.container_title_sidebar_docRev_ra_1.close_icon_sidebar_docRev_ra_1.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.SideBar_ra_1.SideBar_Container_docRev_ra_1.container_title_sidebar_docRev_ra_1.close_icon_sidebar_docRev_ra_1.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "DocPorAprobar RA",
-                "type": "'DocPorAprobar RA'.SideBar_ra_1.SideBar_Container_docRev_ra_1.container_title_sidebar_docRev_ra_1.close_icon_sidebar_docRev_ra_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.SideBar_ra_1.SideBar_Container_docRev_ra_1.menu_sidebar_docRev_ra_1.items_menu_sidebar_docRev_ra_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.SideBar_ra_1.SideBar_Container_docRev_ra_1.menu_sidebar_docRev_ra_1.items_menu_sidebar_docRev_ra_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "DocPorAprobar RA",
-                "type": "'DocPorAprobar RA'.SideBar_ra_1.SideBar_Container_docRev_ra_1.menu_sidebar_docRev_ra_1.items_menu_sidebar_docRev_ra_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.SideBar_ra_1.SideBar_Container_docRev_ra_1.menu_sidebar_docRev_ra_1.items_menu_sidebar_docRev_ra_1.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.SideBar_ra_1.SideBar_Container_docRev_ra_1.menu_sidebar_docRev_ra_1.items_menu_sidebar_docRev_ra_1.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "DocPorAprobar RA",
-                "type": "'DocPorAprobar RA'.SideBar_ra_1.SideBar_Container_docRev_ra_1.menu_sidebar_docRev_ra_1.items_menu_sidebar_docRev_ra_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.popup_revision_doc_ra_1.container_popup_revision_doc_ra_1.documento_principal_revision_popup_1.container_docPrincipal_revision_ra_1.docPrincipal_revision_ra_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.popup_revision_doc_ra_1.container_popup_revision_doc_ra_1.documento_principal_revision_popup_1.container_docPrincipal_revision_ra_1.docPrincipal_revision_ra_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "DocPorAprobar RA",
-                "type": "'DocPorAprobar RA'.popup_revision_doc_ra_1.container_popup_revision_doc_ra_1.documento_principal_revision_popup_1.container_docPrincipal_revision_ra_1.docPrincipal_revision_ra_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.popup_revision_doc_ra_1.container_popup_revision_doc_ra_1.documento_principal_revision_popup_1.container_docPrincipal_revision_ra_1.docPrincipal_revision_ra_1.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.popup_revision_doc_ra_1.container_popup_revision_doc_ra_1.documento_principal_revision_popup_1.container_docPrincipal_revision_ra_1.docPrincipal_revision_ra_1.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "DocPorAprobar RA",
-                "type": "'DocPorAprobar RA'.popup_revision_doc_ra_1.container_popup_revision_doc_ra_1.documento_principal_revision_popup_1.container_docPrincipal_revision_ra_1.docPrincipal_revision_ra_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.popup_revision_doc_ra_1.container_popup_revision_doc_ra_1.documento_flujograma_revision_popup_1.container_flujograma_revision_ra_1.archivos_gallery_sidebar_docRev_ra_4.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.popup_revision_doc_ra_1.container_popup_revision_doc_ra_1.documento_flujograma_revision_popup_1.container_flujograma_revision_ra_1.archivos_gallery_sidebar_docRev_ra_4.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "DocPorAprobar RA",
-                "type": "'DocPorAprobar RA'.popup_revision_doc_ra_1.container_popup_revision_doc_ra_1.documento_flujograma_revision_popup_1.container_flujograma_revision_ra_1.archivos_gallery_sidebar_docRev_ra_4"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.popup_revision_doc_ra_1.container_popup_revision_doc_ra_1.documento_flujograma_revision_popup_1.container_flujograma_revision_ra_1.archivos_gallery_sidebar_docRev_ra_4.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.popup_revision_doc_ra_1.container_popup_revision_doc_ra_1.documento_flujograma_revision_popup_1.container_flujograma_revision_ra_1.archivos_gallery_sidebar_docRev_ra_4.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "DocPorAprobar RA",
-                "type": "'DocPorAprobar RA'.popup_revision_doc_ra_1.container_popup_revision_doc_ra_1.documento_flujograma_revision_popup_1.container_flujograma_revision_ra_1.archivos_gallery_sidebar_docRev_ra_4"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.popup_revision_doc_ra_1.container_popup_revision_doc_ra_1.documento_rcki_revision_popup_1.container_rcki_revision_ra_1.archivos_gallery_sidebar_docRev_ra_5.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.popup_revision_doc_ra_1.container_popup_revision_doc_ra_1.documento_rcki_revision_popup_1.container_rcki_revision_ra_1.archivos_gallery_sidebar_docRev_ra_5.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "DocPorAprobar RA",
-                "type": "'DocPorAprobar RA'.popup_revision_doc_ra_1.container_popup_revision_doc_ra_1.documento_rcki_revision_popup_1.container_rcki_revision_ra_1.archivos_gallery_sidebar_docRev_ra_5"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.popup_revision_doc_ra_1.container_popup_revision_doc_ra_1.documento_rcki_revision_popup_1.container_rcki_revision_ra_1.archivos_gallery_sidebar_docRev_ra_5.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.popup_revision_doc_ra_1.container_popup_revision_doc_ra_1.documento_rcki_revision_popup_1.container_rcki_revision_ra_1.archivos_gallery_sidebar_docRev_ra_5.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "DocPorAprobar RA",
-                "type": "'DocPorAprobar RA'.popup_revision_doc_ra_1.container_popup_revision_doc_ra_1.documento_rcki_revision_popup_1.container_rcki_revision_ra_1.archivos_gallery_sidebar_docRev_ra_5"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.popup_observacion_ra_1.container_popup_observacion_ra_1.cancel_icon_revision_popup_ra_3.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.popup_observacion_ra_1.container_popup_observacion_ra_1.cancel_icon_revision_popup_ra_3.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "DocPorAprobar RA",
-                "type": "'DocPorAprobar RA'.popup_observacion_ra_1.container_popup_observacion_ra_1.cancel_icon_revision_popup_ra_3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.popup_observacion_ra_1.container_popup_observacion_ra_1.cancel_icon_revision_popup_ra_3.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.popup_observacion_ra_1.container_popup_observacion_ra_1.cancel_icon_revision_popup_ra_3.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "DocPorAprobar RA",
-                "type": "'DocPorAprobar RA'.popup_observacion_ra_1.container_popup_observacion_ra_1.cancel_icon_revision_popup_ra_3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.popup_observacion_ra_1.container_popup_observacion_ra_1.comentario_observacion_ra_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.popup_observacion_ra_1.container_popup_observacion_ra_1.comentario_observacion_ra_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "DocPorAprobar RA",
-                "type": "'DocPorAprobar RA'.popup_observacion_ra_1.container_popup_observacion_ra_1.comentario_observacion_ra_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.popup_resultado_enviado_1.Icon1_15.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.popup_resultado_enviado_1.Icon1_15.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "DocPorAprobar RA",
-                "type": "'DocPorAprobar RA'.popup_resultado_enviado_1.Icon1_15"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.popup_resultado_enviado_1.Icon1_15.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.popup_resultado_enviado_1.Icon1_15.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "DocPorAprobar RA",
-                "type": "'DocPorAprobar RA'.popup_resultado_enviado_1.Icon1_15"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "'DocPublicados RA'.ScreenContainer_docRev_ra_2.BottomContainer_docRev_ra_2.sidebar_docRev_ra_2.menu_items_docRev_ra_2.AccessibleLabel"
                 }
               ],
@@ -23365,6 +22885,546 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'Home OP'.main_home_op.body_home_op.sidebar_home_op.menu_itens_home_op.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Home OP'.main_home_op.body_home_op.sidebar_home_op.menu_itens_home_op.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Home OP",
+                "type": "'Home OP'.main_home_op.body_home_op.sidebar_home_op.menu_itens_home_op"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Home OP'.main_home_op.body_home_op.sidebar_home_op.menu_itens_home_op.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Home OP'.main_home_op.body_home_op.sidebar_home_op.menu_itens_home_op.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Home OP",
+                "type": "'Home OP'.main_home_op.body_home_op.sidebar_home_op.menu_itens_home_op"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Home OP'.main_home_op.body_home_op.section_home_op.scroll_home_op.card_doc_rev_home_op.Container9.Container10.Container4_3.Gallery1_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Home OP'.main_home_op.body_home_op.section_home_op.scroll_home_op.card_doc_rev_home_op.Container9.Container10.Container4_3.Gallery1_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Home OP",
+                "type": "'Home OP'.main_home_op.body_home_op.section_home_op.scroll_home_op.card_doc_rev_home_op.Container9.Container10.Container4_3.Gallery1_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Home OP'.main_home_op.body_home_op.section_home_op.scroll_home_op.card_doc_rev_home_op.Container9.Container10.Container4_3.Gallery1_1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Home OP'.main_home_op.body_home_op.section_home_op.scroll_home_op.card_doc_rev_home_op.Container9.Container10.Container4_3.Gallery1_1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Home OP",
+                "type": "'Home OP'.main_home_op.body_home_op.section_home_op.scroll_home_op.card_doc_rev_home_op.Container9.Container10.Container4_3.Gallery1_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Home OP'.main_home_op.body_home_op.section_home_op.scroll_home_op.card_doc_ofi_home_op.Container9_1.Container10_1.Container4_4.Gallery1_2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Home OP'.main_home_op.body_home_op.section_home_op.scroll_home_op.card_doc_ofi_home_op.Container9_1.Container10_1.Container4_4.Gallery1_2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Home OP",
+                "type": "'Home OP'.main_home_op.body_home_op.section_home_op.scroll_home_op.card_doc_ofi_home_op.Container9_1.Container10_1.Container4_4.Gallery1_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Home OP'.main_home_op.body_home_op.section_home_op.scroll_home_op.card_doc_ofi_home_op.Container9_1.Container10_1.Container4_4.Gallery1_2.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Home OP'.main_home_op.body_home_op.section_home_op.scroll_home_op.card_doc_ofi_home_op.Container9_1.Container10_1.Container4_4.Gallery1_2.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Home OP",
+                "type": "'Home OP'.main_home_op.body_home_op.section_home_op.scroll_home_op.card_doc_ofi_home_op.Container9_1.Container10_1.Container4_4.Gallery1_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.sidebar_home_ra.menu_itens_home_ra.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.sidebar_home_ra.menu_itens_home_ra.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Home RA",
+                "type": "'Home RA'.main_home_ra.body_home_ra.sidebar_home_ra.menu_itens_home_ra"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.sidebar_home_ra.menu_itens_home_ra.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.sidebar_home_ra.menu_itens_home_ra.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Home RA",
+                "type": "'Home RA'.main_home_ra.body_home_ra.sidebar_home_ra.menu_itens_home_ra"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_rev_home_ra.Container9_3.Container10_3.Container4_6.Gallery1_5.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_rev_home_ra.Container9_3.Container10_3.Container4_6.Gallery1_5.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Home RA",
+                "type": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_rev_home_ra.Container9_3.Container10_3.Container4_6.Gallery1_5"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_rev_home_ra.Container9_3.Container10_3.Container4_6.Gallery1_5.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_rev_home_ra.Container9_3.Container10_3.Container4_6.Gallery1_5.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Home RA",
+                "type": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_rev_home_ra.Container9_3.Container10_3.Container4_6.Gallery1_5"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_apr_home_ra.Container9_4.Container10_4.Container4_7.Gallery1_6.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_apr_home_ra.Container9_4.Container10_4.Container4_7.Gallery1_6.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Home RA",
+                "type": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_apr_home_ra.Container9_4.Container10_4.Container4_7.Gallery1_6"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_apr_home_ra.Container9_4.Container10_4.Container4_7.Gallery1_6.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_apr_home_ra.Container9_4.Container10_4.Container4_7.Gallery1_6.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Home RA",
+                "type": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_apr_home_ra.Container9_4.Container10_4.Container4_7.Gallery1_6"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_rev_apr_home_ra.Container9_5.Container10_5.Container4_8.Gallery1_7.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_rev_apr_home_ra.Container9_5.Container10_5.Container4_8.Gallery1_7.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Home RA",
+                "type": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_rev_apr_home_ra.Container9_5.Container10_5.Container4_8.Gallery1_7"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_rev_apr_home_ra.Container9_5.Container10_5.Container4_8.Gallery1_7.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_rev_apr_home_ra.Container9_5.Container10_5.Container4_8.Gallery1_7.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Home RA",
+                "type": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_rev_apr_home_ra.Container9_5.Container10_5.Container4_8.Gallery1_7"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_publ_home_ra.cont_doc_publ_home_ra.cont_table_doc_publ_home_ra.Container4_9.gallery_doc_publ_home_ra.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_publ_home_ra.cont_doc_publ_home_ra.cont_table_doc_publ_home_ra.Container4_9.gallery_doc_publ_home_ra.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Home RA",
+                "type": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_publ_home_ra.cont_doc_publ_home_ra.cont_table_doc_publ_home_ra.Container4_9.gallery_doc_publ_home_ra"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_publ_home_ra.cont_doc_publ_home_ra.cont_table_doc_publ_home_ra.Container4_9.gallery_doc_publ_home_ra.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_publ_home_ra.cont_doc_publ_home_ra.cont_table_doc_publ_home_ra.Container4_9.gallery_doc_publ_home_ra.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Home RA",
+                "type": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_publ_home_ra.cont_doc_publ_home_ra.cont_table_doc_publ_home_ra.Container4_9.gallery_doc_publ_home_ra"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'DocPorRevisar RA'.popup_revision_doc_ra.container_popup_revision_doc_ra.container_title_revision_popup_ra.cancel_icon_revision_popup_ra.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPorRevisar RA'.popup_revision_doc_ra.container_popup_revision_doc_ra.container_title_revision_popup_ra.cancel_icon_revision_popup_ra.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "DocPorRevisar RA",
+                "type": "'DocPorRevisar RA'.popup_revision_doc_ra.container_popup_revision_doc_ra.container_title_revision_popup_ra.cancel_icon_revision_popup_ra"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'DocPorRevisar RA'.popup_revision_doc_ra.container_popup_revision_doc_ra.container_title_revision_popup_ra.cancel_icon_revision_popup_ra.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPorRevisar RA'.popup_revision_doc_ra.container_popup_revision_doc_ra.container_title_revision_popup_ra.cancel_icon_revision_popup_ra.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "DocPorRevisar RA",
+                "type": "'DocPorRevisar RA'.popup_revision_doc_ra.container_popup_revision_doc_ra.container_title_revision_popup_ra.cancel_icon_revision_popup_ra"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.companyRed"
                 }
               ],
@@ -23449,6 +23509,35 @@
           },
           "ruleId": "app-UnusedMediaResources",
           "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'DocPorAprobar RA'"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPorAprobar RA'",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "module": "DocPorAprobar RA",
+                "type": "'DocPorAprobar RA'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-ScreenHasManyControls",
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -23543,6 +23632,35 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'DocPublicados RA'"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPublicados RA'",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "module": "DocPublicados RA",
+                "type": "'DocPublicados RA'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-ScreenHasManyControls",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "'Home RA'"
                 }
               ],
@@ -23572,18 +23690,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'DocPorAprobar RA'"
+                  "fullyQualifiedName": "App.DEV_Actor"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'DocPorAprobar RA'",
+                  "fullyQualifiedName": "App.DEV_Actor",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "module": "DocPorAprobar RA",
-                "type": "'DocPorAprobar RA'"
+                "member": "DEV_Actor",
+                "module": "App",
+                "type": "App"
               }
             }
           ],
@@ -23593,37 +23712,8 @@
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "app-ScreenHasManyControls",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'DocPublicados RA'"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'DocPublicados RA'",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "module": "DocPublicados RA",
-                "type": "'DocPublicados RA'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-ScreenHasManyControls",
-          "ruleIndex": 5
+          "ruleId": "app-NotOfflineConnectors",
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -23731,6 +23821,36 @@
               },
               "properties": {
                 "member": "DEV_TipoDocumento",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-NotOfflineConnectors",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.DEV_Archivos"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.DEV_Archivos",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "DEV_Archivos",
                 "module": "App",
                 "type": "App"
               }
@@ -23885,7 +24005,7 @@
                 ],
                 "level": "Medium",
                 "primaryCategory": "performance",
-                "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"DocPorRevisar RA\" is 652, which exceeds the maximum threshold recommended (300)."
+                "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"DocPorAprobar RA\" is 652, which exceeds the maximum threshold recommended (300)."
               }
             },
             {
