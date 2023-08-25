@@ -1301,7 +1301,11 @@
                                 BorderColor: =primary
                                 BorderThickness: =1.5
                                 Fill: =RGBA(0, 0, 0, 0)
+                                FocusedBorderThickness: =2
                                 Height: =25
+                                HoverFill: =RGBA(0, 0, 0, 0.15)
+                                OnSelect: =Launch(Concatenate(First(ThisItem.Attachments).AbsoluteUri,"?web=1"))
+                                PressedFill: =
                                 RadiusBottomLeft: =5
                                 RadiusBottomRight: =5
                                 RadiusTopLeft: =5
@@ -1330,7 +1334,11 @@
                                 BorderColor: =primary
                                 BorderThickness: =1.5
                                 Fill: =RGBA(0, 0, 0, 0)
+                                FocusedBorderThickness: =2
                                 Height: =25
+                                HoverFill: =RGBA(0, 0, 0, 0.15)
+                                OnSelect: =Launch(First(ThisItem.Attachments).AbsoluteUri)
+                                PressedFill: =
                                 RadiusBottomLeft: =5
                                 RadiusBottomRight: =5
                                 RadiusTopLeft: =5
