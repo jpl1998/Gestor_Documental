@@ -261,6 +261,26 @@
                                     Width: =230
                                     ZIndex: =2
 
+                                    Label1_27 As label:
+                                        Align: =Align.Center
+                                        AlignInContainer: =AlignInContainer.Stretch
+                                        Color: =primarytext
+                                        Font: =Font.Arial
+                                        FontWeight: =FontWeight.Semibold
+                                        LayoutMinHeight: =20
+                                        Size: =32
+                                        Text: =10
+                                        ZIndex: =1
+
+                                    Label1_28 As label:
+                                        Align: =Align.Center
+                                        AlignInContainer: =AlignInContainer.Stretch
+                                        Color: =primarytext
+                                        Font: =Font.Arial
+                                        LayoutMinHeight: =20
+                                        Text: ="Documentos en Processo"
+                                        ZIndex: =2
+
                             card2_div_title_home_op As groupContainer.horizontalAutoLayoutContainer:
                                 Fill: =RGBA(255, 255, 255, 1)
                                 LayoutAlignItems: =LayoutAlignItems.Center
