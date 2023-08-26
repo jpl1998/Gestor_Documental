@@ -4203,6 +4203,7 @@
                             Height: =Parent.Height*98%
                             HoverColor: =ColorFade(primary,-5%)
                             HoverFill: =RGBA(255, 255, 255, 1)
+                            OnSelect: =Set(varregistroedicion,true)
                             PressedFill: =
                             RadiusBottomLeft: =5
                             RadiusBottomRight: =5
@@ -6092,14 +6093,14 @@
                             LayoutMinHeight: =30
                             OnSelect: |-
                                 =
-                                Set(varpopuprevisoresop,false);
-                                Set(varconfirmation,true)
+                                Set(varpopuprevisoreseditop,false);
+                                Set(varconfirmationedit,true)
                             RadiusBottomLeft: =5
                             RadiusBottomRight: =5
                             RadiusTopLeft: =5
                             RadiusTopRight: =5
                             Size: =14
-                            Text: ="Enviar Documento para Revisión"
+                            Text: ="Guardar Cambios"
                             ZIndex: =1
 
             Icon1_20 As icon.Cancel:
@@ -6110,4 +6111,175 @@
                 X: =1251
                 Y: =21
                 ZIndex: =2
+
+    popupconfirmationeditop As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(51, 51, 51, 0.27)
+        Height: =Parent.Height
+        Visible: =varconfirmationedit
+        Width: =Parent.Width
+        ZIndex: =14
+
+        Container13_42 As groupContainer.verticalAutoLayoutContainer:
+            DropShadow: =DropShadow.Regular
+            Fill: =RGBA(246, 247, 251, 1)
+            Height: =280
+            LayoutAlignItems: =LayoutAlignItems.Stretch
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutGap: =10
+            LayoutMode: =LayoutMode.Auto
+            PaddingBottom: =20
+            PaddingLeft: =20
+            PaddingRight: =20
+            PaddingTop: =20
+            Width: =430
+            X: =(Parent.Width-Self.Width)/2
+            Y: =(Parent.Height-Self.Height)/2
+            ZIndex: =1
+
+            Label4_52 As label:
+                Align: =Align.Center
+                FillPortions: =1
+                FontWeight: =FontWeight.Bold
+                Size: =15
+                Text: ="Edición Documento"
+                ZIndex: =1
+
+            Label4_53 As label:
+                Align: =Align.Center
+                FillPortions: =1
+                Font: =Font.'Segoe UI'
+                Text: ="¿Los cambios realizados necesitan ser notificados a todos los involucrados?"
+                ZIndex: =4
+
+            bt_atras_upload_op_4 As button:
+                AlignInContainer: =AlignInContainer.Stretch
+                Color: =primary
+                Fill: =RGBA(255, 255, 255, 1)
+                FillPortions: =1
+                HoverColor: =primary
+                HoverFill: =RGBA(255, 255, 255, 1)
+                LayoutMinHeight: =30
+                OnSelect: =Set(varconfirmationedit,false)
+                PressedFill: =RGBA(255, 255, 255, 1)
+                RadiusBottomLeft: =5
+                RadiusBottomRight: =5
+                RadiusTopLeft: =5
+                RadiusTopRight: =5
+                Size: =14
+                Text: ="Si, notificar a todos"
+                ZIndex: =6
+
+            bt_atras_upload_op_5 As button:
+                AlignInContainer: =AlignInContainer.Stretch
+                Color: =primary
+                Fill: =RGBA(255, 255, 255, 1)
+                FillPortions: =1
+                HoverColor: =primary
+                HoverFill: =RGBA(255, 255, 255, 1)
+                LayoutMinHeight: =30
+                OnSelect: =Set(varconfirmationedit,false)
+                PressedFill: =RGBA(255, 255, 255, 1)
+                RadiusBottomLeft: =5
+                RadiusBottomRight: =5
+                RadiusTopLeft: =5
+                RadiusTopRight: =5
+                Size: =14
+                Text: ="No, solo guardar cambios"
+                ZIndex: =7
+
+        Icon1_21 As icon.Cancel:
+            Height: =20
+            Icon: =Icon.Cancel
+            OnSelect: =Set(varconfirmationedit,false)
+            Width: =20
+            X: =864
+            Y: =261
+            ZIndex: =2
+
+    popupconfirmationeditop_1 As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(51, 51, 51, 0.27)
+        Height: =Parent.Height
+        Visible: =varregistroedicion
+        Width: =Parent.Width
+        ZIndex: =15
+
+        Container13_43 As groupContainer.verticalAutoLayoutContainer:
+            DropShadow: =DropShadow.Regular
+            Fill: =RGBA(246, 247, 251, 1)
+            Height: =400
+            LayoutAlignItems: =LayoutAlignItems.Stretch
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutGap: =10
+            LayoutMode: =LayoutMode.Auto
+            PaddingBottom: =20
+            PaddingLeft: =20
+            PaddingRight: =20
+            PaddingTop: =20
+            Width: =700
+            X: =(Parent.Width-Self.Width)/2
+            Y: =(Parent.Height-Self.Height)/2
+            ZIndex: =1
+
+            Label4_54 As label:
+                Align: =Align.Center
+                FontWeight: =FontWeight.Bold
+                Size: =15
+                Text: ="Registro de Edición"
+                ZIndex: =1
+
+            Container5 As groupContainer.manualLayoutContainer:
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =50
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                PaddingLeft: =5
+                PaddingRight: =5
+                ZIndex: =2
+
+                Container6op As groupContainer.horizontalAutoLayoutContainer:
+                    BorderThickness: =1
+                    DropShadow: =DropShadow.None
+                    Height: =50
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                    Label5 As label:
+                        FillPortions: =2
+                        FontWeight: =FontWeight.Bold
+                        Text: ="Realizado por"
+                        ZIndex: =1
+
+                    Label5_1 As label:
+                        FillPortions: =1
+                        FontWeight: =FontWeight.Bold
+                        Text: ="Fecha Edición"
+                        ZIndex: =2
+
+                    Label5_2 As label:
+                        FillPortions: =1
+                        FontWeight: =FontWeight.Bold
+                        Text: ="Notificación"
+                        ZIndex: =3
+
+                Gallery3 As gallery.galleryVertical:
+                    DelayItemLoading: =true
+                    Height: =260
+                    Items: =CustomGallerySample
+                    Layout: =Layout.Vertical
+                    LoadingSpinner: =LoadingSpinner.Data
+                    TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(280, Self.Height - 60))
+                    Width: =Parent.Width
+                    Y: =50
+                    ZIndex: =2
+
+        Icon1_22 As icon.Cancel:
+            Height: =20
+            Icon: =Icon.Cancel
+            OnSelect: =Set(varconfirmationedit,false)
+            Width: =20
+            X: =975
+            Y: =216
+            ZIndex: =2
 
