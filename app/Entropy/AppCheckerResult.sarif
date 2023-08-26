@@ -21445,36 +21445,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "DocProcessoOP.ScreenContainer1_1.BottomContainer1_1.MainContainer1_1.Container9_2.Container10_2.Container4_5.Gallery1_4.Container3_4.Container13_6.Icon1_3.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "DocProcessoOP.ScreenContainer1_1.BottomContainer1_1.MainContainer1_1.Container9_2.Container10_2.Container4_5.Gallery1_4.Container3_4.Container13_6.Icon1_3.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "DocProcessoOP",
-                "type": "DocProcessoOP.ScreenContainer1_1.BottomContainer1_1.MainContainer1_1.Container9_2.Container10_2.Container4_5.Gallery1_4.Container3_4.Container13_6.Icon1_3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "DocProcessoOP.ScreenContainer1_1.BottomContainer1_1.MainContainer1_1.Container9_2.Container10_2.Container4_5.Gallery1_4.Container3_4.Container13_6.Icon1_3.TabIndex"
                 }
               ],
@@ -21499,6 +21469,36 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "DocProcessoOP.ScreenContainer1_1.BottomContainer1_1.MainContainer1_1.Container9_2.Container10_2.Container4_5.Gallery1_4.Container3_4.Container13_6.Icon1_3.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "DocProcessoOP.ScreenContainer1_1.BottomContainer1_1.MainContainer1_1.Container9_2.Container10_2.Container4_5.Gallery1_4.Container3_4.Container13_6.Icon1_3.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "DocProcessoOP",
+                "type": "DocProcessoOP.ScreenContainer1_1.BottomContainer1_1.MainContainer1_1.Container9_2.Container10_2.Container4_5.Gallery1_4.Container3_4.Container13_6.Icon1_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -23826,36 +23826,6 @@
               },
               "properties": {
                 "member": "companyGreen",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "App.varsidebarop"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.varsidebarop",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "varsidebarop",
                 "module": "App",
                 "type": "App"
               }
