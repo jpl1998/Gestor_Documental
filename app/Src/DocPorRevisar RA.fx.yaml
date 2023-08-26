@@ -1519,8 +1519,7 @@
                         Font: =Font.'Segoe UI'
                         Height: =24
                         Size: =12
-                        Text: |-
-                            =varSelectedDoc.'id_tipo_docu: Descripcion'.Value
+                        Text: =varSelectedDoc.id_tipo_docu.Value
                         Width: =(Parent.Width/3)*2 -20
                         ZIndex: =2
 
@@ -1574,8 +1573,7 @@
                         Font: =Font.'Segoe UI'
                         Height: =24
                         Size: =12
-                        Text: |-
-                            =varSelectedDoc.'id_alcance: Descripcion'.Value
+                        Text: =varSelectedDoc.id_alcance.Value
                         Width: =(Parent.Width/3)*2 -20
                         ZIndex: =2
 
@@ -1656,8 +1654,7 @@
                         Font: =Font.'Segoe UI'
                         Height: =24
                         Size: =12
-                        Text: |-
-                            =varSelectedDoc.'id_macroproceso: Descripcion'.Value
+                        Text: =varSelectedDoc.id_macroproceso.Value
                         Width: =(Parent.Width/3)*2 -20
                         ZIndex: =2
 

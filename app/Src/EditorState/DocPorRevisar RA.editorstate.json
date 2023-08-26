@@ -4121,7 +4121,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "archivos_container_sidebar_docRev_ra",
-      "ParentIndex": 3,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -16213,7 +16213,14 @@
       "ControlPropertyState": [
         "Live",
         "Overflow",
-        "Text",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "varSelectedDoc.id_macroproceso_x003a__x0020_Des.Value",
+          "InvariantPropertyName": "Text",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Role",
         "Color",
         "DisabledColor",
@@ -18481,7 +18488,14 @@
       "ControlPropertyState": [
         "Live",
         "Overflow",
-        "Text",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "varSelectedDoc.id_alcance_x003a__x0020_Descripc.Value",
+          "InvariantPropertyName": "Text",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Role",
         "Color",
         "DisabledColor",
@@ -22859,7 +22873,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "container_title_sidebar_docRev_ra",
-      "ParentIndex": 0,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -34708,7 +34722,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "evaluacion_container_sidebar_docRev_ra",
-      "ParentIndex": 2,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -53336,7 +53350,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "menu_sidebar_docRev_ra",
-      "ParentIndex": 1,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

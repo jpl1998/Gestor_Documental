@@ -31920,46 +31920,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "DocProcessoOP.popupformdoc.Container22.Container13_9.Container13_10.Container14_7.Container15_14.ComboBox2_10.SearchItems"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "DocProcessoOP.popupformdoc.Container22.Container13_9.Container13_10.Container14_7.Container15_14.ComboBox2_10.SearchItems",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 13,
-                  "charOffset": 49,
-                  "snippet": {
-                    "text": "\"Descripcion\""
-                  }
-                }
-              },
-              "properties": {
-                "member": "SearchItems",
-                "module": "DocProcessoOP",
-                "type": "DocProcessoOP.popupformdoc.Container22.Container13_9.Container13_10.Container14_7.Container15_14.ComboBox2_10"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Search"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "DocProcessoOP.popupformdoc.Container22.Container13_9.Container13_10.Container14_7.Container15_15.ComboBox2_11.SearchItems"
                 }
               ],
@@ -31980,126 +31940,6 @@
                 "member": "SearchItems",
                 "module": "DocProcessoOP",
                 "type": "DocProcessoOP.popupformdoc.Container22.Container13_9.Container13_10.Container14_7.Container15_15.ComboBox2_11"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Search"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "DocProcessoOP.popupformdoc.Container22.Container13_9.Container13_10.Container14_10.Container15_20.ComboBox2_12.SearchItems"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "DocProcessoOP.popupformdoc.Container22.Container13_9.Container13_10.Container14_10.Container15_20.ComboBox2_12.SearchItems",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 13,
-                  "charOffset": 43,
-                  "snippet": {
-                    "text": "\"Descripcion\""
-                  }
-                }
-              },
-              "properties": {
-                "member": "SearchItems",
-                "module": "DocProcessoOP",
-                "type": "DocProcessoOP.popupformdoc.Container22.Container13_9.Container13_10.Container14_10.Container15_20.ComboBox2_12"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Search"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "DocProcessoOP.popupformdoc.Container22.Container13_9.Container13_10.Container14_11.Container15_23.ComboBox2_13.SearchItems"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "DocProcessoOP.popupformdoc.Container22.Container13_9.Container13_10.Container14_11.Container15_23.ComboBox2_13.SearchItems",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 13,
-                  "charOffset": 48,
-                  "snippet": {
-                    "text": "\"Descripcion\""
-                  }
-                }
-              },
-              "properties": {
-                "member": "SearchItems",
-                "module": "DocProcessoOP",
-                "type": "DocProcessoOP.popupformdoc.Container22.Container13_9.Container13_10.Container14_11.Container15_23.ComboBox2_13"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Search"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "DocProcessoOP.popupformdoc.Container22.Container13_9.Container13_10.Container14_8.Container15_16.ComboBox2_14.SearchItems"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "DocProcessoOP.popupformdoc.Container22.Container13_9.Container13_10.Container14_8.Container15_16.ComboBox2_14.SearchItems",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 13,
-                  "charOffset": 43,
-                  "snippet": {
-                    "text": "\"Descripcion\""
-                  }
-                }
-              },
-              "properties": {
-                "member": "SearchItems",
-                "module": "DocProcessoOP",
-                "type": "DocProcessoOP.popupformdoc.Container22.Container13_9.Container13_10.Container14_8.Container15_16.ComboBox2_14"
               }
             }
           ],
@@ -46046,6 +45886,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "App.varDocumento"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.varDocumento",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "varDocumento",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.People Audience"
                 }
               ],
@@ -46399,36 +46269,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.DEV_Alcance"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.DEV_Alcance",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "DEV_Alcance",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-NotOfflineConnectors",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "App.DEV_Archivos"
                 }
               ],
@@ -46579,36 +46419,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.DEV_Macroproceso"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.DEV_Macroproceso",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "DEV_Macroproceso",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-NotOfflineConnectors",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "App.DEV_Modificacion_estatus_documento"
                 }
               ],
@@ -46620,36 +46430,6 @@
               },
               "properties": {
                 "member": "DEV_Modificacion_estatus_documento",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-NotOfflineConnectors",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "App.DEV_Proceso"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.DEV_Proceso",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "DEV_Proceso",
                 "module": "App",
                 "type": "App"
               }
