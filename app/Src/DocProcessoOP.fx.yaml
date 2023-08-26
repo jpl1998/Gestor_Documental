@@ -5512,8 +5512,8 @@
                             FillPortions: =1
                             LayoutMinHeight: =30
                             OnSelect: |-
-                                =Set(varpopupuploaddoc,false);
-                                Set(varpopuprevisoresop,true)
+                                =Set(varpopupuploadeditdoc,false);
+                                Set(varpopuprevisoreseditop,true)
                             RadiusBottomLeft: =5
                             RadiusBottomRight: =5
                             RadiusTopLeft: =5
@@ -5534,7 +5534,7 @@
     popupelaboradoreseditop As groupContainer.manualLayoutContainer:
         Fill: =RGBA(51, 51, 51, 0.27)
         Height: =Parent.Height
-        Visible: =varpopuprevisoresop
+        Visible: =varpopuprevisoreseditop
         Width: =Parent.Width
         ZIndex: =13
 
@@ -6551,8 +6551,8 @@
                             HoverFill: =RGBA(255, 255, 255, 1)
                             LayoutMinHeight: =30
                             OnSelect: |-
-                                =Set(varpopupuploaddoc,true);
-                                Set(varpopuprevisoresop,false);
+                                =Set(varpopupuploadeditdoc,true);
+                                Set(varpopuprevisoreseditop,false);
                             PressedFill: =RGBA(255, 255, 255, 1)
                             RadiusBottomLeft: =5
                             RadiusBottomRight: =5
@@ -6618,7 +6618,7 @@
             Icon1_20 As icon.Cancel:
                 Height: =25
                 Icon: =Icon.Cancel
-                OnSelect: =Set(varpopuprevisoresop,false);
+                OnSelect: =Set(varpopuprevisoreseditop,false);
                 Width: =25
                 X: =1251
                 Y: =21
