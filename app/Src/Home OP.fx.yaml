@@ -133,7 +133,7 @@
                     Items: |-
                         =Table({Name:"Home",Logo: Home, Tela: 'Home OP'},
                         {Name: "Doc. En Proceso",Logo: 'Document Sync', Tela: DocProcessoOP },
-                        {Name: "Doc. Oficiales", Logo:'Document Text' },
+                        {Name: "Doc. Oficiales", Logo:'Document Text', Tela:DocOficialesOP },
                         {Name: "Doc. Históricos", Logo:'Document Search' })
                     Layout: =Layout.Vertical
                     LayoutMinHeight: =287
