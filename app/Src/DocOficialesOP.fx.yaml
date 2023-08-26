@@ -132,7 +132,7 @@
                         =Table({Name:"Home",Logo: 'Home (1)',Tela:'Home OP'},
                         {Name: "Doc. En Proceso",Logo: 'Document Sync', Tela:DocProcessoOP },
                         {Name: "Doc. Oficiales", Logo:'Document Textwhite', Tela:DocOficialesOP },
-                        {Name: "Doc. Históricos", Logo:'Document Search' })
+                        {Name: "Doc. Históricos", Logo:'Document Search' , Tela: DocHistóricoOP })
                     Layout: =Layout.Vertical
                     LayoutMinHeight: =287
                     LayoutMinWidth: =50
@@ -209,7 +209,8 @@
 
                     Container11_1 As groupContainer.horizontalAutoLayoutContainer:
                         DropShadow: =DropShadow.None
-                        FillPortions: =0.1
+                        FillPortions: =0
+                        Height: =50
                         LayoutAlignItems: =LayoutAlignItems.Center
                         LayoutMinHeight: =50
                         LayoutMinWidth: =250

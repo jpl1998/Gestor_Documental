@@ -132,7 +132,7 @@
                         =Table({Name:"Home",Logo: 'Home (1)',Tela:'Home OP'},
                         {Name: "Doc. En Proceso",Logo: 'Document Sync (2)', Tela:DocProcessoOP },
                         {Name: "Doc. Oficiales", Logo:'Document Text' , Tela:DocOficialesOP},
-                        {Name: "Doc. Históricos", Logo:'Document Search' })
+                        {Name: "Doc. Históricos", Logo:'Document Search', Tela: DocHistóricoOP  })
                     Layout: =Layout.Vertical
                     LayoutMinHeight: =287
                     LayoutMinWidth: =50
