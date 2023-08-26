@@ -4368,42 +4368,6 @@
                         Width: =(Parent.Width/3)*2 -20
                         ZIndex: =2
 
-            Container13_77 As groupContainer.manualLayoutContainer:
-                LayoutMinHeight: =40
-                LayoutMinWidth: =40
-                Width: =80
-                ZIndex: =7
-
-                Button2_14 As button:
-                    BorderColor: =Self.Color
-                    BorderStyle: =BorderStyle.None
-                    Color: |-
-                        =Switch(Self.Text,
-                        "Documento por Aprobar", RGBA(180, 130, 0, 1),
-                        "Por revisar",RGBA(180, 130, 0, 1),
-                        "Observado", RGBA(214, 0, 0, 1),
-                        "Aprobado",RGBA(44, 143, 112, 1))
-                    DisplayMode: =DisplayMode.View
-                    Fill: |-
-                        =Switch(Self.Text,
-                        "Documento por Aprobar", RGBA(249, 249, 249, 1),
-                        "Por revisar",RGBA(249, 249, 249, 1),
-                        "Observado", RGBA(245, 218, 216, 1),
-                        "Aprobado", RGBA(219, 238, 233, 1))
-                    Font: =Font.Arial
-                    FontWeight: =FontWeight.Normal
-                    Height: =Parent.Height*60%
-                    RadiusBottomLeft: =5
-                    RadiusBottomRight: =5
-                    RadiusTopLeft: =5
-                    RadiusTopRight: =5
-                    Size: =11
-                    Text: ="Documento por Aprobar"
-                    Width: =Parent.Width*80%
-                    X: =(Parent.Width-Self.Width)/2
-                    Y: =(Parent.Height-Self.Height)/2
-                    ZIndex: =1
-
     popupformeditop_2 As groupContainer.manualLayoutContainer:
         Fill: =RGBA(51, 51, 51, 0.27)
         Height: =Parent.Height
