@@ -6317,7 +6317,7 @@
         Icon1_22 As icon.Cancel:
             Height: =20
             Icon: =Icon.Cancel
-            OnSelect: =Set(varconfirmationedit,false)
+            OnSelect: =Set(varregistroedicion,false)
             Width: =20
             X: =975
             Y: =216
