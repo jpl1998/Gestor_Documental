@@ -6237,7 +6237,6 @@
                 ZIndex: =2
 
                 Container6op As groupContainer.horizontalAutoLayoutContainer:
-                    BorderThickness: =1
                     DropShadow: =DropShadow.None
                     Height: =50
                     LayoutAlignItems: =LayoutAlignItems.Center
@@ -6248,16 +6247,19 @@
                     Label5 As label:
                         FillPortions: =2
                         FontWeight: =FontWeight.Bold
+                        PaddingLeft: =15
                         Text: ="Realizado por"
                         ZIndex: =1
 
                     Label5_1 As label:
+                        Align: =Align.Center
                         FillPortions: =1
                         FontWeight: =FontWeight.Bold
                         Text: ="Fecha Edición"
                         ZIndex: =2
 
                     Label5_2 As label:
+                        Align: =Align.Center
                         FillPortions: =1
                         FontWeight: =FontWeight.Bold
                         Text: ="Notificación"
@@ -6269,10 +6271,48 @@
                     Items: =CustomGallerySample
                     Layout: =Layout.Vertical
                     LoadingSpinner: =LoadingSpinner.Data
-                    TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(280, Self.Height - 60))
+                    TemplateSize: =50
                     Width: =Parent.Width
                     Y: =50
                     ZIndex: =2
+
+                    Container6op_1 As groupContainer.horizontalAutoLayoutContainer:
+                        DropShadow: =DropShadow.None
+                        Height: =Parent.TemplateHeight
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutMode: =LayoutMode.Auto
+                        Width: =650
+                        ZIndex: =1
+
+                        Label5_3 As label:
+                            Color: =secondarytext
+                            FillPortions: =2
+                            PaddingLeft: =15
+                            Text: ="Alberto Macha"
+                            ZIndex: =1
+
+                        Label5_4 As label:
+                            Align: =Align.Center
+                            Color: =secondarytext
+                            FillPortions: =1
+                            Text: ="12/05/2023"
+                            ZIndex: =2
+
+                        Label5_5 As label:
+                            Align: =Align.Center
+                            Color: =secondarytext
+                            FillPortions: =1
+                            Text: ="Si"
+                            ZIndex: =3
+
+                separatorregistroop As rectangle:
+                    BorderColor: =RGBA(0, 0, 0, 1)
+                    Fill: =RGBA(0, 0, 0, 1)
+                    Height: =1
+                    Width: =Parent.Width*95%
+                    X: =(Parent.Width-Self.Width)/2
+                    Y: =Container6op.Y+Container6op.Height
+                    ZIndex: =3
 
         Icon1_22 As icon.Cancel:
             Height: =20
