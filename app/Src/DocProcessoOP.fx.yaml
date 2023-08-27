@@ -2301,19 +2301,22 @@
                                     ChevronHoverBackground: =
                                     ChevronHoverFill: =primary
                                     Color: =secondarytext
+                                    DisplayFields: =["Nombre","Apellido"]
                                     FillPortions: =1
                                     HoverBorderColor: =
                                     HoverColor: =RGBA(26, 26, 26, 1)
                                     HoverFill: =RGBA(215, 223, 240, 1)
                                     InputTextPlaceholder: ="Seleccione Opción"
-                                    Items: =ComboBoxSample
+                                    Items: =DEV_Interlocutor
                                     LayoutMinWidth: =50
                                     PressedBorderColor: =secondarytext
                                     PressedColor: =RGBA(26, 26, 26, 1)
                                     PressedFill: =RGBA(0, 0, 0, 0)
-                                    SearchItems: =Search(ComboBoxSample,ComboBox2_19.SearchText,"Value1")
+                                    SearchFields: =["Nombre"]
+                                    SearchItems: =Search(DEV_Interlocutor,ComboBox2_19.SearchText,"Nombre")
                                     SelectMultiple: =false
                                     Size: =10
+                                    Template: =ListItemTemplate.Double
                                     ZIndex: =2
 
                             elaborador2 As groupContainer.horizontalAutoLayoutContainer:
@@ -2340,7 +2343,7 @@
                                     Width: =20
                                     ZIndex: =1
 
-                                ComboBox2_22 As combobox:
+                                ComboBox2_132 As combobox:
                                     BorderColor: =secondarytext
                                     BorderThickness: =1
                                     ChevronBackground: =RGBA(255, 255, 255, 1)
@@ -2348,20 +2351,23 @@
                                     ChevronHoverBackground: =
                                     ChevronHoverFill: =primary
                                     Color: =secondarytext
+                                    DisplayFields: =["Nombre","Apellido"]
                                     FillPortions: =1
                                     HoverBorderColor: =
                                     HoverColor: =RGBA(26, 26, 26, 1)
                                     HoverFill: =RGBA(215, 223, 240, 1)
                                     InputTextPlaceholder: ="Seleccione Opción"
-                                    Items: =ComboBoxSample
+                                    Items: =DEV_Interlocutor
                                     LayoutMinWidth: =50
                                     PressedBorderColor: =secondarytext
                                     PressedColor: =RGBA(26, 26, 26, 1)
                                     PressedFill: =RGBA(0, 0, 0, 0)
-                                    SearchItems: =Search(ComboBoxSample,ComboBox2_22.SearchText,"Value1")
+                                    SearchFields: =["Nombre"]
+                                    SearchItems: =Search(DEV_Interlocutor,ComboBox2_132.SearchText,"Nombre")
                                     SelectMultiple: =false
                                     Size: =10
-                                    ZIndex: =2
+                                    Template: =ListItemTemplate.Double
+                                    ZIndex: =3
 
                             elaborador3 As groupContainer.horizontalAutoLayoutContainer:
                                 DropShadow: =DropShadow.None
@@ -2387,7 +2393,7 @@
                                     Width: =20
                                     ZIndex: =1
 
-                                ComboBox2_23 As combobox:
+                                ComboBox2_22 As combobox:
                                     BorderColor: =secondarytext
                                     BorderThickness: =1
                                     ChevronBackground: =RGBA(255, 255, 255, 1)
@@ -2395,20 +2401,23 @@
                                     ChevronHoverBackground: =
                                     ChevronHoverFill: =primary
                                     Color: =secondarytext
+                                    DisplayFields: =["Nombre","Apellido"]
                                     FillPortions: =1
                                     HoverBorderColor: =
                                     HoverColor: =RGBA(26, 26, 26, 1)
                                     HoverFill: =RGBA(215, 223, 240, 1)
                                     InputTextPlaceholder: ="Seleccione Opción"
-                                    Items: =ComboBoxSample
+                                    Items: =DEV_Interlocutor
                                     LayoutMinWidth: =50
                                     PressedBorderColor: =secondarytext
                                     PressedColor: =RGBA(26, 26, 26, 1)
                                     PressedFill: =RGBA(0, 0, 0, 0)
-                                    SearchItems: =Search(ComboBoxSample,ComboBox2_23.SearchText,"Value1")
+                                    SearchFields: =["Nombre"]
+                                    SearchItems: =Search(DEV_Interlocutor,ComboBox2_22.SearchText,"Nombre")
                                     SelectMultiple: =false
                                     Size: =10
-                                    ZIndex: =2
+                                    Template: =ListItemTemplate.Double
+                                    ZIndex: =3
 
                             elaborador4 As groupContainer.horizontalAutoLayoutContainer:
                                 DropShadow: =DropShadow.None
@@ -2434,7 +2443,7 @@
                                     Width: =20
                                     ZIndex: =1
 
-                                ComboBox2_24 As combobox:
+                                ComboBox2_23 As combobox:
                                     BorderColor: =secondarytext
                                     BorderThickness: =1
                                     ChevronBackground: =RGBA(255, 255, 255, 1)
@@ -2442,20 +2451,23 @@
                                     ChevronHoverBackground: =
                                     ChevronHoverFill: =primary
                                     Color: =secondarytext
+                                    DisplayFields: =["Nombre","Apellido"]
                                     FillPortions: =1
                                     HoverBorderColor: =
                                     HoverColor: =RGBA(26, 26, 26, 1)
                                     HoverFill: =RGBA(215, 223, 240, 1)
                                     InputTextPlaceholder: ="Seleccione Opción"
-                                    Items: =ComboBoxSample
+                                    Items: =DEV_Interlocutor
                                     LayoutMinWidth: =50
                                     PressedBorderColor: =secondarytext
                                     PressedColor: =RGBA(26, 26, 26, 1)
                                     PressedFill: =RGBA(0, 0, 0, 0)
-                                    SearchItems: =Search(ComboBoxSample,ComboBox2_24.SearchText,"Value1")
+                                    SearchFields: =["Nombre"]
+                                    SearchItems: =Search(DEV_Interlocutor,ComboBox2_23.SearchText,"Nombre")
                                     SelectMultiple: =false
                                     Size: =10
-                                    ZIndex: =2
+                                    Template: =ListItemTemplate.Double
+                                    ZIndex: =3
 
                             elaborador5 As groupContainer.horizontalAutoLayoutContainer:
                                 DropShadow: =DropShadow.None
@@ -2481,7 +2493,7 @@
                                     Width: =20
                                     ZIndex: =1
 
-                                ComboBox2_25 As combobox:
+                                ComboBox2_24 As combobox:
                                     BorderColor: =secondarytext
                                     BorderThickness: =1
                                     ChevronBackground: =RGBA(255, 255, 255, 1)
@@ -2489,20 +2501,23 @@
                                     ChevronHoverBackground: =
                                     ChevronHoverFill: =primary
                                     Color: =secondarytext
+                                    DisplayFields: =["Nombre","Apellido"]
                                     FillPortions: =1
                                     HoverBorderColor: =
                                     HoverColor: =RGBA(26, 26, 26, 1)
                                     HoverFill: =RGBA(215, 223, 240, 1)
                                     InputTextPlaceholder: ="Seleccione Opción"
-                                    Items: =ComboBoxSample
+                                    Items: =DEV_Interlocutor
                                     LayoutMinWidth: =50
                                     PressedBorderColor: =secondarytext
                                     PressedColor: =RGBA(26, 26, 26, 1)
                                     PressedFill: =RGBA(0, 0, 0, 0)
-                                    SearchItems: =Search(ComboBoxSample,ComboBox2_25.SearchText,"Value1")
+                                    SearchFields: =["Nombre"]
+                                    SearchItems: =Search(DEV_Interlocutor,ComboBox2_24.SearchText,"Nombre")
                                     SelectMultiple: =false
                                     Size: =10
-                                    ZIndex: =2
+                                    Template: =ListItemTemplate.Double
+                                    ZIndex: =3
 
                             elaborador6 As groupContainer.horizontalAutoLayoutContainer:
                                 DropShadow: =DropShadow.None
@@ -2528,7 +2543,7 @@
                                     Width: =20
                                     ZIndex: =1
 
-                                ComboBox2_26 As combobox:
+                                ComboBox2_25 As combobox:
                                     BorderColor: =secondarytext
                                     BorderThickness: =1
                                     ChevronBackground: =RGBA(255, 255, 255, 1)
@@ -2536,20 +2551,23 @@
                                     ChevronHoverBackground: =
                                     ChevronHoverFill: =primary
                                     Color: =secondarytext
+                                    DisplayFields: =["Nombre","Apellido"]
                                     FillPortions: =1
                                     HoverBorderColor: =
                                     HoverColor: =RGBA(26, 26, 26, 1)
                                     HoverFill: =RGBA(215, 223, 240, 1)
                                     InputTextPlaceholder: ="Seleccione Opción"
-                                    Items: =ComboBoxSample
+                                    Items: =DEV_Interlocutor
                                     LayoutMinWidth: =50
                                     PressedBorderColor: =secondarytext
                                     PressedColor: =RGBA(26, 26, 26, 1)
                                     PressedFill: =RGBA(0, 0, 0, 0)
-                                    SearchItems: =Search(ComboBoxSample,ComboBox2_26.SearchText,"Value1")
+                                    SearchFields: =["Nombre"]
+                                    SearchItems: =Search(DEV_Interlocutor,ComboBox2_25.SearchText,"Nombre")
                                     SelectMultiple: =false
                                     Size: =10
-                                    ZIndex: =2
+                                    Template: =ListItemTemplate.Double
+                                    ZIndex: =3
 
                         separator_revisores_op As rectangle:
                             AlignInContainer: =AlignInContainer.Stretch
@@ -2604,7 +2622,7 @@
                                     Width: =20
                                     ZIndex: =1
 
-                                ComboBox2_20 As combobox:
+                                ComboBox2_26 As combobox:
                                     BorderColor: =secondarytext
                                     BorderThickness: =1
                                     ChevronBackground: =RGBA(255, 255, 255, 1)
@@ -2612,20 +2630,23 @@
                                     ChevronHoverBackground: =
                                     ChevronHoverFill: =primary
                                     Color: =secondarytext
+                                    DisplayFields: =["Nombre","Apellido"]
                                     FillPortions: =1
                                     HoverBorderColor: =
                                     HoverColor: =RGBA(26, 26, 26, 1)
                                     HoverFill: =RGBA(215, 223, 240, 1)
                                     InputTextPlaceholder: ="Seleccione Opción"
-                                    Items: =ComboBoxSample
+                                    Items: =DEV_Interlocutor
                                     LayoutMinWidth: =50
                                     PressedBorderColor: =secondarytext
                                     PressedColor: =RGBA(26, 26, 26, 1)
                                     PressedFill: =RGBA(0, 0, 0, 0)
-                                    SearchItems: =Search(ComboBoxSample,ComboBox2_20.SearchText,"Value1")
+                                    SearchFields: =["Nombre"]
+                                    SearchItems: =Search(DEV_Interlocutor,ComboBox2_26.SearchText,"Nombre")
                                     SelectMultiple: =false
                                     Size: =10
-                                    ZIndex: =2
+                                    Template: =ListItemTemplate.Double
+                                    ZIndex: =3
 
                             revisor2 As groupContainer.horizontalAutoLayoutContainer:
                                 DropShadow: =DropShadow.None
@@ -2651,7 +2672,7 @@
                                     Width: =20
                                     ZIndex: =1
 
-                                ComboBox2_27 As combobox:
+                                ComboBox2_20 As combobox:
                                     BorderColor: =secondarytext
                                     BorderThickness: =1
                                     ChevronBackground: =RGBA(255, 255, 255, 1)
@@ -2659,20 +2680,23 @@
                                     ChevronHoverBackground: =
                                     ChevronHoverFill: =primary
                                     Color: =secondarytext
+                                    DisplayFields: =["Nombre","Apellido"]
                                     FillPortions: =1
                                     HoverBorderColor: =
                                     HoverColor: =RGBA(26, 26, 26, 1)
                                     HoverFill: =RGBA(215, 223, 240, 1)
                                     InputTextPlaceholder: ="Seleccione Opción"
-                                    Items: =ComboBoxSample
+                                    Items: =DEV_Interlocutor
                                     LayoutMinWidth: =50
                                     PressedBorderColor: =secondarytext
                                     PressedColor: =RGBA(26, 26, 26, 1)
                                     PressedFill: =RGBA(0, 0, 0, 0)
-                                    SearchItems: =Search(ComboBoxSample,ComboBox2_27.SearchText,"Value1")
+                                    SearchFields: =["Nombre"]
+                                    SearchItems: =Search(DEV_Interlocutor,ComboBox2_20.SearchText,"Nombre")
                                     SelectMultiple: =false
                                     Size: =10
-                                    ZIndex: =2
+                                    Template: =ListItemTemplate.Double
+                                    ZIndex: =3
 
                             revisor3 As groupContainer.horizontalAutoLayoutContainer:
                                 DropShadow: =DropShadow.None
@@ -2698,7 +2722,7 @@
                                     Width: =20
                                     ZIndex: =1
 
-                                ComboBox2_28 As combobox:
+                                ComboBox2_27 As combobox:
                                     BorderColor: =secondarytext
                                     BorderThickness: =1
                                     ChevronBackground: =RGBA(255, 255, 255, 1)
@@ -2706,20 +2730,23 @@
                                     ChevronHoverBackground: =
                                     ChevronHoverFill: =primary
                                     Color: =secondarytext
+                                    DisplayFields: =["Nombre","Apellido"]
                                     FillPortions: =1
                                     HoverBorderColor: =
                                     HoverColor: =RGBA(26, 26, 26, 1)
                                     HoverFill: =RGBA(215, 223, 240, 1)
                                     InputTextPlaceholder: ="Seleccione Opción"
-                                    Items: =ComboBoxSample
+                                    Items: =DEV_Interlocutor
                                     LayoutMinWidth: =50
                                     PressedBorderColor: =secondarytext
                                     PressedColor: =RGBA(26, 26, 26, 1)
                                     PressedFill: =RGBA(0, 0, 0, 0)
-                                    SearchItems: =Search(ComboBoxSample,ComboBox2_28.SearchText,"Value1")
+                                    SearchFields: =["Nombre"]
+                                    SearchItems: =Search(DEV_Interlocutor,ComboBox2_27.SearchText,"Nombre")
                                     SelectMultiple: =false
                                     Size: =10
-                                    ZIndex: =2
+                                    Template: =ListItemTemplate.Double
+                                    ZIndex: =3
 
                             revisor4 As groupContainer.horizontalAutoLayoutContainer:
                                 DropShadow: =DropShadow.None
@@ -2745,7 +2772,7 @@
                                     Width: =20
                                     ZIndex: =1
 
-                                ComboBox2_29 As combobox:
+                                ComboBox2_28 As combobox:
                                     BorderColor: =secondarytext
                                     BorderThickness: =1
                                     ChevronBackground: =RGBA(255, 255, 255, 1)
@@ -2753,20 +2780,23 @@
                                     ChevronHoverBackground: =
                                     ChevronHoverFill: =primary
                                     Color: =secondarytext
+                                    DisplayFields: =["Nombre","Apellido"]
                                     FillPortions: =1
                                     HoverBorderColor: =
                                     HoverColor: =RGBA(26, 26, 26, 1)
                                     HoverFill: =RGBA(215, 223, 240, 1)
                                     InputTextPlaceholder: ="Seleccione Opción"
-                                    Items: =ComboBoxSample
+                                    Items: =DEV_Interlocutor
                                     LayoutMinWidth: =50
                                     PressedBorderColor: =secondarytext
                                     PressedColor: =RGBA(26, 26, 26, 1)
                                     PressedFill: =RGBA(0, 0, 0, 0)
-                                    SearchItems: =Search(ComboBoxSample,ComboBox2_29.SearchText,"Value1")
+                                    SearchFields: =["Nombre"]
+                                    SearchItems: =Search(DEV_Interlocutor,ComboBox2_28.SearchText,"Nombre")
                                     SelectMultiple: =false
                                     Size: =10
-                                    ZIndex: =2
+                                    Template: =ListItemTemplate.Double
+                                    ZIndex: =3
 
                             revisor5 As groupContainer.horizontalAutoLayoutContainer:
                                 DropShadow: =DropShadow.None
@@ -2792,7 +2822,7 @@
                                     Width: =20
                                     ZIndex: =1
 
-                                ComboBox2_30 As combobox:
+                                ComboBox2_29 As combobox:
                                     BorderColor: =secondarytext
                                     BorderThickness: =1
                                     ChevronBackground: =RGBA(255, 255, 255, 1)
@@ -2800,20 +2830,23 @@
                                     ChevronHoverBackground: =
                                     ChevronHoverFill: =primary
                                     Color: =secondarytext
+                                    DisplayFields: =["Nombre","Apellido"]
                                     FillPortions: =1
                                     HoverBorderColor: =
                                     HoverColor: =RGBA(26, 26, 26, 1)
                                     HoverFill: =RGBA(215, 223, 240, 1)
                                     InputTextPlaceholder: ="Seleccione Opción"
-                                    Items: =ComboBoxSample
+                                    Items: =DEV_Interlocutor
                                     LayoutMinWidth: =50
                                     PressedBorderColor: =secondarytext
                                     PressedColor: =RGBA(26, 26, 26, 1)
                                     PressedFill: =RGBA(0, 0, 0, 0)
-                                    SearchItems: =Search(ComboBoxSample,ComboBox2_30.SearchText,"Value1")
+                                    SearchFields: =["Nombre"]
+                                    SearchItems: =Search(DEV_Interlocutor,ComboBox2_29.SearchText,"Nombre")
                                     SelectMultiple: =false
                                     Size: =10
-                                    ZIndex: =2
+                                    Template: =ListItemTemplate.Double
+                                    ZIndex: =3
 
                             revisor6 As groupContainer.horizontalAutoLayoutContainer:
                                 DropShadow: =DropShadow.None
@@ -2839,7 +2872,7 @@
                                     Width: =20
                                     ZIndex: =1
 
-                                ComboBox2_31 As combobox:
+                                ComboBox2_30 As combobox:
                                     BorderColor: =secondarytext
                                     BorderThickness: =1
                                     ChevronBackground: =RGBA(255, 255, 255, 1)
@@ -2847,20 +2880,23 @@
                                     ChevronHoverBackground: =
                                     ChevronHoverFill: =primary
                                     Color: =secondarytext
+                                    DisplayFields: =["Nombre","Apellido"]
                                     FillPortions: =1
                                     HoverBorderColor: =
                                     HoverColor: =RGBA(26, 26, 26, 1)
                                     HoverFill: =RGBA(215, 223, 240, 1)
                                     InputTextPlaceholder: ="Seleccione Opción"
-                                    Items: =ComboBoxSample
+                                    Items: =DEV_Interlocutor
                                     LayoutMinWidth: =50
                                     PressedBorderColor: =secondarytext
                                     PressedColor: =RGBA(26, 26, 26, 1)
                                     PressedFill: =RGBA(0, 0, 0, 0)
-                                    SearchItems: =Search(ComboBoxSample,ComboBox2_31.SearchText,"Value1")
+                                    SearchFields: =["Nombre"]
+                                    SearchItems: =Search(DEV_Interlocutor,ComboBox2_30.SearchText,"Nombre")
                                     SelectMultiple: =false
                                     Size: =10
-                                    ZIndex: =2
+                                    Template: =ListItemTemplate.Double
+                                    ZIndex: =3
 
                         separator_revisores_op_1 As rectangle:
                             AlignInContainer: =AlignInContainer.Stretch
@@ -2915,7 +2951,7 @@
                                     Width: =20
                                     ZIndex: =1
 
-                                ComboBox2_21 As combobox:
+                                ComboBox2_31 As combobox:
                                     BorderColor: =secondarytext
                                     BorderThickness: =1
                                     ChevronBackground: =RGBA(255, 255, 255, 1)
@@ -2923,20 +2959,23 @@
                                     ChevronHoverBackground: =
                                     ChevronHoverFill: =primary
                                     Color: =secondarytext
+                                    DisplayFields: =["Nombre","Apellido"]
                                     FillPortions: =1
                                     HoverBorderColor: =
                                     HoverColor: =RGBA(26, 26, 26, 1)
                                     HoverFill: =RGBA(215, 223, 240, 1)
                                     InputTextPlaceholder: ="Seleccione Opción"
-                                    Items: =ComboBoxSample
+                                    Items: =DEV_Interlocutor
                                     LayoutMinWidth: =50
                                     PressedBorderColor: =secondarytext
                                     PressedColor: =RGBA(26, 26, 26, 1)
                                     PressedFill: =RGBA(0, 0, 0, 0)
-                                    SearchItems: =Search(ComboBoxSample,ComboBox2_21.SearchText,"Value1")
+                                    SearchFields: =["Nombre"]
+                                    SearchItems: =Search(DEV_Interlocutor,ComboBox2_31.SearchText,"Nombre")
                                     SelectMultiple: =false
                                     Size: =10
-                                    ZIndex: =2
+                                    Template: =ListItemTemplate.Double
+                                    ZIndex: =3
 
                             aprobador2 As groupContainer.horizontalAutoLayoutContainer:
                                 DropShadow: =DropShadow.None
@@ -2962,7 +3001,7 @@
                                     Width: =20
                                     ZIndex: =1
 
-                                ComboBox2_32 As combobox:
+                                ComboBox2_21 As combobox:
                                     BorderColor: =secondarytext
                                     BorderThickness: =1
                                     ChevronBackground: =RGBA(255, 255, 255, 1)
@@ -2970,20 +3009,23 @@
                                     ChevronHoverBackground: =
                                     ChevronHoverFill: =primary
                                     Color: =secondarytext
+                                    DisplayFields: =["Nombre","Apellido"]
                                     FillPortions: =1
                                     HoverBorderColor: =
                                     HoverColor: =RGBA(26, 26, 26, 1)
                                     HoverFill: =RGBA(215, 223, 240, 1)
                                     InputTextPlaceholder: ="Seleccione Opción"
-                                    Items: =ComboBoxSample
+                                    Items: =DEV_Interlocutor
                                     LayoutMinWidth: =50
                                     PressedBorderColor: =secondarytext
                                     PressedColor: =RGBA(26, 26, 26, 1)
                                     PressedFill: =RGBA(0, 0, 0, 0)
-                                    SearchItems: =Search(ComboBoxSample,ComboBox2_32.SearchText,"Value1")
+                                    SearchFields: =["Nombre"]
+                                    SearchItems: =Search(DEV_Interlocutor,ComboBox2_21.SearchText,"Nombre")
                                     SelectMultiple: =false
                                     Size: =10
-                                    ZIndex: =2
+                                    Template: =ListItemTemplate.Double
+                                    ZIndex: =3
 
                             aprobador3 As groupContainer.horizontalAutoLayoutContainer:
                                 DropShadow: =DropShadow.None
@@ -3009,7 +3051,7 @@
                                     Width: =20
                                     ZIndex: =1
 
-                                ComboBox2_33 As combobox:
+                                ComboBox2_32 As combobox:
                                     BorderColor: =secondarytext
                                     BorderThickness: =1
                                     ChevronBackground: =RGBA(255, 255, 255, 1)
@@ -3017,20 +3059,23 @@
                                     ChevronHoverBackground: =
                                     ChevronHoverFill: =primary
                                     Color: =secondarytext
+                                    DisplayFields: =["Nombre","Apellido"]
                                     FillPortions: =1
                                     HoverBorderColor: =
                                     HoverColor: =RGBA(26, 26, 26, 1)
                                     HoverFill: =RGBA(215, 223, 240, 1)
                                     InputTextPlaceholder: ="Seleccione Opción"
-                                    Items: =ComboBoxSample
+                                    Items: =DEV_Interlocutor
                                     LayoutMinWidth: =50
                                     PressedBorderColor: =secondarytext
                                     PressedColor: =RGBA(26, 26, 26, 1)
                                     PressedFill: =RGBA(0, 0, 0, 0)
-                                    SearchItems: =Search(ComboBoxSample,ComboBox2_33.SearchText,"Value1")
+                                    SearchFields: =["Nombre"]
+                                    SearchItems: =Search(DEV_Interlocutor,ComboBox2_32.SearchText,"Nombre")
                                     SelectMultiple: =false
                                     Size: =10
-                                    ZIndex: =2
+                                    Template: =ListItemTemplate.Double
+                                    ZIndex: =3
 
                             aprobador4 As groupContainer.horizontalAutoLayoutContainer:
                                 DropShadow: =DropShadow.None
@@ -3056,7 +3101,7 @@
                                     Width: =20
                                     ZIndex: =1
 
-                                ComboBox2_34 As combobox:
+                                ComboBox2_33 As combobox:
                                     BorderColor: =secondarytext
                                     BorderThickness: =1
                                     ChevronBackground: =RGBA(255, 255, 255, 1)
@@ -3064,20 +3109,23 @@
                                     ChevronHoverBackground: =
                                     ChevronHoverFill: =primary
                                     Color: =secondarytext
+                                    DisplayFields: =["Nombre","Apellido"]
                                     FillPortions: =1
                                     HoverBorderColor: =
                                     HoverColor: =RGBA(26, 26, 26, 1)
                                     HoverFill: =RGBA(215, 223, 240, 1)
                                     InputTextPlaceholder: ="Seleccione Opción"
-                                    Items: =ComboBoxSample
+                                    Items: =DEV_Interlocutor
                                     LayoutMinWidth: =50
                                     PressedBorderColor: =secondarytext
                                     PressedColor: =RGBA(26, 26, 26, 1)
                                     PressedFill: =RGBA(0, 0, 0, 0)
-                                    SearchItems: =Search(ComboBoxSample,ComboBox2_34.SearchText,"Value1")
+                                    SearchFields: =["Nombre"]
+                                    SearchItems: =Search(DEV_Interlocutor,ComboBox2_33.SearchText,"Nombre")
                                     SelectMultiple: =false
                                     Size: =10
-                                    ZIndex: =2
+                                    Template: =ListItemTemplate.Double
+                                    ZIndex: =3
 
                             aprobador5 As groupContainer.horizontalAutoLayoutContainer:
                                 DropShadow: =DropShadow.None
@@ -3103,7 +3151,7 @@
                                     Width: =20
                                     ZIndex: =1
 
-                                ComboBox2_35 As combobox:
+                                ComboBox2_34 As combobox:
                                     BorderColor: =secondarytext
                                     BorderThickness: =1
                                     ChevronBackground: =RGBA(255, 255, 255, 1)
@@ -3111,20 +3159,23 @@
                                     ChevronHoverBackground: =
                                     ChevronHoverFill: =primary
                                     Color: =secondarytext
+                                    DisplayFields: =["Nombre","Apellido"]
                                     FillPortions: =1
                                     HoverBorderColor: =
                                     HoverColor: =RGBA(26, 26, 26, 1)
                                     HoverFill: =RGBA(215, 223, 240, 1)
                                     InputTextPlaceholder: ="Seleccione Opción"
-                                    Items: =ComboBoxSample
+                                    Items: =DEV_Interlocutor
                                     LayoutMinWidth: =50
                                     PressedBorderColor: =secondarytext
                                     PressedColor: =RGBA(26, 26, 26, 1)
                                     PressedFill: =RGBA(0, 0, 0, 0)
-                                    SearchItems: =Search(ComboBoxSample,ComboBox2_35.SearchText,"Value1")
+                                    SearchFields: =["Nombre"]
+                                    SearchItems: =Search(DEV_Interlocutor,ComboBox2_34.SearchText,"Nombre")
                                     SelectMultiple: =false
                                     Size: =10
-                                    ZIndex: =2
+                                    Template: =ListItemTemplate.Double
+                                    ZIndex: =3
 
                             aprobador6 As groupContainer.horizontalAutoLayoutContainer:
                                 DropShadow: =DropShadow.None
@@ -3150,7 +3201,7 @@
                                     Width: =20
                                     ZIndex: =1
 
-                                ComboBox2_36 As combobox:
+                                ComboBox2_35 As combobox:
                                     BorderColor: =secondarytext
                                     BorderThickness: =1
                                     ChevronBackground: =RGBA(255, 255, 255, 1)
@@ -3158,20 +3209,23 @@
                                     ChevronHoverBackground: =
                                     ChevronHoverFill: =primary
                                     Color: =secondarytext
+                                    DisplayFields: =["Nombre","Apellido"]
                                     FillPortions: =1
                                     HoverBorderColor: =
                                     HoverColor: =RGBA(26, 26, 26, 1)
                                     HoverFill: =RGBA(215, 223, 240, 1)
                                     InputTextPlaceholder: ="Seleccione Opción"
-                                    Items: =ComboBoxSample
+                                    Items: =DEV_Interlocutor
                                     LayoutMinWidth: =50
                                     PressedBorderColor: =secondarytext
                                     PressedColor: =RGBA(26, 26, 26, 1)
                                     PressedFill: =RGBA(0, 0, 0, 0)
-                                    SearchItems: =Search(ComboBoxSample,ComboBox2_36.SearchText,"Value1")
+                                    SearchFields: =["Nombre"]
+                                    SearchItems: =Search(DEV_Interlocutor,ComboBox2_35.SearchText,"Nombre")
                                     SelectMultiple: =false
                                     Size: =10
-                                    ZIndex: =2
+                                    Template: =ListItemTemplate.Double
+                                    ZIndex: =3
 
                 Container14_24 As groupContainer.horizontalAutoLayoutContainer:
                     DropShadow: =DropShadow.None

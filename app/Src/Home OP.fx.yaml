@@ -80,6 +80,7 @@
                         ZIndex: =2
 
                 Image1_1 As image:
+                    AlignInContainer: =AlignInContainer.Center
                     Height: =50
                     Image: =User().Image
                     LayoutMinHeight: =50
