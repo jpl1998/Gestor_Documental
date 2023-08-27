@@ -14,6 +14,7 @@
             Fill: =RGBA(255, 255, 255, 1)
             FillPortions: =0
             Height: =75
+            LayoutAlignItems: =LayoutAlignItems.Stretch
             LayoutGap: =20
             LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
             LayoutMinHeight: =100
@@ -38,7 +39,7 @@
                 AlignInContainer: =AlignInContainer.SetByContainer
                 DropShadow: =DropShadow.None
                 FillPortions: =0.5
-                LayoutAlignItems: =LayoutAlignItems.Center
+                LayoutAlignItems: =LayoutAlignItems.Stretch
                 LayoutGap: =5
                 LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
                 LayoutMinHeight: =50
@@ -47,6 +48,7 @@
                 ZIndex: =3
 
                 Container2 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
                     DropShadow: =DropShadow.None
                     LayoutAlignItems: =LayoutAlignItems.End
                     LayoutDirection: =LayoutDirection.Vertical
