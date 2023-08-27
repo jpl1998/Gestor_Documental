@@ -47202,6 +47202,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "App.DEV_ArchivoPrincipal"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.DEV_ArchivoPrincipal",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "DEV_ArchivoPrincipal",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-NotOfflineConnectors",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.DEV_Archivos"
                 }
               ],

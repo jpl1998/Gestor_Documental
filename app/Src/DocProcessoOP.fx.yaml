@@ -3311,8 +3311,28 @@
                             FillPortions: =1
                             LayoutMinHeight: =30
                             OnSelect: |-
-                                =
-                                Set(varpopuprevisoresop,false);
+                                =Set(varpopuprevisoresop,false);
+                                
+                                Set(varDocID, Patch(
+                                    DEV_Documento,
+                                    Defaults(DEV_Documento),
+                                    {
+                                        codigo: TextInput2.Text,
+                                        version: Value(TextInput2_2.Text),
+                                        Nombre:TextInput2_1.Text,
+                                        fecha:DatePicker1_5.SelectedDate,
+                                        id_tipo_docu: ComboBox2_10.Selected,
+                                        id_alcance:ComboBox2_12.Selected,
+                                        id_proceso:ComboBox2_14.Selected,
+                                        id_macroproceso:ComboBox2_13.Selected
+                                    }
+                                ));
+                                
+                                Patch(DEV_ArchivoPrincipal, Defaults(DEV_ArchivoPrincipal),
+                                {
+                                    id_documento:{Id: varDocID.ID , Value:varDocID.ID}
+                                
+                                });
                                 Set(varconfirmation,true)
                             RadiusBottomLeft: =5
                             RadiusBottomRight: =5
