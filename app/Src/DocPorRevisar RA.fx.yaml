@@ -2539,6 +2539,7 @@
                         Reset(comentario_observacion_ra);
                         UpdateContext({varDocObservado: "Todo", varObservacionPopup:true})
                     Text: ="Observar Todo"
+                    Visible: =IsBlank(varRevPrincipal) && IsBlank(varRevFlujograma) && IsBlank(varRevRcki)
                     Width: =412
                     X: =(Parent.Width-Self.Width)/2
                     Y: =15
@@ -2589,10 +2590,97 @@
                         );
                         UpdateContext({varResultadoPopup: true})
                     Text: ="Conforme Todo"
+                    Visible: =IsBlank(varRevPrincipal) && IsBlank(varRevFlujograma) && IsBlank(varRevRcki)
                     Width: =412
                     X: =(Parent.Width-Self.Width)/2
                     Y: =82
                     ZIndex: =2
+
+                conforme_button_revision_ra_3 As button:
+                    BorderColor: =primary
+                    Color: =primary
+                    DisplayMode: =If(IsBlank(varRevPrincipal) || IsBlank(varRevFlujograma) || IsBlank(varRevRcki), DisplayMode.Disabled, DisplayMode.Edit)
+                    Fill: =RGBA(255, 255, 255, 1)
+                    FocusedBorderThickness: =2
+                    Font: =Font.'Segoe UI'
+                    Height: =52
+                    HoverFill: =Self.Color
+                    OnSelect: |-
+                        =UpdateContext({
+                            varArchivoPrincipal: LookUp(DEV_Archivos, id_documento.Value = Text(varSelectedDoc.ID) && tipo_documento="Principal"),
+                            varArchivoFlujograma: LookUp(DEV_Archivos, id_documento.Value = Text(varSelectedDoc.ID) && tipo_documento="Flujograma"),
+                            varArchivoRcki: LookUp(DEV_Archivos, id_documento.Value = Text(varSelectedDoc.ID) && tipo_documento="RCKI")
+                        });
+                        
+                        UpdateIf(
+                                DEV_Modificacion_estatus_documento,
+                                Or(And(id_archivo.Value = Text(varArchivoPrincipal.ID), codigo = varArchivoPrincipal.codigo, version = varArchivoPrincipal.version, id_interlocutor.Value =Text(varInterlocutorId)),
+                                And(id_archivo.Value = Text(varArchivoFlujograma.ID), codigo = varArchivoFlujograma.codigo, version = varArchivoFlujograma.version, id_interlocutor.Value =Text(varInterlocutorId)),
+                                And(id_archivo.Value = Text(varArchivoRcki.ID), codigo = varArchivoRcki.codigo, version = varArchivoRcki.version, id_interlocutor.Value =Text(varInterlocutorId))),
+                                {
+                                    'fecha y hora': Now(),
+                                    ind_inact: "Inactivo",
+                                    ind_mod: "u"
+                                }
+                        );
+                        
+                        //Archivo Principal
+                        Patch(
+                                DEV_Modificacion_estatus_documento,
+                                Defaults(DEV_Modificacion_estatus_documento),
+                                {
+                                    codigo: varArchivoPrincipal.codigo,
+                                    version: varArchivoPrincipal.version,
+                                    id_status_archivo: If(varRevPrincipal.estado="Aprobado", {Value:1, Id:1}, {Value:2, Id:2}),
+                                    id_interlocutor: {Id: varInterlocutorId, Value: varInterlocutorId},
+                                    id_archivo: {Id: varArchivoPrincipal.ID, Value: varArchivoPrincipal.ID},
+                                    nro_mod: Coalesce(First(SortByColumns(Filter(DEV_Modificacion_estatus_documento, id_archivo.Value = Text(varArchivoPrincipal.ID), codigo = varArchivoPrincipal.codigo,version = varArchivoPrincipal.version, id_interlocutor.Value =Text(varInterlocutorId)), "nro_mod",SortOrder.Descending)).nro_mod,0)+1,
+                                    'fecha y hora':Now(),
+                                    ind_inact: "Activo",
+                                    ind_mod: "i"
+                                }
+                        );
+                        
+                        //Flujograma
+                        Patch(
+                                DEV_Modificacion_estatus_documento,
+                                Defaults(DEV_Modificacion_estatus_documento),
+                                {
+                                    codigo: varArchivoFlujograma.codigo,
+                                    version: varArchivoFlujograma.version,
+                                    id_status_archivo: If(varRevFlujograma.estado="Aprobado", {Value:1, Id:1}, {Value:2, Id:2}),
+                                    id_interlocutor: {Id: varInterlocutorId, Value: varInterlocutorId},
+                                    id_archivo: {Id: varArchivoFlujograma.ID, Value: varArchivoFlujograma.ID},
+                                    nro_mod: Coalesce(First(SortByColumns(Filter(DEV_Modificacion_estatus_documento, id_archivo.Value = Text(varArchivoFlujograma.ID), codigo = varArchivoFlujograma.codigo,version = varArchivoFlujograma.version, id_interlocutor.Value =Text(varInterlocutorId)), "nro_mod",SortOrder.Descending)).nro_mod,0)+1,
+                                    'fecha y hora':Now(),
+                                    ind_inact: "Activo",
+                                    ind_mod: "i"
+                                }
+                        );
+                        
+                        Patch(
+                                DEV_Modificacion_estatus_documento,
+                                Defaults(DEV_Modificacion_estatus_documento),
+                                {
+                                    codigo: varArchivoRcki.codigo,
+                                    version: varArchivoRcki.version,
+                                    id_status_archivo: If(varRevRcki.estado="Aprobado", {Value:1, Id:1}, {Value:2, Id:2}),
+                                    id_interlocutor: {Id: varInterlocutorId, Value: varInterlocutorId},
+                                    id_archivo: {Id: varArchivoRcki.ID, Value: varArchivoRcki.ID},
+                                    nro_mod: Coalesce(First(SortByColumns(Filter(DEV_Modificacion_estatus_documento, id_archivo.Value = Text(varArchivoRcki.ID), codigo = varArchivoRcki.codigo,version = varArchivoRcki.version, id_interlocutor.Value =Text(varInterlocutorId)), "nro_mod",SortOrder.Descending)).nro_mod,0)+1,
+                                    'fecha y hora':Now(),
+                                    ind_inact: "Activo",
+                                    ind_mod: "i"
+                                }
+                        );
+                        
+                        UpdateContext({varResultadoPopup: true})
+                    Text: ="Enviar Revisión"
+                    Visible: =!observar_button_revision_ra.Visible
+                    Width: =412
+                    X: =(Parent.Width-Self.Width)/2
+                    Y: =40
+                    ZIndex: =3
 
     popup_observacion_ra As groupContainer.manualLayoutContainer:
         Fill: =RGBA(0, 0, 0, 0.15)
