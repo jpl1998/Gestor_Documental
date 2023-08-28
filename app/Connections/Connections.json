@@ -88,6 +88,9 @@
           "DEV_Modificacion_estatus_proceso_doc": {
             "tableName": "5894b276-516f-4fa0-843d-f155b6101ac8"
           },
+          "DEV_Observacion": {
+            "tableName": "90259f3c-7e99-4517-b2c4-bb7468030777"
+          },
           "DEV_Posicion": {
             "tableName": "9dcb6923-7a2f-4925-9d1d-6893cc0fd807"
           },
@@ -131,7 +134,8 @@
       "DEV_Subgerencia",
       "DEV_TipoDocumento",
       "DEV_Archivos",
-      "DEV_Estatus_documento"
+      "DEV_Estatus_documento",
+      "DEV_Observacion"
     ],
     "dependencies": {},
     "dependents": [],

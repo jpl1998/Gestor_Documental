@@ -1748,7 +1748,7 @@
                     Fill: =RGBA(255, 255, 255, 1)
                     Height: =52
                     OnSelect: |-
-                        =UpdateContext({varRevPrincipal: Blank(), varRevFlujograma: Blank(), varRevRcki: Blank(), varRevisionPopup: true})
+                        =UpdateContext({varInterlocutorId: LookUp(DEV_Interlocutor, Email.Email=User().Email).ID, varRevPrincipal: Blank(), varRevFlujograma: Blank(), varRevRcki: Blank(), varRevisionPopup: true})
                     Text: ="Empezar Revisión"
                     Width: =384
                     X: =5
@@ -1875,7 +1875,7 @@
                                 AlignInContainer: =AlignInContainer.Stretch
                                 Font: =Font.'Segoe UI'
                                 Size: =12
-                                Text: ="Text"
+                                Text: =First(ThisItem.Attachments).DisplayName
                                 Width: =195
                                 ZIndex: =2
 
@@ -1991,7 +1991,8 @@
                                         Height: =24
                                         HoverFill: =RGBA(168, 0, 0, 0.46)
                                         OnSelect: |-
-                                            =Reset(observaciones_attachment_ra);
+                                            =ResetForm(observacion_attachment_form_ra);
+                                            Reset(comentario_observacion_ra);
                                             UpdateContext({varDocObservado: "Principal", varObservacionPopup:true})
                                         PressedFill: =
                                         RadiusBottomLeft: =0
@@ -2081,7 +2082,7 @@
 
                     docPrincipal_revision_ra_3 As gallery.galleryVertical:
                         DelayItemLoading: =true
-                        Items: =Filter(DEV_Archivos, id_documento.Value = Text(varSelectedDoc.ID), tipo_documento="Principal")
+                        Items: =Filter(DEV_Archivos, id_documento.Value = Text(varSelectedDoc.ID), tipo_documento="Flujograma")
                         Layout: =Layout.Vertical
                         LayoutMinHeight: =50
                         LayoutMinWidth: =300
@@ -2099,7 +2100,7 @@
                             archivo_image_sidebar_docRev_ra_2 As image:
                                 AlignInContainer: =AlignInContainer.Stretch
                                 Height: =24
-                                Image: =word
+                                Image: =visio
                                 LayoutMinHeight: =24
                                 Width: =24
                                 ZIndex: =1
@@ -2108,7 +2109,7 @@
                                 AlignInContainer: =AlignInContainer.Stretch
                                 Font: =Font.'Segoe UI'
                                 Size: =12
-                                Text: ="Text"
+                                Text: =First(ThisItem.Attachments).DisplayName
                                 Width: =195
                                 ZIndex: =2
 
@@ -2224,7 +2225,8 @@
                                         Height: =24
                                         HoverFill: =RGBA(168, 0, 0, 0.46)
                                         OnSelect: |-
-                                            =Reset(observaciones_attachment_ra);
+                                            =ResetForm(observacion_attachment_form_ra);
+                                            Reset(comentario_observacion_ra);
                                             UpdateContext({varDocObservado: "Flujograma", varObservacionPopup:true})
                                         PressedFill: =
                                         RadiusBottomLeft: =0
@@ -2313,7 +2315,7 @@
 
                     docPrincipal_revision_ra_4 As gallery.galleryVertical:
                         DelayItemLoading: =true
-                        Items: =Filter(DEV_Archivos, id_documento.Value = Text(varSelectedDoc.ID), tipo_documento="Principal")
+                        Items: =Filter(DEV_Archivos, id_documento.Value = Text(varSelectedDoc.ID), tipo_documento="RCKI")
                         Layout: =Layout.Vertical
                         LayoutMinHeight: =50
                         LayoutMinWidth: =300
@@ -2331,7 +2333,7 @@
                             archivo_image_sidebar_docRev_ra_3 As image:
                                 AlignInContainer: =AlignInContainer.Stretch
                                 Height: =24
-                                Image: =word
+                                Image: =excel
                                 LayoutMinHeight: =24
                                 Width: =24
                                 ZIndex: =1
@@ -2340,7 +2342,7 @@
                                 AlignInContainer: =AlignInContainer.Stretch
                                 Font: =Font.'Segoe UI'
                                 Size: =12
-                                Text: ="Text"
+                                Text: =First(ThisItem.Attachments).DisplayName
                                 Width: =195
                                 ZIndex: =2
 
@@ -2456,7 +2458,8 @@
                                         Height: =24
                                         HoverFill: =RGBA(168, 0, 0, 0.46)
                                         OnSelect: |-
-                                            =Reset(observaciones_attachment_ra);
+                                            =ResetForm(observacion_attachment_form_ra);
+                                            Reset(comentario_observacion_ra);
                                             UpdateContext({varDocObservado: "Rcki", varObservacionPopup:true})
                                         PressedFill: =
                                         RadiusBottomLeft: =0
@@ -2532,7 +2535,9 @@
                     Height: =52
                     HoverFill: =Self.Color
                     OnSelect: |-
-                        =UpdateContext({varDocObservado: "Todo", varObservacionPopup:true})
+                        =ResetForm(observacion_attachment_form_ra);
+                        Reset(comentario_observacion_ra);
+                        UpdateContext({varDocObservado: "Todo", varObservacionPopup:true})
                     Text: ="Observar Todo"
                     Width: =412
                     X: =(Parent.Width-Self.Width)/2
@@ -2555,12 +2560,28 @@
                                 codigo = varSelectedDoc.codigo,
                                 version = varSelectedDoc.version
                             ) As archivo,
+                            UpdateIf(
+                                DEV_Modificacion_estatus_documento,
+                                And(id_archivo.Value = Text(varSelectedDoc.ID), codigo = varSelectedDoc.codigo, version = varSelectedDoc.version, id_interlocutor.Value =Text(varInterlocutorId)),
+                                {
+                                    'fecha y hora': Now(),
+                                    ind_inact: "Inactivo",
+                                    ind_mod: "u"
+                                }
+                            );
                             Patch(
                                 DEV_Modificacion_estatus_documento,
                                 Defaults(DEV_Modificacion_estatus_documento),
                                 {
                                     codigo: archivo.codigo,
-                                    version: archivo.version
+                                    version: archivo.version,
+                                    id_status_archivo: {Value:1, Id:1},
+                                    id_interlocutor: {Id: varInterlocutorId, Value: varInterlocutorId},
+                                    id_archivo: {Id: varSelectedDoc.ID, Value: varSelectedDoc.ID},
+                                    nro_mod: Coalesce(First(SortByColumns(Filter(DEV_Modificacion_estatus_documento, id_archivo.Value = Text(varSelectedDoc.ID),codigo = varSelectedDoc.codigo,version = varSelectedDoc.version, id_interlocutor.Value =Text(varInterlocutorId)), "nro_mod",SortOrder.Descending)).nro_mod,0)+1,
+                                    'fecha y hora':Now(),
+                                    ind_inact: "Activo",
+                                    ind_mod: "i"
                                 }
                             )
                         );
@@ -2598,21 +2619,6 @@
                 Y: =16
                 ZIndex: =1
 
-            cancel_icon_revision_popup_ra_1 As icon.Cancel:
-                Color: =RGBA(0, 0, 0, 1)
-                Height: =35
-                Icon: =Icon.Cancel
-                OnSelect: |-
-                    =UpdateContext({varObservacionPopup:false})
-                PaddingBottom: =5
-                PaddingLeft: =5
-                PaddingRight: =5
-                PaddingTop: =5
-                Width: =35
-                X: =401
-                Y: =13
-                ZIndex: =2
-
             title_revision_popup_ra_2 As label:
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Semibold
@@ -2622,7 +2628,7 @@
                 Width: =311
                 X: =24
                 Y: =64
-                ZIndex: =3
+                ZIndex: =2
 
             title_revision_popup_ra_3 As label:
                 Font: =Font.'Segoe UI'
@@ -2633,7 +2639,7 @@
                 Width: =311
                 X: =24
                 Y: =144
-                ZIndex: =4
+                ZIndex: =3
 
             comentario_observacion_ra As text:
                 BorderColor: =placeholder
@@ -2645,7 +2651,7 @@
                 Width: =412
                 X: =24
                 Y: =176
-                ZIndex: =5
+                ZIndex: =4
 
             observar_button_revision_ra_1 As button:
                 BorderColor: =red
@@ -2679,14 +2685,76 @@
                                 archivo: First(observaciones_attachment_ra.Attachments),
                                 comentario: comentario_observacion_ra.Text
                             }
-                        })
+                        }),
+                    
+                        //Observacion a todo
+                        ForAll(
+                        Filter(
+                            DEV_Archivos,
+                            id_documento.Value = Text(varSelectedDoc.ID),
+                            codigo = varSelectedDoc.codigo,
+                            version = varSelectedDoc.version
+                        ) As archivo,
+                        Concurrent(
+                            UpdateIf(
+                                DEV_Modificacion_estatus_documento,
+                                And(id_archivo.Value = Text(varSelectedDoc.ID), codigo = varSelectedDoc.codigo, version = varSelectedDoc.version, id_interlocutor.Value =Text(varInterlocutorId)),
+                                {
+                                    'fecha y hora': Now(),
+                                    ind_inact: "Inactivo",
+                                    ind_mod: "u"
+                                }
+                            ),
+                            UpdateIf(
+                                DEV_Observacion,
+                                And(id_archivo.Value = Text(varSelectedDoc.ID), id_interlocutor.Value =Text(varInterlocutorId)),
+                                {
+                                    fecha_hora: Now(),
+                                    ind_inact: "Inactivo",
+                                    ind_mod: "u"
+                                }
+                            )
+                        );
+                        Concurrent(
+                            Patch(
+                                DEV_Modificacion_estatus_documento,
+                                Defaults(DEV_Modificacion_estatus_documento),
+                                {
+                                    codigo: archivo.codigo,
+                                    version: archivo.version,
+                                    id_status_archivo: {Value:2, Id:2},
+                                    id_interlocutor: {Id: varInterlocutorId, Value: varInterlocutorId},
+                                    id_archivo: {Id: varSelectedDoc.ID, Value: varSelectedDoc.ID},
+                                    nro_mod: Coalesce(First(SortByColumns(Filter(DEV_Modificacion_estatus_documento, id_archivo.Value = Text(varSelectedDoc.ID),codigo = varSelectedDoc.codigo,version = varSelectedDoc.version, id_interlocutor.Value =Text(varInterlocutorId)), "nro_mod",SortOrder.Descending)).nro_mod,0)+1,
+                                    'fecha y hora':Now(),
+                                    ind_inact: "Activo",
+                                    ind_mod: "i"
+                                }
+                            ),
+                            Patch(
+                                DEV_Observacion,
+                                Defaults(DEV_Observacion),
+                                {
+                                    id_interlocutor: {Id: varInterlocutorId, Value: varInterlocutorId},
+                                    id_archivo: {Id: varSelectedDoc.ID, Value: varSelectedDoc.ID},
+                                    nro_mod: Coalesce(First(SortByColumns(Filter(DEV_Observacion, id_archivo.Value = Text(varSelectedDoc.ID), id_interlocutor.Value =Text(varInterlocutorId)), "nro_mod",SortOrder.Descending)).nro_mod,0)+1,
+                                    fecha_hora:Now(),
+                                    ind_inact: "Activo",
+                                    ind_mod: "i",
+                                    observacion: comentario_observacion_ra.Text
+                                },
+                                observacion_attachment_form_ra.Updates
+                            )
+                        )
+                    );
+                    UpdateContext({varResultadoPopup: true})
                     );
                     UpdateContext({varObservacionPopup:false})
                 Text: ="Guardar Observación"
                 Width: =412
                 X: =(Parent.Width-Self.Width)/2
                 Y: =332
-                ZIndex: =6
+                ZIndex: =5
 
             attachment_name As label:
                 Color: =primary
@@ -2698,7 +2766,7 @@
                 Width: =260
                 X: =39
                 Y: =96
-                ZIndex: =7
+                ZIndex: =6
 
             attachemnet_icon As icon.Attachment:
                 Color: =primary
@@ -2707,21 +2775,7 @@
                 Width: =18
                 X: =24
                 Y: =107
-                ZIndex: =8
-
-            cancel_attachment_icon_obervacion As icon.Cancel:
-                Height: =29
-                Icon: =Icon.Cancel
-                OnSelect: =Reset(observaciones_attachment_ra)
-                PaddingBottom: =5
-                PaddingLeft: =5
-                PaddingRight: =5
-                PaddingTop: =5
-                Visible: =!IsEmpty(observaciones_attachment_ra.Attachments)
-                Width: =29
-                X: =335
-                Y: =102
-                ZIndex: =9
+                ZIndex: =7
 
             attachment_name_1 As label:
                 Color: =primary
@@ -2733,34 +2787,87 @@
                 Width: =260
                 X: =39
                 Y: =96
-                ZIndex: =10
+                ZIndex: =8
 
-            observaciones_attachment_ra As attachments:
-                AddAttachmentText: =
-                BorderColor: =
-                BorderStyle: =BorderStyle.None
-                Color: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(0, 0, 0, 0)
-                DisplayMode: =Parent.DisplayMode
-                DropTargetBorderStyle: =BorderStyle.None
-                Fill: =RGBA(0, 0, 0, 0)
-                Height: =107
-                HoverColor: =RGBA(0, 0, 0, 0)
-                HoverFill: =RGBA(0, 0, 0, 0.15)
-                IsInDataCard: =true
-                Items: =
-                MaxAttachments: =1
-                MaxAttachmentsText: =
-                NoAttachmentsText: =
+            observacion_attachment_form_ra As form:
+                DataSource: =DEV_Observacion
+                DefaultMode: =FormMode.New
+                Height: =125
+                Width: =436
+                X: =12
+                Y: =21
+                ZIndex: =9
+
+                Attachments_DataCard1 As typedDataCard.attachmentsEditCard:
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="{Attachments}"
+                    Default: =ThisItem.Attachments
+                    DisplayMode: =Parent.DisplayMode
+                    DisplayName: =DataSourceInfo([@DEV_Observacion],DataSourceInfo.DisplayName,"{Attachments}")
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =34
+                    Required: =false
+                    Update: =observaciones_attachment_ra.Attachments
+                    Width: =435
+                    X: =0
+                    Y: =0
+                    ZIndex: =8
+
+                    observaciones_attachment_ra As attachments:
+                        AddAttachmentText: =
+                        BorderColor: =
+                        BorderStyle: =BorderStyle.None
+                        Color: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(0, 0, 0, 0)
+                        DisplayMode: =Parent.DisplayMode
+                        DropTargetBorderStyle: =BorderStyle.None
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =100
+                        HoverColor: =RGBA(0, 0, 0, 0)
+                        HoverFill: =RGBA(0, 0, 0, 0.15)
+                        IsInDataCard: =true
+                        Items: =Parent.Default
+                        MaxAttachments: =1
+                        MaxAttachmentsText: =
+                        NoAttachmentsText: =
+                        PaddingBottom: =5
+                        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                        PaddingRight: =5
+                        PaddingTop: =5
+                        PressedFill: =Color.Transparent
+                        Visible: =IsEmpty(observaciones_attachment_ra.Attachments)
+                        Width: =408
+                        X: =10
+                        Y: =20
+                        ZIndex: =5
+
+            cancel_icon_revision_popup_ra_1 As icon.Cancel:
+                Color: =RGBA(0, 0, 0, 1)
+                Height: =35
+                Icon: =Icon.Cancel
+                OnSelect: |-
+                    =UpdateContext({varObservacionPopup:false})
                 PaddingBottom: =5
-                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                PaddingLeft: =5
                 PaddingRight: =5
                 PaddingTop: =5
-                PressedFill: =Color.Transparent
-                Visible: =IsEmpty(observaciones_attachment_ra.Attachments)
-                Width: =Parent.Width - 60
-                X: =24
-                Y: =42
+                Width: =35
+                X: =401
+                Y: =13
+                ZIndex: =10
+
+            cancel_attachment_icon_obervacion As icon.Cancel:
+                Height: =29
+                Icon: =Icon.Cancel
+                OnSelect: =ResetForm(observacion_attachment_form_ra)
+                PaddingBottom: =5
+                PaddingLeft: =5
+                PaddingRight: =5
+                PaddingTop: =5
+                Visible: =!IsEmpty(observaciones_attachment_ra.Attachments)
+                Width: =29
+                X: =335
+                Y: =102
                 ZIndex: =11
 
     popup_resultado_enviado As groupContainer.manualLayoutContainer:

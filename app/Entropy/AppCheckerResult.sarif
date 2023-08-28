@@ -31578,6 +31578,30 @@
               "message": {
                 "text": "Error occurred running rule app-InefficientDelayLoading."
               }
+            },
+            {
+              "associatedRule": {
+                "id": "app-InefficientDelayLoading",
+                "index": 11
+              },
+              "descriptor": {
+                "id": "app-InefficientDelayLoading"
+              },
+              "message": {
+                "text": "Error occurred running rule app-InefficientDelayLoading."
+              }
+            },
+            {
+              "associatedRule": {
+                "id": "app-InefficientDelayLoading",
+                "index": 11
+              },
+              "descriptor": {
+                "id": "app-InefficientDelayLoading"
+              },
+              "message": {
+                "text": "Error occurred running rule app-InefficientDelayLoading."
+              }
             }
           ]
         }
@@ -38613,19 +38637,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'DocPorRevisar RA'.popup_observacion_ra.container_popup_observacion_ra.observaciones_attachment_ra.AccessibleLabel"
+                  "fullyQualifiedName": "'DocPorRevisar RA'.popup_observacion_ra.container_popup_observacion_ra.cancel_attachment_icon_obervacion.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'DocPorRevisar RA'.popup_observacion_ra.container_popup_observacion_ra.observaciones_attachment_ra.AccessibleLabel",
+                  "fullyQualifiedName": "'DocPorRevisar RA'.popup_observacion_ra.container_popup_observacion_ra.cancel_attachment_icon_obervacion.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "AccessibleLabel",
+                "member": "TabIndex",
                 "module": "DocPorRevisar RA",
-                "type": "'DocPorRevisar RA'.popup_observacion_ra.container_popup_observacion_ra.observaciones_attachment_ra"
+                "type": "'DocPorRevisar RA'.popup_observacion_ra.container_popup_observacion_ra.cancel_attachment_icon_obervacion"
               }
             }
           ],
@@ -38635,8 +38659,8 @@
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 5
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -38667,36 +38691,6 @@
           },
           "ruleId": "acc-AccessibleLabelNeeded",
           "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'DocPorRevisar RA'.popup_observacion_ra.container_popup_observacion_ra.cancel_attachment_icon_obervacion.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'DocPorRevisar RA'.popup_observacion_ra.container_popup_observacion_ra.cancel_attachment_icon_obervacion.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "DocPorRevisar RA",
-                "type": "'DocPorRevisar RA'.popup_observacion_ra.container_popup_observacion_ra.cancel_attachment_icon_obervacion"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 6
         },
         {
           "locations": [
@@ -49983,6 +49977,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'DocPorRevisar RA'.popup_observacion_ra.container_popup_observacion_ra.observacion_attachment_form_ra.Attachments_DataCard1.observaciones_attachment_ra.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPorRevisar RA'.popup_observacion_ra.container_popup_observacion_ra.observacion_attachment_form_ra.Attachments_DataCard1.observaciones_attachment_ra.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "DocPorRevisar RA",
+                "type": "'DocPorRevisar RA'.popup_observacion_ra.container_popup_observacion_ra.observacion_attachment_form_ra.Attachments_DataCard1.observaciones_attachment_ra"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.companyRed"
                 }
               ],
@@ -50767,6 +50791,36 @@
               },
               "properties": {
                 "member": "DEV_TipoDocumento",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-NotOfflineConnectors",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.DEV_Observacion"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.DEV_Observacion",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "DEV_Observacion",
                 "module": "App",
                 "type": "App"
               }
