@@ -569,7 +569,9 @@
                                         Icon1_3 As icon.Edit:
                                             Height: =Parent.Height*60%
                                             Icon: =Icon.View
-                                            OnSelect: =Set(varsidebarop,true)
+                                            OnSelect: |-
+                                                =Set(varsidebarop,true);
+                                                Set(varDocSide,ThisItem)
                                             PaddingBottom: =3
                                             PaddingLeft: =3
                                             PaddingRight: =3
@@ -1894,6 +1896,8 @@
                             OnSelect: |-
                                 =Set(varpopupformdoc,false);
                                 ResetForm(FormArchivoPrincipal);
+                                ResetForm(FormFlujograma);
+                                ResetForm(FormRCKI);
                                 Set(varpopupuploaddoc,true)
                             RadiusBottomLeft: =5
                             RadiusBottomRight: =5
@@ -4498,7 +4502,7 @@
                         Font: =Font.'Segoe UI'
                         Height: =24
                         Size: =12
-                        Text: ="Text"
+                        Text: =varDocSide.'Criado por'.DisplayName
                         Width: =(Parent.Width/3)*2 -20
                         ZIndex: =2
 
@@ -4552,7 +4556,7 @@
                         Font: =Font.'Segoe UI'
                         Height: =24
                         Size: =12
-                        Text: ="Text"
+                        Text: =
                         Width: =(Parent.Width/3)*2 -20
                         ZIndex: =2
 
@@ -4579,7 +4583,7 @@
                         Font: =Font.'Segoe UI'
                         Height: =24
                         Size: =12
-                        Text: ="Text"
+                        Text: =varDocSide.codigo
                         Width: =(Parent.Width/3)*2 -20
                         ZIndex: =2
 
@@ -4606,7 +4610,7 @@
                         Font: =Font.'Segoe UI'
                         Height: =24
                         Size: =12
-                        Text: ="Text"
+                        Text: =varDocSide.Nombre
                         Width: =(Parent.Width/3)*2 -20
                         ZIndex: =2
 
@@ -4633,7 +4637,7 @@
                         Font: =Font.'Segoe UI'
                         Height: =24
                         Size: =12
-                        Text: ="Text"
+                        Text: =varDocSide.id_tipo_docu.Value
                         Width: =(Parent.Width/3)*2 -20
                         ZIndex: =2
 
@@ -4687,7 +4691,7 @@
                         Font: =Font.'Segoe UI'
                         Height: =24
                         Size: =12
-                        Text: ="Text"
+                        Text: =varDocSide.id_alcance.Value
                         Width: =(Parent.Width/3)*2 -20
                         ZIndex: =2
 
@@ -4714,7 +4718,7 @@
                         Font: =Font.'Segoe UI'
                         Height: =24
                         Size: =12
-                        Text: ="Text"
+                        Text: =varDocSide.version
                         Width: =(Parent.Width/3)*2 -20
                         ZIndex: =2
 
@@ -4741,7 +4745,7 @@
                         Font: =Font.'Segoe UI'
                         Height: =24
                         Size: =12
-                        Text: ="Text"
+                        Text: =varDocSide.fecha
                         Width: =(Parent.Width/3)*2 -20
                         ZIndex: =2
 
@@ -4768,7 +4772,7 @@
                         Font: =Font.'Segoe UI'
                         Height: =24
                         Size: =12
-                        Text: ="Text"
+                        Text: =varDocSide.id_macroproceso.Value
                         Width: =(Parent.Width/3)*2 -20
                         ZIndex: =2
 
