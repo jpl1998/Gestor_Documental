@@ -2006,9 +2006,15 @@
 
                                     conforme_button_ra As button:
                                         BorderStyle: =BorderStyle.None
-                                        Fill: =If(varRevPrincipal.estado="Aprovado", Self.HoverFill, RGBA(0, 0, 0, 0))
+                                        Fill: =If(varRevPrincipal.estado="Aprobado", Self.HoverFill, RGBA(0, 0, 0, 0))
                                         Height: =24
                                         HoverFill: =RGBA(141, 198, 63, 0.49)
+                                        OnSelect: |-
+                                            =UpdateContext({varRevPrincipal:{
+                                                    estado: "Aprobado",
+                                                    archivo: Blank(),
+                                                    comentario: ""
+                                            }})
                                         PressedFill: =
                                         RadiusBottomLeft: =0
                                         RadiusBottomRight: =0
