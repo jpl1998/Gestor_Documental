@@ -699,6 +699,27 @@
                                                     Y: =(Parent.Height-Self.Height)/2
                                                     ZIndex: =1
 
+                                            Container13_65 As groupContainer.manualLayoutContainer:
+                                                FillPortions: =0
+                                                LayoutMinHeight: =40
+                                                LayoutMinWidth: =50
+                                                Width: =80
+                                                ZIndex: =6
+
+                                                Icon1_47 As icon.Edit:
+                                                    Height: =Parent.Height*60%
+                                                    Icon: =Icon.View
+                                                    OnSelect: |-
+                                                        =UpdateContext({varSelectedDoc:ThisItem, varSidebarPopup:true})
+                                                    PaddingBottom: =3
+                                                    PaddingLeft: =3
+                                                    PaddingRight: =3
+                                                    PaddingTop: =3
+                                                    Width: =Parent.Height*60%
+                                                    X: =(Parent.Width-Self.Width)/2
+                                                    Y: =(Parent.Height-Self.Height)/2
+                                                    ZIndex: =1
+
                     card_doc_apr_home_ra As dataCard.blankCard:
                         BorderColor: =RGBA(0, 0, 0, 1)
                         BorderStyle: =BorderStyle.Solid
