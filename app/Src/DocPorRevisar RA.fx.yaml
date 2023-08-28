@@ -1332,7 +1332,7 @@
 
                 archivos_gallery_sidebar_docRev_ra As gallery.galleryVertical:
                     DelayItemLoading: =true
-                    Items: =Filter(DEV_Archivos, id_documento.Value = Text(varSelectedDoc.ID))
+                    Items: =Filter(DEV_Archivos, id_documento.Value = Text(varSelectedDoc.ID), version=varSelectedDoc.version, codigo= varSelectedDoc.codigo)
                     Layout: =Layout.Vertical
                     LayoutMinHeight: =287
                     LayoutMinWidth: =320
@@ -2556,12 +2556,7 @@
                     OnSelect: |-
                         =ClearCollect(varArchivoId,{Id: 0, Value: ""});
                         ForAll(
-                            Filter(
-                                DEV_Archivos,
-                                id_documento.Value = Text(varSelectedDoc.ID),
-                                codigo = varSelectedDoc.codigo,
-                                version = varSelectedDoc.version
-                            ) As archivo,
+                            archivos_gallery_sidebar_docRev_ra.AllItems As archivo,
                             Patch(varArchivoId,First(varArchivoId),{Id: varInterlocutorId, Value: varInterlocutorId});
                             UpdateIf(
                                 DEV_Modificacion_estatus_documento,
@@ -2580,7 +2575,7 @@
                                     version: archivo.version,
                                     id_status_archivo: {Value:1, Id:1},
                                     id_interlocutor: {Id: varInterlocutorId, Value: varInterlocutorId},
-                                    id_archivo: First(varArchivoId),
+                                    id_archivo: {Id: archivo.ID, Value: archivo.ID},
                                     nro_mod: Coalesce(First(SortByColumns(Filter(DEV_Modificacion_estatus_documento, id_archivo.Value = First(varArchivoId).Value, codigo = archivo.codigo,version = archivo.version, id_interlocutor.Value =Text(varInterlocutorId)), "nro_mod",SortOrder.Descending)).nro_mod,0)+1,
                                     'fecha y hora':Now(),
                                     ind_inact: "Activo",
@@ -2607,7 +2602,7 @@
                     HoverFill: =Self.Color
                     OnSelect: |-
                         =ClearCollect(varArchivoId,{Id: 0, Value: ""});
-                        ForAll(Filter(DEV_Archivos, id_documento.Value = Text(varSelectedDoc.ID)) As archivo,
+                        ForAll(archivos_gallery_sidebar_docRev_ra.AllItems As archivo,
                         Patch(varArchivoId,First(varArchivoId),{Id: varInterlocutorId, Value: varInterlocutorId});
                         UpdateIf(
                                 DEV_Modificacion_estatus_documento,
@@ -2633,7 +2628,7 @@
                                                         If(varRevRcki.estado="Aprobado", {Value:1, Id:1}, {Value:2, Id:2})
                                     ),
                                     id_interlocutor: {Id: varInterlocutorId, Value: varInterlocutorId},
-                                    id_archivo: First(varArchivoId),
+                                    id_archivo: {Value:archivo.ID, Id:archivo.ID},
                                     nro_mod: Coalesce(First(SortByColumns(Filter(DEV_Modificacion_estatus_documento, id_archivo.Value = First(varArchivoId).Value, codigo = archivo.codigo,version = archivo.version, id_interlocutor.Value =Text(varInterlocutorId)), "nro_mod",SortOrder.Descending)).nro_mod,0)+1,
                                     'fecha y hora':Now(),
                                     ind_inact: "Activo",
@@ -2747,12 +2742,7 @@
                         //Observacion a todo
                         ClearCollect(varArchivoId,{Id: 0, Value: ""});
                         ForAll(
-                        Filter(
-                            DEV_Archivos,
-                            id_documento.Value = Text(varSelectedDoc.ID),
-                            codigo = varSelectedDoc.codigo,
-                            version = varSelectedDoc.version
-                        ) As archivo,
+                        archivos_gallery_sidebar_docRev_ra.AllItems As archivo,
                         Patch(varArchivoId,First(varArchivoId),{Id: varInterlocutorId, Value: varInterlocutorId});
                         Concurrent(
                             UpdateIf(
