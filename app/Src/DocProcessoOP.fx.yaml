@@ -2006,7 +2006,7 @@
                             uploadDocPrincipal As typedDataCard.attachmentsEditCard:
                                 BorderStyle: =BorderStyle.Solid
                                 DataField: ="{Attachments}"
-                                Default: =ThisItem.Anexos
+                                Default: =ThisItem.Attachments
                                 DisplayMode: =Parent.DisplayMode
                                 DisplayName: =DataSourceInfo([@DEV_ArchivoPrincipal],DataSourceInfo.DisplayName,"{Attachments}")
                                 Fill: =RGBA(0, 0, 0, 0)
@@ -2064,7 +2064,7 @@
                             Anexos_DataCard4 As typedDataCard.attachmentsEditCard:
                                 BorderStyle: =BorderStyle.Solid
                                 DataField: ="{Attachments}"
-                                Default: =ThisItem.Anexos
+                                Default: =ThisItem.Attachments
                                 DisplayMode: =Parent.DisplayMode
                                 DisplayName: =DataSourceInfo([@DEV_Flujograma],DataSourceInfo.DisplayName,"{Attachments}")
                                 Fill: =RGBA(0, 0, 0, 0)
@@ -2121,7 +2121,7 @@
                             Anexos_DataCard4_1 As typedDataCard.attachmentsEditCard:
                                 BorderStyle: =BorderStyle.Solid
                                 DataField: ="{Attachments}"
-                                Default: =ThisItem.Anexos
+                                Default: =ThisItem.Attachments
                                 DisplayMode: =Parent.DisplayMode
                                 DisplayName: =DataSourceInfo([@DEV_Flujograma],DataSourceInfo.DisplayName,"{Attachments}")
                                 Fill: =RGBA(0, 0, 0, 0)
