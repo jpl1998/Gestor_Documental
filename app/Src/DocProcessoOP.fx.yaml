@@ -2001,7 +2001,7 @@
                             Width: =432
                             X: =40
                             Y: =40
-                            ZIndex: =3
+                            ZIndex: =2
 
                             uploadDocPrincipal As typedDataCard.attachmentsEditCard:
                                 BorderStyle: =BorderStyle.Solid
@@ -2045,32 +2045,54 @@
                             LayoutMinHeight: =30
                             PaddingTop: =10
                             Text: ="Flujograma *"
+                            ZIndex: =3
+
+                        FormFlujograma As form:
+                            AcceptsFocus: =false
+                            DataSource: =DEV_Flujograma
+                            DefaultMode: =FormMode.New
+                            FillPortions: =0
+                            Height: =75
+                            LayoutMinHeight: =250
+                            LayoutMinWidth: =400
+                            NumberOfColumns: =1
+                            Width: =432
+                            X: =40
+                            Y: =40
                             ZIndex: =4
 
-                        uploadFlujograma As attachments:
-                            AlignInContainer: =AlignInContainer.Stretch
-                            BorderColor: =
-                            BorderThickness: =1
-                            Color: =secondarytext
-                            DropTargetBorderColor: =RGBA(0, 0, 0, 0)
-                            DropTargetBorderStyle: =BorderStyle.None
-                            DropTargetBorderThickness: =0
-                            Height: =70
-                            IsInDataCard: =true
-                            Items: =
-                            MaxAttachments: =1
-                            MaxAttachmentSize: =20
-                            PaddingBottom: =5
-                            PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                            PaddingRight: =5
-                            PaddingTop: =5
-                            PressedFill: =RGBA(255, 255, 255, 1)
-                            Size: =9
-                            Tooltip: =
-                            Width: =Parent.Width - 60
-                            X: =30
-                            Y: =
-                            ZIndex: =5
+                            Anexos_DataCard4 As typedDataCard.attachmentsEditCard:
+                                BorderStyle: =BorderStyle.Solid
+                                DataField: ="{Attachments}"
+                                Default: =ThisItem.Anexos
+                                DisplayMode: =Parent.DisplayMode
+                                DisplayName: =DataSourceInfo([@DEV_Flujograma],DataSourceInfo.DisplayName,"{Attachments}")
+                                Fill: =RGBA(0, 0, 0, 0)
+                                Height: =Parent.Height
+                                Required: =false
+                                Update: =DataCardValue27.Attachments
+                                Width: =788
+                                X: =0
+                                Y: =0
+                                ZIndex: =5
+
+                                DataCardValue27 As attachments:
+                                    BorderColor: =RGBA(149, 149, 149, 1)
+                                    BorderThickness: =1
+                                    Height: =Parent.Height-5
+                                    IsInDataCard: =true
+                                    Items: =Parent.Default
+                                    MaxAttachments: =1
+                                    PaddingBottom: =5
+                                    PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                                    PaddingRight: =5
+                                    PaddingTop: =5
+                                    Size: =9
+                                    Tooltip: =Parent.DisplayName
+                                    Width: =Parent.Width - 5
+                                    X: =2
+                                    Y: =2
+                                    ZIndex: =2
 
                         lb_upload_doc_op_13 As label:
                             AlignInContainer: =AlignInContainer.Stretch
@@ -2080,32 +2102,54 @@
                             LayoutMinHeight: =30
                             PaddingTop: =10
                             Text: ="RCKI *"
+                            ZIndex: =5
+
+                        FormRCKI As form:
+                            AcceptsFocus: =false
+                            DataSource: =DEV_RCKI
+                            DefaultMode: =FormMode.New
+                            FillPortions: =0
+                            Height: =75
+                            LayoutMinHeight: =250
+                            LayoutMinWidth: =400
+                            NumberOfColumns: =1
+                            Width: =432
+                            X: =40
+                            Y: =40
                             ZIndex: =6
 
-                        uploadRCKI As attachments:
-                            AlignInContainer: =AlignInContainer.Stretch
-                            BorderColor: =
-                            BorderThickness: =1
-                            Color: =secondarytext
-                            DropTargetBorderColor: =RGBA(0, 0, 0, 0)
-                            DropTargetBorderStyle: =BorderStyle.None
-                            DropTargetBorderThickness: =0
-                            Height: =70
-                            IsInDataCard: =true
-                            Items: =
-                            MaxAttachments: =1
-                            MaxAttachmentSize: =20
-                            PaddingBottom: =5
-                            PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                            PaddingRight: =5
-                            PaddingTop: =5
-                            PressedFill: =RGBA(255, 255, 255, 1)
-                            Size: =9
-                            Tooltip: =
-                            Width: =Parent.Width - 60
-                            X: =30
-                            Y: =
-                            ZIndex: =7
+                            Anexos_DataCard4_1 As typedDataCard.attachmentsEditCard:
+                                BorderStyle: =BorderStyle.Solid
+                                DataField: ="{Attachments}"
+                                Default: =ThisItem.Anexos
+                                DisplayMode: =Parent.DisplayMode
+                                DisplayName: =DataSourceInfo([@DEV_Flujograma],DataSourceInfo.DisplayName,"{Attachments}")
+                                Fill: =RGBA(0, 0, 0, 0)
+                                Height: =Parent.Height
+                                Required: =false
+                                Update: =DataCardValue27_1.Attachments
+                                Width: =788
+                                X: =0
+                                Y: =0
+                                ZIndex: =5
+
+                                DataCardValue27_1 As attachments:
+                                    BorderColor: =RGBA(149, 149, 149, 1)
+                                    BorderThickness: =1
+                                    Height: =Parent.Height-5
+                                    IsInDataCard: =true
+                                    Items: =Parent.Default
+                                    MaxAttachments: =1
+                                    PaddingBottom: =5
+                                    PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                                    PaddingRight: =5
+                                    PaddingTop: =5
+                                    Size: =9
+                                    Tooltip: =Parent.DisplayName
+                                    Width: =Parent.Width - 5
+                                    X: =2
+                                    Y: =2
+                                    ZIndex: =2
 
                 Container14_23 As groupContainer.horizontalAutoLayoutContainer:
                     DropShadow: =DropShadow.None
@@ -3361,6 +3405,27 @@
                                 },
                                 FormArchivoPrincipal.Updates
                                 );
+                                
+                                Patch(DEV_Flujograma,Defaults(DEV_Flujograma),
+                                {
+                                    id_documento:{Id: varDocID.ID , Value:varDocID.ID},
+                                    codigo:varDocID.codigo,
+                                    version:1,
+                                    Descripcion:varDocID.Nombre
+                                },
+                                FormFlujograma.Updates
+                                );
+                                
+                                Patch(DEV_RCKI,Defaults(DEV_RCKI),
+                                {
+                                    id_documento:{Id: varDocID.ID , Value:varDocID.ID},
+                                    codigo:varDocID.codigo,
+                                    version:1,
+                                    descripcion:varDocID.Nombre
+                                },
+                                FormRCKI.Updates
+                                );
+                                
                                 
                                 Set(varconfirmation,true)
                             RadiusBottomLeft: =5
