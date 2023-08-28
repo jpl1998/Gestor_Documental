@@ -1247,6 +1247,12 @@
                                 DEV_Actor,
                                 id_documento.Value = Text(varSelectedDoc.ID),
                                 id_funcion.Value = Text(1)
+                            ),
+                            "Aprobado por",
+                            Filter(
+                                DEV_Actor,
+                                id_documento.Value = Text(varSelectedDoc.ID),
+                                id_funcion.Value = Text(2)
                             )
                         )
                     Layout: =Layout.Vertical
@@ -1255,6 +1261,7 @@
                     LoadingSpinner: =LoadingSpinner.Data
                     TemplatePadding: =0
                     TemplateSize: =60
+                    Visible: =menu_filter_evaluacion_sidebar_ra.Selected.Value <> "Registro"
                     ZIndex: =1
 
                     Image3 As image:
