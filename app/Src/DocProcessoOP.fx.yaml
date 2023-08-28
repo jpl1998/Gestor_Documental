@@ -1995,7 +1995,7 @@
 
                         FormArchivoPrincipal As form:
                             AcceptsFocus: =false
-                            DataSource: =DEV_ArchivoPrincipal
+                            DataSource: =DEV_Archivos
                             DefaultMode: =FormMode.New
                             FillPortions: =0
                             Height: =73
@@ -2053,7 +2053,7 @@
 
                         FormFlujograma As form:
                             AcceptsFocus: =false
-                            DataSource: =DEV_Flujograma
+                            DataSource: =DEV_Archivos
                             DefaultMode: =FormMode.New
                             FillPortions: =0
                             Height: =75
@@ -2110,7 +2110,7 @@
 
                         FormRCKI As form:
                             AcceptsFocus: =false
-                            DataSource: =DEV_RCKI
+                            DataSource: =DEV_Archivos
                             DefaultMode: =FormMode.New
                             FillPortions: =0
                             Height: =75
@@ -3400,32 +3400,36 @@
                                     }
                                 ));
                                 
-                                Patch(DEV_ArchivoPrincipal,Defaults(DEV_ArchivoPrincipal),
+                                Patch(DEV_Archivos,Defaults(DEV_Archivos),
                                 {
                                     id_documento:{Id: varDocID.ID , Value:varDocID.ID},
                                     codigo: varDocID.codigo,
                                     version:1,
-                                    descripcion:varDocID.Nombre
+                                    descripcion:varDocID.Nombre,
+                                    tipo_documento:"Principal"
                                 },
                                 FormArchivoPrincipal.Updates
                                 );
                                 
-                                Patch(DEV_Flujograma,Defaults(DEV_Flujograma),
+                                Patch(DEV_Archivos,Defaults(DEV_Archivos),
                                 {
                                     id_documento:{Id: varDocID.ID , Value:varDocID.ID},
                                     codigo:varDocID.codigo,
                                     version:1,
-                                    Descripcion:varDocID.Nombre
+                                    descripcion:varDocID.Nombre,
+                                    tipo_documento:"Flujograma"
                                 },
                                 FormFlujograma.Updates
                                 );
                                 
-                                Patch(DEV_RCKI,Defaults(DEV_RCKI),
+                                
+                                Patch(DEV_Archivos,Defaults(DEV_Archivos),
                                 {
                                     id_documento:{Id: varDocID.ID , Value:varDocID.ID},
                                     codigo:varDocID.codigo,
                                     version:1,
-                                    descripcion:varDocID.Nombre
+                                    descripcion:varDocID.Nombre,
+                                    tipo_documento:"RCKI"
                                 },
                                 FormRCKI.Updates
                                 );
