@@ -55,7 +55,7 @@
           "DEV_Empresa": {
             "tableName": "80057c46-79d6-4c25-a2e0-8c73f8afae11"
           },
-          "DEV_Estatus_archivos": {
+          "DEV_Estatus_documento": {
             "tableName": "7bf751f9-93b8-4cfc-a612-e7cef9dd6088"
           },
           "DEV_Estatus_proceso_doc": {
@@ -115,7 +115,6 @@
       "DEV_Acta_Aprobacion",
       "DEV_Documento",
       "DEV_Empresa",
-      "DEV_Estatus_archivos",
       "DEV_Estatus_proceso_doc",
       "DEV_Estructura_Organizativa",
       "DEV_Flujograma",
@@ -131,7 +130,8 @@
       "DEV_RCKI",
       "DEV_Subgerencia",
       "DEV_TipoDocumento",
-      "DEV_Archivos"
+      "DEV_Archivos",
+      "DEV_Estatus_documento"
     ],
     "dependencies": {},
     "dependents": [],

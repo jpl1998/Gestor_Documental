@@ -555,14 +555,14 @@
                                             BorderColor: =Self.Color
                                             BorderStyle: =BorderStyle.None
                                             Color: |-
-                                                =Switch(LookUp(DEV_Estatus_archivos, ID = Value(First(Filter(DEV_Modificacion_estatus_documento,codigo=ThisItem.codigo,ind_mod = "i")).id_status_archivo.Value),descripcion),
+                                                =Switch(LookUp(DEV_Modificacion_estatus_proceso_doc,codigo=ThisItem.codigo && ind_mod = "i").'id_estatus_documento: descripcion'.Value,
                                                 "Por aprobar", RGBA(180, 130, 0, 1),
                                                 "Por revisar",RGBA(180, 130, 0, 1),
                                                 "Observado", RGBA(214, 0, 0, 1),
                                                 "Aprobado",RGBA(44, 143, 112, 1))
                                             DisplayMode: =DisplayMode.View
                                             Fill: |-
-                                                =Switch(LookUp(DEV_Estatus_archivos, ID = Value(First(Filter(DEV_Modificacion_estatus_documento,codigo=ThisItem.codigo,ind_mod = "i")).id_status_archivo.Value),descripcion),
+                                                =Switch(LookUp(DEV_Modificacion_estatus_proceso_doc,codigo=ThisItem.codigo && ind_mod = "i").'id_estatus_documento: descripcion'.Value,
                                                 "Por aprobar", RGBA(249, 249, 249, 1),
                                                 "Por revisar",RGBA(249, 249, 249, 1),
                                                 "Observado", RGBA(245, 218, 216, 1),
@@ -575,7 +575,8 @@
                                             RadiusTopLeft: =5
                                             RadiusTopRight: =5
                                             Size: =11
-                                            Text: =LookUp(DEV_Estatus_archivos, ID = Value(First(Filter(DEV_Modificacion_estatus_documento,codigo=ThisItem.codigo,ind_mod = "i")).id_status_archivo.Value),descripcion)
+                                            Text: |-
+                                                =LookUp(DEV_Modificacion_estatus_proceso_doc,codigo=ThisItem.codigo && ind_mod = "i").'id_estatus_documento: descripcion'.Value
                                             Width: =Parent.Width*80%
                                             X: =(Parent.Width-Self.Width)/2
                                             Y: =(Parent.Height-Self.Height)/2
@@ -1232,7 +1233,22 @@
 
                 "persona_evaluacion_sidebar_ra As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
                     DelayItemLoading: =true
-                    Items: =Filter(DEV_Actor, id_documento.Value=Text(varSelectedDoc.ID))
+                    Items: |-
+                        =Switch(
+                            menu_filter_evaluacion_sidebar_ra.Selected.Value,
+                            "Elaborado por",
+                            Filter(
+                                DEV_Actor,
+                                id_documento.Value = Text(varSelectedDoc.ID),
+                                id_funcion.Value = Text(3)
+                            ),
+                            "Revisado por",
+                            Filter(
+                                DEV_Actor,
+                                id_documento.Value = Text(varSelectedDoc.ID),
+                                id_funcion.Value = Text(1)
+                            )
+                        )
                     Layout: =Layout.Vertical
                     LayoutMinHeight: =287
                     LayoutMinWidth: =320
@@ -2509,7 +2525,7 @@
                     Height: =52
                     HoverFill: =Self.Color
                     OnSelect: |-
-                        =UpdateContext({varObservacionPopup:true})
+                        =UpdateContext({varDocObservado: "Todo", varObservacionPopup:true})
                     Text: ="Observar Todo"
                     Width: =412
                     X: =(Parent.Width-Self.Width)/2
@@ -2525,7 +2541,23 @@
                     Height: =52
                     HoverFill: =Self.Color
                     OnSelect: |-
-                        =UpdateContext({varResultadoPopup:true})
+                        =ForAll(
+                            Filter(
+                                DEV_Archivos,
+                                id_documento.Value = Text(varSelectedDoc.ID),
+                                codigo = varSelectedDoc.codigo,
+                                version = varSelectedDoc.version
+                            ) As archivo,
+                            Patch(
+                                DEV_Modificacion_estatus_documento,
+                                Defaults(DEV_Modificacion_estatus_documento),
+                                {
+                                    codigo: archivo.codigo,
+                                    version: archivo.version
+                                }
+                            )
+                        );
+                        UpdateContext({varResultadoPopup: true})
                     Text: ="Conforme Todo"
                     Width: =412
                     X: =(Parent.Width-Self.Width)/2
@@ -2633,6 +2665,7 @@
                                 comentario: comentario_observacion_ra.Text
                             }
                         }),
+                        varDocObservado="Rcki",
                         UpdateContext({
                             varRevRcki:{
                                 estado: "Observado",
