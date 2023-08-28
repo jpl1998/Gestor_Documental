@@ -1966,7 +1966,8 @@
                                         Height: =24
                                         HoverFill: =RGBA(168, 0, 0, 0.46)
                                         OnSelect: |-
-                                            =UpdateContext({varDocObservado: "Principal", varObservacionPopup:true})
+                                            =Reset(observaciones_attachment_ra);
+                                            UpdateContext({varDocObservado: "Principal", varObservacionPopup:true})
                                         PressedFill: =
                                         RadiusBottomLeft: =0
                                         RadiusBottomRight: =0
@@ -2053,13 +2054,12 @@
                     LayoutMode: =LayoutMode.Auto
                     ZIndex: =2
 
-                    archivos_gallery_sidebar_docRev_ra_2 As gallery.galleryVertical:
-                        AlignInContainer: =AlignInContainer.SetByContainer
+                    docPrincipal_revision_ra_3 As gallery.galleryVertical:
                         DelayItemLoading: =true
-                        Items: =["sample"]
+                        Items: =Filter(DEV_Archivos, id_documento.Value = Text(varSelectedDoc.ID), tipo_documento="Principal")
                         Layout: =Layout.Vertical
-                        LayoutMinHeight: =10
-                        LayoutMinWidth: =320
+                        LayoutMinHeight: =50
+                        LayoutMinWidth: =300
                         LoadingSpinner: =LoadingSpinner.Data
                         TemplateSize: =50
                         ZIndex: =1
@@ -2074,6 +2074,7 @@
                             archivo_image_sidebar_docRev_ra_2 As image:
                                 AlignInContainer: =AlignInContainer.Stretch
                                 Height: =24
+                                Image: =word
                                 LayoutMinHeight: =24
                                 Width: =24
                                 ZIndex: =1
@@ -2192,11 +2193,12 @@
 
                                     observar_button_ra_1 As button:
                                         BorderStyle: =BorderStyle.None
-                                        Fill: =RGBA(0, 0, 0, 0)
+                                        Fill: =If(varRevFlujograma.estado="Observado", Self.HoverFill, RGBA(0, 0, 0, 0))
                                         Height: =24
                                         HoverFill: =RGBA(168, 0, 0, 0.46)
                                         OnSelect: |-
-                                            =UpdateContext({varObservacionPopup:true})
+                                            =Reset(observaciones_attachment_ra);
+                                            UpdateContext({varDocObservado: "Flujograma", varObservacionPopup:true})
                                         PressedFill: =
                                         RadiusBottomLeft: =0
                                         RadiusBottomRight: =0
@@ -2238,9 +2240,15 @@
 
                                     conforme_button_ra_1 As button:
                                         BorderStyle: =BorderStyle.None
-                                        Fill: =RGBA(0, 0, 0, 0)
+                                        Fill: =If(varRevFlujograma.estado="Aprobado", Self.HoverFill, RGBA(0, 0, 0, 0))
                                         Height: =24
                                         HoverFill: =RGBA(141, 198, 63, 0.49)
+                                        OnSelect: |-
+                                            =UpdateContext({varRevFlujograma:{
+                                                    estado: "Aprobado",
+                                                    archivo: Blank(),
+                                                    comentario: ""
+                                            }})
                                         PressedFill: =
                                         RadiusBottomLeft: =0
                                         RadiusBottomRight: =0
@@ -2276,12 +2284,12 @@
                     LayoutMode: =LayoutMode.Auto
                     ZIndex: =2
 
-                    archivos_gallery_sidebar_docRev_ra_3 As gallery.galleryVertical:
+                    docPrincipal_revision_ra_4 As gallery.galleryVertical:
                         DelayItemLoading: =true
-                        Items: =["sample"]
+                        Items: =Filter(DEV_Archivos, id_documento.Value = Text(varSelectedDoc.ID), tipo_documento="Principal")
                         Layout: =Layout.Vertical
-                        LayoutMinHeight: =10
-                        LayoutMinWidth: =320
+                        LayoutMinHeight: =50
+                        LayoutMinWidth: =300
                         LoadingSpinner: =LoadingSpinner.Data
                         TemplateSize: =50
                         ZIndex: =1
@@ -2296,6 +2304,7 @@
                             archivo_image_sidebar_docRev_ra_3 As image:
                                 AlignInContainer: =AlignInContainer.Stretch
                                 Height: =24
+                                Image: =word
                                 LayoutMinHeight: =24
                                 Width: =24
                                 ZIndex: =1
@@ -2414,11 +2423,12 @@
 
                                     observar_button_ra_2 As button:
                                         BorderStyle: =BorderStyle.None
-                                        Fill: =RGBA(0, 0, 0, 0)
+                                        Fill: =If(varRevRcki.estado="Observado", Self.HoverFill, RGBA(0, 0, 0, 0))
                                         Height: =24
                                         HoverFill: =RGBA(168, 0, 0, 0.46)
                                         OnSelect: |-
-                                            =UpdateContext({varObservacionPopup:true})
+                                            =Reset(observaciones_attachment_ra);
+                                            UpdateContext({varDocObservado: "Rcki", varObservacionPopup:true})
                                         PressedFill: =
                                         RadiusBottomLeft: =0
                                         RadiusBottomRight: =0
@@ -2460,9 +2470,15 @@
 
                                     conforme_button_ra_3 As button:
                                         BorderStyle: =BorderStyle.None
-                                        Fill: =RGBA(0, 0, 0, 0)
+                                        Fill: =If(varRevRcki.estado="Aprobado", Self.HoverFill, RGBA(0, 0, 0, 0))
                                         Height: =24
                                         HoverFill: =RGBA(141, 198, 63, 0.49)
+                                        OnSelect: |-
+                                            =UpdateContext({varRevRcki:{
+                                                    estado: "Aprobado",
+                                                    archivo: Blank(),
+                                                    comentario: ""
+                                            }})
                                         PressedFill: =
                                         RadiusBottomLeft: =0
                                         RadiusBottomRight: =0
@@ -2597,11 +2613,27 @@
                 OnSelect: |-
                     =If(
                         varDocObservado="Principal",
-                        UpdateContext({varRevPrincipal:{
+                        UpdateContext({
+                            varRevPrincipal:{
                             estado: "Observado",
-                            archivo: Blank(),
+                            archivo: First(observaciones_attachment_ra.Attachments),
                             comentario: comentario_observacion_ra.Text
-                        }})
+                        }}),
+                        varDocObservado="Flujograma",
+                        UpdateContext({
+                            varRevFlujograma:{
+                                estado: "Observado",
+                                archivo: First(observaciones_attachment_ra.Attachments),
+                                comentario: comentario_observacion_ra.Text
+                            }
+                        }),
+                        UpdateContext({
+                            varRevRcki:{
+                                estado: "Observado",
+                                archivo: First(observaciones_attachment_ra.Attachments),
+                                comentario: comentario_observacion_ra.Text
+                            }
+                        })
                     );
                     UpdateContext({varObservacionPopup:false})
                 Text: ="Guardar Observación"
@@ -2609,6 +2641,81 @@
                 X: =(Parent.Width-Self.Width)/2
                 Y: =332
                 ZIndex: =6
+
+            attachment_name As label:
+                Color: =primary
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Size: =12
+                Text: =First(observaciones_attachment_ra.Attachments).Name
+                Visible: =!IsEmpty(observaciones_attachment_ra.Attachments)
+                Width: =260
+                X: =39
+                Y: =96
+                ZIndex: =7
+
+            attachemnet_icon As icon.Attachment:
+                Color: =primary
+                Height: =18
+                Icon: =Icon.PaperClip
+                Width: =18
+                X: =24
+                Y: =107
+                ZIndex: =8
+
+            cancel_attachment_icon_obervacion As icon.Cancel:
+                Height: =29
+                Icon: =Icon.Cancel
+                OnSelect: =Reset(observaciones_attachment_ra)
+                PaddingBottom: =5
+                PaddingLeft: =5
+                PaddingRight: =5
+                PaddingTop: =5
+                Visible: =!IsEmpty(observaciones_attachment_ra.Attachments)
+                Width: =29
+                X: =335
+                Y: =102
+                ZIndex: =9
+
+            attachment_name_1 As label:
+                Color: =primary
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Size: =12
+                Text: ="Adjuntar archivo"
+                Visible: =IsEmpty(observaciones_attachment_ra.Attachments)
+                Width: =260
+                X: =39
+                Y: =96
+                ZIndex: =10
+
+            observaciones_attachment_ra As attachments:
+                AddAttachmentText: =
+                BorderColor: =
+                BorderStyle: =BorderStyle.None
+                Color: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(0, 0, 0, 0)
+                DisplayMode: =Parent.DisplayMode
+                DropTargetBorderStyle: =BorderStyle.None
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =107
+                HoverColor: =RGBA(0, 0, 0, 0)
+                HoverFill: =RGBA(0, 0, 0, 0.15)
+                IsInDataCard: =true
+                Items: =
+                MaxAttachments: =1
+                MaxAttachmentsText: =
+                NoAttachmentsText: =
+                PaddingBottom: =5
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                PaddingRight: =5
+                PaddingTop: =5
+                PressedFill: =Color.Transparent
+                Visible: =IsEmpty(observaciones_attachment_ra.Attachments)
+                Width: =Parent.Width - 60
+                X: =24
+                Y: =42
+                ZIndex: =11
 
     popup_resultado_enviado As groupContainer.manualLayoutContainer:
         Fill: =RGBA(51, 51, 51, 0.27)
