@@ -2634,7 +2634,22 @@
                                     ind_inact: "Activo",
                                     ind_mod: "i"
                                 }
-                        )
+                        );
+                        If(Or(archivo.tipo_documento="Principal" && varRevPrincipal.estado="Observado", archivo.tipo_documento="Flujograma" && varRevFlujograma.estado="Observado", archivo.tipo_documento="RCKI" && varRevRcki.estado="Observado"),
+                        Patch(
+                                    DEV_Observacion,
+                                    Defaults(DEV_Observacion),
+                                    {
+                                        id_interlocutor: {Id: varInterlocutorId, Value: varInterlocutorId},
+                                        id_archivo: {Value:archivo.ID, Id:archivo.ID},
+                                        nro_mod: Coalesce(First(SortByColumns(Filter(DEV_Observacion, id_archivo.Value = First(varArchivoId).Value, id_interlocutor.Value =Text(varInterlocutorId)), "nro_mod",SortOrder.Descending)).nro_mod,0)+1,
+                                        fecha_hora:Now(),
+                                        ind_inact: "Activo",
+                                        ind_mod: "i",
+                                        observacion: comentario_observacion_ra.Text
+                                    },
+                                    observacion_attachment_form_ra.Updates
+                            ))
                         );
                         UpdateContext({varResultadoPopup: true})
                     Text: ="Enviar Revisión"
@@ -2795,6 +2810,21 @@
                                 observacion_attachment_form_ra.Updates
                             )
                         )
+                    );
+                    Patch(DEV_Modificacion_estatus_proceso_doc,
+                        Defaults(
+                            DEV_Modificacion_estatus_proceso_doc
+                        ),
+                        {
+                            codigo: varSelectedDoc.codigo,
+                            version: varSelectedDoc.version,
+                            id_estatus_procesos: {Id: 1, Value: 1},
+                            nro_mod: Coalesce(First(SortByColumns(Filter(DEV_Modificacion_estatus_proceso_doc, codigo=varSelectedDoc.codigo, version= varSelectedDoc.version), "nro_mod",SortOrder.Descending)).nro_mod,0)+1,
+                            'fecha y hora': Now(),
+                            ind_inact: "Activo",
+                            ind_mod: "i",
+                            id_estatus_documento: {Id: 3, Value: 3}
+                        }
                     );
                     UpdateContext({varResultadoPopup: true})
                     );
