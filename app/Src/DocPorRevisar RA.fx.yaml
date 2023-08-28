@@ -1260,12 +1260,13 @@
                     LayoutMinWidth: =320
                     LoadingSpinner: =LoadingSpinner.Data
                     TemplatePadding: =0
-                    TemplateSize: =60
+                    TemplateSize: =70
                     Visible: =menu_filter_evaluacion_sidebar_ra.Selected.Value <> "Registro"
                     ZIndex: =1
 
                     Image3 As image:
                         Height: =32
+                        Image: =LookUp(DEV_Interlocutor, Value(ThisItem.id_interlocutor.Value)=ID).Email.Picture
                         OnSelect: =Select(Parent)
                         RadiusBottomLeft: =8
                         RadiusBottomRight: =8
@@ -1289,9 +1290,9 @@
                         Text: |-
                             =ThisItem.'id_interlocutor: Nombre'.Value & " " & ThisItem.'id_interlocutor: Apellido'.Value
                         VerticalAlign: =VerticalAlign.Top
-                        Width: =Parent.TemplateWidth - 173
-                        X: =73
-                        Y: =7
+                        Width: =Parent.TemplateWidth - 200
+                        X: =63
+                        Y: =17
                         ZIndex: =2
 
                     Subtitle1 As label:
@@ -1316,8 +1317,65 @@
                         Height: =1
                         OnSelect: =Select(Parent)
                         Width: =420
-                        Y: =59
+                        Y: =69
+                        ZIndex: =4
+
+                    obs_text_sidebar_ra As label:
+                        Align: =Align.Center
+                        Color: =red
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =24
+                        OnSelect: =Select(Parent)
+                        Size: =12
+                        Text: ="Observado"
+                        Visible: =!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version, id_status_archivo.Value="2"))
+                        Width: =120
+                        X: =295
+                        Y: =14
+                        ZIndex: =5
+
+                    obs_icon_sidebar_ra As icon.Information:
+                        Color: =red
+                        Height: =20
+                        Icon: =Icon.Information
+                        OnSelect: =Select(Parent)
+                        Visible: =!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version, id_status_archivo.Value="2"))
+                        Width: =20
+                        X: =288
+                        Y: =16
                         ZIndex: =6
+
+                    verObs_icon_sidebar_ra As icon.View:
+                        Height: =15
+                        Icon: =Icon.View
+                        OnSelect: =Select(Parent)
+                        Visible: =!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version, id_status_archivo.Value="2"))
+                        Width: =15
+                        X: =293
+                        Y: =40
+                        ZIndex: =7
+
+                    verObs_button_sidebar_ra As button:
+                        Align: =Align.Right
+                        Color: =primary
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Font: =Font.'Segoe UI'
+                        Height: =20
+                        HoverColor: =primary
+                        HoverFill: =RGBA(0, 0, 0, 0.15)
+                        OnSelect: |-
+                            =UpdateContext({varRegistroObsPopup:true})
+                        PressedColor: =Self.Color
+                        PressedFill: =
+                        Size: =8
+                        Text: ="Ver Observación"
+                        Underline: =true
+                        Visible: =!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version, id_status_archivo.Value="2"))
+                        Width: =110
+                        X: =288
+                        Y: =38
+                        ZIndex: =8
 
             archivos_container_sidebar_docRev_ra As groupContainer.verticalAutoLayoutContainer:
                 DropShadow: =DropShadow.None
@@ -3038,4 +3096,33 @@
             X: =864
             Y: =261
             ZIndex: =2
+
+    popup_registro_observaciones_ra As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(0, 0, 0, 0.15)
+        Height: =768
+        Visible: =varRegistroObsPopup
+        Width: =1366
+        ZIndex: =7
+
+        container_popup_registro_observacion_ra As groupContainer.manualLayoutContainer:
+            Fill: =background
+            Height: =458
+            Width: =461
+            X: =(Parent.Width-Self.Width)/2
+            Y: =(Parent.Height-Self.Height)/2
+            ZIndex: =1
+
+            close_icon_registro_obs_ra As icon.Cancel:
+                Height: =30
+                Icon: =Icon.Cancel
+                OnSelect: |-
+                    =UpdateContext({varRegistroObsPopup:false})
+                PaddingBottom: =5
+                PaddingLeft: =5
+                PaddingRight: =5
+                PaddingTop: =5
+                Width: =30
+                X: =413
+                Y: =16
+                ZIndex: =1
 
