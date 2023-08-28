@@ -2651,6 +2651,25 @@
                                     observacion_attachment_form_ra.Updates
                             ))
                         );
+                        If(
+                            varRevPrincipal.estado="Observado" || varRevFlujograma.estado="Observado" || varRevRcki.estado="Observado",
+                            Patch(DEV_Modificacion_estatus_proceso_doc,
+                                Defaults(
+                                    DEV_Modificacion_estatus_proceso_doc
+                                ),
+                                {
+                                    codigo: varSelectedDoc.codigo,
+                                    version: varSelectedDoc.version,
+                                    id_estatus_procesos: {Id: 1, Value: 1},
+                                    nro_mod: Coalesce(First(SortByColumns(Filter(DEV_Modificacion_estatus_proceso_doc, codigo=varSelectedDoc.codigo, version= varSelectedDoc.version), "nro_mod",SortOrder.Descending)).nro_mod,0)+1,
+                                    'fecha y hora': Now(),
+                                    ind_inact: "Activo",
+                                    ind_mod: "i",
+                                    id_estatus_documento: {Id: 3, Value: 3}
+                                }
+                            );
+                        );
+                        
                         UpdateContext({varResultadoPopup: true})
                     Text: ="Enviar Revisión"
                     Visible: =!observar_button_revision_ra.Visible
