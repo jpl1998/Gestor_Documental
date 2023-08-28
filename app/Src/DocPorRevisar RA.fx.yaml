@@ -1358,7 +1358,7 @@
                         archivo_title_sidebar_docRev_ra As label:
                             Font: =Font.'Segoe UI'
                             Size: =12
-                            Text: =ThisItem.descripcion
+                            Text: =First(ThisItem.Attachments).DisplayName
                             Width: =304
                             ZIndex: =2
 
@@ -2553,16 +2553,18 @@
                     Height: =52
                     HoverFill: =Self.Color
                     OnSelect: |-
-                        =ForAll(
+                        =ClearCollect(varArchivoId,{Id: 0, Value: ""});
+                        ForAll(
                             Filter(
                                 DEV_Archivos,
                                 id_documento.Value = Text(varSelectedDoc.ID),
                                 codigo = varSelectedDoc.codigo,
                                 version = varSelectedDoc.version
                             ) As archivo,
+                            Patch(varArchivoId,First(varArchivoId),{Id: varInterlocutorId, Value: varInterlocutorId});
                             UpdateIf(
                                 DEV_Modificacion_estatus_documento,
-                                And(id_archivo.Value = Text(varSelectedDoc.ID), codigo = varSelectedDoc.codigo, version = varSelectedDoc.version, id_interlocutor.Value =Text(varInterlocutorId)),
+                                And(id_archivo.Value = Text(archivo.ID), codigo = archivo.codigo, version = archivo.version, id_interlocutor.Value =Text(varInterlocutorId)),
                                 {
                                     'fecha y hora': Now(),
                                     ind_inact: "Inactivo",
@@ -2577,8 +2579,8 @@
                                     version: archivo.version,
                                     id_status_archivo: {Value:1, Id:1},
                                     id_interlocutor: {Id: varInterlocutorId, Value: varInterlocutorId},
-                                    id_archivo: {Id: varSelectedDoc.ID, Value: varSelectedDoc.ID},
-                                    nro_mod: Coalesce(First(SortByColumns(Filter(DEV_Modificacion_estatus_documento, id_archivo.Value = Text(varSelectedDoc.ID),codigo = varSelectedDoc.codigo,version = varSelectedDoc.version, id_interlocutor.Value =Text(varInterlocutorId)), "nro_mod",SortOrder.Descending)).nro_mod,0)+1,
+                                    id_archivo: First(varArchivoId),
+                                    nro_mod: Coalesce(First(SortByColumns(Filter(DEV_Modificacion_estatus_documento, id_archivo.Value = First(varArchivoId).Value, codigo = archivo.codigo,version = archivo.version, id_interlocutor.Value =Text(varInterlocutorId)), "nro_mod",SortOrder.Descending)).nro_mod,0)+1,
                                     'fecha y hora':Now(),
                                     ind_inact: "Activo",
                                     ind_mod: "i"
@@ -2688,6 +2690,7 @@
                         }),
                     
                         //Observacion a todo
+                        ClearCollect(varArchivoId,{Id: 0, Value: ""});
                         ForAll(
                         Filter(
                             DEV_Archivos,
@@ -2695,10 +2698,11 @@
                             codigo = varSelectedDoc.codigo,
                             version = varSelectedDoc.version
                         ) As archivo,
+                        Patch(varArchivoId,First(varArchivoId),{Id: varInterlocutorId, Value: varInterlocutorId});
                         Concurrent(
                             UpdateIf(
                                 DEV_Modificacion_estatus_documento,
-                                And(id_archivo.Value = Text(varSelectedDoc.ID), codigo = varSelectedDoc.codigo, version = varSelectedDoc.version, id_interlocutor.Value =Text(varInterlocutorId)),
+                                And(id_archivo.Value = Text(archivo.ID), codigo = archivo.codigo, version = archivo.version, id_interlocutor.Value =Text(varInterlocutorId)),
                                 {
                                     'fecha y hora': Now(),
                                     ind_inact: "Inactivo",
@@ -2707,7 +2711,7 @@
                             ),
                             UpdateIf(
                                 DEV_Observacion,
-                                And(id_archivo.Value = Text(varSelectedDoc.ID), id_interlocutor.Value =Text(varInterlocutorId)),
+                                And(id_archivo.Value = Text(archivo.ID), id_interlocutor.Value =Text(varInterlocutorId)),
                                 {
                                     fecha_hora: Now(),
                                     ind_inact: "Inactivo",
@@ -2724,8 +2728,8 @@
                                     version: archivo.version,
                                     id_status_archivo: {Value:2, Id:2},
                                     id_interlocutor: {Id: varInterlocutorId, Value: varInterlocutorId},
-                                    id_archivo: {Id: varSelectedDoc.ID, Value: varSelectedDoc.ID},
-                                    nro_mod: Coalesce(First(SortByColumns(Filter(DEV_Modificacion_estatus_documento, id_archivo.Value = Text(varSelectedDoc.ID),codigo = varSelectedDoc.codigo,version = varSelectedDoc.version, id_interlocutor.Value =Text(varInterlocutorId)), "nro_mod",SortOrder.Descending)).nro_mod,0)+1,
+                                    id_archivo: First(varArchivoId),
+                                    nro_mod: Coalesce(First(SortByColumns(Filter(DEV_Modificacion_estatus_documento, id_archivo.Value = First(varArchivoId).Value, codigo = archivo.codigo,version = archivo.version, id_interlocutor.Value =Text(varInterlocutorId)), "nro_mod",SortOrder.Descending)).nro_mod,0)+1,
                                     'fecha y hora':Now(),
                                     ind_inact: "Activo",
                                     ind_mod: "i"
@@ -2736,8 +2740,8 @@
                                 Defaults(DEV_Observacion),
                                 {
                                     id_interlocutor: {Id: varInterlocutorId, Value: varInterlocutorId},
-                                    id_archivo: {Id: varSelectedDoc.ID, Value: varSelectedDoc.ID},
-                                    nro_mod: Coalesce(First(SortByColumns(Filter(DEV_Observacion, id_archivo.Value = Text(varSelectedDoc.ID), id_interlocutor.Value =Text(varInterlocutorId)), "nro_mod",SortOrder.Descending)).nro_mod,0)+1,
+                                    id_archivo: First(varArchivoId),
+                                    nro_mod: Coalesce(First(SortByColumns(Filter(DEV_Observacion, id_archivo.Value = First(varArchivoId).Value, id_interlocutor.Value =Text(varInterlocutorId)), "nro_mod",SortOrder.Descending)).nro_mod,0)+1,
                                     fecha_hora:Now(),
                                     ind_inact: "Activo",
                                     ind_mod: "i",
