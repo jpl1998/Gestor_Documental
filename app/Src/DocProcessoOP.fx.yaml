@@ -2755,14 +2755,38 @@
                                         
                                         Notify("Usuário "& ComboBox2_23.Selected.DisplayName&" ya está en la tabla Interlocutor");
                                         Patch(DEV_Actor,Defaults(DEV_Actor),
-                                            {id_funcion:{Id:3 , Value:3},
+                                            {id_funcion:{Id:1 , Value:1},
                                             id_interlocutor: {Id:LookUp(DEV_Interlocutor,ComboBox2_23.Selected.Email in Email[@Email],ID)
                                                             ,Value:LookUp(DEV_Interlocutor,ComboBox2_23.Selected.Email in Email[@Email],ID)}}
                                         )
                                     ))
                                 );
                                 
+                                //guardar aprobadores
+                                ForAll(aprobadoresgallery.AllItems,
                                 
+                                    If( Not(IsBlank(ComboBox2_24.SelectedItems)),
+                                    If(
+                                        IsBlank(LookUp(DEV_Interlocutor,ComboBox2_24.Selected.Email in Email[@Email],ThisRecord)),
+                                        
+                                        Patch(DEV_Interlocutor,Defaults(DEV_Interlocutor),
+                                            {Email:ComboBox2_24.Selected,
+                                            Nombre:UsuáriosdoOffice365.UserProfileV2(ComboBox2_24.Selected.Email).givenName,
+                                            Apellido:UsuáriosdoOffice365.UserProfileV2(ComboBox2_24.Selected.Email).surname});
+                                   
+                                        Patch(DEV_Actor,Defaults(DEV_Actor),
+                                            {id_funcion:{Id:2 , Value:2},
+                                            id_interlocutor: {Id:LookUp(DEV_Interlocutor,ComboBox2_24.Selected.Email in Email[@Email],ID)
+                                                            ,Value:LookUp(DEV_Interlocutor,ComboBox2_24.Selected.Email in Email[@Email],ID)}}),
+                                        
+                                        Notify("Usuário "& ComboBox2_24.Selected.DisplayName&" ya está en la tabla Interlocutor");
+                                        Patch(DEV_Actor,Defaults(DEV_Actor),
+                                            {id_funcion:{Id:2 , Value:2},
+                                            id_interlocutor: {Id:LookUp(DEV_Interlocutor,ComboBox2_24.Selected.Email in Email[@Email],ID)
+                                                            ,Value:LookUp(DEV_Interlocutor,ComboBox2_24.Selected.Email in Email[@Email],ID)}}
+                                        )
+                                    ))
+                                );
                                 
                                 Set(varconfirmation,true)
                             RadiusBottomLeft: =5

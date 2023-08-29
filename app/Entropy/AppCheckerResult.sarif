@@ -34186,6 +34186,206 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "DocProcessoOP.popupelaboradores.Container22_2.Container13_24.Container14_24.Container15_53.bt_elaboradores_op.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "DocProcessoOP.popupelaboradores.Container22_2.Container13_24.Container14_24.Container15_53.bt_elaboradores_op.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 4170,
+                  "snippet": {
+                    "text": "in"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "DocProcessoOP",
+                "type": "DocProcessoOP.popupelaboradores.Container22_2.Container13_24.Container14_24.Container15_53.bt_elaboradores_op"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "LookUp"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-InOpRhs",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "DocProcessoOP.popupelaboradores.Container22_2.Container13_24.Container14_24.Container15_53.bt_elaboradores_op.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "DocProcessoOP.popupelaboradores.Container22_2.Container13_24.Container14_24.Container15_53.bt_elaboradores_op.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 4676,
+                  "snippet": {
+                    "text": "in"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "DocProcessoOP",
+                "type": "DocProcessoOP.popupelaboradores.Container22_2.Container13_24.Container14_24.Container15_53.bt_elaboradores_op"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "LookUp"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-InOpRhs",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "DocProcessoOP.popupelaboradores.Container22_2.Container13_24.Container14_24.Container15_53.bt_elaboradores_op.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "DocProcessoOP.popupelaboradores.Container22_2.Container13_24.Container14_24.Container15_53.bt_elaboradores_op.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 4784,
+                  "snippet": {
+                    "text": "in"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "DocProcessoOP",
+                "type": "DocProcessoOP.popupelaboradores.Container22_2.Container13_24.Container14_24.Container15_53.bt_elaboradores_op"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "LookUp"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-InOpRhs",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "DocProcessoOP.popupelaboradores.Container22_2.Container13_24.Container14_24.Container15_53.bt_elaboradores_op.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "DocProcessoOP.popupelaboradores.Container22_2.Container13_24.Container14_24.Container15_53.bt_elaboradores_op.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 5090,
+                  "snippet": {
+                    "text": "in"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "DocProcessoOP",
+                "type": "DocProcessoOP.popupelaboradores.Container22_2.Container13_24.Container14_24.Container15_53.bt_elaboradores_op"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "LookUp"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-InOpRhs",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "DocProcessoOP.popupelaboradores.Container22_2.Container13_24.Container14_24.Container15_53.bt_elaboradores_op.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "DocProcessoOP.popupelaboradores.Container22_2.Container13_24.Container14_24.Container15_53.bt_elaboradores_op.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 5198,
+                  "snippet": {
+                    "text": "in"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "DocProcessoOP",
+                "type": "DocProcessoOP.popupelaboradores.Container22_2.Container13_24.Container14_24.Container15_53.bt_elaboradores_op"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "LookUp"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-InOpRhs",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "'DocPublicados RA'.ScreenContainer_docRev_ra_2.BottomContainer_docRev_ra_2.MainContainer_docRev_ra_2.MainCont_docRev_ra_2.Container_table_docRev_ra_2.Container_tablecontent_docRev_ra_2.tablecontent_docRev_ra_2.Container3_14.Container13_32.Button2_10.Text"
                 }
               ],
