@@ -2044,7 +2044,7 @@
                         archivo_title_sidebar_docRev_ra_12 As label:
                             Font: =Font.'Segoe UI'
                             Size: =12
-                            Text: =First(ThisItem.Anexos).DisplayName
+                            Text: =First(ThisItem.Attachments).DisplayName
                             Width: =304
                             ZIndex: =2
 
@@ -2069,7 +2069,7 @@
                                 FocusedBorderThickness: =2
                                 Height: =25
                                 HoverFill: =RGBA(0, 0, 0, 0.15)
-                                OnSelect: =Launch(Concatenate(First(ThisItem.Anexos).AbsoluteUri,"?web=1"))
+                                OnSelect: =Launch(Concatenate(First(ThisItem.Attachments).AbsoluteUri,"?web=1"))
                                 PressedFill: =
                                 RadiusBottomLeft: =5
                                 RadiusBottomRight: =5
@@ -2102,7 +2102,7 @@
                                 FocusedBorderThickness: =2
                                 Height: =25
                                 HoverFill: =RGBA(0, 0, 0, 0.15)
-                                OnSelect: =Launch(First(ThisItem.Anexos).AbsoluteUri)
+                                OnSelect: =Launch(First(ThisItem.Attachments).AbsoluteUri)
                                 PressedFill: =
                                 RadiusBottomLeft: =5
                                 RadiusBottomRight: =5
@@ -2148,7 +2148,7 @@
                         Font: =Font.'Segoe UI'
                         Height: =24
                         Size: =12
-                        Text: =varSelectedDoc.'Criado por'.DisplayName
+                        Text: =varSelectedDoc.'Created By'.DisplayName
                         Width: =(Parent.Width/3)*2 -20
                         ZIndex: =2
 

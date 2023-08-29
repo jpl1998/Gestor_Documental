@@ -33592,474 +33592,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Home RA'.SideBar_ra_3.SideBar_Container_docRev_ra_3.archivos_container_sidebar_docRev_ra_3.archivos_gallery_sidebar_docRev_ra_2.container_archivos_gallery_sidebar_21.archivo_title_sidebar_docRev_ra_12.Text"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Home RA'.SideBar_ra_3.SideBar_Container_docRev_ra_3.archivos_container_sidebar_docRev_ra_3.archivos_gallery_sidebar_docRev_ra_2.container_archivos_gallery_sidebar_21.archivo_title_sidebar_docRev_ra_12.Text",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 7,
-                  "charOffset": 14,
-                  "snippet": {
-                    "text": ".Anexos"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Text",
-                "module": "Home RA",
-                "type": "'Home RA'.SideBar_ra_3.SideBar_Container_docRev_ra_3.archivos_container_sidebar_docRev_ra_3.archivos_gallery_sidebar_docRev_ra_2.container_archivos_gallery_sidebar_21.archivo_title_sidebar_docRev_ra_12"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Anexos"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Home RA'.SideBar_ra_3.SideBar_Container_docRev_ra_3.archivos_container_sidebar_docRev_ra_3.archivos_gallery_sidebar_docRev_ra_2.container_archivos_gallery_sidebar_21.archivo_title_sidebar_docRev_ra_12.Text"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Home RA'.SideBar_ra_3.SideBar_Container_docRev_ra_3.archivos_container_sidebar_docRev_ra_3.archivos_gallery_sidebar_docRev_ra_2.container_archivos_gallery_sidebar_21.archivo_title_sidebar_docRev_ra_12.Text",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 22,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "First(ThisItem.Anexos)"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Text",
-                "module": "Home RA",
-                "type": "'Home RA'.SideBar_ra_3.SideBar_Container_docRev_ra_3.archivos_container_sidebar_docRev_ra_3.archivos_gallery_sidebar_docRev_ra_2.container_archivos_gallery_sidebar_21.archivo_title_sidebar_docRev_ra_12"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "First"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Home RA'.SideBar_ra_3.SideBar_Container_docRev_ra_3.archivos_container_sidebar_docRev_ra_3.archivos_gallery_sidebar_docRev_ra_2.container_archivos_gallery_sidebar_21.archivo_title_sidebar_docRev_ra_12.Text"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Home RA'.SideBar_ra_3.SideBar_Container_docRev_ra_3.archivos_container_sidebar_docRev_ra_3.archivos_gallery_sidebar_docRev_ra_2.container_archivos_gallery_sidebar_21.archivo_title_sidebar_docRev_ra_12.Text",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 12,
-                  "charOffset": 22,
-                  "snippet": {
-                    "text": ".DisplayName"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Text",
-                "module": "Home RA",
-                "type": "'Home RA'.SideBar_ra_3.SideBar_Container_docRev_ra_3.archivos_container_sidebar_docRev_ra_3.archivos_gallery_sidebar_docRev_ra_2.container_archivos_gallery_sidebar_21.archivo_title_sidebar_docRev_ra_12"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Home RA'.SideBar_ra_3.SideBar_Container_docRev_ra_3.archivos_container_sidebar_docRev_ra_3.archivos_gallery_sidebar_docRev_ra_2.container_archivos_gallery_sidebar_21.archivo_open_container_sidebar_ra_12.open_archivo_button_sidebar_21.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Home RA'.SideBar_ra_3.SideBar_Container_docRev_ra_3.archivos_container_sidebar_docRev_ra_3.archivos_gallery_sidebar_docRev_ra_2.container_archivos_gallery_sidebar_21.archivo_open_container_sidebar_ra_12.open_archivo_button_sidebar_21.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 7,
-                  "charOffset": 33,
-                  "snippet": {
-                    "text": ".Anexos"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "Home RA",
-                "type": "'Home RA'.SideBar_ra_3.SideBar_Container_docRev_ra_3.archivos_container_sidebar_docRev_ra_3.archivos_gallery_sidebar_docRev_ra_2.container_archivos_gallery_sidebar_21.archivo_open_container_sidebar_ra_12.open_archivo_button_sidebar_21"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Anexos"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Home RA'.SideBar_ra_3.SideBar_Container_docRev_ra_3.archivos_container_sidebar_docRev_ra_3.archivos_gallery_sidebar_docRev_ra_2.container_archivos_gallery_sidebar_21.archivo_open_container_sidebar_ra_12.open_archivo_button_sidebar_21.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Home RA'.SideBar_ra_3.SideBar_Container_docRev_ra_3.archivos_container_sidebar_docRev_ra_3.archivos_gallery_sidebar_docRev_ra_2.container_archivos_gallery_sidebar_21.archivo_open_container_sidebar_ra_12.open_archivo_button_sidebar_21.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 22,
-                  "charOffset": 19,
-                  "snippet": {
-                    "text": "First(ThisItem.Anexos)"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "Home RA",
-                "type": "'Home RA'.SideBar_ra_3.SideBar_Container_docRev_ra_3.archivos_container_sidebar_docRev_ra_3.archivos_gallery_sidebar_docRev_ra_2.container_archivos_gallery_sidebar_21.archivo_open_container_sidebar_ra_12.open_archivo_button_sidebar_21"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "First"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Home RA'.SideBar_ra_3.SideBar_Container_docRev_ra_3.archivos_container_sidebar_docRev_ra_3.archivos_gallery_sidebar_docRev_ra_2.container_archivos_gallery_sidebar_21.archivo_open_container_sidebar_ra_12.open_archivo_button_sidebar_21.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Home RA'.SideBar_ra_3.SideBar_Container_docRev_ra_3.archivos_container_sidebar_docRev_ra_3.archivos_gallery_sidebar_docRev_ra_2.container_archivos_gallery_sidebar_21.archivo_open_container_sidebar_ra_12.open_archivo_button_sidebar_21.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 12,
-                  "charOffset": 41,
-                  "snippet": {
-                    "text": ".AbsoluteUri"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "Home RA",
-                "type": "'Home RA'.SideBar_ra_3.SideBar_Container_docRev_ra_3.archivos_container_sidebar_docRev_ra_3.archivos_gallery_sidebar_docRev_ra_2.container_archivos_gallery_sidebar_21.archivo_open_container_sidebar_ra_12.open_archivo_button_sidebar_21"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Home RA'.SideBar_ra_3.SideBar_Container_docRev_ra_3.archivos_container_sidebar_docRev_ra_3.archivos_gallery_sidebar_docRev_ra_2.container_archivos_gallery_sidebar_21.archivo_open_container_sidebar_ra_12.open_archivo_button_sidebar_21.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Home RA'.SideBar_ra_3.SideBar_Container_docRev_ra_3.archivos_container_sidebar_docRev_ra_3.archivos_gallery_sidebar_docRev_ra_2.container_archivos_gallery_sidebar_21.archivo_open_container_sidebar_ra_12.open_archivo_button_sidebar_21.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 56,
-                  "charOffset": 7,
-                  "snippet": {
-                    "text": "Concatenate(First(ThisItem.Anexos).AbsoluteUri,\"?web=1\")"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "Home RA",
-                "type": "'Home RA'.SideBar_ra_3.SideBar_Container_docRev_ra_3.archivos_container_sidebar_docRev_ra_3.archivos_gallery_sidebar_docRev_ra_2.container_archivos_gallery_sidebar_21.archivo_open_container_sidebar_ra_12.open_archivo_button_sidebar_21"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Concatenate"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Home RA'.SideBar_ra_3.SideBar_Container_docRev_ra_3.archivos_container_sidebar_docRev_ra_3.archivos_gallery_sidebar_docRev_ra_2.container_archivos_gallery_sidebar_21.archivo_download_container_sidebar_ra_12.download_archivo_button_sidebar_21.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Home RA'.SideBar_ra_3.SideBar_Container_docRev_ra_3.archivos_container_sidebar_docRev_ra_3.archivos_gallery_sidebar_docRev_ra_2.container_archivos_gallery_sidebar_21.archivo_download_container_sidebar_ra_12.download_archivo_button_sidebar_21.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 7,
-                  "charOffset": 21,
-                  "snippet": {
-                    "text": ".Anexos"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "Home RA",
-                "type": "'Home RA'.SideBar_ra_3.SideBar_Container_docRev_ra_3.archivos_container_sidebar_docRev_ra_3.archivos_gallery_sidebar_docRev_ra_2.container_archivos_gallery_sidebar_21.archivo_download_container_sidebar_ra_12.download_archivo_button_sidebar_21"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Anexos"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Home RA'.SideBar_ra_3.SideBar_Container_docRev_ra_3.archivos_container_sidebar_docRev_ra_3.archivos_gallery_sidebar_docRev_ra_2.container_archivos_gallery_sidebar_21.archivo_download_container_sidebar_ra_12.download_archivo_button_sidebar_21.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Home RA'.SideBar_ra_3.SideBar_Container_docRev_ra_3.archivos_container_sidebar_docRev_ra_3.archivos_gallery_sidebar_docRev_ra_2.container_archivos_gallery_sidebar_21.archivo_download_container_sidebar_ra_12.download_archivo_button_sidebar_21.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 22,
-                  "charOffset": 7,
-                  "snippet": {
-                    "text": "First(ThisItem.Anexos)"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "Home RA",
-                "type": "'Home RA'.SideBar_ra_3.SideBar_Container_docRev_ra_3.archivos_container_sidebar_docRev_ra_3.archivos_gallery_sidebar_docRev_ra_2.container_archivos_gallery_sidebar_21.archivo_download_container_sidebar_ra_12.download_archivo_button_sidebar_21"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "First"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Home RA'.SideBar_ra_3.SideBar_Container_docRev_ra_3.archivos_container_sidebar_docRev_ra_3.archivos_gallery_sidebar_docRev_ra_2.container_archivos_gallery_sidebar_21.archivo_download_container_sidebar_ra_12.download_archivo_button_sidebar_21.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Home RA'.SideBar_ra_3.SideBar_Container_docRev_ra_3.archivos_container_sidebar_docRev_ra_3.archivos_gallery_sidebar_docRev_ra_2.container_archivos_gallery_sidebar_21.archivo_download_container_sidebar_ra_12.download_archivo_button_sidebar_21.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 12,
-                  "charOffset": 29,
-                  "snippet": {
-                    "text": ".AbsoluteUri"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "Home RA",
-                "type": "'Home RA'.SideBar_ra_3.SideBar_Container_docRev_ra_3.archivos_container_sidebar_docRev_ra_3.archivos_gallery_sidebar_docRev_ra_2.container_archivos_gallery_sidebar_21.archivo_download_container_sidebar_ra_12.download_archivo_button_sidebar_21"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Home RA'.SideBar_ra_3.SideBar_Container_docRev_ra_3.informacion_container_sidebar_docRev_ra_3.item_informacion_sidebar_docRev_ra_58.cont_informacion_sidebar_ra_6.Text"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Home RA'.SideBar_ra_3.SideBar_Container_docRev_ra_3.informacion_container_sidebar_docRev_ra_3.item_informacion_sidebar_docRev_ra_58.cont_informacion_sidebar_ra_6.Text",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 13,
-                  "charOffset": 14,
-                  "snippet": {
-                    "text": ".'Criado por'"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Text",
-                "module": "Home RA",
-                "type": "'Home RA'.SideBar_ra_3.SideBar_Container_docRev_ra_3.informacion_container_sidebar_docRev_ra_3.item_informacion_sidebar_docRev_ra_58.cont_informacion_sidebar_ra_6"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Criado por"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Home RA'.SideBar_ra_3.SideBar_Container_docRev_ra_3.informacion_container_sidebar_docRev_ra_3.item_informacion_sidebar_docRev_ra_58.cont_informacion_sidebar_ra_6.Text"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Home RA'.SideBar_ra_3.SideBar_Container_docRev_ra_3.informacion_container_sidebar_docRev_ra_3.item_informacion_sidebar_docRev_ra_58.cont_informacion_sidebar_ra_6.Text",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 12,
-                  "charOffset": 27,
-                  "snippet": {
-                    "text": ".DisplayName"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Text",
-                "module": "Home RA",
-                "type": "'Home RA'.SideBar_ra_3.SideBar_Container_docRev_ra_3.informacion_container_sidebar_docRev_ra_3.item_informacion_sidebar_docRev_ra_58.cont_informacion_sidebar_ra_6"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "DocOficialesOP.ScreenContainer1_2.BottomContainer1_2.MainContainer1_2.Container9_6.Container10_6.Container4_15.Gallery1_9.Container3_16.Container13_44.Button2_11.Text"
                 }
               ],
@@ -34214,7 +33746,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
-          "ruleIndex": 3
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -34415,7 +33947,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
-          "ruleIndex": 3
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -34616,7 +34148,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
-          "ruleIndex": 3
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -34733,7 +34265,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -34810,7 +34342,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -36127,7 +35659,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -36204,6 +35736,487 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "DocProcessoOP.popupuploadedit.Container22_4.Container13_38.Container13_39.Container15_80.div_upload_doc_op_1.archivo_title_sidebar_docRev_op_3.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "DocProcessoOP.popupuploadedit.Container22_4.Container13_38.Container13_39.Container15_80.div_upload_doc_op_1.archivo_title_sidebar_docRev_op_3.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 3,
+                  "charOffset": 32,
+                  "snippet": {
+                    "text": ".Id"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "DocProcessoOP",
+                "type": "DocProcessoOP.popupuploadedit.Container22_4.Container13_38.Container13_39.Container15_80.div_upload_doc_op_1.archivo_title_sidebar_docRev_op_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "id_documento.Id"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "DocProcessoOP.popupuploadedit.Container22_4.Container13_38.Container13_39.Container15_80.div_upload_doc_op_1.archivo_title_sidebar_docRev_op_3.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "DocProcessoOP.popupuploadedit.Container22_4.Container13_38.Container13_39.Container15_80.div_upload_doc_op_1.archivo_title_sidebar_docRev_op_3.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 36,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "DocProcessoOP",
+                "type": "DocProcessoOP.popupuploadedit.Container22_4.Container13_38.Container13_39.Container15_80.div_upload_doc_op_1.archivo_title_sidebar_docRev_op_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "LookUp"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "DocProcessoOP.popupuploadedit.Container22_4.Container13_38.Container13_39.Container15_80.div_upload_doc_op_1.archivo_title_sidebar_docRev_op_3.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "DocProcessoOP.popupuploadedit.Container22_4.Container13_38.Container13_39.Container15_80.div_upload_doc_op_1.archivo_title_sidebar_docRev_op_3.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 52,
+                  "snippet": {
+                    "text": "&&"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "DocProcessoOP",
+                "type": "DocProcessoOP.popupuploadedit.Container22_4.Container13_38.Container13_39.Container15_80.div_upload_doc_op_1.archivo_title_sidebar_docRev_op_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "LookUp"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "DocProcessoOP.popupuploadedit.Container22_4.Container13_38.Container13_39.Container15_80.div_upload_doc_op_2.archivo_title_sidebar_docRev_op_4.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "DocProcessoOP.popupuploadedit.Container22_4.Container13_38.Container13_39.Container15_80.div_upload_doc_op_2.archivo_title_sidebar_docRev_op_4.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 3,
+                  "charOffset": 32,
+                  "snippet": {
+                    "text": ".Id"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "DocProcessoOP",
+                "type": "DocProcessoOP.popupuploadedit.Container22_4.Container13_38.Container13_39.Container15_80.div_upload_doc_op_2.archivo_title_sidebar_docRev_op_4"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "id_documento.Id"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "DocProcessoOP.popupuploadedit.Container22_4.Container13_38.Container13_39.Container15_80.div_upload_doc_op_2.archivo_title_sidebar_docRev_op_4.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "DocProcessoOP.popupuploadedit.Container22_4.Container13_38.Container13_39.Container15_80.div_upload_doc_op_2.archivo_title_sidebar_docRev_op_4.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 36,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "DocProcessoOP",
+                "type": "DocProcessoOP.popupuploadedit.Container22_4.Container13_38.Container13_39.Container15_80.div_upload_doc_op_2.archivo_title_sidebar_docRev_op_4"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "LookUp"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "DocProcessoOP.popupuploadedit.Container22_4.Container13_38.Container13_39.Container15_80.div_upload_doc_op_2.archivo_title_sidebar_docRev_op_4.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "DocProcessoOP.popupuploadedit.Container22_4.Container13_38.Container13_39.Container15_80.div_upload_doc_op_2.archivo_title_sidebar_docRev_op_4.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 52,
+                  "snippet": {
+                    "text": "&&"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "DocProcessoOP",
+                "type": "DocProcessoOP.popupuploadedit.Container22_4.Container13_38.Container13_39.Container15_80.div_upload_doc_op_2.archivo_title_sidebar_docRev_op_4"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "LookUp"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "DocProcessoOP.popupuploadedit.Container22_4.Container13_38.Container13_39.Container15_80.div_upload_doc_op_3.archivo_title_sidebar_docRev_op_5.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "DocProcessoOP.popupuploadedit.Container22_4.Container13_38.Container13_39.Container15_80.div_upload_doc_op_3.archivo_title_sidebar_docRev_op_5.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 3,
+                  "charOffset": 32,
+                  "snippet": {
+                    "text": ".Id"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "DocProcessoOP",
+                "type": "DocProcessoOP.popupuploadedit.Container22_4.Container13_38.Container13_39.Container15_80.div_upload_doc_op_3.archivo_title_sidebar_docRev_op_5"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "id_documento.Id"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "DocProcessoOP.popupuploadedit.Container22_4.Container13_38.Container13_39.Container15_80.div_upload_doc_op_3.archivo_title_sidebar_docRev_op_5.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "DocProcessoOP.popupuploadedit.Container22_4.Container13_38.Container13_39.Container15_80.div_upload_doc_op_3.archivo_title_sidebar_docRev_op_5.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 36,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "DocProcessoOP",
+                "type": "DocProcessoOP.popupuploadedit.Container22_4.Container13_38.Container13_39.Container15_80.div_upload_doc_op_3.archivo_title_sidebar_docRev_op_5"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "LookUp"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "DocProcessoOP.popupuploadedit.Container22_4.Container13_38.Container13_39.Container15_80.div_upload_doc_op_3.archivo_title_sidebar_docRev_op_5.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "DocProcessoOP.popupuploadedit.Container22_4.Container13_38.Container13_39.Container15_80.div_upload_doc_op_3.archivo_title_sidebar_docRev_op_5.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 52,
+                  "snippet": {
+                    "text": "&&"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "DocProcessoOP",
+                "type": "DocProcessoOP.popupuploadedit.Container22_4.Container13_38.Container13_39.Container15_80.div_upload_doc_op_3.archivo_title_sidebar_docRev_op_5"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "LookUp"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "DocProcessoOP.popupelaboradoreseditop.Container22_5.Container13_40.Container13_41.Container14_38.Container15_84.Gallery2_9.Container4_25.elaborador1_12.Label2_275.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "DocProcessoOP.popupelaboradoreseditop.Container22_5.Container13_40.Container13_41.Container14_38.Container15_84.Gallery2_9.Container4_25.elaborador1_12.Label2_275.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 3,
+                  "charOffset": 65,
+                  "snippet": {
+                    "text": ".Id"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "DocProcessoOP",
+                "type": "DocProcessoOP.popupelaboradoreseditop.Container22_5.Container13_40.Container13_41.Container14_38.Container15_84.Gallery2_9.Container4_25.elaborador1_12.Label2_275"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "id_documento.Id"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "DocProcessoOP.popupelaboradoreseditop.Container22_5.Container13_40.Container13_41.Container14_38.Container15_84.Gallery2_9.Container4_25.elaborador1_12.Label2_275.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "DocProcessoOP.popupelaboradoreseditop.Container22_5.Container13_40.Container13_41.Container14_38.Container15_84.Gallery2_9.Container4_25.elaborador1_12.Label2_275.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 69,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "DocProcessoOP",
+                "type": "DocProcessoOP.popupelaboradoreseditop.Container22_5.Container13_40.Container13_41.Container14_38.Container15_84.Gallery2_9.Container4_25.elaborador1_12.Label2_275"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "DocProcessoOP.popupelaboradoreseditop.Container22_5.Container13_40.Container13_41.Container14_38.Container15_84.Gallery2_9.Container4_25.elaborador1_12.Label2_275.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "DocProcessoOP.popupelaboradoreseditop.Container22_5.Container13_40.Container13_41.Container14_38.Container15_84.Gallery2_9.Container4_25.elaborador1_12.Label2_275.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 28,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "DocProcessoOP",
+                "type": "DocProcessoOP.popupelaboradoreseditop.Container22_5.Container13_40.Container13_41.Container14_38.Container15_84.Gallery2_9.Container4_25.elaborador1_12.Label2_275"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Number",
+              "Text"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
           "ruleIndex": 2
         },
         {
@@ -36211,487 +36224,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "DocProcessoOP.popupuploadedit.Container22_4.Container13_38.Container13_39.Container15_80.div_upload_doc_op_1.archivo_title_sidebar_docRev_op_3.Text"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "DocProcessoOP.popupuploadedit.Container22_4.Container13_38.Container13_39.Container15_80.div_upload_doc_op_1.archivo_title_sidebar_docRev_op_3.Text",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 3,
-                  "charOffset": 32,
-                  "snippet": {
-                    "text": ".Id"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Text",
-                "module": "DocProcessoOP",
-                "type": "DocProcessoOP.popupuploadedit.Container22_4.Container13_38.Container13_39.Container15_80.div_upload_doc_op_1.archivo_title_sidebar_docRev_op_3"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "id_documento.Id"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "DocProcessoOP.popupuploadedit.Container22_4.Container13_38.Container13_39.Container15_80.div_upload_doc_op_1.archivo_title_sidebar_docRev_op_3.Text"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "DocProcessoOP.popupuploadedit.Container22_4.Container13_38.Container13_39.Container15_80.div_upload_doc_op_1.archivo_title_sidebar_docRev_op_3.Text",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 1,
-                  "charOffset": 36,
-                  "snippet": {
-                    "text": "="
-                  }
-                }
-              },
-              "properties": {
-                "member": "Text",
-                "module": "DocProcessoOP",
-                "type": "DocProcessoOP.popupuploadedit.Container22_4.Container13_38.Container13_39.Container15_80.div_upload_doc_op_1.archivo_title_sidebar_docRev_op_3"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "LookUp"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "DocProcessoOP.popupuploadedit.Container22_4.Container13_38.Container13_39.Container15_80.div_upload_doc_op_1.archivo_title_sidebar_docRev_op_3.Text"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "DocProcessoOP.popupuploadedit.Container22_4.Container13_38.Container13_39.Container15_80.div_upload_doc_op_1.archivo_title_sidebar_docRev_op_3.Text",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 2,
-                  "charOffset": 52,
-                  "snippet": {
-                    "text": "&&"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Text",
-                "module": "DocProcessoOP",
-                "type": "DocProcessoOP.popupuploadedit.Container22_4.Container13_38.Container13_39.Container15_80.div_upload_doc_op_1.archivo_title_sidebar_docRev_op_3"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "LookUp"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "DocProcessoOP.popupuploadedit.Container22_4.Container13_38.Container13_39.Container15_80.div_upload_doc_op_2.archivo_title_sidebar_docRev_op_4.Text"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "DocProcessoOP.popupuploadedit.Container22_4.Container13_38.Container13_39.Container15_80.div_upload_doc_op_2.archivo_title_sidebar_docRev_op_4.Text",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 3,
-                  "charOffset": 32,
-                  "snippet": {
-                    "text": ".Id"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Text",
-                "module": "DocProcessoOP",
-                "type": "DocProcessoOP.popupuploadedit.Container22_4.Container13_38.Container13_39.Container15_80.div_upload_doc_op_2.archivo_title_sidebar_docRev_op_4"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "id_documento.Id"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "DocProcessoOP.popupuploadedit.Container22_4.Container13_38.Container13_39.Container15_80.div_upload_doc_op_2.archivo_title_sidebar_docRev_op_4.Text"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "DocProcessoOP.popupuploadedit.Container22_4.Container13_38.Container13_39.Container15_80.div_upload_doc_op_2.archivo_title_sidebar_docRev_op_4.Text",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 1,
-                  "charOffset": 36,
-                  "snippet": {
-                    "text": "="
-                  }
-                }
-              },
-              "properties": {
-                "member": "Text",
-                "module": "DocProcessoOP",
-                "type": "DocProcessoOP.popupuploadedit.Container22_4.Container13_38.Container13_39.Container15_80.div_upload_doc_op_2.archivo_title_sidebar_docRev_op_4"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "LookUp"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "DocProcessoOP.popupuploadedit.Container22_4.Container13_38.Container13_39.Container15_80.div_upload_doc_op_2.archivo_title_sidebar_docRev_op_4.Text"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "DocProcessoOP.popupuploadedit.Container22_4.Container13_38.Container13_39.Container15_80.div_upload_doc_op_2.archivo_title_sidebar_docRev_op_4.Text",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 2,
-                  "charOffset": 52,
-                  "snippet": {
-                    "text": "&&"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Text",
-                "module": "DocProcessoOP",
-                "type": "DocProcessoOP.popupuploadedit.Container22_4.Container13_38.Container13_39.Container15_80.div_upload_doc_op_2.archivo_title_sidebar_docRev_op_4"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "LookUp"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "DocProcessoOP.popupuploadedit.Container22_4.Container13_38.Container13_39.Container15_80.div_upload_doc_op_3.archivo_title_sidebar_docRev_op_5.Text"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "DocProcessoOP.popupuploadedit.Container22_4.Container13_38.Container13_39.Container15_80.div_upload_doc_op_3.archivo_title_sidebar_docRev_op_5.Text",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 3,
-                  "charOffset": 32,
-                  "snippet": {
-                    "text": ".Id"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Text",
-                "module": "DocProcessoOP",
-                "type": "DocProcessoOP.popupuploadedit.Container22_4.Container13_38.Container13_39.Container15_80.div_upload_doc_op_3.archivo_title_sidebar_docRev_op_5"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "id_documento.Id"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "DocProcessoOP.popupuploadedit.Container22_4.Container13_38.Container13_39.Container15_80.div_upload_doc_op_3.archivo_title_sidebar_docRev_op_5.Text"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "DocProcessoOP.popupuploadedit.Container22_4.Container13_38.Container13_39.Container15_80.div_upload_doc_op_3.archivo_title_sidebar_docRev_op_5.Text",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 1,
-                  "charOffset": 36,
-                  "snippet": {
-                    "text": "="
-                  }
-                }
-              },
-              "properties": {
-                "member": "Text",
-                "module": "DocProcessoOP",
-                "type": "DocProcessoOP.popupuploadedit.Container22_4.Container13_38.Container13_39.Container15_80.div_upload_doc_op_3.archivo_title_sidebar_docRev_op_5"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "LookUp"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "DocProcessoOP.popupuploadedit.Container22_4.Container13_38.Container13_39.Container15_80.div_upload_doc_op_3.archivo_title_sidebar_docRev_op_5.Text"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "DocProcessoOP.popupuploadedit.Container22_4.Container13_38.Container13_39.Container15_80.div_upload_doc_op_3.archivo_title_sidebar_docRev_op_5.Text",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 2,
-                  "charOffset": 52,
-                  "snippet": {
-                    "text": "&&"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Text",
-                "module": "DocProcessoOP",
-                "type": "DocProcessoOP.popupuploadedit.Container22_4.Container13_38.Container13_39.Container15_80.div_upload_doc_op_3.archivo_title_sidebar_docRev_op_5"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "LookUp"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "DocProcessoOP.popupelaboradoreseditop.Container22_5.Container13_40.Container13_41.Container14_38.Container15_84.Gallery2_9.Container4_25.elaborador1_12.Label2_275.Text"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "DocProcessoOP.popupelaboradoreseditop.Container22_5.Container13_40.Container13_41.Container14_38.Container15_84.Gallery2_9.Container4_25.elaborador1_12.Label2_275.Text",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 3,
-                  "charOffset": 65,
-                  "snippet": {
-                    "text": ".Id"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Text",
-                "module": "DocProcessoOP",
-                "type": "DocProcessoOP.popupelaboradoreseditop.Container22_5.Container13_40.Container13_41.Container14_38.Container15_84.Gallery2_9.Container4_25.elaborador1_12.Label2_275"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "id_documento.Id"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "DocProcessoOP.popupelaboradoreseditop.Container22_5.Container13_40.Container13_41.Container14_38.Container15_84.Gallery2_9.Container4_25.elaborador1_12.Label2_275.Text"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "DocProcessoOP.popupelaboradoreseditop.Container22_5.Container13_40.Container13_41.Container14_38.Container15_84.Gallery2_9.Container4_25.elaborador1_12.Label2_275.Text",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 1,
-                  "charOffset": 69,
-                  "snippet": {
-                    "text": "="
-                  }
-                }
-              },
-              "properties": {
-                "member": "Text",
-                "module": "DocProcessoOP",
-                "type": "DocProcessoOP.popupelaboradoreseditop.Container22_5.Container13_40.Container13_41.Container14_38.Container15_84.Gallery2_9.Container4_25.elaborador1_12.Label2_275"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Filter"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "DocProcessoOP.popupelaboradoreseditop.Container22_5.Container13_40.Container13_41.Container14_38.Container15_84.Gallery2_9.Container4_25.elaborador1_12.Label2_275.Text"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "DocProcessoOP.popupelaboradoreseditop.Container22_5.Container13_40.Container13_41.Container14_38.Container15_84.Gallery2_9.Container4_25.elaborador1_12.Label2_275.Text",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 1,
-                  "charOffset": 28,
-                  "snippet": {
-                    "text": "="
-                  }
-                }
-              },
-              "properties": {
-                "member": "Text",
-                "module": "DocProcessoOP",
-                "type": "DocProcessoOP.popupelaboradoreseditop.Container22_5.Container13_40.Container13_41.Container14_38.Container15_84.Gallery2_9.Container4_25.elaborador1_12.Label2_275"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Number",
-              "Text"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "DocProcessoOP.popupelaboradoreseditop.Container22_5.Container13_40.Container13_41.Container14_38.Container15_84.Gallery2_9.Container4_25.observarOption_container_ra_23.Visible"
                 }
               ],
@@ -36886,7 +36418,7 @@
             "level": "Medium"
           },
           "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
-          "ruleIndex": 3
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -37087,7 +36619,7 @@
             "level": "Medium"
           },
           "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
-          "ruleIndex": 3
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -53500,20 +53032,6 @@
               }
             },
             {
-              "id": "app-ErrInvalidDot",
-              "messageStrings": {
-                "issue": {
-                  "text": "Invalid use of '.'"
-                }
-              },
-              "properties": {
-                "componentType": "app",
-                "level": "High",
-                "primaryCategory": "formula",
-                "whyFix": ""
-              }
-            },
-            {
               "id": "app-ErrIncompatibleTypesForEquality-Left-Right",
               "messageStrings": {
                 "issue": {
@@ -53526,6 +53044,20 @@
                   "You might need to convert the value to be the same type, such as converting a date string (e.g., \"12/31/2018\") to a date value.",
                   "If you’re comparing records or tables, the field or column types must match exactly."
                 ],
+                "level": "High",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
+            {
+              "id": "app-ErrInvalidDot",
+              "messageStrings": {
+                "issue": {
+                  "text": "Invalid use of '.'"
+                }
+              },
+              "properties": {
+                "componentType": "app",
                 "level": "High",
                 "primaryCategory": "formula",
                 "whyFix": ""
