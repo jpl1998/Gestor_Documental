@@ -1091,7 +1091,19 @@
                         Fill: =primary
                         FillPortions: =1
                         LayoutMinHeight: =30
-                        OnSelect: =Set(varpopupfilter,false)
+                        OnSelect: |-
+                            =Set(varFilterMenu,{
+                                cargadoPor: ComboBox2_7.Selected,
+                                tipoDocumento: ComboBox2_9.Selected,
+                                dueProceso: ComboBox2_15.Selected,
+                                alcance: ComboBox2_16.Selected,
+                                macroproceso: ComboBox2_17.Selected,
+                                proceso: ComboBox2_18.Selected,
+                                fechaDesde: DatePicker1_2.SelectedDate,
+                                fechaHasta: DatePicker1_3.SelectedDate
+                            }
+                            );
+                            Set(varpopupfilter,false)
                         RadiusBottomLeft: =5
                         RadiusBottomRight: =5
                         RadiusTopLeft: =5

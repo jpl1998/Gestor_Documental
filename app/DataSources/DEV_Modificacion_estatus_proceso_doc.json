@@ -34,6 +34,8 @@
       "ID": "ID",
       "id_documento": "id_documento",
       "id_documento#Id": "id_documento Id",
+      "id_documento_x003a__x0020_ID": "id_documento: ID",
+      "id_documento_x003a__x0020_ID#Id": "id_documento: ID Id",
       "id_estatus_documento": "id_estatus_documento",
       "id_estatus_documento#Id": "id_estatus_documento Id",
       "id_estatus_documento_x003a__x0020": "id_estatus_documento: ID",

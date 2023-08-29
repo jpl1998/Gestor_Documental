@@ -114,7 +114,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "aprobador_evaluacion_sidebar_ra_2",
-      "ParentIndex": 3,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -365,7 +365,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "aprobador_evaluacion_sidebar_ra_3",
-      "ParentIndex": 2,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -35066,7 +35066,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "elaborador_evaluacion_sidebar_ra_2",
-      "ParentIndex": 4,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -63789,7 +63789,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "popup_observacion_ra_2",
-      "ParentIndex": 3,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -63990,7 +63990,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "popup_resultado_enviado_2",
-      "ParentIndex": 4,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -64163,7 +64163,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "popup_revision_doc_ra_2",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -67616,7 +67616,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "SideBar_ra_5",
-      "ParentIndex": 5,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

@@ -52458,6 +52458,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "App.varFilterMenu"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.varFilterMenu",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "varFilterMenu",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.People Audience"
                 }
               ],
