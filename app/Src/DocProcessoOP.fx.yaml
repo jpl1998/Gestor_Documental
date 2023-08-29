@@ -2341,129 +2341,25 @@
                                 Text: ="Elaborado por"
                                 ZIndex: =1
 
-                            elaborador1 As groupContainer.horizontalAutoLayoutContainer:
-                                DropShadow: =DropShadow.None
-                                FillPortions: =0
-                                Height: =50
-                                LayoutAlignItems: =LayoutAlignItems.Stretch
-                                LayoutGap: =10
-                                LayoutMinHeight: =50
-                                LayoutMinWidth: =250
-                                LayoutMode: =LayoutMode.Auto
-                                PaddingBottom: =5
-                                PaddingLeft: =5
-                                PaddingRight: =5
-                                PaddingTop: =5
+                            elaboradoresgallery As gallery.galleryVertical:
+                                DelayItemLoading: =true
+                                Items: =Sequence(6)
+                                Layout: =Layout.Vertical
+                                LayoutMinHeight: =287
+                                LayoutMinWidth: =320
+                                LoadingSpinner: =LoadingSpinner.Data
+                                TemplateSize: =50
                                 ZIndex: =3
-
-                                Label2_68 As label:
-                                    Color: =primarytext
-                                    FontWeight: =FontWeight.Bold
-                                    Height: =30
-                                    LayoutMinHeight: =30
-                                    Text: ="1"
-                                    Width: =20
-                                    ZIndex: =1
-
-                                ComboBox2_19 As combobox:
-                                    BorderColor: =secondarytext
-                                    BorderThickness: =1
-                                    ChevronBackground: =RGBA(255, 255, 255, 1)
-                                    ChevronFill: =primary
-                                    ChevronHoverBackground: =
-                                    ChevronHoverFill: =primary
-                                    Color: =secondarytext
-                                    DisplayFields: =["DisplayName","Email","Picture"]
-                                    FillPortions: =1
-                                    HoverBorderColor: =
-                                    HoverColor: =RGBA(26, 26, 26, 1)
-                                    HoverFill: =RGBA(215, 223, 240, 1)
-                                    InputTextPlaceholder: ="Seleccione Opción"
-                                    Items: =Choices([@DEV_Interlocutor].Email)
-                                    LayoutMinWidth: =50
-                                    PressedBorderColor: =secondarytext
-                                    PressedColor: =RGBA(26, 26, 26, 1)
-                                    PressedFill: =RGBA(0, 0, 0, 0)
-                                    SearchFields: =["DisplayName"]
-                                    SearchItems: =Choices(DEV_Interlocutor.Email,ComboBox2_19.SearchText)
-                                    SelectMultiple: =false
-                                    Size: =10
-                                    Template: =ListItemTemplate.Person
-                                    ZIndex: =2
-
-                            elaborador2 As groupContainer.horizontalAutoLayoutContainer:
-                                DropShadow: =DropShadow.None
-                                FillPortions: =0
-                                Height: =50
-                                LayoutAlignItems: =LayoutAlignItems.Stretch
-                                LayoutGap: =10
-                                LayoutMinHeight: =50
-                                LayoutMinWidth: =250
-                                LayoutMode: =LayoutMode.Auto
-                                PaddingBottom: =5
-                                PaddingLeft: =5
-                                PaddingRight: =5
-                                PaddingTop: =5
-                                ZIndex: =4
 
                                 Label2_71 As label:
                                     Color: =primarytext
                                     FontWeight: =FontWeight.Bold
                                     Height: =30
-                                    LayoutMinHeight: =30
-                                    Text: ="2"
+                                    Text: =ThisItem.Value
                                     Width: =20
-                                    ZIndex: =1
-
-                                ComboBox2_132 As combobox:
-                                    BorderColor: =secondarytext
-                                    BorderThickness: =1
-                                    ChevronBackground: =RGBA(255, 255, 255, 1)
-                                    ChevronFill: =primary
-                                    ChevronHoverBackground: =
-                                    ChevronHoverFill: =primary
-                                    Color: =secondarytext
-                                    DisplayFields: =["Nombre","Apellido"]
-                                    FillPortions: =1
-                                    HoverBorderColor: =
-                                    HoverColor: =RGBA(26, 26, 26, 1)
-                                    HoverFill: =RGBA(215, 223, 240, 1)
-                                    InputTextPlaceholder: ="Seleccione Opción"
-                                    Items: =DEV_Interlocutor
-                                    LayoutMinWidth: =50
-                                    PressedBorderColor: =secondarytext
-                                    PressedColor: =RGBA(26, 26, 26, 1)
-                                    PressedFill: =RGBA(0, 0, 0, 0)
-                                    SearchFields: =["Nombre"]
-                                    SearchItems: =Search(DEV_Interlocutor,ComboBox2_132.SearchText,"Nombre")
-                                    SelectMultiple: =false
-                                    Size: =10
-                                    Template: =ListItemTemplate.Double
-                                    ZIndex: =3
-
-                            elaborador3 As groupContainer.horizontalAutoLayoutContainer:
-                                DropShadow: =DropShadow.None
-                                FillPortions: =0
-                                Height: =50
-                                LayoutAlignItems: =LayoutAlignItems.Stretch
-                                LayoutGap: =10
-                                LayoutMinHeight: =50
-                                LayoutMinWidth: =250
-                                LayoutMode: =LayoutMode.Auto
-                                PaddingBottom: =5
-                                PaddingLeft: =5
-                                PaddingRight: =5
-                                PaddingTop: =5
-                                ZIndex: =5
-
-                                Label2_72 As label:
-                                    Color: =primarytext
-                                    FontWeight: =FontWeight.Bold
-                                    Height: =30
-                                    LayoutMinHeight: =30
-                                    Text: ="3"
-                                    Width: =20
-                                    ZIndex: =1
+                                    X: =5
+                                    Y: =(Parent.TemplateHeight-Self.Height)/2
+                                    ZIndex: =2
 
                                 ComboBox2_22 As combobox:
                                     BorderColor: =secondarytext
@@ -2473,184 +2369,52 @@
                                     ChevronHoverBackground: =
                                     ChevronHoverFill: =primary
                                     Color: =secondarytext
-                                    DisplayFields: =["Nombre","Apellido"]
-                                    FillPortions: =1
+                                    DisplayFields: =["DisplayName","Email","Picture"]
                                     HoverBorderColor: =
                                     HoverColor: =RGBA(26, 26, 26, 1)
                                     HoverFill: =RGBA(215, 223, 240, 1)
                                     InputTextPlaceholder: ="Seleccione Opción"
-                                    Items: =DEV_Interlocutor
-                                    LayoutMinWidth: =50
+                                    Items: =Choices([@DEV_Interlocutor].Email)
                                     PressedBorderColor: =secondarytext
                                     PressedColor: =RGBA(26, 26, 26, 1)
                                     PressedFill: =RGBA(0, 0, 0, 0)
-                                    SearchFields: =["Nombre"]
-                                    SearchItems: =Search(DEV_Interlocutor,ComboBox2_22.SearchText,"Nombre")
+                                    SearchFields: =["DisplayName"]
+                                    SearchItems: =Choices(DEV_Interlocutor.Email,ComboBox2_22.SearchText)
                                     SelectMultiple: =false
                                     Size: =10
-                                    Template: =ListItemTemplate.Double
-                                    ZIndex: =3
-
-                            elaborador4 As groupContainer.horizontalAutoLayoutContainer:
-                                DropShadow: =DropShadow.None
-                                FillPortions: =0
-                                Height: =50
-                                LayoutAlignItems: =LayoutAlignItems.Stretch
-                                LayoutGap: =10
-                                LayoutMinHeight: =50
-                                LayoutMinWidth: =250
-                                LayoutMode: =LayoutMode.Auto
-                                PaddingBottom: =5
-                                PaddingLeft: =5
-                                PaddingRight: =5
-                                PaddingTop: =5
-                                ZIndex: =6
-
-                                Label2_83 As label:
-                                    Color: =primarytext
-                                    FontWeight: =FontWeight.Bold
-                                    Height: =30
-                                    LayoutMinHeight: =30
-                                    Text: ="4"
-                                    Width: =20
-                                    ZIndex: =1
-
-                                ComboBox2_23 As combobox:
-                                    BorderColor: =secondarytext
-                                    BorderThickness: =1
-                                    ChevronBackground: =RGBA(255, 255, 255, 1)
-                                    ChevronFill: =primary
-                                    ChevronHoverBackground: =
-                                    ChevronHoverFill: =primary
-                                    Color: =secondarytext
-                                    DisplayFields: =["Nombre","Apellido"]
-                                    FillPortions: =1
-                                    HoverBorderColor: =
-                                    HoverColor: =RGBA(26, 26, 26, 1)
-                                    HoverFill: =RGBA(215, 223, 240, 1)
-                                    InputTextPlaceholder: ="Seleccione Opción"
-                                    Items: =DEV_Interlocutor
-                                    LayoutMinWidth: =50
-                                    PressedBorderColor: =secondarytext
-                                    PressedColor: =RGBA(26, 26, 26, 1)
-                                    PressedFill: =RGBA(0, 0, 0, 0)
-                                    SearchFields: =["Nombre"]
-                                    SearchItems: =Search(DEV_Interlocutor,ComboBox2_23.SearchText,"Nombre")
-                                    SelectMultiple: =false
-                                    Size: =10
-                                    Template: =ListItemTemplate.Double
-                                    ZIndex: =3
-
-                            elaborador5 As groupContainer.horizontalAutoLayoutContainer:
-                                DropShadow: =DropShadow.None
-                                FillPortions: =0
-                                Height: =50
-                                LayoutAlignItems: =LayoutAlignItems.Stretch
-                                LayoutGap: =10
-                                LayoutMinHeight: =50
-                                LayoutMinWidth: =250
-                                LayoutMode: =LayoutMode.Auto
-                                PaddingBottom: =5
-                                PaddingLeft: =5
-                                PaddingRight: =5
-                                PaddingTop: =5
-                                ZIndex: =7
-
-                                Label2_84 As label:
-                                    Color: =primarytext
-                                    FontWeight: =FontWeight.Bold
-                                    Height: =30
-                                    LayoutMinHeight: =30
-                                    Text: ="5"
-                                    Width: =20
-                                    ZIndex: =1
-
-                                ComboBox2_24 As combobox:
-                                    BorderColor: =secondarytext
-                                    BorderThickness: =1
-                                    ChevronBackground: =RGBA(255, 255, 255, 1)
-                                    ChevronFill: =primary
-                                    ChevronHoverBackground: =
-                                    ChevronHoverFill: =primary
-                                    Color: =secondarytext
-                                    DisplayFields: =["Nombre","Apellido"]
-                                    FillPortions: =1
-                                    HoverBorderColor: =
-                                    HoverColor: =RGBA(26, 26, 26, 1)
-                                    HoverFill: =RGBA(215, 223, 240, 1)
-                                    InputTextPlaceholder: ="Seleccione Opción"
-                                    Items: =DEV_Interlocutor
-                                    LayoutMinWidth: =50
-                                    PressedBorderColor: =secondarytext
-                                    PressedColor: =RGBA(26, 26, 26, 1)
-                                    PressedFill: =RGBA(0, 0, 0, 0)
-                                    SearchFields: =["Nombre"]
-                                    SearchItems: =Search(DEV_Interlocutor,ComboBox2_24.SearchText,"Nombre")
-                                    SelectMultiple: =false
-                                    Size: =10
-                                    Template: =ListItemTemplate.Double
-                                    ZIndex: =3
-
-                            elaborador6 As groupContainer.horizontalAutoLayoutContainer:
-                                DropShadow: =DropShadow.None
-                                FillPortions: =0
-                                Height: =50
-                                LayoutAlignItems: =LayoutAlignItems.Stretch
-                                LayoutGap: =10
-                                LayoutMinHeight: =50
-                                LayoutMinWidth: =250
-                                LayoutMode: =LayoutMode.Auto
-                                PaddingBottom: =5
-                                PaddingLeft: =5
-                                PaddingRight: =5
-                                PaddingTop: =5
-                                ZIndex: =8
-
-                                Label2_85 As label:
-                                    Color: =primarytext
-                                    FontWeight: =FontWeight.Bold
-                                    Height: =30
-                                    LayoutMinHeight: =30
-                                    Text: ="6"
-                                    Width: =20
-                                    ZIndex: =1
-
-                                ComboBox2_25 As combobox:
-                                    BorderColor: =secondarytext
-                                    BorderThickness: =1
-                                    ChevronBackground: =RGBA(255, 255, 255, 1)
-                                    ChevronFill: =primary
-                                    ChevronHoverBackground: =
-                                    ChevronHoverFill: =primary
-                                    Color: =secondarytext
-                                    DisplayFields: =["Nombre","Apellido"]
-                                    FillPortions: =1
-                                    HoverBorderColor: =
-                                    HoverColor: =RGBA(26, 26, 26, 1)
-                                    HoverFill: =RGBA(215, 223, 240, 1)
-                                    InputTextPlaceholder: ="Seleccione Opción"
-                                    Items: =DEV_Interlocutor
-                                    LayoutMinWidth: =50
-                                    PressedBorderColor: =secondarytext
-                                    PressedColor: =RGBA(26, 26, 26, 1)
-                                    PressedFill: =RGBA(0, 0, 0, 0)
-                                    SearchFields: =["Nombre"]
-                                    SearchItems: =Search(DEV_Interlocutor,ComboBox2_25.SearchText,"Nombre")
-                                    SelectMultiple: =false
-                                    Size: =10
-                                    Template: =ListItemTemplate.Double
+                                    Template: =ListItemTemplate.Person
+                                    X: =31
+                                    Y: =(Parent.TemplateHeight-Self.Height)/2
                                     ZIndex: =3
 
                             Button7 As button:
-                                OnSelect: |-
-                                    =If( IsBlank(LookUp(DEV_Interlocutor,ComboBox2_19.Selected.Email in Email[@Email],ThisRecord)),Notify("false"),Notify("true"));
+                                AlignInContainer: =AlignInContainer.Stretch
+                                OnSelect: |
+                                    =ForAll(elaboradoresgallery.AllItems,
                                     
-                                    /*Patch(DEV_Interlocutor;Defaults(DEV_Interlocutor);
-                                    {Email:ComboBox2_19.Selected;
-                                    Nombre:UsuáriosdoOffice365.UserProfileV2(ComboBox2_19.Selected.Email).givenName;
-                                    Apellido:UsuáriosdoOffice365.UserProfileV2(ComboBox2_19.Selected.Email).surname})*/
+                                        If(
+                                            Not(IsBlank(ComboBox2_22)) And IsBlank(LookUp(DEV_Interlocutor,ComboBox2_22.Selected.Email in Email[@Email],ThisRecord)),
+                                            
+                                            Patch(DEV_Interlocutor,Defaults(DEV_Interlocutor),
+                                                {Email:ComboBox2_22.Selected,
+                                                Nombre:UsuáriosdoOffice365.UserProfileV2(ComboBox2_22.Selected.Email).givenName,
+                                                Apellido:UsuáriosdoOffice365.UserProfileV2(ComboBox2_22.Selected.Email).surname});
+                                       
+                                            Patch(DEV_Interlocutor_funcion,Defaults(DEV_Interlocutor_funcion),
+                                                {id_funcion:{Id:3 , Value:3},
+                                                id_interlocutor: {Id:LookUp(DEV_Interlocutor,ComboBox2_22.Selected.Email in Email[@Email],ID)
+                                                                ,Value:LookUp(DEV_Interlocutor,ComboBox2_22.Selected.Email in Email[@Email],ID)}}),
+                                            
+                                            Notify("Usuário "& ComboBox2_22.Selected.DisplayName&" ya está en la tabla Interlocutor");
+                                            Patch(DEV_Interlocutor_funcion,Defaults(DEV_Interlocutor_funcion),
+                                                {id_funcion:{Id:3 , Value:3},
+                                                id_interlocutor: {Id:LookUp(DEV_Interlocutor,ComboBox2_22.Selected.Email in Email[@Email],ID)
+                                                                ,Value:LookUp(DEV_Interlocutor,ComboBox2_22.Selected.Email in Email[@Email],ID)}}
+                                            )
+                                        )
+                                    );
                                 Text: ="Botão"
-                                ZIndex: =9
+                                ZIndex: =4
 
                         separator_revisores_op As rectangle:
                             AlignInContainer: =AlignInContainer.Stretch
