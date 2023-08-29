@@ -260,6 +260,15 @@
                                 Y: =39
                                 ZIndex: =2
 
+                            button_menu_filter_docRev_ra As button:
+                                Fill: =RGBA(0, 0, 0, 0)
+                                HoverFill: =RGBA(0, 0, 0, 0.1)
+                                OnSelect: =Select(Parent)
+                                PressedFill: =
+                                Text: =""
+                                Width: =150
+                                ZIndex: =3
+
                     Container_searchbar_docRev_ra As groupContainer.horizontalAutoLayoutContainer:
                         DropShadow: =DropShadow.None
                         FillPortions: =0.1
@@ -451,7 +460,18 @@
                             "tablecontent_docRev_ra As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
                                 DelayItemLoading: =true
                                 Height: =Button4_10.Height
-                                Items: =DEV_Documento
+                                Items: |-
+                                    =If(
+                                        menu_filter_docRev_ra.Selected.Value = "Pendientes",
+                                        Filter(
+                                            DEV_Documento,
+                                            ID in Filter(
+                                                DEV_Modificacion_estatus_proceso_doc,
+                                                ind_inact = "Activo" && id_estatus_documento.Value = "Por revisar"
+                                            ).id_doc
+                                        ),
+                                        DEV_Documento
+                                    )
                                 Layout: =Layout.Vertical
                                 LoadingSpinner: =LoadingSpinner.Data
                                 TemplatePadding: =0
@@ -555,14 +575,14 @@
                                             BorderColor: =Self.Color
                                             BorderStyle: =BorderStyle.None
                                             Color: |-
-                                                =Switch(LookUp(DEV_Modificacion_estatus_proceso_doc,codigo=ThisItem.codigo && ind_mod = "i").id_estatus_documento_x003a__x002.Value,
+                                                =Switch(LookUp(DEV_Modificacion_estatus_proceso_doc,codigo=ThisItem.codigo && ind_mod = "i").id_estatus_documento.Value,
                                                 "Por aprobar", RGBA(180, 130, 0, 1),
                                                 "Por revisar",RGBA(180, 130, 0, 1),
                                                 "Observado", RGBA(214, 0, 0, 1),
                                                 "Aprobado",RGBA(44, 143, 112, 1))
                                             DisplayMode: =DisplayMode.View
                                             Fill: |-
-                                                =Switch(LookUp(DEV_Modificacion_estatus_proceso_doc,codigo=ThisItem.codigo && ind_mod = "i").id_estatus_documento_x003a__x002.Value,
+                                                =Switch(LookUp(DEV_Modificacion_estatus_proceso_doc,codigo=ThisItem.codigo && ind_mod = "i").id_estatus_documento.Value,
                                                 "Por aprobar", RGBA(249, 249, 249, 1),
                                                 "Por revisar",RGBA(249, 249, 249, 1),
                                                 "Observado", RGBA(245, 218, 216, 1),
@@ -575,7 +595,7 @@
                                             RadiusTopLeft: =5
                                             RadiusTopRight: =5
                                             Size: =11
-                                            Text: =LookUp(DEV_Modificacion_estatus_proceso_doc,codigo=ThisItem.codigo && ind_inact="Activo").id_estatus_documento_x003a__x002.Value
+                                            Text: =LookUp(DEV_Modificacion_estatus_proceso_doc,codigo=ThisItem.codigo && ind_inact="Activo").id_estatus_documento.Value
                                             Width: =Parent.Width*80%
                                             X: =(Parent.Width-Self.Width)/2
                                             Y: =(Parent.Height-Self.Height)/2
@@ -1091,7 +1111,19 @@
                         Fill: =primary
                         FillPortions: =1
                         LayoutMinHeight: =30
-                        OnSelect: =Set(varpopupfilter,false)
+                        OnSelect: |-
+                            =Set(varFilterMenu,{
+                                cargadoPor: ComboBox2_7.Selected,
+                                tipoDocumento: ComboBox2_9.Selected,
+                                dueProceso: ComboBox2_15.Selected,
+                                alcance: ComboBox2_16.Selected,
+                                macroproceso: ComboBox2_17.Selected,
+                                proceso: ComboBox2_18.Selected,
+                                fechaDesde: DatePicker1_2.SelectedDate,
+                                fechaHasta: DatePicker1_3.SelectedDate
+                            }
+                            );
+                            Set(varpopupfilter,false)
                         RadiusBottomLeft: =5
                         RadiusBottomRight: =5
                         RadiusTopLeft: =5
@@ -1229,33 +1261,6 @@
                         Width: =97
                         Y: =2.5
                         ZIndex: =1
-
-                "revisor_evaluacion_sidebar_ra As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
-                    DelayItemLoading: =true
-                    Items: |-
-                        =Filter(
-                            DEV_Actor,
-                            id_documento.Value = Text(varSelectedDoc.ID),
-                            id_funcion.Value = "Revisor"
-                        )
-                    Layout: =Layout.Vertical
-                    LayoutMinHeight: =287
-                    LayoutMinWidth: =320
-                    LoadingSpinner: =LoadingSpinner.Data
-                    TemplatePadding: =0
-                    TemplateSize: =70
-                    Visible: =menu_filter_evaluacion_sidebar_ra.Selected.Value = "Revisado por"
-                    ZIndex: =1
-
-                    check_obs_icon_sidebar_ra As image:
-                        Height: =20
-                        Image: =check
-                        OnSelect: =Select(Parent)
-                        Visible: =IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version, id_status_archivo.Value="2"))
-                        Width: =20
-                        X: =288
-                        Y: =16
-                        ZIndex: =10
 
                 "registro_evaluacion_sidebar_ra As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
                     DelayItemLoading: =true
@@ -1641,6 +1646,104 @@
                         Y: =16
                         ZIndex: =10
 
+                "revisor_evaluacion_sidebar_ra As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+                    DelayItemLoading: =true
+                    Items: |-
+                        =Filter(
+                            DEV_Actor,
+                            id_documento.Value = Text(varSelectedDoc.ID),
+                            id_funcion.Value = "Revisor"
+                        )
+                    Layout: =Layout.Vertical
+                    LayoutMinHeight: =287
+                    LayoutMinWidth: =320
+                    LoadingSpinner: =LoadingSpinner.Data
+                    TemplatePadding: =0
+                    TemplateSize: =70
+                    Visible: =menu_filter_evaluacion_sidebar_ra.Selected.Value = "Revisado por"
+                    ZIndex: =4
+
+                    Image3_14 As image:
+                        Height: =32
+                        Image: =LookUp(DEV_Interlocutor, Value(ThisItem.id_interlocutor.Value)=ID).Email.Picture
+                        OnSelect: =Select(Parent)
+                        RadiusBottomLeft: =8
+                        RadiusBottomRight: =8
+                        RadiusTopLeft: =8
+                        RadiusTopRight: =8
+                        Width: =32
+                        X: =16
+                        Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+                        ZIndex: =1
+
+                    Title1_30 As label:
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                        Height: =Self.Size * 1.8
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =12
+                        Text: |-
+                            =ThisItem.'id_interlocutor: Nombre'.Value & " " & ThisItem.'id_interlocutor: Apellido'.Value
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =Parent.TemplateWidth - 200
+                        X: =63
+                        Y: =17
+                        ZIndex: =2
+
+                    Subtitle1_21 As label:
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                        Height: =Self.Size * 1.8
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =8
+                        Text: =ThisItem.ID
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =Title1_30.Width
+                        X: =Title1_30.X
+                        Y: =Title1_30.Y + Title1_30.Height
+                        ZIndex: =3
+
+                    Rectangle4_7 As rectangle:
+                        Fill: =placeholder
+                        Height: =1
+                        OnSelect: =Select(Parent)
+                        Width: =420
+                        Y: =69
+                        ZIndex: =4
+
+                    obs_text_sidebar_ra_11 As label:
+                        Align: =Align.Center
+                        Color: =red
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =24
+                        OnSelect: =Select(Parent)
+                        Size: =12
+                        Text: ="Observado"
+                        Visible: =!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version, id_status_archivo.Value="2"))
+                        Width: =120
+                        X: =295
+                        Y: =14
+                        ZIndex: =5
+
+                    check_obs_icon_sidebar_ra As image:
+                        Height: =20
+                        Image: =check
+                        OnSelect: =Select(Parent)
+                        Visible: =IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version, id_status_archivo.Value="2"))
+                        Width: =20
+                        X: =288
+                        Y: =16
+                        ZIndex: =10
+
             archivos_container_sidebar_docRev_ra As groupContainer.verticalAutoLayoutContainer:
                 DropShadow: =DropShadow.None
                 FillPortions: =0
@@ -1680,7 +1783,7 @@
                         archivo_title_sidebar_docRev_ra As label:
                             Font: =Font.'Segoe UI'
                             Size: =12
-                            Text: =First(ThisItem.Anexos).DisplayName
+                            Text: =First(ThisItem.Attachments).DisplayName
                             Width: =304
                             ZIndex: =2
 
@@ -1705,7 +1808,7 @@
                                 FocusedBorderThickness: =2
                                 Height: =25
                                 HoverFill: =RGBA(0, 0, 0, 0.15)
-                                OnSelect: =Launch(Concatenate(First(ThisItem.Anexos).AbsoluteUri,"?web=1"))
+                                OnSelect: =Launch(Concatenate(First(ThisItem.Attachments).AbsoluteUri,"?web=1"))
                                 PressedFill: =
                                 RadiusBottomLeft: =5
                                 RadiusBottomRight: =5
@@ -1738,7 +1841,7 @@
                                 FocusedBorderThickness: =2
                                 Height: =25
                                 HoverFill: =RGBA(0, 0, 0, 0.15)
-                                OnSelect: =Launch(First(ThisItem.Anexos).AbsoluteUri)
+                                OnSelect: =Launch(First(ThisItem.Attachments).AbsoluteUri)
                                 PressedFill: =
                                 RadiusBottomLeft: =5
                                 RadiusBottomRight: =5
@@ -1784,7 +1887,7 @@
                         Font: =Font.'Segoe UI'
                         Height: =24
                         Size: =12
-                        Text: =varSelectedDoc.'Criado por'.DisplayName
+                        Text: =varSelectedDoc.'Created By'.DisplayName
                         Width: =(Parent.Width/3)*2 -20
                         ZIndex: =2
 
@@ -2197,7 +2300,7 @@
                                 AlignInContainer: =AlignInContainer.Stretch
                                 Font: =Font.'Segoe UI'
                                 Size: =12
-                                Text: =First(ThisItem.Anexos).DisplayName
+                                Text: =First(ThisItem.Attachments).DisplayName
                                 Width: =195
                                 ZIndex: =2
 
@@ -2221,7 +2324,7 @@
                                     Fill: =RGBA(0, 0, 0, 0)
                                     Height: =25
                                     HoverFill: =RGBA(0, 0, 0, 0.14)
-                                    OnSelect: =Launch(Concatenate(First(ThisItem.Anexos).AbsoluteUri,"?web=1"))
+                                    OnSelect: =Launch(Concatenate(First(ThisItem.Attachments).AbsoluteUri,"?web=1"))
                                     PressedFill: =
                                     RadiusBottomLeft: =5
                                     RadiusBottomRight: =5
@@ -2253,7 +2356,7 @@
                                     Fill: =RGBA(0, 0, 0, 0)
                                     Height: =25
                                     HoverFill: =RGBA(0, 0, 0, 0.15)
-                                    OnSelect: =Launch(First(ThisItem.Anexos).AbsoluteUri)
+                                    OnSelect: =Launch(First(ThisItem.Attachments).AbsoluteUri)
                                     PressedFill: =
                                     RadiusBottomLeft: =5
                                     RadiusBottomRight: =5
@@ -2431,7 +2534,7 @@
                                 AlignInContainer: =AlignInContainer.Stretch
                                 Font: =Font.'Segoe UI'
                                 Size: =12
-                                Text: =First(ThisItem.Anexos).DisplayName
+                                Text: =First(ThisItem.Attachments).DisplayName
                                 Width: =195
                                 ZIndex: =2
 
@@ -2455,7 +2558,7 @@
                                     Fill: =RGBA(0, 0, 0, 0)
                                     Height: =25
                                     HoverFill: =RGBA(0, 0, 0, 0.14)
-                                    OnSelect: =Launch(Concatenate(First(ThisItem.Anexos).AbsoluteUri,"?web=1"))
+                                    OnSelect: =Launch(Concatenate(First(ThisItem.Attachments).AbsoluteUri,"?web=1"))
                                     PressedFill: =
                                     RadiusBottomLeft: =5
                                     RadiusBottomRight: =5
@@ -2487,7 +2590,7 @@
                                     Fill: =RGBA(0, 0, 0, 0)
                                     Height: =25
                                     HoverFill: =RGBA(0, 0, 0, 0.15)
-                                    OnSelect: =Launch(First(ThisItem.Anexos).AbsoluteUri)
+                                    OnSelect: =Launch(First(ThisItem.Attachments).AbsoluteUri)
                                     PressedFill: =
                                     RadiusBottomLeft: =5
                                     RadiusBottomRight: =5
@@ -2664,7 +2767,7 @@
                                 AlignInContainer: =AlignInContainer.Stretch
                                 Font: =Font.'Segoe UI'
                                 Size: =12
-                                Text: =First(ThisItem.Anexos).DisplayName
+                                Text: =First(ThisItem.Attachments).DisplayName
                                 Width: =195
                                 ZIndex: =2
 
@@ -2688,7 +2791,7 @@
                                     Fill: =RGBA(0, 0, 0, 0)
                                     Height: =25
                                     HoverFill: =RGBA(0, 0, 0, 0.14)
-                                    OnSelect: =Launch(Concatenate(First(ThisItem.Anexos).AbsoluteUri,"?web=1"))
+                                    OnSelect: =Launch(Concatenate(First(ThisItem.Attachments).AbsoluteUri,"?web=1"))
                                     PressedFill: =
                                     RadiusBottomLeft: =5
                                     RadiusBottomRight: =5
@@ -2720,7 +2823,7 @@
                                     Fill: =RGBA(0, 0, 0, 0)
                                     Height: =25
                                     HoverFill: =RGBA(0, 0, 0, 0.15)
-                                    OnSelect: =Launch(First(ThisItem.Anexos).AbsoluteUri)
+                                    OnSelect: =Launch(First(ThisItem.Attachments).AbsoluteUri)
                                     PressedFill: =
                                     RadiusBottomLeft: =5
                                     RadiusBottomRight: =5
@@ -2929,7 +3032,8 @@
                                     ind_inact: "Activo",
                                     ind_mod: "i",
                                     id_estatus_documento: {Id: 2, Value: 2},
-                                    id_documento: {Id: varSelectedDoc.ID, Value: varSelectedDoc.ID}
+                                    id_documento: {Id: varSelectedDoc.ID, Value: varSelectedDoc.ID},
+                                    id_doc:varDocID.ID
                                 }
                             )
                         );
@@ -3003,6 +3107,15 @@
                         );
                         If(
                             varRevPrincipal.estado="Observado" || varRevFlujograma.estado="Observado" || varRevRcki.estado="Observado",
+                            UpdateIf(
+                                DEV_Modificacion_estatus_proceso_doc,
+                                codigo= varSelectedDoc.codigo && version = varSelectedDoc.version && id_documento.Id = varSelectedDoc.ID,
+                                {
+                                    'fecha y hora': Now(),
+                                    ind_inact: "Inactivo",
+                                    ind_mod: "u"
+                                }
+                            );
                             Patch(DEV_Modificacion_estatus_proceso_doc,
                                 Defaults(
                                     DEV_Modificacion_estatus_proceso_doc
@@ -3016,9 +3129,39 @@
                                     ind_inact: "Activo",
                                     ind_mod: "i",
                                     id_estatus_documento: {Id: 3, Value: 3},
-                                    id_documento: {Id: varSelectedDoc.ID, Value: varSelectedDoc.ID}
+                                    id_documento: {Id: varSelectedDoc.ID, Value: varSelectedDoc.ID},
+                                    id_doc:varDocID.ID
                                 }
                             );
+                        );
+                        If(
+                            IsEmpty(Filter(revisor_evaluacion_sidebar_ra.AllItems, IsBlank(obs_text_sidebar_ra.Text) || obs_text_sidebar_ra.Text ="Observado")),
+                            UpdateIf(
+                                DEV_Modificacion_estatus_proceso_doc,
+                                codigo= varSelectedDoc.codigo && version = varSelectedDoc.version && id_documento.Id = varSelectedDoc.ID,
+                                {
+                                    'fecha y hora': Now(),
+                                    ind_inact: "Inactivo",
+                                    ind_mod: "u"
+                                }
+                            );
+                            Patch(DEV_Modificacion_estatus_proceso_doc,
+                            Defaults(
+                                DEV_Modificacion_estatus_proceso_doc
+                            ),
+                                {
+                                    codigo: varSelectedDoc.codigo,
+                                    version: varSelectedDoc.version,
+                                    id_estatus_procesos: {Id: 1, Value: 1},
+                                    nro_mod: Coalesce(First(SortByColumns(Filter(DEV_Modificacion_estatus_proceso_doc, codigo=varSelectedDoc.codigo, version= varSelectedDoc.version), "nro_mod",SortOrder.Descending)).nro_mod,0)+1,
+                                    'fecha y hora': Now(),
+                                    ind_inact: "Activo",
+                                    ind_mod: "i",
+                                    id_estatus_documento: {Id: 4, Value: 4},
+                                    id_documento: {Id: varSelectedDoc.ID, Value: varSelectedDoc.ID},
+                                    id_doc:varDocID.ID
+                                }
+                            )
                         );
                         
                         UpdateContext({varResultadoPopup: true})
@@ -3181,6 +3324,15 @@
                             )
                         )
                     );
+                    UpdateIf(
+                            DEV_Modificacion_estatus_proceso_doc,
+                            codigo= varSelectedDoc.codigo && version = varSelectedDoc.version && id_documento.Id = varSelectedDoc.ID,
+                            {
+                                'fecha y hora': Now(),
+                                ind_inact: "Inactivo",
+                                ind_mod: "u"
+                            }
+                        );
                     Patch(DEV_Modificacion_estatus_proceso_doc,
                         Defaults(
                             DEV_Modificacion_estatus_proceso_doc
@@ -3194,7 +3346,8 @@
                             ind_inact: "Activo",
                             ind_mod: "i",
                             id_estatus_documento: {Id: 3, Value: 3},
-                            id_documento: {Id: varSelectedDoc.ID, Value: varSelectedDoc.ID}
+                            id_documento: {Id: varSelectedDoc.ID, Value: varSelectedDoc.ID},
+                            id_doc:varDocID.ID
                         }
                     );
                     UpdateContext({varResultadoPopup: true})
@@ -3251,7 +3404,7 @@
                 Attachments_DataCard1 As typedDataCard.attachmentsEditCard:
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="{Attachments}"
-                    Default: =ThisItem.Anexos
+                    Default: =ThisItem.Attachments
                     DisplayMode: =Parent.DisplayMode
                     DisplayName: =DataSourceInfo([@DEV_Observacion],DataSourceInfo.DisplayName,"{Attachments}")
                     Fill: =RGBA(0, 0, 0, 0)
@@ -3450,7 +3603,7 @@
                     PaddingRight: =0
                     PaddingTop: =0
                     Size: =12
-                    Text: =First(LookUp(DEV_Archivos, Value(ThisItem.id_archivo.Value)=ID).Anexos).DisplayName
+                    Text: =First(LookUp(DEV_Archivos, Value(ThisItem.id_archivo.Value)=ID).Attachments).DisplayName
                     VerticalAlign: =VerticalAlign.Top
                     Width: =Parent.TemplateWidth - Image6.Width - 100
                     X: =56
@@ -3565,7 +3718,7 @@
                 Font: =Font.'Segoe UI'
                 Height: =30
                 Size: =12
-                Text: =First(LookUp(DEV_Observacion, id_archivo.Value=Text(docs_registro_obs_ra.Selected.id_archivo.Value) && ind_inact="Activo").Anexos).DisplayName
+                Text: =First(LookUp(DEV_Observacion, id_archivo.Value=Text(docs_registro_obs_ra.Selected.id_archivo.Value) && ind_inact="Activo").Attachments).DisplayName
                 Width: =320
                 X: =25
                 Y: =archivo_title_registro_obs_popup_ra_1.Y+archivo_title_registro_obs_popup_ra_1.Height+10
@@ -3590,7 +3743,7 @@
                 Height: =20
                 HoverColor: =Self.Color
                 HoverFill: =RGBA(0, 0, 0, 0.15)
-                OnSelect: =Launch(First(LookUp(DEV_Observacion, id_archivo.Value=Text(docs_registro_obs_ra.Selected.id_archivo.Value) && ind_inact="Activo").Anexos).AbsoluteUri)
+                OnSelect: =Launch(First(LookUp(DEV_Observacion, id_archivo.Value=Text(docs_registro_obs_ra.Selected.id_archivo.Value) && ind_inact="Activo").Attachments).AbsoluteUri)
                 PressedColor: =Self.Color
                 PressedFill: =RGBA(0, 0, 0, 0.15)
                 Size: =8

@@ -2784,7 +2784,8 @@
                                     nro_mod:1,
                                     'fecha y hora': Now(),
                                     ind_inact:"Activo",
-                                    ind_mod:"i"});
+                                    ind_mod:"i",
+                                    id_doc:varDocID.ID});
                                 
                                 
                                 Set(varconfirmation,true)
@@ -3472,112 +3473,6 @@
                     Width: =Parent.Width*95%
                     ZIndex: =4
 
-                archivos_gallery_sidebar_docRev_ra_1 As gallery.galleryVertical:
-                    DelayItemLoading: =true
-                    Items: =Filter(DEV_Archivos, id_documento.Value = Text(varDocSide.ID), version=varDocSide.version, codigo= varDocSide.codigo)
-                    Layout: =Layout.Vertical
-                    LayoutMinHeight: =287
-                    LayoutMinWidth: =320
-                    LoadingSpinner: =LoadingSpinner.Data
-                    TemplateSize: =40
-                    ZIndex: =6
-
-                    container_archivos_gallery_sidebar_7 As groupContainer.horizontalAutoLayoutContainer:
-                        DropShadow: =DropShadow.None
-                        Height: =40
-                        LayoutMode: =LayoutMode.Auto
-                        Width: =410
-                        ZIndex: =1
-
-                        archivo_image_sidebar_docRev_ra_4 As image:
-                            AlignInContainer: =AlignInContainer.Stretch
-                            Height: =24
-                            Image: =If(ThisItem.tipo_documento="Principal", word, ThisItem.tipo_documento="Flujograma", visio, excel)
-                            LayoutMinHeight: =24
-                            Width: =30
-                            ZIndex: =1
-
-                        archivo_title_sidebar_docRev_ra_4 As label:
-                            Font: =Font.'Segoe UI'
-                            Size: =10
-                            Text: =First(ThisItem.Anexos).DisplayName
-                            Width: =304
-                            ZIndex: =2
-
-                        archivo_open_container_sidebar_ra_4 As groupContainer.manualLayoutContainer:
-                            DropShadow: =DropShadow.None
-                            LayoutMinHeight: =24
-                            LayoutMinWidth: =24
-                            ZIndex: =3
-
-                            open_archivo_icon_sidebar_7 As icon.OpenInNewWindow:
-                                Height: =16
-                                Icon: =Icon.OpenInNewWindow
-                                Width: =16
-                                X: =(Parent.Width-Self.Width)/2
-                                Y: =(Parent.Height-Self.Height)/2
-                                ZIndex: =1
-
-                            open_archivo_button_sidebar_7 As button:
-                                BorderColor: =primary
-                                BorderThickness: =1.5
-                                Fill: =RGBA(0, 0, 0, 0)
-                                FocusedBorderThickness: =2
-                                Height: =25
-                                HoverFill: =RGBA(0, 0, 0, 0.15)
-                                OnSelect: =Launch(Concatenate(First(ThisItem.Anexos).AbsoluteUri,"?web=1"))
-                                PressedFill: =
-                                RadiusBottomLeft: =5
-                                RadiusBottomRight: =5
-                                RadiusTopLeft: =5
-                                RadiusTopRight: =5
-                                Text: =""
-                                Width: =25
-                                X: =(Parent.Width-Self.Width)/2
-                                Y: =(Parent.Height-Self.Height)/2
-                                ZIndex: =2
-
-                        archivo_download_container_sidebar_ra_4 As groupContainer.manualLayoutContainer:
-                            DropShadow: =DropShadow.None
-                            LayoutMinHeight: =24
-                            LayoutMinWidth: =24
-                            ZIndex: =4
-
-                            download_archivo_icon_sidebar_7 As icon.OpenInNewWindow:
-                                Height: =16
-                                Icon: =Icon.Download
-                                Width: =16
-                                X: =(Parent.Width-Self.Width)/2
-                                Y: =(Parent.Height-Self.Height)/2
-                                ZIndex: =1
-
-                            download_archivo_button_sidebar_7 As button:
-                                BorderColor: =primary
-                                BorderThickness: =1.5
-                                Fill: =RGBA(0, 0, 0, 0)
-                                FocusedBorderThickness: =2
-                                Height: =25
-                                HoverFill: =RGBA(0, 0, 0, 0.15)
-                                OnSelect: =Launch(First(ThisItem.Anexos).AbsoluteUri)
-                                PressedFill: =
-                                RadiusBottomLeft: =5
-                                RadiusBottomRight: =5
-                                RadiusTopLeft: =5
-                                RadiusTopRight: =5
-                                Text: =""
-                                Width: =25
-                                X: =(Parent.Width-Self.Width)/2
-                                Y: =(Parent.Height-Self.Height)/2
-                                ZIndex: =2
-
-                    separator_archives_op_6 As rectangle:
-                        Fill: =secondarytext
-                        Height: =1
-                        Width: =Parent.Width*95%
-                        X: =11
-                        Y: =39
-                        ZIndex: =2
-
             informacion_container_sidebar_docRev_op As groupContainer.verticalAutoLayoutContainer:
                 DropShadow: =DropShadow.None
                 FillPortions: =0
@@ -3707,7 +3602,7 @@
                         Font: =Font.'Segoe UI'
                         Height: =24
                         Size: =12
-                        Text: =varDocSide.'Criado por'.DisplayName
+                        Text: =varDocSide.'Created By'.DisplayName
                         Width: =(Parent.Width/3)*2 -20
                         ZIndex: =2
 
