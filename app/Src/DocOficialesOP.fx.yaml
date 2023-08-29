@@ -1410,7 +1410,7 @@
                                 Text: ="Solicitante"
                                 ZIndex: =1
 
-                            ComboBox2_63 As combobox:
+                            DataCardValue13_1 As combobox:
                                 AlignInContainer: =AlignInContainer.Stretch
                                 BorderColor: =secondarytext
                                 BorderThickness: =1
@@ -1419,19 +1419,23 @@
                                 ChevronHoverBackground: =
                                 ChevronHoverFill: =primary
                                 Color: =secondarytext
-                                HoverBorderColor: =
+                                DefaultSelectedItems: =
+                                DisplayFields: =["DisplayName","Email","Picture"]
+                                DisplayMode: =Parent.DisplayMode
                                 HoverColor: =RGBA(26, 26, 26, 1)
-                                HoverFill: =RGBA(215, 223, 240, 1)
                                 InputTextPlaceholder: ="Seleccione Opción"
-                                Items: =ComboBoxSample
-                                LayoutMinWidth: =50
-                                PressedBorderColor: =secondarytext
-                                PressedColor: =RGBA(26, 26, 26, 1)
-                                PressedFill: =RGBA(0, 0, 0, 0)
-                                SearchItems: =Search(ComboBoxSample,ComboBox2_63.SearchText,"Value1")
+                                Items: =Choices([@DEV_Documento].Solicitante)
+                                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                                SearchFields: =["DisplayName"]
+                                SearchItems: =Choices(DEV_Documento.Solicitante,DataCardValue13_1.SearchText)
                                 SelectMultiple: =false
                                 Size: =10
-                                ZIndex: =2
+                                Template: =ListItemTemplate.Person
+                                Tooltip: =
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey13.Y + DataCardKey13.Height + 5
+                                ZIndex: =3
 
                         Container15_103 As groupContainer.verticalAutoLayoutContainer:
                             DropShadow: =DropShadow.None

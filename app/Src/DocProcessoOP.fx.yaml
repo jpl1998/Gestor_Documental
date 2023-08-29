@@ -1341,7 +1341,7 @@
                                 Text: ="Empresa"
                                 ZIndex: =1
 
-                            ComboBox2_6 As combobox:
+                            cbo_empresa As combobox:
                                 AlignInContainer: =AlignInContainer.Stretch
                                 BorderColor: =secondarytext
                                 BorderThickness: =1
@@ -1350,18 +1350,18 @@
                                 ChevronHoverBackground: =
                                 ChevronHoverFill: =primary
                                 Color: =secondarytext
-                                DisplayFields: =["deescripcion"]
+                                DisplayFields: =["Value"]
                                 HoverBorderColor: =
                                 HoverColor: =RGBA(26, 26, 26, 1)
                                 HoverFill: =RGBA(215, 223, 240, 1)
                                 InputTextPlaceholder: ="Seleccione Opción"
-                                Items: =DEV_Empresa
+                                Items: =Choices(DEV_Documento[@Empresa])
                                 LayoutMinWidth: =50
                                 PressedBorderColor: =secondarytext
                                 PressedColor: =RGBA(26, 26, 26, 1)
                                 PressedFill: =RGBA(0, 0, 0, 0)
-                                SearchFields: =["deescripcion"]
-                                SearchItems: =Search(DEV_Empresa,ComboBox2_6.SearchText,"deescripcion")
+                                SearchFields: =["Value"]
+                                SearchItems: =Choices(DEV_Documento.Empresa,cbo_empresa.SearchText)
                                 SelectMultiple: =false
                                 Size: =10
                                 ZIndex: =2
@@ -1428,7 +1428,7 @@
                                 Text: ="Solicitante"
                                 ZIndex: =1
 
-                            ComboBox2_8 As combobox:
+                            cbo_solicitante As combobox:
                                 AlignInContainer: =AlignInContainer.Stretch
                                 BorderColor: =secondarytext
                                 BorderThickness: =1
@@ -1442,13 +1442,13 @@
                                 HoverColor: =RGBA(26, 26, 26, 1)
                                 HoverFill: =RGBA(215, 223, 240, 1)
                                 InputTextPlaceholder: ="Seleccione Opción"
-                                Items: =DEV_Interlocutor
+                                Items: =Choices([@DEV_Documento].Solicitante)
                                 LayoutMinWidth: =50
                                 PressedBorderColor: =secondarytext
                                 PressedColor: =RGBA(26, 26, 26, 1)
                                 PressedFill: =RGBA(0, 0, 0, 0)
-                                SearchFields: =["Nombre"]
-                                SearchItems: =Search(DEV_Interlocutor,ComboBox2_8.SearchText,"Nombre")
+                                SearchFields: =["DisplayName"]
+                                SearchItems: =Choices(DEV_Documento.Solicitante,cbo_solicitante.SearchText)
                                 SelectMultiple: =false
                                 Size: =10
                                 Template: =ListItemTemplate.Person
@@ -1563,7 +1563,7 @@
                                 Text: ="Dueño del Proceso *"
                                 ZIndex: =1
 
-                            ComboBox2_11 As combobox:
+                            cbo_dueñoprocesso As combobox:
                                 AlignInContainer: =AlignInContainer.Stretch
                                 BorderColor: =secondarytext
                                 BorderThickness: =1
@@ -1571,23 +1571,22 @@
                                 ChevronFill: =primary
                                 ChevronHoverBackground: =
                                 ChevronHoverFill: =primary
-                                Color: =secondarytext
-                                DisplayFields: =["Nombre","Apellido"]
-                                HoverBorderColor: =
-                                HoverColor: =RGBA(26, 26, 26, 1)
-                                HoverFill: =RGBA(215, 223, 240, 1)
+                                DefaultSelectedItems: =
+                                DisplayFields: =["DisplayName","Email","Picture"]
+                                DisplayMode: =Parent.DisplayMode
                                 InputTextPlaceholder: ="Seleccione Opción"
-                                Items: =DEV_Interlocutor
-                                LayoutMinWidth: =50
-                                PressedBorderColor: =secondarytext
-                                PressedColor: =RGBA(26, 26, 26, 1)
-                                PressedFill: =RGBA(0, 0, 0, 0)
-                                SearchFields: =["Nombre"]
-                                SearchItems: =Search(DEV_Interlocutor,ComboBox2_11.SearchText,"Nombre")
+                                Items: =Choices([@DEV_Documento].Due_x00f1_odelProcesso)
+                                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                                SearchFields: =["DisplayName"]
+                                SearchItems: =Choices(DEV_Documento.Due_x00f1_odelProcesso,cbo_dueñoprocesso.SearchText)
                                 SelectMultiple: =false
                                 Size: =10
                                 Template: =ListItemTemplate.Person
-                                ZIndex: =2
+                                Tooltip: =
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey14.Y + DataCardKey14.Height + 5
+                                ZIndex: =3
 
                     Container14_10 As groupContainer.horizontalAutoLayoutContainer:
                         DropShadow: =DropShadow.None
