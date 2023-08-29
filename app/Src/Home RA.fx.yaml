@@ -713,14 +713,14 @@
                                                     BorderColor: =Self.Color
                                                     BorderStyle: =BorderStyle.None
                                                     Color: |-
-                                                        =Switch(ThisItem.'id_estatus_documento: descripcion'.Value,
+                                                        =Switch(ThisItem.id_estatus_documento_x003a__x002.Value,
                                                         "Por aprobar", RGBA(180, 130, 0, 1),
                                                         "Por revisar",RGBA(180, 130, 0, 1),
                                                         "Observado", RGBA(214, 0, 0, 1),
                                                         "Aprobado",RGBA(44, 143, 112, 1))
                                                     DisplayMode: =DisplayMode.View
                                                     Fill: |-
-                                                        =Switch(ThisItem.'id_estatus_documento: descripcion'.Value,
+                                                        =Switch(ThisItem.id_estatus_documento_x003a__x002.Value,
                                                         "Por aprobar", RGBA(249, 249, 249, 1),
                                                         "Por revisar",RGBA(249, 249, 249, 1),
                                                         "Observado", RGBA(245, 218, 216, 1),
@@ -733,8 +733,7 @@
                                                     RadiusTopLeft: =5
                                                     RadiusTopRight: =5
                                                     Size: =11
-                                                    Text: |-
-                                                        =ThisItem.'id_estatus_documento: descripcion'.Value
+                                                    Text: =ThisItem.id_estatus_documento_x003a__x002.Value
                                                     Width: =Parent.Width*80%
                                                     X: =(Parent.Width-Self.Width)/2
                                                     Y: =(Parent.Height-Self.Height)/2
@@ -1006,13 +1005,13 @@
                                                     BorderColor: =Self.Color
                                                     BorderStyle: =BorderStyle.None
                                                     Color: |-
-                                                        =Switch(ThisItem.'id_estatus_documento: descripcion'.Value,
+                                                        =Switch(ThisItem.id_estatus_documento_x003a__x002.Value,
                                                         "Por aprobar", RGBA(180, 130, 0, 1),
                                                         "Observado", RGBA(214, 0, 0, 1),
                                                         "Aprobado",RGBA(44, 143, 112, 1))
                                                     DisplayMode: =DisplayMode.View
                                                     Fill: |-
-                                                        =Switch(ThisItem.'id_estatus_documento: descripcion'.Value,
+                                                        =Switch(ThisItem.id_estatus_documento_x003a__x002.Value,
                                                         "Por aprobar", RGBA(249, 249, 249, 1),
                                                         "Observado", RGBA(245, 218, 216, 1),
                                                         "Aprobado", RGBA(219, 238, 233, 1))
@@ -1024,8 +1023,7 @@
                                                     RadiusTopLeft: =5
                                                     RadiusTopRight: =5
                                                     Size: =11
-                                                    Text: |-
-                                                        =ThisItem.'id_estatus_documento: descripcion'.Value
+                                                    Text: =ThisItem.id_estatus_documento_x003a__x002.Value
                                                     Width: =Parent.Width*80%
                                                     X: =(Parent.Width-Self.Width)/2
                                                     Y: =(Parent.Height-Self.Height)/2
