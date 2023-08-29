@@ -4984,15 +4984,116 @@
                                 Text: ="Elaborado por"
                                 ZIndex: =1
 
-                            galleryelaboradoropedit As gallery.galleryVertical:
+                            Gallery2_9 As gallery.galleryVertical:
                                 DelayItemLoading: =true
-                                Items: =Sequence(6)
+                                Items: =CustomGallerySample
                                 Layout: =Layout.Vertical
                                 LayoutMinHeight: =287
                                 LayoutMinWidth: =320
                                 LoadingSpinner: =LoadingSpinner.Data
                                 TemplateSize: =50
-                                ZIndex: =4
+                                ZIndex: =2
+
+                                Container4_25 As groupContainer.manualLayoutContainer:
+                                    DropShadow: =DropShadow.None
+                                    Height: =50
+                                    Width: =369
+                                    ZIndex: =1
+
+                                    elaborador1_12 As groupContainer.horizontalAutoLayoutContainer:
+                                        DropShadow: =DropShadow.None
+                                        Height: =50
+                                        LayoutAlignItems: =LayoutAlignItems.Stretch
+                                        LayoutGap: =10
+                                        LayoutMode: =LayoutMode.Auto
+                                        PaddingBottom: =5
+                                        PaddingLeft: =5
+                                        PaddingRight: =5
+                                        PaddingTop: =5
+                                        Width: =369
+                                        ZIndex: =1
+
+                                        Label2_211 As label:
+                                            Color: =primarytext
+                                            FontWeight: =FontWeight.Bold
+                                            Height: =30
+                                            LayoutMinHeight: =30
+                                            Text: =Right(ThisItem.SampleHeading,1)
+                                            Width: =20
+                                            ZIndex: =1
+
+                                        Label2_275 As label:
+                                            Color: =primarytext
+                                            FillPortions: =1
+                                            FontWeight: =FontWeight.Bold
+                                            Height: =30
+                                            LayoutMinHeight: =30
+                                            Text: =ThisItem.SampleHeading
+                                            Width: =20
+                                            ZIndex: =2
+
+                                        Icon5_18 As icon.AddUser:
+                                            AlignInContainer: =AlignInContainer.Center
+                                            Color: =primary
+                                            Height: =25
+                                            Icon: =Icon.AddUser
+                                            LayoutMinHeight: =20
+                                            Width: =Self.Height
+                                            ZIndex: =3
+
+                                        Icon5_19 As icon.AddUser:
+                                            AlignInContainer: =AlignInContainer.Center
+                                            Color: =red
+                                            Height: =25
+                                            Icon: =Icon.Trash
+                                            LayoutMinHeight: =20
+                                            Width: =Self.Height
+                                            ZIndex: =4
+
+                                    observarOption_container_ra_23 As groupContainer.manualLayoutContainer:
+                                        BorderColor: =placeholder
+                                        DropShadow: =DropShadow.None
+                                        Fill: =RGBA(255, 255, 255, 1)
+                                        Height: =Parent.Height*80%
+                                        RadiusBottomLeft: =0
+                                        RadiusBottomRight: =0
+                                        Visible: =If(Value(Right(ThisItem.SampleHeading,1)) >3,true,false) 
+                                        Width: =Parent.Width*60%
+                                        X: =(Parent.Width-Self.Width)/2
+                                        Y: =(Parent.Height-Self.Height)/2
+                                        ZIndex: =2
+
+                                        observar_button_ra_23 As button:
+                                            BorderColor: =primary
+                                            Color: =primary
+                                            Fill: =RGBA(0, 0, 0, 0)
+                                            Height: =Parent.Height*98%
+                                            HoverColor: =ColorFade(primary,-5%)
+                                            HoverFill: =RGBA(255, 255, 255, 1)
+                                            OnSelect: =Set(varpopupformedit,true)
+                                            PaddingBottom: =0
+                                            PaddingLeft: =0
+                                            PaddingRight: =0
+                                            PaddingTop: =0
+                                            PressedFill: =
+                                            RadiusBottomLeft: =5
+                                            RadiusBottomRight: =5
+                                            RadiusTopLeft: =5
+                                            RadiusTopRight: =5
+                                            Size: =11
+                                            Text: ="Agregar Integrante"
+                                            Width: =Parent.Width*95%
+                                            X: =(Parent.Width-Self.Width)/2
+                                            ZIndex: =1
+
+                                        observar_icon_ra_23 As icon.Information:
+                                            Color: =primary
+                                            Height: =20
+                                            Icon: =Icon.Add
+                                            Width: =20
+                                            X: =15
+                                            Y: =(Parent.Height-Self.Height)/2
+                                            ZIndex: =2
 
                         separator_revisores_op_2 As rectangle:
                             AlignInContainer: =AlignInContainer.Stretch
