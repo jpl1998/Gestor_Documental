@@ -576,7 +576,7 @@
                                             RadiusTopRight: =5
                                             Size: =11
                                             Text: |-
-                                                =LookUp(DEV_Modificacion_estatus_proceso_doc,codigo=ThisItem.codigo && ind_mod = "i").'id_estatus_documento: descripcion'.Value
+                                                =LookUp(DEV_Modificacion_estatus_proceso_doc,codigo=ThisItem.codigo && ind_inact="Activo").'id_estatus_documento: descripcion'.Value
                                             Width: =Parent.Width*80%
                                             X: =(Parent.Width-Self.Width)/2
                                             Y: =(Parent.Height-Self.Height)/2
@@ -1381,6 +1381,8 @@
                     DelayItemLoading: =true
                     Items: =CustomGallerySample
                     Layout: =Layout.Vertical
+                    LayoutMinHeight: =287
+                    LayoutMinWidth: =320
                     LoadingSpinner: =LoadingSpinner.Data
                     TemplatePadding: =0
                     TemplateSize: =70
@@ -1619,7 +1621,7 @@
                         Font: =Font.'Segoe UI'
                         Height: =24
                         Size: =12
-                        Text: ="Text"
+                        Text: =varSelectedDoc.Empresa.Value
                         Width: =(Parent.Width/3)*2 -20
                         ZIndex: =2
 
@@ -1646,7 +1648,7 @@
                         Font: =Font.'Segoe UI'
                         Height: =24
                         Size: =12
-                        Text: ="Text"
+                        Text: =varSelectedDoc.Solicitante.DisplayName
                         Width: =(Parent.Width/3)*2 -20
                         ZIndex: =2
 
@@ -1754,7 +1756,7 @@
                         Font: =Font.'Segoe UI'
                         Height: =24
                         Size: =12
-                        Text: ="Text"
+                        Text: =varSelectedDoc.'Dueño  del Processo'.DisplayName
                         Width: =(Parent.Width/3)*2 -20
                         ZIndex: =2
 
@@ -2795,7 +2797,8 @@
                                     'fecha y hora': Now(),
                                     ind_inact: "Activo",
                                     ind_mod: "i",
-                                    id_estatus_documento: {Id: 3, Value: 3}
+                                    id_estatus_documento: {Id: 3, Value: 3},
+                                    id_documento: {Id: varSelectedDoc.ID, Value: varSelectedDoc.ID}
                                 }
                             );
                         );
@@ -2972,7 +2975,8 @@
                             'fecha y hora': Now(),
                             ind_inact: "Activo",
                             ind_mod: "i",
-                            id_estatus_documento: {Id: 3, Value: 3}
+                            id_estatus_documento: {Id: 3, Value: 3},
+                            id_documento: {Id: varSelectedDoc.ID, Value: varSelectedDoc.ID}
                         }
                     );
                     UpdateContext({varResultadoPopup: true})
