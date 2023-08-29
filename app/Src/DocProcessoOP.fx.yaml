@@ -1437,7 +1437,7 @@
                                 ChevronHoverBackground: =
                                 ChevronHoverFill: =primary
                                 Color: =secondarytext
-                                DisplayFields: =["Nombre","Apellido"]
+                                DisplayFields: =["DisplayName","Email","Picture"]
                                 HoverBorderColor: =
                                 HoverColor: =RGBA(26, 26, 26, 1)
                                 HoverFill: =RGBA(215, 223, 240, 1)
@@ -1669,7 +1669,7 @@
                                 AlignInContainer: =AlignInContainer.Stretch
                                 BorderColor: =secondarytext
                                 BorderThickness: =1
-                                Default: =""
+                                Default: =1
                                 HoverBorderColor: =primary
                                 HoverFill: =RGBA(255, 255, 255, 1)
                                 Size: =10
@@ -2373,22 +2373,22 @@
                                     ChevronHoverBackground: =
                                     ChevronHoverFill: =primary
                                     Color: =secondarytext
-                                    DisplayFields: =["Nombre","Apellido"]
+                                    DisplayFields: =["DisplayName","Email","Picture"]
                                     FillPortions: =1
                                     HoverBorderColor: =
                                     HoverColor: =RGBA(26, 26, 26, 1)
                                     HoverFill: =RGBA(215, 223, 240, 1)
                                     InputTextPlaceholder: ="Seleccione Opción"
-                                    Items: =DEV_Interlocutor
+                                    Items: =Choices([@DEV_Interlocutor].Email)
                                     LayoutMinWidth: =50
                                     PressedBorderColor: =secondarytext
                                     PressedColor: =RGBA(26, 26, 26, 1)
                                     PressedFill: =RGBA(0, 0, 0, 0)
-                                    SearchFields: =["Nombre"]
-                                    SearchItems: =Search(DEV_Interlocutor,ComboBox2_19.SearchText,"Nombre")
+                                    SearchFields: =["DisplayName"]
+                                    SearchItems: =Choices(DEV_Interlocutor.Email,ComboBox2_19.SearchText)
                                     SelectMultiple: =false
                                     Size: =10
-                                    Template: =ListItemTemplate.Double
+                                    Template: =ListItemTemplate.Person
                                     ZIndex: =2
 
                             elaborador2 As groupContainer.horizontalAutoLayoutContainer:
@@ -2640,6 +2640,17 @@
                                     Size: =10
                                     Template: =ListItemTemplate.Double
                                     ZIndex: =3
+
+                            Button7 As button:
+                                OnSelect: |-
+                                    =If( IsBlank(LookUp(DEV_Interlocutor,ComboBox2_19.Selected.Email in Email[@Email],ThisRecord)),Notify("false"),Notify("true"));
+                                    
+                                    /*Patch(DEV_Interlocutor;Defaults(DEV_Interlocutor);
+                                    {Email:ComboBox2_19.Selected;
+                                    Nombre:UsuáriosdoOffice365.UserProfileV2(ComboBox2_19.Selected.Email).givenName;
+                                    Apellido:UsuáriosdoOffice365.UserProfileV2(ComboBox2_19.Selected.Email).surname})*/
+                                Text: ="Botão"
+                                ZIndex: =9
 
                         separator_revisores_op As rectangle:
                             AlignInContainer: =AlignInContainer.Stretch
