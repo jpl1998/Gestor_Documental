@@ -1146,6 +1146,16 @@
                         Y: =16
                         ZIndex: =10
 
+                    mail_aprobador_ra_1 As label:
+                        Height: =19
+                        OnSelect: =Select(Parent)
+                        Text: =LookUp(DEV_Interlocutor, ID = Value(ThisItem.id_interlocutor.Value)).Email.Email
+                        Visible: =false
+                        Width: =261
+                        X: =60
+                        Y: =51
+                        ZIndex: =11
+
                 "elaborador_evaluacion_sidebar_ra_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
                     DelayItemLoading: =true
                     Items: |-
