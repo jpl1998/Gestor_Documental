@@ -3859,7 +3859,7 @@
                         Font: =Font.'Segoe UI'
                         Height: =24
                         Size: =12
-                        Text: =varDocSide.'Criado por'.DisplayName
+                        Text: =varDocSide.'Created By'.DisplayName
                         Width: =(Parent.Width/3)*2 -20
                         ZIndex: =2
 
