@@ -471,14 +471,26 @@
                                             IsBlank(varFilterMenu.alcance) || id_alcance.Value = varFilterMenu.alcance.Value,
                                             IsBlank(varFilterMenu.macroproceso) || id_macroproceso.Value = varFilterMenu.macroproceso.Value,
                                             IsBlank(varFilterMenu.proceso) || id_proceso.Value = varFilterMenu.proceso.Value,
-                                            IsBlank(varFilterMenu.fechaDesde) || varFilterMenu.fechaDesde<fecha,
-                                            IsBlank(varFilterMenu.fechaHasta) || varFilterMenu.fechaHasta>fecha,
+                                            IsBlank(varFilterMenu.fechaDesde) || varFilterMenu.fechaDesde<=fecha,
+                                            IsBlank(varFilterMenu.fechaHasta) || varFilterMenu.fechaHasta>=fecha,
                                             ID in Filter(
                                                 DEV_Modificacion_estatus_proceso_doc,
                                                 ind_inact = "Activo" && id_estatus_documento.Value = "Por aprobar"
-                                            ).id_doc
+                                            ).id_doc,
+                                            searchbar_docRev_ra_3.Text in Nombre
                                         ),
-                                        DEV_Documento
+                                        Filter(
+                                                DEV_Documento,
+                                                IsBlank(varFilterMenu.cargadoPor) || 'Created By'.Email = varFilterMenu.cargadoPor.Mail,
+                                                IsBlank(varFilterMenu.tipoDocumento) || id_tipo_docu.Value = varFilterMenu.tipoDocumento.Value,
+                                                IsBlank(varFilterMenu.dueProceso) || 'Dueño  del Processo'.Email = varFilterMenu.dueProceso.Mail,
+                                                IsBlank(varFilterMenu.alcance) || id_alcance.Value = varFilterMenu.alcance.Value,
+                                                IsBlank(varFilterMenu.macroproceso) || id_macroproceso.Value = varFilterMenu.macroproceso.Value,
+                                                IsBlank(varFilterMenu.proceso) || id_proceso.Value = varFilterMenu.proceso.Value,
+                                                IsBlank(varFilterMenu.fechaDesde) || varFilterMenu.fechaDesde<=fecha,
+                                                IsBlank(varFilterMenu.fechaHasta) || varFilterMenu.fechaHasta>=fecha,
+                                                searchbar_docRev_ra_3.Text in Nombre
+                                            )
                                     )
                                 Layout: =Layout.Vertical
                                 LoadingSpinner: =LoadingSpinner.Data

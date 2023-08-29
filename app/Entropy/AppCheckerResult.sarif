@@ -34827,7 +34827,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 855,
+                  "charOffset": 857,
                   "snippet": {
                     "text": "in"
                   }
@@ -34837,6 +34837,86 @@
                 "member": "Items",
                 "module": "DocPorAprobar RA",
                 "type": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_3.BottomContainer_docRev_ra_3.MainContainer_docRev_ra_3.MainCont_docRev_ra_3.Container_table_docRev_ra_3.Container_tablecontent_docRev_ra_3.tablecontent_docRev_ra_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-InOpRhs",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_3.BottomContainer_docRev_ra_3.MainContainer_docRev_ra_3.MainCont_docRev_ra_3.Container_table_docRev_ra_3.Container_tablecontent_docRev_ra_3.tablecontent_docRev_ra_3.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_3.BottomContainer_docRev_ra_3.MainContainer_docRev_ra_3.MainCont_docRev_ra_3.Container_table_docRev_ra_3.Container_tablecontent_docRev_ra_3.tablecontent_docRev_ra_3.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 1925,
+                  "snippet": {
+                    "text": "in"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "DocPorAprobar RA",
+                "type": "'DocPorAprobar RA'.ScreenContainer_docRev_ra_3.BottomContainer_docRev_ra_3.MainContainer_docRev_ra_3.MainCont_docRev_ra_3.Container_table_docRev_ra_3.Container_tablecontent_docRev_ra_3.tablecontent_docRev_ra_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Nombre"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'DocPorRevisar RA'.ScreenContainer_docRev_ra.BottomContainer_docRev_ra.MainContainer_docRev_ra.MainCont_docRev_ra.Container_table_docRev_ra.Container_tablecontent_docRev_ra.tablecontent_docRev_ra.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPorRevisar RA'.ScreenContainer_docRev_ra.BottomContainer_docRev_ra.MainContainer_docRev_ra.MainCont_docRev_ra.Container_table_docRev_ra.Container_tablecontent_docRev_ra.tablecontent_docRev_ra.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 855,
+                  "snippet": {
+                    "text": "in"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "DocPorRevisar RA",
+                "type": "'DocPorRevisar RA'.ScreenContainer_docRev_ra.BottomContainer_docRev_ra.MainContainer_docRev_ra.MainCont_docRev_ra.Container_table_docRev_ra.Container_tablecontent_docRev_ra.tablecontent_docRev_ra"
               }
             }
           ],
@@ -34867,7 +34947,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 853,
+                  "charOffset": 1879,
                   "snippet": {
                     "text": "in"
                   }
@@ -34882,15 +34962,15 @@
           ],
           "message": {
             "arguments": [
-              "Filter"
+              "Nombre"
             ],
             "id": "issue"
           },
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "app-SuggestRemoteExecutionHint-InOpRhs",
-          "ruleIndex": 4
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -37094,77 +37174,40 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'DocPublicados RA'.SideBar_ra_5.SideBar_Container_docRev_ra_5.informacion_container_sidebar_docRev_ra_5.item_informacion_sidebar_docRev_ra_80.cont_informacion_sidebar_ra_8.Text"
+                  "fullyQualifiedName": "'DocPublicados RA'.ScreenContainer_docRev_ra_2.BottomContainer_docRev_ra_2.MainContainer_docRev_ra_2.MainCont_docRev_ra_2.Container_table_docRev_ra_2.Container_tablecontent_docRev_ra_2.tablecontent_docRev_ra_4.Items"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'DocPublicados RA'.SideBar_ra_5.SideBar_Container_docRev_ra_5.informacion_container_sidebar_docRev_ra_5.item_informacion_sidebar_docRev_ra_80.cont_informacion_sidebar_ra_8.Text",
+                  "fullyQualifiedName": "'DocPublicados RA'.ScreenContainer_docRev_ra_2.BottomContainer_docRev_ra_2.MainContainer_docRev_ra_2.MainCont_docRev_ra_2.Container_table_docRev_ra_2.Container_tablecontent_docRev_ra_2.tablecontent_docRev_ra_4.Items",
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 13,
-                  "charOffset": 14,
+                  "charLength": 2,
+                  "charOffset": 792,
                   "snippet": {
-                    "text": ".'Criado por'"
+                    "text": "in"
                   }
                 }
               },
               "properties": {
-                "member": "Text",
+                "member": "Items",
                 "module": "DocPublicados RA",
-                "type": "'DocPublicados RA'.SideBar_ra_5.SideBar_Container_docRev_ra_5.informacion_container_sidebar_docRev_ra_5.item_informacion_sidebar_docRev_ra_80.cont_informacion_sidebar_ra_8"
+                "type": "'DocPublicados RA'.ScreenContainer_docRev_ra_2.BottomContainer_docRev_ra_2.MainContainer_docRev_ra_2.MainCont_docRev_ra_2.Container_table_docRev_ra_2.Container_tablecontent_docRev_ra_2.tablecontent_docRev_ra_4"
               }
             }
           ],
           "message": {
             "arguments": [
-              "Criado por"
+              "Filter"
             ],
             "id": "issue"
           },
           "properties": {
-            "level": "High"
+            "level": "Medium"
           },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'DocPublicados RA'.SideBar_ra_5.SideBar_Container_docRev_ra_5.informacion_container_sidebar_docRev_ra_5.item_informacion_sidebar_docRev_ra_80.cont_informacion_sidebar_ra_8.Text"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'DocPublicados RA'.SideBar_ra_5.SideBar_Container_docRev_ra_5.informacion_container_sidebar_docRev_ra_5.item_informacion_sidebar_docRev_ra_80.cont_informacion_sidebar_ra_8.Text",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 12,
-                  "charOffset": 27,
-                  "snippet": {
-                    "text": ".DisplayName"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Text",
-                "module": "DocPublicados RA",
-                "type": "'DocPublicados RA'.SideBar_ra_5.SideBar_Container_docRev_ra_5.informacion_container_sidebar_docRev_ra_5.item_informacion_sidebar_docRev_ra_80.cont_informacion_sidebar_ra_8"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 2
+          "ruleId": "app-SuggestRemoteExecutionHint-InOpRhs",
+          "ruleIndex": 4
         },
         {
           "locations": [
