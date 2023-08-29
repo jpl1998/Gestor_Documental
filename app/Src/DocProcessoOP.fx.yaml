@@ -4097,6 +4097,16 @@
                                 Text: ="Código *"
                                 ZIndex: =1
 
+                            TextInput2_4 As text:
+                                AlignInContainer: =AlignInContainer.Stretch
+                                BorderColor: =secondarytext
+                                BorderThickness: =1
+                                Default: =varDocSide.codigo
+                                HoverBorderColor: =primary
+                                HoverFill: =RGBA(255, 255, 255, 1)
+                                Size: =10
+                                ZIndex: =2
+
                     Container14_19 As groupContainer.horizontalAutoLayoutContainer:
                         DropShadow: =DropShadow.None
                         Height: =100
@@ -4176,6 +4186,16 @@
                                 LayoutMinHeight: =30
                                 Text: ="Nombre del Documento *"
                                 ZIndex: =1
+
+                            TextInput2_5 As text:
+                                AlignInContainer: =AlignInContainer.Stretch
+                                BorderColor: =secondarytext
+                                BorderThickness: =1
+                                Default: =varDocSide.Nombre
+                                HoverBorderColor: =primary
+                                HoverFill: =RGBA(255, 255, 255, 1)
+                                Size: =10
+                                ZIndex: =2
 
                     Container14_20 As groupContainer.horizontalAutoLayoutContainer:
                         DropShadow: =DropShadow.None
