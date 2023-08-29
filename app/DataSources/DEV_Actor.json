@@ -47,8 +47,6 @@
       "id_interlocutor#Id": "id_interlocutor Id",
       "id_interlocutor_x003a__x0020_Ape": "id_interlocutor: Apellido",
       "id_interlocutor_x003a__x0020_Ape#Id": "id_interlocutor: Apellido Id",
-      "id_interlocutor_x003a__x0020_ID": "id_interlocutor: ID",
-      "id_interlocutor_x003a__x0020_ID#Id": "id_interlocutor: ID Id",
       "id_interlocutor_x003a__x0020_Nom": "id_interlocutor: Nombre",
       "id_interlocutor_x003a__x0020_Nom#Id": "id_interlocutor: Nombre Id",
       "Modified": "Modified",
