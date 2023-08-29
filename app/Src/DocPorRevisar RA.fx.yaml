@@ -3089,7 +3089,8 @@
                                     ind_inact: "Activo",
                                     ind_mod: "i",
                                     id_estatus_documento: {Id: 2, Value: 2},
-                                    id_documento: {Id: varSelectedDoc.ID, Value: varSelectedDoc.ID}
+                                    id_documento: {Id: varSelectedDoc.ID, Value: varSelectedDoc.ID},
+                                    id_doc:varDocID.ID
                                 }
                             )
                         );
@@ -3185,7 +3186,8 @@
                                     ind_inact: "Activo",
                                     ind_mod: "i",
                                     id_estatus_documento: {Id: 3, Value: 3},
-                                    id_documento: {Id: varSelectedDoc.ID, Value: varSelectedDoc.ID}
+                                    id_documento: {Id: varSelectedDoc.ID, Value: varSelectedDoc.ID},
+                                    id_doc:varDocID.ID
                                 }
                             );
                         );
@@ -3213,7 +3215,8 @@
                                     ind_inact: "Activo",
                                     ind_mod: "i",
                                     id_estatus_documento: {Id: 4, Value: 4},
-                                    id_documento: {Id: varSelectedDoc.ID, Value: varSelectedDoc.ID}
+                                    id_documento: {Id: varSelectedDoc.ID, Value: varSelectedDoc.ID},
+                                    id_doc:varDocID.ID
                                 }
                             )
                         );
@@ -3400,7 +3403,8 @@
                             ind_inact: "Activo",
                             ind_mod: "i",
                             id_estatus_documento: {Id: 3, Value: 3},
-                            id_documento: {Id: varSelectedDoc.ID, Value: varSelectedDoc.ID}
+                            id_documento: {Id: varSelectedDoc.ID, Value: varSelectedDoc.ID},
+                            id_doc:varDocID.ID
                         }
                     );
                     UpdateContext({varResultadoPopup: true})

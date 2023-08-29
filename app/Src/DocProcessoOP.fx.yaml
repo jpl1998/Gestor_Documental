@@ -2784,7 +2784,8 @@
                                     nro_mod:1,
                                     'fecha y hora': Now(),
                                     ind_inact:"Activo",
-                                    ind_mod:"i"});
+                                    ind_mod:"i",
+                                    id_doc:varDocID.ID});
                                 
                                 
                                 Set(varconfirmation,true)
