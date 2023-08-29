@@ -35,6 +35,8 @@
       "id_estatus_proceso#Id": "id_estatus_proceso Id",
       "id_status_proceso": "id_status_proceso",
       "id_status_proceso#Id": "id_status_proceso Id",
+      "id_status_proceso_x003a__x0020_I": "id_status_proceso: ID",
+      "id_status_proceso_x003a__x0020_I#Id": "id_status_proceso: ID Id",
       "Modified": "Modified",
       "OData__ColorTag": "Color Tag",
       "Title": "Title"
