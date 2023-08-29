@@ -3392,16 +3392,6 @@
                     PaddingTop: =10
                     ZIndex: =1
 
-                    Label2_85 As label:
-                        AlignInContainer: =AlignInContainer.Stretch
-                        Color: =primarytext
-                        FontWeight: =FontWeight.Bold
-                        Height: =30
-                        LayoutMinHeight: =30
-                        Size: =10
-                        Text: ="Cargado Por"
-                        ZIndex: =1
-
                     CargadoPorComboBox As combobox:
                         AlignInContainer: =AlignInContainer.Stretch
                         BorderColor: =secondarytext
@@ -3443,16 +3433,6 @@
                     PaddingRight: =10
                     PaddingTop: =10
                     ZIndex: =2
-
-                    Label2_86 As label:
-                        AlignInContainer: =AlignInContainer.Stretch
-                        Color: =primarytext
-                        FontWeight: =FontWeight.Bold
-                        Height: =30
-                        LayoutMinHeight: =30
-                        Size: =10
-                        Text: ="Tipo Documento"
-                        ZIndex: =1
 
                     TipoDocComboBox As combobox:
                         AlignInContainer: =AlignInContainer.Stretch
@@ -3502,16 +3482,6 @@
                     PaddingTop: =10
                     ZIndex: =1
 
-                    Label2_87 As label:
-                        AlignInContainer: =AlignInContainer.Stretch
-                        Color: =primarytext
-                        FontWeight: =FontWeight.Bold
-                        Height: =30
-                        LayoutMinHeight: =30
-                        Size: =10
-                        Text: ="Dueño Processo"
-                        ZIndex: =1
-
                     DueProcesoComboBox As combobox:
                         AlignInContainer: =AlignInContainer.Stretch
                         BorderColor: =secondarytext
@@ -3553,16 +3523,6 @@
                     PaddingRight: =10
                     PaddingTop: =10
                     ZIndex: =2
-
-                    Label2_88 As label:
-                        AlignInContainer: =AlignInContainer.Stretch
-                        Color: =primarytext
-                        FontWeight: =FontWeight.Bold
-                        Height: =30
-                        LayoutMinHeight: =30
-                        Size: =10
-                        Text: ="Alcance"
-                        ZIndex: =1
 
                     AlcanceComboBox As combobox:
                         AlignInContainer: =AlignInContainer.Stretch
@@ -3612,16 +3572,6 @@
                     PaddingTop: =10
                     ZIndex: =1
 
-                    Label2_89 As label:
-                        AlignInContainer: =AlignInContainer.Stretch
-                        Color: =primarytext
-                        FontWeight: =FontWeight.Bold
-                        Height: =30
-                        LayoutMinHeight: =30
-                        Size: =10
-                        Text: ="Macroprocesso"
-                        ZIndex: =1
-
                     MacroprocesoComboBox As combobox:
                         AlignInContainer: =AlignInContainer.Stretch
                         BorderColor: =secondarytext
@@ -3660,16 +3610,6 @@
                     PaddingRight: =10
                     PaddingTop: =10
                     ZIndex: =2
-
-                    Label2_90 As label:
-                        AlignInContainer: =AlignInContainer.Stretch
-                        Color: =primarytext
-                        FontWeight: =FontWeight.Bold
-                        Height: =30
-                        LayoutMinHeight: =30
-                        Size: =10
-                        Text: ="Processo"
-                        ZIndex: =1
 
                     ProcesoComboBox As combobox:
                         AlignInContainer: =AlignInContainer.Stretch
@@ -3719,16 +3659,6 @@
                     PaddingTop: =10
                     ZIndex: =1
 
-                    Label2_91 As label:
-                        AlignInContainer: =AlignInContainer.Stretch
-                        Color: =primarytext
-                        FontWeight: =FontWeight.Bold
-                        Height: =30
-                        LayoutMinHeight: =30
-                        Size: =10
-                        Text: ="Fecha Documento"
-                        ZIndex: =1
-
                     Container16_2 As groupContainer.horizontalAutoLayoutContainer:
                         DropShadow: =DropShadow.None
                         LayoutMinHeight: =50
@@ -3746,16 +3676,6 @@
                             PaddingLeft: =5
                             PaddingRight: =5
                             ZIndex: =1
-
-                            Label2_92 As label:
-                                Color: =primarytext
-                                FontWeight: =FontWeight.Bold
-                                Height: =30
-                                LayoutMinHeight: =30
-                                LayoutMinWidth: =50
-                                Size: =10
-                                Text: ="Desde"
-                                ZIndex: =1
 
                             FechaDesdeDatePicker As datepicker:
                                 BorderColor: =secondarytext
@@ -3780,16 +3700,6 @@
                             PaddingLeft: =5
                             PaddingRight: =5
                             ZIndex: =2
-
-                            Label2_93 As label:
-                                Color: =primarytext
-                                FontWeight: =FontWeight.Bold
-                                Height: =30
-                                LayoutMinHeight: =30
-                                LayoutMinWidth: =50
-                                Size: =10
-                                Text: ="Hasta"
-                                ZIndex: =1
 
                             FechaHastaDatePicker As datepicker:
                                 BorderColor: =secondarytext
