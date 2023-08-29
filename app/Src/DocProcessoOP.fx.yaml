@@ -3396,10 +3396,13 @@
                                         id_tipo_docu: ComboBox2_10.Selected,
                                         id_alcance:ComboBox2_12.Selected,
                                         id_proceso:ComboBox2_14.Selected,
-                                        id_macroproceso:ComboBox2_13.Selected
+                                        id_macroproceso:ComboBox2_13.Selected,
+                                        Empresa: cbo_empresa.Selected,
+                                        Solicitante:cbo_solicitante.Selected,
+                                        'Dueño  del Processo':cbo_dueñoprocesso.Selected
                                     }
                                 ));
-                                
+                                //DOCUMENTO PRINCIPAL
                                 Patch(DEV_Archivos,Defaults(DEV_Archivos),
                                 {
                                     id_documento:{Id: varDocID.ID , Value:varDocID.ID},
@@ -3410,7 +3413,7 @@
                                 },
                                 FormArchivoPrincipal.Updates
                                 );
-                                
+                                //FLUJOGRAMA
                                 Patch(DEV_Archivos,Defaults(DEV_Archivos),
                                 {
                                     id_documento:{Id: varDocID.ID , Value:varDocID.ID},
@@ -3422,6 +3425,7 @@
                                 FormFlujograma.Updates
                                 );
                                 
+                                //RCKI
                                 
                                 Patch(DEV_Archivos,Defaults(DEV_Archivos),
                                 {
