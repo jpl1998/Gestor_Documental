@@ -3018,7 +3018,7 @@
                             )
                         );
                         If(
-                            IsEmpty(Filter(revisor_evaluacion_sidebar_ra_1.AllItems, IsBlank(obs_text_sidebar_ra.Text) || obs_text_sidebar_ra.Text ="Observado")),
+                            IsEmpty(Filter(aprobador_evaluacion_sidebar_ra_1.AllItems, IsBlank(obs_text_sidebar_ra_8.Text) || obs_text_sidebar_ra_8.Text ="Observado")),
                             UpdateIf(
                                 DEV_Modificacion_estatus_proceso_doc,
                                 codigo= varSelectedDoc.codigo && version = varSelectedDoc.version && id_documento.Id = varSelectedDoc.ID,
@@ -3040,7 +3040,7 @@
                                     'fecha y hora': Now(),
                                     ind_inact: "Activo",
                                     ind_mod: "i",
-                                    id_estatus_documento: {Id: 2, Value: 2},
+                                    id_estatus_documento: {Id: 4, Value: 4},
                                     id_documento: {Id: varSelectedDoc.ID, Value: varSelectedDoc.ID}
                                 }
                             )
@@ -3115,6 +3115,15 @@
                         );
                         If(
                             varRevPrincipal.estado="Observado" || varRevFlujograma.estado="Observado" || varRevRcki.estado="Observado",
+                            UpdateIf(
+                                DEV_Modificacion_estatus_proceso_doc,
+                                codigo= varSelectedDoc.codigo && version = varSelectedDoc.version && id_documento.Id = varSelectedDoc.ID,
+                                {
+                                    'fecha y hora': Now(),
+                                    ind_inact: "Inactivo",
+                                    ind_mod: "u"
+                                }
+                            );
                             Patch(DEV_Modificacion_estatus_proceso_doc,
                                 Defaults(
                                     DEV_Modificacion_estatus_proceso_doc
@@ -3131,6 +3140,34 @@
                                     id_documento: {Id: varSelectedDoc.ID, Value: varSelectedDoc.ID}
                                 }
                             );
+                        );
+                        If(
+                            IsEmpty(Filter(aprobador_evaluacion_sidebar_ra_1.AllItems, IsBlank(obs_text_sidebar_ra_8.Text) || obs_text_sidebar_ra_8.Text ="Observado")),
+                            UpdateIf(
+                                DEV_Modificacion_estatus_proceso_doc,
+                                codigo= varSelectedDoc.codigo && version = varSelectedDoc.version && id_documento.Id = varSelectedDoc.ID,
+                                {
+                                    'fecha y hora': Now(),
+                                    ind_inact: "Inactivo",
+                                    ind_mod: "u"
+                                }
+                            );
+                            Patch(DEV_Modificacion_estatus_proceso_doc,
+                            Defaults(
+                                DEV_Modificacion_estatus_proceso_doc
+                            ),
+                                {
+                                    codigo: varSelectedDoc.codigo,
+                                    version: varSelectedDoc.version,
+                                    id_estatus_procesos: {Id: 1, Value: 1},
+                                    nro_mod: Coalesce(First(SortByColumns(Filter(DEV_Modificacion_estatus_proceso_doc, codigo=varSelectedDoc.codigo, version= varSelectedDoc.version), "nro_mod",SortOrder.Descending)).nro_mod,0)+1,
+                                    'fecha y hora': Now(),
+                                    ind_inact: "Activo",
+                                    ind_mod: "i",
+                                    id_estatus_documento: {Id: 4, Value: 4},
+                                    id_documento: {Id: varSelectedDoc.ID, Value: varSelectedDoc.ID}
+                                }
+                            )
                         );
                         
                         UpdateContext({varResultadoPopup: true})
@@ -3293,6 +3330,15 @@
                             )
                         )
                     );
+                    UpdateIf(
+                            DEV_Modificacion_estatus_proceso_doc,
+                            codigo= varSelectedDoc.codigo && version = varSelectedDoc.version && id_documento.Id = varSelectedDoc.ID,
+                            {
+                                'fecha y hora': Now(),
+                                ind_inact: "Inactivo",
+                                ind_mod: "u"
+                            }
+                        );
                     Patch(DEV_Modificacion_estatus_proceso_doc,
                         Defaults(
                             DEV_Modificacion_estatus_proceso_doc
