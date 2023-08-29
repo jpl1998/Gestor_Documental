@@ -36563,6 +36563,207 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "DocProcessoOP.popupelaboradoreseditop.Container22_5.Container13_40.Container13_41.Container14_38.Container15_84.Gallery2_9.Container4_25.elaborador1_12.Label2_275.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "DocProcessoOP.popupelaboradoreseditop.Container22_5.Container13_40.Container13_41.Container14_38.Container15_84.Gallery2_9.Container4_25.elaborador1_12.Label2_275.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 3,
+                  "charOffset": 65,
+                  "snippet": {
+                    "text": ".Id"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "DocProcessoOP",
+                "type": "DocProcessoOP.popupelaboradoreseditop.Container22_5.Container13_40.Container13_41.Container14_38.Container15_84.Gallery2_9.Container4_25.elaborador1_12.Label2_275"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "id_documento.Id"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "DocProcessoOP.popupelaboradoreseditop.Container22_5.Container13_40.Container13_41.Container14_38.Container15_84.Gallery2_9.Container4_25.elaborador1_12.Label2_275.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "DocProcessoOP.popupelaboradoreseditop.Container22_5.Container13_40.Container13_41.Container14_38.Container15_84.Gallery2_9.Container4_25.elaborador1_12.Label2_275.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 69,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "DocProcessoOP",
+                "type": "DocProcessoOP.popupelaboradoreseditop.Container22_5.Container13_40.Container13_41.Container14_38.Container15_84.Gallery2_9.Container4_25.elaborador1_12.Label2_275"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "DocProcessoOP.popupelaboradoreseditop.Container22_5.Container13_40.Container13_41.Container14_38.Container15_84.Gallery2_9.Container4_25.elaborador1_12.Label2_275.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "DocProcessoOP.popupelaboradoreseditop.Container22_5.Container13_40.Container13_41.Container14_38.Container15_84.Gallery2_9.Container4_25.elaborador1_12.Label2_275.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 28,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "DocProcessoOP",
+                "type": "DocProcessoOP.popupelaboradoreseditop.Container22_5.Container13_40.Container13_41.Container14_38.Container15_84.Gallery2_9.Container4_25.elaborador1_12.Label2_275"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Number",
+              "Text"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "DocProcessoOP.popupelaboradoreseditop.Container22_5.Container13_40.Container13_41.Container14_38.Container15_84.Gallery2_9.Container4_25.observarOption_container_ra_23.Visible"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "DocProcessoOP.popupelaboradoreseditop.Container22_5.Container13_40.Container13_41.Container14_38.Container15_84.Gallery2_9.Container4_25.observarOption_container_ra_23.Visible",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 3,
+                  "charOffset": 59,
+                  "snippet": {
+                    "text": ".Id"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Visible",
+                "module": "DocProcessoOP",
+                "type": "DocProcessoOP.popupelaboradoreseditop.Container22_5.Container13_40.Container13_41.Container14_38.Container15_84.Gallery2_9.Container4_25.observarOption_container_ra_23"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "id_documento.Id"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "DocProcessoOP.popupelaboradoreseditop.Container22_5.Container13_40.Container13_41.Container14_38.Container15_84.Gallery2_9.Container4_25.observarOption_container_ra_23.Visible"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "DocProcessoOP.popupelaboradoreseditop.Container22_5.Container13_40.Container13_41.Container14_38.Container15_84.Gallery2_9.Container4_25.observarOption_container_ra_23.Visible",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 63,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "Visible",
+                "module": "DocProcessoOP",
+                "type": "DocProcessoOP.popupelaboradoreseditop.Container22_5.Container13_40.Container13_41.Container14_38.Container15_84.Gallery2_9.Container4_25.observarOption_container_ra_23"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.sidebar_home_ra.menu_itens_home_ra.AccessibleLabel"
                 }
               ],
