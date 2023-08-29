@@ -5294,7 +5294,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "archivos_container_sidebar_docRev_op",
-      "ParentIndex": 3,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -14170,14 +14170,7 @@
         "Font",
         "FontWeight",
         "X",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "DataCardKey14.Y + DataCardKey14.Height + 5",
-          "InvariantPropertyName": "Y",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "Y",
         "Width",
         "Height",
         "ZIndex",
@@ -29380,7 +29373,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "container_title_sidebar_docRev_op",
-      "ParentIndex": 0,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -72049,7 +72042,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "evaluacion_container_sidebar_docRev_op",
-      "ParentIndex": 2,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -123869,7 +123862,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "menu_sidebar_docRev_op",
-      "ParentIndex": 1,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
