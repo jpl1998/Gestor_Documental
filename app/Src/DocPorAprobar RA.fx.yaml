@@ -465,12 +465,32 @@
                                         menu_filter_docRev_ra_2.Selected.Value = "Pendientes",
                                         Filter(
                                             DEV_Documento,
+                                            IsBlank(varFilterMenu.cargadoPor) || 'Created By'.Email = varFilterMenu.cargadoPor.Mail,
+                                            IsBlank(varFilterMenu.tipoDocumento) || id_tipo_docu.Value = varFilterMenu.tipoDocumento.Value,
+                                            IsBlank(varFilterMenu.dueProceso) || 'Dueño  del Processo'.Email = varFilterMenu.dueProceso.Mail,
+                                            IsBlank(varFilterMenu.alcance) || id_alcance.Value = varFilterMenu.alcance.Value,
+                                            IsBlank(varFilterMenu.macroproceso) || id_macroproceso.Value = varFilterMenu.macroproceso.Value,
+                                            IsBlank(varFilterMenu.proceso) || id_proceso.Value = varFilterMenu.proceso.Value,
+                                            IsBlank(varFilterMenu.fechaDesde) || varFilterMenu.fechaDesde<=fecha,
+                                            IsBlank(varFilterMenu.fechaHasta) || varFilterMenu.fechaHasta>=fecha,
                                             ID in Filter(
                                                 DEV_Modificacion_estatus_proceso_doc,
                                                 ind_inact = "Activo" && id_estatus_documento.Value = "Por aprobar"
-                                            ).id_doc
+                                            ).id_doc,
+                                            searchbar_docRev_ra_3.Text in Nombre
                                         ),
-                                        DEV_Documento
+                                        Filter(
+                                                DEV_Documento,
+                                                IsBlank(varFilterMenu.cargadoPor) || 'Created By'.Email = varFilterMenu.cargadoPor.Mail,
+                                                IsBlank(varFilterMenu.tipoDocumento) || id_tipo_docu.Value = varFilterMenu.tipoDocumento.Value,
+                                                IsBlank(varFilterMenu.dueProceso) || 'Dueño  del Processo'.Email = varFilterMenu.dueProceso.Mail,
+                                                IsBlank(varFilterMenu.alcance) || id_alcance.Value = varFilterMenu.alcance.Value,
+                                                IsBlank(varFilterMenu.macroproceso) || id_macroproceso.Value = varFilterMenu.macroproceso.Value,
+                                                IsBlank(varFilterMenu.proceso) || id_proceso.Value = varFilterMenu.proceso.Value,
+                                                IsBlank(varFilterMenu.fechaDesde) || varFilterMenu.fechaDesde<=fecha,
+                                                IsBlank(varFilterMenu.fechaHasta) || varFilterMenu.fechaHasta>=fecha,
+                                                searchbar_docRev_ra_3.Text in Nombre
+                                            )
                                     )
                                 Layout: =Layout.Vertical
                                 LoadingSpinner: =LoadingSpinner.Data
@@ -621,504 +641,6 @@
                                             X: =(Parent.Width-Self.Width)/2
                                             Y: =(Parent.Height-Self.Height)/2
                                             ZIndex: =1
-
-    PopupFilter_ra_3 As groupContainer.manualLayoutContainer:
-        Fill: =RGBA(51, 51, 51, 0.11)
-        Height: =Parent.Height
-        Visible: =varpopupfilter
-        Width: =Parent.Width
-        ZIndex: =2
-
-        Container13_87 As groupContainer.verticalAutoLayoutContainer:
-            DropShadow: =DropShadow.Regular
-            Fill: =RGBA(255, 255, 255, 1)
-            Height: =452
-            LayoutDirection: =LayoutDirection.Vertical
-            LayoutMode: =LayoutMode.Auto
-            PaddingBottom: =20
-            PaddingLeft: =20
-            PaddingRight: =20
-            PaddingTop: =20
-            Width: =602
-            X: =736
-            Y: =207
-            ZIndex: =1
-
-            Container14_90 As groupContainer.horizontalAutoLayoutContainer:
-                DropShadow: =DropShadow.None
-                FillPortions: =0
-                Height: =80
-                LayoutMinHeight: =100
-                LayoutMinWidth: =250
-                LayoutMode: =LayoutMode.Auto
-                ZIndex: =1
-
-                Container15_210 As groupContainer.verticalAutoLayoutContainer:
-                    DropShadow: =DropShadow.None
-                    Height: =100
-                    LayoutDirection: =LayoutDirection.Vertical
-                    LayoutMinHeight: =50
-                    LayoutMinWidth: =250
-                    LayoutMode: =LayoutMode.Auto
-                    PaddingBottom: =10
-                    PaddingLeft: =10
-                    PaddingRight: =10
-                    PaddingTop: =10
-                    ZIndex: =1
-
-                    Label2_85 As label:
-                        AlignInContainer: =AlignInContainer.Stretch
-                        Color: =primarytext
-                        FontWeight: =FontWeight.Bold
-                        Height: =30
-                        LayoutMinHeight: =30
-                        Size: =10
-                        Text: ="Cargado Por"
-                        ZIndex: =1
-
-                    ComboBox2_8 As combobox:
-                        AlignInContainer: =AlignInContainer.Stretch
-                        BorderColor: =secondarytext
-                        BorderThickness: =1
-                        ChevronBackground: =RGBA(255, 255, 255, 1)
-                        ChevronFill: =primary
-                        ChevronHoverBackground: =
-                        ChevronHoverFill: =primary
-                        Color: =secondarytext
-                        Height: =30
-                        HoverBorderColor: =
-                        HoverColor: =RGBA(26, 26, 26, 1)
-                        HoverFill: =RGBA(215, 223, 240, 1)
-                        InputTextPlaceholder: ="Seleccione Opción"
-                        Items: =ComboBoxSample
-                        LayoutMinWidth: =50
-                        PressedBorderColor: =secondarytext
-                        PressedColor: =RGBA(26, 26, 26, 1)
-                        PressedFill: =RGBA(0, 0, 0, 0)
-                        SearchItems: =Search(ComboBoxSample,ComboBox2_8.SearchText,"Value1")
-                        SelectMultiple: =false
-                        Size: =10
-                        ZIndex: =2
-
-                Container15_211 As groupContainer.verticalAutoLayoutContainer:
-                    DropShadow: =DropShadow.None
-                    Height: =100
-                    LayoutDirection: =LayoutDirection.Vertical
-                    LayoutMinHeight: =50
-                    LayoutMinWidth: =250
-                    LayoutMode: =LayoutMode.Auto
-                    PaddingBottom: =10
-                    PaddingLeft: =10
-                    PaddingRight: =10
-                    PaddingTop: =10
-                    ZIndex: =2
-
-                    Label2_86 As label:
-                        AlignInContainer: =AlignInContainer.Stretch
-                        Color: =primarytext
-                        FontWeight: =FontWeight.Bold
-                        Height: =30
-                        LayoutMinHeight: =30
-                        Size: =10
-                        Text: ="Tipo Documento"
-                        ZIndex: =1
-
-                    ComboBox2_11 As combobox:
-                        AlignInContainer: =AlignInContainer.Stretch
-                        BorderColor: =secondarytext
-                        BorderThickness: =1
-                        ChevronBackground: =RGBA(255, 255, 255, 1)
-                        ChevronFill: =primary
-                        ChevronHoverBackground: =
-                        ChevronHoverFill: =primary
-                        Color: =secondarytext
-                        Height: =30
-                        HoverBorderColor: =
-                        HoverColor: =RGBA(26, 26, 26, 1)
-                        HoverFill: =RGBA(215, 223, 240, 1)
-                        InputTextPlaceholder: ="Seleccione Opción"
-                        Items: =ComboBoxSample
-                        LayoutMinWidth: =50
-                        PressedBorderColor: =secondarytext
-                        PressedColor: =RGBA(26, 26, 26, 1)
-                        PressedFill: =RGBA(0, 0, 0, 0)
-                        SearchItems: =Search(ComboBoxSample,ComboBox2_11.SearchText,"Value1")
-                        SelectMultiple: =false
-                        Size: =10
-                        ZIndex: =2
-
-            Container14_91 As groupContainer.horizontalAutoLayoutContainer:
-                DropShadow: =DropShadow.None
-                FillPortions: =0
-                Height: =80
-                LayoutMinHeight: =100
-                LayoutMinWidth: =250
-                LayoutMode: =LayoutMode.Auto
-                ZIndex: =2
-
-                Container15_212 As groupContainer.verticalAutoLayoutContainer:
-                    DropShadow: =DropShadow.None
-                    Height: =100
-                    LayoutDirection: =LayoutDirection.Vertical
-                    LayoutMinHeight: =50
-                    LayoutMinWidth: =250
-                    LayoutMode: =LayoutMode.Auto
-                    PaddingBottom: =10
-                    PaddingLeft: =10
-                    PaddingRight: =10
-                    PaddingTop: =10
-                    ZIndex: =1
-
-                    Label2_87 As label:
-                        AlignInContainer: =AlignInContainer.Stretch
-                        Color: =primarytext
-                        FontWeight: =FontWeight.Bold
-                        Height: =30
-                        LayoutMinHeight: =30
-                        Size: =10
-                        Text: ="Dueño Processo"
-                        ZIndex: =1
-
-                    ComboBox2_19 As combobox:
-                        AlignInContainer: =AlignInContainer.Stretch
-                        BorderColor: =secondarytext
-                        BorderThickness: =1
-                        ChevronBackground: =RGBA(255, 255, 255, 1)
-                        ChevronFill: =primary
-                        ChevronHoverBackground: =
-                        ChevronHoverFill: =primary
-                        Color: =secondarytext
-                        Height: =30
-                        HoverBorderColor: =
-                        HoverColor: =RGBA(26, 26, 26, 1)
-                        HoverFill: =RGBA(215, 223, 240, 1)
-                        InputTextPlaceholder: ="Seleccione Opción"
-                        Items: =ComboBoxSample
-                        LayoutMinWidth: =50
-                        PressedBorderColor: =secondarytext
-                        PressedColor: =RGBA(26, 26, 26, 1)
-                        PressedFill: =RGBA(0, 0, 0, 0)
-                        SearchItems: =Search(ComboBoxSample,ComboBox2_19.SearchText,"Value1")
-                        SelectMultiple: =false
-                        Size: =10
-                        ZIndex: =2
-
-                Container15_213 As groupContainer.verticalAutoLayoutContainer:
-                    DropShadow: =DropShadow.None
-                    Height: =100
-                    LayoutDirection: =LayoutDirection.Vertical
-                    LayoutMinHeight: =50
-                    LayoutMinWidth: =250
-                    LayoutMode: =LayoutMode.Auto
-                    PaddingBottom: =10
-                    PaddingLeft: =10
-                    PaddingRight: =10
-                    PaddingTop: =10
-                    ZIndex: =2
-
-                    Label2_88 As label:
-                        AlignInContainer: =AlignInContainer.Stretch
-                        Color: =primarytext
-                        FontWeight: =FontWeight.Bold
-                        Height: =30
-                        LayoutMinHeight: =30
-                        Size: =10
-                        Text: ="Alcance"
-                        ZIndex: =1
-
-                    ComboBox2_20 As combobox:
-                        AlignInContainer: =AlignInContainer.Stretch
-                        BorderColor: =secondarytext
-                        BorderThickness: =1
-                        ChevronBackground: =RGBA(255, 255, 255, 1)
-                        ChevronFill: =primary
-                        ChevronHoverBackground: =
-                        ChevronHoverFill: =primary
-                        Color: =secondarytext
-                        Height: =30
-                        HoverBorderColor: =
-                        HoverColor: =RGBA(26, 26, 26, 1)
-                        HoverFill: =RGBA(215, 223, 240, 1)
-                        InputTextPlaceholder: ="Seleccione Opción"
-                        Items: =ComboBoxSample
-                        LayoutMinWidth: =50
-                        PressedBorderColor: =secondarytext
-                        PressedColor: =RGBA(26, 26, 26, 1)
-                        PressedFill: =RGBA(0, 0, 0, 0)
-                        SearchItems: =Search(ComboBoxSample,ComboBox2_20.SearchText,"Value1")
-                        SelectMultiple: =false
-                        Size: =10
-                        ZIndex: =2
-
-            Container14_92 As groupContainer.horizontalAutoLayoutContainer:
-                DropShadow: =DropShadow.None
-                FillPortions: =0
-                Height: =80
-                LayoutMinHeight: =100
-                LayoutMinWidth: =250
-                LayoutMode: =LayoutMode.Auto
-                ZIndex: =3
-
-                Container15_214 As groupContainer.verticalAutoLayoutContainer:
-                    DropShadow: =DropShadow.None
-                    Height: =100
-                    LayoutDirection: =LayoutDirection.Vertical
-                    LayoutMinHeight: =50
-                    LayoutMinWidth: =250
-                    LayoutMode: =LayoutMode.Auto
-                    PaddingBottom: =10
-                    PaddingLeft: =10
-                    PaddingRight: =10
-                    PaddingTop: =10
-                    ZIndex: =1
-
-                    Label2_89 As label:
-                        AlignInContainer: =AlignInContainer.Stretch
-                        Color: =primarytext
-                        FontWeight: =FontWeight.Bold
-                        Height: =30
-                        LayoutMinHeight: =30
-                        Size: =10
-                        Text: ="Macroprocesso"
-                        ZIndex: =1
-
-                    ComboBox2_21 As combobox:
-                        AlignInContainer: =AlignInContainer.Stretch
-                        BorderColor: =secondarytext
-                        BorderThickness: =1
-                        ChevronBackground: =RGBA(255, 255, 255, 1)
-                        ChevronFill: =primary
-                        ChevronHoverBackground: =
-                        ChevronHoverFill: =primary
-                        Color: =secondarytext
-                        Height: =30
-                        HoverBorderColor: =
-                        HoverColor: =RGBA(26, 26, 26, 1)
-                        HoverFill: =RGBA(215, 223, 240, 1)
-                        InputTextPlaceholder: ="Seleccione Opción"
-                        Items: =ComboBoxSample
-                        LayoutMinWidth: =50
-                        PressedBorderColor: =secondarytext
-                        PressedColor: =RGBA(26, 26, 26, 1)
-                        PressedFill: =RGBA(0, 0, 0, 0)
-                        SearchItems: =Search(ComboBoxSample,ComboBox2_21.SearchText,"Value1")
-                        SelectMultiple: =false
-                        Size: =10
-                        ZIndex: =2
-
-                Container15_215 As groupContainer.verticalAutoLayoutContainer:
-                    DropShadow: =DropShadow.None
-                    Height: =100
-                    LayoutDirection: =LayoutDirection.Vertical
-                    LayoutMinHeight: =50
-                    LayoutMinWidth: =250
-                    LayoutMode: =LayoutMode.Auto
-                    PaddingBottom: =10
-                    PaddingLeft: =10
-                    PaddingRight: =10
-                    PaddingTop: =10
-                    ZIndex: =2
-
-                    Label2_90 As label:
-                        AlignInContainer: =AlignInContainer.Stretch
-                        Color: =primarytext
-                        FontWeight: =FontWeight.Bold
-                        Height: =30
-                        LayoutMinHeight: =30
-                        Size: =10
-                        Text: ="Processo"
-                        ZIndex: =1
-
-                    ComboBox2_25 As combobox:
-                        AlignInContainer: =AlignInContainer.Stretch
-                        BorderColor: =secondarytext
-                        BorderThickness: =1
-                        ChevronBackground: =RGBA(255, 255, 255, 1)
-                        ChevronFill: =primary
-                        ChevronHoverBackground: =
-                        ChevronHoverFill: =primary
-                        Color: =secondarytext
-                        Height: =30
-                        HoverBorderColor: =
-                        HoverColor: =RGBA(26, 26, 26, 1)
-                        HoverFill: =RGBA(215, 223, 240, 1)
-                        InputTextPlaceholder: ="Seleccione Opción"
-                        Items: =ComboBoxSample
-                        LayoutMinWidth: =50
-                        PressedBorderColor: =secondarytext
-                        PressedColor: =RGBA(26, 26, 26, 1)
-                        PressedFill: =RGBA(0, 0, 0, 0)
-                        SearchItems: =Search(ComboBoxSample,ComboBox2_25.SearchText,"Value1")
-                        SelectMultiple: =false
-                        Size: =10
-                        ZIndex: =2
-
-            Container14_93 As groupContainer.horizontalAutoLayoutContainer:
-                DropShadow: =DropShadow.None
-                FillPortions: =0
-                Height: =120
-                LayoutMinHeight: =100
-                LayoutMinWidth: =250
-                LayoutMode: =LayoutMode.Auto
-                ZIndex: =4
-
-                Container15_216 As groupContainer.verticalAutoLayoutContainer:
-                    DropShadow: =DropShadow.None
-                    Height: =100
-                    LayoutDirection: =LayoutDirection.Vertical
-                    LayoutMinHeight: =50
-                    LayoutMinWidth: =250
-                    LayoutMode: =LayoutMode.Auto
-                    PaddingBottom: =10
-                    PaddingLeft: =10
-                    PaddingRight: =10
-                    PaddingTop: =10
-                    ZIndex: =1
-
-                    Label2_91 As label:
-                        AlignInContainer: =AlignInContainer.Stretch
-                        Color: =primarytext
-                        FontWeight: =FontWeight.Bold
-                        Height: =30
-                        LayoutMinHeight: =30
-                        Size: =10
-                        Text: ="Fecha Documento"
-                        ZIndex: =1
-
-                    Container16_6 As groupContainer.horizontalAutoLayoutContainer:
-                        DropShadow: =DropShadow.None
-                        LayoutMinHeight: =50
-                        LayoutMinWidth: =250
-                        LayoutMode: =LayoutMode.Auto
-                        ZIndex: =2
-
-                        Container17_12 As groupContainer.verticalAutoLayoutContainer:
-                            DropShadow: =DropShadow.None
-                            LayoutAlignItems: =LayoutAlignItems.Stretch
-                            LayoutDirection: =LayoutDirection.Vertical
-                            LayoutMinHeight: =50
-                            LayoutMinWidth: =50
-                            LayoutMode: =LayoutMode.Auto
-                            PaddingLeft: =5
-                            PaddingRight: =5
-                            ZIndex: =1
-
-                            Label2_92 As label:
-                                Color: =primarytext
-                                FontWeight: =FontWeight.Bold
-                                Height: =30
-                                LayoutMinHeight: =30
-                                LayoutMinWidth: =50
-                                Size: =10
-                                Text: ="Desde"
-                                ZIndex: =1
-
-                            DatePicker1_18 As datepicker:
-                                BorderColor: =secondarytext
-                                BorderThickness: =1
-                                Color: =secondarytext
-                                Height: =30
-                                IconBackground: =
-                                IconFill: =primary
-                                LayoutMinHeight: =30
-                                LayoutMinWidth: =50
-                                Size: =10
-                                ZIndex: =2
-
-                        Container17_13 As groupContainer.verticalAutoLayoutContainer:
-                            DropShadow: =DropShadow.None
-                            LayoutAlignItems: =LayoutAlignItems.Stretch
-                            LayoutDirection: =LayoutDirection.Vertical
-                            LayoutMinHeight: =50
-                            LayoutMinWidth: =50
-                            LayoutMode: =LayoutMode.Auto
-                            PaddingLeft: =5
-                            PaddingRight: =5
-                            ZIndex: =2
-
-                            Label2_93 As label:
-                                Color: =primarytext
-                                FontWeight: =FontWeight.Bold
-                                Height: =30
-                                LayoutMinHeight: =30
-                                LayoutMinWidth: =50
-                                Size: =10
-                                Text: ="Hasta"
-                                ZIndex: =1
-
-                            DatePicker1_19 As datepicker:
-                                BorderColor: =secondarytext
-                                BorderThickness: =1
-                                Color: =secondarytext
-                                Height: =30
-                                IconBackground: =
-                                IconFill: =primary
-                                LayoutMinHeight: =30
-                                LayoutMinWidth: =50
-                                Size: =10
-                                ZIndex: =2
-
-                Container15_217 As groupContainer.verticalAutoLayoutContainer:
-                    DropShadow: =DropShadow.None
-                    Height: =100
-                    LayoutDirection: =LayoutDirection.Vertical
-                    LayoutMinHeight: =50
-                    LayoutMinWidth: =250
-                    LayoutMode: =LayoutMode.Auto
-                    PaddingBottom: =10
-                    PaddingLeft: =10
-                    PaddingRight: =10
-                    PaddingTop: =10
-                    ZIndex: =2
-
-            Container14_94 As groupContainer.horizontalAutoLayoutContainer:
-                DropShadow: =DropShadow.None
-                FillPortions: =0
-                Height: =60
-                LayoutMinHeight: =100
-                LayoutMinWidth: =250
-                LayoutMode: =LayoutMode.Auto
-                ZIndex: =5
-
-                Container15_218 As groupContainer.verticalAutoLayoutContainer:
-                    DropShadow: =DropShadow.None
-                    Height: =100
-                    LayoutDirection: =LayoutDirection.Vertical
-                    LayoutMinHeight: =50
-                    LayoutMinWidth: =250
-                    LayoutMode: =LayoutMode.Auto
-                    PaddingBottom: =10
-                    PaddingLeft: =10
-                    PaddingRight: =10
-                    PaddingTop: =10
-                    ZIndex: =1
-
-                Container15_219 As groupContainer.verticalAutoLayoutContainer:
-                    DropShadow: =DropShadow.None
-                    Height: =100
-                    LayoutDirection: =LayoutDirection.Vertical
-                    LayoutMinHeight: =30
-                    LayoutMinWidth: =250
-                    LayoutMode: =LayoutMode.Auto
-                    PaddingBottom: =10
-                    PaddingLeft: =10
-                    PaddingRight: =10
-                    PaddingTop: =10
-                    ZIndex: =2
-
-                    Button3_13 As button:
-                        AlignInContainer: =AlignInContainer.Stretch
-                        Fill: =primary
-                        FillPortions: =1
-                        LayoutMinHeight: =30
-                        OnSelect: =Set(varpopupfilter,false)
-                        RadiusBottomLeft: =5
-                        RadiusBottomRight: =5
-                        RadiusTopLeft: =5
-                        RadiusTopRight: =5
-                        Size: =14
-                        Text: ="Aplicar Filtros"
-                        ZIndex: =1
 
     SideBar_ra_4 As groupContainer.manualLayoutContainer:
         Fill: =RGBA(51, 51, 51, 0.11)
@@ -1623,6 +1145,16 @@
                         X: =288
                         Y: =16
                         ZIndex: =10
+
+                    mail_aprobador_ra_1 As label:
+                        Height: =19
+                        OnSelect: =Select(Parent)
+                        Text: =LookUp(DEV_Interlocutor, ID = Value(ThisItem.id_interlocutor.Value)).Email.Email
+                        Visible: =false
+                        Width: =261
+                        X: =60
+                        Y: =51
+                        ZIndex: =11
 
                 "elaborador_evaluacion_sidebar_ra_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
                     DelayItemLoading: =true
@@ -3815,4 +3347,482 @@
                 X: =455
                 Y: =10
                 ZIndex: =1
+
+    PopupFilter_ra_1 As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(51, 51, 51, 0.11)
+        Height: =Parent.Height
+        Visible: =varpopupfilter
+        Width: =Parent.Width
+        ZIndex: =9
+
+        Container13_29 As groupContainer.verticalAutoLayoutContainer:
+            DropShadow: =DropShadow.Regular
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =452
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMode: =LayoutMode.Auto
+            PaddingBottom: =20
+            PaddingLeft: =20
+            PaddingRight: =20
+            PaddingTop: =20
+            Width: =602
+            X: =736
+            Y: =207
+            ZIndex: =1
+
+            Container14_30 As groupContainer.horizontalAutoLayoutContainer:
+                DropShadow: =DropShadow.None
+                FillPortions: =0
+                Height: =80
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                ZIndex: =1
+
+                Container15_65 As groupContainer.verticalAutoLayoutContainer:
+                    DropShadow: =DropShadow.None
+                    Height: =100
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =50
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =10
+                    PaddingLeft: =10
+                    PaddingRight: =10
+                    PaddingTop: =10
+                    ZIndex: =1
+
+                    CargadoPorComboBox As combobox:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =secondarytext
+                        BorderThickness: =1
+                        ChevronBackground: =RGBA(255, 255, 255, 1)
+                        ChevronFill: =primary
+                        ChevronHoverBackground: =
+                        ChevronHoverFill: =primary
+                        Color: =secondarytext
+                        DisplayFields: =["City","Mail"]
+                        Height: =30
+                        HoverBorderColor: =
+                        HoverColor: =RGBA(26, 26, 26, 1)
+                        HoverFill: =RGBA(215, 223, 240, 1)
+                        InputTextPlaceholder: ="Seleccione Opción"
+                        Items: |-
+                            =UsuáriosdoOffice365.SearchUser({searchTerm:Self.SearchText})
+                        LayoutMinWidth: =50
+                        PressedBorderColor: =secondarytext
+                        PressedColor: =RGBA(26, 26, 26, 1)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        SearchFields: =["City"]
+                        SearchItems: |-
+                            =Search(UsuáriosdoOffice365.SearchUser({searchTerm:Self.SearchText}),CargadoPorComboBox.SearchText,"City")
+                        SelectMultiple: =false
+                        Size: =10
+                        Template: =ListItemTemplate.Person
+                        ZIndex: =2
+
+                Container15_66 As groupContainer.verticalAutoLayoutContainer:
+                    DropShadow: =DropShadow.None
+                    Height: =100
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =50
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =10
+                    PaddingLeft: =10
+                    PaddingRight: =10
+                    PaddingTop: =10
+                    ZIndex: =2
+
+                    TipoDocComboBox As combobox:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =secondarytext
+                        BorderThickness: =1
+                        ChevronBackground: =RGBA(255, 255, 255, 1)
+                        ChevronFill: =primary
+                        ChevronHoverBackground: =
+                        ChevronHoverFill: =primary
+                        Color: =secondarytext
+                        DisplayFields: =["Value"]
+                        Height: =30
+                        HoverBorderColor: =
+                        HoverColor: =RGBA(26, 26, 26, 1)
+                        HoverFill: =RGBA(215, 223, 240, 1)
+                        InputTextPlaceholder: ="Seleccione Opción"
+                        Items: =Choices(DEV_Documento[@id_tipo_docu])
+                        LayoutMinWidth: =50
+                        PressedBorderColor: =secondarytext
+                        PressedColor: =RGBA(26, 26, 26, 1)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        SearchFields: =["Value"]
+                        SearchItems: =Choices(DEV_Documento.id_tipo_docu,TipoDocComboBox.SearchText)
+                        SelectMultiple: =false
+                        Size: =10
+                        ZIndex: =2
+
+            Container14_31 As groupContainer.horizontalAutoLayoutContainer:
+                DropShadow: =DropShadow.None
+                FillPortions: =0
+                Height: =80
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                ZIndex: =2
+
+                Container15_67 As groupContainer.verticalAutoLayoutContainer:
+                    DropShadow: =DropShadow.None
+                    Height: =100
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =50
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =10
+                    PaddingLeft: =10
+                    PaddingRight: =10
+                    PaddingTop: =10
+                    ZIndex: =1
+
+                    DueProcesoComboBox As combobox:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =secondarytext
+                        BorderThickness: =1
+                        ChevronBackground: =RGBA(255, 255, 255, 1)
+                        ChevronFill: =primary
+                        ChevronHoverBackground: =
+                        ChevronHoverFill: =primary
+                        Color: =secondarytext
+                        DisplayFields: =["DisplayName","Email"]
+                        Height: =30
+                        HoverBorderColor: =
+                        HoverColor: =RGBA(26, 26, 26, 1)
+                        HoverFill: =RGBA(215, 223, 240, 1)
+                        InputTextPlaceholder: ="Seleccione Opción"
+                        Items: |-
+                            =UsuáriosdoOffice365.SearchUser({searchTerm:Self.SearchText})
+                        LayoutMinWidth: =50
+                        PressedBorderColor: =secondarytext
+                        PressedColor: =RGBA(26, 26, 26, 1)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        SearchFields: =["DisplayName"]
+                        SearchItems: |-
+                            =Search(UsuáriosdoOffice365.SearchUser({searchTerm:Self.SearchText}),DueProcesoComboBox.SearchText,"DisplayName")
+                        SelectMultiple: =false
+                        Size: =10
+                        Template: =ListItemTemplate.Person
+                        ZIndex: =2
+
+                Container15_68 As groupContainer.verticalAutoLayoutContainer:
+                    DropShadow: =DropShadow.None
+                    Height: =100
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =50
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =10
+                    PaddingLeft: =10
+                    PaddingRight: =10
+                    PaddingTop: =10
+                    ZIndex: =2
+
+                    AlcanceComboBox As combobox:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =secondarytext
+                        BorderThickness: =1
+                        ChevronBackground: =RGBA(255, 255, 255, 1)
+                        ChevronFill: =primary
+                        ChevronHoverBackground: =
+                        ChevronHoverFill: =primary
+                        Color: =secondarytext
+                        DisplayFields: =["Value"]
+                        Height: =30
+                        HoverBorderColor: =
+                        HoverColor: =RGBA(26, 26, 26, 1)
+                        HoverFill: =RGBA(215, 223, 240, 1)
+                        InputTextPlaceholder: ="Seleccione Opción"
+                        Items: =Choices(DEV_Documento[@id_alcance])
+                        LayoutMinWidth: =50
+                        PressedBorderColor: =secondarytext
+                        PressedColor: =RGBA(26, 26, 26, 1)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        SearchFields: =["Value"]
+                        SearchItems: =Choices(DEV_Documento.id_alcance,AlcanceComboBox.SearchText)
+                        SelectMultiple: =false
+                        Size: =10
+                        ZIndex: =2
+
+            Container14_32 As groupContainer.horizontalAutoLayoutContainer:
+                DropShadow: =DropShadow.None
+                FillPortions: =0
+                Height: =80
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                ZIndex: =3
+
+                Container15_69 As groupContainer.verticalAutoLayoutContainer:
+                    DropShadow: =DropShadow.None
+                    Height: =100
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =50
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =10
+                    PaddingLeft: =10
+                    PaddingRight: =10
+                    PaddingTop: =10
+                    ZIndex: =1
+
+                    MacroprocesoComboBox As combobox:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =secondarytext
+                        BorderThickness: =1
+                        ChevronBackground: =RGBA(255, 255, 255, 1)
+                        ChevronFill: =primary
+                        ChevronHoverBackground: =
+                        ChevronHoverFill: =primary
+                        Color: =secondarytext
+                        DisplayFields: =["Value"]
+                        Height: =30
+                        HoverBorderColor: =
+                        HoverColor: =RGBA(26, 26, 26, 1)
+                        HoverFill: =RGBA(215, 223, 240, 1)
+                        InputTextPlaceholder: ="Seleccione Opción"
+                        Items: =Choices(DEV_Documento[@id_macroproceso])
+                        LayoutMinWidth: =50
+                        PressedBorderColor: =secondarytext
+                        PressedColor: =RGBA(26, 26, 26, 1)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        SearchFields: =["Value"]
+                        SearchItems: =Choices(DEV_Documento.id_macroproceso,MacroprocesoComboBox.SearchText)
+                        SelectMultiple: =false
+                        Size: =10
+                        ZIndex: =2
+
+                Container15_70 As groupContainer.verticalAutoLayoutContainer:
+                    DropShadow: =DropShadow.None
+                    Height: =100
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =50
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =10
+                    PaddingLeft: =10
+                    PaddingRight: =10
+                    PaddingTop: =10
+                    ZIndex: =2
+
+                    ProcesoComboBox As combobox:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =secondarytext
+                        BorderThickness: =1
+                        ChevronBackground: =RGBA(255, 255, 255, 1)
+                        ChevronFill: =primary
+                        ChevronHoverBackground: =
+                        ChevronHoverFill: =primary
+                        Color: =secondarytext
+                        DisplayFields: =["Value"]
+                        Height: =30
+                        HoverBorderColor: =
+                        HoverColor: =RGBA(26, 26, 26, 1)
+                        HoverFill: =RGBA(215, 223, 240, 1)
+                        InputTextPlaceholder: ="Seleccione Opción"
+                        Items: =Choices(DEV_Documento[@id_proceso])
+                        LayoutMinWidth: =50
+                        PressedBorderColor: =secondarytext
+                        PressedColor: =RGBA(26, 26, 26, 1)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        SearchFields: =["Value"]
+                        SearchItems: =Choices(DEV_Documento.id_proceso,ProcesoComboBox.SearchText)
+                        SelectMultiple: =false
+                        Size: =10
+                        ZIndex: =2
+
+            Container14_33 As groupContainer.horizontalAutoLayoutContainer:
+                DropShadow: =DropShadow.None
+                FillPortions: =0
+                Height: =120
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                ZIndex: =4
+
+                Container15_71 As groupContainer.verticalAutoLayoutContainer:
+                    DropShadow: =DropShadow.None
+                    Height: =100
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =50
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =10
+                    PaddingLeft: =10
+                    PaddingRight: =10
+                    PaddingTop: =10
+                    ZIndex: =1
+
+                    Container16_2 As groupContainer.horizontalAutoLayoutContainer:
+                        DropShadow: =DropShadow.None
+                        LayoutMinHeight: =50
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =2
+
+                        Container17_4 As groupContainer.verticalAutoLayoutContainer:
+                            DropShadow: =DropShadow.None
+                            LayoutAlignItems: =LayoutAlignItems.Stretch
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutMinHeight: =50
+                            LayoutMinWidth: =50
+                            LayoutMode: =LayoutMode.Auto
+                            PaddingLeft: =5
+                            PaddingRight: =5
+                            ZIndex: =1
+
+                            FechaDesdeDatePicker As datepicker:
+                                BorderColor: =secondarytext
+                                BorderThickness: =1
+                                Color: =secondarytext
+                                DefaultDate: =
+                                Height: =30
+                                IconBackground: =
+                                IconFill: =primary
+                                LayoutMinHeight: =30
+                                LayoutMinWidth: =50
+                                Size: =10
+                                ZIndex: =2
+
+                        Container17_5 As groupContainer.verticalAutoLayoutContainer:
+                            DropShadow: =DropShadow.None
+                            LayoutAlignItems: =LayoutAlignItems.Stretch
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutMinHeight: =50
+                            LayoutMinWidth: =50
+                            LayoutMode: =LayoutMode.Auto
+                            PaddingLeft: =5
+                            PaddingRight: =5
+                            ZIndex: =2
+
+                            FechaHastaDatePicker As datepicker:
+                                BorderColor: =secondarytext
+                                BorderThickness: =1
+                                Color: =secondarytext
+                                DefaultDate: =
+                                Height: =30
+                                IconBackground: =
+                                IconFill: =primary
+                                LayoutMinHeight: =30
+                                LayoutMinWidth: =50
+                                Size: =10
+                                ZIndex: =2
+
+                Container15_72 As groupContainer.verticalAutoLayoutContainer:
+                    DropShadow: =DropShadow.None
+                    Height: =100
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =50
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =10
+                    PaddingLeft: =10
+                    PaddingRight: =10
+                    PaddingTop: =10
+                    ZIndex: =2
+
+            Container14_34 As groupContainer.horizontalAutoLayoutContainer:
+                DropShadow: =DropShadow.None
+                FillPortions: =0
+                Height: =60
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                ZIndex: =5
+
+                Container15_73 As groupContainer.verticalAutoLayoutContainer:
+                    DropShadow: =DropShadow.None
+                    Height: =100
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =10
+                    PaddingLeft: =10
+                    PaddingRight: =10
+                    PaddingTop: =10
+                    Width: =250
+                    ZIndex: =1
+
+                    RestablacerFiltroButton As button:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =primary
+                        BorderThickness: =1
+                        Color: =primary
+                        Fill: =RGBA(255, 255, 255, 1)
+                        FillPortions: =1
+                        HoverColor: =Self.Color
+                        HoverFill: =Self.Fill
+                        LayoutMinHeight: =30
+                        OnSelect: |
+                            =Concurrent(
+                                Reset(CargadoPorComboBox),
+                                Reset(TipoDocComboBox),
+                                Reset(DueProcesoComboBox),
+                                Reset(AlcanceComboBox),
+                                Reset(MacroprocesoComboBox),
+                                Reset(ProcesoComboBox),
+                                Reset(FechaDesdeDatePicker),
+                                Reset(FechaHastaDatePicker),
+                                Set(
+                                    varFilterMenu,
+                                    Blank()
+                                ),
+                                Set(
+                                    varpopupfilter,
+                                    false
+                                )
+                            );
+                        PressedColor: =Self.Color
+                        PressedFill: =Self.Fill
+                        RadiusBottomLeft: =5
+                        RadiusBottomRight: =5
+                        RadiusTopLeft: =5
+                        RadiusTopRight: =5
+                        Size: =14
+                        Text: ="Restablecer Todo"
+                        ZIndex: =1
+
+                Container15_74 As groupContainer.verticalAutoLayoutContainer:
+                    DropShadow: =DropShadow.None
+                    Height: =100
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =30
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =10
+                    PaddingLeft: =10
+                    PaddingRight: =10
+                    PaddingTop: =10
+                    ZIndex: =2
+
+                    AplicarFiltroButton As button:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        Fill: =primary
+                        FillPortions: =1
+                        LayoutMinHeight: =30
+                        OnSelect: |-
+                            =Set(varFilterMenu,{
+                                cargadoPor: CargadoPorComboBox.Selected,
+                                tipoDocumento: TipoDocComboBox.Selected,
+                                dueProceso: DueProcesoComboBox.Selected,
+                                alcance: AlcanceComboBox.Selected,
+                                macroproceso: MacroprocesoComboBox.Selected,
+                                proceso: ProcesoComboBox.Selected,
+                                fechaDesde: FechaDesdeDatePicker.SelectedDate,
+                                fechaHasta: FechaHastaDatePicker.SelectedDate
+                            }
+                            );
+                            Set(varpopupfilter,false)
+                        RadiusBottomLeft: =5
+                        RadiusBottomRight: =5
+                        RadiusTopLeft: =5
+                        RadiusTopRight: =5
+                        Size: =14
+                        Text: ="Aplicar Filtros"
+                        ZIndex: =1
 
