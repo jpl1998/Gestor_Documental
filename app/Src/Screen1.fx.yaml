@@ -570,10 +570,12 @@ Screen1 As screen:
                 DefaultSelectedItems: =Parent.Default
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
-                Items: =Choices([@DEV_Documento].id_proceso_x003a__x0020_ID)
+                Items: |-
+                    =Choices([@DEV_Documento].'id_proceso: ID')
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Choices(DEV_Documento.id_proceso_x003a__x0020_ID,DataCardValue9.SearchText)
+                SearchItems: |-
+                    =Choices(DEV_Documento.'id_proceso: ID',DataCardValue9.SearchText)
                 SelectMultiple: =false
                 Width: =Parent.Width - 60
                 X: =30
@@ -636,10 +638,12 @@ Screen1 As screen:
                 DefaultSelectedItems: =Parent.Default
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
-                Items: =Choices([@DEV_Documento].id_macroproceso_x003a__x0020_ID)
+                Items: |-
+                    =Choices([@DEV_Documento].'id_macroproceso: ID')
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Choices(DEV_Documento.id_macroproceso_x003a__x0020_ID,DataCardValue10.SearchText)
+                SearchItems: |-
+                    =Choices(DEV_Documento.'id_macroproceso: ID',DataCardValue10.SearchText)
                 SelectMultiple: =false
                 Width: =Parent.Width - 60
                 X: =30
@@ -702,10 +706,12 @@ Screen1 As screen:
                 DefaultSelectedItems: =Parent.Default
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
-                Items: =Choices([@DEV_Documento].id_tipo_docu_x003a__x0020_ID)
+                Items: |-
+                    =Choices([@DEV_Documento].'id_tipo_docu: ID')
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Choices(DEV_Documento.id_tipo_docu_x003a__x0020_ID,DataCardValue11.SearchText)
+                SearchItems: |-
+                    =Choices(DEV_Documento.'id_tipo_docu: ID',DataCardValue11.SearchText)
                 SelectMultiple: =false
                 Width: =Parent.Width - 60
                 X: =30
@@ -768,10 +774,12 @@ Screen1 As screen:
                 DefaultSelectedItems: =Parent.Default
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
-                Items: =Choices([@DEV_Documento].id_alcance_x003a__x0020_ID)
+                Items: |-
+                    =Choices([@DEV_Documento].'id_alcance: ID')
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Choices(DEV_Documento.id_alcance_x003a__x0020_ID,DataCardValue12.SearchText)
+                SearchItems: |-
+                    =Choices(DEV_Documento.'id_alcance: ID',DataCardValue12.SearchText)
                 SelectMultiple: =false
                 Width: =Parent.Width - 60
                 X: =30
@@ -900,10 +908,10 @@ Screen1 As screen:
                 DefaultSelectedItems: =Parent.Default
                 DisplayFields: =["DisplayName","Email","Picture"]
                 DisplayMode: =Parent.DisplayMode
-                Items: =Choices([@DEV_Documento].Due_x00f1_odelProcesso)
+                Items: =Choices([@DEV_Documento].'Dueño  del Processo')
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["DisplayName"]
-                SearchItems: =Choices(DEV_Documento.Due_x00f1_odelProcesso,DataCardValue14.SearchText)
+                SearchItems: =Choices(DEV_Documento.'Dueño  del Processo',DataCardValue14.SearchText)
                 SelectMultiple: =false
                 Template: =ListItemTemplate.Person
                 Tooltip: =Parent.DisplayName
@@ -1006,7 +1014,7 @@ Screen1 As screen:
         Anexos_DataCard1 As typedDataCard.attachmentsEditCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="{Attachments}"
-            Default: =ThisItem.Anexos
+            Default: =ThisItem.Attachments
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@DEV_Documento],DataSourceInfo.DisplayName,"{Attachments}")
             Fill: =RGBA(0, 0, 0, 0)
