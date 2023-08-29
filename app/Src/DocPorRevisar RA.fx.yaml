@@ -1230,6 +1230,33 @@
                         Y: =2.5
                         ZIndex: =1
 
+                "revisor_evaluacion_sidebar_ra As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+                    DelayItemLoading: =true
+                    Items: |-
+                        =Filter(
+                            DEV_Actor,
+                            id_documento.Value = Text(varSelectedDoc.ID),
+                            id_funcion.Value = "Revisor"
+                        )
+                    Layout: =Layout.Vertical
+                    LayoutMinHeight: =287
+                    LayoutMinWidth: =320
+                    LoadingSpinner: =LoadingSpinner.Data
+                    TemplatePadding: =0
+                    TemplateSize: =70
+                    Visible: =menu_filter_evaluacion_sidebar_ra.Selected.Value = "Revisado por"
+                    ZIndex: =1
+
+                    check_obs_icon_sidebar_ra As image:
+                        Height: =20
+                        Image: =check
+                        OnSelect: =Select(Parent)
+                        Visible: =IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version, id_status_archivo.Value="2"))
+                        Width: =20
+                        X: =288
+                        Y: =16
+                        ZIndex: =10
+
                 "registro_evaluacion_sidebar_ra As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
                     DelayItemLoading: =true
                     Items: =CustomGallerySample
@@ -1303,33 +1330,6 @@
                         X: =299
                         Y: =23
                         ZIndex: =4
-
-                "revisor_evaluacion_sidebar_ra As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
-                    DelayItemLoading: =true
-                    Items: |-
-                        =Filter(
-                            DEV_Actor,
-                            id_documento.Value = Text(varSelectedDoc.ID),
-                            id_funcion.Value = "Revisor"
-                        )
-                    Layout: =Layout.Vertical
-                    LayoutMinHeight: =287
-                    LayoutMinWidth: =320
-                    LoadingSpinner: =LoadingSpinner.Data
-                    TemplatePadding: =0
-                    TemplateSize: =70
-                    Visible: =menu_filter_evaluacion_sidebar_ra.Selected.Value = "Revisado por"
-                    ZIndex: =1
-
-                    check_obs_icon_sidebar_ra As image:
-                        Height: =20
-                        Image: =check
-                        OnSelect: =Select(Parent)
-                        Visible: =IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version, id_status_archivo.Value="2"))
-                        Width: =20
-                        X: =288
-                        Y: =16
-                        ZIndex: =10
 
                 "aprobador_evaluacion_sidebar_ra As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
                     DelayItemLoading: =true
