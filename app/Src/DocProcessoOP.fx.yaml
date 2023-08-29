@@ -1897,7 +1897,9 @@
                                 ResetForm(FormArchivoPrincipal);
                                 ResetForm(FormFlujograma);
                                 ResetForm(FormRCKI);
-                                Set(varpopupuploaddoc,true)
+                                Set(varpopupuploaddoc,true);
+                                Set(vardocupload,true);
+                                Set(varflujogramadoc,true);
                             RadiusBottomLeft: =5
                             RadiusBottomRight: =5
                             RadiusTopLeft: =5
@@ -2008,6 +2010,7 @@
                             RadiusBottomRight: =10
                             RadiusTopLeft: =10
                             RadiusTopRight: =10
+                            Visible: =vardocupload
                             ZIndex: =2
 
                             archivo_image_sidebar_docRev_op_18 As image:
@@ -2040,7 +2043,6 @@
                                     Set(vardocupload,false)
                                 PressedFill: =RGBA(56, 96, 178, 0.48)
                                 Text: =""
-                                Visible: =vardocupload
                                 Width: =Parent.Width
                                 ZIndex: =3
 
@@ -2141,7 +2143,7 @@
                                 Height: =Parent.Height*80%
                                 PaddingLeft: =10
                                 Size: =12
-                                Text: =If( IsEmpty(DataCardValue17_1.Attachments),"Subir Archivo",TextInput2_1.Text)
+                                Text: =If( IsEmpty(DataCardValue27.Attachments),"Subir Archivo",TextInput2_1.Text)
                                 Width: =353
                                 Wrap: =false
                                 X: =53
@@ -2157,7 +2159,6 @@
                                     Set(varflujogramadoc,false)
                                 PressedFill: =RGBA(56, 96, 178, 0.48)
                                 Text: =""
-                                Visible: =vardocupload
                                 Width: =Parent.Width
                                 ZIndex: =3
 
