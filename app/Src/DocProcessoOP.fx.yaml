@@ -4990,6 +4990,7 @@
                                             LayoutMinHeight: =30
                                             OnSelect: =
                                             Text: =ThisItem.Value
+                                            Visible: =!IsBlank(Label2_275)
                                             Width: =20
                                             ZIndex: =1
 
@@ -5009,6 +5010,7 @@
                                             Height: =25
                                             Icon: =Icon.AddUser
                                             LayoutMinHeight: =20
+                                            Visible: =!IsBlank(Label2_275)
                                             Width: =Self.Height
                                             ZIndex: =3
 
@@ -5018,6 +5020,7 @@
                                             Height: =25
                                             Icon: =Icon.Trash
                                             LayoutMinHeight: =20
+                                            Visible: =!IsBlank(Label2_275)
                                             Width: =Self.Height
                                             ZIndex: =4
 
