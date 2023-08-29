@@ -129,7 +129,7 @@
                     FillPortions: =0
                     Items: |-
                         =Table({Name:"Home",Logo: 'Home (1)',Tela:'Home RA'},
-                        {Name: "Doc. por Revisar",Logo: 'Document Sync', Tela:'DocPorAprobar RA' },
+                        {Name: "Doc. por Revisar",Logo: 'Document Sync', Tela:'DocPorRevisar RA' },
                         {Name: "Doc. por Aprobar", Logo:'Document Ribbon_1', Tela: 'DocPorAprobar RA' },
                         {Name: "Doc. Publicados", Logo:'Document Text', Tela:'DocPublicados RA' })
                     Layout: =Layout.Vertical
@@ -259,6 +259,15 @@
                                 Visible: =ThisItem.IsSelected
                                 Y: =39
                                 ZIndex: =2
+
+                            button_menu_filter_docRev_ra_1 As button:
+                                Fill: =RGBA(0, 0, 0, 0)
+                                HoverFill: =RGBA(0, 0, 0, 0.1)
+                                OnSelect: =Select(Parent)
+                                PressedFill: =
+                                Text: =""
+                                Width: =150
+                                ZIndex: =3
 
                     Container_searchbar_docRev_ra_3 As groupContainer.horizontalAutoLayoutContainer:
                         DropShadow: =DropShadow.None
@@ -451,7 +460,18 @@
                             "tablecontent_docRev_ra_3 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
                                 DelayItemLoading: =true
                                 Height: =Button4_18.Height
-                                Items: =DEV_Documento
+                                Items: |-
+                                    =If(
+                                        menu_filter_docRev_ra_2.Selected.Value = "Pendientes",
+                                        Filter(
+                                            DEV_Documento,
+                                            ID in Filter(
+                                                DEV_Modificacion_estatus_proceso_doc,
+                                                ind_inact = "Activo" && id_estatus_documento.Value = "Por aprobar"
+                                            ).id_doc
+                                        ),
+                                        DEV_Documento
+                                    )
                                 Layout: =Layout.Vertical
                                 LoadingSpinner: =LoadingSpinner.Data
                                 TemplatePadding: =0

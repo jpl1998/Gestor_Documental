@@ -260,6 +260,15 @@
                                 Y: =39
                                 ZIndex: =2
 
+                            button_menu_filter_docRev_ra As button:
+                                Fill: =RGBA(0, 0, 0, 0)
+                                HoverFill: =RGBA(0, 0, 0, 0.1)
+                                OnSelect: =Select(Parent)
+                                PressedFill: =
+                                Text: =""
+                                Width: =150
+                                ZIndex: =3
+
                     Container_searchbar_docRev_ra As groupContainer.horizontalAutoLayoutContainer:
                         DropShadow: =DropShadow.None
                         FillPortions: =0.1
@@ -451,7 +460,18 @@
                             "tablecontent_docRev_ra As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
                                 DelayItemLoading: =true
                                 Height: =Button4_10.Height
-                                Items: =DEV_Documento
+                                Items: |-
+                                    =If(
+                                        menu_filter_docRev_ra.Selected.Value = "Pendientes",
+                                        Filter(
+                                            DEV_Documento,
+                                            ID in Filter(
+                                                DEV_Modificacion_estatus_proceso_doc,
+                                                ind_inact = "Activo" && id_estatus_documento.Value = "Por revisar"
+                                            ).id_doc
+                                        ),
+                                        DEV_Documento
+                                    )
                                 Layout: =Layout.Vertical
                                 LoadingSpinner: =LoadingSpinner.Data
                                 TemplatePadding: =0
