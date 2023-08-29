@@ -3511,65 +3511,11 @@
                             LayoutMinWidth: =24
                             ZIndex: =3
 
-                            open_archivo_icon_sidebar_4 As icon.OpenInNewWindow:
-                                Height: =16
-                                Icon: =Icon.OpenInNewWindow
-                                Width: =16
-                                X: =(Parent.Width-Self.Width)/2
-                                Y: =(Parent.Height-Self.Height)/2
-                                ZIndex: =1
-
-                            open_archivo_button_sidebar_4 As button:
-                                BorderColor: =primary
-                                BorderThickness: =1.5
-                                Fill: =RGBA(0, 0, 0, 0)
-                                FocusedBorderThickness: =2
-                                Height: =25
-                                HoverFill: =RGBA(0, 0, 0, 0.15)
-                                OnSelect: =Launch(Concatenate(First(ThisItem.Anexos).AbsoluteUri,"?web=1"))
-                                PressedFill: =
-                                RadiusBottomLeft: =5
-                                RadiusBottomRight: =5
-                                RadiusTopLeft: =5
-                                RadiusTopRight: =5
-                                Text: =""
-                                Width: =25
-                                X: =(Parent.Width-Self.Width)/2
-                                Y: =(Parent.Height-Self.Height)/2
-                                ZIndex: =2
-
                         archivo_download_container_sidebar_ra_4 As groupContainer.manualLayoutContainer:
                             DropShadow: =DropShadow.None
                             LayoutMinHeight: =24
                             LayoutMinWidth: =24
                             ZIndex: =4
-
-                            download_archivo_icon_sidebar_4 As icon.OpenInNewWindow:
-                                Height: =16
-                                Icon: =Icon.Download
-                                Width: =16
-                                X: =(Parent.Width-Self.Width)/2
-                                Y: =(Parent.Height-Self.Height)/2
-                                ZIndex: =1
-
-                            download_archivo_button_sidebar_4 As button:
-                                BorderColor: =primary
-                                BorderThickness: =1.5
-                                Fill: =RGBA(0, 0, 0, 0)
-                                FocusedBorderThickness: =2
-                                Height: =25
-                                HoverFill: =RGBA(0, 0, 0, 0.15)
-                                OnSelect: =Launch(First(ThisItem.Anexos).AbsoluteUri)
-                                PressedFill: =
-                                RadiusBottomLeft: =5
-                                RadiusBottomRight: =5
-                                RadiusTopLeft: =5
-                                RadiusTopRight: =5
-                                Text: =""
-                                Width: =25
-                                X: =(Parent.Width-Self.Width)/2
-                                Y: =(Parent.Height-Self.Height)/2
-                                ZIndex: =2
 
                     separator_archives_op_6 As rectangle:
                         Fill: =RGBA(219, 219, 219, 1)
@@ -4151,16 +4097,6 @@
                                 Text: ="Código *"
                                 ZIndex: =1
 
-                            TextInput2_4 As text:
-                                AlignInContainer: =AlignInContainer.Stretch
-                                BorderColor: =secondarytext
-                                BorderThickness: =1
-                                Default: =varDocSide.codigo
-                                HoverBorderColor: =primary
-                                HoverFill: =RGBA(255, 255, 255, 1)
-                                Size: =10
-                                ZIndex: =2
-
                     Container14_19 As groupContainer.horizontalAutoLayoutContainer:
                         DropShadow: =DropShadow.None
                         Height: =100
@@ -4240,16 +4176,6 @@
                                 LayoutMinHeight: =30
                                 Text: ="Nombre del Documento *"
                                 ZIndex: =1
-
-                            TextInput2_5 As text:
-                                AlignInContainer: =AlignInContainer.Stretch
-                                BorderColor: =secondarytext
-                                BorderThickness: =1
-                                Default: =varDocSide.Nombre
-                                HoverBorderColor: =primary
-                                HoverFill: =RGBA(255, 255, 255, 1)
-                                Size: =10
-                                ZIndex: =2
 
                     Container14_20 As groupContainer.horizontalAutoLayoutContainer:
                         DropShadow: =DropShadow.None
@@ -4435,16 +4361,6 @@
                                 Text: ="Versión *"
                                 ZIndex: =1
 
-                            TextInput2_6 As text:
-                                AlignInContainer: =AlignInContainer.Stretch
-                                BorderColor: =secondarytext
-                                BorderThickness: =1
-                                Default: =varDocSide.version+1
-                                HoverBorderColor: =primary
-                                HoverFill: =RGBA(255, 255, 255, 1)
-                                Size: =10
-                                ZIndex: =2
-
                     Container14_22 As groupContainer.horizontalAutoLayoutContainer:
                         DropShadow: =DropShadow.None
                         Height: =100
@@ -4536,76 +4452,6 @@
                                 SelectMultiple: =false
                                 Size: =10
                                 ZIndex: =2
-
-                    Container14_30 As groupContainer.horizontalAutoLayoutContainer:
-                        DropShadow: =DropShadow.None
-                        Height: =120
-                        LayoutMinHeight: =50
-                        LayoutMinWidth: =250
-                        LayoutMode: =LayoutMode.Auto
-                        ZIndex: =6
-
-                        Container15_65 As groupContainer.verticalAutoLayoutContainer:
-                            DropShadow: =DropShadow.None
-                            Height: =100
-                            LayoutDirection: =LayoutDirection.Vertical
-                            LayoutMinHeight: =50
-                            LayoutMinWidth: =250
-                            LayoutMode: =LayoutMode.Auto
-                            PaddingBottom: =10
-                            PaddingLeft: =10
-                            PaddingRight: =10
-                            PaddingTop: =10
-                            ZIndex: =1
-
-                            Label2_105 As label:
-                                AlignInContainer: =AlignInContainer.Stretch
-                                Color: =primarytext
-                                FontWeight: =FontWeight.Bold
-                                Height: =30
-                                LayoutMinHeight: =30
-                                Text: ="Proceso *"
-                                ZIndex: =1
-
-                            ComboBox2_29 As combobox:
-                                AlignInContainer: =AlignInContainer.Stretch
-                                BorderColor: =secondarytext
-                                BorderThickness: =1
-                                ChevronBackground: =RGBA(255, 255, 255, 1)
-                                ChevronFill: =primary
-                                ChevronHoverBackground: =
-                                ChevronHoverFill: =primary
-                                Color: =secondarytext
-                                Default: =varDocSide.id_proceso
-                                DefaultSelectedItems: =varDocSide.id_proceso
-                                DisplayFields: =["Value"]
-                                HoverBorderColor: =
-                                HoverColor: =RGBA(26, 26, 26, 1)
-                                HoverFill: =RGBA(215, 223, 240, 1)
-                                InputTextPlaceholder: ="Seleccione Opción"
-                                Items: =Choices(DEV_Documento[@id_proceso])
-                                LayoutMinWidth: =50
-                                PressedBorderColor: =secondarytext
-                                PressedColor: =RGBA(26, 26, 26, 1)
-                                PressedFill: =RGBA(0, 0, 0, 0)
-                                SearchFields: =["Value"]
-                                SearchItems: =Choices(DEV_Documento.id_proceso,ComboBox2_29.SearchText)
-                                SelectMultiple: =false
-                                Size: =10
-                                ZIndex: =2
-
-                        Container15_66 As groupContainer.verticalAutoLayoutContainer:
-                            DropShadow: =DropShadow.None
-                            Height: =100
-                            LayoutDirection: =LayoutDirection.Vertical
-                            LayoutMinHeight: =50
-                            LayoutMinWidth: =250
-                            LayoutMode: =LayoutMode.Auto
-                            PaddingBottom: =10
-                            PaddingLeft: =10
-                            PaddingRight: =10
-                            PaddingTop: =10
-                            ZIndex: =2
 
                 Container14_36 As groupContainer.horizontalAutoLayoutContainer:
                     DropShadow: =DropShadow.None
@@ -5118,111 +4964,6 @@
                                 TemplateSize: =50
                                 ZIndex: =4
 
-                                Container4 As groupContainer.manualLayoutContainer:
-                                    DropShadow: =DropShadow.None
-                                    Height: =50
-                                    Width: =369
-                                    ZIndex: =1
-
-                                    elaborador1_2 As groupContainer.horizontalAutoLayoutContainer:
-                                        DropShadow: =DropShadow.None
-                                        Height: =50
-                                        LayoutAlignItems: =LayoutAlignItems.Stretch
-                                        LayoutGap: =10
-                                        LayoutMode: =LayoutMode.Auto
-                                        PaddingBottom: =5
-                                        PaddingLeft: =5
-                                        PaddingRight: =5
-                                        PaddingTop: =5
-                                        Width: =369
-                                        ZIndex: =1
-
-                                        Label2_132 As label:
-                                            Color: =primarytext
-                                            FontWeight: =FontWeight.Bold
-                                            Height: =30
-                                            LayoutMinHeight: =30
-                                            Text: =ThisItem.Value
-                                            Visible: =!IsBlank(Label2_133)
-                                            Width: =20
-                                            ZIndex: =1
-
-                                        Label2_133 As label:
-                                            Color: =primarytext
-                                            FillPortions: =1
-                                            FontWeight: =FontWeight.Bold
-                                            Height: =30
-                                            LayoutMinHeight: =30
-                                            Text: =LookUp(DEV_Interlocutor, ID = Index(Filter(DEV_Actor,id_documento.Id = varDocSide.ID, id_funcion.Value = "Elaborador"),ThisItem.Value).id_interlocutor.Value,Email).DisplayName
-                                            Width: =20
-                                            ZIndex: =2
-
-                                        Icon5 As icon.AddUser:
-                                            AlignInContainer: =AlignInContainer.Center
-                                            Color: =primary
-                                            Height: =25
-                                            Icon: =Icon.AddUser
-                                            LayoutMinHeight: =20
-                                            OnSelect: =
-                                            Visible: =!IsBlank(Label2_133)
-                                            Width: =Self.Height
-                                            ZIndex: =3
-
-                                        Icon5_1 As icon.AddUser:
-                                            AlignInContainer: =AlignInContainer.Center
-                                            Color: =red
-                                            Height: =25
-                                            Icon: =Icon.Trash
-                                            LayoutMinHeight: =20
-                                            Visible: =!IsBlank(Label2_133)
-                                            Width: =Self.Height
-                                            ZIndex: =4
-
-                                    observarOption_container_ra_11 As groupContainer.manualLayoutContainer:
-                                        BorderColor: =placeholder
-                                        DropShadow: =DropShadow.None
-                                        Fill: =RGBA(255, 255, 255, 1)
-                                        Height: =Parent.Height*80%
-                                        RadiusBottomLeft: =0
-                                        RadiusBottomRight: =0
-                                        Visible: =If(ThisItem.Value = CountRows(Filter(DEV_Actor,id_documento.Id = varDocSide.ID, id_funcion.Value = "Elaborador"))+1,true,false)
-                                        Width: =Parent.Width*60%
-                                        X: =(Parent.Width-Self.Width)/2
-                                        Y: =(Parent.Height-Self.Height)/2
-                                        ZIndex: =2
-
-                                        observar_button_ra_11 As button:
-                                            BorderColor: =primary
-                                            Color: =primary
-                                            Fill: =RGBA(0, 0, 0, 0)
-                                            Height: =Parent.Height*98%
-                                            HoverColor: =ColorFade(primary,-5%)
-                                            HoverFill: =RGBA(255, 255, 255, 1)
-                                            OnSelect: =Set(varpopupformedit,true)
-                                            PaddingBottom: =0
-                                            PaddingLeft: =0
-                                            PaddingRight: =0
-                                            PaddingTop: =0
-                                            PressedFill: =
-                                            RadiusBottomLeft: =5
-                                            RadiusBottomRight: =5
-                                            RadiusTopLeft: =5
-                                            RadiusTopRight: =5
-                                            Size: =11
-                                            Text: ="Agregar Integrante"
-                                            Width: =Parent.Width*95%
-                                            X: =(Parent.Width-Self.Width)/2
-                                            ZIndex: =1
-
-                                        observar_icon_ra_11 As icon.Information:
-                                            Color: =primary
-                                            Height: =20
-                                            Icon: =Icon.Add
-                                            Width: =20
-                                            X: =15
-                                            Y: =(Parent.Height-Self.Height)/2
-                                            ZIndex: =2
-
                         separator_revisores_op_2 As rectangle:
                             AlignInContainer: =AlignInContainer.Stretch
                             Fill: =secondarytext
@@ -5268,105 +5009,6 @@
                                     Width: =369
                                     ZIndex: =1
 
-                                    elaborador1_3 As groupContainer.horizontalAutoLayoutContainer:
-                                        DropShadow: =DropShadow.None
-                                        Height: =50
-                                        LayoutAlignItems: =LayoutAlignItems.Stretch
-                                        LayoutGap: =10
-                                        LayoutMode: =LayoutMode.Auto
-                                        PaddingBottom: =5
-                                        PaddingLeft: =5
-                                        PaddingRight: =5
-                                        PaddingTop: =5
-                                        Width: =369
-                                        ZIndex: =1
-
-                                        Label2_134 As label:
-                                            Color: =primarytext
-                                            FontWeight: =FontWeight.Bold
-                                            Height: =30
-                                            LayoutMinHeight: =30
-                                            Text: =ThisItem.Value
-                                            Visible: =!IsBlank(Label2_135)
-                                            Width: =20
-                                            ZIndex: =1
-
-                                        Label2_135 As label:
-                                            Color: =primarytext
-                                            FillPortions: =1
-                                            FontWeight: =FontWeight.Bold
-                                            Height: =30
-                                            LayoutMinHeight: =30
-                                            Text: =LookUp(DEV_Interlocutor, ID = Index(Filter(DEV_Actor,id_documento.Id = varDocSide.ID, id_funcion.Value = "Revisor"),ThisItem.Value).id_interlocutor.Value,Email).DisplayName
-                                            Width: =20
-                                            ZIndex: =2
-
-                                        Icon5_2 As icon.AddUser:
-                                            AlignInContainer: =AlignInContainer.Center
-                                            Color: =primary
-                                            Height: =25
-                                            Icon: =Icon.AddUser
-                                            LayoutMinHeight: =20
-                                            OnSelect: =
-                                            Visible: =!IsBlank(Label2_135)
-                                            Width: =Self.Height
-                                            ZIndex: =3
-
-                                        Icon5_3 As icon.AddUser:
-                                            AlignInContainer: =AlignInContainer.Center
-                                            Color: =red
-                                            Height: =25
-                                            Icon: =Icon.Trash
-                                            LayoutMinHeight: =20
-                                            Visible: =!IsBlank(Label2_135)
-                                            Width: =Self.Height
-                                            ZIndex: =4
-
-                                    observarOption_container_ra_12 As groupContainer.manualLayoutContainer:
-                                        BorderColor: =placeholder
-                                        DropShadow: =DropShadow.None
-                                        Fill: =RGBA(255, 255, 255, 1)
-                                        Height: =Parent.Height*80%
-                                        RadiusBottomLeft: =0
-                                        RadiusBottomRight: =0
-                                        Visible: =If(ThisItem.Value = CountRows(Filter(DEV_Actor,id_documento.Id = varDocSide.ID, id_funcion.Value = "Revisor"))+1,true,false)
-                                        Width: =Parent.Width*60%
-                                        X: =(Parent.Width-Self.Width)/2
-                                        Y: =(Parent.Height-Self.Height)/2
-                                        ZIndex: =2
-
-                                        observar_button_ra_12 As button:
-                                            BorderColor: =primary
-                                            Color: =primary
-                                            Fill: =RGBA(0, 0, 0, 0)
-                                            Height: =Parent.Height*98%
-                                            HoverColor: =ColorFade(primary,-5%)
-                                            HoverFill: =RGBA(255, 255, 255, 1)
-                                            OnSelect: =Set(varpopupformedit,true)
-                                            PaddingBottom: =0
-                                            PaddingLeft: =0
-                                            PaddingRight: =0
-                                            PaddingTop: =0
-                                            PressedFill: =
-                                            RadiusBottomLeft: =5
-                                            RadiusBottomRight: =5
-                                            RadiusTopLeft: =5
-                                            RadiusTopRight: =5
-                                            Size: =11
-                                            Text: ="Agregar Integrante"
-                                            Width: =Parent.Width*95%
-                                            X: =(Parent.Width-Self.Width)/2
-                                            ZIndex: =1
-
-                                        observar_icon_ra_12 As icon.Information:
-                                            Color: =primary
-                                            Height: =20
-                                            Icon: =Icon.Add
-                                            Width: =20
-                                            X: =15
-                                            Y: =(Parent.Height-Self.Height)/2
-                                            ZIndex: =2
-
                         separator_revisores_op_3 As rectangle:
                             AlignInContainer: =AlignInContainer.Stretch
                             Fill: =secondarytext
@@ -5405,111 +5047,6 @@
                                 LoadingSpinner: =LoadingSpinner.Data
                                 TemplateSize: =50
                                 ZIndex: =2
-
-                                Container4_12 As groupContainer.manualLayoutContainer:
-                                    DropShadow: =DropShadow.None
-                                    Height: =50
-                                    Width: =369
-                                    ZIndex: =1
-
-                                    elaborador1_4 As groupContainer.horizontalAutoLayoutContainer:
-                                        DropShadow: =DropShadow.None
-                                        Height: =50
-                                        LayoutAlignItems: =LayoutAlignItems.Stretch
-                                        LayoutGap: =10
-                                        LayoutMode: =LayoutMode.Auto
-                                        PaddingBottom: =5
-                                        PaddingLeft: =5
-                                        PaddingRight: =5
-                                        PaddingTop: =5
-                                        Width: =369
-                                        ZIndex: =1
-
-                                        Label2_136 As label:
-                                            Color: =primarytext
-                                            FontWeight: =FontWeight.Bold
-                                            Height: =30
-                                            LayoutMinHeight: =30
-                                            Text: =ThisItem.Value
-                                            Visible: =!IsBlank(Label2_138)
-                                            Width: =20
-                                            ZIndex: =1
-
-                                        Label2_138 As label:
-                                            Color: =primarytext
-                                            FillPortions: =1
-                                            FontWeight: =FontWeight.Bold
-                                            Height: =30
-                                            LayoutMinHeight: =30
-                                            Text: =LookUp(DEV_Interlocutor, ID = Index(Filter(DEV_Actor,id_documento.Id = varDocSide.ID, id_funcion.Value = "Aprobador"),ThisItem.Value).id_interlocutor.Value,Email).DisplayName
-                                            Width: =20
-                                            ZIndex: =2
-
-                                        Icon5_4 As icon.AddUser:
-                                            AlignInContainer: =AlignInContainer.Center
-                                            Color: =primary
-                                            Height: =25
-                                            Icon: =Icon.AddUser
-                                            LayoutMinHeight: =20
-                                            OnSelect: =
-                                            Visible: =!IsBlank(Label2_138)
-                                            Width: =Self.Height
-                                            ZIndex: =3
-
-                                        Icon5_5 As icon.AddUser:
-                                            AlignInContainer: =AlignInContainer.Center
-                                            Color: =red
-                                            Height: =25
-                                            Icon: =Icon.Trash
-                                            LayoutMinHeight: =20
-                                            Visible: =!IsBlank(Label2_138)
-                                            Width: =Self.Height
-                                            ZIndex: =4
-
-                                    observarOption_container_ra_13 As groupContainer.manualLayoutContainer:
-                                        BorderColor: =placeholder
-                                        DropShadow: =DropShadow.None
-                                        Fill: =RGBA(255, 255, 255, 1)
-                                        Height: =Parent.Height*80%
-                                        RadiusBottomLeft: =0
-                                        RadiusBottomRight: =0
-                                        Visible: =If(ThisItem.Value = CountRows(Filter(DEV_Actor,id_documento.Id = varDocSide.ID, id_funcion.Value = "Aprobador"))+1,true,false)
-                                        Width: =Parent.Width*60%
-                                        X: =(Parent.Width-Self.Width)/2
-                                        Y: =(Parent.Height-Self.Height)/2
-                                        ZIndex: =2
-
-                                        observar_button_ra_13 As button:
-                                            BorderColor: =primary
-                                            Color: =primary
-                                            Fill: =RGBA(0, 0, 0, 0)
-                                            Height: =Parent.Height*98%
-                                            HoverColor: =ColorFade(primary,-5%)
-                                            HoverFill: =RGBA(255, 255, 255, 1)
-                                            OnSelect: =Set(varpopupformedit,true)
-                                            PaddingBottom: =0
-                                            PaddingLeft: =0
-                                            PaddingRight: =0
-                                            PaddingTop: =0
-                                            PressedFill: =
-                                            RadiusBottomLeft: =5
-                                            RadiusBottomRight: =5
-                                            RadiusTopLeft: =5
-                                            RadiusTopRight: =5
-                                            Size: =11
-                                            Text: ="Agregar Integrante"
-                                            Width: =Parent.Width*95%
-                                            X: =(Parent.Width-Self.Width)/2
-                                            ZIndex: =1
-
-                                        observar_icon_ra_13 As icon.Information:
-                                            Color: =primary
-                                            Height: =20
-                                            Icon: =Icon.Add
-                                            Width: =20
-                                            X: =15
-                                            Y: =(Parent.Height-Self.Height)/2
-                                            ZIndex: =2
 
                 Container14_39 As groupContainer.horizontalAutoLayoutContainer:
                     DropShadow: =DropShadow.None
