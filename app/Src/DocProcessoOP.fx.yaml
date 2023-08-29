@@ -3571,6 +3571,14 @@
                                 Y: =(Parent.Height-Self.Height)/2
                                 ZIndex: =2
 
+                    separator_archives_op_6 As rectangle:
+                        Fill: =secondarytext
+                        Height: =1
+                        Width: =Parent.Width*95%
+                        X: =11
+                        Y: =39
+                        ZIndex: =2
+
             informacion_container_sidebar_docRev_op As groupContainer.verticalAutoLayoutContainer:
                 DropShadow: =DropShadow.None
                 FillPortions: =0
