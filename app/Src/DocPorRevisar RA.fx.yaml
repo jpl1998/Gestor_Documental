@@ -476,7 +476,8 @@
                                             ID in Filter(
                                                 DEV_Modificacion_estatus_proceso_doc,
                                                 ind_inact = "Activo" && id_estatus_documento.Value = "Por revisar"
-                                            ).id_doc
+                                            ).id_doc,
+                                            searchbar_docRev_ra.Text in Nombre
                                         ),
                                         DEV_Documento
                                     )
