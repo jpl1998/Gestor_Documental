@@ -1099,7 +1099,7 @@
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Semibold
                     Size: =16
-                    Text: ="Documento en Proceso"
+                    Text: ="Documento Publicado"
                     Width: =Parent.Width
                     Y: =10
                     ZIndex: =1

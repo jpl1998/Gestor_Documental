@@ -34012,704 +34012,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_rev_home_ra.Container9_3.Container10_3.Container4_6.Gallery1_5.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_rev_home_ra.Container9_3.Container10_3.Container4_6.Gallery1_5.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 35,
-                  "charOffset": 78,
-                  "snippet": {
-                    "text": "'id_estatus_documento: descripcion'"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "Home RA",
-                "type": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_rev_home_ra.Container9_3.Container10_3.Container4_6.Gallery1_5"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "id_estatus_documento: descripcion"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_rev_home_ra.Container9_3.Container10_3.Container4_6.Gallery1_5.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_rev_home_ra.Container9_3.Container10_3.Container4_6.Gallery1_5.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 6,
-                  "charOffset": 113,
-                  "snippet": {
-                    "text": ".Value"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "Home RA",
-                "type": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_rev_home_ra.Container9_3.Container10_3.Container4_6.Gallery1_5"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_rev_home_ra.Container9_3.Container10_3.Container4_6.Gallery1_5.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_rev_home_ra.Container9_3.Container10_3.Container4_6.Gallery1_5.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 1,
-                  "charOffset": 119,
-                  "snippet": {
-                    "text": "="
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "Home RA",
-                "type": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_rev_home_ra.Container9_3.Container10_3.Container4_6.Gallery1_5"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Error",
-              "Text"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_rev_home_ra.Container9_3.Container10_3.Container4_6.Gallery1_5.Container3_5.Container13_11.Button2_3.Text"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_rev_home_ra.Container9_3.Container10_3.Container4_6.Gallery1_5.Container3_5.Container13_11.Button2_3.Text",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 33,
-                  "charOffset": 8,
-                  "snippet": {
-                    "text": ".id_estatus_documento_x003a__x002"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Text",
-                "module": "Home RA",
-                "type": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_rev_home_ra.Container9_3.Container10_3.Container4_6.Gallery1_5.Container3_5.Container13_11.Button2_3"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "id_estatus_documento_x003a__x002"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_rev_home_ra.Container9_3.Container10_3.Container4_6.Gallery1_5.Container3_5.Container13_11.Button2_3.Text"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_rev_home_ra.Container9_3.Container10_3.Container4_6.Gallery1_5.Container3_5.Container13_11.Button2_3.Text",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 6,
-                  "charOffset": 41,
-                  "snippet": {
-                    "text": ".Value"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Text",
-                "module": "Home RA",
-                "type": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_rev_home_ra.Container9_3.Container10_3.Container4_6.Gallery1_5.Container3_5.Container13_11.Button2_3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_rev_home_ra.Container9_3.Container10_3.Container4_6.Gallery1_5.Container3_5.Container13_11.Button2_3.Color"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_rev_home_ra.Container9_3.Container10_3.Container4_6.Gallery1_5.Container3_5.Container13_11.Button2_3.Color",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 33,
-                  "charOffset": 15,
-                  "snippet": {
-                    "text": ".id_estatus_documento_x003a__x002"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Color",
-                "module": "Home RA",
-                "type": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_rev_home_ra.Container9_3.Container10_3.Container4_6.Gallery1_5.Container3_5.Container13_11.Button2_3"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "id_estatus_documento_x003a__x002"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_rev_home_ra.Container9_3.Container10_3.Container4_6.Gallery1_5.Container3_5.Container13_11.Button2_3.Color"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_rev_home_ra.Container9_3.Container10_3.Container4_6.Gallery1_5.Container3_5.Container13_11.Button2_3.Color",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 6,
-                  "charOffset": 48,
-                  "snippet": {
-                    "text": ".Value"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Color",
-                "module": "Home RA",
-                "type": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_rev_home_ra.Container9_3.Container10_3.Container4_6.Gallery1_5.Container3_5.Container13_11.Button2_3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_rev_home_ra.Container9_3.Container10_3.Container4_6.Gallery1_5.Container3_5.Container13_11.Button2_3.Fill"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_rev_home_ra.Container9_3.Container10_3.Container4_6.Gallery1_5.Container3_5.Container13_11.Button2_3.Fill",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 33,
-                  "charOffset": 15,
-                  "snippet": {
-                    "text": ".id_estatus_documento_x003a__x002"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Fill",
-                "module": "Home RA",
-                "type": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_rev_home_ra.Container9_3.Container10_3.Container4_6.Gallery1_5.Container3_5.Container13_11.Button2_3"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "id_estatus_documento_x003a__x002"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_rev_home_ra.Container9_3.Container10_3.Container4_6.Gallery1_5.Container3_5.Container13_11.Button2_3.Fill"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_rev_home_ra.Container9_3.Container10_3.Container4_6.Gallery1_5.Container3_5.Container13_11.Button2_3.Fill",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 6,
-                  "charOffset": 48,
-                  "snippet": {
-                    "text": ".Value"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Fill",
-                "module": "Home RA",
-                "type": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_rev_home_ra.Container9_3.Container10_3.Container4_6.Gallery1_5.Container3_5.Container13_11.Button2_3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_apr_home_ra.Container9_4.Container10_4.Container4_7.Gallery1_6.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_apr_home_ra.Container9_4.Container10_4.Container4_7.Gallery1_6.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 35,
-                  "charOffset": 78,
-                  "snippet": {
-                    "text": "'id_estatus_documento: descripcion'"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "Home RA",
-                "type": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_apr_home_ra.Container9_4.Container10_4.Container4_7.Gallery1_6"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "id_estatus_documento: descripcion"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_apr_home_ra.Container9_4.Container10_4.Container4_7.Gallery1_6.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_apr_home_ra.Container9_4.Container10_4.Container4_7.Gallery1_6.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 6,
-                  "charOffset": 113,
-                  "snippet": {
-                    "text": ".Value"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "Home RA",
-                "type": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_apr_home_ra.Container9_4.Container10_4.Container4_7.Gallery1_6"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_apr_home_ra.Container9_4.Container10_4.Container4_7.Gallery1_6.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_apr_home_ra.Container9_4.Container10_4.Container4_7.Gallery1_6.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 1,
-                  "charOffset": 119,
-                  "snippet": {
-                    "text": "="
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "Home RA",
-                "type": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_apr_home_ra.Container9_4.Container10_4.Container4_7.Gallery1_6"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Error",
-              "Text"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_apr_home_ra.Container9_4.Container10_4.Container4_7.Gallery1_6.Container3_6.Container13_13.Button2_4.Text"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_apr_home_ra.Container9_4.Container10_4.Container4_7.Gallery1_6.Container3_6.Container13_13.Button2_4.Text",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 33,
-                  "charOffset": 8,
-                  "snippet": {
-                    "text": ".id_estatus_documento_x003a__x002"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Text",
-                "module": "Home RA",
-                "type": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_apr_home_ra.Container9_4.Container10_4.Container4_7.Gallery1_6.Container3_6.Container13_13.Button2_4"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "id_estatus_documento_x003a__x002"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_apr_home_ra.Container9_4.Container10_4.Container4_7.Gallery1_6.Container3_6.Container13_13.Button2_4.Text"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_apr_home_ra.Container9_4.Container10_4.Container4_7.Gallery1_6.Container3_6.Container13_13.Button2_4.Text",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 6,
-                  "charOffset": 41,
-                  "snippet": {
-                    "text": ".Value"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Text",
-                "module": "Home RA",
-                "type": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_apr_home_ra.Container9_4.Container10_4.Container4_7.Gallery1_6.Container3_6.Container13_13.Button2_4"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_apr_home_ra.Container9_4.Container10_4.Container4_7.Gallery1_6.Container3_6.Container13_13.Button2_4.Color"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_apr_home_ra.Container9_4.Container10_4.Container4_7.Gallery1_6.Container3_6.Container13_13.Button2_4.Color",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 33,
-                  "charOffset": 15,
-                  "snippet": {
-                    "text": ".id_estatus_documento_x003a__x002"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Color",
-                "module": "Home RA",
-                "type": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_apr_home_ra.Container9_4.Container10_4.Container4_7.Gallery1_6.Container3_6.Container13_13.Button2_4"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "id_estatus_documento_x003a__x002"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_apr_home_ra.Container9_4.Container10_4.Container4_7.Gallery1_6.Container3_6.Container13_13.Button2_4.Color"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_apr_home_ra.Container9_4.Container10_4.Container4_7.Gallery1_6.Container3_6.Container13_13.Button2_4.Color",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 6,
-                  "charOffset": 48,
-                  "snippet": {
-                    "text": ".Value"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Color",
-                "module": "Home RA",
-                "type": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_apr_home_ra.Container9_4.Container10_4.Container4_7.Gallery1_6.Container3_6.Container13_13.Button2_4"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_apr_home_ra.Container9_4.Container10_4.Container4_7.Gallery1_6.Container3_6.Container13_13.Button2_4.Fill"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_apr_home_ra.Container9_4.Container10_4.Container4_7.Gallery1_6.Container3_6.Container13_13.Button2_4.Fill",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 33,
-                  "charOffset": 15,
-                  "snippet": {
-                    "text": ".id_estatus_documento_x003a__x002"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Fill",
-                "module": "Home RA",
-                "type": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_apr_home_ra.Container9_4.Container10_4.Container4_7.Gallery1_6.Container3_6.Container13_13.Button2_4"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "id_estatus_documento_x003a__x002"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_apr_home_ra.Container9_4.Container10_4.Container4_7.Gallery1_6.Container3_6.Container13_13.Button2_4.Fill"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_apr_home_ra.Container9_4.Container10_4.Container4_7.Gallery1_6.Container3_6.Container13_13.Button2_4.Fill",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 6,
-                  "charOffset": 48,
-                  "snippet": {
-                    "text": ".Value"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Fill",
-                "module": "Home RA",
-                "type": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_apr_home_ra.Container9_4.Container10_4.Container4_7.Gallery1_6.Container3_6.Container13_13.Button2_4"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "'Home RA'.SideBar_ra_3.SideBar_Container_docRev_ra_3.archivos_container_sidebar_docRev_ra_3.archivos_gallery_sidebar_docRev_ra_2.container_archivos_gallery_sidebar_21.archivo_title_sidebar_docRev_ra_12.Text"
                 }
               ],
@@ -34783,7 +34085,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 3
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -34820,7 +34122,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -34900,7 +34202,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 3
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -34937,7 +34239,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -34977,7 +34279,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 3
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -35057,7 +34359,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 3
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -35094,7 +34396,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -35171,7 +34473,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -35251,7 +34553,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 3
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -35332,7 +34634,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -35452,7 +34754,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 3
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -35533,7 +34835,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -35653,7 +34955,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 3
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -35734,7 +35036,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -35851,7 +35153,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -35928,7 +35230,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -36925,7 +36227,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -53264,6 +52566,20 @@
               }
             },
             {
+              "id": "app-ErrInvalidArgs-Func",
+              "messageStrings": {
+                "issue": {
+                  "text": "The function '{0}' has some invalid arguments."
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "level": "High",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
+            {
               "id": "app-ErrInvalidDot",
               "messageStrings": {
                 "issue": {
@@ -53290,20 +52606,6 @@
                   "You might need to convert the value to be the same type, such as converting a date string (e.g., \"12/31/2018\") to a date value.",
                   "If you’re comparing records or tables, the field or column types must match exactly."
                 ],
-                "level": "High",
-                "primaryCategory": "formula",
-                "whyFix": ""
-              }
-            },
-            {
-              "id": "app-ErrInvalidArgs-Func",
-              "messageStrings": {
-                "issue": {
-                  "text": "The function '{0}' has some invalid arguments."
-                }
-              },
-              "properties": {
-                "componentType": "app",
                 "level": "High",
                 "primaryCategory": "formula",
                 "whyFix": ""
