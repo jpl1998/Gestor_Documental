@@ -5370,7 +5370,10 @@
                                             Height: =25
                                             Icon: =Icon.AddUser
                                             LayoutMinHeight: =20
-                                            OnSelect: =Set(varpopupreplazo,true)
+                                            OnSelect: |-
+                                                =Set(varpopupreplazo,true);
+                                                Set(usercurrent,LookUp(DEV_Interlocutor, ID = Index(Filter(DEV_Actor,id_documento.Id = varDocSide.ID, id_funcion.Value="Elaborador"),ThisItem.Value).id_interlocutor.Value, ThisRecord.Email));
+                                                Set(ActorID,Index(Filter(DEV_Actor,id_documento.Id = varDocSide.ID, id_funcion.Value="Elaborador"),ThisItem.Value))
                                             Visible: =!IsBlank(Label2_275)
                                             Width: =Self.Height
                                             ZIndex: =3
@@ -6233,7 +6236,8 @@
                         AlignInContainer: =AlignInContainer.Stretch
                         BorderColor: =secondarytext
                         BorderThickness: =1
-                        Default: =varDocSide.codigo
+                        Default: =usercurrent.DisplayName
+                        DisplayMode: =DisplayMode.View
                         HoverBorderColor: =primary
                         HoverFill: =RGBA(255, 255, 255, 1)
                         Size: =10
@@ -6257,7 +6261,6 @@
                         ChevronHoverBackground: =
                         ChevronHoverFill: =primary
                         Color: =secondarytext
-                        Default: =varDocSide.Solicitante
                         DefaultSelectedItems: =varDocSide.Solicitante
                         DisplayFields: =["DisplayName","Email","Picture"]
                         HoverBorderColor: =
@@ -6281,9 +6284,7 @@
                     Fill: =primary
                     Height: =50
                     LayoutMinHeight: =30
-                    OnSelect: |-
-                        =Set(varpopupuploadeditdoc,false);
-                        Set(varpopuprevisoreseditop,true)
+                    OnSelect: =Set(varpopupreplazo,false);
                     RadiusBottomLeft: =5
                     RadiusBottomRight: =5
                     RadiusTopLeft: =5
