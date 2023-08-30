@@ -1768,6 +1768,80 @@
                         Y: =2.5
                         ZIndex: =1
 
+                "registro_evaluacion_sidebar_ra_3 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
+                    DelayItemLoading: =true
+                    Items: =CustomGallerySample
+                    Layout: =Layout.Vertical
+                    LayoutMinHeight: =287
+                    LayoutMinWidth: =320
+                    LoadingSpinner: =LoadingSpinner.Data
+                    TemplatePadding: =0
+                    TemplateSize: =70
+                    Visible: =menu_filter_evaluacion_sidebar_ra_5.Selected.Value = "Registro"
+                    ZIndex: =1
+
+                    Title2_3 As label:
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                        Height: =Self.Size * 1.8
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =12
+                        Text: =ThisItem.SampleHeading
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =Parent.TemplateWidth - 200
+                        X: =16
+                        Y: =(Parent.TemplateHeight - (Self.Size * 1.8 + Subtitle2_3.Size * 1.8)) / 2
+                        ZIndex: =1
+
+                    Subtitle2_3 As label:
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                        Height: =Self.Size * 1.8
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =8
+                        Text: =ThisItem.SampleHeading
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =Title2_3.Width
+                        X: =Title2_3.X
+                        Y: =Title2_3.Y + Title2_3.Height
+                        ZIndex: =2
+
+                    verObs_icon_sidebar_ra_11 As icon.View:
+                        Height: =15
+                        Icon: =Icon.View
+                        OnSelect: =Select(Parent)
+                        Width: =15
+                        X: =304
+                        Y: =25
+                        ZIndex: =3
+
+                    verObs_button_sidebar_ra_11 As button:
+                        Align: =Align.Right
+                        Color: =primary
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Font: =Font.'Segoe UI'
+                        Height: =20
+                        HoverColor: =primary
+                        HoverFill: =RGBA(0, 0, 0, 0.15)
+                        OnSelect: |-
+                            =UpdateContext({varRevisarEntregaPopup:true})
+                        PressedColor: =Self.Color
+                        PressedFill: =
+                        Size: =10
+                        Text: ="Revisar"
+                        Width: =80
+                        X: =299
+                        Y: =23
+                        ZIndex: =4
+
                 "revisor_evaluacion_sidebar_ra_2 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
                     DelayItemLoading: =true
                     Items: |-
@@ -1923,80 +1997,6 @@
                         X: =60
                         Y: =51
                         ZIndex: =11
-
-                "registro_evaluacion_sidebar_ra_3 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
-                    DelayItemLoading: =true
-                    Items: =CustomGallerySample
-                    Layout: =Layout.Vertical
-                    LayoutMinHeight: =287
-                    LayoutMinWidth: =320
-                    LoadingSpinner: =LoadingSpinner.Data
-                    TemplatePadding: =0
-                    TemplateSize: =70
-                    Visible: =menu_filter_evaluacion_sidebar_ra_5.Selected.Value = "Registro"
-                    ZIndex: =1
-
-                    Title2_3 As label:
-                        Font: =Font.'Segoe UI'
-                        FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-                        Height: =Self.Size * 1.8
-                        OnSelect: =Select(Parent)
-                        PaddingBottom: =0
-                        PaddingLeft: =0
-                        PaddingRight: =0
-                        PaddingTop: =0
-                        Size: =12
-                        Text: =ThisItem.SampleHeading
-                        VerticalAlign: =VerticalAlign.Top
-                        Width: =Parent.TemplateWidth - 200
-                        X: =16
-                        Y: =(Parent.TemplateHeight - (Self.Size * 1.8 + Subtitle2_3.Size * 1.8)) / 2
-                        ZIndex: =1
-
-                    Subtitle2_3 As label:
-                        Font: =Font.'Segoe UI'
-                        FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-                        Height: =Self.Size * 1.8
-                        OnSelect: =Select(Parent)
-                        PaddingBottom: =0
-                        PaddingLeft: =0
-                        PaddingRight: =0
-                        PaddingTop: =0
-                        Size: =8
-                        Text: =ThisItem.SampleHeading
-                        VerticalAlign: =VerticalAlign.Top
-                        Width: =Title2_3.Width
-                        X: =Title2_3.X
-                        Y: =Title2_3.Y + Title2_3.Height
-                        ZIndex: =2
-
-                    verObs_icon_sidebar_ra_11 As icon.View:
-                        Height: =15
-                        Icon: =Icon.View
-                        OnSelect: =Select(Parent)
-                        Width: =15
-                        X: =304
-                        Y: =25
-                        ZIndex: =3
-
-                    verObs_button_sidebar_ra_11 As button:
-                        Align: =Align.Right
-                        Color: =primary
-                        Fill: =RGBA(0, 0, 0, 0)
-                        Font: =Font.'Segoe UI'
-                        Height: =20
-                        HoverColor: =primary
-                        HoverFill: =RGBA(0, 0, 0, 0.15)
-                        OnSelect: |-
-                            =UpdateContext({varRevisarEntregaPopup:true})
-                        PressedColor: =Self.Color
-                        PressedFill: =
-                        Size: =10
-                        Text: ="Revisar"
-                        Width: =80
-                        X: =299
-                        Y: =23
-                        ZIndex: =4
 
                 "aprobador_evaluacion_sidebar_ra_2 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
                     DelayItemLoading: =true

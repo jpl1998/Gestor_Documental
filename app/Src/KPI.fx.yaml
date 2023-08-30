@@ -253,37 +253,15 @@
                                 X: =(Parent.Width-Self.Width)/2
                                 ZIndex: =1
 
-                            DatePicker2 As datepicker:
-                                X: =40
-                                Y: =40
-                                ZIndex: =2
-
-                            DatePicker4 As datepicker:
-                                X: =437
-                                Y: =40
-                                ZIndex: =3
-
-                            Label8 As label:
-                                Text: =DateDiff(DatePicker2.SelectedDate,DatePicker4.SelectedDate)
-                                X: =70
-                                Y: =105
-                                ZIndex: =4
-
-                            Dropdown1 As dropdown:
-                                Items: =GroupBy(Filter(DEV_Modificacion_estatus_proceso_doc,id_estatus_documento.Value="Por aprobar"),"id_doc","groupDoc")
-                                X: =437
-                                Y: =105
-                                ZIndex: =5
-
                             DataTable4 As dataTable.datatable:
                                 BorderStyle: =BorderStyle.Solid
                                 DisplayMode: =DisplayMode.Edit
                                 Fill: =RGBA(0, 0, 0, 0)
-                                Height: =143
+                                Height: =158
                                 Items: =AddColumns(AddColumns(GroupBy(Filter(DEV_Modificacion_estatus_proceso_doc,id_estatus_documento.Value="Por aprobar"),"id_doc","groupDoc"),"fechaCreado",LookUp(DEV_Documento,id_doc=ID).fecha),"DateDiff",DateDiff(fechaCreado,First(groupDoc).'fecha y hora'))
-                                Width: =800
+                                Width: =970
                                 X: =40
-                                Y: =162
+                                Y: =71
                                 ZIndex: =6
 
                                 id_doc_Column3 As dataTableColumn.numberColumn:
@@ -300,23 +278,9 @@
                                     Y: =0
                                     ZIndex: =7
 
-                                groupDoc_Column1 As dataTableColumn.textualColumn:
-                                    DisplayMode: =DisplayMode.Edit
-                                    FieldDisplayName: ="groupDoc"
-                                    FieldName: ="groupDoc"
-                                    FieldVariantName: ="textualColumn"
-                                    Height: =Parent.Height
-                                    LayoutHeight: =Parent.Height
-                                    Order: =13
-                                    Text: =First(ThisItem.groupDoc).'fecha y hora'
-                                    Width: =100
-                                    X: =0
-                                    Y: =0
-                                    ZIndex: =8
-
                                 fechaCreado_Column1 As dataTableColumn.textualColumn:
                                     DisplayMode: =DisplayMode.Edit
-                                    FieldDisplayName: ="fechaCreado"
+                                    FieldDisplayName: ="Fecha de Solicitud"
                                     FieldName: ="fechaCreado"
                                     FieldVariantName: ="textualColumn"
                                     Height: =Parent.Height
@@ -338,25 +302,82 @@
                                     Order: =15
                                     Text: =ThisItem.DateDiff
                                     Width: =100
-                                    X: =0
+                                    X: =454
                                     Y: =0
                                     ZIndex: =10
+
+                                groupDoc_Column1 As dataTableColumn.textualColumn:
+                                    DisplayMode: =DisplayMode.Edit
+                                    FieldDisplayName: ="Fecha publicado"
+                                    FieldName: ="groupDoc"
+                                    FieldVariantName: ="textualColumn"
+                                    Height: =Parent.Height
+                                    LayoutHeight: =Parent.Height
+                                    Order: =16
+                                    Text: =First(ThisItem.groupDoc).'fecha y hora'
+                                    Width: =100
+                                    X: =0
+                                    Y: =0
+                                    ZIndex: =11
 
                             Label9 As label:
                                 Text: =Min(AddColumns(AddColumns(GroupBy(Filter(DEV_Modificacion_estatus_proceso_doc,id_estatus_documento.Value="Por aprobar"),"id_doc","groupDoc"),"fechaCreado",LookUp(DEV_Documento,id_doc=ID).fecha),"DateDiff",DateDiff(fechaCreado,First(groupDoc).'fecha y hora')),DateDiff)
                                 X: =40
-                                Y: =305
+                                Y: =350
                                 ZIndex: =7
 
                             Label9_1 As label:
                                 Text: =Max(AddColumns(AddColumns(GroupBy(Filter(DEV_Modificacion_estatus_proceso_doc,id_estatus_documento.Value="Por aprobar"),"id_doc","groupDoc"),"fechaCreado",LookUp(DEV_Documento,id_doc=ID).fecha),"DateDiff",DateDiff(fechaCreado,First(groupDoc).'fecha y hora')),DateDiff)
-                                X: =220
-                                Y: =305
+                                X: =288
+                                Y: =350
                                 ZIndex: =8
 
                             Label9_2 As label:
                                 Text: =Average(AddColumns(AddColumns(GroupBy(Filter(DEV_Modificacion_estatus_proceso_doc,id_estatus_documento.Value="Por aprobar"),"id_doc","groupDoc"),"fechaCreado",LookUp(DEV_Documento,id_doc=ID).fecha),"DateDiff",DateDiff(fechaCreado,First(groupDoc).'fecha y hora')),DateDiff)
-                                X: =437
-                                Y: =305
+                                X: =530
+                                Y: =350
                                 ZIndex: =9
+
+                            KPI_title As label:
+                                FontWeight: =FontWeight.Semibold
+                                PaddingBottom: =0
+                                Size: =15
+                                Text: ="Documentos publicados"
+                                Width: =567
+                                X: =40
+                                Y: =17
+                                ZIndex: =10
+
+                            KPI_text_min As label:
+                                FontWeight: =FontWeight.Semibold
+                                PaddingBottom: =0
+                                Size: =12
+                                Text: |-
+                                    ="Tiempo mínimo de publicación:"
+                                Width: =180
+                                X: =40
+                                Y: =298
+                                ZIndex: =11
+
+                            KPI_text_max As label:
+                                FontWeight: =FontWeight.Semibold
+                                PaddingBottom: =0
+                                Size: =12
+                                Text: |-
+                                    ="Tiempo máximo de publicación:"
+                                Width: =180
+                                X: =288
+                                Y: =298
+                                ZIndex: =12
+
+                            KPI_text_avg As label:
+                                FontWeight: =FontWeight.Semibold
+                                PaddingBottom: =0
+                                Size: =12
+                                Text: |-
+                                    ="Tiempo promedio de publicación:"
+                                Width: =180
+                                X: =530
+                                Y: =298
+                                ZIndex: =13
 
