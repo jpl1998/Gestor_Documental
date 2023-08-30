@@ -95,7 +95,7 @@
       "zeroalltabindexes": false
     },
     "Author": "",
-    "BindingErrorCount": 19,
+    "BindingErrorCount": 26,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 500,
     "DocumentAppType": "DesktopOrTablet",
@@ -137,6 +137,7 @@
     "DocPorRevisar RA",
     "DocPorAprobar RA",
     "DocPublicados RA",
-    "KPI"
+    "KPI",
+    "Screen1"
   ]
 }

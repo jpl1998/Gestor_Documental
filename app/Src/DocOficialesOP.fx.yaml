@@ -5433,6 +5433,7 @@
     popupelaboradoreseditop_1 As groupContainer.manualLayoutContainer:
         Fill: =RGBA(51, 51, 51, 0.27)
         Height: =Parent.Height
+        Visible: =false
         Width: =Parent.Width
         ZIndex: =13
 

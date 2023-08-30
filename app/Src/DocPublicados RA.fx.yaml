@@ -419,7 +419,7 @@
                                 Items: |-
                                     =Filter(
                                         DEV_Documento,
-                                        IsBlank(varFilterMenu.cargadoPor) || 'Created By'.Email = varFilterMenu.cargadoPor.Mail,
+                                        IsBlank(varFilterMenu.cargadoPor) || 'Criado por'.Email = varFilterMenu.cargadoPor.Mail,
                                             IsBlank(varFilterMenu.tipoDocumento) || id_tipo_docu.Value = varFilterMenu.tipoDocumento.Value,
                                             IsBlank(varFilterMenu.dueProceso) || 'Dueño  del Processo'.Email = varFilterMenu.dueProceso.Mail,
                                             IsBlank(varFilterMenu.alcance) || id_alcance.Value = varFilterMenu.alcance.Value,
@@ -1297,7 +1297,7 @@
                         Font: =Font.'Segoe UI'
                         Height: =24
                         Size: =12
-                        Text: =varSelectedDoc.'Created By'.DisplayName
+                        Text: =varSelectedDoc.'Criado por'.DisplayName
                         Width: =(Parent.Width/3)*2 -20
                         ZIndex: =2
 
