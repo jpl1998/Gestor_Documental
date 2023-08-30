@@ -3911,9 +3911,3 @@
                 Y: =10
                 ZIndex: =1
 
-    Label7 As label:
-        Text: =CountRows(Filter(revisor_evaluacion_sidebar_ra.AllItems,mail_revisor_ra.Text=User().Email))
-        X: =751
-        Y: =364
-        ZIndex: =9
-

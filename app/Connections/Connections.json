@@ -16,6 +16,119 @@
     "dependents": [],
     "id": "17c8d167-044a-47fe-bc8d-da15ce1f963d"
   },
+  "3c186f1c-15a0-4876-8a42-b84b445c1836": {
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1653/1.0.1653.3403/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "5066b226-a91d-43fa-a944-ee12f1eadb8b": {
+          "value": "shared_teams_1"
+        },
+        "9a26efc3-b835-413c-8141-29196aa0cbc2": {
+          "value": "shared_office365_1"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "87e85b14-1d16-4207-80e6-c91617e59fc4"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_office365_1": {
+          "value": "9a26efc3-b835-413c-8141-29196aa0cbc2"
+        },
+        "shared_teams_1": {
+          "value": "5066b226-a91d-43fa-a944-ee12f1eadb8b"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "87e85b14-1d16-4207-80e6-c91617e59fc4"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "NecesidaddeAprobacióndedocumento"
+    ],
+    "dependencies": {
+      "shared_office365_1": "9a26efc3-b835-413c-8141-29196aa0cbc2",
+      "shared_teams_1": "5066b226-a91d-43fa-a944-ee12f1eadb8b"
+    },
+    "dependents": [],
+    "id": "3c186f1c-15a0-4876-8a42-b84b445c1836"
+  },
+  "5066b226-a91d-43fa-a944-ee12f1eadb8b": {
+    "connectionRef": {
+      "displayName": "Microsoft Teams",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1652/1.0.1652.3394/teams/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_teams"
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "3c186f1c-15a0-4876-8a42-b84b445c1836",
+      "bf0d49dc-6226-45f3-9c21-30cf20f932ec"
+    ],
+    "id": "5066b226-a91d-43fa-a944-ee12f1eadb8b"
+  },
+  "9a26efc3-b835-413c-8141-29196aa0cbc2": {
+    "connectionRef": {
+      "displayName": "Office 365 Outlook",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1649/1.0.1649.3368/office365/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365"
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "e29c679e-38b0-4976-9764-279296968816",
+      "3c186f1c-15a0-4876-8a42-b84b445c1836",
+      "bf0d49dc-6226-45f3-9c21-30cf20f932ec"
+    ],
+    "id": "9a26efc3-b835-413c-8141-29196aa0cbc2"
+  },
+  "bf0d49dc-6226-45f3-9c21-30cf20f932ec": {
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1653/1.0.1653.3403/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "5066b226-a91d-43fa-a944-ee12f1eadb8b": {
+          "value": "shared_teams_1"
+        },
+        "9a26efc3-b835-413c-8141-29196aa0cbc2": {
+          "value": "shared_office365_1"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "04ccaabf-1622-4ada-83fa-86ebfc530821"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_office365_1": {
+          "value": "9a26efc3-b835-413c-8141-29196aa0cbc2"
+        },
+        "shared_teams_1": {
+          "value": "5066b226-a91d-43fa-a944-ee12f1eadb8b"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "04ccaabf-1622-4ada-83fa-86ebfc530821"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "Informarobservacionesdedocumento"
+    ],
+    "dependencies": {
+      "shared_office365_1": "9a26efc3-b835-413c-8141-29196aa0cbc2",
+      "shared_teams_1": "5066b226-a91d-43fa-a944-ee12f1eadb8b"
+    },
+    "dependents": [],
+    "id": "bf0d49dc-6226-45f3-9c21-30cf20f932ec"
+  },
   "e241a094-95cf-481b-a881-88d66c95707a": {
     "connectionRef": {
       "apiTier": "Standard",
@@ -140,5 +253,60 @@
     "dependencies": {},
     "dependents": [],
     "id": "e241a094-95cf-481b-a881-88d66c95707a"
+  },
+  "e29c679e-38b0-4976-9764-279296968816": {
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1653/1.0.1653.3403/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "9a26efc3-b835-413c-8141-29196aa0cbc2": {
+          "value": "shared_office365_1"
+        },
+        "e68b777e-b3f0-4efc-95a7-7ce45f081ad3": {
+          "value": "shared_teams_1"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "a092892c-cdc8-41c8-aafa-a3d8d41d9ac2"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_office365_1": {
+          "value": "9a26efc3-b835-413c-8141-29196aa0cbc2"
+        },
+        "shared_teams_1": {
+          "value": "e68b777e-b3f0-4efc-95a7-7ce45f081ad3"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "a092892c-cdc8-41c8-aafa-a3d8d41d9ac2"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "Necesidaddefirmaderevisor"
+    ],
+    "dependencies": {
+      "shared_office365_1": "9a26efc3-b835-413c-8141-29196aa0cbc2",
+      "shared_teams_1": "e68b777e-b3f0-4efc-95a7-7ce45f081ad3"
+    },
+    "dependents": [],
+    "id": "e29c679e-38b0-4976-9764-279296968816"
+  },
+  "e68b777e-b3f0-4efc-95a7-7ce45f081ad3": {
+    "connectionRef": {
+      "displayName": "Microsoft Teams",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1652/1.0.1652.3394/teams/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_teams"
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "e29c679e-38b0-4976-9764-279296968816"
+    ],
+    "id": "e68b777e-b3f0-4efc-95a7-7ce45f081ad3"
   }
 }
