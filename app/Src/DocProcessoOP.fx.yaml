@@ -2065,7 +2065,7 @@
                             uploadDocPrincipal As typedDataCard.attachmentsEditCard:
                                 BorderStyle: =BorderStyle.Solid
                                 DataField: ="{Attachments}"
-                                Default: =ThisItem.Attachments
+                                Default: =ThisItem.Anexos
                                 DisplayMode: =Parent.DisplayMode
                                 DisplayName: =DataSourceInfo([@DEV_ArchivoPrincipal],DataSourceInfo.DisplayName,"{Attachments}")
                                 Fill: =RGBA(0, 0, 0, 0)
@@ -2181,7 +2181,7 @@
                             Anexos_DataCard4 As typedDataCard.attachmentsEditCard:
                                 BorderStyle: =BorderStyle.Solid
                                 DataField: ="{Attachments}"
-                                Default: =ThisItem.Attachments
+                                Default: =ThisItem.Anexos
                                 DisplayMode: =Parent.DisplayMode
                                 DisplayName: =DataSourceInfo([@DEV_Flujograma],DataSourceInfo.DisplayName,"{Attachments}")
                                 Fill: =RGBA(0, 0, 0, 0)
@@ -2295,7 +2295,7 @@
                             Anexos_DataCard4_1 As typedDataCard.attachmentsEditCard:
                                 BorderStyle: =BorderStyle.Solid
                                 DataField: ="{Attachments}"
-                                Default: =ThisItem.Attachments
+                                Default: =ThisItem.Anexos
                                 DisplayMode: =Parent.DisplayMode
                                 DisplayName: =DataSourceInfo([@DEV_Flujograma],DataSourceInfo.DisplayName,"{Attachments}")
                                 Fill: =RGBA(0, 0, 0, 0)
@@ -3675,7 +3675,7 @@
                         archivo_title_sidebar_docRev_ra_4 As label:
                             Font: =Font.'Segoe UI'
                             Size: =10
-                            Text: =First(ThisItem.Attachments).DisplayName
+                            Text: =First(ThisItem.Anexos).DisplayName
                             Width: =304
                             ZIndex: =2
 
@@ -3829,7 +3829,7 @@
                         Font: =Font.'Segoe UI'
                         Height: =24
                         Size: =12
-                        Text: =varDocSide.'Created By'.DisplayName
+                        Text: =varDocSide.'Criado por'.DisplayName
                         Width: =(Parent.Width/3)*2 -20
                         ZIndex: =2
 
@@ -4772,7 +4772,7 @@
                     Align: =Align.Center
                     FontWeight: =FontWeight.Bold
                     Size: =18
-                    Text: ="Edcición Documento"
+                    Text: ="Replazo de Integrante"
                     ZIndex: =1
 
                 Container13_39 As groupContainer.verticalAutoLayoutContainer:
@@ -4797,6 +4797,7 @@
                         Height: =100
                         LayoutDirection: =LayoutDirection.Vertical
                         LayoutGap: =5
+                        LayoutJustifyContent: =LayoutJustifyContent.Center
                         LayoutMinHeight: =50
                         LayoutMinWidth: =250
                         LayoutMode: =LayoutMode.Auto
@@ -4857,65 +4858,60 @@
                                 Color: =red
                                 Height: =Parent.Height*50%
                                 Icon: =Icon.Trash
+                                OnSelect: |
+                                    =Set(varquitararchivo,true);
+                                    Set(formdocedti,true)
                                 Width: =Self.Height
                                 X: =448
                                 Y: =(Parent.Height-Self.Height)/2
                                 ZIndex: =3
 
-                        FormArchivoPrincipal_1 As form:
-                            AcceptsFocus: =false
-                            DataSource: =Filter(DEV_Archivos,id_documento.Id = varDocSide.ID ,tipo_documento="Principal")
-                            DefaultMode: =FormMode.New
-                            FillPortions: =0
-                            Height: =73
-                            LayoutMinHeight: =250
+                        FormUploadDoc_1 As form:
+                            DataSource: =DEV_Archivos
+                            Height: =196
+                            Item: =LookUp(DEV_Archivos,id_documento.Id = varDocSide.ID And tipo_documento = "Principal",ThisRecord)
+                            LayoutMinHeight: =73
                             LayoutMinWidth: =400
                             NumberOfColumns: =1
-                            Visible: =varuploaddoc
-                            Width: =432
+                            Visible: =formdocedti
+                            Width: =1005
                             X: =40
                             Y: =40
                             ZIndex: =3
 
-                            uploadDocPrincipal_1 As typedDataCard.attachmentsEditCard:
+                            Anexos_DataCard1_1 As typedDataCard.attachmentsEditCard:
                                 BorderStyle: =BorderStyle.Solid
-                                DataField: ="{Anexos}"
-                                Default: =ThisItem.Attachments
+                                DataField: ="{Attachments}"
+                                Default: =ThisItem.Anexos
                                 DisplayMode: =Parent.DisplayMode
-                                DisplayName: =DataSourceInfo([@DEV_ArchivoPrincipal],DataSourceInfo.DisplayName,"{Attachments}")
+                                DisplayName: =DataSourceInfo([@DEV_Archivos],DataSourceInfo.DisplayName,"{Attachments}")
                                 Fill: =RGBA(0, 0, 0, 0)
                                 Height: =Parent.Height
                                 Required: =false
-                                Update: =DataCardValue17_2.Attachments
-                                Visible: =true
+                                Update: =DataCardValue7_1.Attachments
                                 Width: =Parent.Width
                                 X: =0
                                 Y: =0
                                 ZIndex: =2
 
-                                DataCardValue17_2 As attachments:
+                                DataCardValue7_1 As attachments:
                                     AddAttachmentText: ="Adjuntar archivo"
-                                    BorderColor: =RGBA(116, 116, 116, 1)
-                                    BorderThickness: =1
+                                    BorderColor: =RGBA(219, 219, 219, 1)
                                     DisplayMode: =Parent.DisplayMode
-                                    Height: =Parent.Height-3
+                                    Height: =Parent.Height
                                     IsInDataCard: =true
                                     Items: =Parent.Default
-                                    MaxAttachments: =1
+                                    MaxAttachments: =2
                                     MaxAttachmentsText: ="Se alcanzó el número máximo de archivos"
                                     NoAttachmentsText: ="No hay nada adjunto"
-                                    OnAddFile: |-
-                                        =Set(vardocupload,true);
-                                        Set(varuploaddoc,false)
+                                    OnAddFile: =Set(formdocedti,false)
                                     PaddingBottom: =5
                                     PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                                     PaddingRight: =5
                                     PaddingTop: =5
                                     Size: =9
                                     Tooltip: =Parent.DisplayName
-                                    Width: =Parent.Width-5
-                                    X: =2
-                                    Y: =2
+                                    Width: =Parent.Width
                                     ZIndex: =2
 
                         lb_upload_doc_op_2 As label:
@@ -4968,10 +4964,61 @@
                                 Color: =red
                                 Height: =Parent.Height*50%
                                 Icon: =Icon.Trash
+                                OnSelect: |-
+                                    =Set(varquitararchivo,true);
+                                    Set(formflujoedit,true)
                                 Width: =Self.Height
                                 X: =448
                                 Y: =(Parent.Height-Self.Height)/2
                                 ZIndex: =3
+
+                        FormUploadDoc_2 As form:
+                            DataSource: =DEV_Archivos
+                            Height: =196
+                            Item: =LookUp(DEV_Archivos,id_documento.Id = varDocSide.ID And tipo_documento = "Flujograma",ThisRecord)
+                            LayoutMinHeight: =73
+                            LayoutMinWidth: =400
+                            NumberOfColumns: =1
+                            Visible: =formflujoedit
+                            Width: =1005
+                            X: =40
+                            Y: =40
+                            ZIndex: =6
+
+                            Anexos_DataCard1_2 As typedDataCard.attachmentsEditCard:
+                                BorderStyle: =BorderStyle.Solid
+                                DataField: ="{Attachments}"
+                                Default: =ThisItem.Anexos
+                                DisplayMode: =Parent.DisplayMode
+                                DisplayName: =DataSourceInfo([@DEV_Archivos],DataSourceInfo.DisplayName,"{Attachments}")
+                                Fill: =RGBA(0, 0, 0, 0)
+                                Height: =Parent.Height
+                                Required: =false
+                                Update: =DataCardValue7_2.Attachments
+                                Width: =Parent.Width
+                                X: =0
+                                Y: =0
+                                ZIndex: =2
+
+                                DataCardValue7_2 As attachments:
+                                    AddAttachmentText: ="Adjuntar archivo"
+                                    BorderColor: =RGBA(219, 219, 219, 1)
+                                    DisplayMode: =Parent.DisplayMode
+                                    Height: =Parent.Height
+                                    IsInDataCard: =true
+                                    Items: =Parent.Default
+                                    MaxAttachments: =2
+                                    MaxAttachmentsText: ="Se alcanzó el número máximo de archivos"
+                                    NoAttachmentsText: ="No hay nada adjunto"
+                                    OnAddFile: =Set(formflujoedit,false)
+                                    PaddingBottom: =5
+                                    PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                                    PaddingRight: =5
+                                    PaddingTop: =5
+                                    Size: =9
+                                    Tooltip: =Parent.DisplayName
+                                    Width: =Parent.Width
+                                    ZIndex: =2
 
                         lb_upload_doc_op_3 As label:
                             AlignInContainer: =AlignInContainer.Stretch
@@ -4980,7 +5027,7 @@
                             Height: =30
                             LayoutMinHeight: =30
                             Text: ="RCKI"
-                            ZIndex: =6
+                            ZIndex: =7
 
                         div_upload_doc_op_3 As groupContainer.manualLayoutContainer:
                             BorderStyle: =BorderStyle.None
@@ -4998,7 +5045,7 @@
                             RadiusBottomRight: =0
                             RadiusTopLeft: =0
                             RadiusTopRight: =0
-                            ZIndex: =7
+                            ZIndex: =8
 
                             archivo_image_sidebar_docRev_op_5 As image:
                                 Height: =Parent.Height*50%
@@ -5023,10 +5070,61 @@
                                 Color: =red
                                 Height: =Parent.Height*50%
                                 Icon: =Icon.Trash
+                                OnSelect: |-
+                                    =Set(varquitararchivo,true);
+                                    Set(formRCKIedit,true)
                                 Width: =Self.Height
                                 X: =448
                                 Y: =(Parent.Height-Self.Height)/2
                                 ZIndex: =3
+
+                        FormUploadDoc_3 As form:
+                            DataSource: =DEV_Archivos
+                            Height: =196
+                            Item: =LookUp(DEV_Archivos,id_documento.Id = varDocSide.ID And tipo_documento = "RCKI",ThisRecord)
+                            LayoutMinHeight: =73
+                            LayoutMinWidth: =400
+                            NumberOfColumns: =1
+                            Visible: =formRCKIedit
+                            Width: =1005
+                            X: =40
+                            Y: =40
+                            ZIndex: =9
+
+                            Anexos_DataCard1_3 As typedDataCard.attachmentsEditCard:
+                                BorderStyle: =BorderStyle.Solid
+                                DataField: ="{Attachments}"
+                                Default: =ThisItem.Anexos
+                                DisplayMode: =Parent.DisplayMode
+                                DisplayName: =DataSourceInfo([@DEV_Archivos],DataSourceInfo.DisplayName,"{Attachments}")
+                                Fill: =RGBA(0, 0, 0, 0)
+                                Height: =Parent.Height
+                                Required: =false
+                                Update: =DataCardValue7_3.Attachments
+                                Width: =Parent.Width
+                                X: =0
+                                Y: =0
+                                ZIndex: =2
+
+                                DataCardValue7_3 As attachments:
+                                    AddAttachmentText: ="Adjuntar archivo"
+                                    BorderColor: =RGBA(219, 219, 219, 1)
+                                    DisplayMode: =Parent.DisplayMode
+                                    Height: =Parent.Height
+                                    IsInDataCard: =true
+                                    Items: =Parent.Default
+                                    MaxAttachments: =2
+                                    MaxAttachmentsText: ="Se alcanzó el número máximo de archivos"
+                                    NoAttachmentsText: ="No hay nada adjunto"
+                                    OnAddFile: =Set(formRCKIedit,false)
+                                    PaddingBottom: =5
+                                    PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                                    PaddingRight: =5
+                                    PaddingTop: =5
+                                    Size: =9
+                                    Tooltip: =Parent.DisplayName
+                                    Width: =Parent.Width
+                                    ZIndex: =2
 
                 Container14_37 As groupContainer.horizontalAutoLayoutContainer:
                     DropShadow: =DropShadow.None
@@ -5270,6 +5368,7 @@
                                             Height: =25
                                             Icon: =Icon.AddUser
                                             LayoutMinHeight: =20
+                                            OnSelect: =Set(varpopupreplazo,true)
                                             Visible: =!IsBlank(Label2_275)
                                             Width: =Self.Height
                                             ZIndex: =3
@@ -5931,4 +6030,268 @@
             X: =975
             Y: =216
             ZIndex: =2
+
+    popupquitar As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(51, 51, 51, 0.27)
+        Height: =Parent.Height
+        Visible: =varquitararchivo
+        Width: =Parent.Width
+        ZIndex: =16
+
+        Container22_18 As groupContainer.manualLayoutContainer:
+            DropShadow: =DropShadow.Semibold
+            Fill: =RGBA(246, 247, 251, 1)
+            Height: =Parent.Height*45%
+            Width: =Parent.Width*40%
+            X: =(Parent.Width-Self.Width)/2
+            Y: =(Parent.Height-Self.Height)/2
+            ZIndex: =3
+
+            Container13_87 As groupContainer.verticalAutoLayoutContainer:
+                DropShadow: =DropShadow.None
+                Height: =Parent.Height
+                LayoutAlignItems: =LayoutAlignItems.Stretch
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutGap: =10
+                LayoutMode: =LayoutMode.Auto
+                PaddingBottom: =20
+                PaddingLeft: =20
+                PaddingRight: =20
+                PaddingTop: =10
+                Width: =Parent.Width
+                ZIndex: =1
+
+                Label4_112 As label:
+                    Align: =Align.Center
+                    FontWeight: =FontWeight.Bold
+                    Size: =18
+                    Text: ="Quitar Archivo"
+                    ZIndex: =1
+
+                Label4_114 As label:
+                    Align: =Align.Center
+                    FillPortions: =1
+                    Font: =Font.'Segoe UI'
+                    Size: =15
+                    Text: ="¿¿Estás seguro de que deseas eliminar el archivo??"
+                    ZIndex: =2
+
+                Container14_90 As groupContainer.horizontalAutoLayoutContainer:
+                    DropShadow: =DropShadow.None
+                    FillPortions: =0
+                    Height: =70
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    ZIndex: =3
+
+                    Container15_211 As groupContainer.verticalAutoLayoutContainer:
+                        DropShadow: =DropShadow.None
+                        Height: =100
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =50
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingBottom: =10
+                        PaddingLeft: =10
+                        PaddingRight: =10
+                        PaddingTop: =10
+                        ZIndex: =1
+
+                        bt_atras_upload_op_18 As button:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            BorderColor: =primary
+                            Color: =primary
+                            Fill: =RGBA(255, 255, 255, 1)
+                            FillPortions: =1
+                            HoverColor: =primary
+                            HoverFill: =RGBA(255, 255, 255, 1)
+                            LayoutMinHeight: =30
+                            OnSelect: |-
+                                =Set(formdocedti,false);
+                                Set(formflujoedit,false);
+                                Set(formRCKIedit,false);
+                                Set(varquitararchivo,false)
+                            PressedFill: =RGBA(255, 255, 255, 1)
+                            RadiusBottomLeft: =5
+                            RadiusBottomRight: =5
+                            RadiusTopLeft: =5
+                            RadiusTopRight: =5
+                            Size: =14
+                            Text: ="No, Cancelar"
+                            ZIndex: =1
+
+                    Container15_213 As groupContainer.verticalAutoLayoutContainer:
+                        DropShadow: =DropShadow.None
+                        Height: =100
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =30
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingBottom: =10
+                        PaddingLeft: =10
+                        PaddingRight: =10
+                        PaddingTop: =10
+                        ZIndex: =3
+
+                        bt_seguiente_upload_op_6 As button:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            BorderColor: =red
+                            Color: =red
+                            Fill: =Color.White
+                            FillPortions: =1
+                            HoverColor: =Self.Color
+                            HoverFill: =Self.Fill
+                            LayoutMinHeight: =30
+                            OnSelect: =Set(varquitararchivo,false)
+                            RadiusBottomLeft: =5
+                            RadiusBottomRight: =5
+                            RadiusTopLeft: =5
+                            RadiusTopRight: =5
+                            Size: =14
+                            Text: ="Si , Quitar"
+                            ZIndex: =1
+
+            Icon1_51 As icon.Cancel:
+                Height: =25
+                Icon: =Icon.Cancel
+                OnSelect: =Set(varpopupuploadeditdoc,false)
+                Width: =25
+                X: =843
+                Y: =15
+                ZIndex: =2
+
+    popupreplazarusuario As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(51, 51, 51, 0.27)
+        Height: =Parent.Height
+        Visible: =varpopupreplazo
+        Width: =Parent.Width
+        ZIndex: =17
+
+        Container22_19 As groupContainer.manualLayoutContainer:
+            DropShadow: =DropShadow.Semibold
+            Fill: =RGBA(246, 247, 251, 1)
+            Height: =Parent.Height*45%
+            Width: =Parent.Width*65%
+            X: =(Parent.Width-Self.Width)/2
+            Y: =(Parent.Height-Self.Height)/2
+            ZIndex: =3
+
+            Container13_91 As groupContainer.verticalAutoLayoutContainer:
+                DropShadow: =DropShadow.None
+                Height: =Parent.Height
+                LayoutAlignItems: =LayoutAlignItems.Stretch
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutGap: =10
+                LayoutMode: =LayoutMode.Auto
+                PaddingBottom: =20
+                PaddingLeft: =20
+                PaddingRight: =20
+                PaddingTop: =10
+                Width: =Parent.Width
+                ZIndex: =1
+
+                Label4_113 As label:
+                    Align: =Align.Center
+                    FontWeight: =FontWeight.Bold
+                    Size: =18
+                    Text: ="Replazo de Integrante"
+                    ZIndex: =1
+
+                Container13_92 As groupContainer.verticalAutoLayoutContainer:
+                    DropShadow: =DropShadow.None
+                    Height: =452
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =20
+                    PaddingLeft: =20
+                    PaddingRight: =20
+                    PaddingTop: =20
+                    Width: =602
+                    X: =736
+                    Y: =207
+                    ZIndex: =2
+
+                    lb_upload_doc_op_14 As label:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        Color: =primarytext
+                        FontWeight: =FontWeight.Bold
+                        Height: =30
+                        LayoutMinHeight: =30
+                        Text: ="Documento Principal"
+                        ZIndex: =7
+
+                    txtcodigoedit_1 As text:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =secondarytext
+                        BorderThickness: =1
+                        Default: =varDocSide.codigo
+                        HoverBorderColor: =primary
+                        HoverFill: =RGBA(255, 255, 255, 1)
+                        Size: =10
+                        ZIndex: =8
+
+                    lb_upload_doc_op_15 As label:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        Color: =primarytext
+                        FontWeight: =FontWeight.Bold
+                        Height: =30
+                        LayoutMinHeight: =30
+                        Text: ="Documento Principal"
+                        ZIndex: =9
+
+                    cbo_solicitante_2 As combobox:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =secondarytext
+                        BorderThickness: =1
+                        ChevronBackground: =RGBA(255, 255, 255, 1)
+                        ChevronFill: =primary
+                        ChevronHoverBackground: =
+                        ChevronHoverFill: =primary
+                        Color: =secondarytext
+                        Default: =varDocSide.Solicitante
+                        DefaultSelectedItems: =varDocSide.Solicitante
+                        DisplayFields: =["DisplayName","Email","Picture"]
+                        HoverBorderColor: =
+                        HoverColor: =RGBA(26, 26, 26, 1)
+                        HoverFill: =RGBA(215, 223, 240, 1)
+                        InputTextPlaceholder: ="Seleccione Opción"
+                        Items: =Choices([@DEV_Documento].Solicitante)
+                        LayoutMinWidth: =50
+                        PressedBorderColor: =secondarytext
+                        PressedColor: =RGBA(26, 26, 26, 1)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        SearchFields: =["DisplayName"]
+                        SearchItems: =Choices(DEV_Documento.Solicitante,cbo_solicitante_2.SearchText)
+                        SelectMultiple: =false
+                        Size: =10
+                        Template: =ListItemTemplate.Person
+                        ZIndex: =10
+
+                    bt_seguiente_upload_op_7 As button:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        Fill: =primary
+                        LayoutMinHeight: =30
+                        OnSelect: |-
+                            =Set(varpopupuploadeditdoc,false);
+                            Set(varpopuprevisoreseditop,true)
+                        RadiusBottomLeft: =5
+                        RadiusBottomRight: =5
+                        RadiusTopLeft: =5
+                        RadiusTopRight: =5
+                        Size: =14
+                        Text: ="Siguiente"
+                        ZIndex: =11
+
+            Icon1_52 As icon.Cancel:
+                Height: =25
+                Icon: =Icon.Cancel
+                OnSelect: =Set(varpopupreplazo,false)
+                Width: =25
+                X: =843
+                Y: =15
+                ZIndex: =2
 

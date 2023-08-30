@@ -126,7 +126,7 @@
     "PublishDataLocally": false,
     "PublishResourcesLocally": false,
     "PublishTarget": "player",
-    "UserLocale": "en-US"
+    "UserLocale": "pt-BR"
   },
   "ScreenOrder": [
     "Home OP",
@@ -137,6 +137,7 @@
     "DocPorRevisar RA",
     "DocPorAprobar RA",
     "DocPublicados RA",
-    "KPI"
+    "KPI",
+    "Screen1"
   ]
 }
