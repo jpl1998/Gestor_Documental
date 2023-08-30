@@ -6173,8 +6173,10 @@
         Container22_19 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Semibold
             Fill: =RGBA(246, 247, 251, 1)
-            Height: =Parent.Height*45%
-            Width: =Parent.Width*65%
+            Height: =Parent.Height*50%
+            PaddingBottom: =10
+            PaddingTop: =10
+            Width: =Parent.Width*40%
             X: =(Parent.Width-Self.Width)/2
             Y: =(Parent.Height-Self.Height)/2
             ZIndex: =3
@@ -6204,6 +6206,7 @@
                     DropShadow: =DropShadow.None
                     Height: =452
                     LayoutDirection: =LayoutDirection.Vertical
+                    LayoutGap: =15
                     LayoutJustifyContent: =LayoutJustifyContent.Center
                     LayoutMinHeight: =100
                     LayoutMinWidth: =250
@@ -6223,7 +6226,7 @@
                         FontWeight: =FontWeight.Bold
                         Height: =30
                         LayoutMinHeight: =30
-                        Text: ="Documento Principal"
+                        Text: ="Usuário Actual"
                         ZIndex: =7
 
                     txtcodigoedit_1 As text:
@@ -6242,7 +6245,7 @@
                         FontWeight: =FontWeight.Bold
                         Height: =30
                         LayoutMinHeight: =30
-                        Text: ="Documento Principal"
+                        Text: ="Usuário Replazante"
                         ZIndex: =9
 
                     cbo_solicitante_2 As combobox:
@@ -6273,20 +6276,21 @@
                         Template: =ListItemTemplate.Person
                         ZIndex: =10
 
-                    bt_seguiente_upload_op_7 As button:
-                        AlignInContainer: =AlignInContainer.Stretch
-                        Fill: =primary
-                        LayoutMinHeight: =30
-                        OnSelect: |-
-                            =Set(varpopupuploadeditdoc,false);
-                            Set(varpopuprevisoreseditop,true)
-                        RadiusBottomLeft: =5
-                        RadiusBottomRight: =5
-                        RadiusTopLeft: =5
-                        RadiusTopRight: =5
-                        Size: =14
-                        Text: ="Siguiente"
-                        ZIndex: =11
+                bt_seguiente_upload_op_7 As button:
+                    AlignInContainer: =AlignInContainer.Stretch
+                    Fill: =primary
+                    Height: =50
+                    LayoutMinHeight: =30
+                    OnSelect: |-
+                        =Set(varpopupuploadeditdoc,false);
+                        Set(varpopuprevisoreseditop,true)
+                    RadiusBottomLeft: =5
+                    RadiusBottomRight: =5
+                    RadiusTopLeft: =5
+                    RadiusTopRight: =5
+                    Size: =14
+                    Text: ="Replazar"
+                    ZIndex: =3
 
             Icon1_52 As icon.Cancel:
                 Height: =25
