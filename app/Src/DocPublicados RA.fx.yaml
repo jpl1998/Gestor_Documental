@@ -426,7 +426,12 @@
                                             IsBlank(varFilterMenu.macroproceso) || id_macroproceso.Value = varFilterMenu.macroproceso.Value,
                                             IsBlank(varFilterMenu.proceso) || id_proceso.Value = varFilterMenu.proceso.Value,
                                             IsBlank(varFilterMenu.fechaDesde) || varFilterMenu.fechaDesde<=fecha,
-                                            IsBlank(varFilterMenu.fechaHasta) || varFilterMenu.fechaHasta>=fecha
+                                            IsBlank(varFilterMenu.fechaHasta) || varFilterMenu.fechaHasta>=fecha,
+                                            ID in Filter(
+                                                DEV_Modificacion_estatus_proceso_doc,
+                                                ind_inact = "Activo" && id_estatus_documento.Value = "Por aprobar"
+                                            ).id_doc,
+                                            searchbar_docRev_ra_2.Text in Nombre
                                     )
                                 Layout: =Layout.Vertical
                                 LoadingSpinner: =LoadingSpinner.Data
@@ -2657,19 +2662,6 @@
                 LayoutMinHeight: =50
                 LayoutMinWidth: =250
                 ZIndex: =6
-
-                empezar_revision_button_sidebar_4 As button:
-                    BorderColor: =primary
-                    Color: =primary
-                    Fill: =RGBA(255, 255, 255, 1)
-                    Height: =52
-                    OnSelect: |-
-                        =UpdateContext({varInterlocutorId: LookUp(DEV_Interlocutor, Email.Email=User().Email).ID, varRevPrincipal: Blank(), varRevFlujograma: Blank(), varRevRcki: Blank(), varRevisionPopup: true})
-                    Text: ="Empezar Revisión"
-                    Width: =384
-                    X: =5
-                    Y: =(Parent.Height-Self.Height)/2
-                    ZIndex: =1
 
         Rectangle3_8 As rectangle:
             BorderStyle: =BorderStyle.None

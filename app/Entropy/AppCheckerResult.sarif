@@ -34194,18 +34194,6 @@
               "message": {
                 "text": "Error occurred running rule app-InefficientDelayLoading."
               }
-            },
-            {
-              "associatedRule": {
-                "id": "app-InefficientDelayLoading",
-                "index": 13
-              },
-              "descriptor": {
-                "id": "app-InefficientDelayLoading"
-              },
-              "message": {
-                "text": "Error occurred running rule app-InefficientDelayLoading."
-              }
             }
           ]
         }
@@ -38593,6 +38581,46 @@
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
           "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'DocPublicados RA'.ScreenContainer_docRev_ra_2.BottomContainer_docRev_ra_2.MainContainer_docRev_ra_2.MainCont_docRev_ra_2.Container_table_docRev_ra_2.Container_tablecontent_docRev_ra_2.tablecontent_docRev_ra_4.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPublicados RA'.ScreenContainer_docRev_ra_2.BottomContainer_docRev_ra_2.MainContainer_docRev_ra_2.MainCont_docRev_ra_2.Container_table_docRev_ra_2.Container_tablecontent_docRev_ra_2.tablecontent_docRev_ra_4.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 782,
+                  "snippet": {
+                    "text": "in"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "DocPublicados RA",
+                "type": "'DocPublicados RA'.ScreenContainer_docRev_ra_2.BottomContainer_docRev_ra_2.MainContainer_docRev_ra_2.MainCont_docRev_ra_2.Container_table_docRev_ra_2.Container_tablecontent_docRev_ra_2.tablecontent_docRev_ra_4"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-InOpRhs",
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -55331,36 +55359,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'DocPublicados RA'.varInterlocutorId"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'DocPublicados RA'.varInterlocutorId",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "varInterlocutorId",
-                "module": "DocPublicados RA",
-                "type": "'DocPublicados RA'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 10
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "'DocPublicados RA'.varObsItems"
                 }
               ],
@@ -55402,96 +55400,6 @@
               },
               "properties": {
                 "member": "varRegistroObsPopup",
-                "module": "DocPublicados RA",
-                "type": "'DocPublicados RA'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 10
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'DocPublicados RA'.varRevFlujograma"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'DocPublicados RA'.varRevFlujograma",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "varRevFlujograma",
-                "module": "DocPublicados RA",
-                "type": "'DocPublicados RA'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 10
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'DocPublicados RA'.varRevPrincipal"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'DocPublicados RA'.varRevPrincipal",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "varRevPrincipal",
-                "module": "DocPublicados RA",
-                "type": "'DocPublicados RA'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 10
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'DocPublicados RA'.varRevRcki"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'DocPublicados RA'.varRevRcki",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "varRevRcki",
                 "module": "DocPublicados RA",
                 "type": "'DocPublicados RA'"
               }
