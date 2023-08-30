@@ -276,7 +276,14 @@
                                         FontWeight: =FontWeight.Semibold
                                         LayoutMinHeight: =20
                                         Size: =32
-                                        Text: ="15"
+                                        Text: |-
+                                            =With(
+                                               {
+                                                  items:
+                                                  Filter(DEV_Modificacion_estatus_proceso_doc,ind_inact="Activo", id_estatus_documento.Value="Por revisar")
+                                               },
+                                               CountRows(items)
+                                            )
                                         Width: =90
                                         ZIndex: =2
 
@@ -335,7 +342,14 @@
                                         FontWeight: =FontWeight.Semibold
                                         LayoutMinHeight: =20
                                         Size: =32
-                                        Text: ="5"
+                                        Text: |-
+                                            =With(
+                                               {
+                                                  items:
+                                                  Filter(DEV_Modificacion_estatus_proceso_doc,ind_inact="Activo", id_estatus_documento.Value="Por aprobar")
+                                               },
+                                               CountRows(items)
+                                            )
                                         Width: =90
                                         ZIndex: =2
 
@@ -393,7 +407,14 @@
                                         FontWeight: =FontWeight.Semibold
                                         LayoutMinHeight: =20
                                         Size: =32
-                                        Text: ="5"
+                                        Text: |-
+                                            =With(
+                                               {
+                                                  items:
+                                                  Filter(DEV_Modificacion_estatus_proceso_doc,ind_inact="Activo", id_estatus_documento.Value="Aprobado")
+                                               },
+                                               CountRows(items)
+                                            )
                                         Width: =90
                                         ZIndex: =2
 
@@ -451,7 +472,14 @@
                                         FontWeight: =FontWeight.Semibold
                                         LayoutMinHeight: =20
                                         Size: =32
-                                        Text: ="250"
+                                        Text: |-
+                                            =With(
+                                               {
+                                                  items:
+                                                  Filter(DEV_Modificacion_estatus_proceso_doc,ind_inact="Activo", id_estatus_documento.Value="Difundido")
+                                               },
+                                               CountRows(items)
+                                            )
                                         Width: =90
                                         ZIndex: =2
 
