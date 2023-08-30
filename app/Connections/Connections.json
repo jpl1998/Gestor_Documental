@@ -72,6 +72,47 @@
     ],
     "id": "5066b226-a91d-43fa-a944-ee12f1eadb8b"
   },
+  "7bb65a1e-ceec-46a8-81c6-8524547dac17": {
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1653/1.0.1653.3403/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "9a26efc3-b835-413c-8141-29196aa0cbc2": {
+          "value": "shared_office365_1"
+        },
+        "c80a0574-d96b-4f22-a9da-998d00d6e0d5": {
+          "value": "shared_teams_1"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "a092892c-cdc8-41c8-aafa-a3d8d41d9ac2"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_office365_1": {
+          "value": "9a26efc3-b835-413c-8141-29196aa0cbc2"
+        },
+        "shared_teams_1": {
+          "value": "c80a0574-d96b-4f22-a9da-998d00d6e0d5"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "a092892c-cdc8-41c8-aafa-a3d8d41d9ac2"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "Necesidaddefirmaderevisor"
+    ],
+    "dependencies": {
+      "shared_office365_1": "9a26efc3-b835-413c-8141-29196aa0cbc2",
+      "shared_teams_1": "c80a0574-d96b-4f22-a9da-998d00d6e0d5"
+    },
+    "dependents": [],
+    "id": "7bb65a1e-ceec-46a8-81c6-8524547dac17"
+  },
   "9a26efc3-b835-413c-8141-29196aa0cbc2": {
     "connectionRef": {
       "displayName": "Office 365 Outlook",
@@ -82,9 +123,9 @@
     "dataSources": [],
     "dependencies": {},
     "dependents": [
-      "e29c679e-38b0-4976-9764-279296968816",
       "3c186f1c-15a0-4876-8a42-b84b445c1836",
-      "bf0d49dc-6226-45f3-9c21-30cf20f932ec"
+      "bf0d49dc-6226-45f3-9c21-30cf20f932ec",
+      "7bb65a1e-ceec-46a8-81c6-8524547dac17"
     ],
     "id": "9a26efc3-b835-413c-8141-29196aa0cbc2"
   },
@@ -128,6 +169,20 @@
     },
     "dependents": [],
     "id": "bf0d49dc-6226-45f3-9c21-30cf20f932ec"
+  },
+  "c80a0574-d96b-4f22-a9da-998d00d6e0d5": {
+    "connectionRef": {
+      "displayName": "Microsoft Teams",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1652/1.0.1652.3394/teams/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_teams"
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "7bb65a1e-ceec-46a8-81c6-8524547dac17"
+    ],
+    "id": "c80a0574-d96b-4f22-a9da-998d00d6e0d5"
   },
   "e241a094-95cf-481b-a881-88d66c95707a": {
     "connectionRef": {
@@ -253,60 +308,5 @@
     "dependencies": {},
     "dependents": [],
     "id": "e241a094-95cf-481b-a881-88d66c95707a"
-  },
-  "e29c679e-38b0-4976-9764-279296968816": {
-    "connectionRef": {
-      "displayName": "Logic flows",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1653/1.0.1653.3403/logicflows/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
-      "parameterHints": {
-        "9a26efc3-b835-413c-8141-29196aa0cbc2": {
-          "value": "shared_office365_1"
-        },
-        "e68b777e-b3f0-4efc-95a7-7ce45f081ad3": {
-          "value": "shared_teams_1"
-        },
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "a092892c-cdc8-41c8-aafa-a3d8d41d9ac2"
-        }
-      },
-      "parameterHintsV2": {
-        "shared_office365_1": {
-          "value": "9a26efc3-b835-413c-8141-29196aa0cbc2"
-        },
-        "shared_teams_1": {
-          "value": "e68b777e-b3f0-4efc-95a7-7ce45f081ad3"
-        },
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "a092892c-cdc8-41c8-aafa-a3d8d41d9ac2"
-        }
-      }
-    },
-    "datasets": {},
-    "dataSources": [
-      "Necesidaddefirmaderevisor"
-    ],
-    "dependencies": {
-      "shared_office365_1": "9a26efc3-b835-413c-8141-29196aa0cbc2",
-      "shared_teams_1": "e68b777e-b3f0-4efc-95a7-7ce45f081ad3"
-    },
-    "dependents": [],
-    "id": "e29c679e-38b0-4976-9764-279296968816"
-  },
-  "e68b777e-b3f0-4efc-95a7-7ce45f081ad3": {
-    "connectionRef": {
-      "displayName": "Microsoft Teams",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1652/1.0.1652.3394/teams/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_teams"
-    },
-    "datasets": {},
-    "dataSources": [],
-    "dependencies": {},
-    "dependents": [
-      "e29c679e-38b0-4976-9764-279296968816"
-    ],
-    "id": "e68b777e-b3f0-4efc-95a7-7ce45f081ad3"
   }
 }

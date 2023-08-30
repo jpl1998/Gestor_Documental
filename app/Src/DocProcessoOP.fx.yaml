@@ -1436,7 +1436,7 @@
                                 ChevronHoverBackground: =
                                 ChevronHoverFill: =primary
                                 Color: =secondarytext
-                                DisplayFields: =["Claims"]
+                                DisplayFields: =["DisplayName","Email","Picture"]
                                 HoverBorderColor: =
                                 HoverColor: =RGBA(26, 26, 26, 1)
                                 HoverFill: =RGBA(215, 223, 240, 1)
@@ -2028,7 +2028,7 @@
                                 Height: =Parent.Height*80%
                                 PaddingLeft: =10
                                 Size: =12
-                                Text: =If( IsEmpty(DataCardValue17_1.Attachments),"Subir Archivo",TextInput2_1.Text)
+                                Text: =If( IsEmpty(DataCardValue17_1.Attachments),"Subir Archivo",First(DataCardValue17_1.Attachments).Name)
                                 Width: =353
                                 Wrap: =false
                                 X: =53
@@ -2144,7 +2144,7 @@
                                 Height: =Parent.Height*80%
                                 PaddingLeft: =10
                                 Size: =12
-                                Text: =If( IsEmpty(DataCardValue27.Attachments),"Subir Archivo",TextInput2_1.Text)
+                                Text: =If( IsEmpty(DataCardValue27.Attachments),"Subir Archivo",First(DataCardValue27.Attachments).Name)
                                 Width: =353
                                 Wrap: =false
                                 X: =53
@@ -2258,7 +2258,7 @@
                                 Height: =Parent.Height*80%
                                 PaddingLeft: =10
                                 Size: =12
-                                Text: =If( IsEmpty(DataCardValue27.Attachments),"Subir Archivo",TextInput2_1.Text)
+                                Text: =If( IsEmpty(DataCardValue27_1.Attachments),"Subir Archivo",First(DataCardValue27_1.Attachments).Name)
                                 Width: =353
                                 Wrap: =false
                                 X: =53
@@ -2912,7 +2912,9 @@
                                             id_documento:{Id: varDocID.ID , Value:varDocID.ID} ,
                                             version:1}
                                         )
-                                    ))
+                                    );
+                                    Necesidaddefirmaderevisor.Run(ComboBox2_23.Selected.Email, varDocID.codigo, varDocID.Nombre, varDocID.id_tipo_docu.Value, varDocID.fecha, varDocID.version)
+                                    )
                                 );
                                 
                                 //guardar aprobadores
