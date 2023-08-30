@@ -1473,42 +1473,7 @@
                                     "gallery_doc_publ_home_ra As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
                                         DelayItemLoading: =true
                                         Height: =Button4_9.Height
-                                        Items: |-
-                                            =Table( {
-                                                    Código: "LDS-PA-134",
-                                                    Nombre: "Carga del Presupuesto Anual a los sistemas inf...",
-                                                    'Tipo Documento': "Procedimiento Administrativo",
-                                                    'F. Solicitud Aprobación': "22/03/2023",
-                                                    Estado: "Aprobado"
-                                                },
-                                                {
-                                                    Código: "LDS-PA-134",
-                                                    Nombre: "Carga del Presupuesto Anual a los sistemas inf...",
-                                                    'Tipo Documento': "Procedimiento Administrativo",
-                                                    'F. Solicitud Aprobación': "22/03/2023",
-                                                    Estado: "Aprobado"
-                                                },
-                                                {
-                                                    Código: "LDS-PA-134",
-                                                    Nombre: "Carga del Presupuesto Anual a los sistemas inf...",
-                                                    'Tipo Documento': "Procedimiento Administrativo",
-                                                    'F. Solicitud Aprobación': "22/03/2023",
-                                                    Estado: "Aprobado"
-                                                },
-                                                {
-                                                    Código: "LDS-PA-134",
-                                                    Nombre: "Carga del Presupuesto Anual a los sistemas inf...",
-                                                    'Tipo Documento': "Procedimiento Administrativo",
-                                                    'F. Solicitud Aprobación': "22/03/2023",
-                                                    Estado: "Aprobado"
-                                                },
-                                                {
-                                                    Código: "LDS-PA-134",
-                                                    Nombre: "Carga del Presupuesto Anual a los sistemas inf...",
-                                                    'Tipo Documento': "Procedimiento Administrativo",
-                                                    'F. Solicitud Aprobación': "22/03/2023",
-                                                    Estado: "Aprobado"
-                                                })
+                                        Items: =SortByColumns(Filter(DEV_Modificacion_estatus_proceso_doc,ind_inact="Activo", id_estatus_documento.Value="Difundido"),"fecha",SortOrder.Ascending)
                                         Layout: =Layout.Vertical
                                         LoadingSpinner: =LoadingSpinner.Data
                                         TemplatePadding: =0
@@ -1558,7 +1523,7 @@
                                                     Height: =Parent.Height
                                                     PaddingLeft: =10
                                                     Size: =9.5
-                                                    Text: =ThisItem.Código
+                                                    Text: =LookUp(DEV_Documento, Value(ThisItem.id_documento.Value)=ID).codigo
                                                     Width: =Parent.Width-Self.X
                                                     X: =45
                                                     ZIndex: =2
@@ -1571,7 +1536,7 @@
                                                 FontWeight: =FontWeight.Semibold
                                                 PaddingLeft: =15
                                                 Size: =9.5
-                                                Text: =ThisItem.Nombre
+                                                Text: =LookUp(DEV_Documento, Value(ThisItem.id_documento.Value)=ID).Nombre
                                                 ZIndex: =2
 
                                             Label4_24 As label:
@@ -1583,7 +1548,7 @@
                                                 Height: =Parent.Height
                                                 PaddingLeft: =10
                                                 Size: =9.5
-                                                Text: =ThisItem.'Tipo Documento'
+                                                Text: =LookUp(DEV_Documento, Value(ThisItem.id_documento.Value)=ID).id_tipo_docu.Value
                                                 Width: =140
                                                 X: =50
                                                 ZIndex: =3
@@ -1597,7 +1562,7 @@
                                                 Height: =Parent.Height
                                                 PaddingLeft: =10
                                                 Size: =9.5
-                                                Text: =ThisItem.'F. Solicitud Aprobación'
+                                                Text: =ThisItem.'fecha y hora'
                                                 Width: =140
                                                 X: =50
                                                 ZIndex: =4
@@ -1612,13 +1577,13 @@
                                                     BorderColor: =Self.Color
                                                     BorderStyle: =BorderStyle.None
                                                     Color: |-
-                                                        =Switch(ThisItem.Estado,
+                                                        =Switch(ThisItem.id_estatus_documento.Value,
                                                         "Por aprobar", RGBA(180, 130, 0, 1),
                                                         "Observado", RGBA(214, 0, 0, 1),
                                                         "Aprobado",RGBA(44, 143, 112, 1))
                                                     DisplayMode: =DisplayMode.View
                                                     Fill: |-
-                                                        =Switch(ThisItem.Estado,
+                                                        =Switch(ThisItem.id_estatus_documento.Value,
                                                         "Por aprobar", RGBA(249, 249, 249, 1),
                                                         "Observado", RGBA(245, 218, 216, 1),
                                                         "Aprobado", RGBA(219, 238, 233, 1))
@@ -1630,7 +1595,7 @@
                                                     RadiusTopLeft: =5
                                                     RadiusTopRight: =5
                                                     Size: =11
-                                                    Text: =ThisItem.Estado
+                                                    Text: =ThisItem.id_estatus_documento.Value
                                                     Width: =Parent.Width*80%
                                                     X: =(Parent.Width-Self.Width)/2
                                                     Y: =(Parent.Height-Self.Height)/2
@@ -1784,6 +1749,80 @@
                         Width: =97
                         Y: =2.5
                         ZIndex: =1
+
+                "registro_evaluacion_sidebar_ra_1 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
+                    DelayItemLoading: =true
+                    Items: =CustomGallerySample
+                    Layout: =Layout.Vertical
+                    LayoutMinHeight: =287
+                    LayoutMinWidth: =320
+                    LoadingSpinner: =LoadingSpinner.Data
+                    TemplatePadding: =0
+                    TemplateSize: =70
+                    Visible: =menu_filter_evaluacion_sidebar_ra_3.Selected.Value = "Registro"
+                    ZIndex: =1
+
+                    Title2_1 As label:
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                        Height: =Self.Size * 1.8
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =12
+                        Text: =ThisItem.SampleHeading
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =Parent.TemplateWidth - 200
+                        X: =16
+                        Y: =(Parent.TemplateHeight - (Self.Size * 1.8 + Subtitle2_1.Size * 1.8)) / 2
+                        ZIndex: =1
+
+                    Subtitle2_1 As label:
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                        Height: =Self.Size * 1.8
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =8
+                        Text: =ThisItem.SampleHeading
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =Title2_1.Width
+                        X: =Title2_1.X
+                        Y: =Title2_1.Y + Title2_1.Height
+                        ZIndex: =2
+
+                    verObs_icon_sidebar_ra_3 As icon.View:
+                        Height: =15
+                        Icon: =Icon.View
+                        OnSelect: =Select(Parent)
+                        Width: =15
+                        X: =304
+                        Y: =25
+                        ZIndex: =3
+
+                    verObs_button_sidebar_ra_3 As button:
+                        Align: =Align.Right
+                        Color: =primary
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Font: =Font.'Segoe UI'
+                        Height: =20
+                        HoverColor: =primary
+                        HoverFill: =RGBA(0, 0, 0, 0.15)
+                        OnSelect: |-
+                            =UpdateContext({varRevisarEntregaPopup:true})
+                        PressedColor: =Self.Color
+                        PressedFill: =
+                        Size: =10
+                        Text: ="Revisar"
+                        Width: =80
+                        X: =299
+                        Y: =23
+                        ZIndex: =4
 
                 "persona_evaluacion_sidebar_ra_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
                     DelayItemLoading: =true
@@ -1940,80 +1979,6 @@
                         X: =60
                         Y: =51
                         ZIndex: =9
-
-                "registro_evaluacion_sidebar_ra_1 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
-                    DelayItemLoading: =true
-                    Items: =CustomGallerySample
-                    Layout: =Layout.Vertical
-                    LayoutMinHeight: =287
-                    LayoutMinWidth: =320
-                    LoadingSpinner: =LoadingSpinner.Data
-                    TemplatePadding: =0
-                    TemplateSize: =70
-                    Visible: =menu_filter_evaluacion_sidebar_ra_3.Selected.Value = "Registro"
-                    ZIndex: =1
-
-                    Title2_1 As label:
-                        Font: =Font.'Segoe UI'
-                        FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-                        Height: =Self.Size * 1.8
-                        OnSelect: =Select(Parent)
-                        PaddingBottom: =0
-                        PaddingLeft: =0
-                        PaddingRight: =0
-                        PaddingTop: =0
-                        Size: =12
-                        Text: =ThisItem.SampleHeading
-                        VerticalAlign: =VerticalAlign.Top
-                        Width: =Parent.TemplateWidth - 200
-                        X: =16
-                        Y: =(Parent.TemplateHeight - (Self.Size * 1.8 + Subtitle2_1.Size * 1.8)) / 2
-                        ZIndex: =1
-
-                    Subtitle2_1 As label:
-                        Font: =Font.'Segoe UI'
-                        FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-                        Height: =Self.Size * 1.8
-                        OnSelect: =Select(Parent)
-                        PaddingBottom: =0
-                        PaddingLeft: =0
-                        PaddingRight: =0
-                        PaddingTop: =0
-                        Size: =8
-                        Text: =ThisItem.SampleHeading
-                        VerticalAlign: =VerticalAlign.Top
-                        Width: =Title2_1.Width
-                        X: =Title2_1.X
-                        Y: =Title2_1.Y + Title2_1.Height
-                        ZIndex: =2
-
-                    verObs_icon_sidebar_ra_3 As icon.View:
-                        Height: =15
-                        Icon: =Icon.View
-                        OnSelect: =Select(Parent)
-                        Width: =15
-                        X: =304
-                        Y: =25
-                        ZIndex: =3
-
-                    verObs_button_sidebar_ra_3 As button:
-                        Align: =Align.Right
-                        Color: =primary
-                        Fill: =RGBA(0, 0, 0, 0)
-                        Font: =Font.'Segoe UI'
-                        Height: =20
-                        HoverColor: =primary
-                        HoverFill: =RGBA(0, 0, 0, 0.15)
-                        OnSelect: |-
-                            =UpdateContext({varRevisarEntregaPopup:true})
-                        PressedColor: =Self.Color
-                        PressedFill: =
-                        Size: =10
-                        Text: ="Revisar"
-                        Width: =80
-                        X: =299
-                        Y: =23
-                        ZIndex: =4
 
             archivos_container_sidebar_docRev_ra_3 As groupContainer.verticalAutoLayoutContainer:
                 DropShadow: =DropShadow.None
