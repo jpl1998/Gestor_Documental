@@ -595,14 +595,14 @@
                                             BorderColor: =Self.Color
                                             BorderStyle: =BorderStyle.None
                                             Color: |-
-                                                =Switch(LookUp(DEV_Modificacion_estatus_proceso_doc,codigo=ThisItem.codigo && ind_mod = "i").id_estatus_documento.Value,
+                                                =Switch(LookUp(DEV_Modificacion_estatus_proceso_doc,codigo=ThisItem.codigo && ind_mod = "i" && id_doc=ThisItem.ID).id_estatus_documento.Value,
                                                 "Por aprobar", RGBA(180, 130, 0, 1),
                                                 "Por revisar",RGBA(180, 130, 0, 1),
                                                 "Observado", RGBA(214, 0, 0, 1),
                                                 "Aprobado",RGBA(44, 143, 112, 1))
                                             DisplayMode: =DisplayMode.View
                                             Fill: |-
-                                                =Switch(LookUp(DEV_Modificacion_estatus_proceso_doc,codigo=ThisItem.codigo && ind_mod = "i").id_estatus_documento.Value,
+                                                =Switch(LookUp(DEV_Modificacion_estatus_proceso_doc,codigo=ThisItem.codigo && ind_mod = "i" && id_doc=ThisItem.ID).id_estatus_documento.Value,
                                                 "Por aprobar", RGBA(249, 249, 249, 1),
                                                 "Por revisar",RGBA(249, 249, 249, 1),
                                                 "Observado", RGBA(245, 218, 216, 1),
@@ -615,7 +615,7 @@
                                             RadiusTopLeft: =5
                                             RadiusTopRight: =5
                                             Size: =11
-                                            Text: =LookUp(DEV_Modificacion_estatus_proceso_doc,codigo=ThisItem.codigo && ind_inact="Activo").id_estatus_documento.Value
+                                            Text: =LookUp(DEV_Modificacion_estatus_proceso_doc,codigo=ThisItem.codigo && ind_inact="Activo" && id_doc=ThisItem.ID).id_estatus_documento.Value
                                             Width: =Parent.Width*80%
                                             X: =(Parent.Width-Self.Width)/2
                                             Y: =(Parent.Height-Self.Height)/2
