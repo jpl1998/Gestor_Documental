@@ -5021,7 +5021,7 @@
                                 Height: =Parent.Height*80%
                                 PaddingLeft: =10
                                 Size: =11
-                                Text: =LookUp(DEV_Archivos,id_documento.Id = varDocSide.ID && tipo_documento="Principal",descripcion)
+                                Text: =First(LookUp(DEV_Archivos,id_documento.Value = Text(varDocSide.ID) && tipo_documento="Principal").Attachments).DisplayName
                                 Width: =353
                                 Wrap: =false
                                 X: =53
@@ -5043,7 +5043,7 @@
                         FormUploadDoc_1 As form:
                             DataSource: =DEV_Archivos
                             Height: =196
-                            Item: =LookUp(DEV_Archivos,id_documento.Id = varDocSide.ID And tipo_documento = "Principal",ThisRecord)
+                            Item: =LookUp(DEV_Archivos,id_documento.Value = Text(varDocSide.ID) And tipo_documento = "Principal",ThisRecord)
                             LayoutMinHeight: =73
                             LayoutMinWidth: =400
                             NumberOfColumns: =1
@@ -5127,7 +5127,7 @@
                                 Height: =Parent.Height*80%
                                 PaddingLeft: =10
                                 Size: =11
-                                Text: =LookUp(DEV_Archivos,id_documento.Id = varDocSide.ID && tipo_documento="Flujograma",descripcion)
+                                Text: =First(LookUp(DEV_Archivos,id_documento.Value = Text(varDocSide.ID) && tipo_documento="Flujograma").Attachments).DisplayName
                                 Width: =353
                                 Wrap: =false
                                 X: =53
@@ -5149,7 +5149,7 @@
                         FormUploadDoc_2 As form:
                             DataSource: =DEV_Archivos
                             Height: =196
-                            Item: =LookUp(DEV_Archivos,id_documento.Id = varDocSide.ID And tipo_documento = "Flujograma",ThisRecord)
+                            Item: =LookUp(DEV_Archivos,id_documento.Value = Text(varDocSide.ID) And tipo_documento = "Flujograma",ThisRecord)
                             LayoutMinHeight: =73
                             LayoutMinWidth: =400
                             NumberOfColumns: =1
@@ -5233,7 +5233,7 @@
                                 Height: =Parent.Height*80%
                                 PaddingLeft: =10
                                 Size: =11
-                                Text: =LookUp(DEV_Archivos,id_documento.Id = varDocSide.ID && tipo_documento="RCKI",descripcion)
+                                Text: =First(LookUp(DEV_Archivos,id_documento.Value = Text(varDocSide.ID) && tipo_documento="RCKI").Attachments).DisplayName
                                 Width: =353
                                 Wrap: =false
                                 X: =53
@@ -5255,7 +5255,7 @@
                         FormUploadDoc_3 As form:
                             DataSource: =DEV_Archivos
                             Height: =196
-                            Item: =LookUp(DEV_Archivos,id_documento.Id = varDocSide.ID And tipo_documento = "RCKI",ThisRecord)
+                            Item: =LookUp(DEV_Archivos,id_documento.Value = Text(varDocSide.ID) And tipo_documento = "RCKI",ThisRecord)
                             LayoutMinHeight: =73
                             LayoutMinWidth: =400
                             NumberOfColumns: =1
@@ -5711,7 +5711,7 @@
                                         Height: =Parent.Height*80%
                                         RadiusBottomLeft: =0
                                         RadiusBottomRight: =0
-                                        Visible: =If(ThisItem.Value = CountRows(Filter(DEV_Actor,id_documento.Id = varDocSide.ID, id_funcion.Value="Revisor"))+1,true,false)
+                                        Visible: =If(ThisItem.Value = CountRows(Filter(DEV_Actor,id_documento.Value = Text(varDocSide.ID), id_funcion.Value="Revisor"))+1,true,false)
                                         Width: =Parent.Width*60%
                                         X: =(Parent.Width-Self.Width)/2
                                         Y: =(Parent.Height-Self.Height)/2
