@@ -4946,7 +4946,7 @@
                     Align: =Align.Center
                     FontWeight: =FontWeight.Bold
                     Size: =18
-                    Text: ="Replazo de Integrante"
+                    Text: ="Edición de Documento"
                     ZIndex: =1
 
                 Container13_39 As groupContainer.verticalAutoLayoutContainer:
@@ -5382,8 +5382,31 @@
                             FillPortions: =1
                             LayoutMinHeight: =30
                             OnSelect: |-
-                                =Set(varpopupuploadeditdoc,false);
-                                Set(varpopuprevisoreseditop,true)
+                                =Clear(colElaboradores);
+                                ForAll(
+                                    Filter(
+                                        DEV_Actor,
+                                        id_documento.Value = Text(varDocSide.ID),
+                                        codigo = varDocSide.codigo,
+                                        version = varDocSide.version,
+                                        id_funcion.Value = "Elaborador"
+                                    ) As user,
+                                    Collect(
+                                        colElaboradores,
+                                        {
+                                            nombreCompleto: user.'id_interlocutor: Nombre'.Value & " " & user.'id_interlocutor: Apellido'.Value,
+                                            email: LookUp(DEV_Interlocutor, ID = Value(user.'id_interlocutor: ID'.Value)).Email.Email
+                                        }
+                                    )
+                                );
+                                Set(
+                                    varpopupuploadeditdoc,
+                                    false
+                                );
+                                Set(
+                                    varpopuprevisoreseditop,
+                                    true
+                                );
                             RadiusBottomLeft: =5
                             RadiusBottomRight: =5
                             RadiusTopLeft: =5
@@ -5486,11 +5509,20 @@
                                 Text: ="Elaborado por"
                                 ZIndex: =1
 
-                            Gallery2_9 As gallery.galleryVertical:
+                            elaborador_list_op As gallery.galleryVertical:
                                 DelayItemLoading: =true
-                                Items: =Sequence(6)
+                                FillPortions: =0
+                                Height: =Self.AllItemsCount * (Self.TemplateHeight+10)
+                                Items: |-
+                                    =With({items:colElaboradores},
+                                        ForAll(Sequence(CountRows(items)),
+                                        Patch(
+                                            Last(FirstN(items, Value)),
+                                            {rowNumber: Value}
+                                        )
+                                    ))
                                 Layout: =Layout.Vertical
-                                LayoutMinHeight: =287
+                                LayoutMinHeight: =Self.AllItemsCount * Self.TemplateHeight
                                 LayoutMinWidth: =320
                                 LoadingSpinner: =LoadingSpinner.Data
                                 TemplateSize: =50
@@ -5521,7 +5553,7 @@
                                             Height: =30
                                             LayoutMinHeight: =30
                                             OnSelect: =
-                                            Text: =ThisItem.Value
+                                            Text: =ThisItem.rowNumber
                                             Visible: =!IsBlank(Label2_275)
                                             Width: =20
                                             ZIndex: =1
@@ -5532,7 +5564,7 @@
                                             FontWeight: =FontWeight.Bold
                                             Height: =30
                                             LayoutMinHeight: =30
-                                            Text: =LookUp(DEV_Interlocutor, ID = Index(Filter(DEV_Actor,id_documento.Id = varDocSide.ID, id_funcion.Value="Elaborador"),ThisItem.Value).id_interlocutor.Value, Email).DisplayName
+                                            Text: =ThisItem.nombreCompleto
                                             Width: =20
                                             ZIndex: =2
 
@@ -5542,10 +5574,10 @@
                                             Height: =25
                                             Icon: =Icon.AddUser
                                             LayoutMinHeight: =20
-                                            OnSelect: |-
-                                                =Set(varpopupreplazo,true);
-                                                Set(usercurrent,LookUp(DEV_Interlocutor, ID = Index(Filter(DEV_Actor,id_documento.Id = varDocSide.ID, id_funcion.Value="Elaborador"),ThisItem.Value).id_interlocutor.Value, ThisRecord.Email));
-                                                Set(ActorID,Index(Filter(DEV_Actor,id_documento.Id = varDocSide.ID, id_funcion.Value="Elaborador"),ThisItem.Value))
+                                            OnSelect: |
+                                                =Reset(cbo_solicitante_2);
+                                                Set(usercurrent,ThisItem);
+                                                Set(varpopupreplazo,true);
                                             Visible: =!IsBlank(Label2_275)
                                             Width: =Self.Height
                                             ZIndex: =3
@@ -5556,54 +5588,59 @@
                                             Height: =25
                                             Icon: =Icon.Trash
                                             LayoutMinHeight: =20
+                                            OnSelect: =RemoveIf(colElaboradores,ThisItem.email=email)
                                             Visible: =!IsBlank(Label2_275)
                                             Width: =Self.Height
                                             ZIndex: =4
 
-                                    observarOption_container_ra_23 As groupContainer.manualLayoutContainer:
-                                        BorderColor: =placeholder
-                                        DropShadow: =DropShadow.None
-                                        Fill: =RGBA(255, 255, 255, 1)
-                                        Height: =Parent.Height*80%
-                                        RadiusBottomLeft: =0
-                                        RadiusBottomRight: =0
-                                        Visible: =If(ThisItem.Value = CountRows(Filter(DEV_Actor,id_documento.Id = varDocSide.ID, id_funcion.Value="Elaborador"))+1,true,false)
-                                        Width: =Parent.Width*60%
-                                        X: =(Parent.Width-Self.Width)/2
-                                        Y: =(Parent.Height-Self.Height)/2
-                                        ZIndex: =2
+                            observarOption_container_ra_23 As groupContainer.manualLayoutContainer:
+                                BorderColor: =placeholder
+                                DropShadow: =DropShadow.None
+                                Height: =Parent.Height*80%
+                                LayoutMinHeight: =50
+                                LayoutMinWidth: =250
+                                RadiusBottomLeft: =0
+                                RadiusBottomRight: =0
+                                Visible: =elaborador_list_op.AllItemsCount <6
+                                Width: =Parent.Width*60%
+                                X: =(Parent.Width-Self.Width)/2
+                                Y: =(Parent.Height-Self.Height)/2
+                                ZIndex: =3
 
-                                        observar_button_ra_23 As button:
-                                            BorderColor: =primary
-                                            Color: =primary
-                                            Fill: =RGBA(0, 0, 0, 0)
-                                            Height: =Parent.Height*98%
-                                            HoverColor: =ColorFade(primary,-5%)
-                                            HoverFill: =RGBA(255, 255, 255, 1)
-                                            OnSelect: =Set(varpopupformedit,true)
-                                            PaddingBottom: =0
-                                            PaddingLeft: =0
-                                            PaddingRight: =0
-                                            PaddingTop: =0
-                                            PressedFill: =
-                                            RadiusBottomLeft: =5
-                                            RadiusBottomRight: =5
-                                            RadiusTopLeft: =5
-                                            RadiusTopRight: =5
-                                            Size: =11
-                                            Text: ="Agregar Integrante"
-                                            Width: =Parent.Width*95%
-                                            X: =(Parent.Width-Self.Width)/2
-                                            ZIndex: =1
+                                observar_button_ra_23 As button:
+                                    BorderColor: =primary
+                                    Color: =primary
+                                    Fill: =RGBA(255, 255, 255, 1)
+                                    Height: =36
+                                    HoverColor: =ColorFade(primary,-5%)
+                                    HoverFill: =RGBA(255, 255, 255, 1)
+                                    OnSelect: |-
+                                        =Set(varpopupformedit,true);
+                                        Collect(colElaboradores,{})
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    PressedFill: =
+                                    RadiusBottomLeft: =5
+                                    RadiusBottomRight: =5
+                                    RadiusTopLeft: =5
+                                    RadiusTopRight: =5
+                                    Size: =11
+                                    Text: ="Agregar Integrante"
+                                    Width: =Parent.Width*95%
+                                    X: =12
+                                    Y: =8
+                                    ZIndex: =1
 
-                                        observar_icon_ra_23 As icon.Information:
-                                            Color: =primary
-                                            Height: =20
-                                            Icon: =Icon.Add
-                                            Width: =20
-                                            X: =15
-                                            Y: =(Parent.Height-Self.Height)/2
-                                            ZIndex: =2
+                                observar_icon_ra_23 As icon.Information:
+                                    Color: =primary
+                                    Height: =20
+                                    Icon: =Icon.Add
+                                    Width: =20
+                                    X: =81
+                                    Y: =16
+                                    ZIndex: =2
 
                         separator_revisores_op_2 As rectangle:
                             AlignInContainer: =AlignInContainer.Stretch
@@ -6408,7 +6445,7 @@
                         AlignInContainer: =AlignInContainer.Stretch
                         BorderColor: =secondarytext
                         BorderThickness: =1
-                        Default: =usercurrent.DisplayName
+                        Default: =usercurrent.nombreCompleto
                         DisplayMode: =DisplayMode.View
                         HoverBorderColor: =primary
                         HoverFill: =RGBA(255, 255, 255, 1)
@@ -6433,19 +6470,21 @@
                         ChevronHoverBackground: =
                         ChevronHoverFill: =primary
                         Color: =secondarytext
-                        DefaultSelectedItems: =varDocSide.Solicitante
+                        DefaultSelectedItems: =
                         DisplayFields: =["DisplayName","Email","Picture"]
                         HoverBorderColor: =
                         HoverColor: =RGBA(26, 26, 26, 1)
                         HoverFill: =RGBA(215, 223, 240, 1)
                         InputTextPlaceholder: ="Seleccione Opción"
-                        Items: =Choices([@DEV_Documento].Solicitante)
+                        Items: |-
+                            =UsuáriosdoOffice365.SearchUser({searchTerm:Self.SearchText})
                         LayoutMinWidth: =50
                         PressedBorderColor: =secondarytext
                         PressedColor: =RGBA(26, 26, 26, 1)
                         PressedFill: =RGBA(0, 0, 0, 0)
                         SearchFields: =["DisplayName"]
-                        SearchItems: =Choices(DEV_Documento.Solicitante,cbo_solicitante_2.SearchText)
+                        SearchItems: |-
+                            =Search(UsuáriosdoOffice365.SearchUser({searchTerm:Self.SearchText}),cbo_solicitante_2.SearchText,"DisplayName")
                         SelectMultiple: =false
                         Size: =10
                         Template: =ListItemTemplate.Person
@@ -6456,7 +6495,16 @@
                     Fill: =primary
                     Height: =50
                     LayoutMinHeight: =30
-                    OnSelect: =Set(varpopupreplazo,false);
+                    OnSelect: |-
+                        =Patch(
+                            colElaboradores,
+                            LookUp(colElaboradores,email=usercurrent.email),
+                            {
+                                nombreCompleto: cbo_solicitante_2.Selected.DisplayName,
+                                email: cbo_solicitante_2.Selected.Mail
+                            }
+                        );
+                        Set(varpopupreplazo,false);
                     RadiusBottomLeft: =5
                     RadiusBottomRight: =5
                     RadiusTopLeft: =5
@@ -6470,7 +6518,7 @@
                 Icon: =Icon.Cancel
                 OnSelect: =Set(varpopupreplazo,false)
                 Width: =25
-                X: =843
-                Y: =15
+                X: =505
+                Y: =20
                 ZIndex: =2
 
