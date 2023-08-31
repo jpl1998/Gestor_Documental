@@ -95,7 +95,7 @@
       "zeroalltabindexes": false
     },
     "Author": "",
-    "BindingErrorCount": 16,
+    "BindingErrorCount": 1,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 500,
     "DocumentAppType": "DesktopOrTablet",
@@ -131,8 +131,6 @@
   "ScreenOrder": [
     "Home OP",
     "DocProcessoOP",
-    "DocProcessoOP_1",
-    "DocProcessoOP_2",
     "DocOficialesOP",
     "DocHistóricoOP",
     "Home RA",
