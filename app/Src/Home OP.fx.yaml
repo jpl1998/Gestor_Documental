@@ -547,15 +547,7 @@
                                     "Gallery1_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
                                         DelayItemLoading: =true
                                         Height: =Button4_3.Height
-                                        Items: |-
-                                            =Filter(
-                                                DEV_Documento,
-                                                ID in Filter(
-                                                    DEV_Modificacion_estatus_proceso_doc,
-                                                    ind_inact = "Activo" && Or(id_estatus_documento.Value = "Por revisar", id_estatus_documento.Value = "Por aprobar",id_estatus_documento.Value = "Observado")
-                                                ).id_doc,
-                                                searchbar_docRev_ra.Text in Nombre
-                                            )
+                                        Items: =SortByColumns(Filter(DEV_Modificacion_estatus_proceso_doc,ind_inact="Activo", id_estatus_documento.Value="Por aprobar" || id_estatus_documento.Value="Por revisar"  || id_estatus_documento.Value="Observado" ),"fecha",SortOrder.Ascending)
                                         Layout: =Layout.Vertical
                                         LoadingSpinner: =LoadingSpinner.Data
                                         TemplatePadding: =0
@@ -618,7 +610,7 @@
                                                 FontWeight: =FontWeight.Semibold
                                                 PaddingLeft: =15
                                                 Size: =9.5
-                                                Text: =ThisItem.Nombre
+                                                Text: =LookUp(DEV_Documento, ID= ThisItem.id_doc).Nombre
                                                 ZIndex: =2
 
                                             Label4_2 As label:
@@ -630,7 +622,7 @@
                                                 Height: =Parent.Height
                                                 PaddingLeft: =10
                                                 Size: =9.5
-                                                Text: =LookUp(DEV_TipoDocumento, ID =  ThisItem.id_tipo_docu.Id,Descripcion)
+                                                Text: =LookUp(DEV_Documento, ID= ThisItem.id_doc).id_tipo_docu.Value
                                                 Width: =140
                                                 X: =50
                                                 ZIndex: =3
@@ -659,14 +651,14 @@
                                                     BorderColor: =Self.Color
                                                     BorderStyle: =BorderStyle.None
                                                     Color: |-
-                                                        =Switch(LookUp(DEV_Modificacion_estatus_proceso_doc,id_documento.Id = ID && ind_mod="i",id_estatus_documento.Value),
+                                                        =Switch(ThisItem.id_estatus_documento.Value,
                                                         "Por aprobar", RGBA(180, 130, 0, 1),
                                                         "Por revisar",RGBA(180, 130, 0, 1),
                                                         "Observado", RGBA(214, 0, 0, 1),
                                                         "Aprobado",RGBA(44, 143, 112, 1))
                                                     DisplayMode: =DisplayMode.View
                                                     Fill: |-
-                                                        =Switch(LookUp(DEV_Modificacion_estatus_proceso_doc,id_documento.Id = ID && ind_mod="i",id_estatus_documento.Value),
+                                                        =Switch(ThisItem.id_estatus_documento.Value,
                                                         "Por aprobar", RGBA(249, 249, 249, 1),
                                                         "Por revisar",RGBA(249, 249, 249, 1),
                                                         "Observado", RGBA(245, 218, 216, 1),
@@ -679,7 +671,7 @@
                                                     RadiusTopLeft: =5
                                                     RadiusTopRight: =5
                                                     Size: =11
-                                                    Text: =LookUp(DEV_Modificacion_estatus_proceso_doc,id_documento.Id = ID && ind_mod="i",id_estatus_documento.Value)
+                                                    Text: =ThisItem.id_estatus_documento.Value
                                                     Width: =Parent.Width*80%
                                                     X: =(Parent.Width-Self.Width)/2
                                                     Y: =(Parent.Height-Self.Height)/2
