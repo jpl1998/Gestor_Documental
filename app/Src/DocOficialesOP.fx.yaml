@@ -224,20 +224,6 @@
                             Text: ="Documentos en Oficiales"
                             ZIndex: =1
 
-                        Button3_9 As button:
-                            Fill: =primary
-                            FillPortions: =1
-                            OnSelect: |-
-                                =Set(varpopupnewdoc,true);
-                                Set(varDocumento,Defaults(DEV_Documento))
-                            RadiusBottomLeft: =5
-                            RadiusBottomRight: =5
-                            RadiusTopLeft: =5
-                            RadiusTopRight: =5
-                            Size: =14
-                            Text: ="Enviar Documento para Revisión"
-                            ZIndex: =2
-
                     Container11_7 As groupContainer.horizontalAutoLayoutContainer:
                         DropShadow: =DropShadow.None
                         FillPortions: =0.1

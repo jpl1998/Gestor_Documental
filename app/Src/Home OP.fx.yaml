@@ -272,7 +272,14 @@
                                         FontWeight: =FontWeight.Semibold
                                         LayoutMinHeight: =20
                                         Size: =32
-                                        Text: =10
+                                        Text: |-
+                                            =With(
+                                               {
+                                                  items:
+                                                  Filter(DEV_Modificacion_estatus_proceso_doc,ind_inact="Activo", id_estatus_documento.Value="Por revisar" || id_estatus_documento.Value="Por aprobar" || id_estatus_documento.Value="Observado")
+                                               },
+                                               CountRows(items)
+                                            )
                                         ZIndex: =1
 
                                     Label1_28 As label:
@@ -323,7 +330,14 @@
                                         FontWeight: =FontWeight.Semibold
                                         LayoutMinHeight: =20
                                         Size: =32
-                                        Text: =10
+                                        Text: |-
+                                            =With(
+                                               {
+                                                  items:
+                                                  Filter(DEV_Modificacion_estatus_proceso_doc,ind_inact="Activo", id_estatus_documento.Value="Por revisar")
+                                               },
+                                               CountRows(items)
+                                            )
                                         ZIndex: =1
 
                                     Label1_6 As label:
@@ -375,7 +389,14 @@
                                         FontWeight: =FontWeight.Semibold
                                         LayoutMinHeight: =20
                                         Size: =32
-                                        Text: =5
+                                        Text: |-
+                                            =With(
+                                               {
+                                                  items:
+                                                  Filter(DEV_Modificacion_estatus_proceso_doc,ind_inact="Activo",id_estatus_documento.Value="Por aprobar")
+                                               },
+                                               CountRows(items)
+                                            )
                                         ZIndex: =1
 
                                     Label1_8 As label:
@@ -526,7 +547,15 @@
                                     "Gallery1_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
                                         DelayItemLoading: =true
                                         Height: =Button4_3.Height
-                                        Items: =DEV_Documento
+                                        Items: |-
+                                            =Filter(
+                                                DEV_Documento,
+                                                ID in Filter(
+                                                    DEV_Modificacion_estatus_proceso_doc,
+                                                    ind_inact = "Activo" && Or(id_estatus_documento.Value = "Por revisar", id_estatus_documento.Value = "Por aprobar",id_estatus_documento.Value = "Observado")
+                                                ).id_doc,
+                                                searchbar_docRev_ra.Text in Nombre
+                                            )
                                         Layout: =Layout.Vertical
                                         LoadingSpinner: =LoadingSpinner.Data
                                         TemplatePadding: =0
@@ -814,42 +843,7 @@
                                     "Gallery1_2 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
                                         DelayItemLoading: =true
                                         Height: =Button4_4.Height
-                                        Items: |-
-                                            =Table( {
-                                                    Código: "LDS-PA-134",
-                                                    Nombre: "Carga del Presupuesto Anual a los sistemas inf...",
-                                                    'Tipo Documento': "Procedimiento Administrativo",
-                                                    'F. Solicitud Aprobación': "22/03/2023",
-                                                    Estado: "Aprobado"
-                                                },
-                                                {
-                                                    Código: "LDS-PA-134",
-                                                    Nombre: "Carga del Presupuesto Anual a los sistemas inf...",
-                                                    'Tipo Documento': "Procedimiento Administrativo",
-                                                    'F. Solicitud Aprobación': "22/03/2023",
-                                                    Estado: "Aprobado"
-                                                },
-                                                {
-                                                    Código: "LDS-PA-134",
-                                                    Nombre: "Carga del Presupuesto Anual a los sistemas inf...",
-                                                    'Tipo Documento': "Procedimiento Administrativo",
-                                                    'F. Solicitud Aprobación': "22/03/2023",
-                                                    Estado: "Aprobado"
-                                                },
-                                                {
-                                                    Código: "LDS-PA-134",
-                                                    Nombre: "Carga del Presupuesto Anual a los sistemas inf...",
-                                                    'Tipo Documento': "Procedimiento Administrativo",
-                                                    'F. Solicitud Aprobación': "22/03/2023",
-                                                    Estado: "Aprobado"
-                                                },
-                                                {
-                                                    Código: "LDS-PA-134",
-                                                    Nombre: "Carga del Presupuesto Anual a los sistemas inf...",
-                                                    'Tipo Documento': "Procedimiento Administrativo",
-                                                    'F. Solicitud Aprobación': "22/03/2023",
-                                                    Estado: "Aprobado"
-                                                })
+                                        Items: =SortByColumns(Filter(DEV_Modificacion_estatus_proceso_doc,ind_inact="Activo", id_estatus_documento.Value="Publicado"),"fecha",SortOrder.Ascending)
                                         Layout: =Layout.Vertical
                                         LoadingSpinner: =LoadingSpinner.Data
                                         TemplatePadding: =0
@@ -899,7 +893,7 @@
                                                     Height: =Parent.Height
                                                     PaddingLeft: =10
                                                     Size: =9.5
-                                                    Text: =ThisItem.Código
+                                                    Text: =LookUp(DEV_Documento, ID= ThisItem.id_doc).Nombre
                                                     Width: =Parent.Width-Self.X
                                                     X: =45
                                                     ZIndex: =2
@@ -912,7 +906,7 @@
                                                 FontWeight: =FontWeight.Semibold
                                                 PaddingLeft: =15
                                                 Size: =9.5
-                                                Text: =ThisItem.Nombre
+                                                Text: =LookUp(DEV_Documento, ID= ThisItem.id_doc).Nombre
                                                 ZIndex: =2
 
                                             Label4_5 As label:
@@ -924,7 +918,7 @@
                                                 Height: =Parent.Height
                                                 PaddingLeft: =10
                                                 Size: =9.5
-                                                Text: =ThisItem.'Tipo Documento'
+                                                Text: =LookUp(DEV_Documento, ID= ThisItem.id_doc).id_tipo_docu.Value
                                                 Width: =140
                                                 X: =50
                                                 ZIndex: =3
@@ -938,7 +932,7 @@
                                                 Height: =Parent.Height
                                                 PaddingLeft: =10
                                                 Size: =9.5
-                                                Text: =ThisItem.'F. Solicitud Aprobación'
+                                                Text: =ThisItem.'fecha y hora'
                                                 Width: =140
                                                 X: =50
                                                 ZIndex: =4
@@ -952,17 +946,9 @@
                                                 Button2_1 As button:
                                                     BorderColor: =Self.Color
                                                     BorderStyle: =BorderStyle.None
-                                                    Color: |-
-                                                        =Switch(ThisItem.Estado,
-                                                        "Por aprobar", RGBA(180, 130, 0, 1),
-                                                        "Observado", RGBA(214, 0, 0, 1),
-                                                        "Aprobado",RGBA(44, 143, 112, 1))
+                                                    Color: =RGBA(44, 143, 112, 1)
                                                     DisplayMode: =DisplayMode.View
-                                                    Fill: |-
-                                                        =Switch(ThisItem.Estado,
-                                                        "Por aprobar", RGBA(249, 249, 249, 1),
-                                                        "Observado", RGBA(245, 218, 216, 1),
-                                                        "Aprobado", RGBA(219, 238, 233, 1))
+                                                    Fill: =RGBA(219, 238, 233, 1)
                                                     Font: =Font.Arial
                                                     FontWeight: =FontWeight.Normal
                                                     Height: =Parent.Height*60%
@@ -971,7 +957,7 @@
                                                     RadiusTopLeft: =5
                                                     RadiusTopRight: =5
                                                     Size: =11
-                                                    Text: =ThisItem.Estado
+                                                    Text: =ThisItem.id_estatus_documento.Value
                                                     Width: =Parent.Width*80%
                                                     X: =(Parent.Width-Self.Width)/2
                                                     Y: =(Parent.Height-Self.Height)/2

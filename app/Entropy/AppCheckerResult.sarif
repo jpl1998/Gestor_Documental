@@ -38238,30 +38238,6 @@
               "message": {
                 "text": "Error occurred running rule app-InefficientDelayLoading."
               }
-            },
-            {
-              "associatedRule": {
-                "id": "app-InefficientDelayLoading",
-                "index": 9
-              },
-              "descriptor": {
-                "id": "app-InefficientDelayLoading"
-              },
-              "message": {
-                "text": "Error occurred running rule app-InefficientDelayLoading."
-              }
-            },
-            {
-              "associatedRule": {
-                "id": "app-InefficientDelayLoading",
-                "index": 9
-              },
-              "descriptor": {
-                "id": "app-InefficientDelayLoading"
-              },
-              "message": {
-                "text": "Error occurred running rule app-InefficientDelayLoading."
-              }
             }
           ]
         }
@@ -40186,6 +40162,46 @@
           },
           "ruleId": "app-ErrInvalidName",
           "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Home OP'.main_home_op.body_home_op.section_home_op.scroll_home_op.card_doc_rev_home_op.Container9.Container10.Container4_3.Gallery1_1.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Home OP'.main_home_op.body_home_op.section_home_op.scroll_home_op.card_doc_rev_home_op.Container9.Container10.Container4_3.Gallery1_1.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 36,
+                  "snippet": {
+                    "text": "in"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "Home OP",
+                "type": "'Home OP'.main_home_op.body_home_op.section_home_op.scroll_home_op.card_doc_rev_home_op.Container9.Container10.Container4_3.Gallery1_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-InOpRhs",
+          "ruleIndex": 0
         },
         {
           "locations": [
@@ -42146,6 +42162,46 @@
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
           "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "DocHistóricoOP.ScreenContainer1_5.BottomContainer1_5.MainContainer1_5.Container9_9.Container10_9.Container4_32.Gallery1_15.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "DocHistóricoOP.ScreenContainer1_5.BottomContainer1_5.MainContainer1_5.Container9_9.Container10_9.Container4_32.Gallery1_15.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 764,
+                  "snippet": {
+                    "text": "in"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "DocHistóricoOP",
+                "type": "DocHistóricoOP.ScreenContainer1_5.BottomContainer1_5.MainContainer1_5.Container9_9.Container10_9.Container4_32.Gallery1_15"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-InOpRhs",
+          "ruleIndex": 0
         },
         {
           "locations": [

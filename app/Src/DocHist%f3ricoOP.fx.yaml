@@ -224,20 +224,6 @@
                             Text: ="Documentos en Proceso"
                             ZIndex: =1
 
-                        Button3_31 As button:
-                            Fill: =primary
-                            FillPortions: =1
-                            OnSelect: |-
-                                =Set(varpopupnewdoc,true);
-                                Set(varDocumento,Defaults(DEV_Documento))
-                            RadiusBottomLeft: =5
-                            RadiusBottomRight: =5
-                            RadiusTopLeft: =5
-                            RadiusTopRight: =5
-                            Size: =14
-                            Text: ="Enviar Documento para Revisión"
-                            ZIndex: =2
-
                     Container11_9 As groupContainer.horizontalAutoLayoutContainer:
                         DropShadow: =DropShadow.None
                         FillPortions: =0.1
@@ -385,7 +371,7 @@
                                 LayoutMinHeight: =30
                                 PaddingLeft: =15
                                 Size: =10
-                                Text: ="F. Solicitud Aprobación"
+                                Text: ="F. de Baja"
                                 ZIndex: =4
 
                             Label2_301 As label:
@@ -429,7 +415,23 @@
                             "Gallery1_15 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
                                 DelayItemLoading: =true
                                 Height: =Button4_26.Height
-                                Items: =DEV_Documento
+                                Items: |-
+                                    =Filter(
+                                        DEV_Documento,
+                                        IsBlank(varFilterMenu.cargadoPor) || 'Created By'.Email = varFilterMenu.cargadoPor.Mail,
+                                        IsBlank(varFilterMenu.tipoDocumento) || id_tipo_docu.Value = varFilterMenu.tipoDocumento.Value,
+                                        IsBlank(varFilterMenu.dueProceso) || 'Dueño  del Processo'.Email = varFilterMenu.dueProceso.Mail,
+                                        IsBlank(varFilterMenu.alcance) || id_alcance.Value = varFilterMenu.alcance.Value,
+                                        IsBlank(varFilterMenu.macroproceso) || id_macroproceso.Value = varFilterMenu.macroproceso.Value,
+                                        IsBlank(varFilterMenu.proceso) || id_proceso.Value = varFilterMenu.proceso.Value,
+                                        IsBlank(varFilterMenu.fechaDesde) || varFilterMenu.fechaDesde <= fecha,
+                                        IsBlank(varFilterMenu.fechaHasta) || varFilterMenu.fechaHasta >= fecha,
+                                        ID in Filter(
+                                            DEV_Modificacion_estatus_proceso_doc,
+                                            ind_inact = "Activo" && Or(id_estatus_documento.Value = "Cancelado")
+                                        ).id_doc,
+                                        searchbar_docRev_ra.Text in Nombre
+                                    )
                                 Layout: =Layout.Vertical
                                 LoadingSpinner: =LoadingSpinner.Data
                                 TemplatePadding: =0
@@ -518,7 +520,7 @@
                                         Height: =Parent.Height
                                         PaddingLeft: =10
                                         Size: =9.5
-                                        Text: =ThisItem.fecha
+                                        Text: =LookUp(DEV_Modificacion_estatus_proceso_doc,codigo=ThisItem.codigo && version=ThisItem.version && ind_inact="Activo" && id_doc=ThisItem.ID,'fecha y hora')
                                         Width: =140
                                         X: =50
                                         ZIndex: =4
@@ -537,6 +539,7 @@
                                                 "Por aprobar", RGBA(180, 130, 0, 1),
                                                 "Por revisar",RGBA(180, 130, 0, 1),
                                                 "Observado", RGBA(214, 0, 0, 1),
+                                                "Cancelado", RGBA(214, 0, 0, 1),
                                                 "Aprobado",RGBA(44, 143, 112, 1),
                                                 "Publicado",RGBA(44, 143, 112, 1),
                                                 "Difundido",RGBA(44, 143, 112, 1))
@@ -546,6 +549,7 @@
                                                 "Por aprobar", RGBA(249, 249, 249, 1),
                                                 "Por revisar",RGBA(249, 249, 249, 1),
                                                 "Observado", RGBA(245, 218, 216, 1),
+                                                "Cancelado", RGBA(245, 218, 216, 1),
                                                 "Aprobado",RGBA(219, 238, 233, 1),
                                                 "Publicado",RGBA(219, 238, 233, 1),
                                                 "Difundido",RGBA(219, 238, 233, 1),ColorValue("#ffffff"))
