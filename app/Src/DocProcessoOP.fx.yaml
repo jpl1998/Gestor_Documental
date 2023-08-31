@@ -553,7 +553,7 @@
                                             RadiusTopLeft: =5
                                             RadiusTopRight: =5
                                             Size: =11
-                                            Text: =LookUp(DEV_Modificacion_estatus_proceso_doc,id_documento.Id = ID,id_estatus_documento.Value)
+                                            Text: =LookUp(DEV_Modificacion_estatus_proceso_doc,codigo=ThisItem.codigo && version=ThisItem.version && ind_inact="Activo" && id_doc=ThisItem.ID,id_estatus_documento.Value)
                                             Width: =Parent.Width*80%
                                             X: =(Parent.Width-Self.Width)/2
                                             Y: =(Parent.Height-Self.Height)/2
@@ -3817,7 +3817,7 @@
                         Text: =ThisItem.SampleHeading
                         VerticalAlign: =VerticalAlign.Top
                         Width: =Parent.TemplateWidth - 200
-                        X: =16
+                        X: =15
                         Y: =(Parent.TemplateHeight - (Self.Size * 1.8 + Subtitle2_4.Size * 1.8)) / 2
                         ZIndex: =1
 
@@ -3834,7 +3834,7 @@
                         Text: =ThisItem.SampleHeading
                         VerticalAlign: =VerticalAlign.Top
                         Width: =Title2_4.Width
-                        X: =Title2_4.X
+                        X: =15
                         Y: =Title2_4.Y + Title2_4.Height
                         ZIndex: =2
 
@@ -3843,8 +3843,8 @@
                         Icon: =Icon.View
                         OnSelect: =Select(Parent)
                         Width: =15
-                        X: =304
-                        Y: =25
+                        X: =281
+                        Y: =30
                         ZIndex: =3
 
                     verObs_button_sidebar_ra_13 As button:
@@ -3862,8 +3862,8 @@
                         Size: =10
                         Text: ="Revisar"
                         Width: =80
-                        X: =299
-                        Y: =23
+                        X: =281
+                        Y: =28
                         ZIndex: =4
 
                 "aprobador_evaluacion_sidebar_op As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
@@ -3911,7 +3911,7 @@
                         VerticalAlign: =VerticalAlign.Top
                         Width: =Parent.TemplateWidth - 200
                         X: =63
-                        Y: =17
+                        Y: =16
                         ZIndex: =2
 
                     Subtitle1_25 As label:
@@ -3931,7 +3931,7 @@
                             LookUp(DEV_Interlocutor, ID = Value(ThisItem.id_interlocutor.Value)).Email.JobTitle)
                         VerticalAlign: =VerticalAlign.Top
                         Width: =Title1_34.Width
-                        X: =Title1_34.X
+                        X: =63
                         Y: =Title1_34.Y + Title1_34.Height
                         ZIndex: =3
 
@@ -3939,7 +3939,7 @@
                         Fill: =placeholder
                         Height: =1
                         OnSelect: =Select(Parent)
-                        Width: =420
+                        Width: =1
                         Y: =69
                         ZIndex: =4
 
@@ -3953,8 +3953,7 @@
                         Size: =12
                         Text: ="Observado"
                         Visible: =!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version, id_status_archivo.Value="2"))
-                        Width: =120
-                        X: =295
+                        Width: =1
                         Y: =14
                         ZIndex: =5
 
@@ -3964,8 +3963,7 @@
                         Icon: =Icon.Information
                         OnSelect: =Select(Parent)
                         Visible: =!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version, id_status_archivo.Value="2"))
-                        Width: =20
-                        X: =288
+                        Width: =1
                         Y: =16
                         ZIndex: =6
 
@@ -3974,8 +3972,7 @@
                         Icon: =Icon.View
                         OnSelect: =Select(Parent)
                         Visible: =!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version, id_status_archivo.Value="2"))
-                        Width: =15
-                        X: =293
+                        Width: =1
                         Y: =40
                         ZIndex: =7
 
@@ -3995,8 +3992,7 @@
                         Text: ="Ver Observación"
                         Underline: =true
                         Visible: =!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version, id_status_archivo.Value="2"))
-                        Width: =110
-                        X: =288
+                        Width: =1
                         Y: =38
                         ZIndex: =8
 
@@ -4012,8 +4008,7 @@
                             =If(!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version)),
                             If(!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version, id_status_archivo.Value="2")), "Observado", "Conforme"))
                         Visible: =IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version, id_status_archivo.Value="2"))
-                        Width: =120
-                        X: =295
+                        Width: =1
                         Y: =14
                         ZIndex: =9
 
@@ -4024,8 +4019,7 @@
                         Visible: |-
                             =!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version)) &&
                             IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version, id_status_archivo.Value="2"))
-                        Width: =20
-                        X: =288
+                        Width: =1
                         Y: =16
                         ZIndex: =10
 
@@ -4035,7 +4029,6 @@
                         Text: =LookUp(DEV_Interlocutor, ID = Value(ThisItem.id_interlocutor.Value)).Email.Email
                         Visible: =false
                         Width: =261
-                        X: =60
                         Y: =51
                         ZIndex: =11
 
@@ -4224,7 +4217,7 @@
                         VerticalAlign: =VerticalAlign.Top
                         Width: =Parent.TemplateWidth - 200
                         X: =63
-                        Y: =17
+                        Y: =16
                         ZIndex: =2
 
                     Subtitle1_27 As label:
@@ -4244,7 +4237,7 @@
                             LookUp(DEV_Interlocutor, ID = Value(ThisItem.id_interlocutor.Value)).Email.JobTitle)
                         VerticalAlign: =VerticalAlign.Top
                         Width: =Title1_36.Width
-                        X: =Title1_36.X
+                        X: =63
                         Y: =Title1_36.Y + Title1_36.Height
                         ZIndex: =3
 
@@ -4252,7 +4245,7 @@
                         Fill: =placeholder
                         Height: =1
                         OnSelect: =Select(Parent)
-                        Width: =420
+                        Width: =1
                         Y: =69
                         ZIndex: =4
 
@@ -4267,8 +4260,7 @@
                         Text: |-
                             =If(!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version)),
                             If(!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version, id_status_archivo.Value="2")), "Observado", "Conforme"))
-                        Width: =120
-                        X: =295
+                        Width: =1
                         Y: =14
                         ZIndex: =5
 
@@ -4278,8 +4270,7 @@
                         Icon: =Icon.Information
                         OnSelect: =Select(Parent)
                         Visible: =!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version, id_status_archivo.Value="2"))
-                        Width: =20
-                        X: =288
+                        Width: =1
                         Y: =16
                         ZIndex: =6
 
@@ -4288,8 +4279,7 @@
                         Icon: =Icon.View
                         OnSelect: =Select(Parent)
                         Visible: =!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version, id_status_archivo.Value="2"))
-                        Width: =15
-                        X: =293
+                        Width: =1
                         Y: =40
                         ZIndex: =7
 
@@ -4309,8 +4299,7 @@
                         Text: ="Ver Observación"
                         Underline: =true
                         Visible: =!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version, id_status_archivo.Value="2"))
-                        Width: =110
-                        X: =288
+                        Width: =1
                         Y: =38
                         ZIndex: =8
 
@@ -4321,8 +4310,7 @@
                         Visible: |-
                             =!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version)) &&
                             IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version, id_status_archivo.Value="2"))
-                        Width: =20
-                        X: =288
+                        Width: =1
                         Y: =16
                         ZIndex: =10
 
@@ -4332,7 +4320,6 @@
                         Text: =LookUp(DEV_Interlocutor, ID = Value(ThisItem.id_interlocutor.Value)).Email.Email
                         Visible: =false
                         Width: =261
-                        X: =63
                         Y: =51
                         ZIndex: =11
 

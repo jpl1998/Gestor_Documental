@@ -615,7 +615,7 @@
                                             RadiusTopLeft: =5
                                             RadiusTopRight: =5
                                             Size: =11
-                                            Text: =LookUp(DEV_Modificacion_estatus_proceso_doc,codigo=ThisItem.codigo && ind_inact="Activo" && id_doc=ThisItem.ID).id_estatus_documento.Value
+                                            Text: =LookUp(DEV_Modificacion_estatus_proceso_doc,codigo=ThisItem.codigo && version=ThisItem.version && ind_inact="Activo" && id_doc=ThisItem.ID).id_estatus_documento.Value
                                             Width: =Parent.Width*80%
                                             X: =(Parent.Width-Self.Width)/2
                                             Y: =(Parent.Height-Self.Height)/2
