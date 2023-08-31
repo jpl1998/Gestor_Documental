@@ -3815,7 +3815,7 @@
 
                 "registro_evaluacion_sidebar_op As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
                     DelayItemLoading: =true
-                    Items: =CustomGallerySample
+                    Items: =GroupBy(Filter(DEV_Modificacion_estatus_proceso_doc,id_doc=varDocSide.ID),"version","verGroup")
                     Layout: =Layout.Vertical
                     LayoutMinHeight: =287
                     LayoutMinWidth: =320
@@ -3835,7 +3835,7 @@
                         PaddingRight: =0
                         PaddingTop: =0
                         Size: =12
-                        Text: =ThisItem.SampleHeading
+                        Text: ="Entrega N° " & ThisItem.version
                         VerticalAlign: =VerticalAlign.Top
                         Width: =Parent.TemplateWidth - 200
                         X: =15
@@ -3852,7 +3852,7 @@
                         PaddingRight: =0
                         PaddingTop: =0
                         Size: =8
-                        Text: =ThisItem.SampleHeading
+                        Text: =Last(ThisItem.verGroup).'fecha y hora'
                         VerticalAlign: =VerticalAlign.Top
                         Width: =Title2_4.Width
                         X: =15
