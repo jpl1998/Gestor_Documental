@@ -5793,7 +5793,7 @@
                                             Icon: =Icon.Trash
                                             LayoutMinHeight: =20
                                             OnSelect: |-
-                                                =UpdateContext({varSelectedElaborador:ThisItem, varPopupEliminarElaborador:true})
+                                                =UpdateContext({varSelectedElaborador:ThisItem, varTipoUsuario:"Revisor", varPopupEliminarRevisor:true})
                                             Visible: =!IsBlank(Label2_277)
                                             Width: =Self.Height
                                             ZIndex: =4
@@ -5821,6 +5821,9 @@
                                     HoverFill: =RGBA(255, 255, 255, 1)
                                     OnSelect: |-
                                         =Reset(cbo_solicitante_3);
+                                        UpdateContext({
+                                            varTipoUsuario:"Revisor"
+                                        });
                                         Set(varPopupNuevoIntegrante,true);
                                     PaddingBottom: =0
                                     PaddingLeft: =0
@@ -5956,7 +5959,7 @@
                                             Icon: =Icon.Trash
                                             LayoutMinHeight: =20
                                             OnSelect: |-
-                                                =UpdateContext({varSelectedElaborador:ThisItem, varPopupEliminarElaborador:true})
+                                                =UpdateContext({varSelectedElaborador:ThisItem, varTipoUsuario:"Aprobador", varPopupEliminarRevisor:true})
                                             Visible: =!IsBlank(Label2_279)
                                             Width: =Self.Height
                                             ZIndex: =4
@@ -5984,6 +5987,9 @@
                                     HoverFill: =RGBA(255, 255, 255, 1)
                                     OnSelect: |-
                                         =Reset(cbo_solicitante_3);
+                                        UpdateContext({
+                                            varTipoUsuario:"Aprobador"
+                                        });
                                         Set(varPopupNuevoIntegrante,true);
                                     PaddingBottom: =0
                                     PaddingLeft: =0
@@ -6711,6 +6717,22 @@
                                     nombreCompleto: cbo_solicitante_3.Selected.DisplayName,
                                     email: cbo_solicitante_3.Selected.Mail
                                 }
+                            ),
+                            "Revisor",
+                            Collect(
+                                colRevisores,
+                                {
+                                    nombreCompleto: cbo_solicitante_3.Selected.DisplayName,
+                                    email: cbo_solicitante_3.Selected.Mail
+                                }
+                            ),
+                            "Aprobador",
+                            Collect(
+                                colAprobadores,
+                                {
+                                    nombreCompleto: cbo_solicitante_3.Selected.DisplayName,
+                                    email: cbo_solicitante_3.Selected.Mail
+                                }
                             )
                         );
                         Set(varPopupNuevoIntegrante,false);
@@ -6731,7 +6753,7 @@
                 Y: =20
                 ZIndex: =2
 
-    popup_nuevo_integrante_1 As groupContainer.manualLayoutContainer:
+    popup_eliminar_integrante As groupContainer.manualLayoutContainer:
         Fill: =RGBA(51, 51, 51, 0.27)
         Height: =Parent.Height
         Visible: =varPopupEliminarElaborador
@@ -6846,6 +6868,132 @@
                 Icon: =Icon.Cancel
                 OnSelect: |-
                     =UpdateContext({varPopupEliminarElaborador:false})
+                Width: =25
+                X: =505
+                Y: =20
+                ZIndex: =2
+
+    popup_eliminar_integrante_1 As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(51, 51, 51, 0.27)
+        Height: =Parent.Height
+        Visible: =varPopupEliminarRevisor
+        Width: =Parent.Width
+        ZIndex: =20
+
+        Container22_22 As groupContainer.manualLayoutContainer:
+            DropShadow: =DropShadow.Semibold
+            Fill: =RGBA(246, 247, 251, 1)
+            Height: =264
+            PaddingBottom: =10
+            PaddingTop: =10
+            Width: =Parent.Width*40%
+            X: =(Parent.Width-Self.Width)/2
+            Y: =(Parent.Height-Self.Height)/2
+            ZIndex: =3
+
+            Container13_97 As groupContainer.verticalAutoLayoutContainer:
+                DropShadow: =DropShadow.None
+                Height: =Parent.Height
+                LayoutAlignItems: =LayoutAlignItems.Stretch
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutGap: =10
+                LayoutMode: =LayoutMode.Auto
+                PaddingBottom: =20
+                PaddingLeft: =20
+                PaddingRight: =20
+                PaddingTop: =10
+                Width: =Parent.Width
+                ZIndex: =1
+
+                Label4_117 As label:
+                    Align: =Align.Center
+                    FontWeight: =FontWeight.Bold
+                    Size: =18
+                    Text: ="Quitar " & varTipoUsuario
+                    ZIndex: =1
+
+                Container13_98 As groupContainer.verticalAutoLayoutContainer:
+                    DropShadow: =DropShadow.None
+                    Height: =452
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutGap: =15
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =50
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =20
+                    PaddingLeft: =20
+                    PaddingRight: =20
+                    PaddingTop: =20
+                    Width: =602
+                    X: =736
+                    Y: =207
+                    ZIndex: =2
+
+                    lb_upload_doc_op_18 As label:
+                        Align: =Align.Center
+                        AlignInContainer: =AlignInContainer.Stretch
+                        Color: =primarytext
+                        Height: =50
+                        LayoutMinHeight: =30
+                        Text: ="¿Está seguro de quitar al " & Lower(varTipoUsuario) & " " & varSelectedElaborador.nombreCompleto &" ?"
+                        ZIndex: =7
+
+                Container6_1 As groupContainer.manualLayoutContainer:
+                    DropShadow: =DropShadow.None
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    ZIndex: =3
+
+                    bt_seguiente_upload_op_11 As button:
+                        BorderColor: =red
+                        Color: =red
+                        Fill: =RGBA(255, 255, 255, 1)
+                        Height: =50
+                        HoverFill: =ColorFade(red, -20%)
+                        OnSelect: |-
+                            =Switch(
+                                varTipoUsuario,
+                                "Revisor",
+                                RemoveIf(colRevisores,varSelectedElaborador.email=email),
+                                "Aprobador",
+                                RemoveIf(colAprobadores,varSelectedElaborador.email=email)
+                            );
+                            UpdateContext({varPopupEliminarRevisor:false});
+                        RadiusBottomLeft: =5
+                        RadiusBottomRight: =5
+                        RadiusTopLeft: =5
+                        RadiusTopRight: =5
+                        Size: =14
+                        Text: ="Sí, Quitar"
+                        Width: =200
+                        X: =270
+                        Y: =25
+                        ZIndex: =1
+
+                    bt_seguiente_upload_op_12 As button:
+                        BorderColor: =primary
+                        Color: =primary
+                        Fill: =RGBA(255, 255, 255, 1)
+                        Height: =50
+                        OnSelect: |-
+                            =UpdateContext({varPopupEliminarRevisor:false});
+                        RadiusBottomLeft: =5
+                        RadiusBottomRight: =5
+                        RadiusTopLeft: =5
+                        RadiusTopRight: =5
+                        Size: =14
+                        Text: ="No, Cancelar"
+                        Width: =200
+                        X: =38
+                        Y: =25
+                        ZIndex: =2
+
+            Icon1_55 As icon.Cancel:
+                Height: =25
+                Icon: =Icon.Cancel
+                OnSelect: |-
+                    =UpdateContext({varPopupEliminarRevisor:false})
                 Width: =25
                 X: =505
                 Y: =20
