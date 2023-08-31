@@ -476,7 +476,7 @@
                                             =With(
                                                {
                                                   items:
-                                                  Filter(DEV_Modificacion_estatus_proceso_doc,ind_inact="Activo", id_estatus_documento.Value="Difundido")
+                                                  Filter(DEV_Modificacion_estatus_proceso_doc,ind_inact="Activo", id_estatus_documento.Value="Publicado" || id_estatus_documento.Value="Difundido")
                                                },
                                                CountRows(items)
                                             )
@@ -1215,7 +1215,7 @@
                                     "Gallery1_7 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
                                         DelayItemLoading: =true
                                         Height: =Button4_8.Height
-                                        Items: =SortByColumns(Filter(DEV_Modificacion_estatus_proceso_doc,ind_inact="Activo", id_estatus_documento.Value="Por aprobar"),"fecha",SortOrder.Ascending)
+                                        Items: =SortByColumns(Filter(DEV_Modificacion_estatus_proceso_doc,ind_inact="Activo", id_estatus_documento.Value="Por aprobar"),"fecha",SortOrder.Descending)
                                         Layout: =Layout.Vertical
                                         LoadingSpinner: =LoadingSpinner.Data
                                         TemplatePadding: =0
@@ -1501,7 +1501,7 @@
                                     "gallery_doc_publ_home_ra As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
                                         DelayItemLoading: =true
                                         Height: =Button4_9.Height
-                                        Items: =SortByColumns(Filter(DEV_Modificacion_estatus_proceso_doc,ind_inact="Activo", id_estatus_documento.Value="Difundido"),"fecha",SortOrder.Ascending)
+                                        Items: =SortByColumns(Filter(DEV_Modificacion_estatus_proceso_doc,ind_inact="Activo", id_estatus_documento.Value="Publicado"),"fecha",SortOrder.Ascending)
                                         Layout: =Layout.Vertical
                                         LoadingSpinner: =LoadingSpinner.Data
                                         TemplatePadding: =0
@@ -1608,13 +1608,17 @@
                                                         =Switch(ThisItem.id_estatus_documento.Value,
                                                         "Por aprobar", RGBA(180, 130, 0, 1),
                                                         "Observado", RGBA(214, 0, 0, 1),
-                                                        "Aprobado",RGBA(44, 143, 112, 1))
+                                                        "Aprobado",RGBA(44, 143, 112, 1),
+                                                        "Publicado",RGBA(44, 143, 112, 1),
+                                                        "Difundido",RGBA(44, 143, 112, 1))
                                                     DisplayMode: =DisplayMode.View
                                                     Fill: |-
                                                         =Switch(ThisItem.id_estatus_documento.Value,
                                                         "Por aprobar", RGBA(249, 249, 249, 1),
                                                         "Observado", RGBA(245, 218, 216, 1),
-                                                        "Aprobado", RGBA(219, 238, 233, 1))
+                                                        "Aprobado", RGBA(219, 238, 233, 1),
+                                                        "Publicado", RGBA(219, 238, 233, 1),
+                                                        "Difundido", RGBA(219, 238, 233, 1))
                                                     Font: =Font.Arial
                                                     FontWeight: =FontWeight.Normal
                                                     Height: =Parent.Height*60%

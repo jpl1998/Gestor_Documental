@@ -473,6 +473,11 @@
                                             IsBlank(varFilterMenu.proceso) || id_proceso.Value = varFilterMenu.proceso.Value,
                                             IsBlank(varFilterMenu.fechaDesde) || varFilterMenu.fechaDesde<=fecha,
                                             IsBlank(varFilterMenu.fechaHasta) || varFilterMenu.fechaHasta>=fecha,
+                                            ID in Distinct(AddColumns(Filter(
+                                                DEV_Actor,
+                                                id_funcion.Value = "Aprobador",
+                                                id_interlocutor.Value = Text(LookUp(DEV_Interlocutor, Email.Email=User().Email).ID)
+                                                ),"idInt",id_documento.Value),idInt),
                                             ID in Filter(
                                                 DEV_Modificacion_estatus_proceso_doc,
                                                 ind_inact = "Activo" && id_estatus_documento.Value = "Por aprobar"
