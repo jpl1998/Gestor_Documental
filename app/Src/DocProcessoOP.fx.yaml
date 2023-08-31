@@ -537,14 +537,18 @@
                                                 "Por aprobar", RGBA(180, 130, 0, 1),
                                                 "Por revisar",RGBA(180, 130, 0, 1),
                                                 "Observado", RGBA(214, 0, 0, 1),
-                                                "Aprobado",RGBA(44, 143, 112, 1))
+                                                "Aprobado",RGBA(44, 143, 112, 1),
+                                                "Publicado",RGBA(44, 143, 112, 1),
+                                                "Difundido",RGBA(44, 143, 112, 1))
                                             DisplayMode: =DisplayMode.View
                                             Fill: |-
                                                 =Switch(Self.Text,
                                                 "Por aprobar", RGBA(249, 249, 249, 1),
                                                 "Por revisar",RGBA(249, 249, 249, 1),
                                                 "Observado", RGBA(245, 218, 216, 1),
-                                                "Aprobado", RGBA(219, 238, 233, 1),ColorValue("#ffffff"))
+                                                "Aprobado",RGBA(219, 238, 233, 1),
+                                                "Publicado",RGBA(219, 238, 233, 1),
+                                                "Difundido",RGBA(219, 238, 233, 1),ColorValue("#ffffff"))
                                             Font: =Font.Arial
                                             FontWeight: =FontWeight.Normal
                                             Height: =Parent.Height*60%
@@ -4295,14 +4299,18 @@
                         "Documento Por aprobar", RGBA(180, 130, 0, 1),
                         "Documento Por revisar",RGBA(180, 130, 0, 1),
                         "Documento Observado", RGBA(214, 0, 0, 1),
-                        "Documento Aprobado",RGBA(44, 143, 112, 1))
+                        "Documento Aprobado",RGBA(44, 143, 112, 1),
+                        "Documento Publicado",RGBA(44, 143, 112, 1),
+                        "Documento Difundido",RGBA(44, 143, 112, 1))
                     DisplayMode: =DisplayMode.View
                     Fill: |-
                         =Switch(Self.Text,
                         "Documento Por aprobar", RGBA(249, 249, 249, 1),
                         "Documento Por revisar",RGBA(249, 249, 249, 1),
                         "Documento Observado", RGBA(245, 218, 216, 1),
-                        "Documento Aprobado", RGBA(219, 238, 233, 1))
+                        "Documento Aprobado", RGBA(219, 238, 233, 1),
+                        "Documento Publicado", RGBA(219, 238, 233, 1),
+                        "Documento Difundido", RGBA(219, 238, 233, 1))
                     Font: =Font.Arial
                     FontWeight: =FontWeight.Normal
                     Height: =Parent.Height*60%
@@ -4312,10 +4320,49 @@
                     RadiusTopRight: =5
                     Size: =11
                     Text: ="Documento " & varDocEstado
+                    Visible: =varDocEstado<>"Aprobado"
                     Width: =Parent.Width*80%
                     X: =(Parent.Width-Self.Width)/2
                     Y: =(Parent.Height-Self.Height)/2
                     ZIndex: =1
+
+                Button8 As button:
+                    BorderColor: =Self.Color
+                    Color: =primary
+                    Fill: =RGBA(255, 255, 255, 1)
+                    Height: =47
+                    OnSelect: |-
+                        =//Estatus Processo Doc
+                        UpdateIf(
+                            DEV_Modificacion_estatus_proceso_doc, id_doc = varDocSide.ID,
+                            {
+                                'fecha y hora': Now(),
+                                ind_inact:"Inactivo",
+                                ind_mod:"u"
+                            }
+                        );
+                        
+                        Patch(DEV_Modificacion_estatus_proceso_doc,Defaults(DEV_Modificacion_estatus_proceso_doc),
+                            {codigo:varDocSide.codigo,
+                            version:varDocSide.version,
+                            id_estatus_procesos:{Id:2 , Value:2},
+                            id_documento: {Id:varDocSide.ID , Value:varDocSide.ID},
+                            id_estatus_documento:{Id:5 , Value:5},
+                            nro_mod:1,
+                            'fecha y hora': Now(),
+                            ind_inact:"Activo",
+                            ind_mod:"i",
+                            id_doc:varDocSide.ID}
+                        );
+                        
+                        Publicararchivosenbibliotecapublica.Run(varDocSide.ID);
+                        Set(varsidebarop,false)
+                    Text: ="Publicar Documento"
+                    Visible: =varDocEstado="Aprobado"
+                    Width: =336
+                    X: =42
+                    Y: =15
+                    ZIndex: =2
 
     popupformeditop As groupContainer.manualLayoutContainer:
         Fill: =RGBA(51, 51, 51, 0.27)
