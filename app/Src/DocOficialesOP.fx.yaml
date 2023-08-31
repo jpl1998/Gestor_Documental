@@ -1434,7 +1434,7 @@
                                 Tooltip: =
                                 Width: =Parent.Width - 60
                                 X: =30
-                                Y: =DataCardKey13.Y + DataCardKey13.Height + 5
+                                Y: =
                                 ZIndex: =3
 
                         Container15_103 As groupContainer.verticalAutoLayoutContainer:

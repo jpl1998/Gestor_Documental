@@ -3872,6 +3872,7 @@
                     Items: |-
                         =Filter(
                             DEV_Actor,
+                            version = varDocSide.version,
                             id_documento.Value = Text(varDocSide.ID),
                             id_funcion.Value = "Aprobador"
                         )
@@ -3954,7 +3955,8 @@
                         Size: =12
                         Text: ="Observado"
                         Visible: =!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version, id_status_archivo.Value="2"))
-                        Width: =1
+                        Width: =120
+                        X: =293
                         Y: =14
                         ZIndex: =5
 
@@ -4043,6 +4045,7 @@
                     Items: |-
                         =Filter(
                             DEV_Actor,
+                            version = varDocSide.version,
                             id_documento.Value = Text(varDocSide.ID),
                             id_funcion.Value = "Elaborador"
                         )
@@ -4126,6 +4129,7 @@
                     Items: |-
                         =Filter(
                             DEV_Actor,
+                            version = varDocSide.version,
                             id_documento.Value = Text(varDocSide.ID),
                             id_funcion.Value = "Revisor"
                         )
@@ -4733,7 +4737,8 @@
                                 AlignInContainer: =AlignInContainer.Stretch
                                 BorderColor: =secondarytext
                                 BorderThickness: =1
-                                Default: =varDocSide.version
+                                Default: =varDocSide.version + 1
+                                DisplayMode: =DisplayMode.Disabled
                                 HoverBorderColor: =primary
                                 HoverFill: =RGBA(255, 255, 255, 1)
                                 Size: =10
@@ -4830,6 +4835,77 @@
                                 SelectMultiple: =false
                                 Size: =10
                                 ZIndex: =2
+
+                    Container14_25 As groupContainer.horizontalAutoLayoutContainer:
+                        DropShadow: =DropShadow.None
+                        Height: =100
+                        LayoutMinHeight: =50
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =6
+
+                        Container15_56 As groupContainer.verticalAutoLayoutContainer:
+                            DropShadow: =DropShadow.None
+                            Height: =100
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutMinHeight: =50
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            PaddingBottom: =10
+                            PaddingLeft: =10
+                            PaddingRight: =10
+                            PaddingTop: =10
+                            ZIndex: =1
+
+                            Label2_108 As label:
+                                AlignInContainer: =AlignInContainer.Stretch
+                                Color: =primarytext
+                                FontWeight: =FontWeight.Bold
+                                Height: =30
+                                LayoutMinHeight: =30
+                                Text: ="Proceso*"
+                                ZIndex: =1
+
+                            ComboBox2_29 As combobox:
+                                AlignInContainer: =AlignInContainer.Stretch
+                                BorderColor: =secondarytext
+                                BorderThickness: =1
+                                ChevronBackground: =RGBA(255, 255, 255, 1)
+                                ChevronFill: =primary
+                                ChevronHoverBackground: =
+                                ChevronHoverFill: =primary
+                                Color: =secondarytext
+                                Default: =varDocSide.id_macroproceso
+                                DefaultSelectedItems: =varDocSide.id_proceso
+                                DisplayFields: =["Value"]
+                                HoverBorderColor: =
+                                HoverColor: =RGBA(26, 26, 26, 1)
+                                HoverFill: =RGBA(215, 223, 240, 1)
+                                InputTextPlaceholder: ="Seleccione Opción"
+                                IsSearchable: =false
+                                Items: =Choices(DEV_Documento[@id_proceso])
+                                LayoutMinWidth: =50
+                                PressedBorderColor: =secondarytext
+                                PressedColor: =RGBA(26, 26, 26, 1)
+                                PressedFill: =RGBA(0, 0, 0, 0)
+                                SearchFields: =["Value"]
+                                SearchItems: =[]
+                                SelectMultiple: =false
+                                Size: =10
+                                ZIndex: =2
+
+                        Container15_55 As groupContainer.verticalAutoLayoutContainer:
+                            DropShadow: =DropShadow.None
+                            Height: =100
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutMinHeight: =50
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            PaddingBottom: =10
+                            PaddingLeft: =10
+                            PaddingRight: =10
+                            PaddingTop: =10
+                            ZIndex: =2
 
                 Container14_36 As groupContainer.horizontalAutoLayoutContainer:
                     DropShadow: =DropShadow.None
@@ -5040,10 +5116,10 @@
                                 Y: =(Parent.Height-Self.Height)/2
                                 ZIndex: =3
 
-                        FormUploadDoc_1 As form:
+                        FormEditPrincipal As form:
                             DataSource: =DEV_Archivos
                             Height: =196
-                            Item: =LookUp(DEV_Archivos,id_documento.Value = Text(varDocSide.ID) And tipo_documento = "Principal",ThisRecord)
+                            Item: =LookUp(DEV_Archivos,version=varDocSide.version && id_documento.Value = Text(varDocSide.ID) And tipo_documento = "Principal",ThisRecord)
                             LayoutMinHeight: =73
                             LayoutMinWidth: =400
                             NumberOfColumns: =1
@@ -5063,7 +5139,7 @@
                                 Height: =Parent.Height
                                 Required: =false
                                 Update: =DataCardValue7_1.Attachments
-                                Width: =Parent.Width
+                                Width: =489
                                 X: =0
                                 Y: =0
                                 ZIndex: =2
@@ -5146,10 +5222,10 @@
                                 Y: =(Parent.Height-Self.Height)/2
                                 ZIndex: =3
 
-                        FormUploadDoc_2 As form:
+                        FormEditFlujograma As form:
                             DataSource: =DEV_Archivos
                             Height: =196
-                            Item: =LookUp(DEV_Archivos,id_documento.Value = Text(varDocSide.ID) And tipo_documento = "Flujograma",ThisRecord)
+                            Item: =LookUp(DEV_Archivos, version=varDocSide.version && id_documento.Value = Text(varDocSide.ID) And tipo_documento = "Flujograma",ThisRecord)
                             LayoutMinHeight: =73
                             LayoutMinWidth: =400
                             NumberOfColumns: =1
@@ -5169,7 +5245,7 @@
                                 Height: =Parent.Height
                                 Required: =false
                                 Update: =DataCardValue7_2.Attachments
-                                Width: =Parent.Width
+                                Width: =489
                                 X: =0
                                 Y: =0
                                 ZIndex: =2
@@ -5252,10 +5328,10 @@
                                 Y: =(Parent.Height-Self.Height)/2
                                 ZIndex: =3
 
-                        FormUploadDoc_3 As form:
+                        FormEditRcki As form:
                             DataSource: =DEV_Archivos
                             Height: =196
-                            Item: =LookUp(DEV_Archivos,id_documento.Value = Text(varDocSide.ID) And tipo_documento = "RCKI",ThisRecord)
+                            Item: =LookUp(DEV_Archivos,version=varDocSide.version && id_documento.Value = Text(varDocSide.ID) And tipo_documento = "RCKI",ThisRecord)
                             LayoutMinHeight: =73
                             LayoutMinWidth: =400
                             NumberOfColumns: =1
@@ -5275,7 +5351,7 @@
                                 Height: =Parent.Height
                                 Required: =false
                                 Update: =DataCardValue7_3.Attachments
-                                Width: =Parent.Width
+                                Width: =489
                                 X: =0
                                 Y: =0
                                 ZIndex: =2
@@ -5399,8 +5475,8 @@
                                         Collect(
                                             colElaboradores,
                                             {
-                                                nombreCompleto: user.'id_interlocutor: Nombre'.Value & " " & user.'id_interlocutor: Apellido'.Value,
-                                                email: LookUp(DEV_Interlocutor, ID = Value(user.'id_interlocutor: ID'.Value)).Email.Email
+                                                nombre: user.'id_interlocutor: Nombre'.Value & " " & user.'id_interlocutor: Apellido'.Value,
+                                                email: LookUp(DEV_Interlocutor, ID = Value(user.'id_interlocutor: ID'.Value)).Email
                                             }
                                         )
                                     ),
@@ -5415,8 +5491,8 @@
                                         Collect(
                                             colAprobadores,
                                             {
-                                                nombreCompleto: user.'id_interlocutor: Nombre'.Value & " " & user.'id_interlocutor: Apellido'.Value,
-                                                email: LookUp(DEV_Interlocutor, ID = Value(user.'id_interlocutor: ID'.Value)).Email.Email
+                                                nombre: user.'id_interlocutor: Nombre'.Value & " " & user.'id_interlocutor: Apellido'.Value,
+                                                email: LookUp(DEV_Interlocutor, ID = Value(user.'id_interlocutor: ID'.Value)).Email
                                             }
                                         )
                                     ),
@@ -5431,8 +5507,8 @@
                                         Collect(
                                             colRevisores,
                                             {
-                                                nombreCompleto: user.'id_interlocutor: Nombre'.Value & " " & user.'id_interlocutor: Apellido'.Value,
-                                                email: LookUp(DEV_Interlocutor, ID = Value(user.'id_interlocutor: ID'.Value)).Email.Email
+                                                nombre: user.'id_interlocutor: Nombre'.Value & " " & user.'id_interlocutor: Apellido'.Value,
+                                                email: LookUp(DEV_Interlocutor, ID = Value(user.'id_interlocutor: ID'.Value)).Email
                                             }
                                         )
                                     )
@@ -5602,7 +5678,7 @@
                                             FontWeight: =FontWeight.Bold
                                             Height: =30
                                             LayoutMinHeight: =30
-                                            Text: =ThisItem.nombreCompleto
+                                            Text: =ThisItem.nombre
                                             Width: =20
                                             ZIndex: =2
 
@@ -5614,6 +5690,9 @@
                                             LayoutMinHeight: =20
                                             OnSelect: |
                                                 =Reset(cbo_solicitante_2);
+                                                UpdateContext({
+                                                    varTipoUsuario:"Elaborador"
+                                                });
                                                 Set(usercurrent,ThisItem);
                                                 Set(varpopupreplazo,true);
                                             Visible: =!IsBlank(Label2_275)
@@ -5713,7 +5792,7 @@
                                 Text: ="Revisado por"
                                 ZIndex: =1
 
-                            elaborador_list_op_1 As gallery.galleryVertical:
+                            revisores_list_op As gallery.galleryVertical:
                                 DelayItemLoading: =true
                                 FillPortions: =0
                                 Height: =Self.AllItemsCount * (Self.TemplateHeight+10)
@@ -5768,7 +5847,7 @@
                                             FontWeight: =FontWeight.Bold
                                             Height: =30
                                             LayoutMinHeight: =30
-                                            Text: =ThisItem.nombreCompleto
+                                            Text: =ThisItem.nombre
                                             Width: =20
                                             ZIndex: =2
 
@@ -5780,6 +5859,9 @@
                                             LayoutMinHeight: =20
                                             OnSelect: |
                                                 =Reset(cbo_solicitante_2);
+                                                UpdateContext({
+                                                    varTipoUsuario:"Revisor"
+                                                });
                                                 Set(usercurrent,ThisItem);
                                                 Set(varpopupreplazo,true);
                                             Visible: =!IsBlank(Label2_277)
@@ -5806,7 +5888,7 @@
                                 LayoutMinWidth: =250
                                 RadiusBottomLeft: =0
                                 RadiusBottomRight: =0
-                                Visible: =elaborador_list_op_1.AllItemsCount <6
+                                Visible: =revisores_list_op.AllItemsCount <6
                                 Width: =Parent.Width*60%
                                 X: =(Parent.Width-Self.Width)/2
                                 Y: =(Parent.Height-Self.Height)/2
@@ -5879,7 +5961,7 @@
                                 Text: ="Aprobado por"
                                 ZIndex: =1
 
-                            elaborador_list_op_2 As gallery.galleryVertical:
+                            aprobadores_list_op As gallery.galleryVertical:
                                 DelayItemLoading: =true
                                 FillPortions: =0
                                 Height: =Self.AllItemsCount * (Self.TemplateHeight+10)
@@ -5934,7 +6016,7 @@
                                             FontWeight: =FontWeight.Bold
                                             Height: =30
                                             LayoutMinHeight: =30
-                                            Text: =ThisItem.nombreCompleto
+                                            Text: =ThisItem.nombre
                                             Width: =20
                                             ZIndex: =2
 
@@ -5946,6 +6028,9 @@
                                             LayoutMinHeight: =20
                                             OnSelect: |
                                                 =Reset(cbo_solicitante_2);
+                                                UpdateContext({
+                                                    varTipoUsuario:"Aprobador"
+                                                });
                                                 Set(usercurrent,ThisItem);
                                                 Set(varpopupreplazo,true);
                                             Visible: =!IsBlank(Label2_279)
@@ -5972,7 +6057,7 @@
                                 LayoutMinWidth: =250
                                 RadiusBottomLeft: =0
                                 RadiusBottomRight: =0
-                                Visible: =elaborador_list_op_2.AllItemsCount <6
+                                Visible: =aprobadores_list_op.AllItemsCount <6
                                 Width: =Parent.Width*60%
                                 X: =(Parent.Width-Self.Width)/2
                                 Y: =(Parent.Height-Self.Height)/2
@@ -6100,9 +6185,203 @@
                             FillPortions: =1
                             LayoutMinHeight: =30
                             OnSelect: |-
-                                =
-                                Set(varpopuprevisoreseditop,false);
-                                Set(varconfirmationedit,true)
+                                =Set(
+                                    varDocID,
+                                    Patch(
+                                        DEV_Documento,
+                                        LookUp(
+                                            DEV_Documento,
+                                            ID = varDocSide.ID
+                                        ),
+                                        {
+                                            codigo: txtcodigoedit.Text,
+                                            version: Value(txtnombreedit_1.Text),
+                                            Nombre: txtnombreedit.Text,
+                                            fecha: DatePicker1_6.SelectedDate,
+                                            id_tipo_docu: ComboBox2_26.Selected,
+                                            id_alcance: ComboBox2_27.Selected,
+                                            id_proceso: ComboBox2_29.Selected,
+                                            id_macroproceso: ComboBox2_28.Selected,
+                                            Empresa: cbo_empresa_1.Selected,
+                                            Solicitante: cbo_solicitante_1.Selected,
+                                            'Dueño  del Processo': cbo_dueñoprocesso_1.Selected
+                                        }
+                                    )
+                                );
+                                //DOCUMENTO PRINCIPAL
+                                Patch(
+                                    DEV_Archivos,
+                                    LookUp(DEV_Archivos,version=varDocSide.version && id_documento.Value = Text(varDocSide.ID) And tipo_documento = "Principal"),
+                                    {
+                                        id_documento: {
+                                            Id: varDocID.ID,
+                                            Value: varDocID.ID
+                                        },
+                                        codigo: varDocID.codigo,
+                                        version: varDocID.version,
+                                        descripcion: varDocID.Nombre,
+                                        tipo_documento: "Principal"
+                                    },
+                                    FormEditPrincipal.Updates
+                                );
+                                //FLUJOGRAMA
+                                Patch(
+                                    DEV_Archivos,
+                                    LookUp(DEV_Archivos,version=varDocSide.version && id_documento.Value = Text(varDocSide.ID) And tipo_documento = "Flujograma"),
+                                    {
+                                        id_documento: {
+                                            Id: varDocID.ID,
+                                            Value: varDocID.ID
+                                        },
+                                        codigo: varDocID.codigo,
+                                        version: varDocID.version,
+                                        descripcion: varDocID.Nombre,
+                                        tipo_documento: "Flujograma"
+                                    },
+                                    FormEditFlujograma.Updates
+                                );
+                                //RCKI
+                                Patch(
+                                    DEV_Archivos,
+                                    LookUp(DEV_Archivos,version=varDocSide.version && id_documento.Value = Text(varDocSide.ID) And tipo_documento = "RCKI"),
+                                    {
+                                        id_documento: {
+                                            Id: varDocID.ID,
+                                            Value: varDocID.ID
+                                        },
+                                        codigo: varDocID.codigo,
+                                        version: varDocID.version,
+                                        descripcion: varDocID.Nombre,
+                                        tipo_documento: "RCKI"
+                                    },
+                                    FormEditRcki.Updates
+                                );
+                                Concurrent(
+                                    //INSERTAR ELABORADORES
+                                    ForAll(
+                                        elaborador_list_op.AllItems As user,
+                                        If(
+                                            IsBlank(
+                                                LookUp(
+                                                    DEV_Interlocutor,
+                                                    Email.Email = user.email.Email
+                                                )
+                                            ),
+                                            Patch(
+                                                Defaults(DEV_Interlocutor),
+                                                {
+                                                    Nombre: user.nombre,
+                                                    Email: user.email
+                                                }
+                                            )
+                                        );
+                                        Patch(
+                                            DEV_Actor,
+                                            Defaults(DEV_Actor),
+                                            {
+                                                id_documento: {Id:varDocID.ID, Value:varDocID.ID},
+                                                codigo: varDocID.codigo,
+                                                version: varDocID.version,
+                                                id_interlocutor: {Id: LookUp(DEV_Interlocutor,Email.Email = user.email.Email).ID, Value: LookUp(DEV_Interlocutor,Email.Email = user.email.Email).ID},
+                                                id_funcion: {Id: 3, Value: 3}
+                                            }
+                                        )
+                                    ),
+                                
+                                    //INSERTAR REVISORES
+                                    ForAll(
+                                        revisores_list_op.AllItems As user,
+                                        If(
+                                            IsBlank(
+                                                LookUp(
+                                                    DEV_Interlocutor,
+                                                    Email.Email = user.email.Email
+                                                )
+                                            ),
+                                            Patch(
+                                                Defaults(DEV_Interlocutor),
+                                                {
+                                                    Nombre: user.nombre,
+                                                    Email: user.email
+                                                }
+                                            )
+                                        );
+                                        Patch(
+                                            DEV_Actor,
+                                            Defaults(DEV_Actor),
+                                            {
+                                                id_documento: {Id:varDocID.ID, Value:varDocID.ID},
+                                                codigo: varDocID.codigo,
+                                                version: varDocID.version,
+                                                id_interlocutor: {Id: LookUp(DEV_Interlocutor,Email.Email = user.email.Email).ID, Value: LookUp(DEV_Interlocutor,Email.Email = user.email.Email).ID},
+                                                id_funcion: {Id: 1, Value: 1}
+                                            }
+                                        )
+                                    ),
+                                
+                                    //INSERTAR APROBADORES
+                                    ForAll(
+                                    aprobadores_list_op.AllItems As user,
+                                    If(
+                                        IsBlank(
+                                            LookUp(
+                                                DEV_Interlocutor,
+                                                Email.Email = user.email.Email
+                                            )
+                                        ),
+                                        Patch(
+                                            Defaults(DEV_Interlocutor),
+                                            {
+                                                Nombre: user.nombre,
+                                                Email: user.email
+                                            }
+                                        )
+                                    );
+                                        Patch(
+                                            DEV_Actor,
+                                            Defaults(DEV_Actor),
+                                            {
+                                                id_documento: {Id:varDocID.ID, Value:varDocID.ID},
+                                                codigo: varDocID.codigo,
+                                                version: varDocID.version,
+                                                id_interlocutor: {Id: LookUp(DEV_Interlocutor,Email.Email = user.email.Email).ID, Value: LookUp(DEV_Interlocutor,Email.Email = user.email.Email).ID},
+                                                id_funcion: {Id: 2, Value: 2}
+                                            }
+                                        )
+                                    );
+                                );
+                                
+                                //Estatus Processo Doc
+                                UpdateIf(
+                                    DEV_Modificacion_estatus_proceso_doc, id_doc = varDocSide.ID,
+                                    {
+                                        'fecha y hora': Now(),
+                                        ind_inact:"Inactivo",
+                                        ind_mod:"u"
+                                    }
+                                );
+                                
+                                Patch(DEV_Modificacion_estatus_proceso_doc,Defaults(DEV_Modificacion_estatus_proceso_doc),
+                                    {codigo:varDocID.codigo,
+                                    version:varDocID.version,
+                                    id_estatus_procesos:{Id:1 , Value:1},
+                                    id_documento: {Id:varDocID.ID , Value:varDocID.ID},
+                                    id_estatus_documento:{Id:1 , Value:1},
+                                    nro_mod:1,
+                                    'fecha y hora': Now(),
+                                    ind_inact:"Activo",
+                                    ind_mod:"i",
+                                    id_doc:varDocID.ID}
+                                );
+                                
+                                Set(
+                                    varpopuprevisoreseditop,
+                                    false
+                                );
+                                Set(
+                                    varconfirmationedit,
+                                    true
+                                )
                             RadiusBottomLeft: =5
                             RadiusBottomRight: =5
                             RadiusTopLeft: =5
@@ -6167,7 +6446,9 @@
                 HoverColor: =primary
                 HoverFill: =RGBA(255, 255, 255, 1)
                 LayoutMinHeight: =30
-                OnSelect: =Set(varconfirmationedit,false)
+                OnSelect: |-
+                    =Necesidaddeinformardemodificacióndedocumentos.Run(Concat(revisores_list_op.AllItems,email.Email,";"),Concat(aprobadores_list_op.AllItems,email.Email,";"),varDocID.ID);
+                    Set(varconfirmationedit,false)
                 PressedFill: =RGBA(255, 255, 255, 1)
                 RadiusBottomLeft: =5
                 RadiusBottomRight: =5
@@ -6497,7 +6778,7 @@
                     Align: =Align.Center
                     FontWeight: =FontWeight.Bold
                     Size: =18
-                    Text: ="Replazo de Integrante"
+                    Text: ="Replazo de " & varTipoUsuario
                     ZIndex: =1
 
                 Container13_92 As groupContainer.verticalAutoLayoutContainer:
@@ -6531,7 +6812,7 @@
                         AlignInContainer: =AlignInContainer.Stretch
                         BorderColor: =secondarytext
                         BorderThickness: =1
-                        Default: =usercurrent.nombreCompleto
+                        Default: =usercurrent.nombre
                         DisplayMode: =DisplayMode.View
                         HoverBorderColor: =primary
                         HoverFill: =RGBA(255, 255, 255, 1)
@@ -6557,20 +6838,18 @@
                         ChevronHoverFill: =primary
                         Color: =secondarytext
                         DefaultSelectedItems: =
-                        DisplayFields: =["DisplayName","Email","Picture"]
+                        DisplayFields: =["DisplayName","Mail","Picture"]
                         HoverBorderColor: =
                         HoverColor: =RGBA(26, 26, 26, 1)
                         HoverFill: =RGBA(215, 223, 240, 1)
                         InputTextPlaceholder: ="Seleccione Opción"
-                        Items: |-
-                            =UsuáriosdoOffice365.SearchUser({searchTerm:Self.SearchText})
+                        Items: =Choices([@DEV_Interlocutor].Email)
                         LayoutMinWidth: =50
                         PressedBorderColor: =secondarytext
                         PressedColor: =RGBA(26, 26, 26, 1)
                         PressedFill: =RGBA(0, 0, 0, 0)
                         SearchFields: =["DisplayName"]
-                        SearchItems: |-
-                            =Search(UsuáriosdoOffice365.SearchUser({searchTerm:Self.SearchText}),cbo_solicitante_2.SearchText,"DisplayName")
+                        SearchItems: =Choices(DEV_Interlocutor.Email,cbo_solicitante_2.SearchText)
                         SelectMultiple: =false
                         Size: =10
                         Template: =ListItemTemplate.Person
@@ -6582,13 +6861,35 @@
                     Height: =50
                     LayoutMinHeight: =30
                     OnSelect: |-
-                        =Patch(
-                            colElaboradores,
-                            LookUp(colElaboradores,email=usercurrent.email),
-                            {
-                                nombreCompleto: cbo_solicitante_2.Selected.DisplayName,
-                                email: cbo_solicitante_2.Selected.Mail
-                            }
+                        =Switch(
+                            varTipoUsuario,
+                            "Elaborador",
+                            Patch(
+                                colElaboradores,
+                                LookUp(colElaboradores,email.Email=usercurrent.email.Email),
+                                {
+                                    nombre: cbo_solicitante_2.Selected.DisplayName,
+                                    email: cbo_solicitante_2.Selected
+                                }
+                            ),
+                            "Revisor",
+                            Patch(
+                                colRevisores,
+                                LookUp(colRevisores,email.Email=usercurrent.email.Email),
+                                {
+                                    nombre: cbo_solicitante_2.Selected.DisplayName,
+                                    email: cbo_solicitante_2.Selected
+                                }
+                            ),
+                            "Aprobador",
+                            Patch(
+                                colAprobadores,
+                                LookUp(colAprobadores,email.Email=usercurrent.email.Email),
+                                {
+                                    nombre: cbo_solicitante_2.Selected.DisplayName,
+                                    email: cbo_solicitante_2.Selected
+                                }
+                            )
                         );
                         Set(varpopupreplazo,false);
                     RadiusBottomLeft: =5
@@ -6689,15 +6990,13 @@
                         HoverColor: =RGBA(26, 26, 26, 1)
                         HoverFill: =RGBA(215, 223, 240, 1)
                         InputTextPlaceholder: ="Seleccione Opción"
-                        Items: |-
-                            =UsuáriosdoOffice365.SearchUser({searchTerm:Self.SearchText})
+                        Items: =Choices([@DEV_Interlocutor].Email)
                         LayoutMinWidth: =50
                         PressedBorderColor: =secondarytext
                         PressedColor: =RGBA(26, 26, 26, 1)
                         PressedFill: =RGBA(0, 0, 0, 0)
                         SearchFields: =["DisplayName"]
-                        SearchItems: |-
-                            =Search(UsuáriosdoOffice365.SearchUser({searchTerm:Self.SearchText}),cbo_solicitante_3.SearchText,"DisplayName")
+                        SearchItems: =Choices(DEV_Interlocutor.Email,cbo_solicitante_3.SearchText)
                         SelectMultiple: =false
                         Size: =10
                         Template: =ListItemTemplate.Person
@@ -6714,24 +7013,24 @@
                             Collect(
                                 colElaboradores,
                                 {
-                                    nombreCompleto: cbo_solicitante_3.Selected.DisplayName,
-                                    email: cbo_solicitante_3.Selected.Mail
+                                    nombre: cbo_solicitante_3.Selected.DisplayName,
+                                    email: cbo_solicitante_3.Selected
                                 }
                             ),
                             "Revisor",
                             Collect(
                                 colRevisores,
                                 {
-                                    nombreCompleto: cbo_solicitante_3.Selected.DisplayName,
-                                    email: cbo_solicitante_3.Selected.Mail
+                                    nombre: cbo_solicitante_3.Selected.DisplayName,
+                                    email: cbo_solicitante_3.Selected
                                 }
                             ),
                             "Aprobador",
                             Collect(
                                 colAprobadores,
                                 {
-                                    nombreCompleto: cbo_solicitante_3.Selected.DisplayName,
-                                    email: cbo_solicitante_3.Selected.Mail
+                                    nombre: cbo_solicitante_3.Selected.DisplayName,
+                                    email: cbo_solicitante_3.Selected
                                 }
                             )
                         );
@@ -6816,7 +7115,7 @@
                         Color: =primarytext
                         Height: =50
                         LayoutMinHeight: =30
-                        Text: ="¿Está seguro de quitar al integrante del equipo de elaboración " & varSelectedElaborador.nombreCompleto &" ?"
+                        Text: ="¿Está seguro de quitar al integrante del equipo de elaboración " & varSelectedElaborador.nombre &" ?"
                         ZIndex: =7
 
                 Container6 As groupContainer.manualLayoutContainer:
@@ -6832,7 +7131,7 @@
                         Height: =50
                         HoverFill: =ColorFade(red, -20%)
                         OnSelect: |-
-                            =RemoveIf(colElaboradores,varSelectedElaborador.email=email);
+                            =RemoveIf(colElaboradores,varSelectedElaborador.email.Email=email.Email);
                             UpdateContext({varPopupEliminarElaborador:false});
                         RadiusBottomLeft: =5
                         RadiusBottomRight: =5
@@ -6936,7 +7235,7 @@
                         Color: =primarytext
                         Height: =50
                         LayoutMinHeight: =30
-                        Text: ="¿Está seguro de quitar al " & Lower(varTipoUsuario) & " " & varSelectedElaborador.nombreCompleto &" ?"
+                        Text: ="¿Está seguro de quitar al " & Lower(varTipoUsuario) & " " & varSelectedElaborador.nombre &" ?"
                         ZIndex: =7
 
                 Container6_1 As groupContainer.manualLayoutContainer:
@@ -6955,9 +7254,9 @@
                             =Switch(
                                 varTipoUsuario,
                                 "Revisor",
-                                RemoveIf(colRevisores,varSelectedElaborador.email=email),
+                                RemoveIf(colRevisores,varSelectedElaborador.email.Email=email.Email),
                                 "Aprobador",
-                                RemoveIf(colAprobadores,varSelectedElaborador.email=email)
+                                RemoveIf(colAprobadores,varSelectedElaborador.email.Email=email.Email)
                             );
                             UpdateContext({varPopupEliminarRevisor:false});
                         RadiusBottomLeft: =5

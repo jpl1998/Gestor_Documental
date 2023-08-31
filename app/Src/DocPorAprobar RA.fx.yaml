@@ -777,6 +777,7 @@
                     Items: |-
                         =Filter(
                             DEV_Actor,
+                            version = varSelectedDoc.version,
                             id_documento.Value = Text(varSelectedDoc.ID),
                             id_funcion.Value = "Revisor"
                         )
@@ -1007,6 +1008,7 @@
                     Items: |-
                         =Filter(
                             DEV_Actor,
+                            version = varSelectedDoc.version,
                             id_documento.Value = Text(varSelectedDoc.ID),
                             id_funcion.Value = "Aprobador"
                         )
@@ -1144,7 +1146,9 @@
                         Height: =24
                         OnSelect: =Select(Parent)
                         Size: =12
-                        Text: ="Conforme"
+                        Text: |-
+                            =If(!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version)),
+                            If(!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version, id_status_archivo.Value="2")), "Observado", "Conforme"))
                         Visible: =IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version, id_status_archivo.Value="4"))
                         Width: =120
                         X: =295
@@ -1176,6 +1180,7 @@
                     Items: |-
                         =Filter(
                             DEV_Actor,
+                            version = varSelectedDoc.version,
                             id_documento.Value = Text(varSelectedDoc.ID),
                             id_funcion.Value = "Elaborador"
                         )

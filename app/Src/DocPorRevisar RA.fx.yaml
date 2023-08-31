@@ -1419,6 +1419,7 @@
                     Items: |-
                         =Filter(
                             DEV_Actor,
+                            version = varSelectedDoc.version,
                             id_documento.Value = Text(varSelectedDoc.ID),
                             id_funcion.Value = "Aprobador"
                         )
@@ -1592,6 +1593,7 @@
                     Items: |-
                         =Filter(
                             DEV_Actor,
+                            version = varSelectedDoc.version,
                             id_documento.Value = Text(varSelectedDoc.ID),
                             id_funcion.Value = "Elaborador"
                         )
@@ -1732,6 +1734,7 @@
                     Items: |-
                         =Filter(
                             DEV_Actor,
+                            version = varSelectedDoc.version,
                             id_documento.Value = Text(varSelectedDoc.ID),
                             id_funcion.Value = "Revisor"
                         )
