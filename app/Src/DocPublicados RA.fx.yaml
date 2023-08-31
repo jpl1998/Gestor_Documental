@@ -429,7 +429,7 @@
                                             IsBlank(varFilterMenu.fechaHasta) || varFilterMenu.fechaHasta>=fecha,
                                             ID in Filter(
                                                 DEV_Modificacion_estatus_proceso_doc,
-                                                ind_inact = "Activo" && id_estatus_documento.Value = "Difundido"
+                                                ind_inact = "Activo" && Or(id_estatus_documento.Value = "Publicado", id_estatus_documento.Value = "Difundido")
                                             ).id_doc,
                                             searchbar_docRev_ra_2.Text in Nombre
                                     )
@@ -540,14 +540,18 @@
                                                 "Por aprobar", RGBA(180, 130, 0, 1),
                                                 "Por revisar",RGBA(180, 130, 0, 1),
                                                 "Observado", RGBA(214, 0, 0, 1),
-                                                "Aprobado",RGBA(44, 143, 112, 1))
+                                                "Aprobado",RGBA(44, 143, 112, 1),
+                                                "Publicado",RGBA(44, 143, 112, 1),
+                                                "Difundido",RGBA(44, 143, 112, 1))
                                             DisplayMode: =DisplayMode.View
                                             Fill: |-
                                                 =Switch(LookUp(DEV_Modificacion_estatus_proceso_doc,codigo=ThisItem.codigo && ind_mod = "i" && id_doc=ThisItem.ID).id_estatus_documento.Value,
                                                 "Por aprobar", RGBA(249, 249, 249, 1),
                                                 "Por revisar",RGBA(249, 249, 249, 1),
                                                 "Observado", RGBA(245, 218, 216, 1),
-                                                "Aprobado", RGBA(219, 238, 233, 1))
+                                                "Aprobado", RGBA(219, 238, 233, 1),
+                                                "Publicado", RGBA(219, 238, 233, 1),
+                                                "Difundido", RGBA(219, 238, 233, 1))
                                             Font: =Font.Arial
                                             FontWeight: =FontWeight.Normal
                                             Height: =Parent.Height*60%

@@ -7995,7 +7995,7 @@
             Usuarios_difusion As combobox:
                 BorderStyle: =BorderStyle.None
                 ChevronBackground: =RGBA(255, 255, 255, 1)
-                ChevronFill: =RGBA(237, 237, 237, 1)
+                ChevronFill: =primary
                 DisplayFields: =["DisplayName","Mail"]
                 Font: =Font.'Segoe UI'
                 Height: =44
@@ -8093,4 +8093,94 @@
                 X: =824
                 Y: =20
                 ZIndex: =3
+
+            Label8_4 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =24
+                Size: =12
+                Text: ="Subgerencia"
+                Width: =140
+                X: =24
+                Y: =176
+                ZIndex: =4
+
+            Label8_5 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =24
+                Size: =12
+                Text: ="Departamento"
+                Width: =140
+                X: =24
+                Y: =276
+                ZIndex: =5
+
+            gerencia_difusion As combobox:
+                BorderStyle: =BorderStyle.None
+                ChevronBackground: =RGBA(255, 255, 255, 1)
+                ChevronFill: =primary
+                DisplayFields: =["DisplayName","Mail"]
+                Font: =Font.'Segoe UI'
+                Height: =44
+                Items: |-
+                    =UsuáriosdoOffice365.SearchUser({searchTerm:Self.SearchText})
+                SearchFields: =["DisplayName"]
+                SearchItems: |-
+                    =Search(UsuáriosdoOffice365.SearchUser({searchTerm:Self.SearchText}),gerencia_difusion.SearchText,"DisplayName")
+                Size: =12
+                Template: =ListItemTemplate.Person
+                Width: =412
+                X: =24
+                Y: =108
+                ZIndex: =6
+
+            subgerencia_difusion As combobox:
+                BorderStyle: =BorderStyle.None
+                ChevronBackground: =RGBA(255, 255, 255, 1)
+                ChevronFill: =primary
+                DisplayFields: =["DisplayName","Mail"]
+                Font: =Font.'Segoe UI'
+                Height: =44
+                Items: |-
+                    =UsuáriosdoOffice365.SearchUser({searchTerm:Self.SearchText})
+                SearchFields: =["DisplayName"]
+                SearchItems: |-
+                    =Search(UsuáriosdoOffice365.SearchUser({searchTerm:Self.SearchText}),subgerencia_difusion.SearchText,"DisplayName")
+                Size: =12
+                Template: =ListItemTemplate.Person
+                Width: =412
+                X: =24
+                Y: =208
+                ZIndex: =7
+
+            departamento_difusion As combobox:
+                BorderStyle: =BorderStyle.None
+                ChevronBackground: =RGBA(255, 255, 255, 1)
+                ChevronFill: =primary
+                DisplayFields: =["DisplayName","Mail"]
+                Font: =Font.'Segoe UI'
+                Height: =44
+                Items: |-
+                    =UsuáriosdoOffice365.SearchUser({searchTerm:Self.SearchText})
+                SearchFields: =["DisplayName"]
+                SearchItems: |-
+                    =Search(UsuáriosdoOffice365.SearchUser({searchTerm:Self.SearchText}),departamento_difusion.SearchText,"DisplayName")
+                Size: =12
+                Template: =ListItemTemplate.Person
+                Width: =412
+                X: =24
+                Y: =308
+                ZIndex: =8
+
+            Label8_6 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =24
+                Size: =12
+                Text: ="Áreas"
+                Width: =140
+                X: =456
+                Y: =75
+                ZIndex: =9
 
