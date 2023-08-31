@@ -7585,3 +7585,213 @@
                 Y: =102
                 ZIndex: =11
 
+    popup_registro_observaciones_ra_2 As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(0, 0, 0, 0.15)
+        Height: =768
+        Visible: =varRegistroObsPopup
+        Width: =1366
+        ZIndex: =22
+
+        container_popup_registro_observacion_ra_2 As groupContainer.manualLayoutContainer:
+            Fill: =background
+            Height: =561
+            Width: =461
+            X: =(Parent.Width-Self.Width)/2
+            Y: =(Parent.Height-Self.Height)/2
+            ZIndex: =1
+
+            "docs_registro_obs_ra_2 As gallery.'BrowseLayout_Vertical_OneTextOneImageVariant_ver5.0'":
+                DelayItemLoading: =true
+                Height: =Self.AllItemsCount * Self.TemplateHeight
+                Items: =varObsItems
+                Layout: =Layout.Vertical
+                LoadingSpinner: =LoadingSpinner.Data
+                TemplatePadding: =0
+                TemplateSize: =30
+                Width: =418
+                X: =25
+                Y: =176
+                ZIndex: =1
+
+                Image6_2 As image:
+                    Height: =24
+                    Image: |-
+                        =Switch(
+                            LookUp(DEV_Archivos, Value(ThisItem.id_archivo.Value)=ID).tipo_documento,
+                            "Principal",
+                            word,
+                            "Flujograma",
+                            visio,
+                            excel
+                        )
+                    OnSelect: =Select(Parent)
+                    RadiusBottomLeft: =5
+                    RadiusBottomRight: =5
+                    RadiusTopLeft: =5
+                    RadiusTopRight: =5
+                    Width: =24
+                    X: =16
+                    Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+                    ZIndex: =1
+
+                Title4_2 As label:
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                    Height: =Self.Size * 1.8
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =12
+                    Text: =First(LookUp(DEV_Archivos, Value(ThisItem.id_archivo.Value)=ID).Attachments).DisplayName
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =Parent.TemplateWidth - Image6_2.Width - 100
+                    X: =56
+                    Y: =4
+                    ZIndex: =2
+
+                Button6_2 As button:
+                    BorderStyle: =BorderStyle.None
+                    Fill: =If(ThisItem.IsSelected,RGBA(0, 0, 0, 0.15), RGBA(0, 0, 0, 0))
+                    Height: =30
+                    HoverFill: =RGBA(0, 0, 0, 0.15)
+                    OnSelect: =Select(Parent)
+                    PressedFill: =RGBA(0, 0, 0, 0.15)
+                    Text: =""
+                    Width: =418
+                    ZIndex: =3
+
+            title_registro_obs_popup_ra_8 As label:
+                Align: =Align.Center
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Size: =15
+                Text: ="Observación"
+                Width: =412
+                X: =25
+                Y: =14
+                ZIndex: =2
+
+            close_icon_registro_obs_ra_2 As icon.Cancel:
+                Height: =30
+                Icon: =Icon.Cancel
+                OnSelect: |-
+                    =UpdateContext({varRegistroObsPopup:false})
+                PaddingBottom: =5
+                PaddingLeft: =5
+                PaddingRight: =5
+                PaddingTop: =5
+                Width: =30
+                X: =413
+                Y: =16
+                ZIndex: =3
+
+            title_registro_obs_popup_ra_9 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =30
+                Size: =12
+                Text: ="Revisor"
+                Width: =90
+                X: =25
+                Y: =66
+                ZIndex: =4
+
+            title_registro_obs_popup_ra_10 As label:
+                Font: =Font.'Segoe UI'
+                Height: =30
+                Size: =12
+                Text: ="text"
+                Width: =280
+                X: =25
+                Y: =98
+                ZIndex: =5
+
+            title_registro_obs_popup_ra_11 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =30
+                Size: =12
+                Text: ="Archivo Observado"
+                Width: =200
+                X: =25
+                Y: =146
+                ZIndex: =6
+
+            comentario_title_registro_obs_popup_ra_2 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =30
+                Size: =12
+                Text: |-
+                    ="Comentario:"
+                Width: =200
+                X: =25
+                Y: =docs_registro_obs_ra_2.Y + docs_registro_obs_ra_2.Height +10
+                ZIndex: =7
+
+            comentario_registro_obs_popup_ra_2 As text:
+                BorderStyle: =BorderStyle.None
+                Default: =LookUp(DEV_Observacion, id_archivo.Value=Text(docs_registro_obs_ra_2.Selected.id_archivo.Value) && ind_inact="Activo").observacion
+                DisplayMode: =DisplayMode.View
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =96
+                Mode: =TextMode.MultiLine
+                Width: =392
+                X: =25
+                Y: =comentario_title_registro_obs_popup_ra_2.Y+comentario_title_registro_obs_popup_ra_2.Height+10
+                ZIndex: =8
+
+            archivo_title_registro_obs_popup_ra_3 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =30
+                Size: =12
+                Text: |-
+                    ="Archivo con Observaciones:"
+                Width: =300
+                X: =25
+                Y: =comentario_registro_obs_popup_ra_2.Y+comentario_registro_obs_popup_ra_2.Height+10
+                ZIndex: =9
+
+            archivo_obs_registro_obs_popup_ra_2 As label:
+                Font: =Font.'Segoe UI'
+                Height: =30
+                Size: =12
+                Text: =First(LookUp(DEV_Observacion, id_archivo.Value=Text(docs_registro_obs_ra_2.Selected.id_archivo.Value) && ind_inact="Activo").Attachments).DisplayName
+                Width: =320
+                X: =25
+                Y: =archivo_title_registro_obs_popup_ra_3.Y+archivo_title_registro_obs_popup_ra_3.Height+10
+                ZIndex: =10
+
+            download_icon_registro_obs_ra_2 As icon.Download:
+                Height: =20
+                Icon: =Icon.Download
+                PaddingBottom: =2
+                PaddingTop: =2
+                Visible: =!IsBlank(archivo_obs_registro_obs_popup_ra_2.Text)
+                Width: =16
+                X: =351
+                Y: =archivo_obs_registro_obs_popup_ra_2.Y+5
+                ZIndex: =11
+
+            download_button_registro_obs_ra_2 As button:
+                Align: =Align.Right
+                BorderStyle: =BorderStyle.None
+                Color: =primary
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =20
+                HoverColor: =Self.Color
+                HoverFill: =RGBA(0, 0, 0, 0.15)
+                OnSelect: =Launch(First(LookUp(DEV_Observacion, id_archivo.Value=Text(docs_registro_obs_ra_2.Selected.id_archivo.Value) && ind_inact="Activo").Attachments).AbsoluteUri)
+                PressedColor: =Self.Color
+                PressedFill: =RGBA(0, 0, 0, 0.15)
+                Size: =8
+                Text: ="Descargar"
+                Visible: =!IsBlank(archivo_obs_registro_obs_popup_ra_2.Text)
+                Width: =90
+                X: =345
+                Y: =archivo_obs_registro_obs_popup_ra_2.Y+5
+                ZIndex: =12
+

@@ -258,7 +258,7 @@
                                 DisplayMode: =DisplayMode.Edit
                                 Fill: =RGBA(0, 0, 0, 0)
                                 Height: =158
-                                Items: =AddColumns(AddColumns(GroupBy(Filter(DEV_Modificacion_estatus_proceso_doc,id_estatus_documento.Value="Por aprobar"),"id_doc","groupDoc"),"fechaCreado",LookUp(DEV_Documento,id_doc=ID).fecha),"DateDiff",DateDiff(fechaCreado,First(groupDoc).'fecha y hora'))
+                                Items: =AddColumns(AddColumns(GroupBy(Filter(DEV_Modificacion_estatus_proceso_doc,id_estatus_documento.Value="Publicado"),"id_doc","groupDoc"),"fechaCreado",LookUp(DEV_Documento,id_doc=ID).fecha),"DateDiff",DateDiff(fechaCreado,First(groupDoc).'fecha y hora'))
                                 Width: =970
                                 X: =40
                                 Y: =71
@@ -321,19 +321,19 @@
                                     ZIndex: =11
 
                             Label9 As label:
-                                Text: =Min(AddColumns(AddColumns(GroupBy(Filter(DEV_Modificacion_estatus_proceso_doc,id_estatus_documento.Value="Por aprobar"),"id_doc","groupDoc"),"fechaCreado",LookUp(DEV_Documento,id_doc=ID).fecha),"DateDiff",DateDiff(fechaCreado,First(groupDoc).'fecha y hora')),DateDiff)
+                                Text: =Min(AddColumns(AddColumns(GroupBy(Filter(DEV_Modificacion_estatus_proceso_doc,id_estatus_documento.Value="Publicado"),"id_doc","groupDoc"),"fechaCreado",LookUp(DEV_Documento,id_doc=ID).fecha),"DateDiff",DateDiff(fechaCreado,First(groupDoc).'fecha y hora')),DateDiff)
                                 X: =40
                                 Y: =350
                                 ZIndex: =7
 
                             Label9_1 As label:
-                                Text: =Max(AddColumns(AddColumns(GroupBy(Filter(DEV_Modificacion_estatus_proceso_doc,id_estatus_documento.Value="Por aprobar"),"id_doc","groupDoc"),"fechaCreado",LookUp(DEV_Documento,id_doc=ID).fecha),"DateDiff",DateDiff(fechaCreado,First(groupDoc).'fecha y hora')),DateDiff)
+                                Text: =Max(AddColumns(AddColumns(GroupBy(Filter(DEV_Modificacion_estatus_proceso_doc,id_estatus_documento.Value="Publicado"),"id_doc","groupDoc"),"fechaCreado",LookUp(DEV_Documento,id_doc=ID).fecha),"DateDiff",DateDiff(fechaCreado,First(groupDoc).'fecha y hora')),DateDiff)
                                 X: =288
                                 Y: =350
                                 ZIndex: =8
 
                             Label9_2 As label:
-                                Text: =Average(AddColumns(AddColumns(GroupBy(Filter(DEV_Modificacion_estatus_proceso_doc,id_estatus_documento.Value="Por aprobar"),"id_doc","groupDoc"),"fechaCreado",LookUp(DEV_Documento,id_doc=ID).fecha),"DateDiff",DateDiff(fechaCreado,First(groupDoc).'fecha y hora')),DateDiff)
+                                Text: =Average(AddColumns(AddColumns(GroupBy(Filter(DEV_Modificacion_estatus_proceso_doc,id_estatus_documento.Value="Publicado"),"id_doc","groupDoc"),"fechaCreado",LookUp(DEV_Documento,id_doc=ID).fecha),"DateDiff",DateDiff(fechaCreado,First(groupDoc).'fecha y hora')),DateDiff)
                                 X: =530
                                 Y: =350
                                 ZIndex: =9
