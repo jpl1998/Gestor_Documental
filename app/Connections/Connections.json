@@ -127,7 +127,8 @@
       "caa6f2ff-5917-4952-8b8b-c1a04174e86d",
       "46223443-6166-42cb-85f2-ac46c5ad7288",
       "d9cd9b0f-2b32-4135-b1b5-65c18b6fbe5f",
-      "9988f86a-d8c2-41f4-8ca0-28244c6e37f4"
+      "9988f86a-d8c2-41f4-8ca0-28244c6e37f4",
+      "c3ee5bc9-62c5-4089-a5a8-91717bf11b39"
     ],
     "id": "5066b226-a91d-43fa-a944-ee12f1eadb8b"
   },
@@ -227,7 +228,8 @@
       "46223443-6166-42cb-85f2-ac46c5ad7288",
       "1f672128-a9fa-4117-ad27-69cc89f8d1a6",
       "d9cd9b0f-2b32-4135-b1b5-65c18b6fbe5f",
-      "9988f86a-d8c2-41f4-8ca0-28244c6e37f4"
+      "9988f86a-d8c2-41f4-8ca0-28244c6e37f4",
+      "c3ee5bc9-62c5-4089-a5a8-91717bf11b39"
     ],
     "id": "9a26efc3-b835-413c-8141-29196aa0cbc2"
   },
@@ -244,6 +246,47 @@
       "1f672128-a9fa-4117-ad27-69cc89f8d1a6"
     ],
     "id": "b8f399f6-3fc2-48c5-9148-86e261cdb8b0"
+  },
+  "c3ee5bc9-62c5-4089-a5a8-91717bf11b39": {
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1653/1.0.1653.3403/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "5066b226-a91d-43fa-a944-ee12f1eadb8b": {
+          "value": "shared_teams_1"
+        },
+        "9a26efc3-b835-413c-8141-29196aa0cbc2": {
+          "value": "shared_office365_1"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "a165df39-f4f2-46b5-b463-53ad92054501"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_office365_1": {
+          "value": "9a26efc3-b835-413c-8141-29196aa0cbc2"
+        },
+        "shared_teams_1": {
+          "value": "5066b226-a91d-43fa-a944-ee12f1eadb8b"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "a165df39-f4f2-46b5-b463-53ad92054501"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "Necesidaddenotificacióndedifusióndepublicacióndedocumentooficial"
+    ],
+    "dependencies": {
+      "shared_office365_1": "9a26efc3-b835-413c-8141-29196aa0cbc2",
+      "shared_teams_1": "5066b226-a91d-43fa-a944-ee12f1eadb8b"
+    },
+    "dependents": [],
+    "id": "c3ee5bc9-62c5-4089-a5a8-91717bf11b39"
   },
   "caa6f2ff-5917-4952-8b8b-c1a04174e86d": {
     "connectionRef": {

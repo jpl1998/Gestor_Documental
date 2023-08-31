@@ -4384,7 +4384,8 @@
                     Color: =primary
                     Fill: =RGBA(255, 255, 255, 1)
                     Height: =47
-                    OnSelect: =
+                    OnSelect: |-
+                        =UpdateContext({varPopupTipoDifusion:true})
                     Text: ="Realizar Difusión"
                     Visible: =varDocEstado="Publicado"
                     Width: =180
@@ -7794,4 +7795,302 @@
                 X: =345
                 Y: =archivo_obs_registro_obs_popup_ra_2.Y+5
                 ZIndex: =12
+
+    popup_tipoDifusion As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(51, 51, 51, 0.27)
+        Height: =Parent.Height
+        Visible: =varPopupTipoDifusion
+        Width: =Parent.Width
+        ZIndex: =23
+
+        Container13_31 As groupContainer.verticalAutoLayoutContainer:
+            DropShadow: =DropShadow.Regular
+            Fill: =RGBA(246, 247, 251, 1)
+            Height: =250
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMode: =LayoutMode.Auto
+            PaddingBottom: =20
+            PaddingLeft: =20
+            PaddingRight: =20
+            PaddingTop: =10
+            Width: =430
+            X: =(Parent.Width-Self.Width)/2
+            Y: =(Parent.Height-Self.Height)/2
+            ZIndex: =1
+
+            Label4_36 As label:
+                Align: =Align.Center
+                AlignInContainer: =AlignInContainer.Stretch
+                FontWeight: =FontWeight.Bold
+                Text: ="¿Qué tipo de solicitud realizará?"
+                ZIndex: =1
+
+            Container19_3 As groupContainer.horizontalAutoLayoutContainer:
+                DropShadow: =DropShadow.None
+                LayoutGap: =20
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                PaddingBottom: =5
+                PaddingLeft: =5
+                PaddingRight: =5
+                PaddingTop: =10
+                ZIndex: =2
+
+                Container20_6 As groupContainer.manualLayoutContainer:
+                    BorderThickness: =1
+                    Fill: =RGBA(255, 255, 255, 1)
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =50
+                    RadiusBottomLeft: =10
+                    RadiusBottomRight: =10
+                    RadiusTopLeft: =10
+                    RadiusTopRight: =10
+                    ZIndex: =1
+
+                    Container21_6 As groupContainer.verticalAutoLayoutContainer:
+                        Height: =Parent.Height
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingBottom: =10
+                        PaddingLeft: =10
+                        PaddingRight: =10
+                        PaddingTop: =10
+                        Width: =Parent.Width
+                        ZIndex: =1
+
+                        Image2_6 As image:
+                            Image: ='People Audience'
+                            PaddingBottom: =15
+                            PaddingLeft: =15
+                            PaddingRight: =15
+                            PaddingTop: =15
+                            ZIndex: =1
+
+                        Label4_37 As label:
+                            Align: =Align.Center
+                            AlignInContainer: =AlignInContainer.Stretch
+                            Color: =primary
+                            FontWeight: =FontWeight.Bold
+                            Text: |-
+                                ="Difusión
+                                por CR"
+                            ZIndex: =2
+
+                    Button4_11 As button:
+                        BorderStyle: =BorderStyle.None
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =Parent.Height
+                        HoverFill: =
+                        OnSelect: |-
+                            =UpdateContext({varDifusionCR:true, varPopupTipoDifusion:false})
+                        PressedFill: =
+                        Text: =""
+                        Width: =Parent.Width
+                        ZIndex: =2
+
+                Container20_7 As groupContainer.manualLayoutContainer:
+                    BorderThickness: =1
+                    Fill: =RGBA(255, 255, 255, 1)
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =50
+                    RadiusBottomLeft: =10
+                    RadiusBottomRight: =10
+                    RadiusTopLeft: =10
+                    RadiusTopRight: =10
+                    ZIndex: =2
+
+                    Container21_7 As groupContainer.verticalAutoLayoutContainer:
+                        Height: =Parent.Height
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingBottom: =10
+                        PaddingLeft: =10
+                        PaddingRight: =10
+                        PaddingTop: =10
+                        Width: =Parent.Width
+                        ZIndex: =1
+
+                        Image2_13 As image:
+                            Image: =user
+                            PaddingBottom: =15
+                            PaddingLeft: =15
+                            PaddingRight: =15
+                            PaddingTop: =15
+                            ZIndex: =1
+
+                        Label4_38 As label:
+                            Align: =Align.Center
+                            AlignInContainer: =AlignInContainer.Stretch
+                            Color: =primary
+                            FontWeight: =FontWeight.Bold
+                            Text: |-
+                                ="Difusión
+                                por Usuarios"
+                            ZIndex: =2
+
+                    Button4_20 As button:
+                        BorderStyle: =BorderStyle.None
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =Parent.Height
+                        HoverFill: =
+                        OnSelect: |-
+                            =Reset(Usuarios_difusion);
+                            UpdateContext({varDifusionUsuario:true, varPopupTipoDifusion:false})
+                        PressedFill: =
+                        Text: =""
+                        Width: =Parent.Width
+                        ZIndex: =2
+
+        Icon1_14 As icon.Cancel:
+            Height: =20
+            Icon: =Icon.Cancel
+            OnSelect: |-
+                =UpdateContext({varPopupTipoDifusion:false})
+            Width: =20
+            X: =855
+            Y: =280
+            ZIndex: =2
+
+    popup_difusion_user As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(0, 0, 0, 0.15)
+        Height: =768
+        Visible: =varDifusionUsuario
+        Width: =1366
+        ZIndex: =24
+
+        container_difusion_usuario As groupContainer.manualLayoutContainer:
+            Fill: =background
+            Height: =264
+            Width: =460
+            X: =(Parent.Width-Self.Width)/2
+            Y: =(Parent.Height-Self.Height)/2
+            ZIndex: =1
+
+            Label8 As label:
+                Align: =Align.Center
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =35
+                Size: =16
+                Text: ="Difusión por Usuarios"
+                Width: =315
+                X: =(Parent.Width-Self.Width)/2
+                Y: =24
+                ZIndex: =1
+
+            Label8_1 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =24
+                Size: =12
+                Text: ="Usuarios"
+                Width: =140
+                X: =24
+                Y: =76
+                ZIndex: =2
+
+            Usuarios_difusion As combobox:
+                BorderStyle: =BorderStyle.None
+                ChevronBackground: =RGBA(255, 255, 255, 1)
+                ChevronFill: =RGBA(237, 237, 237, 1)
+                DisplayFields: =["DisplayName","Mail"]
+                Font: =Font.'Segoe UI'
+                Height: =44
+                Items: |-
+                    =UsuáriosdoOffice365.SearchUser({searchTerm:Self.SearchText})
+                SearchFields: =["DisplayName"]
+                SearchItems: |-
+                    =Search(UsuáriosdoOffice365.SearchUser({searchTerm:Self.SearchText}),Usuarios_difusion.SearchText,"DisplayName")
+                Size: =12
+                Template: =ListItemTemplate.Person
+                Width: =412
+                X: =24
+                Y: =108
+                ZIndex: =3
+
+            Button9 As button:
+                Fill: =primary
+                Font: =Font.'Segoe UI'
+                Height: =52
+                HoverFill: =ColorFade(primary,-20%)
+                OnSelect: |
+                    =Necesidaddenotificacióndedifusióndepublicacióndedocumentooficial.Run(Concat(Usuarios_difusion.SelectedItems,Mail,";"));
+                    UpdateContext({varDifusionUsuario:false})
+                Size: =16
+                Text: ="Realizar Difusión"
+                Width: =412
+                X: =24
+                Y: =188
+                ZIndex: =4
+
+            Icon3 As icon.Cancel:
+                Color: =RGBA(0, 0, 0, 1)
+                Height: =35
+                Icon: =Icon.Cancel
+                OnSelect: |-
+                    =UpdateContext({varDifusionUsuario:false})
+                PaddingBottom: =5
+                PaddingLeft: =5
+                PaddingRight: =5
+                PaddingTop: =5
+                Width: =35
+                X: =416
+                Y: =9
+                ZIndex: =5
+
+    popup_difusion_cr As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(0, 0, 0, 0.15)
+        Height: =768
+        Visible: =varDifusionCR
+        Width: =1366
+        ZIndex: =25
+
+        container_difusion_cr As groupContainer.manualLayoutContainer:
+            Fill: =background
+            Height: =700
+            Width: =888
+            X: =(Parent.Width-Self.Width)/2
+            Y: =(Parent.Height-Self.Height)/2
+            ZIndex: =1
+
+            Label8_2 As label:
+                Align: =Align.Center
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =35
+                Size: =16
+                Text: ="Difusión por CR"
+                Width: =315
+                X: =(Parent.Width-Self.Width)/2
+                Y: =24
+                ZIndex: =1
+
+            Label8_3 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =24
+                Size: =12
+                Text: ="Gerencia *"
+                Width: =140
+                X: =24
+                Y: =76
+                ZIndex: =2
+
+            Icon3_1 As icon.Cancel:
+                Color: =RGBA(0, 0, 0, 1)
+                Height: =35
+                Icon: =Icon.Cancel
+                OnSelect: |-
+                    =UpdateContext({varDifusionCR:false})
+                PaddingBottom: =5
+                PaddingLeft: =5
+                PaddingRight: =5
+                PaddingTop: =5
+                Width: =35
+                X: =824
+                Y: =20
+                ZIndex: =3
 

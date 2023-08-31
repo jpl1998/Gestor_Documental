@@ -1,0 +1,10 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_logicflows",
+    "FlowNameId": "a165df39-f4f2-46b5-b463-53ad92054501",
+    "Name": "Necesidaddenotificacióndedifusióndepublicacióndedocumentooficial",
+    "ServiceKind": "ConnectedWadl",
+    "Type": "ServiceInfo",
+    "WorkflowEntityId": null
+  }
+]

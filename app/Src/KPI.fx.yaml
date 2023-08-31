@@ -257,6 +257,7 @@
                                 BorderStyle: =BorderStyle.Solid
                                 DisplayMode: =DisplayMode.Edit
                                 Fill: =RGBA(0, 0, 0, 0)
+                                HeadingFill: =primary
                                 Height: =158
                                 Items: =AddColumns(AddColumns(GroupBy(Filter(DEV_Modificacion_estatus_proceso_doc,id_estatus_documento.Value="Publicado"),"id_doc","groupDoc"),"fechaCreado",LookUp(DEV_Documento,id_doc=ID).fecha),"DateDiff",DateDiff(fechaCreado,First(groupDoc).'fecha y hora'))
                                 Width: =970
