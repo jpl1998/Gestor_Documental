@@ -610,7 +610,8 @@
                                                 "Observado", RGBA(245, 218, 216, 1),
                                                 "Aprobado", RGBA(219, 238, 233, 1),
                                                 "Difundido", RGBA(219, 238, 233, 1),
-                                                "Publicado", RGBA(219, 238, 233, 1))
+                                                "Publicado", RGBA(219, 238, 233, 1),
+                                                ColorValue("#ffffff"))
                                             Font: =Font.Arial
                                             FontWeight: =FontWeight.Normal
                                             Height: =Parent.Height*60%
