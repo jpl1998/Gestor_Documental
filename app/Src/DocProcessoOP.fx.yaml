@@ -7430,7 +7430,7 @@
                 Y: =144
                 ZIndex: =3
 
-            comentario_observacion_ra_1 As text:
+            comentario_baja As text:
                 BorderColor: =placeholder
                 BorderThickness: =1
                 Default: =""
@@ -7471,6 +7471,18 @@
                         ind_mod:"i",
                         id_doc:varDocSide.ID}
                     );
+                    
+                    Patch(
+                        DEV_Datos_Baja,
+                        Defaults(DEV_Datos_Baja),
+                        {
+                            Usuario: User().FullName,
+                            correo_usuario: User().Email,
+                            fecha: Today(),
+                            motivo: comentario_baja.Text
+                        },
+                        baja_attachment_form.Updates
+                    );
                     Set(varsidebarop,false);
                     UpdateContext({varPopupDarBaja:false})
                 Text: ="Dar Baja al Documento"
@@ -7484,8 +7496,8 @@
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Semibold
                 Size: =12
-                Text: =First(observaciones_attachment_ra_2.Attachments).Name
-                Visible: =!IsEmpty(observaciones_attachment_ra_2.Attachments)
+                Text: =First(baja_attachment.Attachments).Name
+                Visible: =!IsEmpty(baja_attachment.Attachments)
                 Width: =260
                 X: =39
                 Y: =96
@@ -7506,14 +7518,14 @@
                 FontWeight: =FontWeight.Semibold
                 Size: =12
                 Text: ="Adjuntar archivo"
-                Visible: =IsEmpty(observaciones_attachment_ra_2.Attachments)
+                Visible: =IsEmpty(baja_attachment.Attachments)
                 Width: =260
                 X: =39
                 Y: =96
                 ZIndex: =8
 
-            observacion_attachment_form_ra_2 As form:
-                DataSource: =DEV_Observacion
+            baja_attachment_form As form:
+                DataSource: =DEV_Datos_Baja
                 DefaultMode: =FormMode.New
                 Height: =125
                 Width: =436
@@ -7530,13 +7542,13 @@
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =34
                     Required: =false
-                    Update: =observaciones_attachment_ra_2.Attachments
+                    Update: =baja_attachment.Attachments
                     Width: =435
                     X: =0
                     Y: =0
                     ZIndex: =8
 
-                    observaciones_attachment_ra_2 As attachments:
+                    baja_attachment As attachments:
                         AddAttachmentText: =
                         BorderColor: =
                         BorderStyle: =BorderStyle.None
@@ -7558,7 +7570,7 @@
                         PaddingRight: =5
                         PaddingTop: =5
                         PressedFill: =Color.Transparent
-                        Visible: =IsEmpty(observaciones_attachment_ra_2.Attachments)
+                        Visible: =IsEmpty(baja_attachment.Attachments)
                         Width: =408
                         X: =10
                         Y: =20
@@ -7582,12 +7594,12 @@
             cancel_attachment_icon_obervacion_2 As icon.Cancel:
                 Height: =29
                 Icon: =Icon.Cancel
-                OnSelect: =ResetForm(observacion_attachment_form_ra_2)
+                OnSelect: =ResetForm(baja_attachment_form)
                 PaddingBottom: =5
                 PaddingLeft: =5
                 PaddingRight: =5
                 PaddingTop: =5
-                Visible: =!IsEmpty(observaciones_attachment_ra_2.Attachments)
+                Visible: =!IsEmpty(baja_attachment.Attachments)
                 Width: =29
                 X: =335
                 Y: =102

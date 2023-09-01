@@ -56274,19 +56274,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "DocProcessoOP.popup_observacion_ra_1.container_popup_observacion_ra_1.observacion_attachment_form_ra_2.Attachments_DataCard1_2.observaciones_attachment_ra_2.AccessibleLabel"
+                  "fullyQualifiedName": "DocProcessoOP.popup_observacion_ra_1.container_popup_observacion_ra_1.baja_attachment_form.Attachments_DataCard1_2.baja_attachment.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "DocProcessoOP.popup_observacion_ra_1.container_popup_observacion_ra_1.observacion_attachment_form_ra_2.Attachments_DataCard1_2.observaciones_attachment_ra_2.AccessibleLabel",
+                  "fullyQualifiedName": "DocProcessoOP.popup_observacion_ra_1.container_popup_observacion_ra_1.baja_attachment_form.Attachments_DataCard1_2.baja_attachment.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "DocProcessoOP",
-                "type": "DocProcessoOP.popup_observacion_ra_1.container_popup_observacion_ra_1.observacion_attachment_form_ra_2.Attachments_DataCard1_2.observaciones_attachment_ra_2"
+                "type": "DocProcessoOP.popup_observacion_ra_1.container_popup_observacion_ra_1.baja_attachment_form.Attachments_DataCard1_2.baja_attachment"
               }
             }
           ],
@@ -56364,19 +56364,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "DocProcessoOP.popup_observacion_ra_1.container_popup_observacion_ra_1.comentario_observacion_ra_1.AccessibleLabel"
+                  "fullyQualifiedName": "DocProcessoOP.popup_observacion_ra_1.container_popup_observacion_ra_1.comentario_baja.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "DocProcessoOP.popup_observacion_ra_1.container_popup_observacion_ra_1.comentario_observacion_ra_1.AccessibleLabel",
+                  "fullyQualifiedName": "DocProcessoOP.popup_observacion_ra_1.container_popup_observacion_ra_1.comentario_baja.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "DocProcessoOP",
-                "type": "DocProcessoOP.popup_observacion_ra_1.container_popup_observacion_ra_1.comentario_observacion_ra_1"
+                "type": "DocProcessoOP.popup_observacion_ra_1.container_popup_observacion_ra_1.comentario_baja"
               }
             }
           ],

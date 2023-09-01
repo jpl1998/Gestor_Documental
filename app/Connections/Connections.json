@@ -421,6 +421,9 @@
           "DEV_CECO": {
             "tableName": "c0d7fe35-ca72-405c-9693-7098f37f164a"
           },
+          "DEV_Datos_Baja": {
+            "tableName": "d4070910-72eb-4866-9f00-494d198ea4f9"
+          },
           "DEV_Departamento": {
             "tableName": "13162dda-600e-4267-9b38-099cea675570"
           },
@@ -522,7 +525,8 @@
       "DEV_Observacion",
       "DEV_Estructura_Organizativa_dos",
       "DEV_Difusion",
-      "DEV_Difusion_Usuario"
+      "DEV_Difusion_Usuario",
+      "DEV_Datos_Baja"
     ],
     "dependencies": {},
     "dependents": [
