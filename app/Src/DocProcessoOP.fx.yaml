@@ -5110,49 +5110,31 @@
                     LayoutMinHeight: =100
                     LayoutMinWidth: =250
                     LayoutMode: =LayoutMode.Auto
-                    PaddingBottom: =20
-                    PaddingLeft: =20
-                    PaddingRight: =20
-                    PaddingTop: =20
                     Width: =602
                     X: =736
                     Y: =207
                     ZIndex: =2
 
-                    Container15_80 As groupContainer.verticalAutoLayoutContainer:
-                        AlignInContainer: =AlignInContainer.Center
-                        DropShadow: =DropShadow.None
-                        Height: =100
-                        LayoutDirection: =LayoutDirection.Vertical
-                        LayoutGap: =5
-                        LayoutJustifyContent: =LayoutJustifyContent.Center
-                        LayoutMinHeight: =50
+                    Container18 As groupContainer.manualLayoutContainer:
+                        LayoutMinHeight: =100
                         LayoutMinWidth: =250
-                        LayoutMode: =LayoutMode.Auto
-                        PaddingBottom: =10
-                        PaddingLeft: =10
-                        PaddingRight: =10
-                        PaddingTop: =10
-                        Width: =Parent.Width*60%
-                        ZIndex: =6
+                        ZIndex: =1
 
                         lb_upload_doc_op_1 As label:
-                            AlignInContainer: =AlignInContainer.Stretch
                             Color: =primarytext
                             FontWeight: =FontWeight.Bold
-                            Height: =30
-                            LayoutMinHeight: =30
+                            Height: =25
                             Text: ="Documento Principal"
+                            Width: =296
+                            X: =212
+                            Y: =13
                             ZIndex: =1
 
                         div_upload_doc_op_1 As groupContainer.manualLayoutContainer:
                             BorderStyle: =BorderStyle.None
                             DropShadow: =DropShadow.None
                             Fill: =RGBA(255, 255, 255, 1)
-                            FillPortions: =0
                             Height: =50
-                            LayoutMinHeight: =100
-                            LayoutMinWidth: =250
                             PaddingBottom: =5
                             PaddingLeft: =5
                             PaddingRight: =5
@@ -5161,6 +5143,8 @@
                             RadiusBottomRight: =0
                             RadiusTopLeft: =0
                             RadiusTopRight: =0
+                            X: =212
+                            Y: =47
                             ZIndex: =2
 
                             archivo_image_sidebar_docRev_op_3 As image:
@@ -5172,61 +5156,68 @@
                                 ZIndex: =1
 
                             archivo_title_sidebar_docRev_op_3 As label:
+                                Color: =primary
+                                FontWeight: =FontWeight.Semibold
                                 Height: =Parent.Height*80%
                                 PaddingLeft: =10
                                 Size: =11
-                                Text: =First(LookUp(DEV_Archivos,id_documento.Value = Text(varDocSide.ID) && tipo_documento="Principal").Attachments).DisplayName
+                                Text: =If(IsEmpty(PrincipalDataCardValue.Attachments), "Subir Archivo",First(PrincipalDataCardValue.Attachments).Name)
                                 Width: =353
                                 Wrap: =false
                                 X: =53
                                 Y: =(Parent.Height-Self.Height)/2
                                 ZIndex: =2
 
-                            Icon4 As icon.Trash:
+                            Icon4 As icon.Cancel:
                                 Color: =red
-                                Height: =Parent.Height*50%
-                                Icon: =Icon.Trash
-                                OnSelect: |
-                                    =Set(varquitararchivo,true);
-                                    Set(formdocedti,true)
-                                Width: =Self.Height
-                                X: =448
-                                Y: =(Parent.Height-Self.Height)/2
+                                Height: =37
+                                Icon: =Icon.Cancel
+                                OnSelect: =ResetForm(FormEditPrincipal)
+                                PaddingBottom: =7
+                                PaddingLeft: =7
+                                PaddingRight: =7
+                                PaddingTop: =7
+                                Visible: =!IsEmpty(PrincipalDataCardValue.Attachments)
+                                Width: =47
+                                X: =452
+                                Y: =6
                                 ZIndex: =3
 
                         FormEditPrincipal As form:
                             DataSource: =DEV_Archivos
                             DefaultMode: =FormMode.New
-                            Height: =196
-                            LayoutMinHeight: =73
-                            LayoutMinWidth: =400
+                            Height: =106
                             NumberOfColumns: =1
-                            Visible: =formdocedti
-                            Width: =1005
-                            X: =40
-                            Y: =40
+                            Visible: =IsEmpty(PrincipalDataCardValue.Attachments)
+                            Width: =500
+                            X: =212
                             ZIndex: =3
 
                             Anexos_DataCard1_1 As typedDataCard.attachmentsEditCard:
-                                BorderStyle: =BorderStyle.Solid
+                                BorderStyle: =BorderStyle.None
                                 DataField: ="{Attachments}"
                                 Default: =ThisItem.Attachments
                                 DisplayMode: =Parent.DisplayMode
                                 DisplayName: =DataSourceInfo([@DEV_Archivos],DataSourceInfo.DisplayName,"{Attachments}")
                                 Fill: =RGBA(0, 0, 0, 0)
-                                Height: =Parent.Height
+                                Height: =73
                                 Required: =false
-                                Update: =DataCardValue7_1.Attachments
-                                Width: =489
+                                Update: =PrincipalDataCardValue.Attachments
+                                Width: =500
                                 X: =0
                                 Y: =0
                                 ZIndex: =2
 
-                                DataCardValue7_1 As attachments:
+                                PrincipalDataCardValue As attachments:
                                     AddAttachmentText: ="Adjuntar archivo"
                                     BorderColor: =RGBA(219, 219, 219, 1)
+                                    BorderStyle: =BorderStyle.None
+                                    Color: =RGBA(0, 0, 0, 0)
                                     DisplayMode: =Parent.DisplayMode
-                                    Height: =Parent.Height
+                                    Fill: =RGBA(0, 0, 0, 0)
+                                    Height: =98
+                                    HoverColor: =RGBA(0, 0, 0, 0)
+                                    HoverFill: =RGBA(0, 0, 0, 0.15)
                                     IsInDataCard: =true
                                     Items: =Parent.Default
                                     MaxAttachments: =2
@@ -5237,28 +5228,26 @@
                                     PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                                     PaddingRight: =5
                                     PaddingTop: =5
-                                    Size: =9
+                                    PressedColor: =RGBA(0, 0, 0, 0)
+                                    PressedFill: =RGBA(0, 0, 0, 0)
                                     Tooltip: =Parent.DisplayName
                                     Width: =Parent.Width
                                     ZIndex: =2
 
                         lb_upload_doc_op_2 As label:
-                            AlignInContainer: =AlignInContainer.Stretch
                             Color: =primarytext
                             FontWeight: =FontWeight.Bold
                             Height: =30
-                            LayoutMinHeight: =30
                             Text: ="Flujograma"
+                            X: =212
+                            Y: =126
                             ZIndex: =4
 
                         div_upload_doc_op_2 As groupContainer.manualLayoutContainer:
                             BorderStyle: =BorderStyle.None
                             DropShadow: =DropShadow.None
                             Fill: =RGBA(255, 255, 255, 1)
-                            FillPortions: =0
                             Height: =50
-                            LayoutMinHeight: =100
-                            LayoutMinWidth: =250
                             PaddingBottom: =5
                             PaddingLeft: =5
                             PaddingRight: =5
@@ -5267,6 +5256,8 @@
                             RadiusBottomRight: =0
                             RadiusTopLeft: =0
                             RadiusTopRight: =0
+                            X: =212
+                            Y: =164
                             ZIndex: =5
 
                             archivo_image_sidebar_docRev_op_4 As image:
@@ -5278,39 +5269,42 @@
                                 ZIndex: =1
 
                             archivo_title_sidebar_docRev_op_4 As label:
+                                Color: =primary
+                                FontWeight: =FontWeight.Semibold
                                 Height: =Parent.Height*80%
                                 PaddingLeft: =10
                                 Size: =11
-                                Text: =First(LookUp(DEV_Archivos,id_documento.Value = Text(varDocSide.ID) && tipo_documento="Flujograma").Attachments).DisplayName
+                                Text: =If(IsEmpty(FlujoDataCardValue.Attachments), "Subir Archivo",First(FlujoDataCardValue.Attachments).Name)
                                 Width: =353
                                 Wrap: =false
                                 X: =53
                                 Y: =(Parent.Height-Self.Height)/2
                                 ZIndex: =2
 
-                            Icon4_1 As icon.Trash:
+                            Icon4_1 As icon.Cancel:
                                 Color: =red
-                                Height: =Parent.Height*50%
-                                Icon: =Icon.Trash
-                                OnSelect: |-
-                                    =Set(varquitararchivo,true);
-                                    Set(formflujoedit,true)
-                                Width: =Self.Height
-                                X: =448
-                                Y: =(Parent.Height-Self.Height)/2
+                                Height: =37
+                                Icon: =Icon.Cancel
+                                OnSelect: =ResetForm(FormEditFlujograma)
+                                PaddingBottom: =7
+                                PaddingLeft: =7
+                                PaddingRight: =7
+                                PaddingTop: =7
+                                Visible: =!IsEmpty(FlujoDataCardValue.Attachments)
+                                Width: =47
+                                X: =445
+                                Y: =6
                                 ZIndex: =3
 
                         FormEditFlujograma As form:
                             DataSource: =DEV_Archivos
                             DefaultMode: =FormMode.New
-                            Height: =196
-                            LayoutMinHeight: =73
-                            LayoutMinWidth: =400
+                            Height: =111
                             NumberOfColumns: =1
-                            Visible: =formflujoedit
-                            Width: =1005
-                            X: =40
-                            Y: =40
+                            Visible: =IsEmpty(FlujoDataCardValue.Attachments)
+                            Width: =500
+                            X: =212
+                            Y: =118
                             ZIndex: =6
 
                             Anexos_DataCard1_2 As typedDataCard.attachmentsEditCard:
@@ -5320,19 +5314,24 @@
                                 DisplayMode: =Parent.DisplayMode
                                 DisplayName: =DataSourceInfo([@DEV_Archivos],DataSourceInfo.DisplayName,"{Attachments}")
                                 Fill: =RGBA(0, 0, 0, 0)
-                                Height: =Parent.Height
+                                Height: =73
                                 Required: =false
-                                Update: =DataCardValue7_2.Attachments
-                                Width: =489
+                                Update: =FlujoDataCardValue.Attachments
+                                Width: =500
                                 X: =0
                                 Y: =0
                                 ZIndex: =2
 
-                                DataCardValue7_2 As attachments:
+                                FlujoDataCardValue As attachments:
                                     AddAttachmentText: ="Adjuntar archivo"
                                     BorderColor: =RGBA(219, 219, 219, 1)
+                                    BorderStyle: =BorderStyle.None
+                                    Color: =RGBA(0, 0, 0, 0)
                                     DisplayMode: =Parent.DisplayMode
-                                    Height: =Parent.Height
+                                    Fill: =RGBA(0, 0, 0, 0)
+                                    Height: =111
+                                    HoverColor: =RGBA(0, 0, 0, 0)
+                                    HoverFill: =RGBA(0, 0, 0, 0.15)
                                     IsInDataCard: =true
                                     Items: =Parent.Default
                                     MaxAttachments: =2
@@ -5343,28 +5342,26 @@
                                     PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                                     PaddingRight: =5
                                     PaddingTop: =5
-                                    Size: =9
+                                    PressedColor: =RGBA(0, 0, 0, 0)
+                                    PressedFill: =RGBA(0, 0, 0, 0)
                                     Tooltip: =Parent.DisplayName
                                     Width: =Parent.Width
                                     ZIndex: =2
 
                         lb_upload_doc_op_3 As label:
-                            AlignInContainer: =AlignInContainer.Stretch
                             Color: =primarytext
                             FontWeight: =FontWeight.Bold
                             Height: =30
-                            LayoutMinHeight: =30
                             Text: ="RCKI"
+                            X: =212
+                            Y: =240
                             ZIndex: =7
 
                         div_upload_doc_op_3 As groupContainer.manualLayoutContainer:
                             BorderStyle: =BorderStyle.None
                             DropShadow: =DropShadow.None
                             Fill: =RGBA(255, 255, 255, 1)
-                            FillPortions: =0
                             Height: =50
-                            LayoutMinHeight: =100
-                            LayoutMinWidth: =250
                             PaddingBottom: =5
                             PaddingLeft: =5
                             PaddingRight: =5
@@ -5373,6 +5370,8 @@
                             RadiusBottomRight: =0
                             RadiusTopLeft: =0
                             RadiusTopRight: =0
+                            X: =212
+                            Y: =296
                             ZIndex: =8
 
                             archivo_image_sidebar_docRev_op_5 As image:
@@ -5394,29 +5393,13 @@
                                 Y: =(Parent.Height-Self.Height)/2
                                 ZIndex: =2
 
-                            Icon4_2 As icon.Trash:
-                                Color: =red
-                                Height: =Parent.Height*50%
-                                Icon: =Icon.Trash
-                                OnSelect: |-
-                                    =Set(varquitararchivo,true);
-                                    Set(formRCKIedit,true)
-                                Width: =Self.Height
-                                X: =448
-                                Y: =(Parent.Height-Self.Height)/2
-                                ZIndex: =3
-
                         FormEditRcki As form:
                             DataSource: =DEV_Archivos
                             DefaultMode: =FormMode.New
                             Height: =196
-                            LayoutMinHeight: =73
-                            LayoutMinWidth: =400
                             NumberOfColumns: =1
-                            Visible: =formRCKIedit
-                            Width: =1005
-                            X: =40
-                            Y: =40
+                            Visible: =IsEmpty(RckiDataCardValue.Attachments)
+                            Width: =808
                             ZIndex: =9
 
                             Anexos_DataCard1_3 As typedDataCard.attachmentsEditCard:
@@ -5428,13 +5411,13 @@
                                 Fill: =RGBA(0, 0, 0, 0)
                                 Height: =Parent.Height
                                 Required: =false
-                                Update: =DataCardValue7_3.Attachments
+                                Update: =RckiDataCardValue.Attachments
                                 Width: =489
                                 X: =0
                                 Y: =0
                                 ZIndex: =2
 
-                                DataCardValue7_3 As attachments:
+                                RckiDataCardValue As attachments:
                                     AddAttachmentText: ="Adjuntar archivo"
                                     BorderColor: =RGBA(219, 219, 219, 1)
                                     DisplayMode: =Parent.DisplayMode
