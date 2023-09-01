@@ -8200,3 +8200,31 @@
                 Y: =75
                 ZIndex: =9
 
+    popup_revisar_entrega As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.None
+        Fill: =RGBA(0, 0, 0, 0.15)
+        Height: =768
+        Visible: =false
+        Width: =1366
+        ZIndex: =26
+
+        container_revisar_entrega As groupContainer.manualLayoutContainer:
+            Fill: =background
+            Height: =566
+            Width: =460
+            X: =(Parent.Width-Self.Width)/2
+            Y: =(Parent.Height-Self.Height)/2
+            ZIndex: =1
+
+            Label8_21 As label:
+                Align: =Align.Center
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Height: =35
+                Size: =16
+                Text: ="Entrega N°1"
+                Width: =315
+                X: =(Parent.Width-Self.Width)/2
+                Y: =16
+                ZIndex: =1
+

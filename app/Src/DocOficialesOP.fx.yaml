@@ -8302,8 +8302,8 @@
                 Height: =133
                 Text: |-
                     =Concat(Filter(UsuáriosdoOffice365.SearchUser({searchTerm:" ", top:999}),Department in colAreasFiltro),Mail,";")
-                Width: =419
-                X: =17
-                Y: =497
+                Width: =412
+                X: =24
+                Y: =478
                 ZIndex: =23
 
