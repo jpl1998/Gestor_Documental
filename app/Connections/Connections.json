@@ -424,6 +424,12 @@
           "DEV_Departamento": {
             "tableName": "13162dda-600e-4267-9b38-099cea675570"
           },
+          "DEV_Difusion": {
+            "tableName": "af6d910a-413f-4ee7-81f5-150c8f5818de"
+          },
+          "DEV_Difusion_Usuario": {
+            "tableName": "f5a07a68-dd00-4439-a7d3-4609a4ee5d89"
+          },
           "DEV_Documento": {
             "tableName": "e0a36371-d54b-4414-b538-830f3503fdfd"
           },
@@ -514,7 +520,9 @@
       "DEV_Archivos",
       "DEV_Estatus_documento",
       "DEV_Observacion",
-      "DEV_Estructura_Organizativa_dos"
+      "DEV_Estructura_Organizativa_dos",
+      "DEV_Difusion",
+      "DEV_Difusion_Usuario"
     ],
     "dependencies": {},
     "dependents": [

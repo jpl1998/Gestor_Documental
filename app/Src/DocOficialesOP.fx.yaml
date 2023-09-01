@@ -8019,7 +8019,32 @@
                 Height: =52
                 HoverFill: =ColorFade(primary,-20%)
                 OnSelect: |
-                    =Necesidaddenotificacióndedifusióndepublicacióndedocumentooficial.Run(Concat(Usuarios_difusion_1.SelectedItems,Mail,";"));
+                    =Set(varDifusion,
+                        Patch(
+                            DEV_Difusion,
+                            Defaults(DEV_Difusion),
+                            {
+                                nro_difusion: First(SortByColumns(Filter(DEV_Difusion, id_documento.Value = Text(varDocSide.ID)),"nro_difusion",SortOrder.Descending)).nro_difusion+1,
+                                tipo_difusion: "Por Usuario",
+                                fecha: Today(),
+                                id_documento: {Id: varDocSide.ID, Value: varDocSide.ID}
+                            }
+                        )
+                    );
+                    ForAll(
+                        Usuarios_difusion_1.SelectedItems As usuario,
+                        Patch(
+                            DEV_Difusion_Usuario,
+                            Defaults(DEV_Difusion_Usuario),
+                            {
+                                id_difusion: {Id:varDifusion.ID, Value: varDifusion.ID},
+                                Nombre: usuario.DisplayName,
+                                Cargo: usuario.JobTitle,
+                                Area: usuario.Department
+                            }
+                        )
+                    );
+                    Necesidaddenotificacióndedifusióndepublicacióndedocumentooficial.Run(Concat(Usuarios_difusion_1.SelectedItems,Mail,";"));
                     UpdateContext({varDifusionUsuario:false})
                 Size: =16
                 Text: ="Realizar Difusión"
@@ -8143,7 +8168,7 @@
                 Font: =Font.'Segoe UI'
                 Height: =44
                 IsSearchable: =false
-                Items: =Distinct(Filter(DEV_Estructura_Organizativa_dos,GERENCIA=gerencia_difusion_1.Selected.Value && SUBGERENCIA=subgerencia_difusion_1.Selected.Value),ID_CECO)
+                Items: =Distinct(Filter(DEV_Estructura_Organizativa_dos,GERENCIA=gerencia_difusion_1.Selected.Value && SUBGERENCIA=subgerencia_difusion_1.Selected.Value),DPTO)
                 SearchFields: =["Value"]
                 SearchItems: =[]
                 SelectMultiple: =false
@@ -8172,6 +8197,7 @@
                 Font: =Font.'Segoe UI'
                 Height: =44
                 Items: =Distinct(DEV_Estructura_Organizativa_dos,GERENCIA)
+                OnChange: =Clear(colAreasFiltro)
                 SearchFields: =["Value"]
                 SearchItems: =Search(Distinct(DEV_Estructura_Organizativa_dos,GERENCIA),gerencia_difusion_1.SearchText,"Value")
                 SelectMultiple: =false
@@ -8181,14 +8207,6 @@
                 Y: =108
                 ZIndex: =11
 
-            Label13 As label:
-                Height: =171
-                Text: =Concat(Filter(UsuáriosdoOffice365.SearchUser(),Department="DPTO TECNOLOGIAS INFORMACION Y OPERACION").Mail,";")
-                Width: =331
-                X: =86
-                Y: =388
-                ZIndex: =12
-
             departamento_difusion_3 As combobox:
                 BorderStyle: =BorderStyle.None
                 ChevronBackground: =RGBA(255, 255, 255, 1)
@@ -8196,56 +8214,96 @@
                 DisplayFields: =["DisplayName","Mail"]
                 Font: =Font.'Segoe UI'
                 Height: =44
-                Items: =Filter(UsuáriosdoOffice365.SearchUser(),Department="DPTO TECNOLOGIAS INFORMACION Y OPERACION")
-                SearchFields: =["DisplayName"]
-                SearchItems: =Search(Filter(UsuáriosdoOffice365.SearchUser(),Department="DPTO TECNOLOGIAS INFORMACION Y OPERACION"),departamento_difusion_3.SearchText,"DisplayName")
-                SelectMultiple: =false
-                Size: =12
-                Template: =ListItemTemplate.Person
-                Width: =412
-                X: =469
-                Y: =252
-                ZIndex: =13
-
-            Label13_1 As label:
-                Height: =79
-                Text: =departamento_difusion_3.Selected.Department
-                Width: =331
-                X: =469
-                Y: =304
-                ZIndex: =14
-
-            departamento_difusion_4 As combobox:
-                BorderStyle: =BorderStyle.None
-                ChevronBackground: =RGBA(255, 255, 255, 1)
-                ChevronFill: =primary
-                DisplayFields: =["DisplayName","Mail"]
-                Font: =Font.'Segoe UI'
-                Height: =44
                 Items: |-
-                    =UsuáriosdoOffice365.SearchUser({searchTerm:Self.SearchText})
+                    =Filter(UsuáriosdoOffice365.SearchUser({searchTerm:Self.SearchText, top:999}),Department="DPTO TECNOLOGIAS INFORMACION Y OPERACION")
                 SearchFields: =["DisplayName"]
                 SearchItems: |-
-                    =Search(UsuáriosdoOffice365.SearchUser({searchTerm:Self.SearchText}),departamento_difusion_4.SearchText,"DisplayName")
+                    =Search(Filter(UsuáriosdoOffice365.SearchUser({searchTerm:Self.SearchText, top:999}),Department="DPTO TECNOLOGIAS INFORMACION Y OPERACION"),departamento_difusion_3.SearchText,"DisplayName")
                 SelectMultiple: =false
                 Size: =12
                 Template: =ListItemTemplate.Person
                 Width: =412
-                X: =456
-                Y: =425
-                ZIndex: =15
-
-            Label13_2 As label:
-                Height: =79
-                Text: =departamento_difusion_4.Selected.Department
-                Width: =331
-                X: =456
-                Y: =494
-                ZIndex: =16
+                X: =24
+                Y: =371
+                ZIndex: =13
 
             Label6 As label:
-                Text: =CountRows(UsuáriosdoOffice365.SearchUser())
-                X: =521
-                Y: =113
+                Text: |-
+                    =CountRows(UsuáriosdoOffice365.SearchUser({top:999}))
+                X: =567
+                Y: =513
                 ZIndex: =17
+
+            Button10 As button:
+                DisabledBorderColor: =RGBA(237, 237, 237, 1)
+                DisabledColor: =RGBA(202, 202, 202, 1)
+                DisabledFill: =RGBA(255, 255, 255, 1)
+                DisplayMode: =DisplayMode.Disabled
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Normal
+                Height: =480
+                Size: =12
+                Text: |-
+                    =If(IsEmpty(AreaGallery.AllItems), "Realice una búsqueda para mostrar las 
+                    áreas correspondientes")
+                Width: =412
+                X: =456
+                Y: =108
+                ZIndex: =19
+
+            Label7 As label:
+                Height: =19
+                Text: |-
+                    =CountRows(UsuáriosdoOffice365.SearchUser({top:999}))
+                X: =24
+                Y: =434
+                ZIndex: =21
+
+            AreaGallery As gallery.galleryVertical:
+                DelayItemLoading: =true
+                Height: =478
+                Items: |-
+                    =Filter(
+                        DEV_Estructura_Organizativa_dos,
+                        GERENCIA = gerencia_difusion_1.Selected.Value,
+                        IsBlank(subgerencia_difusion_1.Selected) || SUBGERENCIA = subgerencia_difusion_1.Selected.Value,
+                        IsBlank(departamento_difusion_1.Selected) ||DPTO = departamento_difusion_1.Selected.Value
+                    )
+                Layout: =Layout.Vertical
+                LoadingSpinner: =LoadingSpinner.Data
+                TemplateSize: =50
+                Width: =412
+                X: =456
+                Y: =110
+                ZIndex: =22
+
+                Label10 As label:
+                    Font: =Font.'Segoe UI'
+                    OnSelect: =Select(Parent)
+                    Size: =12
+                    Text: =ThisItem.des_cen_cto
+                    Width: =337
+                    X: =10
+                    Y: =5
+                    ZIndex: =1
+
+                Checkbox2 As checkbox:
+                    BorderStyle: =BorderStyle.None
+                    CheckboxSize: =20
+                    OnCheck: =Collect(colAreasFiltro,ThisItem.des_cen_cto)
+                    OnSelect: =Select(Parent)
+                    OnUncheck: =RemoveIf(colAreasFiltro,Value=ThisItem.des_cen_cto)
+                    Text: =""
+                    Width: =30
+                    X: =363
+                    ZIndex: =2
+
+            Label11 As label:
+                Height: =133
+                Text: |-
+                    =Concat(Filter(UsuáriosdoOffice365.SearchUser({searchTerm:" ", top:999}),Department in colAreasFiltro),Mail,";")
+                Width: =419
+                X: =17
+                Y: =497
+                ZIndex: =23
 
