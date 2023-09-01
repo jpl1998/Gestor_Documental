@@ -44874,6 +44874,66 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "DocProcessoOP.popupupload.Container22_1.Container13_12.Container13_23.Container18_1.div_upload_doc_op_4.Icon4_3.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "DocProcessoOP.popupupload.Container22_1.Container13_12.Container13_23.Container18_1.div_upload_doc_op_4.Icon4_3.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "DocProcessoOP",
+                "type": "DocProcessoOP.popupupload.Container22_1.Container13_12.Container13_23.Container18_1.div_upload_doc_op_4.Icon4_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "DocProcessoOP.popupupload.Container22_1.Container13_12.Container13_23.Container18_1.div_upload_doc_op_4.Icon4_3.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "DocProcessoOP.popupupload.Container22_1.Container13_12.Container13_23.Container18_1.div_upload_doc_op_4.Icon4_3.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "DocProcessoOP",
+                "type": "DocProcessoOP.popupupload.Container22_1.Container13_12.Container13_23.Container18_1.div_upload_doc_op_4.Icon4_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.evaluacion_container_sidebar_docRev_ra.elaborador_evaluacion_sidebar_ra.AccessibleLabel"
                 }
               ],
@@ -53154,79 +53214,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "DocProcessoOP.popupupload.Container22_1.Container13_12.Container13_23.Container15_43.FormArchivoPrincipal.uploadDocPrincipal.DataCardValue17_1.AccessibleLabel"
+                  "fullyQualifiedName": "DocProcessoOP.popupupload.Container22_1.Container13_12.Container13_23.Container18_1.FormArchivoPrincipal.Anexos_DataCard1_10.PrincipalDataCardValue_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "DocProcessoOP.popupupload.Container22_1.Container13_12.Container13_23.Container15_43.FormArchivoPrincipal.uploadDocPrincipal.DataCardValue17_1.AccessibleLabel",
+                  "fullyQualifiedName": "DocProcessoOP.popupupload.Container22_1.Container13_12.Container13_23.Container18_1.FormArchivoPrincipal.Anexos_DataCard1_10.PrincipalDataCardValue_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "DocProcessoOP",
-                "type": "DocProcessoOP.popupupload.Container22_1.Container13_12.Container13_23.Container15_43.FormArchivoPrincipal.uploadDocPrincipal.DataCardValue17_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "DocProcessoOP.popupupload.Container22_1.Container13_12.Container13_23.Container15_43.FormFlujograma.Anexos_DataCard4.DataCardValue27.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "DocProcessoOP.popupupload.Container22_1.Container13_12.Container13_23.Container15_43.FormFlujograma.Anexos_DataCard4.DataCardValue27.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "DocProcessoOP",
-                "type": "DocProcessoOP.popupupload.Container22_1.Container13_12.Container13_23.Container15_43.FormFlujograma.Anexos_DataCard4.DataCardValue27"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "DocProcessoOP.popupupload.Container22_1.Container13_12.Container13_23.Container15_43.FormRCKI.Anexos_DataCard4_1.DataCardValue27_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "DocProcessoOP.popupupload.Container22_1.Container13_12.Container13_23.Container15_43.FormRCKI.Anexos_DataCard4_1.DataCardValue27_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "DocProcessoOP",
-                "type": "DocProcessoOP.popupupload.Container22_1.Container13_12.Container13_23.Container15_43.FormRCKI.Anexos_DataCard4_1.DataCardValue27_1"
+                "type": "DocProcessoOP.popupupload.Container22_1.Container13_12.Container13_23.Container18_1.FormArchivoPrincipal.Anexos_DataCard1_10.PrincipalDataCardValue_1"
               }
             }
           ],
@@ -64326,6 +64326,186 @@
                 "member": "TabIndex",
                 "module": "DocPorRevisar RA",
                 "type": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.evaluacion_container_sidebar_docRev_ra.aprobador_evaluacion_sidebar_ra"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "DocProcessoOP.popupupload.Container22_1.Container13_12.Container13_23.Container18_1.FormFlujograma.Anexos_DataCard1_11.FlujoDataCardValue_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "DocProcessoOP.popupupload.Container22_1.Container13_12.Container13_23.Container18_1.FormFlujograma.Anexos_DataCard1_11.FlujoDataCardValue_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "DocProcessoOP",
+                "type": "DocProcessoOP.popupupload.Container22_1.Container13_12.Container13_23.Container18_1.FormFlujograma.Anexos_DataCard1_11.FlujoDataCardValue_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "DocProcessoOP.popupupload.Container22_1.Container13_12.Container13_23.Container18_1.div_upload_doc_op_5.Icon4_4.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "DocProcessoOP.popupupload.Container22_1.Container13_12.Container13_23.Container18_1.div_upload_doc_op_5.Icon4_4.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "DocProcessoOP",
+                "type": "DocProcessoOP.popupupload.Container22_1.Container13_12.Container13_23.Container18_1.div_upload_doc_op_5.Icon4_4"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "DocProcessoOP.popupupload.Container22_1.Container13_12.Container13_23.Container18_1.div_upload_doc_op_5.Icon4_4.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "DocProcessoOP.popupupload.Container22_1.Container13_12.Container13_23.Container18_1.div_upload_doc_op_5.Icon4_4.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "DocProcessoOP",
+                "type": "DocProcessoOP.popupupload.Container22_1.Container13_12.Container13_23.Container18_1.div_upload_doc_op_5.Icon4_4"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "DocProcessoOP.popupupload.Container22_1.Container13_12.Container13_23.Container18_1.FormRCKI.Anexos_DataCard1_12.RckiDataCardValue_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "DocProcessoOP.popupupload.Container22_1.Container13_12.Container13_23.Container18_1.FormRCKI.Anexos_DataCard1_12.RckiDataCardValue_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "DocProcessoOP",
+                "type": "DocProcessoOP.popupupload.Container22_1.Container13_12.Container13_23.Container18_1.FormRCKI.Anexos_DataCard1_12.RckiDataCardValue_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "DocProcessoOP.popupupload.Container22_1.Container13_12.Container13_23.Container18_1.div_upload_doc_op_6.Icon4_5.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "DocProcessoOP.popupupload.Container22_1.Container13_12.Container13_23.Container18_1.div_upload_doc_op_6.Icon4_5.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "DocProcessoOP",
+                "type": "DocProcessoOP.popupupload.Container22_1.Container13_12.Container13_23.Container18_1.div_upload_doc_op_6.Icon4_5"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "DocProcessoOP.popupupload.Container22_1.Container13_12.Container13_23.Container18_1.div_upload_doc_op_6.Icon4_5.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "DocProcessoOP.popupupload.Container22_1.Container13_12.Container13_23.Container18_1.div_upload_doc_op_6.Icon4_5.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "DocProcessoOP",
+                "type": "DocProcessoOP.popupupload.Container22_1.Container13_12.Container13_23.Container18_1.div_upload_doc_op_6.Icon4_5"
               }
             }
           ],
