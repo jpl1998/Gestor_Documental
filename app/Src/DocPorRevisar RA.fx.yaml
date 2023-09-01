@@ -715,7 +715,7 @@
                         ChevronHoverBackground: =
                         ChevronHoverFill: =primary
                         Color: =secondarytext
-                        DisplayFields: =["City","Mail"]
+                        DisplayFields: =["DisplayName","Mail"]
                         Height: =30
                         HoverBorderColor: =
                         HoverColor: =RGBA(26, 26, 26, 1)
@@ -727,9 +727,9 @@
                         PressedBorderColor: =secondarytext
                         PressedColor: =RGBA(26, 26, 26, 1)
                         PressedFill: =RGBA(0, 0, 0, 0)
-                        SearchFields: =["City"]
+                        SearchFields: =["DisplayName"]
                         SearchItems: |-
-                            =Search(UsuáriosdoOffice365.SearchUser({searchTerm:Self.SearchText}),ComboBox2_7.SearchText,"City")
+                            =Search(UsuáriosdoOffice365.SearchUser({searchTerm:Self.SearchText}),ComboBox2_7.SearchText,"DisplayName")
                         SelectMultiple: =false
                         Size: =10
                         Template: =ListItemTemplate.Person
