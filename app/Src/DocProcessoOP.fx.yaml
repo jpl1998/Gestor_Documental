@@ -5371,7 +5371,7 @@
                             RadiusTopLeft: =0
                             RadiusTopRight: =0
                             X: =212
-                            Y: =296
+                            Y: =280
                             ZIndex: =8
 
                             archivo_image_sidebar_docRev_op_5 As image:
@@ -5386,20 +5386,37 @@
                                 Height: =Parent.Height*80%
                                 PaddingLeft: =10
                                 Size: =11
-                                Text: =First(LookUp(DEV_Archivos,id_documento.Value = Text(varDocSide.ID) && tipo_documento="RCKI").Attachments).DisplayName
+                                Text: =If(IsEmpty(RckiDataCardValue.Attachments), "Subir Archivo",First(RckiDataCardValue.Attachments).Name)
                                 Width: =353
                                 Wrap: =false
                                 X: =53
                                 Y: =(Parent.Height-Self.Height)/2
                                 ZIndex: =2
 
+                            Icon4_2 As icon.Cancel:
+                                Color: =red
+                                Height: =37
+                                Icon: =Icon.Cancel
+                                OnSelect: =ResetForm(FormEditRcki)
+                                PaddingBottom: =7
+                                PaddingLeft: =7
+                                PaddingRight: =7
+                                PaddingTop: =7
+                                Visible: =!IsEmpty(RckiDataCardValue.Attachments)
+                                Width: =47
+                                X: =445
+                                Y: =6
+                                ZIndex: =3
+
                         FormEditRcki As form:
                             DataSource: =DEV_Archivos
                             DefaultMode: =FormMode.New
-                            Height: =196
+                            Height: =111
                             NumberOfColumns: =1
                             Visible: =IsEmpty(RckiDataCardValue.Attachments)
-                            Width: =808
+                            Width: =500
+                            X: =212
+                            Y: =235
                             ZIndex: =9
 
                             Anexos_DataCard1_3 As typedDataCard.attachmentsEditCard:
@@ -5412,7 +5429,7 @@
                                 Height: =Parent.Height
                                 Required: =false
                                 Update: =RckiDataCardValue.Attachments
-                                Width: =489
+                                Width: =500
                                 X: =0
                                 Y: =0
                                 ZIndex: =2
@@ -5420,8 +5437,13 @@
                                 RckiDataCardValue As attachments:
                                     AddAttachmentText: ="Adjuntar archivo"
                                     BorderColor: =RGBA(219, 219, 219, 1)
+                                    BorderStyle: =BorderStyle.None
+                                    Color: =RGBA(0, 0, 0, 0)
                                     DisplayMode: =Parent.DisplayMode
+                                    Fill: =RGBA(0, 0, 0, 0)
                                     Height: =Parent.Height
+                                    HoverColor: =RGBA(0, 0, 0, 0)
+                                    HoverFill: =RGBA(0, 0, 0, 0.15)
                                     IsInDataCard: =true
                                     Items: =Parent.Default
                                     MaxAttachments: =2
@@ -5432,9 +5454,10 @@
                                     PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                                     PaddingRight: =5
                                     PaddingTop: =5
-                                    Size: =9
+                                    PressedColor: =RGBA(0, 0, 0, 0)
+                                    PressedFill: =RGBA(0, 0, 0, 0)
                                     Tooltip: =Parent.DisplayName
-                                    Width: =Parent.Width
+                                    Width: =500
                                     ZIndex: =2
 
                 Container14_37 As groupContainer.horizontalAutoLayoutContainer:
