@@ -1424,180 +1424,6 @@
                         Y: =23
                         ZIndex: =4
 
-                "aprobador_evaluacion_sidebar_ra As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
-                    DelayItemLoading: =true
-                    Items: |-
-                        =Filter(
-                            DEV_Actor,
-                            version = varSelectedDoc.version,
-                            id_documento.Value = Text(varSelectedDoc.ID),
-                            id_funcion.Value = "Aprobador"
-                        )
-                    Layout: =Layout.Vertical
-                    LayoutMinHeight: =287
-                    LayoutMinWidth: =320
-                    LoadingSpinner: =LoadingSpinner.Data
-                    TemplatePadding: =0
-                    TemplateSize: =70
-                    Visible: =menu_filter_evaluacion_sidebar_ra.Selected.Value = "Aprobado por"
-                    ZIndex: =2
-
-                    Image3_8 As image:
-                        Height: =32
-                        Image: =LookUp(DEV_Interlocutor, Value(ThisItem.id_interlocutor.Value)=ID).Email.Picture
-                        OnSelect: =Select(Parent)
-                        RadiusBottomLeft: =8
-                        RadiusBottomRight: =8
-                        RadiusTopLeft: =8
-                        RadiusTopRight: =8
-                        Width: =32
-                        X: =16
-                        Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
-                        ZIndex: =1
-
-                    Title1_25 As label:
-                        Font: =Font.'Segoe UI'
-                        FontWeight: =FontWeight.Semibold
-                        Height: =Self.Size * 1.8
-                        OnSelect: =Select(Parent)
-                        PaddingBottom: =0
-                        PaddingLeft: =0
-                        PaddingRight: =0
-                        PaddingTop: =0
-                        Size: =12
-                        Text: |-
-                            =ThisItem.'id_interlocutor: Nombre'.Value & " " & ThisItem.'id_interlocutor: Apellido'.Value
-                        VerticalAlign: =VerticalAlign.Top
-                        Width: =Parent.TemplateWidth - 200
-                        X: =63
-                        Y: =17
-                        ZIndex: =2
-
-                    Subtitle1_16 As label:
-                        Font: =Font.'Segoe UI'
-                        FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-                        Height: =Self.Size * 1.8
-                        OnSelect: =Select(Parent)
-                        PaddingBottom: =0
-                        PaddingLeft: =0
-                        PaddingRight: =0
-                        PaddingTop: =0
-                        Size: =8
-                        Text: |-
-                            =If(!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version)),
-                            If(!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version, id_status_archivo.Value="2")),"Observado el ", "Aprobado el ") &
-                            LookUp(DEV_Modificacion_estatus_documento,ind_inact="Activo" && id_interlocutor.Value=ThisItem.id_interlocutor.Value && codigo=varSelectedDoc.codigo && version=varSelectedDoc.version).'fecha y hora',
-                            LookUp(DEV_Interlocutor, ID = Value(ThisItem.id_interlocutor.Value)).Email.JobTitle)
-                        VerticalAlign: =VerticalAlign.Top
-                        Width: =Title1_25.Width
-                        X: =Title1_25.X
-                        Y: =Title1_25.Y + Title1_25.Height
-                        ZIndex: =3
-
-                    Rectangle4_2 As rectangle:
-                        Fill: =placeholder
-                        Height: =1
-                        OnSelect: =Select(Parent)
-                        Width: =420
-                        Y: =69
-                        ZIndex: =4
-
-                    obs_text_sidebar_ra_3 As label:
-                        Align: =Align.Center
-                        Color: =red
-                        Font: =Font.'Segoe UI'
-                        FontWeight: =FontWeight.Semibold
-                        Height: =24
-                        OnSelect: =Select(Parent)
-                        Size: =12
-                        Text: ="Observado"
-                        Visible: =!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version, id_status_archivo.Value="2"))
-                        Width: =120
-                        X: =295
-                        Y: =14
-                        ZIndex: =5
-
-                    obs_icon_sidebar_ra_2 As icon.Information:
-                        Color: =red
-                        Height: =20
-                        Icon: =Icon.Information
-                        OnSelect: =Select(Parent)
-                        Visible: =!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version, id_status_archivo.Value="4"))
-                        Width: =20
-                        X: =288
-                        Y: =16
-                        ZIndex: =6
-
-                    verObs_icon_sidebar_ra_4 As icon.View:
-                        Height: =15
-                        Icon: =Icon.View
-                        OnSelect: =Select(Parent)
-                        Visible: =!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version, id_status_archivo.Value="4"))
-                        Width: =15
-                        X: =293
-                        Y: =40
-                        ZIndex: =7
-
-                    verObs_button_sidebar_ra_4 As button:
-                        Align: =Align.Right
-                        Color: =primary
-                        Fill: =RGBA(0, 0, 0, 0)
-                        Font: =Font.'Segoe UI'
-                        Height: =20
-                        HoverColor: =primary
-                        HoverFill: =RGBA(0, 0, 0, 0.15)
-                        OnSelect: |-
-                            =UpdateContext({varObsItems:Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version, id_status_archivo.Value="4"), varRegistroObsPopup:true})
-                        PressedColor: =Self.Color
-                        PressedFill: =
-                        Size: =8
-                        Text: ="Ver Observación"
-                        Underline: =true
-                        Visible: =!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version, id_status_archivo.Value="4"))
-                        Width: =110
-                        X: =288
-                        Y: =38
-                        ZIndex: =8
-
-                    obs_text_sidebar_ra_4 As label:
-                        Align: =Align.Center
-                        Color: =green
-                        Font: =Font.'Segoe UI'
-                        FontWeight: =FontWeight.Semibold
-                        Height: =24
-                        OnSelect: =Select(Parent)
-                        Size: =12
-                        Text: |-
-                            =If(!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version)),
-                            If(!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version, id_status_archivo.Value="4")), "Observado", "Conforme"))
-                        Visible: =IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version, id_status_archivo.Value="4"))
-                        Width: =120
-                        X: =295
-                        Y: =14
-                        ZIndex: =9
-
-                    check_obs_icon_sidebar_ra_1 As image:
-                        Height: =20
-                        Image: =check
-                        OnSelect: =Select(Parent)
-                        Visible: |-
-                            =!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version)) &&
-                            IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version, id_status_archivo.Value="4"))
-                        Width: =20
-                        X: =288
-                        Y: =16
-                        ZIndex: =10
-
-                    mail_aprobador_ra As label:
-                        Height: =19
-                        OnSelect: =Select(Parent)
-                        Text: =LookUp(DEV_Interlocutor, ID = Value(ThisItem.id_interlocutor.Value)).Email.Email
-                        Visible: =false
-                        Width: =261
-                        X: =60
-                        Y: =51
-                        ZIndex: =11
-
                 "elaborador_evaluacion_sidebar_ra As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
                     DelayItemLoading: =true
                     Items: |-
@@ -1671,63 +1497,6 @@
                         Width: =420
                         Y: =69
                         ZIndex: =4
-
-                    obs_text_sidebar_ra_5 As label:
-                        Align: =Align.Center
-                        Color: =red
-                        Font: =Font.'Segoe UI'
-                        FontWeight: =FontWeight.Semibold
-                        Height: =24
-                        OnSelect: =Select(Parent)
-                        Size: =12
-                        Text: ="Observado"
-                        Visible: =!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version, id_status_archivo.Value="2"))
-                        Width: =120
-                        X: =295
-                        Y: =14
-                        ZIndex: =5
-
-                    obs_icon_sidebar_ra_3 As icon.Information:
-                        Color: =red
-                        Height: =20
-                        Icon: =Icon.Information
-                        OnSelect: =Select(Parent)
-                        Visible: =!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version, id_status_archivo.Value="2"))
-                        Width: =20
-                        X: =288
-                        Y: =16
-                        ZIndex: =6
-
-                    verObs_icon_sidebar_ra_5 As icon.View:
-                        Height: =15
-                        Icon: =Icon.View
-                        OnSelect: =Select(Parent)
-                        Visible: =!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version, id_status_archivo.Value="2"))
-                        Width: =15
-                        X: =293
-                        Y: =40
-                        ZIndex: =7
-
-                    verObs_button_sidebar_ra_5 As button:
-                        Align: =Align.Right
-                        Color: =primary
-                        Fill: =RGBA(0, 0, 0, 0)
-                        Font: =Font.'Segoe UI'
-                        Height: =20
-                        HoverColor: =primary
-                        HoverFill: =RGBA(0, 0, 0, 0.15)
-                        OnSelect: |-
-                            =UpdateContext({varObsItems:Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version, id_status_archivo.Value="2"), varRegistroObsPopup:true})
-                        PressedColor: =Self.Color
-                        PressedFill: =
-                        Size: =8
-                        Text: ="Ver Observación"
-                        Underline: =true
-                        Visible: =!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version, id_status_archivo.Value="2"))
-                        Width: =110
-                        X: =288
-                        Y: =38
-                        ZIndex: =8
 
                     mail_elaborador_ra As label:
                         Height: =19
@@ -1894,6 +1663,166 @@
                         Visible: =false
                         Width: =261
                         X: =63
+                        Y: =51
+                        ZIndex: =11
+
+                "aprobador_evaluacion_sidebar_ra As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+                    DelayItemLoading: =true
+                    Items: |-
+                        =Filter(
+                            DEV_Actor,
+                            version = varSelectedDoc.version,
+                            id_documento.Value = Text(varSelectedDoc.ID),
+                            id_funcion.Value = "Aprobador"
+                        )
+                    Layout: =Layout.Vertical
+                    LayoutMinHeight: =287
+                    LayoutMinWidth: =320
+                    LoadingSpinner: =LoadingSpinner.Data
+                    TemplatePadding: =0
+                    TemplateSize: =70
+                    Visible: =menu_filter_evaluacion_sidebar_ra.Selected.Value = "Aprobado por"
+                    ZIndex: =6
+
+                    Image3_33 As image:
+                        Height: =32
+                        Image: =LookUp(DEV_Interlocutor, Value(ThisItem.id_interlocutor.Value)=ID).Email.Picture
+                        OnSelect: =Select(Parent)
+                        RadiusBottomLeft: =8
+                        RadiusBottomRight: =8
+                        RadiusTopLeft: =8
+                        RadiusTopRight: =8
+                        Width: =32
+                        X: =16
+                        Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+                        ZIndex: =1
+
+                    Title1_46 As label:
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                        Height: =Self.Size * 1.8
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =12
+                        Text: |-
+                            =ThisItem.'id_interlocutor: Nombre'.Value & " " & ThisItem.'id_interlocutor: Apellido'.Value
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =Parent.TemplateWidth - 200
+                        X: =63
+                        Y: =17
+                        ZIndex: =2
+
+                    Subtitle1_37 As label:
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                        Height: =Self.Size * 1.8
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =8
+                        Text: |-
+                            =If(!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version, id_status_archivo.Value="3" || id_status_archivo.Value="4")),
+                            If(!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version, id_status_archivo.Value="4")),"Observado el ", "Aprobado el ") &
+                            LookUp(DEV_Modificacion_estatus_documento,ind_inact="Activo" && id_interlocutor.Value=ThisItem.id_interlocutor.Value && codigo=varSelectedDoc.codigo && version=varSelectedDoc.version).'fecha y hora',
+                            LookUp(DEV_Interlocutor, ID = Value(ThisItem.id_interlocutor.Value)).Email.JobTitle)
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =Title1_46.Width
+                        X: =Title1_46.X
+                        Y: =Title1_46.Y + Title1_46.Height
+                        ZIndex: =3
+
+                    Rectangle4_23 As rectangle:
+                        Fill: =placeholder
+                        Height: =1
+                        OnSelect: =Select(Parent)
+                        Width: =420
+                        Y: =69
+                        ZIndex: =4
+
+                    obs_icon_sidebar_ra_17 As icon.Information:
+                        Color: =red
+                        Height: =20
+                        Icon: =Icon.Information
+                        OnSelect: =Select(Parent)
+                        Visible: =!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version, id_status_archivo.Value="4"))
+                        Width: =20
+                        X: =288
+                        Y: =16
+                        ZIndex: =6
+
+                    verObs_icon_sidebar_ra_24 As icon.View:
+                        Height: =15
+                        Icon: =Icon.View
+                        OnSelect: =Select(Parent)
+                        Visible: =!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version, id_status_archivo.Value="4"))
+                        Width: =15
+                        X: =293
+                        Y: =40
+                        ZIndex: =7
+
+                    verObs_button_sidebar_ra_24 As button:
+                        Align: =Align.Right
+                        Color: =primary
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Font: =Font.'Segoe UI'
+                        Height: =20
+                        HoverColor: =primary
+                        HoverFill: =RGBA(0, 0, 0, 0.15)
+                        OnSelect: |-
+                            =UpdateContext({varObsItems:Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version, id_status_archivo.Value="4"), varRegistroObsPopup:true})
+                        PressedColor: =Self.Color
+                        PressedFill: =
+                        Size: =8
+                        Text: ="Ver Observación"
+                        Underline: =true
+                        Visible: =!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version, id_status_archivo.Value="4"))
+                        Width: =110
+                        X: =288
+                        Y: =38
+                        ZIndex: =8
+
+                    obs_text_sidebar_ra_24 As label:
+                        Align: =Align.Center
+                        Color: =green
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =24
+                        OnSelect: =Select(Parent)
+                        Size: =12
+                        Text: |-
+                            =If(!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version)),
+                            If(!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version, id_status_archivo.Value="4")), "Observado", "Conforme"))
+                        Visible: |
+                            =!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version, id_status_archivo.Value="3" || id_status_archivo.Value="4"))
+                        Width: =120
+                        X: =295
+                        Y: =14
+                        ZIndex: =9
+
+                    check_obs_icon_sidebar_ra_15 As image:
+                        Height: =20
+                        Image: =check
+                        OnSelect: =Select(Parent)
+                        Visible: |-
+                            =!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version, id_status_archivo.Value="3")) &&
+                            IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version, id_status_archivo.Value="4"))
+                        Width: =20
+                        X: =288
+                        Y: =16
+                        ZIndex: =10
+
+                    mail_aprobador_ra_7 As label:
+                        Height: =19
+                        OnSelect: =Select(Parent)
+                        Text: =LookUp(DEV_Interlocutor, ID = Value(ThisItem.id_interlocutor.Value)).Email.Email
+                        Visible: =false
+                        Width: =261
+                        X: =60
                         Y: =51
                         ZIndex: =11
 
@@ -3186,10 +3115,10 @@
                                     ind_mod: "i",
                                     id_estatus_documento: {Id: 2, Value: 2},
                                     id_documento: {Id: varSelectedDoc.ID, Value: varSelectedDoc.ID},
-                                    id_doc:varDocID.ID
+                                    id_doc:varSelectedDoc.ID
                                 }
                             );
-                            NecesidaddeAprobacióndedocumento.Run(Concat(aprobador_evaluacion_sidebar_ra.AllItems,mail_aprobador_ra,";"),varSelectedDoc.codigo, varSelectedDoc.version, varSelectedDoc.Nombre, varSelectedDoc.id_tipo_docu.Value, varSelectedDoc.fecha)
+                            NecesidaddeAprobacióndedocumento.Run(Concat(aprobador_evaluacion_sidebar_ra.AllItems,mail_aprobador_ra_7,";"),varSelectedDoc.codigo, varSelectedDoc.version, varSelectedDoc.Nombre, varSelectedDoc.id_tipo_docu.Value, varSelectedDoc.fecha)
                         );
                         UpdateContext({varResultadoPopup: true})
                     Text: ="Conforme Todo"
@@ -3284,7 +3213,7 @@
                                     ind_mod: "i",
                                     id_estatus_documento: {Id: 3, Value: 3},
                                     id_documento: {Id: varSelectedDoc.ID, Value: varSelectedDoc.ID},
-                                    id_doc:varDocID.ID
+                                    id_doc:varSelectedDoc.ID
                                 }
                             );Informarobservacionesdedocumento.Run(Concat(elaborador_evaluacion_sidebar_ra.AllItems,mail_elaborador_ra,";"),varSelectedDoc.codigo, varSelectedDoc.version, varSelectedDoc.Nombre, comentario_observacion_ra.Text)
                             
@@ -3314,10 +3243,10 @@
                                     ind_mod: "i",
                                     id_estatus_documento: {Id: 4, Value: 4},
                                     id_documento: {Id: varSelectedDoc.ID, Value: varSelectedDoc.ID},
-                                    id_doc:varDocID.ID
+                                    id_doc:varSelectedDoc.ID
                                 }
                             );
-                            NecesidaddeAprobacióndedocumento.Run(Concat(aprobador_evaluacion_sidebar_ra.AllItems,mail_aprobador_ra,";"),varSelectedDoc.codigo, varSelectedDoc.version, varSelectedDoc.Nombre, varSelectedDoc.id_tipo_docu.Value, varSelectedDoc.fecha)
+                            NecesidaddeAprobacióndedocumento.Run(Concat(aprobador_evaluacion_sidebar_ra.AllItems,mail_aprobador_ra_7,";"),varSelectedDoc.codigo, varSelectedDoc.version, varSelectedDoc.Nombre, varSelectedDoc.id_tipo_docu.Value, varSelectedDoc.fecha)
                         );
                         
                         UpdateContext({varResultadoPopup: true})
@@ -3503,7 +3432,7 @@
                             ind_mod: "i",
                             id_estatus_documento: {Id: 3, Value: 3},
                             id_documento: {Id: varSelectedDoc.ID, Value: varSelectedDoc.ID},
-                            id_doc:varDocID.ID
+                            id_doc:varSelectedDoc.ID
                         }
                     );
                     Informarobservacionesdedocumento.Run(Concat(elaborador_evaluacion_sidebar_ra.AllItems,mail_elaborador_ra,";"),varSelectedDoc.codigo, varSelectedDoc.version, varSelectedDoc.Nombre, comentario_observacion_ra.Text);

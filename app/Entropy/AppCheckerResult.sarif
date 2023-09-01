@@ -38886,78 +38886,6 @@
               "message": {
                 "text": "Error occurred running rule app-InefficientDelayLoading."
               }
-            },
-            {
-              "associatedRule": {
-                "id": "app-InefficientDelayLoading",
-                "index": 10
-              },
-              "descriptor": {
-                "id": "app-InefficientDelayLoading"
-              },
-              "message": {
-                "text": "Error occurred running rule app-InefficientDelayLoading."
-              }
-            },
-            {
-              "associatedRule": {
-                "id": "app-InefficientDelayLoading",
-                "index": 10
-              },
-              "descriptor": {
-                "id": "app-InefficientDelayLoading"
-              },
-              "message": {
-                "text": "Error occurred running rule app-InefficientDelayLoading."
-              }
-            },
-            {
-              "associatedRule": {
-                "id": "app-InefficientDelayLoading",
-                "index": 10
-              },
-              "descriptor": {
-                "id": "app-InefficientDelayLoading"
-              },
-              "message": {
-                "text": "Error occurred running rule app-InefficientDelayLoading."
-              }
-            },
-            {
-              "associatedRule": {
-                "id": "app-InefficientDelayLoading",
-                "index": 10
-              },
-              "descriptor": {
-                "id": "app-InefficientDelayLoading"
-              },
-              "message": {
-                "text": "Error occurred running rule app-InefficientDelayLoading."
-              }
-            },
-            {
-              "associatedRule": {
-                "id": "app-InefficientDelayLoading",
-                "index": 10
-              },
-              "descriptor": {
-                "id": "app-InefficientDelayLoading"
-              },
-              "message": {
-                "text": "Error occurred running rule app-InefficientDelayLoading."
-              }
-            },
-            {
-              "associatedRule": {
-                "id": "app-InefficientDelayLoading",
-                "index": 10
-              },
-              "descriptor": {
-                "id": "app-InefficientDelayLoading"
-              },
-              "message": {
-                "text": "Error occurred running rule app-InefficientDelayLoading."
-              }
             }
           ]
         }
@@ -44941,66 +44869,6 @@
                 "member": "TabIndex",
                 "module": "DocPorRevisar RA",
                 "type": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.evaluacion_container_sidebar_docRev_ra.registro_evaluacion_sidebar_ra"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.evaluacion_container_sidebar_docRev_ra.aprobador_evaluacion_sidebar_ra.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.evaluacion_container_sidebar_docRev_ra.aprobador_evaluacion_sidebar_ra.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "DocPorRevisar RA",
-                "type": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.evaluacion_container_sidebar_docRev_ra.aprobador_evaluacion_sidebar_ra"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.evaluacion_container_sidebar_docRev_ra.aprobador_evaluacion_sidebar_ra.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.evaluacion_container_sidebar_docRev_ra.aprobador_evaluacion_sidebar_ra.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "DocPorRevisar RA",
-                "type": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.evaluacion_container_sidebar_docRev_ra.aprobador_evaluacion_sidebar_ra"
               }
             }
           ],
@@ -64427,6 +64295,66 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.evaluacion_container_sidebar_docRev_ra.aprobador_evaluacion_sidebar_ra.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.evaluacion_container_sidebar_docRev_ra.aprobador_evaluacion_sidebar_ra.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "DocPorRevisar RA",
+                "type": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.evaluacion_container_sidebar_docRev_ra.aprobador_evaluacion_sidebar_ra"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.evaluacion_container_sidebar_docRev_ra.aprobador_evaluacion_sidebar_ra.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.evaluacion_container_sidebar_docRev_ra.aprobador_evaluacion_sidebar_ra.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "DocPorRevisar RA",
+                "type": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.evaluacion_container_sidebar_docRev_ra.aprobador_evaluacion_sidebar_ra"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.companyRed"
                 }
               ],
@@ -65408,7 +65336,7 @@
                 ],
                 "level": "Medium",
                 "primaryCategory": "performance",
-                "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"DocPorRevisar RA\" is 871, which exceeds the maximum threshold recommended (300)."
+                "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"DocPorRevisar RA\" is 846, which exceeds the maximum threshold recommended (300)."
               }
             },
             {
