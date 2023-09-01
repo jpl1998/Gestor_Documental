@@ -8183,10 +8183,10 @@
 
             Label13 As label:
                 Height: =171
-                Text: =LookUp(UsuáriosdoOffice365.SearchUser(),OfficeLocation="2110").DisplayName
+                Text: =Concat(Filter(UsuáriosdoOffice365.SearchUser(),Department="DPTO TECNOLOGIAS INFORMACION Y OPERACION").Mail,";")
                 Width: =331
-                X: =24
-                Y: =410
+                X: =86
+                Y: =388
                 ZIndex: =12
 
             departamento_difusion_3 As combobox:
@@ -8196,11 +8196,9 @@
                 DisplayFields: =["DisplayName","Mail"]
                 Font: =Font.'Segoe UI'
                 Height: =44
-                Items: |-
-                    =UsuáriosdoOffice365.SearchUser({searchTerm:Self.SearchText})
+                Items: =Filter(UsuáriosdoOffice365.SearchUser(),Department="DPTO TECNOLOGIAS INFORMACION Y OPERACION")
                 SearchFields: =["DisplayName"]
-                SearchItems: |-
-                    =Search(UsuáriosdoOffice365.SearchUser({searchTerm:Self.SearchText}),departamento_difusion_3.SearchText,"DisplayName")
+                SearchItems: =Search(Filter(UsuáriosdoOffice365.SearchUser(),Department="DPTO TECNOLOGIAS INFORMACION Y OPERACION"),departamento_difusion_3.SearchText,"DisplayName")
                 SelectMultiple: =false
                 Size: =12
                 Template: =ListItemTemplate.Person
@@ -8213,7 +8211,41 @@
                 Height: =79
                 Text: =departamento_difusion_3.Selected.Department
                 Width: =331
-                X: =509
-                Y: =388
+                X: =469
+                Y: =304
                 ZIndex: =14
+
+            departamento_difusion_4 As combobox:
+                BorderStyle: =BorderStyle.None
+                ChevronBackground: =RGBA(255, 255, 255, 1)
+                ChevronFill: =primary
+                DisplayFields: =["DisplayName","Mail"]
+                Font: =Font.'Segoe UI'
+                Height: =44
+                Items: |-
+                    =UsuáriosdoOffice365.SearchUser({searchTerm:Self.SearchText})
+                SearchFields: =["DisplayName"]
+                SearchItems: |-
+                    =Search(UsuáriosdoOffice365.SearchUser({searchTerm:Self.SearchText}),departamento_difusion_4.SearchText,"DisplayName")
+                SelectMultiple: =false
+                Size: =12
+                Template: =ListItemTemplate.Person
+                Width: =412
+                X: =456
+                Y: =425
+                ZIndex: =15
+
+            Label13_2 As label:
+                Height: =79
+                Text: =departamento_difusion_4.Selected.Department
+                Width: =331
+                X: =456
+                Y: =500
+                ZIndex: =16
+
+            Label6 As label:
+                Text: =CountRows(UsuáriosdoOffice365.SearchUser())
+                X: =521
+                Y: =113
+                ZIndex: =17
 

@@ -636,7 +636,7 @@
                                                 Height: =Parent.Height
                                                 PaddingLeft: =10
                                                 Size: =9.5
-                                                Text: =ThisItem.fecha
+                                                Text: =ThisItem.'fecha y hora'
                                                 Width: =140
                                                 X: =50
                                                 ZIndex: =4
