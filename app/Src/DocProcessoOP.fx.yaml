@@ -5196,8 +5196,8 @@
 
                         FormEditPrincipal As form:
                             DataSource: =DEV_Archivos
+                            DefaultMode: =FormMode.New
                             Height: =196
-                            Item: =LookUp(DEV_Archivos,version=varDocSide.version && id_documento.Value = Text(varDocSide.ID) And tipo_documento = "Principal",ThisRecord)
                             LayoutMinHeight: =73
                             LayoutMinWidth: =400
                             NumberOfColumns: =1
@@ -5302,8 +5302,8 @@
 
                         FormEditFlujograma As form:
                             DataSource: =DEV_Archivos
+                            DefaultMode: =FormMode.New
                             Height: =196
-                            Item: =LookUp(DEV_Archivos, version=varDocSide.version && id_documento.Value = Text(varDocSide.ID) And tipo_documento = "Flujograma",ThisRecord)
                             LayoutMinHeight: =73
                             LayoutMinWidth: =400
                             NumberOfColumns: =1
@@ -5408,8 +5408,8 @@
 
                         FormEditRcki As form:
                             DataSource: =DEV_Archivos
+                            DefaultMode: =FormMode.New
                             Height: =196
-                            Item: =LookUp(DEV_Archivos,version=varDocSide.version && id_documento.Value = Text(varDocSide.ID) And tipo_documento = "RCKI",ThisRecord)
                             LayoutMinHeight: =73
                             LayoutMinWidth: =400
                             NumberOfColumns: =1
