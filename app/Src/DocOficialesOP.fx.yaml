@@ -8118,37 +8118,17 @@
                 Y: =276
                 ZIndex: =5
 
-            gerencia_difusion_1 As combobox:
-                BorderStyle: =BorderStyle.None
-                ChevronBackground: =RGBA(255, 255, 255, 1)
-                ChevronFill: =primary
-                DisplayFields: =["DisplayName","Mail"]
-                Font: =Font.'Segoe UI'
-                Height: =44
-                Items: |-
-                    =UsuáriosdoOffice365.SearchUser({searchTerm:Self.SearchText})
-                SearchFields: =["DisplayName"]
-                SearchItems: |-
-                    =Search(UsuáriosdoOffice365.SearchUser({searchTerm:Self.SearchText}),gerencia_difusion_1.SearchText,"DisplayName")
-                Size: =12
-                Template: =ListItemTemplate.Person
-                Width: =412
-                X: =24
-                Y: =108
-                ZIndex: =6
-
             subgerencia_difusion_1 As combobox:
                 BorderStyle: =BorderStyle.None
                 ChevronBackground: =RGBA(255, 255, 255, 1)
                 ChevronFill: =primary
-                DisplayFields: =["DisplayName","Mail"]
+                DisplayFields: =["Value","Mail"]
                 Font: =Font.'Segoe UI'
                 Height: =44
-                Items: |-
-                    =UsuáriosdoOffice365.SearchUser({searchTerm:Self.SearchText})
-                SearchFields: =["DisplayName"]
-                SearchItems: |-
-                    =Search(UsuáriosdoOffice365.SearchUser({searchTerm:Self.SearchText}),subgerencia_difusion_1.SearchText,"DisplayName")
+                Items: =Distinct(Filter(DEV_Estructura_Organizativa_dos,GERENCIA=gerencia_difusion_1.Selected.Value),SUBGERENCIA)
+                SearchFields: =["Value"]
+                SearchItems: =Search(Distinct(Filter(DEV_Estructura_Organizativa_dos,GERENCIA=gerencia_difusion_1.Selected.Value),SUBGERENCIA),subgerencia_difusion_1.SearchText,"Value")
+                SelectMultiple: =false
                 Size: =12
                 Template: =ListItemTemplate.Person
                 Width: =412
@@ -8160,14 +8140,13 @@
                 BorderStyle: =BorderStyle.None
                 ChevronBackground: =RGBA(255, 255, 255, 1)
                 ChevronFill: =primary
-                DisplayFields: =["DisplayName","Mail"]
+                DisplayFields: =["Value","Mail"]
                 Font: =Font.'Segoe UI'
                 Height: =44
-                Items: |-
-                    =UsuáriosdoOffice365.SearchUser({searchTerm:Self.SearchText})
-                SearchFields: =["DisplayName"]
-                SearchItems: |-
-                    =Search(UsuáriosdoOffice365.SearchUser({searchTerm:Self.SearchText}),departamento_difusion_1.SearchText,"DisplayName")
+                IsSearchable: =false
+                Items: =Distinct(Filter(DEV_Estructura_Organizativa_dos,GERENCIA=gerencia_difusion_1.Selected.Value || =gerencia_difusion_1.Selected.Value),SUBGERENCIA)
+                SearchFields: =["Value"]
+                SearchItems: =[]
                 Size: =12
                 Template: =ListItemTemplate.Person
                 Width: =412
@@ -8185,4 +8164,28 @@
                 X: =456
                 Y: =75
                 ZIndex: =9
+
+            Dropdown1 As dropdown:
+                Items: =Filter(UsuáriosdoOffice365.SearchUser({}),Department="DPTO. PROCESAL" || Department="DPTO. DE SANEAMIENTO LEGAL")
+                X: =415
+                Y: =410
+                ZIndex: =10
+
+            gerencia_difusion_1 As combobox:
+                BorderStyle: =BorderStyle.None
+                ChevronBackground: =RGBA(255, 255, 255, 1)
+                ChevronFill: =primary
+                DisplayFields: =["Value","Mail"]
+                Font: =Font.'Segoe UI'
+                Height: =44
+                Items: =Distinct(DEV_Estructura_Organizativa_dos,GERENCIA)
+                SearchFields: =["Value"]
+                SearchItems: =Search(Distinct(DEV_Estructura_Organizativa_dos,GERENCIA),gerencia_difusion_1.SearchText,"Value")
+                SelectMultiple: =false
+                Size: =12
+                Template: =ListItemTemplate.Person
+                Width: =412
+                X: =24
+                Y: =108
+                ZIndex: =11
 

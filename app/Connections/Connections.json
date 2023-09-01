@@ -439,6 +439,9 @@
           "DEV_Estructura_Organizativa": {
             "tableName": "0fcc1785-e40f-4c4a-b9ac-dfa65a8a2275"
           },
+          "DEV_Estructura_Organizativa_dos": {
+            "tableName": "90c80ec3-4acc-4e4e-8962-837a60185d7f"
+          },
           "DEV_Flujograma": {
             "tableName": "c239fba5-54af-4d79-9850-337e50b25fb0"
           },
@@ -510,7 +513,8 @@
       "DEV_TipoDocumento",
       "DEV_Archivos",
       "DEV_Estatus_documento",
-      "DEV_Observacion"
+      "DEV_Observacion",
+      "DEV_Estructura_Organizativa_dos"
     ],
     "dependencies": {},
     "dependents": [
