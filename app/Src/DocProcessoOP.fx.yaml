@@ -1101,7 +1101,9 @@
                         HoverColor: =Self.Color
                         HoverFill: =Self.Fill
                         LayoutMinHeight: =30
-                        OnSelect: =Set(varFilterMenu,Blank())
+                        OnSelect: |-
+                            =Set(varFilterMenu,Blank());
+                            Set(varpopupfilter,false)
                         PressedColor: =Self.Color
                         PressedFill: =Self.Fill
                         RadiusBottomLeft: =5
