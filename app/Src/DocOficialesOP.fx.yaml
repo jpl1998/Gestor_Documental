@@ -8130,7 +8130,6 @@
                 SearchItems: =Search(Distinct(Filter(DEV_Estructura_Organizativa_dos,GERENCIA=gerencia_difusion_1.Selected.Value),SUBGERENCIA),subgerencia_difusion_1.SearchText,"Value")
                 SelectMultiple: =false
                 Size: =12
-                Template: =ListItemTemplate.Person
                 Width: =412
                 X: =24
                 Y: =208
@@ -8144,11 +8143,11 @@
                 Font: =Font.'Segoe UI'
                 Height: =44
                 IsSearchable: =false
-                Items: =Distinct(Filter(DEV_Estructura_Organizativa_dos,GERENCIA=gerencia_difusion_1.Selected.Value || =gerencia_difusion_1.Selected.Value),SUBGERENCIA)
+                Items: =Distinct(Filter(DEV_Estructura_Organizativa_dos,GERENCIA=gerencia_difusion_1.Selected.Value && SUBGERENCIA=subgerencia_difusion_1.Selected.Value),ID_CECO)
                 SearchFields: =["Value"]
                 SearchItems: =[]
+                SelectMultiple: =false
                 Size: =12
-                Template: =ListItemTemplate.Person
                 Width: =412
                 X: =24
                 Y: =308
@@ -8165,12 +8164,6 @@
                 Y: =75
                 ZIndex: =9
 
-            Dropdown1 As dropdown:
-                Items: =Filter(UsuáriosdoOffice365.SearchUser({}),Department="DPTO. PROCESAL" || Department="DPTO. DE SANEAMIENTO LEGAL")
-                X: =415
-                Y: =410
-                ZIndex: =10
-
             gerencia_difusion_1 As combobox:
                 BorderStyle: =BorderStyle.None
                 ChevronBackground: =RGBA(255, 255, 255, 1)
@@ -8183,9 +8176,44 @@
                 SearchItems: =Search(Distinct(DEV_Estructura_Organizativa_dos,GERENCIA),gerencia_difusion_1.SearchText,"Value")
                 SelectMultiple: =false
                 Size: =12
-                Template: =ListItemTemplate.Person
                 Width: =412
                 X: =24
                 Y: =108
                 ZIndex: =11
+
+            Label13 As label:
+                Height: =171
+                Text: =LookUp(UsuáriosdoOffice365.SearchUser(),OfficeLocation="2110").DisplayName
+                Width: =331
+                X: =24
+                Y: =410
+                ZIndex: =12
+
+            departamento_difusion_3 As combobox:
+                BorderStyle: =BorderStyle.None
+                ChevronBackground: =RGBA(255, 255, 255, 1)
+                ChevronFill: =primary
+                DisplayFields: =["DisplayName","Mail"]
+                Font: =Font.'Segoe UI'
+                Height: =44
+                Items: |-
+                    =UsuáriosdoOffice365.SearchUser({searchTerm:Self.SearchText})
+                SearchFields: =["DisplayName"]
+                SearchItems: |-
+                    =Search(UsuáriosdoOffice365.SearchUser({searchTerm:Self.SearchText}),departamento_difusion_3.SearchText,"DisplayName")
+                SelectMultiple: =false
+                Size: =12
+                Template: =ListItemTemplate.Person
+                Width: =412
+                X: =469
+                Y: =252
+                ZIndex: =13
+
+            Label13_1 As label:
+                Height: =79
+                Text: =departamento_difusion_3.Selected.Department
+                Width: =331
+                X: =509
+                Y: =388
+                ZIndex: =14
 
