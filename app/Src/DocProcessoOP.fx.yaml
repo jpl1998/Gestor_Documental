@@ -6639,7 +6639,8 @@
                 Gallery3 As gallery.galleryVertical:
                     DelayItemLoading: =true
                     Height: =260
-                    Items: =CustomGallerySample
+                    Items: |-
+                        =Filter(DEV_Modificacion_estatus_proceso_doc, id_doc=varDocSide.ID, 'id_estatus_procesos: ID'.Value="1", 'id_estatus_documento: ID'.Value="1")
                     Layout: =Layout.Vertical
                     LoadingSpinner: =LoadingSpinner.Data
                     TemplateSize: =50
@@ -6659,14 +6660,14 @@
                             Color: =secondarytext
                             FillPortions: =2
                             PaddingLeft: =15
-                            Text: ="Alberto Macha"
+                            Text: =ThisItem.'Created By'.DisplayName
                             ZIndex: =1
 
                         Label5_4 As label:
                             Align: =Align.Center
                             Color: =secondarytext
                             FillPortions: =1
-                            Text: ="12/05/2023"
+                            Text: =ThisItem.'fecha y hora'
                             ZIndex: =2
 
                         Label5_5 As label:
