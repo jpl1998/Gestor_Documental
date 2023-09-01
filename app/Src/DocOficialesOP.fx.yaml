@@ -8240,7 +8240,7 @@
                 Text: =departamento_difusion_4.Selected.Department
                 Width: =331
                 X: =456
-                Y: =500
+                Y: =494
                 ZIndex: =16
 
             Label6 As label:
