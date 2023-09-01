@@ -8476,8 +8476,8 @@
                     PaddingTop: =0
                     Size: =8
                     Text: |-
-                        =If(!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version)),
-                        If(!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version, id_status_archivo.Value="2")),"Observado el ", "Aprobado el ") &
+                        =If(!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version, id_status_archivo.Value="4" || id_status_archivo.Value="3")),
+                        If(!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version, id_status_archivo.Value="4")),"Observado el ", "Aprobado el ") &
                         LookUp(DEV_Modificacion_estatus_documento,ind_inact="Activo" && id_interlocutor.Value=ThisItem.id_interlocutor.Value && codigo=varDocSide.codigo && version=varDocSide.version).'fecha y hora',
                         LookUp(DEV_Interlocutor, ID = Value(ThisItem.id_interlocutor.Value)).Email.JobTitle)
                     VerticalAlign: =VerticalAlign.Top
