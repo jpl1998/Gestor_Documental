@@ -8224,7 +8224,7 @@
                 Template: =ListItemTemplate.Person
                 Width: =412
                 X: =24
-                Y: =371
+                Y: =360
                 ZIndex: =13
 
             Label6 As label:
