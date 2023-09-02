@@ -180,6 +180,15 @@
                             Width: =Parent.Width
                             ZIndex: =2
 
+                RevisorAprobador_button As button:
+                    AlignInContainer: =AlignInContainer.Center
+                    Fill: =primary
+                    HoverFill: =ColorFade(primary, -20%)
+                    OnSelect: =Navigate('Home RA')
+                    Size: =11
+                    Text: ="Revisor/Aprobador"
+                    ZIndex: =3
+
             MainContainer1_1 As groupContainer.verticalAutoLayoutContainer:
                 Fill: =RGBA(246, 247, 251, 1)
                 FillPortions: =7

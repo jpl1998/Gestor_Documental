@@ -179,6 +179,15 @@
                             Width: =Parent.Width
                             ZIndex: =2
 
+                RevisorAprobador_button_7 As button:
+                    AlignInContainer: =AlignInContainer.Center
+                    Fill: =primary
+                    HoverFill: =ColorFade(primary, -20%)
+                    OnSelect: =Navigate('Home OP')
+                    Size: =11
+                    Text: ="Área de Operaciones"
+                    ZIndex: =3
+
             MainContainer_docRev_ra_2 As groupContainer.verticalAutoLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer
                 Fill: =RGBA(246, 247, 251, 1)
