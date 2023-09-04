@@ -66,16 +66,6 @@
                         Text: =User().FullName
                         ZIndex: =1
 
-                    Label1_24 As label:
-                        Align: =Align.Right
-                        AlignInContainer: =AlignInContainer.Stretch
-                        FillPortions: =1
-                        Font: =Font.'Segoe UI'
-                        LayoutMinHeight: =20
-                        Size: =9
-                        Text: =UsuáriosdoOffice365.MyProfileV2().department
-                        ZIndex: =2
-
                 Image1_10 As image:
                     Height: =50
                     Image: =User().Image
@@ -3415,39 +3405,6 @@
                         RadiusBottomRight: =0
                         ZIndex: =1
 
-                        observar_button_ra_5 As button:
-                            BorderColor: =primary
-                            Color: =primary
-                            Fill: =RGBA(0, 0, 0, 0)
-                            Height: =Parent.Height*98%
-                            HoverColor: =ColorFade(primary,-5%)
-                            HoverFill: =RGBA(255, 255, 255, 1)
-                            OnSelect: |
-                                =Set(varpopupformedit,true);
-                            PaddingBottom: =0
-                            PaddingLeft: =0
-                            PaddingRight: =0
-                            PaddingTop: =0
-                            PressedFill: =
-                            RadiusBottomLeft: =5
-                            RadiusBottomRight: =5
-                            RadiusTopLeft: =5
-                            RadiusTopRight: =5
-                            Size: =11
-                            Text: ="Editar Información"
-                            Width: =Parent.Width*95%
-                            X: =(Parent.Width-Self.Width)/2
-                            ZIndex: =1
-
-                        observar_icon_ra_5 As icon.Information:
-                            Color: =primary
-                            Height: =20
-                            Icon: =Icon.Edit
-                            Width: =20
-                            X: =10
-                            Y: =(Parent.Height-Self.Height)/2
-                            ZIndex: =2
-
                     observarOption_container_ra_6 As groupContainer.manualLayoutContainer:
                         AlignInContainer: =AlignInContainer.SetByContainer
                         BorderColor: =placeholder
@@ -3458,34 +3415,6 @@
                         RadiusBottomLeft: =0
                         RadiusBottomRight: =0
                         ZIndex: =2
-
-                        observar_button_ra_6 As button:
-                            BorderColor: =primary
-                            Color: =primary
-                            Fill: =RGBA(0, 0, 0, 0)
-                            Height: =Parent.Height*98%
-                            HoverColor: =ColorFade(primary,-5%)
-                            HoverFill: =RGBA(255, 255, 255, 1)
-                            OnSelect: =Set(varregistroedicion,true)
-                            PressedFill: =
-                            RadiusBottomLeft: =5
-                            RadiusBottomRight: =5
-                            RadiusTopLeft: =5
-                            RadiusTopRight: =5
-                            Size: =11
-                            Text: ="Registro Edición"
-                            Width: =Parent.Width*95%
-                            X: =(Parent.Width-Self.Width)/2
-                            ZIndex: =1
-
-                        observar_icon_ra_6 As icon.Information:
-                            Color: =primary
-                            Height: =20
-                            Icon: =Icon.DocumentWithContent
-                            Width: =20
-                            X: =10
-                            Y: =(Parent.Height-Self.Height)/2
-                            ZIndex: =2
 
                 item_informacion_sidebar_docRev_op_6 As groupContainer.horizontalAutoLayoutContainer:
                     DropShadow: =DropShadow.None
@@ -4325,6 +4254,7 @@
                         "Documento Por aprobar", RGBA(180, 130, 0, 1),
                         "Documento Por revisar",RGBA(180, 130, 0, 1),
                         "Documento Observado", RGBA(214, 0, 0, 1),
+                        "Documento Cancelado", RGBA(214, 0, 0, 1),
                         "Documento Aprobado",RGBA(44, 143, 112, 1),
                         "Documento Publicado",RGBA(44, 143, 112, 1),
                         "Documento Difundido",RGBA(44, 143, 112, 1))
@@ -4334,6 +4264,7 @@
                         "Documento Por aprobar", RGBA(249, 249, 249, 1),
                         "Documento Por revisar",RGBA(249, 249, 249, 1),
                         "Documento Observado", RGBA(245, 218, 216, 1),
+                        "Documento Cancelado", RGBA(245, 218, 216, 1),
                         "Documento Aprobado", RGBA(219, 238, 233, 1),
                         "Documento Publicado", RGBA(219, 238, 233, 1),
                         "Documento Difundido", RGBA(219, 238, 233, 1))

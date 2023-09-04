@@ -69,16 +69,6 @@
                         Text: =User().FullName
                         ZIndex: =1
 
-                    Label1_12 As label:
-                        Align: =Align.Right
-                        AlignInContainer: =AlignInContainer.Stretch
-                        FillPortions: =1
-                        Font: =Font.'Segoe UI'
-                        LayoutMinHeight: =20
-                        Size: =9
-                        Text: =UsuáriosdoOffice365.MyProfileV2().department
-                        ZIndex: =2
-
                 Image1_5 As image:
                     Height: =50
                     Image: =User().Image
