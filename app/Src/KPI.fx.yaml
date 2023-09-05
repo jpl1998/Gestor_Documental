@@ -248,26 +248,26 @@
                                 DisplayMode: =DisplayMode.Edit
                                 Fill: =RGBA(0, 0, 0, 0)
                                 HeadingFill: =primary
-                                Height: =164
-                                Items: =AddColumns(AddColumns(GroupBy(Filter(DEV_Modificacion_estatus_proceso_doc,id_estatus_documento.Value="Publicado"),"id_doc","groupDoc"),"fechaCreado",LookUp(DEV_Documento,id_doc=ID).fecha),"DateDiff",DateDiff(fechaCreado,First(groupDoc).'fecha y hora'))
+                                Height: =275
+                                Items: =AddColumns(AddColumns(GroupBy(Filter(DEV_Modificacion_estatus_proceso_doc,id_estatus_documento.Value="Publicado"),"id_doc","groupDoc"),"fechaCreado",LookUp(DEV_Documento,id_doc=ID).fecha,"CodDoc",LookUp(DEV_Documento,id_doc=ID).codigo),"DateDiff",DateDiff(fechaCreado,First(groupDoc).'fecha y hora'))
                                 Width: =970
                                 X: =40
                                 Y: =71
                                 ZIndex: =6
 
-                                id_doc_Column3 As dataTableColumn.numberColumn:
+                                CodDoc_Column1 As dataTableColumn.textualColumn:
                                     DisplayMode: =DisplayMode.Edit
-                                    FieldDisplayName: ="id_doc"
-                                    FieldName: ="id_doc"
-                                    FieldVariantName: ="numberColumn"
+                                    FieldDisplayName: ="Código de documento"
+                                    FieldName: ="CodDoc"
+                                    FieldVariantName: ="textualColumn"
                                     Height: =Parent.Height
                                     LayoutHeight: =Parent.Height
-                                    Order: =12
-                                    Text: =ThisItem.id_doc
+                                    Order: =14
+                                    Text: =ThisItem.CodDoc
                                     Width: =100
                                     X: =0
                                     Y: =0
-                                    ZIndex: =7
+                                    ZIndex: =0
 
                                 fechaCreado_Column1 As dataTableColumn.textualColumn:
                                     DisplayMode: =DisplayMode.Edit
@@ -276,7 +276,7 @@
                                     FieldVariantName: ="textualColumn"
                                     Height: =Parent.Height
                                     LayoutHeight: =Parent.Height
-                                    Order: =14
+                                    Order: =15
                                     Text: =ThisItem.fechaCreado
                                     Width: =100
                                     X: =0
@@ -285,12 +285,12 @@
 
                                 DateDiff_Column1 As dataTableColumn.textualColumn:
                                     DisplayMode: =DisplayMode.Edit
-                                    FieldDisplayName: ="DateDiff"
+                                    FieldDisplayName: ="Diferencia de Fechas"
                                     FieldName: ="DateDiff"
                                     FieldVariantName: ="textualColumn"
                                     Height: =Parent.Height
                                     LayoutHeight: =Parent.Height
-                                    Order: =15
+                                    Order: =17
                                     Text: =ThisItem.DateDiff
                                     Width: =100
                                     X: =454
@@ -314,19 +314,19 @@
                             Label9 As label:
                                 Text: =Min(AddColumns(AddColumns(GroupBy(Filter(DEV_Modificacion_estatus_proceso_doc,id_estatus_documento.Value="Publicado"),"id_doc","groupDoc"),"fechaCreado",LookUp(DEV_Documento,id_doc=ID).fecha),"DateDiff",DateDiff(fechaCreado,First(groupDoc).'fecha y hora')),DateDiff)
                                 X: =40
-                                Y: =350
+                                Y: =454
                                 ZIndex: =7
 
                             Label9_1 As label:
                                 Text: =Max(AddColumns(AddColumns(GroupBy(Filter(DEV_Modificacion_estatus_proceso_doc,id_estatus_documento.Value="Publicado"),"id_doc","groupDoc"),"fechaCreado",LookUp(DEV_Documento,id_doc=ID).fecha),"DateDiff",DateDiff(fechaCreado,First(groupDoc).'fecha y hora')),DateDiff)
                                 X: =288
-                                Y: =350
+                                Y: =454
                                 ZIndex: =8
 
                             Label9_2 As label:
                                 Text: =Average(AddColumns(AddColumns(GroupBy(Filter(DEV_Modificacion_estatus_proceso_doc,id_estatus_documento.Value="Publicado"),"id_doc","groupDoc"),"fechaCreado",LookUp(DEV_Documento,id_doc=ID).fecha),"DateDiff",DateDiff(fechaCreado,First(groupDoc).'fecha y hora')),DateDiff)
                                 X: =530
-                                Y: =350
+                                Y: =454
                                 ZIndex: =9
 
                             KPI_title As label:
@@ -347,7 +347,7 @@
                                     ="Tiempo mínimo de publicación:"
                                 Width: =180
                                 X: =40
-                                Y: =298
+                                Y: =402
                                 ZIndex: =11
 
                             KPI_text_max As label:
@@ -358,7 +358,7 @@
                                     ="Tiempo máximo de publicación:"
                                 Width: =180
                                 X: =288
-                                Y: =298
+                                Y: =402
                                 ZIndex: =12
 
                             KPI_text_avg As label:
@@ -369,6 +369,6 @@
                                     ="Tiempo promedio de publicación:"
                                 Width: =180
                                 X: =530
-                                Y: =298
+                                Y: =402
                                 ZIndex: =13
 
