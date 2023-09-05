@@ -46362,90 +46362,6 @@
               "message": {
                 "text": "Error occurred running rule app-InefficientDelayLoading."
               }
-            },
-            {
-              "associatedRule": {
-                "id": "app-InefficientDelayLoading",
-                "index": 10
-              },
-              "descriptor": {
-                "id": "app-InefficientDelayLoading"
-              },
-              "message": {
-                "text": "Error occurred running rule app-InefficientDelayLoading."
-              }
-            },
-            {
-              "associatedRule": {
-                "id": "app-InefficientDelayLoading",
-                "index": 10
-              },
-              "descriptor": {
-                "id": "app-InefficientDelayLoading"
-              },
-              "message": {
-                "text": "Error occurred running rule app-InefficientDelayLoading."
-              }
-            },
-            {
-              "associatedRule": {
-                "id": "app-InefficientDelayLoading",
-                "index": 10
-              },
-              "descriptor": {
-                "id": "app-InefficientDelayLoading"
-              },
-              "message": {
-                "text": "Error occurred running rule app-InefficientDelayLoading."
-              }
-            },
-            {
-              "associatedRule": {
-                "id": "app-InefficientDelayLoading",
-                "index": 10
-              },
-              "descriptor": {
-                "id": "app-InefficientDelayLoading"
-              },
-              "message": {
-                "text": "Error occurred running rule app-InefficientDelayLoading."
-              }
-            },
-            {
-              "associatedRule": {
-                "id": "app-InefficientDelayLoading",
-                "index": 10
-              },
-              "descriptor": {
-                "id": "app-InefficientDelayLoading"
-              },
-              "message": {
-                "text": "Error occurred running rule app-InefficientDelayLoading."
-              }
-            },
-            {
-              "associatedRule": {
-                "id": "app-InefficientDelayLoading",
-                "index": 10
-              },
-              "descriptor": {
-                "id": "app-InefficientDelayLoading"
-              },
-              "message": {
-                "text": "Error occurred running rule app-InefficientDelayLoading."
-              }
-            },
-            {
-              "associatedRule": {
-                "id": "app-InefficientDelayLoading",
-                "index": 10
-              },
-              "descriptor": {
-                "id": "app-InefficientDelayLoading"
-              },
-              "message": {
-                "text": "Error occurred running rule app-InefficientDelayLoading."
-              }
             }
           ]
         }
@@ -78215,6 +78131,126 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_rev_apr_home_ra.Container9_5.Container10_5.Container4_8.Gallery1_7.Container3_7.Container13_16.Icon1_7.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_rev_apr_home_ra.Container9_5.Container10_5.Container4_8.Gallery1_7.Container3_7.Container13_16.Icon1_7.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Home RA",
+                "type": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_rev_apr_home_ra.Container9_5.Container10_5.Container4_8.Gallery1_7.Container3_7.Container13_16.Icon1_7"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_rev_apr_home_ra.Container9_5.Container10_5.Container4_8.Gallery1_7.Container3_7.Container13_16.Icon1_7.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_rev_apr_home_ra.Container9_5.Container10_5.Container4_8.Gallery1_7.Container3_7.Container13_16.Icon1_7.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Home RA",
+                "type": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_rev_apr_home_ra.Container9_5.Container10_5.Container4_8.Gallery1_7.Container3_7.Container13_16.Icon1_7"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_publ_home_ra.cont_doc_publ_home_ra.cont_table_doc_publ_home_ra.Container4_9.gallery_doc_publ_home_ra.Container3_8.Container13_18.Icon1_8.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_publ_home_ra.cont_doc_publ_home_ra.cont_table_doc_publ_home_ra.Container4_9.gallery_doc_publ_home_ra.Container3_8.Container13_18.Icon1_8.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Home RA",
+                "type": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_publ_home_ra.cont_doc_publ_home_ra.cont_table_doc_publ_home_ra.Container4_9.gallery_doc_publ_home_ra.Container3_8.Container13_18.Icon1_8"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_publ_home_ra.cont_doc_publ_home_ra.cont_table_doc_publ_home_ra.Container4_9.gallery_doc_publ_home_ra.Container3_8.Container13_18.Icon1_8.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_publ_home_ra.cont_doc_publ_home_ra.cont_table_doc_publ_home_ra.Container4_9.gallery_doc_publ_home_ra.Container3_8.Container13_18.Icon1_8.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Home RA",
+                "type": "'Home RA'.main_home_ra.body_home_ra.section_home_ra.scroll_home_ra.card_doc_publ_home_ra.cont_doc_publ_home_ra.cont_table_doc_publ_home_ra.Container4_9.gallery_doc_publ_home_ra.Container3_8.Container13_18.Icon1_8"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.companyRed"
                 }
               ],
@@ -79375,7 +79411,7 @@
                 ],
                 "level": "Medium",
                 "primaryCategory": "performance",
-                "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"Home RA\" is 905, which exceeds the maximum threshold recommended (300)."
+                "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"Home RA\" is 898, which exceeds the maximum threshold recommended (300)."
               }
             },
             {

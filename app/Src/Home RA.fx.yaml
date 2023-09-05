@@ -1352,6 +1352,8 @@
                                                 Icon1_7 As icon.Edit:
                                                     Height: =Parent.Height*60%
                                                     Icon: =Icon.View
+                                                    OnSelect: |-
+                                                        =UpdateContext({varSelectedDoc:LookUp(DEV_Documento, Value(ThisItem.id_documento.Value)=ID), varSidebarPopup:true})
                                                     PaddingBottom: =3
                                                     PaddingLeft: =3
                                                     PaddingRight: =3
@@ -1642,6 +1644,8 @@
                                                 Icon1_8 As icon.Edit:
                                                     Height: =Parent.Height*60%
                                                     Icon: =Icon.View
+                                                    OnSelect: |-
+                                                        =UpdateContext({varSelectedDoc:LookUp(DEV_Documento, Value(ThisItem.id_documento.Value)=ID), varSidebarPopup:true})
                                                     PaddingBottom: =3
                                                     PaddingLeft: =3
                                                     PaddingRight: =3
@@ -1871,102 +1875,6 @@
                 LayoutMode: =LayoutMode.Auto
                 Visible: =items_menu_sidebar_docRev_op_8.Selected.Value="Información"
                 ZIndex: =4
-
-                Container3_18 As groupContainer.horizontalAutoLayoutContainer:
-                    DropShadow: =DropShadow.None
-                    FillPortions: =0
-                    Height: =40
-                    LayoutAlignItems: =LayoutAlignItems.Stretch
-                    LayoutGap: =10
-                    LayoutJustifyContent: =LayoutJustifyContent.Center
-                    LayoutMinHeight: =50
-                    LayoutMinWidth: =250
-                    LayoutMode: =LayoutMode.Auto
-                    PaddingBottom: =5
-                    PaddingTop: =5
-                    ZIndex: =1
-
-                    observarOption_container_ra_16 As groupContainer.manualLayoutContainer:
-                        BorderColor: =placeholder
-                        DropShadow: =DropShadow.None
-                        Fill: =RGBA(255, 255, 255, 1)
-                        LayoutMinHeight: =10
-                        LayoutMinWidth: =10
-                        RadiusBottomLeft: =0
-                        RadiusBottomRight: =0
-                        ZIndex: =1
-
-                        observar_button_ra_5 As button:
-                            BorderColor: =primary
-                            Color: =primary
-                            Fill: =RGBA(0, 0, 0, 0)
-                            Height: =Parent.Height*98%
-                            HoverColor: =ColorFade(primary,-5%)
-                            HoverFill: =RGBA(255, 255, 255, 1)
-                            OnSelect: |
-                                =Set(varpopupformedit,true);
-                            PaddingBottom: =0
-                            PaddingLeft: =0
-                            PaddingRight: =0
-                            PaddingTop: =0
-                            PressedFill: =
-                            RadiusBottomLeft: =5
-                            RadiusBottomRight: =5
-                            RadiusTopLeft: =5
-                            RadiusTopRight: =5
-                            Size: =11
-                            Text: ="Editar Información"
-                            Width: =Parent.Width*95%
-                            X: =(Parent.Width-Self.Width)/2
-                            ZIndex: =1
-
-                        observar_icon_ra_5 As icon.Information:
-                            Color: =primary
-                            Height: =20
-                            Icon: =Icon.Edit
-                            Width: =20
-                            X: =10
-                            Y: =(Parent.Height-Self.Height)/2
-                            ZIndex: =2
-
-                    observarOption_container_ra_17 As groupContainer.manualLayoutContainer:
-                        AlignInContainer: =AlignInContainer.SetByContainer
-                        BorderColor: =placeholder
-                        DropShadow: =DropShadow.None
-                        Fill: =RGBA(255, 255, 255, 1)
-                        LayoutMinHeight: =10
-                        LayoutMinWidth: =10
-                        RadiusBottomLeft: =0
-                        RadiusBottomRight: =0
-                        ZIndex: =2
-
-                        observar_button_ra_6 As button:
-                            BorderColor: =primary
-                            Color: =primary
-                            Fill: =RGBA(0, 0, 0, 0)
-                            Height: =Parent.Height*98%
-                            HoverColor: =ColorFade(primary,-5%)
-                            HoverFill: =RGBA(255, 255, 255, 1)
-                            OnSelect: =Set(varregistroedicion,true)
-                            PressedFill: =
-                            RadiusBottomLeft: =5
-                            RadiusBottomRight: =5
-                            RadiusTopLeft: =5
-                            RadiusTopRight: =5
-                            Size: =11
-                            Text: ="Registro Edición"
-                            Width: =Parent.Width*95%
-                            X: =(Parent.Width-Self.Width)/2
-                            ZIndex: =1
-
-                        observar_icon_ra_6 As icon.Information:
-                            Color: =primary
-                            Height: =20
-                            Icon: =Icon.DocumentWithContent
-                            Width: =20
-                            X: =10
-                            Y: =(Parent.Height-Self.Height)/2
-                            ZIndex: =2
 
                 item_informacion_sidebar_docRev_op_12 As groupContainer.horizontalAutoLayoutContainer:
                     DropShadow: =DropShadow.None
