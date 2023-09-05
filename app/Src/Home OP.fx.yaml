@@ -546,7 +546,7 @@
                                     "Gallery1_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
                                         DelayItemLoading: =true
                                         Height: =Button4_3.Height
-                                        Items: =SortByColumns(Filter(DEV_Modificacion_estatus_proceso_doc,ind_inact="Activo", id_estatus_documento.Value="Por aprobar" || id_estatus_documento.Value="Por revisar"  || id_estatus_documento.Value="Observado" ),"fecha",SortOrder.Ascending)
+                                        Items: =SortByColumns(Filter(DEV_Modificacion_estatus_proceso_doc,ind_inact="Activo", id_estatus_documento.Value="Por aprobar" || id_estatus_documento.Value="Por revisar"  || id_estatus_documento.Value="Observado" || id_estatus_documento.Value="Aprobado" ),"fecha",SortOrder.Ascending)
                                         Layout: =Layout.Vertical
                                         LoadingSpinner: =LoadingSpinner.Data
                                         TemplatePadding: =0
