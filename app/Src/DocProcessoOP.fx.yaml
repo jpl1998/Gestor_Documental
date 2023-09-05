@@ -1240,7 +1240,18 @@
                         Height: =Parent.Height
                         HoverFill: =
                         OnSelect: |-
-                            =Set(varpopupformdoc,true);
+                            =Reset(cbo_empresa);
+                            Reset(TextInput2);
+                            Reset(cbo_solicitante);
+                            Reset(TextInput2_1);
+                            Reset(ComboBox2_10);
+                            Reset(cbo_dueñoprocesso);
+                            Reset(ComboBox2_12);
+                            Reset(TextInput2_2);
+                            Reset(DatePicker1_5);
+                            Reset(ComboBox2_13);
+                            Reset(ComboBox2_14);
+                            Set(varpopupformdoc,true);
                             Set(varpopupnewdoc,false)
                         PressedFill: =
                         Text: =""
@@ -1942,6 +1953,7 @@
 
                         Button3_4 As button:
                             AlignInContainer: =AlignInContainer.Stretch
+                            DisplayMode: =If(IsBlank(cbo_empresa.Selected.Value) || IsBlank(TextInput2.Text) || IsBlank(cbo_solicitante.Selected) || IsBlank(TextInput2_1.Text) || IsBlank(ComboBox2_10.Selected) || IsBlank(cbo_dueñoprocesso.Selected) || IsBlank(ComboBox2_12.Selected) || IsBlank(TextInput2_2.Text) || IsBlank(DatePicker1_5.SelectedDate) || IsBlank(ComboBox2_13.Selected) || IsBlank(ComboBox2_14.Selected), DisplayMode.Disabled, DisplayMode.Edit)
                             Fill: =primary
                             FillPortions: =1
                             LayoutMinHeight: =30
@@ -4843,8 +4855,7 @@
                                 AlignInContainer: =AlignInContainer.Stretch
                                 BorderColor: =secondarytext
                                 BorderThickness: =1
-                                Default: =varDocSide.version + 1
-                                DisplayMode: =DisplayMode.Disabled
+                                Default: =varDocSide.version
                                 HoverBorderColor: =primary
                                 HoverFill: =RGBA(255, 255, 255, 1)
                                 Size: =10
@@ -6920,7 +6931,7 @@
                         FontWeight: =FontWeight.Bold
                         Height: =30
                         LayoutMinHeight: =30
-                        Text: ="Usuário Actual"
+                        Text: ="Usuario Actual"
                         ZIndex: =7
 
                     txtcodigoedit_1 As text:
@@ -6940,7 +6951,7 @@
                         FontWeight: =FontWeight.Bold
                         Height: =30
                         LayoutMinHeight: =30
-                        Text: ="Usuário Replazante"
+                        Text: ="Usuario Replazante"
                         ZIndex: =9
 
                     cbo_solicitante_2 As combobox:
