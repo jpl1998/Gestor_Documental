@@ -63509,36 +63509,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.SideBar_ra_4.SideBar_Container_docRev_ra_4.evaluacion_container_sidebar_docRev_ra_4.registro_evaluacion_sidebar_ra_2.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'DocPorAprobar RA'.SideBar_ra_4.SideBar_Container_docRev_ra_4.evaluacion_container_sidebar_docRev_ra_4.registro_evaluacion_sidebar_ra_2.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "DocPorAprobar RA",
-                "type": "'DocPorAprobar RA'.SideBar_ra_4.SideBar_Container_docRev_ra_4.evaluacion_container_sidebar_docRev_ra_4.registro_evaluacion_sidebar_ra_2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "'DocPorAprobar RA'.SideBar_ra_4.SideBar_Container_docRev_ra_4.evaluacion_container_sidebar_docRev_ra_4.registro_evaluacion_sidebar_ra_2.TabIndex"
                 }
               ],
@@ -63563,6 +63533,36 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.SideBar_ra_4.SideBar_Container_docRev_ra_4.evaluacion_container_sidebar_docRev_ra_4.registro_evaluacion_sidebar_ra_2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.SideBar_ra_4.SideBar_Container_docRev_ra_4.evaluacion_container_sidebar_docRev_ra_4.registro_evaluacion_sidebar_ra_2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "DocPorAprobar RA",
+                "type": "'DocPorAprobar RA'.SideBar_ra_4.SideBar_Container_docRev_ra_4.evaluacion_container_sidebar_docRev_ra_4.registro_evaluacion_sidebar_ra_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -65669,49 +65669,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.evaluacion_container_sidebar_docRev_ra.registro_evaluacion_sidebar_ra.AccessibleLabel"
+                  "fullyQualifiedName": "'DocPublicados RA'.SideBar_ra_5.SideBar_Container_docRev_ra_5.evaluacion_container_sidebar_docRev_ra_5.registro_evaluacion_sidebar_ra_3.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.evaluacion_container_sidebar_docRev_ra.registro_evaluacion_sidebar_ra.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "DocPorRevisar RA",
-                "type": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.evaluacion_container_sidebar_docRev_ra.registro_evaluacion_sidebar_ra"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.evaluacion_container_sidebar_docRev_ra.registro_evaluacion_sidebar_ra.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.evaluacion_container_sidebar_docRev_ra.registro_evaluacion_sidebar_ra.TabIndex",
+                  "fullyQualifiedName": "'DocPublicados RA'.SideBar_ra_5.SideBar_Container_docRev_ra_5.evaluacion_container_sidebar_docRev_ra_5.registro_evaluacion_sidebar_ra_3.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "DocPorRevisar RA",
-                "type": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.evaluacion_container_sidebar_docRev_ra.registro_evaluacion_sidebar_ra"
+                "module": "DocPublicados RA",
+                "type": "'DocPublicados RA'.SideBar_ra_5.SideBar_Container_docRev_ra_5.evaluacion_container_sidebar_docRev_ra_5.registro_evaluacion_sidebar_ra_3"
               }
             }
           ],
@@ -65723,6 +65693,36 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'DocPublicados RA'.SideBar_ra_5.SideBar_Container_docRev_ra_5.evaluacion_container_sidebar_docRev_ra_5.registro_evaluacion_sidebar_ra_3.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPublicados RA'.SideBar_ra_5.SideBar_Container_docRev_ra_5.evaluacion_container_sidebar_docRev_ra_5.registro_evaluacion_sidebar_ra_3.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "DocPublicados RA",
+                "type": "'DocPublicados RA'.SideBar_ra_5.SideBar_Container_docRev_ra_5.evaluacion_container_sidebar_docRev_ra_5.registro_evaluacion_sidebar_ra_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -72569,49 +72569,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'DocPublicados RA'.SideBar_ra_5.SideBar_Container_docRev_ra_5.evaluacion_container_sidebar_docRev_ra_5.registro_evaluacion_sidebar_ra_3.AccessibleLabel"
+                  "fullyQualifiedName": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.evaluacion_container_sidebar_docRev_ra.registro_evaluacion_sidebar_ra.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'DocPublicados RA'.SideBar_ra_5.SideBar_Container_docRev_ra_5.evaluacion_container_sidebar_docRev_ra_5.registro_evaluacion_sidebar_ra_3.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "DocPublicados RA",
-                "type": "'DocPublicados RA'.SideBar_ra_5.SideBar_Container_docRev_ra_5.evaluacion_container_sidebar_docRev_ra_5.registro_evaluacion_sidebar_ra_3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'DocPublicados RA'.SideBar_ra_5.SideBar_Container_docRev_ra_5.evaluacion_container_sidebar_docRev_ra_5.registro_evaluacion_sidebar_ra_3.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'DocPublicados RA'.SideBar_ra_5.SideBar_Container_docRev_ra_5.evaluacion_container_sidebar_docRev_ra_5.registro_evaluacion_sidebar_ra_3.TabIndex",
+                  "fullyQualifiedName": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.evaluacion_container_sidebar_docRev_ra.registro_evaluacion_sidebar_ra.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "DocPublicados RA",
-                "type": "'DocPublicados RA'.SideBar_ra_5.SideBar_Container_docRev_ra_5.evaluacion_container_sidebar_docRev_ra_5.registro_evaluacion_sidebar_ra_3"
+                "module": "DocPorRevisar RA",
+                "type": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.evaluacion_container_sidebar_docRev_ra.registro_evaluacion_sidebar_ra"
               }
             }
           ],
@@ -72623,6 +72593,36 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.evaluacion_container_sidebar_docRev_ra.registro_evaluacion_sidebar_ra.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.evaluacion_container_sidebar_docRev_ra.registro_evaluacion_sidebar_ra.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "DocPorRevisar RA",
+                "type": "'DocPorRevisar RA'.SideBar_ra.SideBar_Container_docRev_ra.evaluacion_container_sidebar_docRev_ra.registro_evaluacion_sidebar_ra"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -77454,6 +77454,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.varSelectedEntrega"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPorAprobar RA'.varSelectedEntrega",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "varSelectedEntrega",
+                "module": "DocPorAprobar RA",
+                "type": "'DocPorAprobar RA'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "'DocPorRevisar RA'"
                 }
               ],
@@ -77477,6 +77507,36 @@
           },
           "ruleId": "app-ScreenHasManyControls",
           "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'DocPorRevisar RA'.varSelectedEntrega"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPorRevisar RA'.varSelectedEntrega",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "varSelectedEntrega",
+                "module": "DocPorRevisar RA",
+                "type": "'DocPorRevisar RA'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -77642,6 +77702,36 @@
               },
               "properties": {
                 "member": "varRevisarEntregaPopup",
+                "module": "DocPublicados RA",
+                "type": "'DocPublicados RA'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'DocPublicados RA'.varSelectedEntrega"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'DocPublicados RA'.varSelectedEntrega",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "varSelectedEntrega",
                 "module": "DocPublicados RA",
                 "type": "'DocPublicados RA'"
               }
