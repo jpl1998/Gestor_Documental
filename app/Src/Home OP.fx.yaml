@@ -1367,6 +1367,7 @@
                         LayoutMinWidth: =10
                         RadiusBottomLeft: =0
                         RadiusBottomRight: =0
+                        Visible: =varDocEstado<>"Publicado"
                         ZIndex: =1
 
                         observar_button_ra_7 As button:
@@ -1411,6 +1412,7 @@
                         LayoutMinWidth: =10
                         RadiusBottomLeft: =0
                         RadiusBottomRight: =0
+                        Visible: =varDocEstado<>"Publicado"
                         ZIndex: =2
 
                         observar_button_ra_11 As button:
