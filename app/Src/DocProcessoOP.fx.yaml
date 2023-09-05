@@ -2879,7 +2879,7 @@
                                 {
                                     id_documento:{Id: varDocID.ID , Value:varDocID.ID},
                                     codigo: varDocID.codigo,
-                                    version:1,
+                                    version:varDocID.version,
                                     descripcion:varDocID.Nombre,
                                     tipo_documento:"Principal"
                                 },
@@ -2891,7 +2891,7 @@
                                 {
                                     id_documento:{Id: varDocID.ID , Value:varDocID.ID},
                                     codigo:varDocID.codigo,
-                                    version:1,
+                                    version:varDocID.version,
                                     descripcion:varDocID.Nombre,
                                     tipo_documento:"Flujograma"
                                 },
@@ -2904,7 +2904,7 @@
                                 {
                                     id_documento:{Id: varDocID.ID , Value:varDocID.ID},
                                     codigo:varDocID.codigo,
-                                    version:1,
+                                    version:varDocID.version,
                                     descripcion:varDocID.Nombre,
                                     tipo_documento:"RCKI"
                                 },
@@ -2929,7 +2929,7 @@
                                                             ,Value:LookUp(DEV_Interlocutor,ComboBox2_22.Selected.Email in Email[@Email],ID)},
                                             codigo:varDocID.codigo,
                                             id_documento:{Id: varDocID.ID , Value:varDocID.ID} ,
-                                            version:1}),
+                                            version:varDocID.version}),
                                         
                                         
                                         Patch(DEV_Actor,Defaults(DEV_Actor),
@@ -2938,7 +2938,7 @@
                                                             ,Value:LookUp(DEV_Interlocutor,ComboBox2_22.Selected.Email in Email[@Email],ID)},
                                             codigo:varDocID.codigo,
                                             id_documento:{Id: varDocID.ID , Value:varDocID.ID} ,
-                                            version:1
+                                            version:varDocID.version
                                             }
                                         )
                                     ))
@@ -2962,7 +2962,7 @@
                                                             ,Value:LookUp(DEV_Interlocutor,ComboBox2_23.Selected.Email in Email[@Email],ID)},
                                             codigo:varDocID.codigo,
                                             id_documento:{Id: varDocID.ID , Value:varDocID.ID} ,
-                                            version:1}),
+                                            version:varDocID.version}),
                                         
                                         
                                         Patch(DEV_Actor,Defaults(DEV_Actor),
@@ -2971,7 +2971,7 @@
                                                             ,Value:LookUp(DEV_Interlocutor,ComboBox2_23.Selected.Email in Email[@Email],ID)},
                                             codigo:varDocID.codigo,
                                             id_documento:{Id: varDocID.ID , Value:varDocID.ID} ,
-                                            version:1}
+                                            version:varDocID.version}
                                         )
                                     );
                                     Necesidaddefirmaderevisor.Run(ComboBox2_23.Selected.Email, varDocID.codigo, varDocID.Nombre, varDocID.id_tipo_docu.Value, varDocID.fecha, varDocID.version)
@@ -2996,7 +2996,7 @@
                                                             ,Value:LookUp(DEV_Interlocutor,ComboBox2_24.Selected.Email in Email[@Email],ID)},
                                             codigo:varDocID.codigo,
                                             id_documento:{Id: varDocID.ID , Value:varDocID.ID} ,
-                                            version:1}),
+                                            version:varDocID.version}),
                                         
                                         
                                         Patch(DEV_Actor,Defaults(DEV_Actor),
@@ -3005,7 +3005,7 @@
                                                             ,Value:LookUp(DEV_Interlocutor,ComboBox2_24.Selected.Email in Email[@Email],ID)},
                                             codigo:varDocID.codigo,
                                             id_documento:{Id: varDocID.ID , Value:varDocID.ID} ,
-                                            version:1}
+                                            version:varDocID.version}
                                         )
                                     ))
                                 );
@@ -3014,7 +3014,7 @@
                                 
                                 Patch(DEV_Modificacion_estatus_proceso_doc,Defaults(DEV_Modificacion_estatus_proceso_doc),
                                     {codigo:varDocID.codigo,
-                                    version:1,
+                                    version:varDocID.version,
                                     id_estatus_procesos:{Id:1 , Value:1},
                                     id_documento: {Id:varDocID.ID , Value:varDocID.ID},
                                     id_estatus_documento:{Id:1 , Value:1},
