@@ -877,7 +877,14 @@
     "archivo_image_sidebar_docRev_ra_12": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
-        "Image",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "If(ThisItem.tipo_documento=\"Principal\", word, ThisItem.tipo_documento=\"Flujograma\", visio, excel)",
+          "InvariantPropertyName": "Image",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "ImagePosition",
         "ImageRotation",
         "X",
@@ -1138,7 +1145,14 @@
     "archivo_image_sidebar_docRev_ra_21": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
-        "Image",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "If(ThisItem.tipo_documento=\"Principal\", word, ThisItem.tipo_documento=\"Flujograma\", visio, excel)",
+          "InvariantPropertyName": "Image",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "ImagePosition",
         "ImageRotation",
         "X",

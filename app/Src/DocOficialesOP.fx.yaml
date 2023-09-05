@@ -3292,7 +3292,7 @@
                         archivo_image_sidebar_docRev_ra_8 As image:
                             AlignInContainer: =AlignInContainer.Stretch
                             Height: =24
-                            Image: =If(ThisItem.tipo_documento="Principal", word, ThisItem.tipo_documento="Flujograma", visio, excel)
+                            Image: =If(ThisItem.tipo_documento="Principal", word, ThisItem.tipo_documento="Flujograma", visio,ThisItem.tipo_documento="RCKI", excel, pdf)
                             LayoutMinHeight: =24
                             Width: =24
                             ZIndex: =1
@@ -8178,7 +8178,7 @@
                     archivo_image_sidebar_docRev_ra_18 As image:
                         AlignInContainer: =AlignInContainer.Stretch
                         Height: =24
-                        Image: =If(ThisItem.tipo_documento="Principal", word, ThisItem.tipo_documento="Flujograma", visio, excel)
+                        Image: =If(ThisItem.tipo_documento="Principal", word, ThisItem.tipo_documento="Flujograma", visio,ThisItem.tipo_documento="RCKI", excel, pdf)
                         LayoutMinHeight: =24
                         Width: =24
                         ZIndex: =1
