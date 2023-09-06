@@ -723,7 +723,7 @@
                                                 Height: =Parent.Height
                                                 PaddingLeft: =10
                                                 Size: =9.5
-                                                Text: =ThisItem.'fecha y hora'
+                                                Text: =Text(ThisItem.'fecha y hora',"dd/mm/yyyy")
                                                 Width: =140
                                                 X: =50
                                                 ZIndex: =4
@@ -1015,7 +1015,7 @@
                                                 Height: =Parent.Height
                                                 PaddingLeft: =10
                                                 Size: =9.5
-                                                Text: =ThisItem.'fecha y hora'
+                                                Text: =Text(ThisItem.'fecha y hora',"dd/mm/yyyy")
                                                 Width: =140
                                                 X: =50
                                                 ZIndex: =4
@@ -1303,7 +1303,7 @@
                                                 Height: =Parent.Height
                                                 PaddingLeft: =10
                                                 Size: =9.5
-                                                Text: =ThisItem.'fecha y hora'
+                                                Text: =Text(ThisItem.'fecha y hora',"dd/mm/yyyy")
                                                 Width: =140
                                                 X: =50
                                                 ZIndex: =4
@@ -1591,7 +1591,7 @@
                                                 Height: =Parent.Height
                                                 PaddingLeft: =10
                                                 Size: =9.5
-                                                Text: =ThisItem.'fecha y hora'
+                                                Text: =Text(ThisItem.'fecha y hora',"dd/mm/yyyy")
                                                 Width: =140
                                                 X: =50
                                                 ZIndex: =4

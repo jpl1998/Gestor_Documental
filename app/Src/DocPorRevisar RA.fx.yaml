@@ -584,7 +584,7 @@
                                         Height: =Parent.Height
                                         PaddingLeft: =10
                                         Size: =9.5
-                                        Text: =ThisItem.fecha
+                                        Text: =Text(ThisItem.fecha,"dd/mm/yyyy")
                                         Width: =140
                                         X: =50
                                         ZIndex: =4
