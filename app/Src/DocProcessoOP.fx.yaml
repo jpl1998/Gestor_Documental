@@ -3825,7 +3825,7 @@
                         Font: =Font.'Segoe UI'
                         Height: =24
                         Size: =12
-                        Text: =varDocSide.'Dueño  del Processo'.DisplayName
+                        Text: =varDocSide.Due_x00f1_odelProcesso.DisplayName
                         Width: =(Parent.Width/3)*2 -20
                         ZIndex: =2
 
@@ -4891,15 +4891,15 @@
                                 ChevronFill: =primary
                                 ChevronHoverBackground: =
                                 ChevronHoverFill: =primary
-                                Default: =varDocSide.'Dueño  del Processo'
-                                DefaultSelectedItems: =varDocSide.'Dueño  del Processo'
+                                Default: =varDocSide.Due_x00f1_odelProcesso
+                                DefaultSelectedItems: =varDocSide.Due_x00f1_odelProcesso
                                 DisplayFields: =["DisplayName","Email","Picture"]
                                 DisplayMode: =Parent.DisplayMode
                                 InputTextPlaceholder: ="Seleccione Opción"
-                                Items: =Choices([@DEV_Documento].'Dueño  del Processo')
+                                Items: =Choices([@DEV_Documento].Due_x00f1_odelProcesso)
                                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                                 SearchFields: =["DisplayName"]
-                                SearchItems: =Choices(DEV_Documento.'Dueño  del Processo',cbo_dueñoprocesso_1.SearchText)
+                                SearchItems: =Choices(DEV_Documento.Due_x00f1_odelProcesso,cbo_dueñoprocesso_1.SearchText)
                                 SelectMultiple: =false
                                 Size: =10
                                 Template: =ListItemTemplate.Person

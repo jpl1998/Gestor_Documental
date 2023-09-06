@@ -1563,7 +1563,7 @@
                         Font: =Font.'Segoe UI'
                         Height: =24
                         Size: =12
-                        Text: =varSelectedDoc.'Dueño  del Processo'.DisplayName
+                        Text: =varSelectedDoc.Due_x00f1_odelProcesso.DisplayName
                         Width: =(Parent.Width/3)*2 -20
                         ZIndex: =2
 
