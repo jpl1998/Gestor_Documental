@@ -4333,7 +4333,7 @@
                                 //QUITAR ACTORES ANTERIORES
                                 RemoveIf(
                                     DEV_Actor,
-                                    id_documento.Value = Text(varDocID.ID) && codigo = varDocID.codigo && version = varDocID.version
+                                    id_documento.Value = Text(varDocSide.ID) && codigo = varDocSide.codigo && version = varDocSide.version
                                 );
                                 
                                 Concurrent(
@@ -4428,6 +4428,14 @@
                                             }
                                         )
                                     );
+                                );
+                                
+                                UpdateIf(
+                                    DEV_Modificacion_estatus_documento, codigo = varDocSide.codigo && version = varDocSide.version,
+                                    {
+                                        ind_inact: "Inactivo",
+                                        ind_mod: "u"
+                                    }
                                 );
                                 
                                 //Estatus Processo Doc
