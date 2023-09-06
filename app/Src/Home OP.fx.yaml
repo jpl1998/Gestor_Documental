@@ -4404,12 +4404,12 @@
                                             Nombre: txtnombreedit_4.Text,
                                             fecha: DatePicker1_14.SelectedDate,
                                             id_tipo_docu: ComboBox2_40.Selected,
-                                            id_alcance: ComboBox2_41.Selected,
+                                            id_alcance: ComboBox2_41.Selected.Value,
                                             id_proceso: ComboBox2_43.Selected,
                                             id_macroproceso: ComboBox2_42.Selected,
                                             Empresa: cbo_empresa_4.Selected,
                                             Solicitante: cbo_solicitante_8.Selected,
-                                            Dueno_Proceso: cbo_dueñoprocesso_4.Selected
+                                            Dueno_Proceso: cbo_dueñoprocesso_4.Selected.Value
                                         }
                                     )
                                 );

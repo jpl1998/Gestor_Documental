@@ -433,8 +433,8 @@
                                         DEV_Documento,
                                         IsBlank(varFilterMenu.cargadoPor) || 'Created By'.Email = varFilterMenu.cargadoPor.Mail,
                                         IsBlank(varFilterMenu.tipoDocumento) || id_tipo_docu.Value = varFilterMenu.tipoDocumento.Value,
-                                        IsBlank(varFilterMenu.dueProceso) || Dueno_Proceso = varFilterMenu.dueProceso.Mail,
-                                        IsBlank(varFilterMenu.alcance) || id_alcance = varFilterMenu.alcance.Value,
+                                        IsBlank(varFilterMenu.dueProceso) || Dueno_Proceso = varFilterMenu.dueProceso,
+                                        IsBlank(varFilterMenu.alcance) || id_alcance = varFilterMenu.alcance,
                                         IsBlank(varFilterMenu.macroproceso) || id_macroproceso.Value = varFilterMenu.macroproceso.Value,
                                         IsBlank(varFilterMenu.proceso) || id_proceso.Value = varFilterMenu.proceso.Value,
                                         IsBlank(varFilterMenu.fechaDesde) || varFilterMenu.fechaDesde <= fecha,
@@ -755,15 +755,57 @@
                     PaddingTop: =10
                     ZIndex: =1
 
-                    Label2_32 As label:
-                        AlignInContainer: =AlignInContainer.Stretch
-                        Color: =primarytext
-                        FontWeight: =FontWeight.Bold
+                    Container27 As groupContainer.horizontalAutoLayoutContainer:
+                        FillPortions: =0
                         Height: =30
-                        LayoutMinHeight: =30
-                        Size: =10
-                        Text: ="Dueño Processo"
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
                         ZIndex: =1
+
+                        Label2_32 As label:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            Color: =primarytext
+                            FillPortions: =1
+                            FontWeight: =FontWeight.Bold
+                            Height: =30
+                            LayoutMinHeight: =30
+                            Size: =10
+                            Text: ="Dueño Processo"
+                            ZIndex: =1
+
+                        FiltroDuenoComboBox_5 As combobox:
+                            AlignInContainer: =AlignInContainer.Center
+                            BorderColor: =secondarytext
+                            BorderThickness: =1
+                            ChevronBackground: =RGBA(255, 255, 255, 1)
+                            ChevronFill: =primary
+                            ChevronHoverBackground: =
+                            ChevronHoverFill: =primary
+                            Color: =secondarytext
+                            DefaultSelectedItems: |-
+                                ={Value:"Empresa"}
+                            DisplayFields: =["Value"]
+                            FillPortions: =1
+                            FocusedBorderThickness: =2
+                            Height: =25
+                            HoverBorderColor: =
+                            HoverColor: =RGBA(26, 26, 26, 1)
+                            HoverFill: =RGBA(215, 223, 240, 1)
+                            InputTextPlaceholder: ="Seleccione Opción"
+                            IsSearchable: =false
+                            Items: =["Empresa","Gerencia", "Subgerencia", "Departamento", "Área"]
+                            LayoutMinHeight: =25
+                            LayoutMinWidth: =50
+                            OnChange: =Reset(cbo_dueñoprocesso)
+                            PressedBorderColor: =secondarytext
+                            PressedColor: =RGBA(26, 26, 26, 1)
+                            PressedFill: =RGBA(0, 0, 0, 0)
+                            SearchFields: =["Value"]
+                            SearchItems: =[]
+                            SelectMultiple: =false
+                            Size: =8
+                            ZIndex: =2
 
                     ComboBox2_2 As combobox:
                         AlignInContainer: =AlignInContainer.Stretch
@@ -774,21 +816,45 @@
                         ChevronHoverBackground: =
                         ChevronHoverFill: =primary
                         Color: =secondarytext
-                        DisplayFields: =["DisplayName","Mail"]
+                        DisplayFields: =["Value","Mail"]
                         Height: =30
                         HoverBorderColor: =
                         HoverColor: =RGBA(26, 26, 26, 1)
                         HoverFill: =RGBA(215, 223, 240, 1)
                         InputTextPlaceholder: ="Seleccione Opción"
                         Items: |-
-                            =UsuáriosdoOffice365.SearchUser({searchTerm:Self.SearchText})
+                            =Switch(
+                                FiltroDuenoComboBox_5.Selected.Value,
+                                "Empresa",
+                                Choices(DEV_Documento[@Empresa]),
+                                "Gerencia",
+                                Distinct(DEV_Estructura_Organizativa_dos,GERENCIA),
+                                "Subgerencia",
+                                Distinct(DEV_Estructura_Organizativa_dos,SUBGERENCIA),
+                                "Departamento",
+                                Distinct(DEV_Estructura_Organizativa_dos,DPTO),
+                                "Área",
+                                Distinct(DEV_Estructura_Organizativa_dos,des_cen_cto)
+                            )
                         LayoutMinWidth: =50
                         PressedBorderColor: =secondarytext
                         PressedColor: =RGBA(26, 26, 26, 1)
                         PressedFill: =RGBA(0, 0, 0, 0)
-                        SearchFields: =["DisplayName"]
+                        SearchFields: =["Value"]
                         SearchItems: |-
-                            =Search(UsuáriosdoOffice365.SearchUser({searchTerm:Self.SearchText}),ComboBox2_2.SearchText,"DisplayName")
+                            =Search(Switch(
+                                FiltroDuenoComboBox_4.Selected.Value,
+                                "Empresa",
+                                Choices(DEV_Documento[@Empresa]),
+                                "Gerencia",
+                                Distinct(DEV_Estructura_Organizativa_dos,GERENCIA),
+                                "Subgerencia",
+                                Distinct(DEV_Estructura_Organizativa_dos,SUBGERENCIA),
+                                "Departamento",
+                                Distinct(DEV_Estructura_Organizativa_dos,DPTO),
+                                "Área",
+                                Distinct(DEV_Estructura_Organizativa_dos,des_cen_cto)
+                            ),ComboBox2_2.SearchText,"Value")
                         SelectMultiple: =false
                         Size: =10
                         Template: =ListItemTemplate.Person
@@ -807,15 +873,57 @@
                     PaddingTop: =10
                     ZIndex: =2
 
-                    Label2_33 As label:
-                        AlignInContainer: =AlignInContainer.Stretch
-                        Color: =primarytext
-                        FontWeight: =FontWeight.Bold
+                    Container26 As groupContainer.horizontalAutoLayoutContainer:
+                        FillPortions: =0
                         Height: =30
-                        LayoutMinHeight: =30
-                        Size: =10
-                        Text: ="Alcance"
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
                         ZIndex: =1
+
+                        Label2_33 As label:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            Color: =primarytext
+                            FillPortions: =1
+                            FontWeight: =FontWeight.Bold
+                            Height: =30
+                            LayoutMinHeight: =30
+                            Size: =10
+                            Text: ="Alcance"
+                            ZIndex: =1
+
+                        FiltroDuenoComboBox_6 As combobox:
+                            AlignInContainer: =AlignInContainer.Center
+                            BorderColor: =secondarytext
+                            BorderThickness: =1
+                            ChevronBackground: =RGBA(255, 255, 255, 1)
+                            ChevronFill: =primary
+                            ChevronHoverBackground: =
+                            ChevronHoverFill: =primary
+                            Color: =secondarytext
+                            DefaultSelectedItems: |-
+                                ={Value:"Gerencia"}
+                            DisplayFields: =["Value"]
+                            FillPortions: =1
+                            FocusedBorderThickness: =2
+                            Height: =25
+                            HoverBorderColor: =
+                            HoverColor: =RGBA(26, 26, 26, 1)
+                            HoverFill: =RGBA(215, 223, 240, 1)
+                            InputTextPlaceholder: ="Seleccione Opción"
+                            IsSearchable: =false
+                            Items: =["Gerencia", "Subgerencia", "Departamento", "Área"]
+                            LayoutMinHeight: =25
+                            LayoutMinWidth: =50
+                            OnChange: =Reset(cbo_dueñoprocesso)
+                            PressedBorderColor: =secondarytext
+                            PressedColor: =RGBA(26, 26, 26, 1)
+                            PressedFill: =RGBA(0, 0, 0, 0)
+                            SearchFields: =["Value"]
+                            SearchItems: =[]
+                            SelectMultiple: =false
+                            Size: =8
+                            ZIndex: =2
 
                     ComboBox2_3 As combobox:
                         AlignInContainer: =AlignInContainer.Stretch
@@ -832,13 +940,35 @@
                         HoverColor: =RGBA(26, 26, 26, 1)
                         HoverFill: =RGBA(215, 223, 240, 1)
                         InputTextPlaceholder: ="Seleccione Opción"
-                        Items: =Choices(DEV_Documento[@id_alcance])
+                        Items: |-
+                            =Switch(
+                                FiltroDuenoComboBox_6.Selected.Value,
+                                "Gerencia",
+                                Distinct(DEV_Estructura_Organizativa_dos,GERENCIA),
+                                "Subgerencia",
+                                Distinct(DEV_Estructura_Organizativa_dos,SUBGERENCIA),
+                                "Departamento",
+                                Distinct(DEV_Estructura_Organizativa_dos,DPTO),
+                                "Área",
+                                Distinct(DEV_Estructura_Organizativa_dos,des_cen_cto)
+                            )
                         LayoutMinWidth: =50
                         PressedBorderColor: =secondarytext
                         PressedColor: =RGBA(26, 26, 26, 1)
                         PressedFill: =RGBA(0, 0, 0, 0)
                         SearchFields: =["Value"]
-                        SearchItems: =Choices(DEV_Documento.id_alcance,ComboBox2_3.SearchText)
+                        SearchItems: |-
+                            =Search(Switch(
+                                FiltroDuenoComboBox_6.Selected.Value,
+                                "Gerencia",
+                                Distinct(DEV_Estructura_Organizativa_dos,GERENCIA),
+                                "Subgerencia",
+                                Distinct(DEV_Estructura_Organizativa_dos,SUBGERENCIA),
+                                "Departamento",
+                                Distinct(DEV_Estructura_Organizativa_dos,DPTO),
+                                "Área",
+                                Distinct(DEV_Estructura_Organizativa_dos,des_cen_cto)
+                            ),ComboBox2_3.SearchText,"Value")
                         SelectMultiple: =false
                         Size: =10
                         ZIndex: =2
@@ -1135,8 +1265,8 @@
                             =Set(varFilterMenu,{
                                 cargadoPor: ComboBox2.Selected,
                                 tipoDocumento: ComboBox2_1.Selected,
-                                dueProceso: ComboBox2_2.Selected,
-                                alcance: ComboBox2_3.Selected,
+                                dueProceso: ComboBox2_2.Selected.Value,
+                                alcance: ComboBox2_3.Selected.Value,
                                 macroproceso: ComboBox2_4.Selected,
                                 proceso: ComboBox2_5.Selected,
                                 fechaDesde: DatePicker1.SelectedDate,
@@ -3003,7 +3133,7 @@
                                         Nombre:TextInput2_1.Text,
                                         fecha:DatePicker1_5.SelectedDate,
                                         id_tipo_docu: ComboBox2_10.Selected,
-                                        id_alcance:ComboBox2_12.Selected,
+                                        id_alcance:ComboBox2_12.Selected.Value,
                                         id_proceso:ComboBox2_14.Selected,
                                         id_macroproceso:ComboBox2_13.Selected,
                                         Empresa: cbo_empresa.Selected,
@@ -3852,7 +3982,7 @@
                         Font: =Font.'Segoe UI'
                         Height: =24
                         Size: =12
-                        Text: =varDocSide.id_alcance.Value
+                        Text: =varDocSide.id_alcance
                         Width: =(Parent.Width/3)*2 -20
                         ZIndex: =2
 
@@ -4874,14 +5004,56 @@
                             PaddingTop: =10
                             ZIndex: =2
 
-                            Label2_100 As label:
-                                AlignInContainer: =AlignInContainer.Stretch
-                                Color: =primarytext
-                                FontWeight: =FontWeight.Bold
+                            Container24 As groupContainer.horizontalAutoLayoutContainer:
+                                FillPortions: =0
                                 Height: =30
-                                LayoutMinHeight: =30
-                                Text: ="Dueño del Proceso *"
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
                                 ZIndex: =1
+
+                                Label2_100 As label:
+                                    AlignInContainer: =AlignInContainer.Stretch
+                                    Color: =primarytext
+                                    FillPortions: =1
+                                    FontWeight: =FontWeight.Bold
+                                    Height: =30
+                                    LayoutMinHeight: =30
+                                    Text: ="Dueño del Proceso *"
+                                    ZIndex: =1
+
+                                FiltroDuenoComboBox_3 As combobox:
+                                    AlignInContainer: =AlignInContainer.Center
+                                    BorderColor: =secondarytext
+                                    BorderThickness: =1
+                                    ChevronBackground: =RGBA(255, 255, 255, 1)
+                                    ChevronFill: =primary
+                                    ChevronHoverBackground: =
+                                    ChevronHoverFill: =primary
+                                    Color: =secondarytext
+                                    DefaultSelectedItems: |-
+                                        ={Value:"Gerencia"}
+                                    DisplayFields: =["Value"]
+                                    FillPortions: =1
+                                    FocusedBorderThickness: =2
+                                    Height: =25
+                                    HoverBorderColor: =
+                                    HoverColor: =RGBA(26, 26, 26, 1)
+                                    HoverFill: =RGBA(215, 223, 240, 1)
+                                    InputTextPlaceholder: ="Seleccione Opción"
+                                    IsSearchable: =false
+                                    Items: =["Gerencia", "Subgerencia", "Departamento", "Área"]
+                                    LayoutMinHeight: =25
+                                    LayoutMinWidth: =50
+                                    OnChange: =Reset(cbo_dueñoprocesso)
+                                    PressedBorderColor: =secondarytext
+                                    PressedColor: =RGBA(26, 26, 26, 1)
+                                    PressedFill: =RGBA(0, 0, 0, 0)
+                                    SearchFields: =["Value"]
+                                    SearchItems: =[]
+                                    SelectMultiple: =false
+                                    Size: =9
+                                    ZIndex: =2
 
                             cbo_dueñoprocesso_1 As combobox:
                                 AlignInContainer: =AlignInContainer.Stretch
@@ -4891,19 +5063,39 @@
                                 ChevronFill: =primary
                                 ChevronHoverBackground: =
                                 ChevronHoverFill: =primary
-                                Default: =varDocSide.Due_x00f1_odelProcesso
-                                DefaultSelectedItems: =varDocSide.Due_x00f1_odelProcesso
-                                DisplayFields: =["DisplayName","Email","Picture"]
+                                DefaultSelectedItems: |-
+                                    ={Value:varDocSide.Dueno_Proceso}
+                                DisplayFields: =["Value","Email","Picture"]
                                 DisplayMode: =Parent.DisplayMode
                                 InputTextPlaceholder: ="Seleccione Opción"
-                                IsSearchable: =false
-                                Items: =Choices([@DEV_Documento].Due_x00f1_odelProcesso)
+                                Items: |-
+                                    =Switch(
+                                        FiltroDuenoComboBox_3.Selected.Value,
+                                        "Gerencia",
+                                        Distinct(DEV_Estructura_Organizativa_dos,GERENCIA),
+                                        "Subgerencia",
+                                        Distinct(DEV_Estructura_Organizativa_dos,SUBGERENCIA),
+                                        "Departamento",
+                                        Distinct(DEV_Estructura_Organizativa_dos,DPTO),
+                                        "Área",
+                                        Distinct(DEV_Estructura_Organizativa_dos,des_cen_cto)
+                                    )
                                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                                SearchFields: =["DisplayName"]
-                                SearchItems: =[]
+                                SearchFields: =["Value"]
+                                SearchItems: |-
+                                    =Search(Switch(
+                                        FiltroDuenoComboBox_3.Selected.Value,
+                                        "Gerencia",
+                                        Distinct(DEV_Estructura_Organizativa_dos,GERENCIA),
+                                        "Subgerencia",
+                                        Distinct(DEV_Estructura_Organizativa_dos,SUBGERENCIA),
+                                        "Departamento",
+                                        Distinct(DEV_Estructura_Organizativa_dos,DPTO),
+                                        "Área",
+                                        Distinct(DEV_Estructura_Organizativa_dos,des_cen_cto)
+                                    ),cbo_dueñoprocesso_1.SearchText,"Value")
                                 SelectMultiple: =false
                                 Size: =10
-                                Template: =ListItemTemplate.Person
                                 Tooltip: =
                                 Width: =Parent.Width - 60
                                 X: =30
@@ -4931,14 +5123,56 @@
                             PaddingTop: =10
                             ZIndex: =1
 
-                            Label2_101 As label:
-                                AlignInContainer: =AlignInContainer.Stretch
-                                Color: =primarytext
-                                FontWeight: =FontWeight.Bold
+                            Container25 As groupContainer.horizontalAutoLayoutContainer:
+                                FillPortions: =0
                                 Height: =30
-                                LayoutMinHeight: =30
-                                Text: ="Alcance del Documento *"
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
                                 ZIndex: =1
+
+                                Label2_101 As label:
+                                    AlignInContainer: =AlignInContainer.Stretch
+                                    Color: =primarytext
+                                    FillPortions: =1.2
+                                    FontWeight: =FontWeight.Bold
+                                    Height: =30
+                                    LayoutMinHeight: =30
+                                    Text: ="Alcance del Documento *"
+                                    ZIndex: =1
+
+                                FiltroDuenoComboBox_4 As combobox:
+                                    AlignInContainer: =AlignInContainer.Center
+                                    BorderColor: =secondarytext
+                                    BorderThickness: =1
+                                    ChevronBackground: =RGBA(255, 255, 255, 1)
+                                    ChevronFill: =primary
+                                    ChevronHoverBackground: =
+                                    ChevronHoverFill: =primary
+                                    Color: =secondarytext
+                                    DefaultSelectedItems: |-
+                                        ={Value:"Empresa"}
+                                    DisplayFields: =["Value"]
+                                    FillPortions: =0.8
+                                    FocusedBorderThickness: =2
+                                    Height: =25
+                                    HoverBorderColor: =
+                                    HoverColor: =RGBA(26, 26, 26, 1)
+                                    HoverFill: =RGBA(215, 223, 240, 1)
+                                    InputTextPlaceholder: ="Seleccione Opción"
+                                    IsSearchable: =false
+                                    Items: =["Empresa","Gerencia", "Subgerencia", "Departamento", "Área"]
+                                    LayoutMinHeight: =25
+                                    LayoutMinWidth: =50
+                                    OnChange: =Reset(cbo_dueñoprocesso)
+                                    PressedBorderColor: =secondarytext
+                                    PressedColor: =RGBA(26, 26, 26, 1)
+                                    PressedFill: =RGBA(0, 0, 0, 0)
+                                    SearchFields: =["Value"]
+                                    SearchItems: =[]
+                                    SelectMultiple: =false
+                                    Size: =9
+                                    ZIndex: =2
 
                             ComboBox2_27 As combobox:
                                 AlignInContainer: =AlignInContainer.Stretch
@@ -4949,23 +5183,49 @@
                                 ChevronHoverBackground: =
                                 ChevronHoverFill: =primary
                                 Color: =secondarytext
-                                Default: =varDocSide.id_alcance
-                                DefaultSelectedItems: =varDocSide.id_alcance
+                                DefaultSelectedItems: |-
+                                    ={Value:varDocSide.id_alcance}
                                 DisplayFields: =["Value"]
                                 HoverBorderColor: =
                                 HoverColor: =RGBA(26, 26, 26, 1)
                                 HoverFill: =RGBA(215, 223, 240, 1)
                                 InputTextPlaceholder: ="Seleccione Opción"
-                                Items: =Choices(DEV_Documento[@id_alcance])
+                                Items: |-
+                                    =Switch(
+                                        FiltroDuenoComboBox_4.Selected.Value,
+                                        "Empresa",
+                                        Choices(DEV_Documento[@Empresa]),
+                                        "Gerencia",
+                                        Distinct(DEV_Estructura_Organizativa_dos,GERENCIA),
+                                        "Subgerencia",
+                                        Distinct(DEV_Estructura_Organizativa_dos,SUBGERENCIA),
+                                        "Departamento",
+                                        Distinct(DEV_Estructura_Organizativa_dos,DPTO),
+                                        "Área",
+                                        Distinct(DEV_Estructura_Organizativa_dos,des_cen_cto)
+                                    )
                                 LayoutMinWidth: =50
                                 PressedBorderColor: =secondarytext
                                 PressedColor: =RGBA(26, 26, 26, 1)
                                 PressedFill: =RGBA(0, 0, 0, 0)
                                 SearchFields: =["Value"]
-                                SearchItems: =Choices(DEV_Documento.id_alcance,ComboBox2_27.SearchText)
+                                SearchItems: |-
+                                    =Search(Switch(
+                                        FiltroDuenoComboBox_4.Selected.Value,
+                                        "Empresa",
+                                        Choices(DEV_Documento[@Empresa]),
+                                        "Gerencia",
+                                        Distinct(DEV_Estructura_Organizativa_dos,GERENCIA),
+                                        "Subgerencia",
+                                        Distinct(DEV_Estructura_Organizativa_dos,SUBGERENCIA),
+                                        "Departamento",
+                                        Distinct(DEV_Estructura_Organizativa_dos,DPTO),
+                                        "Área",
+                                        Distinct(DEV_Estructura_Organizativa_dos,des_cen_cto)
+                                    ),ComboBox2_27.SearchText,"Value")
                                 SelectMultiple: =false
                                 Size: =10
-                                ZIndex: =2
+                                ZIndex: =3
 
                         Container15_46 As groupContainer.verticalAutoLayoutContainer:
                             DropShadow: =DropShadow.None
@@ -6462,7 +6722,7 @@
                                             Nombre: txtnombreedit.Text,
                                             fecha: DatePicker1_6.SelectedDate,
                                             id_tipo_docu: ComboBox2_26.Selected,
-                                            id_alcance: ComboBox2_27.Selected,
+                                            id_alcance: ComboBox2_27.Selected.Value,
                                             id_proceso: ComboBox2_29.Selected,
                                             id_macroproceso: ComboBox2_28.Selected,
                                             Empresa: cbo_empresa_1.Selected,
