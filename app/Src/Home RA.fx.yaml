@@ -777,7 +777,8 @@
                                                     Height: =Parent.Height*60%
                                                     Icon: =Icon.View
                                                     OnSelect: |-
-                                                        =UpdateContext({varSelectedDoc:LookUp(DEV_Documento, Value(ThisItem.id_documento.Value)=ID), varSidebarPopup:true})
+                                                        =UpdateContext({varSelectedDoc:LookUp(DEV_Documento, Value(ThisItem.id_documento.Value)=ID), varSidebarPopup:true});
+                                                        Set(varDocEstado,ThisItem.id_estatus_documento.Value)
                                                     PaddingBottom: =3
                                                     PaddingLeft: =3
                                                     PaddingRight: =3
@@ -1065,7 +1066,8 @@
                                                     Height: =Parent.Height*60%
                                                     Icon: =Icon.View
                                                     OnSelect: |-
-                                                        =UpdateContext({varSelectedDoc:LookUp(DEV_Documento, Value(ThisItem.id_documento.Value)=ID), varSidebarPopup:true})
+                                                        =UpdateContext({varSelectedDoc:LookUp(DEV_Documento, Value(ThisItem.id_documento.Value)=ID), varSidebarPopup:true});
+                                                        Set(varDocEstado,ThisItem.id_estatus_documento.Value)
                                                     PaddingBottom: =3
                                                     PaddingLeft: =3
                                                     PaddingRight: =3
@@ -1353,7 +1355,8 @@
                                                     Height: =Parent.Height*60%
                                                     Icon: =Icon.View
                                                     OnSelect: |-
-                                                        =UpdateContext({varSelectedDoc:LookUp(DEV_Documento, Value(ThisItem.id_documento.Value)=ID), varSidebarPopup:true})
+                                                        =UpdateContext({varSelectedDoc:LookUp(DEV_Documento, Value(ThisItem.id_documento.Value)=ID), varSidebarPopup:true});
+                                                        Set(varDocEstado,ThisItem.id_estatus_documento.Value)
                                                     PaddingBottom: =3
                                                     PaddingLeft: =3
                                                     PaddingRight: =3
@@ -1645,7 +1648,8 @@
                                                     Height: =Parent.Height*60%
                                                     Icon: =Icon.View
                                                     OnSelect: |-
-                                                        =UpdateContext({varSelectedDoc:LookUp(DEV_Documento, Value(ThisItem.id_documento.Value)=ID), varSidebarPopup:true})
+                                                        =UpdateContext({varSelectedDoc:LookUp(DEV_Documento, Value(ThisItem.id_documento.Value)=ID), varSidebarPopup:true});
+                                                        Set(varDocEstado,ThisItem.id_estatus_documento.Value)
                                                     PaddingBottom: =3
                                                     PaddingLeft: =3
                                                     PaddingRight: =3
@@ -2738,78 +2742,10 @@
                     RadiusTopRight: =5
                     Size: =11
                     Text: ="Documento " & varDocEstado
-                    Visible: =varDocEstado<>"Aprobado" && varDocEstado<>"Publicado"
                     Width: =Parent.Width*80%
                     X: =(Parent.Width-Self.Width)/2
                     Y: =(Parent.Height-Self.Height)/2
                     ZIndex: =1
-
-                Button8_13 As button:
-                    BorderColor: =Self.Color
-                    Color: =primary
-                    Fill: =RGBA(255, 255, 255, 1)
-                    Height: =47
-                    OnSelect: |-
-                        =//Estatus Processo Doc
-                        UpdateIf(
-                            DEV_Modificacion_estatus_proceso_doc, id_doc = varDocSide.ID,
-                            {
-                                'fecha y hora': Now(),
-                                ind_inact:"Inactivo",
-                                ind_mod:"u"
-                            }
-                        );
-                        
-                        Patch(DEV_Modificacion_estatus_proceso_doc,Defaults(DEV_Modificacion_estatus_proceso_doc),
-                            {codigo:varDocSide.codigo,
-                            version:varDocSide.version,
-                            id_estatus_procesos:{Id:2 , Value:2},
-                            id_documento: {Id:varDocSide.ID , Value:varDocSide.ID},
-                            id_estatus_documento:{Id:5 , Value:5},
-                            nro_mod:First(SortByColumns(Filter(DEV_Modificacion_estatus_proceso_doc,id_doc = varDocSide.ID),"nro_mod")).nro_mod+1,
-                            'fecha y hora': Now(),
-                            ind_inact:"Activo",
-                            ind_mod:"i",
-                            id_doc:varDocSide.ID}
-                        );
-                        
-                        Publicararchivosenbibliotecapublica.Run(varDocSide.ID);
-                        Set(varsidebarop,false)
-                    Text: ="Publicar Documento"
-                    Visible: =varDocEstado="Aprobado"
-                    Width: =336
-                    X: =42
-                    Y: =15
-                    ZIndex: =2
-
-                Button8_12 As button:
-                    BorderColor: =Self.Color
-                    Color: =red
-                    Fill: =RGBA(255, 255, 255, 1)
-                    Height: =47
-                    HoverFill: =ColorFade(red, -20%)
-                    OnSelect: |-
-                        =UpdateContext({varPopupDarBaja:true})
-                    Text: ="Dar Baja"
-                    Visible: =varDocEstado="Publicado"
-                    Width: =180
-                    X: =20
-                    Y: =15
-                    ZIndex: =3
-
-                Button8_14 As button:
-                    BorderColor: =Self.Color
-                    Color: =primary
-                    Fill: =RGBA(255, 255, 255, 1)
-                    Height: =47
-                    OnSelect: |-
-                        =UpdateContext({varPopupTipoDifusion:true})
-                    Text: ="Realizar Difusión"
-                    Visible: =varDocEstado="Publicado"
-                    Width: =180
-                    X: =217
-                    Y: =15
-                    ZIndex: =4
 
     popup_revisar_entrega_4 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.None
