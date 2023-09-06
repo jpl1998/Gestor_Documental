@@ -2092,7 +2092,7 @@
                         Font: =Font.'Segoe UI'
                         Height: =24
                         Size: =12
-                        Text: =varDocSide.id_alcance.Value
+                        Text: =varDocSide.id_alcance
                         Width: =(Parent.Width/3)*2 -20
                         ZIndex: =2
 

@@ -13227,7 +13227,14 @@
       "ControlPropertyState": [
         "Live",
         "Overflow",
-        "Text",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "varDocSide.id_alcance.Value",
+          "InvariantPropertyName": "Text",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Role",
         "Color",
         "DisabledColor",
@@ -23559,7 +23566,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "elaborador_evaluacion_sidebar_op_8",
-      "ParentIndex": 3,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -64931,7 +64938,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "revisor_evaluacion_sidebar_op_8",
-      "ParentIndex": 4,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
