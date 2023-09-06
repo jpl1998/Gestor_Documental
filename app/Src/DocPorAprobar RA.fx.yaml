@@ -1069,10 +1069,9 @@
                         OnSelect: =Select(Parent)
                         Size: =12
                         Text: |-
-                            =If(!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version)),
+                            =If(!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version, id_status_archivo.Value="4" || id_status_archivo.Value="3")),
                             If(!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version, id_status_archivo.Value="4")), "Observado", "Conforme"))
-                        Visible: |
-                            =!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version, id_status_archivo.Value="3" || id_status_archivo.Value="4"))
+                        Visible: =!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version, id_status_archivo.Value="3" || id_status_archivo.Value="4"))
                         Width: =120
                         X: =295
                         Y: =14

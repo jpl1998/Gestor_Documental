@@ -82967,17 +82967,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.companyRed"
+                  "fullyQualifiedName": "App.companyGreen"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "App.companyRed",
+                  "fullyQualifiedName": "App.companyGreen",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "companyRed",
+                "member": "companyGreen",
                 "module": "App",
                 "type": "App"
               }
@@ -82997,17 +82997,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.companyGreen"
+                  "fullyQualifiedName": "App.companyRed"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "App.companyGreen",
+                  "fullyQualifiedName": "App.companyRed",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "companyGreen",
+                "member": "companyRed",
                 "module": "App",
                 "type": "App"
               }

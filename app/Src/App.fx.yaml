@@ -1,6 +1,6 @@
 App As appinfo:
     BackEnabled: =false
-    OnStart: |-
+    OnStart: |
         =Set(secondarytext,RGBA(44,44,44,1));
         Set(primary,RGBA(7,67,111,1));
         Set(seconday,RGBA(252,195,48,1));
@@ -11,45 +11,6 @@ App As appinfo:
         Set(companyRed, ColorValue("#F5DAD8"));
         Set(green, ColorValue("#2C8F70"));
         Set(companyGreen, ColorValue("#DBEEE9"));
-        
-        ClearCollect(
-            Table,
-            {
-                Código: "LDS-PA-134",
-                Nombre: "Carga del Presupuesto Anual a los sistemas inf...",
-                'Tipo Documento': "Procedimiento Administrativo",
-                'F. Solicitud Aprobación': "22/03/2023",
-                Estado: "Por aprobar"
-            },
-            {
-                Código: "LDS-PA-134",
-                Nombre: "Carga del Presupuesto Anual a los sistemas inf...",
-                'Tipo Documento': "Procedimiento Administrativo",
-                'F. Solicitud Aprobación': "22/03/2023",
-                Estado: "Por aprobar"
-            },
-            {
-                Código: "LDS-PA-134",
-                Nombre: "Carga del Presupuesto Anual a los sistemas inf...",
-                'Tipo Documento': "Procedimiento Administrativo",
-                'F. Solicitud Aprobación': "22/03/2023",
-                Estado: "Por aprobar"
-            },
-            {
-                Código: "LDS-PA-134",
-                Nombre: "Carga del Presupuesto Anual a los sistemas inf...",
-                'Tipo Documento': "Procedimiento Administrativo",
-                'F. Solicitud Aprobación': "22/03/2023",
-                Estado: "Observado"
-            },
-            {
-                Código: "LDS-PA-134",
-                Nombre: "Carga del Presupuesto Anual a los sistemas inf...",
-                'Tipo Documento': "Procedimiento Administrativo",
-                'F. Solicitud Aprobación': "22/03/2023",
-                Estado: "Observado"
-            }
-        )
     Theme: =PowerAppsTheme
 
     Host As hostControl.DefaultHostControlVariant:

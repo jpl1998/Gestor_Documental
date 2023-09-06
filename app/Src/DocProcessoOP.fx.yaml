@@ -843,7 +843,7 @@
                         SearchFields: =["Value"]
                         SearchItems: |-
                             =Search(Switch(
-                                FiltroDuenoComboBox_4.Selected.Value,
+                                FiltroDuenoComboBox_5.Selected.Value,
                                 "Empresa",
                                 Choices(DEV_Documento[@Empresa]),
                                 "Gerencia",
