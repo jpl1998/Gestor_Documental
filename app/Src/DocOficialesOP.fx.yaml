@@ -1614,10 +1614,11 @@
                                 DisplayFields: =["DisplayName","Email","Picture"]
                                 DisplayMode: =Parent.DisplayMode
                                 InputTextPlaceholder: ="Seleccione Opción"
+                                IsSearchable: =false
                                 Items: =Choices([@DEV_Documento].Due_x00f1_odelProcesso)
                                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                                 SearchFields: =["DisplayName"]
-                                SearchItems: =Choices(DEV_Documento.Due_x00f1_odelProcesso,cbo_dueñoprocesso_6.SearchText)
+                                SearchItems: =[]
                                 SelectMultiple: =false
                                 Size: =10
                                 Template: =ListItemTemplate.Person
@@ -4638,10 +4639,11 @@
                                 DisplayFields: =["DisplayName","Email","Picture"]
                                 DisplayMode: =Parent.DisplayMode
                                 InputTextPlaceholder: ="Seleccione Opción"
+                                IsSearchable: =false
                                 Items: =Choices([@DEV_Documento].Due_x00f1_odelProcesso)
                                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                                 SearchFields: =["DisplayName"]
-                                SearchItems: =Choices(DEV_Documento.Due_x00f1_odelProcesso,cbo_dueñoprocesso_7.SearchText)
+                                SearchItems: =[]
                                 SelectMultiple: =false
                                 Size: =10
                                 Template: =ListItemTemplate.Person

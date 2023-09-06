@@ -433,8 +433,8 @@
                                         DEV_Documento,
                                         IsBlank(varFilterMenu.cargadoPor) || 'Created By'.Email = varFilterMenu.cargadoPor.Mail,
                                         IsBlank(varFilterMenu.tipoDocumento) || id_tipo_docu.Value = varFilterMenu.tipoDocumento.Value,
-                                        IsBlank(varFilterMenu.dueProceso) || 'Dueño  del Processo'.Email = varFilterMenu.dueProceso.Mail,
-                                        IsBlank(varFilterMenu.alcance) || id_alcance.Value = varFilterMenu.alcance.Value,
+                                        IsBlank(varFilterMenu.dueProceso) || Dueno_Proceso = varFilterMenu.dueProceso.Mail,
+                                        IsBlank(varFilterMenu.alcance) || id_alcance = varFilterMenu.alcance.Value,
                                         IsBlank(varFilterMenu.macroproceso) || id_macroproceso.Value = varFilterMenu.macroproceso.Value,
                                         IsBlank(varFilterMenu.proceso) || id_proceso.Value = varFilterMenu.proceso.Value,
                                         IsBlank(varFilterMenu.fechaDesde) || varFilterMenu.fechaDesde <= fecha,
@@ -3008,7 +3008,7 @@
                                         id_macroproceso:ComboBox2_13.Selected,
                                         Empresa: cbo_empresa.Selected,
                                         Solicitante:cbo_solicitante.Selected,
-                                        'Dueño  del Processo':cbo_dueñoprocesso.Selected
+                                        Dueno_Proceso:cbo_dueñoprocesso.Selected.Value
                                     }
                                 ));
                                 //DOCUMENTO PRINCIPAL
@@ -3825,7 +3825,7 @@
                         Font: =Font.'Segoe UI'
                         Height: =24
                         Size: =12
-                        Text: =varDocSide.Due_x00f1_odelProcesso.DisplayName
+                        Text: =varDocSide.Dueno_Proceso
                         Width: =(Parent.Width/3)*2 -20
                         ZIndex: =2
 
@@ -4896,10 +4896,11 @@
                                 DisplayFields: =["DisplayName","Email","Picture"]
                                 DisplayMode: =Parent.DisplayMode
                                 InputTextPlaceholder: ="Seleccione Opción"
+                                IsSearchable: =false
                                 Items: =Choices([@DEV_Documento].Due_x00f1_odelProcesso)
                                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                                 SearchFields: =["DisplayName"]
-                                SearchItems: =Choices(DEV_Documento.Due_x00f1_odelProcesso,cbo_dueñoprocesso_1.SearchText)
+                                SearchItems: =[]
                                 SelectMultiple: =false
                                 Size: =10
                                 Template: =ListItemTemplate.Person
@@ -6466,7 +6467,7 @@
                                             id_macroproceso: ComboBox2_28.Selected,
                                             Empresa: cbo_empresa_1.Selected,
                                             Solicitante: cbo_solicitante_1.Selected,
-                                            'Dueño  del Processo': cbo_dueñoprocesso_1.Selected
+                                            Dueno_Proceso: cbo_dueñoprocesso_1.Selected.Value
                                         }
                                     )
                                 );

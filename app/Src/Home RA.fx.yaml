@@ -2065,7 +2065,7 @@
                         Font: =Font.'Segoe UI'
                         Height: =24
                         Size: =12
-                        Text: =varDocSide.Due_x00f1_odelProcesso.DisplayName
+                        Text: =varDocSide.Dueno_Proceso
                         Width: =(Parent.Width/3)*2 -20
                         ZIndex: =2
 
