@@ -48090,54 +48090,6 @@
               "message": {
                 "text": "Error occurred running rule app-InefficientDelayLoading."
               }
-            },
-            {
-              "associatedRule": {
-                "id": "app-InefficientDelayLoading",
-                "index": 10
-              },
-              "descriptor": {
-                "id": "app-InefficientDelayLoading"
-              },
-              "message": {
-                "text": "Error occurred running rule app-InefficientDelayLoading."
-              }
-            },
-            {
-              "associatedRule": {
-                "id": "app-InefficientDelayLoading",
-                "index": 10
-              },
-              "descriptor": {
-                "id": "app-InefficientDelayLoading"
-              },
-              "message": {
-                "text": "Error occurred running rule app-InefficientDelayLoading."
-              }
-            },
-            {
-              "associatedRule": {
-                "id": "app-InefficientDelayLoading",
-                "index": 10
-              },
-              "descriptor": {
-                "id": "app-InefficientDelayLoading"
-              },
-              "message": {
-                "text": "Error occurred running rule app-InefficientDelayLoading."
-              }
-            },
-            {
-              "associatedRule": {
-                "id": "app-InefficientDelayLoading",
-                "index": 10
-              },
-              "descriptor": {
-                "id": "app-InefficientDelayLoading"
-              },
-              "message": {
-                "text": "Error occurred running rule app-InefficientDelayLoading."
-              }
             }
           ]
         }
@@ -57498,79 +57450,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Home OP'.popup_difusion_cr_2.container_difusion_cr_2.gerencia_difusion_2.AccessibleLabel"
+                  "fullyQualifiedName": "'Home OP'.popup_difusion_cr_2.container_difusion_cr_2.CorreosDifusion.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Home OP'.popup_difusion_cr_2.container_difusion_cr_2.gerencia_difusion_2.AccessibleLabel",
+                  "fullyQualifiedName": "'Home OP'.popup_difusion_cr_2.container_difusion_cr_2.CorreosDifusion.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Home OP",
-                "type": "'Home OP'.popup_difusion_cr_2.container_difusion_cr_2.gerencia_difusion_2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Home OP'.popup_difusion_cr_2.container_difusion_cr_2.subgerencia_difusion_2.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Home OP'.popup_difusion_cr_2.container_difusion_cr_2.subgerencia_difusion_2.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Home OP",
-                "type": "'Home OP'.popup_difusion_cr_2.container_difusion_cr_2.subgerencia_difusion_2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Home OP'.popup_difusion_cr_2.container_difusion_cr_2.departamento_difusion_2.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Home OP'.popup_difusion_cr_2.container_difusion_cr_2.departamento_difusion_2.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Home OP",
-                "type": "'Home OP'.popup_difusion_cr_2.container_difusion_cr_2.departamento_difusion_2"
+                "type": "'Home OP'.popup_difusion_cr_2.container_difusion_cr_2.CorreosDifusion"
               }
             }
           ],
@@ -82087,7 +81979,7 @@
                 ],
                 "level": "Medium",
                 "primaryCategory": "performance",
-                "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"Home OP\" is 1161, which exceeds the maximum threshold recommended (300)."
+                "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"Home OP\" is 1157, which exceeds the maximum threshold recommended (300)."
               }
             },
             {
