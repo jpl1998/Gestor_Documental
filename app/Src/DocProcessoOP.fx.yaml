@@ -1740,15 +1740,17 @@
                             ZIndex: =1
 
                             Container7 As groupContainer.horizontalAutoLayoutContainer:
+                                DropShadow: =DropShadow.None
                                 FillPortions: =0
                                 Height: =30
+                                LayoutAlignItems: =LayoutAlignItems.Stretch
                                 LayoutMinHeight: =100
                                 LayoutMinWidth: =250
                                 LayoutMode: =LayoutMode.Auto
+                                PaddingBottom: =2
                                 ZIndex: =1
 
                                 Label2_45 As label:
-                                    AlignInContainer: =AlignInContainer.Stretch
                                     Color: =primarytext
                                     FillPortions: =1.4
                                     FontWeight: =FontWeight.Bold
