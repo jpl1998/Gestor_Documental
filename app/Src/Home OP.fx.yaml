@@ -2795,8 +2795,7 @@
                                 AlignInContainer: =AlignInContainer.Stretch
                                 BorderColor: =secondarytext
                                 BorderThickness: =1
-                                Default: =varDocSide.version + 1
-                                DisplayMode: =DisplayMode.Disabled
+                                Default: =varDocSide.version
                                 HoverBorderColor: =primary
                                 HoverFill: =RGBA(255, 255, 255, 1)
                                 Size: =10
@@ -3027,7 +3026,8 @@
                             FillPortions: =1
                             LayoutMinHeight: =30
                             OnSelect: |-
-                                =Set(varpopupformedit,false);
+                                =UpdateContext({varNewFormPrincipal:false, varNewFormFlujograma:false, varNewFormRcki:false});
+                                Set(varpopupformedit,false);
                                 Set(varpopupuploadeditdoc,true)
                             RadiusBottomLeft: =5
                             RadiusBottomRight: =5
@@ -3152,7 +3152,8 @@
                                 Color: =red
                                 Height: =37
                                 Icon: =Icon.Cancel
-                                OnSelect: =ResetForm(FormEditPrincipal_2)
+                                OnSelect: |-
+                                    =UpdateContext({varNewFormPrincipal:true});ResetForm(FormEditPrincipal_2)
                                 PaddingBottom: =7
                                 PaddingLeft: =7
                                 PaddingRight: =7
@@ -3165,6 +3166,7 @@
 
                         FormEditPrincipal_2 As form:
                             DataSource: =DEV_Archivos
+                            DefaultMode: =If(varNewFormPrincipal, FormMode.New, FormMode.Edit)
                             Height: =106
                             Item: =LookUp(DEV_Archivos, id_documento.Value = Text(varDocSide.ID) && codigo= varDocSide.codigo && version=varDocSide.version && tipo_documento="Principal")
                             NumberOfColumns: =1
@@ -3265,7 +3267,8 @@
                                 Color: =red
                                 Height: =37
                                 Icon: =Icon.Cancel
-                                OnSelect: =ResetForm(FormEditFlujograma_2)
+                                OnSelect: |-
+                                    =UpdateContext({varNewFormFlujograma:true});ResetForm(FormEditFlujograma_2)
                                 PaddingBottom: =7
                                 PaddingLeft: =7
                                 PaddingRight: =7
@@ -3278,6 +3281,7 @@
 
                         FormEditFlujograma_2 As form:
                             DataSource: =DEV_Archivos
+                            DefaultMode: =If(varNewFormFlujograma, FormMode.New, FormMode.Edit)
                             Height: =111
                             Item: =LookUp(DEV_Archivos, id_documento.Value = Text(varDocSide.ID) && codigo= varDocSide.codigo && version=varDocSide.version && tipo_documento="Flujograma")
                             NumberOfColumns: =1
@@ -3379,7 +3383,8 @@
                                 Color: =red
                                 Height: =37
                                 Icon: =Icon.Cancel
-                                OnSelect: =ResetForm(FormEditRcki_2)
+                                OnSelect: |-
+                                    =UpdateContext({varNewFormRcki:true});ResetForm(FormEditRcki_2)
                                 PaddingBottom: =7
                                 PaddingLeft: =7
                                 PaddingRight: =7
@@ -3392,6 +3397,7 @@
 
                         FormEditRcki_2 As form:
                             DataSource: =DEV_Archivos
+                            DefaultMode: =If(varNewFormRcki, FormMode.New, FormMode.Edit)
                             Height: =111
                             Item: =LookUp(DEV_Archivos, id_documento.Value = Text(varDocSide.ID) && codigo= varDocSide.codigo && version=varDocSide.version && tipo_documento="RCKI")
                             NumberOfColumns: =1
@@ -4277,7 +4283,7 @@
                                 //DOCUMENTO PRINCIPAL
                                 Patch(
                                     DEV_Archivos,
-                                    Defaults(DEV_Archivos),
+                                    LookUp(DEV_Archivos, id_documento.Value = Text(varDocSide.ID) && codigo= varDocSide.codigo && version=varDocSide.version && tipo_documento="Principal"),
                                     {
                                         id_documento: {
                                             Id: varDocID.ID,
@@ -4293,7 +4299,7 @@
                                 //FLUJOGRAMA
                                 Patch(
                                     DEV_Archivos,
-                                    Defaults(DEV_Archivos),
+                                    LookUp(DEV_Archivos, id_documento.Value = Text(varDocSide.ID) && codigo= varDocSide.codigo && version=varDocSide.version && tipo_documento="Flujograma"),
                                     {
                                         id_documento: {
                                             Id: varDocID.ID,
@@ -4309,7 +4315,7 @@
                                 //RCKI
                                 Patch(
                                     DEV_Archivos,
-                                    Defaults(DEV_Archivos),
+                                    LookUp(DEV_Archivos, id_documento.Value = Text(varDocSide.ID) && codigo= varDocSide.codigo && version=varDocSide.version && tipo_documento="RCKI"),
                                     {
                                         id_documento: {
                                             Id: varDocID.ID,
@@ -4322,6 +4328,13 @@
                                     },
                                     FormEditRcki_2.Updates
                                 );
+                                
+                                //QUITAR ACTORES ANTERIORES
+                                RemoveIf(
+                                    DEV_Actor,
+                                    id_documento.Value = Text(varDocID.ID) && codigo = varDocID.codigo && version = varDocID.version
+                                );
+                                
                                 Concurrent(
                                     //INSERTAR ELABORADORES
                                     ForAll(
@@ -4353,7 +4366,6 @@
                                             }
                                         )
                                     ),
-                                
                                     //INSERTAR REVISORES
                                     ForAll(
                                         revisores_list_op_2.AllItems As user,
