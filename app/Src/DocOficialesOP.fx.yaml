@@ -452,7 +452,7 @@
                                         IsBlank(varFilterMenu.fechaHasta) || varFilterMenu.fechaHasta >= fecha,
                                         ID in Filter(
                                             DEV_Modificacion_estatus_proceso_doc,
-                                            ind_inact = "Activo" && Or(id_estatus_documento.Value = "Publicado", id_estatus_documento.Value = "Difundido")
+                                            ind_inact = "Activo" && Or(id_estatus_documento.Value = "Publicado", id_estatus_documento.Value = "Difundido", id_estatus_documento.Value="Aprobado" )
                                         ).id_doc,
                                         searchbar_docRev_ra.Text in Nombre
                                     )
