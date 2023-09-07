@@ -227,13 +227,14 @@
                     Container_filter_docRev_ra As groupContainer.horizontalAutoLayoutContainer:
                         DropShadow: =DropShadow.None
                         FillPortions: =0.1
-                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutAlignItems: =LayoutAlignItems.Stretch
                         LayoutMinHeight: =50
                         LayoutMinWidth: =250
                         LayoutMode: =LayoutMode.Auto
                         ZIndex: =2
 
                         menu_filter_docRev_ra As gallery.galleryHorizontal:
+                            AlignInContainer: =AlignInContainer.SetByContainer
                             DelayItemLoading: =true
                             Items: =["Pendientes","Históricos"]
                             LayoutMinHeight: =30
@@ -267,6 +268,30 @@
                                 Text: =""
                                 Width: =150
                                 ZIndex: =3
+
+                        refresh_icon As icon.Sync:
+                            Color: =primary
+                            Icon: =Icon.Sync
+                            LayoutMinHeight: =50
+                            OnSelect: |-
+                                =Concurrent(
+                                    Refresh(DEV_Actor),
+                                    Refresh(DEV_Archivos),
+                                    Refresh(DEV_Datos_Baja),
+                                    Refresh(DEV_Difusion),
+                                    Refresh(DEV_Difusion_Usuario),
+                                    Refresh(DEV_Documento),
+                                    Refresh(DEV_Interlocutor),
+                                    Refresh(DEV_Modificacion_estatus_proceso_doc),
+                                    Refresh(DEV_Modificacion_estatus_documento),
+                                    Refresh(DEV_Observacion)
+                                )
+                            PaddingBottom: =12
+                            PaddingLeft: =12
+                            PaddingRight: =12
+                            PaddingTop: =12
+                            Width: =50
+                            ZIndex: =2
 
                     Container_searchbar_docRev_ra As groupContainer.horizontalAutoLayoutContainer:
                         DropShadow: =DropShadow.None
@@ -1456,12 +1481,12 @@
                     DelayItemLoading: =true
                     FillPortions: =0
                     Height: =40
-                    Items: =["Elaborado por", "Revisado por", "Aprobado por", "Registro"]
+                    Items: =["Elaborado por", "Revisado por", "Aprobado por"]
                     LayoutMinHeight: =60
                     LayoutMinWidth: =320
                     LoadingSpinner: =LoadingSpinner.Data
                     ShowScrollbar: =false
-                    TemplateSize: =100
+                    TemplateSize: =130
                     ZIndex: =1
 
                     Button5 As button:
@@ -1473,7 +1498,7 @@
                         OnSelect: =Select(Parent)
                         Size: =8
                         Text: =ThisItem.Value
-                        Width: =97
+                        Width: =120
                         Y: =2.5
                         ZIndex: =1
 

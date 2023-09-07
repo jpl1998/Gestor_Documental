@@ -223,6 +223,31 @@
                             Text: ="Documentos en Proceso"
                             ZIndex: =1
 
+                        refresh_icon_4 As icon.Sync:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            Color: =primary
+                            Icon: =Icon.Sync
+                            LayoutMinHeight: =50
+                            OnSelect: |-
+                                =Concurrent(
+                                    Refresh(DEV_Actor),
+                                    Refresh(DEV_Archivos),
+                                    Refresh(DEV_Datos_Baja),
+                                    Refresh(DEV_Difusion),
+                                    Refresh(DEV_Difusion_Usuario),
+                                    Refresh(DEV_Documento),
+                                    Refresh(DEV_Interlocutor),
+                                    Refresh(DEV_Modificacion_estatus_proceso_doc),
+                                    Refresh(DEV_Modificacion_estatus_documento),
+                                    Refresh(DEV_Observacion)
+                                )
+                            PaddingBottom: =12
+                            PaddingLeft: =12
+                            PaddingRight: =12
+                            PaddingTop: =12
+                            Width: =50
+                            ZIndex: =2
+
                     Container11_7 As groupContainer.horizontalAutoLayoutContainer:
                         DropShadow: =DropShadow.None
                         FillPortions: =0.1

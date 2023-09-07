@@ -277,11 +277,19 @@
                                         Size: =32
                                         Text: |-
                                             =With(
-                                               {
-                                                  items:
-                                                  Filter(DEV_Modificacion_estatus_proceso_doc,ind_inact="Activo", id_estatus_documento.Value="Por revisar")
-                                               },
-                                               CountRows(items)
+                                                {
+                                                    items: Filter(
+                                                        DEV_Modificacion_estatus_proceso_doc,
+                                                        ind_inact = "Activo",
+                                                        id_estatus_documento.Value = "Por revisar",
+                                                        id_doc in Distinct(AddColumns(Filter(
+                                                        DEV_Actor,
+                                                        id_funcion.Value = "Revisor",
+                                                        id_interlocutor.Value = Text(LookUp(DEV_Interlocutor, Email.Email=User().Email).ID)
+                                                        ),"idInt",id_documento.Value),idInt)
+                                                    )
+                                                },
+                                                CountRows(items)
                                             )
                                         Width: =90
                                         ZIndex: =2
@@ -343,11 +351,19 @@
                                         Size: =32
                                         Text: |-
                                             =With(
-                                               {
-                                                  items:
-                                                  Filter(DEV_Modificacion_estatus_proceso_doc,ind_inact="Activo", id_estatus_documento.Value="Por aprobar")
-                                               },
-                                               CountRows(items)
+                                                {
+                                                    items: Filter(
+                                                        DEV_Modificacion_estatus_proceso_doc,
+                                                        ind_inact = "Activo",
+                                                        id_estatus_documento.Value = "Por aprobar",
+                                                        id_doc in Distinct(AddColumns(Filter(
+                                                        DEV_Actor,
+                                                        id_funcion.Value = "Revisor",
+                                                        id_interlocutor.Value = Text(LookUp(DEV_Interlocutor, Email.Email=User().Email).ID)
+                                                        ),"idInt",id_documento.Value),idInt)
+                                                    )
+                                                },
+                                                CountRows(items)
                                             )
                                         Width: =90
                                         ZIndex: =2
@@ -408,11 +424,19 @@
                                         Size: =32
                                         Text: |-
                                             =With(
-                                               {
-                                                  items:
-                                                  Filter(DEV_Modificacion_estatus_proceso_doc,ind_inact="Activo", id_estatus_documento.Value="Aprobado")
-                                               },
-                                               CountRows(items)
+                                                {
+                                                    items: Filter(
+                                                        DEV_Modificacion_estatus_proceso_doc,
+                                                        ind_inact = "Activo",
+                                                        id_estatus_documento.Value = "Aprobado",
+                                                        id_doc in Distinct(AddColumns(Filter(
+                                                        DEV_Actor,
+                                                        id_funcion.Value = "Revisor",
+                                                        id_interlocutor.Value = Text(LookUp(DEV_Interlocutor, Email.Email=User().Email).ID)
+                                                        ),"idInt",id_documento.Value),idInt)
+                                                    )
+                                                },
+                                                CountRows(items)
                                             )
                                         Width: =90
                                         ZIndex: =2
@@ -473,11 +497,19 @@
                                         Size: =32
                                         Text: |-
                                             =With(
-                                               {
-                                                  items:
-                                                  Filter(DEV_Modificacion_estatus_proceso_doc,ind_inact="Activo", id_estatus_documento.Value="Publicado" || id_estatus_documento.Value="Difundido")
-                                               },
-                                               CountRows(items)
+                                                {
+                                                    items: Filter(
+                                                        DEV_Modificacion_estatus_proceso_doc,
+                                                        ind_inact = "Activo",
+                                                        id_estatus_documento.Value = "Publicado" || id_estatus_documento.Value = "Difundido",
+                                                        id_doc in Distinct(AddColumns(Filter(
+                                                        DEV_Actor,
+                                                        id_funcion.Value = "Revisor",
+                                                        id_interlocutor.Value = Text(LookUp(DEV_Interlocutor, Email.Email=User().Email).ID)
+                                                        ),"idInt",id_documento.Value),idInt)
+                                                    )
+                                                },
+                                                CountRows(items)
                                             )
                                         Width: =90
                                         ZIndex: =2
@@ -516,13 +548,48 @@
                             Width: =Parent.Width
                             ZIndex: =1
 
-                            Label3_5 As label:
-                                AlignInContainer: =AlignInContainer.Stretch
-                                FontWeight: =FontWeight.Semibold
-                                PaddingBottom: =0
-                                Size: =18
-                                Text: ="Documentos por Revisar más Antiguos"
+                            Container30 As groupContainer.horizontalAutoLayoutContainer:
+                                DropShadow: =DropShadow.None
+                                FillPortions: =0
+                                Height: =50
+                                LayoutMinHeight: =40
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
                                 ZIndex: =1
+
+                                Label3_5 As label:
+                                    AlignInContainer: =AlignInContainer.Stretch
+                                    FillPortions: =1
+                                    FontWeight: =FontWeight.Semibold
+                                    PaddingBottom: =0
+                                    Size: =18
+                                    Text: ="Documentos por Revisar más Antiguos"
+                                    ZIndex: =1
+
+                                refresh_icon_3 As icon.Sync:
+                                    AlignInContainer: =AlignInContainer.Stretch
+                                    Color: =primary
+                                    Icon: =Icon.Sync
+                                    LayoutMinHeight: =50
+                                    OnSelect: |-
+                                        =Concurrent(
+                                            Refresh(DEV_Actor),
+                                            Refresh(DEV_Archivos),
+                                            Refresh(DEV_Datos_Baja),
+                                            Refresh(DEV_Difusion),
+                                            Refresh(DEV_Difusion_Usuario),
+                                            Refresh(DEV_Documento),
+                                            Refresh(DEV_Interlocutor),
+                                            Refresh(DEV_Modificacion_estatus_proceso_doc),
+                                            Refresh(DEV_Modificacion_estatus_documento),
+                                            Refresh(DEV_Observacion)
+                                        )
+                                    PaddingBottom: =12
+                                    PaddingLeft: =12
+                                    PaddingRight: =12
+                                    PaddingTop: =12
+                                    Width: =50
+                                    ZIndex: =2
 
                             Container10_3 As groupContainer.verticalAutoLayoutContainer:
                                 DropShadow: =DropShadow.None
@@ -532,7 +599,7 @@
                                 LayoutMode: =LayoutMode.Auto
                                 X: =40
                                 Y: =40
-                                ZIndex: =5
+                                ZIndex: =3
 
                                 Container12_5 As groupContainer.horizontalAutoLayoutContainer:
                                     BorderColor: =RGBA(116, 116, 116, 1)
@@ -632,7 +699,21 @@
                                     "Gallery1_5 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
                                         DelayItemLoading: =true
                                         Height: =Button4_6.Height
-                                        Items: =SortByColumns(Filter(DEV_Modificacion_estatus_proceso_doc,ind_inact="Activo", id_estatus_documento.Value="Por revisar"),"fecha",SortOrder.Ascending)
+                                        Items: |-
+                                            =SortByColumns(
+                                                Filter(
+                                                    DEV_Modificacion_estatus_proceso_doc,
+                                                    ind_inact = "Activo",
+                                                    id_estatus_documento.Value = "Por revisar",
+                                                    id_doc in Distinct(AddColumns(Filter(
+                                                        DEV_Actor,
+                                                        id_funcion.Value = "Revisor",
+                                                        id_interlocutor.Value = Text(LookUp(DEV_Interlocutor, Email.Email=User().Email).ID)
+                                                        ),"idInt",id_documento.Value),idInt)
+                                                ),
+                                                "fecha",
+                                                SortOrder.Ascending
+                                            )
                                         Layout: =Layout.Vertical
                                         LoadingSpinner: =LoadingSpinner.Data
                                         TemplatePadding: =0
@@ -778,6 +859,7 @@
                                                     Icon: =Icon.View
                                                     OnSelect: |-
                                                         =UpdateContext({varSelectedDoc:LookUp(DEV_Documento, Value(ThisItem.id_documento.Value)=ID), varSidebarPopup:true});
+                                                        Set(varDocSide, LookUp(DEV_Documento, Value(ThisItem.id_documento.Value)=ID));
                                                         Set(varDocEstado,ThisItem.id_estatus_documento.Value)
                                                     PaddingBottom: =3
                                                     PaddingLeft: =3
@@ -927,7 +1009,21 @@
                                     "Gallery1_6 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
                                         DelayItemLoading: =true
                                         Height: =Button4_7.Height
-                                        Items: =SortByColumns(Filter(DEV_Modificacion_estatus_proceso_doc,ind_inact="Activo", id_estatus_documento.Value="Por aprobar"),"fecha",SortOrder.Ascending)
+                                        Items: |-
+                                            =SortByColumns(
+                                                Filter(
+                                                    DEV_Modificacion_estatus_proceso_doc,
+                                                    ind_inact = "Activo",
+                                                    id_estatus_documento.Value = "Por aprobar",
+                                                    id_doc in Distinct(AddColumns(Filter(
+                                                        DEV_Actor,
+                                                        id_funcion.Value = "Revisor",
+                                                        id_interlocutor.Value = Text(LookUp(DEV_Interlocutor, Email.Email=User().Email).ID)
+                                                        ),"idInt",id_documento.Value),idInt)
+                                                ),
+                                                "fecha",
+                                                SortOrder.Ascending
+                                            )
                                         Layout: =Layout.Vertical
                                         LoadingSpinner: =LoadingSpinner.Data
                                         TemplatePadding: =0
@@ -1067,6 +1163,7 @@
                                                     Icon: =Icon.View
                                                     OnSelect: |-
                                                         =UpdateContext({varSelectedDoc:LookUp(DEV_Documento, Value(ThisItem.id_documento.Value)=ID), varSidebarPopup:true});
+                                                        Set(varDocSide, LookUp(DEV_Documento, Value(ThisItem.id_documento.Value)=ID));
                                                         Set(varDocEstado,ThisItem.id_estatus_documento.Value)
                                                     PaddingBottom: =3
                                                     PaddingLeft: =3
@@ -1216,7 +1313,21 @@
                                     "Gallery1_7 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
                                         DelayItemLoading: =true
                                         Height: =Button4_8.Height
-                                        Items: =SortByColumns(Filter(DEV_Modificacion_estatus_proceso_doc,ind_inact="Activo", id_estatus_documento.Value="Por aprobar"),"fecha",SortOrder.Descending)
+                                        Items: |-
+                                            =SortByColumns(
+                                                Filter(
+                                                    DEV_Modificacion_estatus_proceso_doc,
+                                                    ind_inact = "Activo",
+                                                    id_estatus_documento.Value = "Por aprobar",
+                                                    id_doc in Distinct(AddColumns(Filter(
+                                                        DEV_Actor,
+                                                        id_funcion.Value = "Revisor",
+                                                        id_interlocutor.Value = Text(LookUp(DEV_Interlocutor, Email.Email=User().Email).ID)
+                                                        ),"idInt",id_documento.Value),idInt)
+                                                ),
+                                                "fecha",
+                                                SortOrder.Descending
+                                            )
                                         Layout: =Layout.Vertical
                                         LoadingSpinner: =LoadingSpinner.Data
                                         TemplatePadding: =0
@@ -1356,6 +1467,7 @@
                                                     Icon: =Icon.View
                                                     OnSelect: |-
                                                         =UpdateContext({varSelectedDoc:LookUp(DEV_Documento, Value(ThisItem.id_documento.Value)=ID), varSidebarPopup:true});
+                                                        Set(varDocSide, LookUp(DEV_Documento, Value(ThisItem.id_documento.Value)=ID));
                                                         Set(varDocEstado,ThisItem.id_estatus_documento.Value)
                                                     PaddingBottom: =3
                                                     PaddingLeft: =3
@@ -1505,7 +1617,21 @@
                                     "gallery_doc_publ_home_ra As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
                                         DelayItemLoading: =true
                                         Height: =Button4_9.Height
-                                        Items: =SortByColumns(Filter(DEV_Modificacion_estatus_proceso_doc,ind_inact="Activo", id_estatus_documento.Value="Publicado"),"fecha",SortOrder.Ascending)
+                                        Items: |-
+                                            =SortByColumns(
+                                                Filter(
+                                                    DEV_Modificacion_estatus_proceso_doc,
+                                                    ind_inact = "Activo",
+                                                    id_estatus_documento.Value = "Publicado",
+                                                    id_doc in Distinct(AddColumns(Filter(
+                                                        DEV_Actor,
+                                                        id_funcion.Value = "Revisor",
+                                                        id_interlocutor.Value = Text(LookUp(DEV_Interlocutor, Email.Email=User().Email).ID)
+                                                        ),"idInt",id_documento.Value),idInt)
+                                                ),
+                                                "fecha",
+                                                SortOrder.Ascending
+                                            )
                                         Layout: =Layout.Vertical
                                         LoadingSpinner: =LoadingSpinner.Data
                                         TemplatePadding: =0
@@ -1649,6 +1775,7 @@
                                                     Icon: =Icon.View
                                                     OnSelect: |-
                                                         =UpdateContext({varSelectedDoc:LookUp(DEV_Documento, Value(ThisItem.id_documento.Value)=ID), varSidebarPopup:true});
+                                                        Set(varDocSide, LookUp(DEV_Documento, Value(ThisItem.id_documento.Value)=ID));
                                                         Set(varDocEstado,ThisItem.id_estatus_documento.Value)
                                                     PaddingBottom: =3
                                                     PaddingLeft: =3
@@ -2194,12 +2321,12 @@
                     DelayItemLoading: =true
                     FillPortions: =0
                     Height: =40
-                    Items: =["Elaborado por", "Revisado por", "Aprobado por", "Registro"]
+                    Items: =["Elaborado por", "Revisado por", "Aprobado por"]
                     LayoutMinHeight: =60
                     LayoutMinWidth: =320
                     LoadingSpinner: =LoadingSpinner.Data
                     ShowScrollbar: =false
-                    TemplateSize: =100
+                    TemplateSize: =130
                     ZIndex: =1
 
                     Button5_6 As button:
@@ -2211,7 +2338,7 @@
                         OnSelect: =Select(Parent)
                         Size: =8
                         Text: =ThisItem.Value
-                        Width: =97
+                        Width: =120
                         Y: =2.5
                         ZIndex: =1
 

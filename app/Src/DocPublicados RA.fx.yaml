@@ -224,6 +224,31 @@
                             Text: ="Documentos Publicados"
                             ZIndex: =1
 
+                        refresh_icon_2 As icon.Sync:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            Color: =primary
+                            Icon: =Icon.Sync
+                            LayoutMinHeight: =50
+                            OnSelect: |-
+                                =Concurrent(
+                                    Refresh(DEV_Actor),
+                                    Refresh(DEV_Archivos),
+                                    Refresh(DEV_Datos_Baja),
+                                    Refresh(DEV_Difusion),
+                                    Refresh(DEV_Difusion_Usuario),
+                                    Refresh(DEV_Documento),
+                                    Refresh(DEV_Interlocutor),
+                                    Refresh(DEV_Modificacion_estatus_proceso_doc),
+                                    Refresh(DEV_Modificacion_estatus_documento),
+                                    Refresh(DEV_Observacion)
+                                )
+                            PaddingBottom: =12
+                            PaddingLeft: =12
+                            PaddingRight: =12
+                            PaddingTop: =12
+                            Width: =50
+                            ZIndex: =2
+
                     Container_searchbar_docRev_ra_2 As groupContainer.horizontalAutoLayoutContainer:
                         DropShadow: =DropShadow.None
                         FillPortions: =0.1
@@ -1618,12 +1643,12 @@
                     DelayItemLoading: =true
                     FillPortions: =0
                     Height: =40
-                    Items: =["Elaborado por", "Revisado por", "Aprobado por", "Registro"]
+                    Items: =["Elaborado por", "Revisado por", "Aprobado por"]
                     LayoutMinHeight: =60
                     LayoutMinWidth: =320
                     LoadingSpinner: =LoadingSpinner.Data
                     ShowScrollbar: =false
-                    TemplateSize: =100
+                    TemplateSize: =130
                     ZIndex: =1
 
                     Button5_8 As button:
@@ -1635,7 +1660,7 @@
                         OnSelect: =Select(Parent)
                         Size: =8
                         Text: =ThisItem.Value
-                        Width: =97
+                        Width: =120
                         Y: =2.5
                         ZIndex: =1
 

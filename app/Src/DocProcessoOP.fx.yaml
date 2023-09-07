@@ -223,6 +223,31 @@
                             Text: ="Documentos en Proceso"
                             ZIndex: =1
 
+                        refresh_icon_6 As icon.Sync:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            Color: =primary
+                            Icon: =Icon.Sync
+                            LayoutMinHeight: =50
+                            OnSelect: |-
+                                =Concurrent(
+                                    Refresh(DEV_Actor),
+                                    Refresh(DEV_Archivos),
+                                    Refresh(DEV_Datos_Baja),
+                                    Refresh(DEV_Difusion),
+                                    Refresh(DEV_Difusion_Usuario),
+                                    Refresh(DEV_Documento),
+                                    Refresh(DEV_Interlocutor),
+                                    Refresh(DEV_Modificacion_estatus_proceso_doc),
+                                    Refresh(DEV_Modificacion_estatus_documento),
+                                    Refresh(DEV_Observacion)
+                                )
+                            PaddingBottom: =12
+                            PaddingLeft: =12
+                            PaddingRight: =12
+                            PaddingTop: =12
+                            Width: =50
+                            ZIndex: =2
+
                         Button3 As button:
                             Fill: =primary
                             FillPortions: =1
@@ -235,7 +260,7 @@
                             RadiusTopRight: =5
                             Size: =14
                             Text: ="Enviar Documento para Revisión"
-                            ZIndex: =2
+                            ZIndex: =3
 
                     Container11_2 As groupContainer.horizontalAutoLayoutContainer:
                         DropShadow: =DropShadow.None
