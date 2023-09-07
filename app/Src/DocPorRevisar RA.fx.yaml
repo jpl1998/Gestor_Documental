@@ -1710,7 +1710,7 @@
                         HoverColor: =primary
                         HoverFill: =RGBA(0, 0, 0, 0.15)
                         OnSelect: |-
-                            =UpdateContext({varObsItems:Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version, id_status_archivo.Value="2"), varRegistroObsPopup:true})
+                            =UpdateContext({varObsItems:Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version, id_status_archivo.Value="2"), varObsDatos: ThisItem, varRegistroObsPopup:true})
                         PressedColor: =Self.Color
                         PressedFill: =
                         Size: =8
@@ -3899,7 +3899,8 @@
                 Font: =Font.'Segoe UI'
                 Height: =30
                 Size: =12
-                Text: ="text"
+                Text: |-
+                    =varObsDatos.'id_interlocutor: Nombre'.Value & " " & varObsDatos.'id_interlocutor: Apellido'.Value
                 Width: =280
                 X: =25
                 Y: =98
