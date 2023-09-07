@@ -2549,7 +2549,7 @@
                                     id_doc:varSelectedDoc.ID
                                 }
                             );
-                            Necesidaddenotificarlaaprobacióntotaldeldocumento.Run(Concat(elaborador_evaluacion_sidebar_ra_1.AllItems, mail_elaborador_ra_4,";"),Concat(revisor_evaluacion_sidebar_ra_1.AllItems,mail_revisor_ra_2,";"),Concat(aprobador_evaluacion_sidebar_ra_1.AllItems,mail_aprobador_ra_1,";"),Now(),varSelectedDoc.ID)
+                            Necesidaddenotificarlaaprobacióntotaldeldocumento.Run(Concat(elaborador_evaluacion_sidebar_ra_1.AllItems, mail_elaborador_ra_4,";"),Concat(revisor_evaluacion_sidebar_ra_1.AllItems,mail_revisor_ra_2,";"),Concat(aprobador_evaluacion_sidebar_ra_1.AllItems,mail_aprobador_ra_1,";"),Now(),varSelectedDoc.ID,Concat(revisor_evaluacion_sidebar_ra_1.AllItems,id_interlocutor.Value,";"),Concat(aprobador_evaluacion_sidebar_ra_1.AllItems,id_interlocutor.Value,";"))
                             
                         );
                         UpdateContext({varResultadoPopup: true})
@@ -2678,7 +2678,7 @@
                                     id_doc:varSelectedDoc.ID
                                 }
                             );
-                            Necesidaddenotificarlaaprobacióntotaldeldocumento.Run(Concat(elaborador_evaluacion_sidebar_ra_1.AllItems, mail_elaborador_ra_4,";"),Concat(revisor_evaluacion_sidebar_ra_1.AllItems,mail_revisor_ra_2,";"),Concat(aprobador_evaluacion_sidebar_ra_1.AllItems,mail_aprobador_ra_1,";"),Now(),varSelectedDoc.ID)
+                            Necesidaddenotificarlaaprobacióntotaldeldocumento.Run(Concat(elaborador_evaluacion_sidebar_ra_1.AllItems, mail_elaborador_ra_4,";"),Concat(revisor_evaluacion_sidebar_ra_1.AllItems,mail_revisor_ra_2,";"),Concat(aprobador_evaluacion_sidebar_ra_1.AllItems,mail_aprobador_ra_1,";"),Now(),varSelectedDoc.ID,Concat(revisor_evaluacion_sidebar_ra_1.AllItems,id_interlocutor.Value,";"),Concat(aprobador_evaluacion_sidebar_ra_1.AllItems,id_interlocutor.Value,";"))
                         );
                         
                         UpdateContext({varResultadoPopup: true})
