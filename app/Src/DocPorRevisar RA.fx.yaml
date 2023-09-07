@@ -1007,7 +1007,7 @@
                         SearchFields: =["Value"]
                         SearchItems: |-
                             =Search(Switch(
-                                FiltroDuenoComboBox_13.Selected.Value,
+                                FiltroDuenoComboBox_17.Selected.Value,
                                 "Gerencia",
                                 Distinct(DEV_Estructura_Organizativa_dos,GERENCIA),
                                 "Subgerencia",
