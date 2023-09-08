@@ -119,7 +119,7 @@
                     FillPortions: =0
                     Items: |-
                         =Table({Name:"Home",Logo: 'Home (1)',Tela:'Home RA'},
-                        {Name: "Doc. por Revisar",Logo: 'Document Sync', Tela:'DocPorRevisar RA' },
+                        {Name: "Doc. por Revisar",Logo: 'Document Checkmark (1)', Tela:'DocPorRevisar RA' },
                         {Name: "Doc. por Aprobar", Logo:'Document Ribbon Grey', Tela: 'DocPorAprobar RA' },
                         {Name: "Doc. Publicados", Logo:'Document Text_1', Tela:'DocPublicados RA' })
                     Layout: =Layout.Vertical
@@ -1568,7 +1568,7 @@
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Semibold
                     Size: =16
-                    Text: ="Documento en Proceso"
+                    Text: ="Documento Publicado"
                     Width: =Parent.Width
                     Y: =10
                     ZIndex: =1

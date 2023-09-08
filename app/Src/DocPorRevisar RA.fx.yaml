@@ -119,7 +119,7 @@
                     FillPortions: =0
                     Items: |-
                         =Table({Name:"Home",Logo: 'Home (1)',Tela:'Home RA'},
-                        {Name: "Doc. por Revisar",Logo: 'Document Sync (2)', Tela:'DocPorRevisar RA' },
+                        {Name: "Doc. por Revisar",Logo: 'Document Checkmark_2', Tela:'DocPorRevisar RA' },
                         {Name: "Doc. por Aprobar", Logo:'Document Ribbon Grey', Tela: 'DocPorAprobar RA' },
                         {Name: "Doc. Publicados", Logo:'Document Text', Tela:'DocPublicados RA' })
                     Layout: =Layout.Vertical

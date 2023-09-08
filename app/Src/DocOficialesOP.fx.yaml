@@ -3350,7 +3350,7 @@
                 FillPortions: =1
                 FontWeight: =FontWeight.Bold
                 Size: =15
-                Text: ="Envio Exitoso"
+                Text: ="Envío Exitoso"
                 ZIndex: =1
 
             Image2_22 As image:
