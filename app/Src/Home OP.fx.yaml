@@ -6047,7 +6047,7 @@
                 FontWeight: =FontWeight.Bold
                 Height: =35
                 Size: =16
-                Text: ="Difusión por CR"
+                Text: ="Difusión Masiva por Correo"
                 Width: =315
                 X: =(Parent.Width-Self.Width)/2
                 Y: =24

@@ -94,7 +94,7 @@
       "zeroalltabindexes": false
     },
     "Author": "",
-    "BindingErrorCount": 208,
+    "BindingErrorCount": 173,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 2000,
     "DocumentAppType": "DesktopOrTablet",
