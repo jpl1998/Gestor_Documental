@@ -178,6 +178,10 @@
                     Text: ="Área de Operaciones"
                     ZIndex: =3
 
+                Image3 As image:
+                    Image: ='Document Checkmark_1'
+                    ZIndex: =4
+
             MainContainer_docRev_ra As groupContainer.verticalAutoLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer
                 Fill: =RGBA(246, 247, 251, 1)
