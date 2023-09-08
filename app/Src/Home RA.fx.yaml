@@ -358,7 +358,7 @@
                                                         id_estatus_documento.Value = "Por aprobar",
                                                         id_doc in Distinct(AddColumns(Filter(
                                                         DEV_Actor,
-                                                        id_funcion.Value = "Revisor",
+                                                        id_funcion.Value = "Aprobador",
                                                         id_interlocutor.Value = Text(LookUp(DEV_Interlocutor, Email.Email=User().Email).ID)
                                                         ),"idInt",id_documento.Value),idInt)
                                                     )
@@ -431,7 +431,7 @@
                                                         id_estatus_documento.Value = "Aprobado",
                                                         id_doc in Distinct(AddColumns(Filter(
                                                         DEV_Actor,
-                                                        id_funcion.Value = "Revisor",
+                                                        id_funcion.Value = "Aprobador",
                                                         id_interlocutor.Value = Text(LookUp(DEV_Interlocutor, Email.Email=User().Email).ID)
                                                         ),"idInt",id_documento.Value),idInt)
                                                     )
@@ -1017,7 +1017,7 @@
                                                     id_estatus_documento.Value = "Por aprobar",
                                                     id_doc in Distinct(AddColumns(Filter(
                                                         DEV_Actor,
-                                                        id_funcion.Value = "Revisor",
+                                                        id_funcion.Value = "Aprobador",
                                                         id_interlocutor.Value = Text(LookUp(DEV_Interlocutor, Email.Email=User().Email).ID)
                                                         ),"idInt",id_documento.Value),idInt)
                                                 ),
@@ -1321,7 +1321,7 @@
                                                     id_estatus_documento.Value = "Por aprobar",
                                                     id_doc in Distinct(AddColumns(Filter(
                                                         DEV_Actor,
-                                                        id_funcion.Value = "Revisor",
+                                                        id_funcion.Value = "Aprobador",
                                                         id_interlocutor.Value = Text(LookUp(DEV_Interlocutor, Email.Email=User().Email).ID)
                                                         ),"idInt",id_documento.Value),idInt)
                                                 ),
@@ -1625,7 +1625,7 @@
                                                     id_estatus_documento.Value = "Publicado",
                                                     id_doc in Distinct(AddColumns(Filter(
                                                         DEV_Actor,
-                                                        id_funcion.Value = "Revisor",
+                                                        id_funcion.Value = "Revisor" || id_funcion.Value = "Aprobador",
                                                         id_interlocutor.Value = Text(LookUp(DEV_Interlocutor, Email.Email=User().Email).ID)
                                                         ),"idInt",id_documento.Value),idInt)
                                                 ),
