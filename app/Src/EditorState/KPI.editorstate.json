@@ -862,7 +862,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "CodDoc_Column1",
-      "ParentIndex": 2,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3102,7 +3102,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "fechaCreado_Column1",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3248,7 +3248,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "groupDoc_Column1",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

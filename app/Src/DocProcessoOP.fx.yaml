@@ -456,7 +456,7 @@
                                 Items: |-
                                     =Filter(
                                         DEV_Documento,
-                                        IsBlank(varFilterMenu.cargadoPor) || 'Creado por'.Email = varFilterMenu.cargadoPor.Mail,
+                                        IsBlank(varFilterMenu.cargadoPor) || 'Created By'.DisplayName = varFilterMenu.cargadoPor.Mail,
                                         IsBlank(varFilterMenu.tipoDocumento) || id_tipo_docu.Value = varFilterMenu.tipoDocumento.Value,
                                         IsBlank(varFilterMenu.dueProceso) || Dueno_Proceso = varFilterMenu.dueProceso,
                                         IsBlank(varFilterMenu.alcance) || id_alcance = varFilterMenu.alcance,
@@ -2427,7 +2427,7 @@
                             Anexos_DataCard1_10 As typedDataCard.attachmentsEditCard:
                                 BorderStyle: =BorderStyle.None
                                 DataField: ="{Attachments}"
-                                Default: =ThisItem.'Datos adjuntos'
+                                Default: =ThisItem.Attachments
                                 DisplayMode: =Parent.DisplayMode
                                 DisplayName: =DataSourceInfo([@DEV_Archivos],DataSourceInfo.DisplayName,"{Attachments}")
                                 Fill: =RGBA(0, 0, 0, 0)
@@ -2543,7 +2543,7 @@
                             Anexos_DataCard1_11 As typedDataCard.attachmentsEditCard:
                                 BorderStyle: =BorderStyle.Solid
                                 DataField: ="{Attachments}"
-                                Default: =ThisItem.'Datos adjuntos'
+                                Default: =ThisItem.Attachments
                                 DisplayMode: =Parent.DisplayMode
                                 DisplayName: =DataSourceInfo([@DEV_Archivos],DataSourceInfo.DisplayName,"{Attachments}")
                                 Fill: =RGBA(0, 0, 0, 0)
@@ -2659,7 +2659,7 @@
                             Anexos_DataCard1_12 As typedDataCard.attachmentsEditCard:
                                 BorderStyle: =BorderStyle.Solid
                                 DataField: ="{Attachments}"
-                                Default: =ThisItem.'Datos adjuntos'
+                                Default: =ThisItem.Attachments
                                 DisplayMode: =Parent.DisplayMode
                                 DisplayName: =DataSourceInfo([@DEV_Archivos],DataSourceInfo.DisplayName,"{Attachments}")
                                 Fill: =RGBA(0, 0, 0, 0)
@@ -3179,7 +3179,8 @@
                                         id_macroproceso:ComboBox2_13.Selected,
                                         Empresa: cbo_empresa.Selected,
                                         Solicitante:cbo_solicitante.Selected,
-                                        Dueno_Proceso:cbo_dueñoprocesso.Selected.Value
+                                        Dueno_Proceso:cbo_dueñoprocesso.Selected.Value,
+                                        entrega: 1
                                     }
                                 ));
                                 //DOCUMENTO PRINCIPAL
@@ -3189,7 +3190,8 @@
                                     codigo: varDocID.codigo,
                                     version:varDocID.version,
                                     descripcion:varDocID.Nombre,
-                                    tipo_documento:"Principal"
+                                    tipo_documento:"Principal",
+                                    entrega: varDocID.entrega
                                 },
                                 FormArchivoPrincipal.Updates
                                 );
@@ -3201,7 +3203,8 @@
                                     codigo:varDocID.codigo,
                                     version:varDocID.version,
                                     descripcion:varDocID.Nombre,
-                                    tipo_documento:"Flujograma"
+                                    tipo_documento:"Flujograma",
+                                    entrega: varDocID.entrega
                                 },
                                 FormFlujograma.Updates
                                 );
@@ -3214,7 +3217,8 @@
                                     codigo:varDocID.codigo,
                                     version:varDocID.version,
                                     descripcion:varDocID.Nombre,
-                                    tipo_documento:"RCKI"
+                                    tipo_documento:"RCKI",
+                                    entrega: varDocID.entrega
                                 },
                                 FormRCKI.Updates
                                 );
@@ -3237,7 +3241,8 @@
                                                             ,Value:LookUp(DEV_Interlocutor,ComboBox2_22.Selected.Email in Email[@Email],ID)},
                                             codigo:varDocID.codigo,
                                             id_documento:{Id: varDocID.ID , Value:varDocID.ID} ,
-                                            version:varDocID.version}),
+                                            version:varDocID.version,
+                                            entrega: varDocID.entrega}),
                                         
                                         
                                         Patch(DEV_Actor,Defaults(DEV_Actor),
@@ -3246,7 +3251,8 @@
                                                             ,Value:LookUp(DEV_Interlocutor,ComboBox2_22.Selected.Email in Email[@Email],ID)},
                                             codigo:varDocID.codigo,
                                             id_documento:{Id: varDocID.ID , Value:varDocID.ID} ,
-                                            version:varDocID.version
+                                            version:varDocID.version,
+                                            entrega: varDocID.entrega
                                             }
                                         )
                                     ))
@@ -3270,7 +3276,8 @@
                                                             ,Value:LookUp(DEV_Interlocutor,ComboBox2_23.Selected.Email in Email[@Email],ID)},
                                             codigo:varDocID.codigo,
                                             id_documento:{Id: varDocID.ID , Value:varDocID.ID} ,
-                                            version:varDocID.version}),
+                                            version:varDocID.version,
+                                            entrega: varDocID.entrega}),
                                         
                                         
                                         Patch(DEV_Actor,Defaults(DEV_Actor),
@@ -3279,7 +3286,8 @@
                                                             ,Value:LookUp(DEV_Interlocutor,ComboBox2_23.Selected.Email in Email[@Email],ID)},
                                             codigo:varDocID.codigo,
                                             id_documento:{Id: varDocID.ID , Value:varDocID.ID} ,
-                                            version:varDocID.version}
+                                            version:varDocID.version,
+                                            entrega: varDocID.entrega}
                                         )
                                     );
                                     Necesidaddefirmaderevisor.Run(ComboBox2_23.Selected.Email, varDocID.codigo, varDocID.Nombre, varDocID.id_tipo_docu.Value, varDocID.fecha, varDocID.version)
@@ -3304,7 +3312,8 @@
                                                             ,Value:LookUp(DEV_Interlocutor,ComboBox2_24.Selected.Email in Email[@Email],ID)},
                                             codigo:varDocID.codigo,
                                             id_documento:{Id: varDocID.ID , Value:varDocID.ID} ,
-                                            version:varDocID.version}),
+                                            version:varDocID.version,
+                                            entrega: varDocID.entrega}),
                                         
                                         
                                         Patch(DEV_Actor,Defaults(DEV_Actor),
@@ -3313,7 +3322,8 @@
                                                             ,Value:LookUp(DEV_Interlocutor,ComboBox2_24.Selected.Email in Email[@Email],ID)},
                                             codigo:varDocID.codigo,
                                             id_documento:{Id: varDocID.ID , Value:varDocID.ID} ,
-                                            version:varDocID.version}
+                                            version:varDocID.version,
+                                            entrega: varDocID.entrega}
                                         )
                                     ))
                                 );
@@ -3330,7 +3340,8 @@
                                     'fecha y hora': Now(),
                                     ind_inact:"Activo",
                                     ind_mod:"i",
-                                    id_doc:varDocID.ID});
+                                    id_doc:varDocID.ID,
+                                    entrega: varDocID.entrega});
                                 
                                 
                                 Set(varconfirmation,true)
@@ -3640,7 +3651,7 @@
                         archivo_title_sidebar_docRev_ra_4 As label:
                             Font: =Font.'Segoe UI'
                             Size: =12
-                            Text: =First(ThisItem.'Datos adjuntos').DisplayName
+                            Text: =First(ThisItem.Attachments).DisplayName
                             Width: =304
                             ZIndex: =2
 
@@ -3665,7 +3676,7 @@
                                 FocusedBorderThickness: =2
                                 Height: =25
                                 HoverFill: =RGBA(0, 0, 0, 0.15)
-                                OnSelect: =Launch(Concatenate(First(ThisItem.'Datos adjuntos').AbsoluteUri,"?web=1"))
+                                OnSelect: =Launch(Concatenate(First(ThisItem.Attachments).AbsoluteUri,"?web=1"))
                                 PressedFill: =
                                 RadiusBottomLeft: =5
                                 RadiusBottomRight: =5
@@ -3698,7 +3709,7 @@
                                 FocusedBorderThickness: =2
                                 Height: =25
                                 HoverFill: =RGBA(0, 0, 0, 0.15)
-                                OnSelect: =Launch(First(ThisItem.'Datos adjuntos').AbsoluteUri)
+                                OnSelect: =Launch(First(ThisItem.Attachments).AbsoluteUri)
                                 PressedFill: =
                                 RadiusBottomLeft: =5
                                 RadiusBottomRight: =5
@@ -3840,7 +3851,7 @@
                         Font: =Font.'Segoe UI'
                         Height: =24
                         Size: =12
-                        Text: =varDocSide.'Creado por'.DisplayName
+                        Text: =varDocSide.'Created By'.DisplayName
                         Width: =(Parent.Width/3)*2 -20
                         ZIndex: =2
 
@@ -4155,7 +4166,7 @@
 
                 "registro_evaluacion_sidebar_op As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
                     DelayItemLoading: =true
-                    Items: =GroupBy(Filter(DEV_Modificacion_estatus_proceso_doc,id_doc=varDocSide.ID),"version","verGroup")
+                    Items: =GroupBy(Filter(DEV_Modificacion_estatus_proceso_doc,id_doc=varDocSide.ID, version=varDocSide.version),"entrega","verGroup")
                     Layout: =Layout.Vertical
                     LayoutMinHeight: =287
                     LayoutMinWidth: =320
@@ -4175,7 +4186,7 @@
                         PaddingRight: =0
                         PaddingTop: =0
                         Size: =12
-                        Text: ="Entrega N° " & ThisItem.version
+                        Text: ="Entrega N° " & ThisItem.entrega
                         VerticalAlign: =VerticalAlign.Top
                         Width: =Parent.TemplateWidth - 200
                         X: =15
@@ -4692,7 +4703,6 @@
                         UpdateIf(
                             DEV_Modificacion_estatus_proceso_doc, id_doc = varDocSide.ID,
                             {
-                                'fecha y hora': Now(),
                                 ind_inact:"Inactivo",
                                 ind_mod:"u"
                             }
@@ -5531,7 +5541,10 @@
                             FillPortions: =1
                             LayoutMinHeight: =30
                             OnSelect: |-
-                                =Set(varpopupformedit,false);
+                                =ResetForm(FormEditPrincipal);
+                                ResetForm(FormEditFlujograma);
+                                ResetForm(FormEditRcki);
+                                Set(varpopupformedit,false);
                                 Set(varpopupuploadeditdoc,true)
                             RadiusBottomLeft: =5
                             RadiusBottomRight: =5
@@ -5680,7 +5693,7 @@
                             Anexos_DataCard1_1 As typedDataCard.attachmentsEditCard:
                                 BorderStyle: =BorderStyle.None
                                 DataField: ="{Attachments}"
-                                Default: =ThisItem.'Datos adjuntos'
+                                Default: =ThisItem.Attachments
                                 DisplayMode: =Parent.DisplayMode
                                 DisplayName: =DataSourceInfo([@DEV_Archivos],DataSourceInfo.DisplayName,"{Attachments}")
                                 Fill: =RGBA(0, 0, 0, 0)
@@ -5794,7 +5807,7 @@
                             Anexos_DataCard1_2 As typedDataCard.attachmentsEditCard:
                                 BorderStyle: =BorderStyle.Solid
                                 DataField: ="{Attachments}"
-                                Default: =ThisItem.'Datos adjuntos'
+                                Default: =ThisItem.Attachments
                                 DisplayMode: =Parent.DisplayMode
                                 DisplayName: =DataSourceInfo([@DEV_Archivos],DataSourceInfo.DisplayName,"{Attachments}")
                                 Fill: =RGBA(0, 0, 0, 0)
@@ -5908,7 +5921,7 @@
                             Anexos_DataCard1_3 As typedDataCard.attachmentsEditCard:
                                 BorderStyle: =BorderStyle.Solid
                                 DataField: ="{Attachments}"
-                                Default: =ThisItem.'Datos adjuntos'
+                                Default: =ThisItem.Attachments
                                 DisplayMode: =Parent.DisplayMode
                                 DisplayName: =DataSourceInfo([@DEV_Archivos],DataSourceInfo.DisplayName,"{Attachments}")
                                 Fill: =RGBA(0, 0, 0, 0)
@@ -6040,7 +6053,8 @@
                                             id_documento.Value = Text(varDocSide.ID),
                                             codigo = varDocSide.codigo,
                                             version = varDocSide.version,
-                                            id_funcion.Value = "Elaborador"
+                                            id_funcion.Value = "Elaborador",
+                                            entrega = varDocSide.entrega
                                         ) As user,
                                         Collect(
                                             colElaboradores,
@@ -6056,7 +6070,8 @@
                                             id_documento.Value = Text(varDocSide.ID),
                                             codigo = varDocSide.codigo,
                                             version = varDocSide.version,
-                                            id_funcion.Value = "Aprobador"
+                                            id_funcion.Value = "Aprobador",
+                                            entrega = varDocSide.entrega
                                         ) As user,
                                         Collect(
                                             colAprobadores,
@@ -6072,7 +6087,8 @@
                                             id_documento.Value = Text(varDocSide.ID),
                                             codigo = varDocSide.codigo,
                                             version = varDocSide.version,
-                                            id_funcion.Value = "Revisor"
+                                            id_funcion.Value = "Revisor",
+                                            entrega = varDocSide.entrega
                                         ) As user,
                                         Collect(
                                             colRevisores,
@@ -6774,7 +6790,8 @@
                                             id_macroproceso: ComboBox2_28.Selected,
                                             Empresa: cbo_empresa_1.Selected,
                                             Solicitante: cbo_solicitante_1.Selected,
-                                            Dueno_Proceso: cbo_dueñoprocesso_1.Selected.Value
+                                            Dueno_Proceso: cbo_dueñoprocesso_1.Selected.Value,
+                                            entrega: varDocSide.entrega + 1
                                         }
                                     )
                                 );
@@ -6790,7 +6807,8 @@
                                         codigo: varDocID.codigo,
                                         version: varDocID.version,
                                         descripcion: varDocID.Nombre,
-                                        tipo_documento: "Principal"
+                                        tipo_documento: "Principal",
+                                        entrega: varDocID.entrega
                                     },
                                     FormEditPrincipal.Updates
                                 );
@@ -6806,7 +6824,8 @@
                                         codigo: varDocID.codigo,
                                         version: varDocID.version,
                                         descripcion: varDocID.Nombre,
-                                        tipo_documento: "Flujograma"
+                                        tipo_documento: "Flujograma",
+                                        entrega: varDocID.entrega
                                     },
                                     FormEditFlujograma.Updates
                                 );
@@ -6822,7 +6841,8 @@
                                         codigo: varDocID.codigo,
                                         version: varDocID.version,
                                         descripcion: varDocID.Nombre,
-                                        tipo_documento: "RCKI"
+                                        tipo_documento: "RCKI",
+                                        entrega: varDocID.entrega
                                     },
                                     FormEditRcki.Updates
                                 );
@@ -6853,7 +6873,8 @@
                                                 codigo: varDocID.codigo,
                                                 version: varDocID.version,
                                                 id_interlocutor: {Id: LookUp(DEV_Interlocutor,Email.Email = user.email.Email).ID, Value: LookUp(DEV_Interlocutor,Email.Email = user.email.Email).ID},
-                                                id_funcion: {Id: 3, Value: 3}
+                                                id_funcion: {Id: 3, Value: 3},
+                                                entrega: varDocID.entrega
                                             }
                                         )
                                     ),
@@ -6884,7 +6905,8 @@
                                                 codigo: varDocID.codigo,
                                                 version: varDocID.version,
                                                 id_interlocutor: {Id: LookUp(DEV_Interlocutor,Email.Email = user.email.Email).ID, Value: LookUp(DEV_Interlocutor,Email.Email = user.email.Email).ID},
-                                                id_funcion: {Id: 1, Value: 1}
+                                                id_funcion: {Id: 1, Value: 1},
+                                                entrega: varDocID.entrega
                                             }
                                         )
                                     ),
@@ -6915,7 +6937,8 @@
                                                 codigo: varDocID.codigo,
                                                 version: varDocID.version,
                                                 id_interlocutor: {Id: LookUp(DEV_Interlocutor,Email.Email = user.email.Email).ID, Value: LookUp(DEV_Interlocutor,Email.Email = user.email.Email).ID},
-                                                id_funcion: {Id: 2, Value: 2}
+                                                id_funcion: {Id: 2, Value: 2},
+                                                entrega: varDocID.entrega
                                             }
                                         )
                                     );
@@ -6925,7 +6948,6 @@
                                 UpdateIf(
                                     DEV_Modificacion_estatus_proceso_doc, id_doc = varDocSide.ID,
                                     {
-                                        'fecha y hora': Now(),
                                         ind_inact:"Inactivo",
                                         ind_mod:"u"
                                     }
@@ -6941,7 +6963,8 @@
                                     'fecha y hora': Now(),
                                     ind_inact:"Activo",
                                     ind_mod:"i",
-                                    id_doc:varDocID.ID}
+                                    id_doc:varDocID.ID,
+                                    entrega: varDocID.entrega}
                                 );
                                 
                                 Set(
@@ -7148,7 +7171,7 @@
                             Color: =secondarytext
                             FillPortions: =2
                             PaddingLeft: =15
-                            Text: =ThisItem.'Creado por'.DisplayName
+                            Text: =ThisItem.'Created By'.DisplayName
                             ZIndex: =1
 
                         Label5_4 As label:
@@ -7941,7 +7964,7 @@
                     =UpdateIf(
                         DEV_Modificacion_estatus_proceso_doc, id_doc = varDocSide.ID,
                         {
-                            'fecha y hora': Now(),
+                    
                             ind_inact:"Inactivo",
                             ind_mod:"u"
                         }
@@ -8024,7 +8047,7 @@
                 Attachments_DataCard1_2 As typedDataCard.attachmentsEditCard:
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="{Attachments}"
-                    Default: =ThisItem.'Datos adjuntos'
+                    Default: =ThisItem.Attachments
                     DisplayMode: =Parent.DisplayMode
                     DisplayName: =DataSourceInfo([@DEV_Observacion],DataSourceInfo.DisplayName,"{Attachments}")
                     Fill: =RGBA(0, 0, 0, 0)
@@ -8503,7 +8526,7 @@
                 FontWeight: =FontWeight.Bold
                 Height: =35
                 Size: =16
-                Text: ="Entrega N° " & varSelectedEntrega.version
+                Text: ="Entrega N° " & varSelectedEntrega.entrega
                 Width: =315
                 X: =(Parent.Width-Self.Width)/2
                 Y: =16
@@ -8576,7 +8599,7 @@
             archivos_gallery_sidebar_docRev_op_3 As gallery.galleryVertical:
                 DelayItemLoading: =true
                 Height: =422
-                Items: =Filter(DEV_Archivos, id_documento.Value = Text(varDocSide.ID), version=varSelectedEntrega.version, codigo= varDocSide.codigo)
+                Items: =Filter(DEV_Archivos, id_documento.Value = Text(varDocSide.ID), version=varDocSide.version, entrega=varSelectedEntrega.entrega, codigo= varDocSide.codigo)
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
                 TemplateSize: =40
@@ -8604,7 +8627,7 @@
                     archivo_title_sidebar_docRev_ra_7 As label:
                         Font: =Font.'Segoe UI'
                         Size: =12
-                        Text: =First(ThisItem.'Datos adjuntos').DisplayName
+                        Text: =First(ThisItem.Attachments).DisplayName
                         Width: =304
                         ZIndex: =2
 
@@ -8629,7 +8652,7 @@
                             FocusedBorderThickness: =2
                             Height: =25
                             HoverFill: =RGBA(0, 0, 0, 0.15)
-                            OnSelect: =Launch(Concatenate(First(ThisItem.'Datos adjuntos').AbsoluteUri,"?web=1"))
+                            OnSelect: =Launch(Concatenate(First(ThisItem.Attachments).AbsoluteUri,"?web=1"))
                             PressedFill: =
                             RadiusBottomLeft: =5
                             RadiusBottomRight: =5
@@ -8662,7 +8685,7 @@
                             FocusedBorderThickness: =2
                             Height: =25
                             HoverFill: =RGBA(0, 0, 0, 0.15)
-                            OnSelect: =Launch(First(ThisItem.'Datos adjuntos').AbsoluteUri)
+                            OnSelect: =Launch(First(ThisItem.Attachments).AbsoluteUri)
                             PressedFill: =
                             RadiusBottomLeft: =5
                             RadiusBottomRight: =5
@@ -8680,7 +8703,8 @@
                 Items: |-
                     =Filter(
                         DEV_Actor,
-                        version = varSelectedEntrega.version,
+                        version = varDocSide.version,
+                        entrega = varSelectedEntrega.entrega,
                         id_documento.Value = Text(varDocSide.ID),
                         id_funcion.Value = "Elaborador"
                     )
@@ -8766,7 +8790,8 @@
                 Items: |-
                     =Filter(
                         DEV_Actor,
-                        version = varSelectedEntrega.version,
+                        version = varDocSide.version,
+                        entrega = varSelectedEntrega.entrega,
                         id_documento.Value = Text(varDocSide.ID),
                         id_funcion.Value = "Revisor"
                     )
@@ -8822,9 +8847,9 @@
                     PaddingTop: =0
                     Size: =8
                     Text: |-
-                        =If(!IsEmpty(Filter(DEV_Modificacion_estatus_documento, id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varSelectedEntrega.version)),
-                        If(!IsEmpty(Filter(DEV_Modificacion_estatus_documento, id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varSelectedEntrega.version, id_status_archivo.Value="2")),"Observado el ", "Aprobado el ") &
-                        LookUp(DEV_Modificacion_estatus_documento,id_interlocutor.Value=ThisItem.id_interlocutor.Value && codigo=varDocSide.codigo && version=varSelectedEntrega.version).'fecha y hora',
+                        =If(!IsEmpty(Filter(DEV_Modificacion_estatus_documento, id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version, entrega=varSelectedEntrega.entrega)),
+                        If(!IsEmpty(Filter(DEV_Modificacion_estatus_documento, id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version, entrega=varSelectedEntrega.entrega, id_status_archivo.Value="2")),"Observado el ", "Aprobado el ") &
+                        LookUp(DEV_Modificacion_estatus_documento,id_interlocutor.Value=ThisItem.id_interlocutor.Value && codigo=varDocSide.codigo && version=varDocSide.version && entrega=varSelectedEntrega.entrega).'fecha y hora',
                         LookUp(DEV_Interlocutor, ID = Value(ThisItem.id_interlocutor.Value)).Email.JobTitle)
                     VerticalAlign: =VerticalAlign.Top
                     Width: =Title1_44.Width
@@ -8849,8 +8874,8 @@
                     OnSelect: =Select(Parent)
                     Size: =12
                     Text: |-
-                        =If(!IsEmpty(Filter(DEV_Modificacion_estatus_documento, ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varSelectedEntrega.version, id_status_archivo.Value="2" || id_status_archivo.Value="1")),
-                        If(!IsEmpty(Filter(DEV_Modificacion_estatus_documento, id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varSelectedEntrega.version, id_status_archivo.Value="2")), "Observado", "Conforme"))
+                        =If(!IsEmpty(Filter(DEV_Modificacion_estatus_documento, ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version, entrega=varSelectedEntrega.entrega, id_status_archivo.Value="2" || id_status_archivo.Value="1")),
+                        If(!IsEmpty(Filter(DEV_Modificacion_estatus_documento, id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version, entrega=varSelectedEntrega.entrega, id_status_archivo.Value="2")), "Observado", "Conforme"))
                     Width: =120
                     X: =293
                     Y: =16
@@ -8861,7 +8886,7 @@
                     Height: =20
                     Icon: =Icon.Information
                     OnSelect: =Select(Parent)
-                    Visible: =!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo",id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varSelectedEntrega.version, id_status_archivo.Value="2"))
+                    Visible: =!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo",id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version, entrega=varSelectedEntrega.entrega, id_status_archivo.Value="2"))
                     Width: =20
                     X: =283
                     Y: =19
@@ -8871,7 +8896,7 @@
                     Height: =15
                     Icon: =Icon.View
                     OnSelect: =Select(Parent)
-                    Visible: =!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo",id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varSelectedEntrega.version, id_status_archivo.Value="2"))
+                    Visible: =!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo",id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version, entrega=varSelectedEntrega.entrega, id_status_archivo.Value="2"))
                     Width: =15
                     X: =285
                     Y: =43
@@ -8886,13 +8911,13 @@
                     HoverColor: =primary
                     HoverFill: =RGBA(0, 0, 0, 0.15)
                     OnSelect: |-
-                        =UpdateContext({varObsItems:Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo",id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varSelectedEntrega.version, id_status_archivo.Value="2"), varObsDatos: ThisItem, varRegistroObsPopup:true})
+                        =UpdateContext({varObsItems:Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo",id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version, entrega=varSelectedEntrega.entrega, id_status_archivo.Value="2"), varObsDatos: ThisItem, varRegistroObsPopup:true})
                     PressedColor: =Self.Color
                     PressedFill: =
                     Size: =8
                     Text: ="Ver Observación"
                     Underline: =true
-                    Visible: =!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varSelectedEntrega.version, id_status_archivo.Value="2"))
+                    Visible: =!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version, entrega=varSelectedEntrega.entrega, id_status_archivo.Value="2"))
                     Width: =100
                     X: =285
                     Y: =40
@@ -8903,8 +8928,8 @@
                     Image: =check
                     OnSelect: =Select(Parent)
                     Visible: |-
-                        =!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varSelectedEntrega.version, id_status_archivo.Value="2" || id_status_archivo.Value="1")) &&
-                        IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varSelectedEntrega.version, id_status_archivo.Value="2"))
+                        =!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version, entrega=varSelectedEntrega.entrega, id_status_archivo.Value="2" || id_status_archivo.Value="1")) &&
+                        IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version, entrega=varSelectedEntrega.entrega, id_status_archivo.Value="2"))
                     Width: =20
                     X: =283
                     Y: =19
@@ -8925,7 +8950,8 @@
                 Items: |-
                     =Filter(
                         DEV_Actor,
-                        version = varSelectedEntrega.version,
+                        version = varDocSide.version,
+                        entrega = varSelectedEntrega.entrega,
                         id_documento.Value = Text(varDocSide.ID),
                         id_funcion.Value = "Aprobador"
                     )
@@ -9138,7 +9164,7 @@
                     PaddingRight: =0
                     PaddingTop: =0
                     Size: =12
-                    Text: =First(LookUp(DEV_Archivos, Value(ThisItem.id_archivo.Value)=ID).'Datos adjuntos').DisplayName
+                    Text: =First(LookUp(DEV_Archivos, Value(ThisItem.id_archivo.Value)=ID).Attachments).DisplayName
                     VerticalAlign: =VerticalAlign.Top
                     Width: =Parent.TemplateWidth - Image6_2.Width - 100
                     X: =56
@@ -9254,7 +9280,7 @@
                 Font: =Font.'Segoe UI'
                 Height: =30
                 Size: =12
-                Text: =First(LookUp(DEV_Observacion, id_archivo.Value=Text(docs_registro_obs_ra_2.Selected.id_archivo.Value) && ind_inact="Activo" && id_interlocutor.Value = Text(varObsDatos.id_interlocutor.Value)).'Datos adjuntos').DisplayName
+                Text: =First(LookUp(DEV_Observacion, id_archivo.Value=Text(docs_registro_obs_ra_2.Selected.id_archivo.Value) && ind_inact="Activo" && id_interlocutor.Value = Text(varObsDatos.id_interlocutor.Value)).Attachments).DisplayName
                 Width: =320
                 X: =25
                 Y: =archivo_title_registro_obs_popup_ra_3.Y+archivo_title_registro_obs_popup_ra_3.Height+10
@@ -9279,7 +9305,7 @@
                 Height: =20
                 HoverColor: =Self.Color
                 HoverFill: =RGBA(0, 0, 0, 0.15)
-                OnSelect: =Launch(First(LookUp(DEV_Observacion, id_archivo.Value=Text(docs_registro_obs_ra_2.Selected.id_archivo.Value) && ind_inact="Activo").'Datos adjuntos').AbsoluteUri)
+                OnSelect: =Launch(First(LookUp(DEV_Observacion, id_archivo.Value=Text(docs_registro_obs_ra_2.Selected.id_archivo.Value) && ind_inact="Activo").Attachments).AbsoluteUri)
                 PressedColor: =Self.Color
                 PressedFill: =RGBA(0, 0, 0, 0.15)
                 Size: =8

@@ -2397,7 +2397,7 @@
                             Anexos_DataCard1_13 As typedDataCard.attachmentsEditCard:
                                 BorderStyle: =BorderStyle.None
                                 DataField: ="{Attachments}"
-                                Default: =ThisItem.'Datos adjuntos'
+                                Default: =ThisItem.Attachments
                                 DisplayMode: =Parent.DisplayMode
                                 DisplayName: =DataSourceInfo([@DEV_Archivos],DataSourceInfo.DisplayName,"{Attachments}")
                                 Fill: =RGBA(0, 0, 0, 0)
@@ -2513,7 +2513,7 @@
                             Anexos_DataCard1_14 As typedDataCard.attachmentsEditCard:
                                 BorderStyle: =BorderStyle.Solid
                                 DataField: ="{Attachments}"
-                                Default: =ThisItem.'Datos adjuntos'
+                                Default: =ThisItem.Attachments
                                 DisplayMode: =Parent.DisplayMode
                                 DisplayName: =DataSourceInfo([@DEV_Archivos],DataSourceInfo.DisplayName,"{Attachments}")
                                 Fill: =RGBA(0, 0, 0, 0)
@@ -2629,7 +2629,7 @@
                             Anexos_DataCard1_15 As typedDataCard.attachmentsEditCard:
                                 BorderStyle: =BorderStyle.Solid
                                 DataField: ="{Attachments}"
-                                Default: =ThisItem.'Datos adjuntos'
+                                Default: =ThisItem.Attachments
                                 DisplayMode: =Parent.DisplayMode
                                 DisplayName: =DataSourceInfo([@DEV_Archivos],DataSourceInfo.DisplayName,"{Attachments}")
                                 Fill: =RGBA(0, 0, 0, 0)
@@ -3604,7 +3604,7 @@
                         archivo_title_sidebar_docRev_ra_8 As label:
                             Font: =Font.'Segoe UI'
                             Size: =12
-                            Text: =First(ThisItem.'Datos adjuntos').DisplayName
+                            Text: =First(ThisItem.Attachments).DisplayName
                             Width: =304
                             ZIndex: =2
 
@@ -3629,7 +3629,7 @@
                                 FocusedBorderThickness: =2
                                 Height: =25
                                 HoverFill: =RGBA(0, 0, 0, 0.15)
-                                OnSelect: =Launch(Concatenate(First(ThisItem.'Datos adjuntos').AbsoluteUri,"?web=1"))
+                                OnSelect: =Launch(Concatenate(First(ThisItem.Attachments).AbsoluteUri,"?web=1"))
                                 PressedFill: =
                                 RadiusBottomLeft: =5
                                 RadiusBottomRight: =5
@@ -3662,7 +3662,7 @@
                                 FocusedBorderThickness: =2
                                 Height: =25
                                 HoverFill: =RGBA(0, 0, 0, 0.15)
-                                OnSelect: =Launch(First(ThisItem.'Datos adjuntos').AbsoluteUri)
+                                OnSelect: =Launch(First(ThisItem.Attachments).AbsoluteUri)
                                 PressedFill: =
                                 RadiusBottomLeft: =5
                                 RadiusBottomRight: =5
@@ -3722,7 +3722,7 @@
                         Font: =Font.'Segoe UI'
                         Height: =24
                         Size: =12
-                        Text: =varDocSide.'Creado por'.DisplayName
+                        Text: =varDocSide.'Created By'.DisplayName
                         Width: =(Parent.Width/3)*2 -20
                         ZIndex: =2
 
@@ -4576,7 +4576,6 @@
                         UpdateIf(
                             DEV_Modificacion_estatus_proceso_doc, id_doc = varDocSide.ID,
                             {
-                                'fecha y hora': Now(),
                                 ind_inact:"Inactivo",
                                 ind_mod:"u"
                             }
@@ -5564,7 +5563,7 @@
                             Anexos_DataCard1_16 As typedDataCard.attachmentsEditCard:
                                 BorderStyle: =BorderStyle.None
                                 DataField: ="{Attachments}"
-                                Default: =ThisItem.'Datos adjuntos'
+                                Default: =ThisItem.Attachments
                                 DisplayMode: =Parent.DisplayMode
                                 DisplayName: =DataSourceInfo([@DEV_Archivos],DataSourceInfo.DisplayName,"{Attachments}")
                                 Fill: =RGBA(0, 0, 0, 0)
@@ -5678,7 +5677,7 @@
                             Anexos_DataCard1_17 As typedDataCard.attachmentsEditCard:
                                 BorderStyle: =BorderStyle.Solid
                                 DataField: ="{Attachments}"
-                                Default: =ThisItem.'Datos adjuntos'
+                                Default: =ThisItem.Attachments
                                 DisplayMode: =Parent.DisplayMode
                                 DisplayName: =DataSourceInfo([@DEV_Archivos],DataSourceInfo.DisplayName,"{Attachments}")
                                 Fill: =RGBA(0, 0, 0, 0)
@@ -5792,7 +5791,7 @@
                             Anexos_DataCard1_18 As typedDataCard.attachmentsEditCard:
                                 BorderStyle: =BorderStyle.Solid
                                 DataField: ="{Attachments}"
-                                Default: =ThisItem.'Datos adjuntos'
+                                Default: =ThisItem.Attachments
                                 DisplayMode: =Parent.DisplayMode
                                 DisplayName: =DataSourceInfo([@DEV_Archivos],DataSourceInfo.DisplayName,"{Attachments}")
                                 Fill: =RGBA(0, 0, 0, 0)
@@ -6809,7 +6808,6 @@
                                 UpdateIf(
                                     DEV_Modificacion_estatus_proceso_doc, id_doc = varDocSide.ID,
                                     {
-                                        'fecha y hora': Now(),
                                         ind_inact:"Inactivo",
                                         ind_mod:"u"
                                     }
@@ -7032,7 +7030,7 @@
                             Color: =secondarytext
                             FillPortions: =2
                             PaddingLeft: =15
-                            Text: =ThisItem.'Creado por'.DisplayName
+                            Text: =ThisItem.'Created By'.DisplayName
                             ZIndex: =1
 
                         Label5_10 As label:
@@ -7825,7 +7823,6 @@
                     =UpdateIf(
                         DEV_Modificacion_estatus_proceso_doc, id_doc = varDocSide.ID,
                         {
-                            'fecha y hora': Now(),
                             ind_inact:"Inactivo",
                             ind_mod:"u"
                         }
@@ -7908,7 +7905,7 @@
                 Attachments_DataCard1_5 As typedDataCard.attachmentsEditCard:
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="{Attachments}"
-                    Default: =ThisItem.'Datos adjuntos'
+                    Default: =ThisItem.Attachments
                     DisplayMode: =Parent.DisplayMode
                     DisplayName: =DataSourceInfo([@DEV_Observacion],DataSourceInfo.DisplayName,"{Attachments}")
                     Fill: =RGBA(0, 0, 0, 0)
@@ -8488,7 +8485,7 @@
                     archivo_title_sidebar_docRev_ra_18 As label:
                         Font: =Font.'Segoe UI'
                         Size: =12
-                        Text: =First(ThisItem.'Datos adjuntos').DisplayName
+                        Text: =First(ThisItem.Attachments).DisplayName
                         Width: =304
                         ZIndex: =2
 
@@ -8513,7 +8510,7 @@
                             FocusedBorderThickness: =2
                             Height: =25
                             HoverFill: =RGBA(0, 0, 0, 0.15)
-                            OnSelect: =Launch(Concatenate(First(ThisItem.'Datos adjuntos').AbsoluteUri,"?web=1"))
+                            OnSelect: =Launch(Concatenate(First(ThisItem.Attachments).AbsoluteUri,"?web=1"))
                             PressedFill: =
                             RadiusBottomLeft: =5
                             RadiusBottomRight: =5
@@ -8546,7 +8543,7 @@
                             FocusedBorderThickness: =2
                             Height: =25
                             HoverFill: =RGBA(0, 0, 0, 0.15)
-                            OnSelect: =Launch(First(ThisItem.'Datos adjuntos').AbsoluteUri)
+                            OnSelect: =Launch(First(ThisItem.Attachments).AbsoluteUri)
                             PressedFill: =
                             RadiusBottomLeft: =5
                             RadiusBottomRight: =5
@@ -9022,7 +9019,7 @@
                     PaddingRight: =0
                     PaddingTop: =0
                     Size: =12
-                    Text: =First(LookUp(DEV_Archivos, Value(ThisItem.id_archivo.Value)=ID).'Datos adjuntos').DisplayName
+                    Text: =First(LookUp(DEV_Archivos, Value(ThisItem.id_archivo.Value)=ID).Attachments).DisplayName
                     VerticalAlign: =VerticalAlign.Top
                     Width: =Parent.TemplateWidth - Image6_5.Width - 100
                     X: =56
@@ -9137,7 +9134,7 @@
                 Font: =Font.'Segoe UI'
                 Height: =30
                 Size: =12
-                Text: =First(LookUp(DEV_Observacion, id_archivo.Value=Text(docs_registro_obs_ra_5.Selected.id_archivo.Value) && ind_inact="Activo").'Datos adjuntos').DisplayName
+                Text: =First(LookUp(DEV_Observacion, id_archivo.Value=Text(docs_registro_obs_ra_5.Selected.id_archivo.Value) && ind_inact="Activo").Attachments).DisplayName
                 Width: =320
                 X: =25
                 Y: =archivo_title_registro_obs_popup_ra_6.Y+archivo_title_registro_obs_popup_ra_6.Height+10
@@ -9162,7 +9159,7 @@
                 Height: =20
                 HoverColor: =Self.Color
                 HoverFill: =RGBA(0, 0, 0, 0.15)
-                OnSelect: =Launch(First(LookUp(DEV_Observacion, id_archivo.Value=Text(docs_registro_obs_ra_5.Selected.id_archivo.Value) && ind_inact="Activo").'Datos adjuntos').AbsoluteUri)
+                OnSelect: =Launch(First(LookUp(DEV_Observacion, id_archivo.Value=Text(docs_registro_obs_ra_5.Selected.id_archivo.Value) && ind_inact="Activo").Attachments).AbsoluteUri)
                 PressedColor: =Self.Color
                 PressedFill: =RGBA(0, 0, 0, 0.15)
                 Size: =8
