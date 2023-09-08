@@ -568,7 +568,7 @@
                                     Button4_3 As button:
                                         BorderColor: =ColorFade(Self.Fill,-20%)
                                         Fill: =Color.White
-                                        Height: =Parent.Height - 30
+                                        Height: =240
                                         HoverFill: =Self.Fill
                                         PressedFill: =Self.Fill
                                         RadiusTopLeft: =0
@@ -580,7 +580,7 @@
 
                                     "Gallery1_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
                                         DelayItemLoading: =true
-                                        Height: =Button4_3.Height
+                                        Height: =240
                                         Items: =SortByColumns(Filter(DEV_Modificacion_estatus_proceso_doc,ind_inact="Activo", id_estatus_documento.Value="Por aprobar" || id_estatus_documento.Value="Por revisar"  || id_estatus_documento.Value="Observado"),"fecha",SortOrder.Descending)
                                         Layout: =Layout.Vertical
                                         LoadingSpinner: =LoadingSpinner.Data
