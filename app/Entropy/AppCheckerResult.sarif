@@ -52242,18 +52242,6 @@
               "message": {
                 "text": "Error al ejecutar la regla app-InefficientDelayLoading."
               }
-            },
-            {
-              "associatedRule": {
-                "id": "app-InefficientDelayLoading",
-                "index": 12
-              },
-              "descriptor": {
-                "id": "app-InefficientDelayLoading"
-              },
-              "message": {
-                "text": "Error al ejecutar la regla app-InefficientDelayLoading."
-              }
             }
           ]
         }
@@ -58699,46 +58687,6 @@
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
           "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'DocPorRevisar RA'.ScreenContainer_docRev_ra.BottomContainer_docRev_ra.sidebar_docRev_ra.Image3.Image"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'DocPorRevisar RA'.ScreenContainer_docRev_ra.BottomContainer_docRev_ra.sidebar_docRev_ra.Image3.Image",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 22,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "'Document Checkmark_1'"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Image",
-                "module": "DocPorRevisar RA",
-                "type": "'DocPorRevisar RA'.ScreenContainer_docRev_ra.BottomContainer_docRev_ra.sidebar_docRev_ra.Image3"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Document Checkmark_1"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 2
         },
         {
           "locations": [
@@ -88894,17 +88842,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.Document Checkmark_2"
+                  "fullyQualifiedName": "App.Document Checkmark_1"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "App.Document Checkmark_2",
+                  "fullyQualifiedName": "App.Document Checkmark_1",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "Document Checkmark_2",
+                "member": "Document Checkmark_1",
                 "module": "App",
                 "type": "App"
               }
