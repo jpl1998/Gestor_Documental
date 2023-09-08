@@ -666,7 +666,12 @@
                                             Height: =Parent.Height*60%
                                             Icon: =Icon.View
                                             OnSelect: |-
-                                                =UpdateContext({varSelectedDoc:ThisItem, varSidebarPopup:true})
+                                                =If(menu_filter_docRev_ra.Selected.Value="Pendientes",
+                                                UpdateContext({varSelectedDoc:ThisItem, varSidebarPopup:true}),
+                                                Set(varSidebarInformativoPopup, true);
+                                                Set(varDocSide, ThisItem);
+                                                Set(varDocEstado,LookUp(DEV_Modificacion_estatus_proceso_doc,codigo=ThisItem.codigo && version=ThisItem.version && ind_inact="Activo" && id_doc=ThisItem.ID).id_estatus_documento.Value)
+                                                )
                                             PaddingBottom: =3
                                             PaddingLeft: =3
                                             PaddingRight: =3
@@ -681,7 +686,7 @@
         Height: =Parent.Height
         Visible: =varSidebarPopup
         Width: =Parent.Width
-        ZIndex: =3
+        ZIndex: =2
 
         SideBar_Container_docRev_ra_4 As groupContainer.verticalAutoLayoutContainer:
             DropShadow: =DropShadow.Regular
@@ -1726,6 +1731,1077 @@
                 =UpdateContext({varSidebarPopup:false})
             Width: =906
             ZIndex: =2
+
+    SideBar_informativo_1 As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(51, 51, 51, 0.11)
+        Height: =Parent.Height
+        Visible: =varSidebarInformativoPopup
+        Width: =Parent.Width
+        ZIndex: =3
+
+        Rectangle3_10 As rectangle:
+            BorderStyle: =BorderStyle.None
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =768
+            OnSelect: =Set(varSidebarInformativoPopup,false)
+            Width: =1366
+            ZIndex: =1
+
+        SideBar_Container_docRev_op_7 As groupContainer.verticalAutoLayoutContainer:
+            DropShadow: =DropShadow.Regular
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =Parent.Height
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMode: =LayoutMode.Auto
+            PaddingBottom: =20
+            PaddingLeft: =20
+            PaddingRight: =20
+            PaddingTop: =20
+            Width: =460
+            X: =906
+            ZIndex: =2
+
+            container_title_sidebar_docRev_op_7 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.None
+                FillPortions: =0
+                Height: =60
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                ZIndex: =1
+
+                title_sidebar_docRev_op_7 As label:
+                    Align: =Align.Center
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Semibold
+                    Size: =16
+                    Text: ="Documento en Proceso"
+                    Width: =Parent.Width
+                    Y: =10
+                    ZIndex: =1
+
+                close_icon_sidebar_docRev_op_7 As icon.Cancel:
+                    Color: =RGBA(0, 0, 0, 1)
+                    Height: =30
+                    Icon: =Icon.Cancel
+                    OnSelect: =Set(varSidebarInformativoPopup,false)
+                    PaddingBottom: =5
+                    PaddingLeft: =5
+                    PaddingRight: =5
+                    PaddingTop: =5
+                    Width: =30
+                    X: =390
+                    Y: =(Parent.Height-Self.Height)/2
+                    ZIndex: =2
+
+            menu_sidebar_docRev_op_16 As groupContainer.manualLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                DropShadow: =DropShadow.None
+                FillPortions: =0
+                Height: =50
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                ZIndex: =2
+
+                items_menu_sidebar_docRev_op_16 As gallery.galleryHorizontal:
+                    DelayItemLoading: =true
+                    Height: =50
+                    Items: =["Información","Archivos","Evaluación"]
+                    LoadingSpinner: =LoadingSpinner.Data
+                    TemplateSize: =121
+                    Width: =390
+                    ZIndex: =1
+
+                    item_menu_sidebar_op_16 As label:
+                        Align: =Align.Center
+                        Color: =If(ThisItem.IsSelected, primary, placeholder)
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                        OnSelect: =Select(Parent)
+                        Size: =12
+                        Text: =ThisItem.Value
+                        Width: =120
+                        ZIndex: =1
+
+                    line_menu_sidebar_op_16 As rectangle:
+                        Fill: =seconday
+                        Height: =2
+                        OnSelect: =Select(Parent)
+                        Visible: =ThisItem.IsSelected
+                        Width: =121
+                        Y: =38
+                        ZIndex: =2
+
+            archivos_container_sidebar_docRev_op_7 As groupContainer.verticalAutoLayoutContainer:
+                DropShadow: =DropShadow.None
+                FillPortions: =0
+                Height: =540
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                Visible: =items_menu_sidebar_docRev_op_16.Selected.Value="Archivos"
+                ZIndex: =3
+
+                archivos_gallery_sidebar_docRev_op_16 As gallery.galleryVertical:
+                    DelayItemLoading: =true
+                    Items: =Filter(DEV_Archivos, id_documento.Value = Text(varDocSide.ID), version=varDocSide.version, codigo= varDocSide.codigo)
+                    Layout: =Layout.Vertical
+                    LayoutMinHeight: =287
+                    LayoutMinWidth: =320
+                    LoadingSpinner: =LoadingSpinner.Data
+                    TemplateSize: =40
+                    ZIndex: =5
+
+                    container_archivos_gallery_sidebar_28 As groupContainer.horizontalAutoLayoutContainer:
+                        DropShadow: =DropShadow.None
+                        Height: =40
+                        LayoutMode: =LayoutMode.Auto
+                        Width: =410
+                        ZIndex: =1
+
+                        archivo_image_sidebar_docRev_ra_27 As image:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            Height: =24
+                            Image: =If(ThisItem.tipo_documento="Principal", word, ThisItem.tipo_documento="Flujograma", visio,ThisItem.tipo_documento="RCKI", excel, pdf)
+                            LayoutMinHeight: =24
+                            Width: =24
+                            ZIndex: =1
+
+                        archivo_title_sidebar_docRev_ra_27 As label:
+                            Font: =Font.'Segoe UI'
+                            Size: =12
+                            Text: =First(ThisItem.Attachments).DisplayName
+                            Width: =304
+                            ZIndex: =2
+
+                        archivo_open_container_sidebar_ra_27 As groupContainer.manualLayoutContainer:
+                            DropShadow: =DropShadow.None
+                            LayoutMinHeight: =24
+                            LayoutMinWidth: =24
+                            ZIndex: =3
+
+                            open_archivo_icon_sidebar_28 As icon.OpenInNewWindow:
+                                Height: =16
+                                Icon: =Icon.OpenInNewWindow
+                                Width: =16
+                                X: =(Parent.Width-Self.Width)/2
+                                Y: =(Parent.Height-Self.Height)/2
+                                ZIndex: =1
+
+                            open_archivo_button_sidebar_28 As button:
+                                BorderColor: =primary
+                                BorderThickness: =1.5
+                                Fill: =RGBA(0, 0, 0, 0)
+                                FocusedBorderThickness: =2
+                                Height: =25
+                                HoverFill: =RGBA(0, 0, 0, 0.15)
+                                OnSelect: =Launch(Concatenate(First(ThisItem.Attachments).AbsoluteUri,"?web=1"))
+                                PressedFill: =
+                                RadiusBottomLeft: =5
+                                RadiusBottomRight: =5
+                                RadiusTopLeft: =5
+                                RadiusTopRight: =5
+                                Text: =""
+                                Width: =25
+                                X: =(Parent.Width-Self.Width)/2
+                                Y: =(Parent.Height-Self.Height)/2
+                                ZIndex: =2
+
+                        archivo_download_container_sidebar_ra_27 As groupContainer.manualLayoutContainer:
+                            DropShadow: =DropShadow.None
+                            LayoutMinHeight: =24
+                            LayoutMinWidth: =24
+                            ZIndex: =4
+
+                            download_archivo_icon_sidebar_28 As icon.OpenInNewWindow:
+                                Height: =16
+                                Icon: =Icon.Download
+                                Width: =16
+                                X: =(Parent.Width-Self.Width)/2
+                                Y: =(Parent.Height-Self.Height)/2
+                                ZIndex: =1
+
+                            download_archivo_button_sidebar_28 As button:
+                                BorderColor: =primary
+                                BorderThickness: =1.5
+                                Fill: =RGBA(0, 0, 0, 0)
+                                FocusedBorderThickness: =2
+                                Height: =25
+                                HoverFill: =RGBA(0, 0, 0, 0.15)
+                                OnSelect: =Launch(First(ThisItem.Attachments).AbsoluteUri)
+                                PressedFill: =
+                                RadiusBottomLeft: =5
+                                RadiusBottomRight: =5
+                                RadiusTopLeft: =5
+                                RadiusTopRight: =5
+                                Text: =""
+                                Width: =25
+                                X: =(Parent.Width-Self.Width)/2
+                                Y: =(Parent.Height-Self.Height)/2
+                                ZIndex: =2
+
+            informacion_container_sidebar_docRev_op_7 As groupContainer.verticalAutoLayoutContainer:
+                DropShadow: =DropShadow.None
+                FillPortions: =0
+                Height: =540
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                Visible: =items_menu_sidebar_docRev_op_16.Selected.Value="Información"
+                ZIndex: =4
+
+                item_informacion_sidebar_docRev_op_21 As groupContainer.horizontalAutoLayoutContainer:
+                    DropShadow: =DropShadow.None
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =24
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    ZIndex: =2
+
+                    item_informacion_sidebar_ra_10 As label:
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =24
+                        Size: =12
+                        Text: |-
+                            ="Cargado por:"
+                        Width: =(Parent.Width/3)+20
+                        ZIndex: =1
+
+                    cont_informacion_sidebar_ra_10 As label:
+                        Font: =Font.'Segoe UI'
+                        Height: =24
+                        Size: =12
+                        Text: =varDocSide.'Created By'.DisplayName
+                        Width: =(Parent.Width/3)*2 -20
+                        ZIndex: =2
+
+                item_informacion_sidebar_docRev_op_22 As groupContainer.horizontalAutoLayoutContainer:
+                    DropShadow: =DropShadow.None
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =24
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    ZIndex: =3
+
+                    item2_informacion_sidebar_op_7 As label:
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =24
+                        Size: =12
+                        Text: |-
+                            ="Empresa:"
+                        Width: =(Parent.Width/3)+20
+                        ZIndex: =1
+
+                    cont2_informacion_sidebar_op_7 As label:
+                        Font: =Font.'Segoe UI'
+                        Height: =24
+                        Size: =12
+                        Text: =varDocSide.Empresa.Value
+                        Width: =(Parent.Width/3)*2 -20
+                        ZIndex: =2
+
+                item_informacion_sidebar_docRev_op_23 As groupContainer.horizontalAutoLayoutContainer:
+                    DropShadow: =DropShadow.None
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =24
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    ZIndex: =4
+
+                    item3_informacion_sidebar_op_7 As label:
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =24
+                        Size: =12
+                        Text: |-
+                            ="Solicitante:"
+                        Width: =(Parent.Width/3)+20
+                        ZIndex: =1
+
+                    cont3_informacion_sidebar_op_7 As label:
+                        Font: =Font.'Segoe UI'
+                        Height: =24
+                        Size: =12
+                        Text: =varDocSide.Solicitante.DisplayName
+                        Width: =(Parent.Width/3)*2 -20
+                        ZIndex: =2
+
+                item_informacion_sidebar_docRev_ra_92 As groupContainer.horizontalAutoLayoutContainer:
+                    DropShadow: =DropShadow.None
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =24
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    ZIndex: =5
+
+                    item4_informacion_sidebar_ra_10 As label:
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =24
+                        Size: =12
+                        Text: |-
+                            ="Código:"
+                        Width: =(Parent.Width/3)+20
+                        ZIndex: =1
+
+                    cont4_informacion_sidebar_ra_10 As label:
+                        Font: =Font.'Segoe UI'
+                        Height: =24
+                        Size: =12
+                        Text: =varDocSide.codigo
+                        Width: =(Parent.Width/3)*2 -20
+                        ZIndex: =2
+
+                item_informacion_sidebar_docRev_ra_93 As groupContainer.horizontalAutoLayoutContainer:
+                    DropShadow: =DropShadow.None
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =24
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    ZIndex: =6
+
+                    item5_informacion_sidebar_ra_10 As label:
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =24
+                        Size: =12
+                        Text: |-
+                            ="Nombre:"
+                        Width: =(Parent.Width/3)+20
+                        ZIndex: =1
+
+                    cont5_informacion_sidebar_ra_10 As label:
+                        Font: =Font.'Segoe UI'
+                        Height: =24
+                        Size: =12
+                        Text: =varDocSide.Nombre
+                        Width: =(Parent.Width/3)*2 -20
+                        ZIndex: =2
+
+                item_informacion_sidebar_docRev_ra_94 As groupContainer.horizontalAutoLayoutContainer:
+                    DropShadow: =DropShadow.None
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =24
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    ZIndex: =7
+
+                    item6_informacion_sidebar_ra_10 As label:
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =24
+                        Size: =12
+                        Text: |-
+                            ="Tipo Documento:"
+                        Width: =(Parent.Width/3)+20
+                        ZIndex: =1
+
+                    cont6_informacion_sidebar_ra_10 As label:
+                        Font: =Font.'Segoe UI'
+                        Height: =24
+                        Size: =12
+                        Text: =varDocSide.id_tipo_docu.Value
+                        Width: =(Parent.Width/3)*2 -20
+                        ZIndex: =2
+
+                item_informacion_sidebar_docRev_ra_95 As groupContainer.horizontalAutoLayoutContainer:
+                    DropShadow: =DropShadow.None
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =24
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    ZIndex: =8
+
+                    item7_informacion_sidebar_ra_10 As label:
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =24
+                        Size: =12
+                        Text: |-
+                            ="Dueño de Proceso:"
+                        Width: =(Parent.Width/3)+20
+                        ZIndex: =1
+
+                    cont7_informacion_sidebar_ra_10 As label:
+                        Font: =Font.'Segoe UI'
+                        Height: =24
+                        Size: =12
+                        Text: =varDocSide.Dueno_Proceso
+                        Width: =(Parent.Width/3)*2 -20
+                        ZIndex: =2
+
+                item_informacion_sidebar_docRev_ra_96 As groupContainer.horizontalAutoLayoutContainer:
+                    DropShadow: =DropShadow.None
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =24
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    ZIndex: =9
+
+                    item8_informacion_sidebar_ra_10 As label:
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =24
+                        Size: =12
+                        Text: |-
+                            ="Alcance:"
+                        Width: =(Parent.Width/3)+20
+                        ZIndex: =1
+
+                    cont8_informacion_sidebar_ra_10 As label:
+                        Font: =Font.'Segoe UI'
+                        Height: =24
+                        Size: =12
+                        Text: =varDocSide.id_alcance
+                        Width: =(Parent.Width/3)*2 -20
+                        ZIndex: =2
+
+                item_informacion_sidebar_docRev_ra_97 As groupContainer.horizontalAutoLayoutContainer:
+                    DropShadow: =DropShadow.None
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =24
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    ZIndex: =10
+
+                    item9_informacion_sidebar_ra_10 As label:
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =24
+                        Size: =12
+                        Text: |-
+                            ="Versión:"
+                        Width: =(Parent.Width/3)+20
+                        ZIndex: =1
+
+                    cont9_informacion_sidebar_ra_10 As label:
+                        Font: =Font.'Segoe UI'
+                        Height: =24
+                        Size: =12
+                        Text: =varDocSide.version
+                        Width: =(Parent.Width/3)*2 -20
+                        ZIndex: =2
+
+                item_informacion_sidebar_docRev_ra_98 As groupContainer.horizontalAutoLayoutContainer:
+                    DropShadow: =DropShadow.None
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =24
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    ZIndex: =11
+
+                    item10_informacion_sidebar_ra_10 As label:
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =24
+                        Size: =12
+                        Text: |-
+                            ="Fecha Documento:"
+                        Width: =(Parent.Width/3)+20
+                        ZIndex: =1
+
+                    cont10_informacion_sidebar_ra_10 As label:
+                        Font: =Font.'Segoe UI'
+                        Height: =24
+                        Size: =12
+                        Text: =varDocSide.fecha
+                        Width: =(Parent.Width/3)*2 -20
+                        ZIndex: =2
+
+                item_informacion_sidebar_docRev_ra_99 As groupContainer.horizontalAutoLayoutContainer:
+                    DropShadow: =DropShadow.None
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =24
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    ZIndex: =12
+
+                    item11_informacion_sidebar_ra_10 As label:
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =24
+                        Size: =12
+                        Text: |-
+                            ="Macroproceso:"
+                        Width: =(Parent.Width/3)+20
+                        ZIndex: =1
+
+                    cont11_informacion_sidebar_ra_10 As label:
+                        Font: =Font.'Segoe UI'
+                        Height: =24
+                        Size: =12
+                        Text: =varDocSide.id_macroproceso.Value
+                        Width: =(Parent.Width/3)*2 -20
+                        ZIndex: =2
+
+            evaluacion_container_sidebar_docRev_op_6 As groupContainer.verticalAutoLayoutContainer:
+                DropShadow: =DropShadow.None
+                FillPortions: =0
+                Height: =540
+                LayoutAlignItems: =LayoutAlignItems.Stretch
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                Visible: =items_menu_sidebar_docRev_op_16.Selected.Value="Evaluación"
+                ZIndex: =5
+
+                menu_filter_evaluacion_sidebar_op_7 As gallery.galleryHorizontal:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    DelayItemLoading: =true
+                    FillPortions: =0
+                    Height: =40
+                    Items: =["Elaborado por", "Revisado por", "Aprobado por"]
+                    LayoutMinHeight: =60
+                    LayoutMinWidth: =320
+                    LoadingSpinner: =LoadingSpinner.Data
+                    ShowScrollbar: =false
+                    TemplateSize: =130
+                    ZIndex: =1
+
+                    Button5_11 As button:
+                        BorderColor: =If(ThisItem.IsSelected, primary,Color.Transparent)
+                        Color: =If(ThisItem.IsSelected, primary, placeholder)
+                        Fill: =If(ThisItem.IsSelected, ColorFade(primary,0.9), Color.White)
+                        FocusedBorderThickness: =2
+                        Height: =24
+                        OnSelect: =Select(Parent)
+                        Size: =8
+                        Text: =ThisItem.Value
+                        Width: =120
+                        Y: =2.5
+                        ZIndex: =1
+
+                "registro_evaluacion_sidebar_op_7 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    DelayItemLoading: =true
+                    Items: =GroupBy(Filter(DEV_Modificacion_estatus_proceso_doc,id_doc=varDocSide.ID),"version","verGroup")
+                    Layout: =Layout.Vertical
+                    LayoutMinHeight: =287
+                    LayoutMinWidth: =320
+                    LoadingSpinner: =LoadingSpinner.Data
+                    TemplatePadding: =0
+                    TemplateSize: =70
+                    Visible: =menu_filter_evaluacion_sidebar_op_7.Selected.Value="Registro"
+                    ZIndex: =2
+
+                    Title2_14 As label:
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                        Height: =Self.Size * 1.8
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =12
+                        Text: ="Entrega N° " & ThisItem.version
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =Parent.TemplateWidth - 200
+                        X: =15
+                        Y: =(Parent.TemplateHeight - (Self.Size * 1.8 + Subtitle2_14.Size * 1.8)) / 2
+                        ZIndex: =1
+
+                    Subtitle2_14 As label:
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                        Height: =Self.Size * 1.8
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =8
+                        Text: =Last(ThisItem.verGroup).'fecha y hora'
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =Title2_14.Width
+                        X: =15
+                        Y: =Title2_14.Y + Title2_14.Height
+                        ZIndex: =2
+
+                    verObs_icon_sidebar_ra_56 As icon.View:
+                        Height: =15
+                        Icon: =Icon.View
+                        OnSelect: =Select(Parent)
+                        Width: =15
+                        X: =281
+                        Y: =30
+                        ZIndex: =3
+
+                    verObs_button_sidebar_ra_56 As button:
+                        Align: =Align.Right
+                        Color: =primary
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Font: =Font.'Segoe UI'
+                        Height: =20
+                        HoverColor: =primary
+                        HoverFill: =RGBA(0, 0, 0, 0.15)
+                        OnSelect: |-
+                            =UpdateContext({varSelectedEntrega:ThisItem, varRevisarEntregaPopup:true})
+                        PressedColor: =Self.Color
+                        PressedFill: =
+                        Size: =10
+                        Text: ="Revisar"
+                        Width: =80
+                        X: =281
+                        Y: =28
+                        ZIndex: =4
+
+                "aprobador_evaluacion_sidebar_op_16 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    DelayItemLoading: =true
+                    Items: |-
+                        =Filter(
+                            DEV_Actor,
+                            version = varDocSide.version,
+                            id_documento.Value = Text(varDocSide.ID),
+                            id_funcion.Value = "Aprobador"
+                        )
+                    Layout: =Layout.Vertical
+                    LayoutMinHeight: =287
+                    LayoutMinWidth: =320
+                    LoadingSpinner: =LoadingSpinner.Data
+                    TemplatePadding: =0
+                    TemplateSize: =70
+                    Visible: =menu_filter_evaluacion_sidebar_op_7.Selected.Value = "Aprobado por"
+                    ZIndex: =3
+
+                    Image3_40 As image:
+                        Height: =32
+                        Image: =LookUp(DEV_Interlocutor, Value(ThisItem.id_interlocutor.Value)=ID).Email.Picture
+                        OnSelect: =Select(Parent)
+                        RadiusBottomLeft: =8
+                        RadiusBottomRight: =8
+                        RadiusTopLeft: =8
+                        RadiusTopRight: =8
+                        Width: =32
+                        X: =16
+                        Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+                        ZIndex: =1
+
+                    Title1_83 As label:
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =Self.Size * 1.8
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =12
+                        Text: |-
+                            =ThisItem.'id_interlocutor: Nombre'.Value & " " & ThisItem.'id_interlocutor: Apellido'.Value
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =Parent.TemplateWidth - 200
+                        X: =63
+                        Y: =16
+                        ZIndex: =2
+
+                    Subtitle1_74 As label:
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                        Height: =Self.Size * 1.8
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =8
+                        Text: |-
+                            =If(!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version, id_status_archivo.Value="4" || id_status_archivo.Value="3")),
+                            If(!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version, id_status_archivo.Value="4")),"Observado el ", "Aprobado el ") &
+                            LookUp(DEV_Modificacion_estatus_documento,ind_inact="Activo" && id_interlocutor.Value=ThisItem.id_interlocutor.Value && codigo=varDocSide.codigo && version=varDocSide.version).'fecha y hora',
+                            LookUp(DEV_Interlocutor, ID = Value(ThisItem.id_interlocutor.Value)).Email.JobTitle)
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =Title1_83.Width
+                        X: =63
+                        Y: =Title1_83.Y + Title1_83.Height
+                        ZIndex: =3
+
+                    Rectangle4_60 As rectangle:
+                        Fill: =placeholder
+                        Height: =1
+                        OnSelect: =Select(Parent)
+                        Width: =Parent.Width
+                        Y: =69
+                        ZIndex: =4
+
+                    obs_icon_sidebar_ra_42 As icon.Information:
+                        Color: =red
+                        Height: =20
+                        Icon: =Icon.Information
+                        OnSelect: =Select(Parent)
+                        Visible: =!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version, id_status_archivo.Value="4"))
+                        Width: =20
+                        X: =283
+                        Y: =16
+                        ZIndex: =6
+
+                    verObs_icon_sidebar_ra_57 As icon.View:
+                        Height: =15
+                        Icon: =Icon.View
+                        OnSelect: =Select(Parent)
+                        Visible: =!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version, id_status_archivo.Value="4"))
+                        Width: =15
+                        X: =285
+                        Y: =40
+                        ZIndex: =7
+
+                    verObs_button_sidebar_ra_57 As button:
+                        Align: =Align.Right
+                        Color: =primary
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Font: =Font.'Segoe UI'
+                        Height: =20
+                        HoverColor: =primary
+                        HoverFill: =RGBA(0, 0, 0, 0.15)
+                        OnSelect: |-
+                            =UpdateContext({varObsItems:Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version, id_status_archivo.Value="4"), varRegistroObsPopup:true})
+                        PressedColor: =Self.Color
+                        PressedFill: =
+                        Size: =8
+                        Text: ="Ver Observación"
+                        Underline: =true
+                        Visible: =!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version, id_status_archivo.Value="4"))
+                        Width: =100
+                        X: =285
+                        Y: =38
+                        ZIndex: =8
+
+                    obs_text_sidebar_ra_52 As label:
+                        Align: =Align.Center
+                        Color: =If(!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version, id_status_archivo.Value="4")),red,green)
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =24
+                        OnSelect: =Select(Parent)
+                        Size: =12
+                        Text: |-
+                            =If(!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version,id_status_archivo.Value="4"||id_status_archivo.Value="3")),
+                            If(!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version, id_status_archivo.Value="4")), "Observado", "Conforme"))
+                        Visible: =!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version, id_status_archivo.Value="4" || id_status_archivo.Value="3"))
+                        Width: =120
+                        X: =293
+                        Y: =14
+                        ZIndex: =9
+
+                    check_obs_icon_sidebar_ra_40 As image:
+                        Height: =20
+                        Image: =check
+                        OnSelect: =Select(Parent)
+                        Visible: |-
+                            =!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version, id_status_archivo.Value="4" || id_status_archivo.Value="3")) &&
+                            IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version, id_status_archivo.Value="4"))
+                        Width: =20
+                        X: =283
+                        Y: =16
+                        ZIndex: =10
+
+                    mail_aprobador_ra_20 As label:
+                        Height: =19
+                        OnSelect: =Select(Parent)
+                        Text: =LookUp(DEV_Interlocutor, ID = Value(ThisItem.id_interlocutor.Value)).Email.Email
+                        Visible: =false
+                        Width: =261
+                        Y: =51
+                        ZIndex: =11
+
+                "elaborador_evaluacion_sidebar_op_16 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    DelayItemLoading: =true
+                    Items: |-
+                        =Filter(
+                            DEV_Actor,
+                            version = varDocSide.version,
+                            id_documento.Value = Text(varDocSide.ID),
+                            id_funcion.Value = "Elaborador"
+                        )
+                    Layout: =Layout.Vertical
+                    LayoutMinHeight: =287
+                    LayoutMinWidth: =320
+                    LoadingSpinner: =LoadingSpinner.Data
+                    TemplatePadding: =0
+                    TemplateSize: =70
+                    Visible: =menu_filter_evaluacion_sidebar_op_7.Selected.Value = "Elaborado por"
+                    ZIndex: =4
+
+                    Image3_69 As image:
+                        Height: =32
+                        Image: =LookUp(DEV_Interlocutor, Value(ThisItem.id_interlocutor.Value)=ID).Email.Picture
+                        OnSelect: =Select(Parent)
+                        RadiusBottomLeft: =8
+                        RadiusBottomRight: =8
+                        RadiusTopLeft: =8
+                        RadiusTopRight: =8
+                        Width: =32
+                        X: =16
+                        Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+                        ZIndex: =1
+
+                    Title1_84 As label:
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                        Height: =Self.Size * 1.8
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =12
+                        Text: |-
+                            =ThisItem.'id_interlocutor: Nombre'.Value & " " & ThisItem.'id_interlocutor: Apellido'.Value
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =Parent.TemplateWidth - 150
+                        X: =63
+                        Y: =17
+                        ZIndex: =2
+
+                    Subtitle1_75 As label:
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                        Height: =Self.Size * 1.8
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =8
+                        Text: =LookUp(DEV_Interlocutor, ID = Value(ThisItem.id_interlocutor.Value)).Email.JobTitle
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =Title1_84.Width
+                        X: =Title1_84.X
+                        Y: =Title1_84.Y + Title1_84.Height
+                        ZIndex: =3
+
+                    Rectangle4_61 As rectangle:
+                        Fill: =placeholder
+                        Height: =1
+                        OnSelect: =Select(Parent)
+                        Width: =420
+                        Y: =69
+                        ZIndex: =4
+
+                    mail_elaborador_ra_18 As label:
+                        Height: =19
+                        OnSelect: =Select(Parent)
+                        Text: =LookUp(DEV_Interlocutor, ID = Value(ThisItem.id_interlocutor.Value)).Email.Email
+                        Visible: =false
+                        Width: =261
+                        X: =60
+                        Y: =51
+                        ZIndex: =9
+
+                "revisor_evaluacion_sidebar_op_16 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    DelayItemLoading: =true
+                    Items: |-
+                        =Filter(
+                            DEV_Actor,
+                            version = varDocSide.version,
+                            id_documento.Value = Text(varDocSide.ID),
+                            id_funcion.Value = "Revisor"
+                        )
+                    Layout: =Layout.Vertical
+                    LayoutMinHeight: =287
+                    LayoutMinWidth: =320
+                    LoadingSpinner: =LoadingSpinner.Data
+                    TemplatePadding: =0
+                    TemplateSize: =70
+                    Visible: =menu_filter_evaluacion_sidebar_op_7.Selected.Value = "Revisado por"
+                    ZIndex: =5
+
+                    Image3_70 As image:
+                        Height: =32
+                        Image: =LookUp(DEV_Interlocutor, Value(ThisItem.id_interlocutor.Value)=ID).Email.Picture
+                        OnSelect: =Select(Parent)
+                        RadiusBottomLeft: =8
+                        RadiusBottomRight: =8
+                        RadiusTopLeft: =8
+                        RadiusTopRight: =8
+                        Width: =32
+                        X: =16
+                        Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+                        ZIndex: =1
+
+                    Title1_85 As label:
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                        Height: =Self.Size * 1.8
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =12
+                        Text: |-
+                            =ThisItem.'id_interlocutor: Nombre'.Value & " " & ThisItem.'id_interlocutor: Apellido'.Value
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =Parent.TemplateWidth - 200
+                        X: =63
+                        Y: =16
+                        ZIndex: =2
+
+                    Subtitle1_76 As label:
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                        Height: =Self.Size * 1.8
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =8
+                        Text: |-
+                            =If(!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version)),
+                            If(!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version, id_status_archivo.Value="2")),"Observado el ", "Aprobado el ") &
+                            LookUp(DEV_Modificacion_estatus_documento,ind_inact="Activo" && id_interlocutor.Value=ThisItem.id_interlocutor.Value && codigo=varDocSide.codigo && version=varDocSide.version).'fecha y hora',
+                            LookUp(DEV_Interlocutor, ID = Value(ThisItem.id_interlocutor.Value)).Email.JobTitle)
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =Title1_85.Width
+                        X: =63
+                        Y: =Title1_85.Y + Title1_85.Height
+                        ZIndex: =3
+
+                    Rectangle4_62 As rectangle:
+                        Fill: =placeholder
+                        Height: =1
+                        OnSelect: =Select(Parent)
+                        Width: =Parent.Width
+                        Y: =69
+                        ZIndex: =4
+
+                    obs_text_sidebar_ra_53 As label:
+                        Align: =Align.Center
+                        Color: =If(!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version, id_status_archivo.Value="2")),red,green)
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =24
+                        OnSelect: =Select(Parent)
+                        Size: =12
+                        Text: |-
+                            =If(!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version,id_status_archivo.Value="2"||id_status_archivo.Value="1")),
+                            If(!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version, id_status_archivo.Value="2")), "Observado", "Conforme"))
+                        Width: =120
+                        X: =293
+                        Y: =16
+                        ZIndex: =5
+
+                    obs_icon_sidebar_ra_43 As icon.Information:
+                        Color: =red
+                        Height: =20
+                        Icon: =Icon.Information
+                        OnSelect: =Select(Parent)
+                        Visible: =!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version, id_status_archivo.Value="2"))
+                        Width: =20
+                        X: =283
+                        Y: =19
+                        ZIndex: =6
+
+                    verObs_icon_sidebar_ra_58 As icon.View:
+                        Height: =15
+                        Icon: =Icon.View
+                        OnSelect: =Select(Parent)
+                        Visible: =!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version, id_status_archivo.Value="2"))
+                        Width: =15
+                        X: =285
+                        Y: =43
+                        ZIndex: =7
+
+                    verObs_button_sidebar_ra_58 As button:
+                        Align: =Align.Right
+                        Color: =primary
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Font: =Font.'Segoe UI'
+                        Height: =20
+                        HoverColor: =primary
+                        HoverFill: =RGBA(0, 0, 0, 0.15)
+                        OnSelect: |-
+                            =UpdateContext({varObsItems:Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version, id_status_archivo.Value="2"), varRegistroObsPopup:true})
+                        PressedColor: =Self.Color
+                        PressedFill: =
+                        Size: =8
+                        Text: ="Ver Observación"
+                        Underline: =true
+                        Visible: =!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version, id_status_archivo.Value="2"))
+                        Width: =100
+                        X: =285
+                        Y: =40
+                        ZIndex: =8
+
+                    check_obs_icon_sidebar_ra_41 As image:
+                        Height: =20
+                        Image: =check
+                        OnSelect: =Select(Parent)
+                        Visible: |-
+                            =!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version, id_status_archivo.Value="2"||id_status_archivo.Value="1")) &&
+                            IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version, id_status_archivo.Value="2"))
+                        Width: =20
+                        X: =283
+                        Y: =19
+                        ZIndex: =10
+
+                    mail_revisor_ra_20 As label:
+                        Height: =19
+                        OnSelect: =Select(Parent)
+                        Text: =LookUp(DEV_Interlocutor, ID = Value(ThisItem.id_interlocutor.Value)).Email.Email
+                        Visible: =false
+                        Width: =261
+                        Y: =51
+                        ZIndex: =11
+
+            Container13_171 As groupContainer.manualLayoutContainer:
+                LayoutMinHeight: =40
+                LayoutMinWidth: =40
+                Width: =80
+                ZIndex: =6
+
+                Button2_20 As button:
+                    BorderColor: =Self.Color
+                    BorderStyle: =BorderStyle.None
+                    Color: |-
+                        =Switch(Self.Text,
+                        "Documento Por aprobar", RGBA(180, 130, 0, 1),
+                        "Documento Por revisar",RGBA(180, 130, 0, 1),
+                        "Documento Observado", RGBA(214, 0, 0, 1),
+                        "Documento Aprobado",RGBA(44, 143, 112, 1),
+                        "Documento Publicado",RGBA(44, 143, 112, 1),
+                        "Documento Difundido",RGBA(44, 143, 112, 1))
+                    DisplayMode: =DisplayMode.View
+                    Fill: |-
+                        =Switch(Self.Text,
+                        "Documento Por aprobar", RGBA(249, 249, 249, 1),
+                        "Documento Por revisar",RGBA(249, 249, 249, 1),
+                        "Documento Observado", RGBA(245, 218, 216, 1),
+                        "Documento Aprobado", RGBA(219, 238, 233, 1),
+                        "Documento Publicado", RGBA(219, 238, 233, 1),
+                        "Documento Difundido", RGBA(219, 238, 233, 1))
+                    Font: =Font.Arial
+                    FontWeight: =FontWeight.Normal
+                    Height: =Parent.Height*60%
+                    RadiusBottomLeft: =5
+                    RadiusBottomRight: =5
+                    RadiusTopLeft: =5
+                    RadiusTopRight: =5
+                    Size: =11
+                    Text: ="Documento " & varDocEstado
+                    Width: =Parent.Width*80%
+                    X: =(Parent.Width-Self.Width)/2
+                    Y: =(Parent.Height-Self.Height)/2
+                    ZIndex: =1
 
     popup_revision_doc_ra_3 As groupContainer.manualLayoutContainer:
         Fill: =RGBA(0, 0, 0, 0.1)
@@ -3574,7 +4650,7 @@
         Height: =768
         Visible: =varRevisarEntregaPopup
         Width: =1366
-        ZIndex: =10
+        ZIndex: =8
 
         container_revisar_entrega_6 As groupContainer.manualLayoutContainer:
             Fill: =background
@@ -4171,7 +5247,7 @@
         Height: =Parent.Height
         Visible: =varpopupfilter
         Width: =Parent.Width
-        ZIndex: =11
+        ZIndex: =9
 
         Container13_29 As groupContainer.verticalAutoLayoutContainer:
             DropShadow: =DropShadow.Regular

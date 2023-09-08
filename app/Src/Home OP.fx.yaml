@@ -287,7 +287,7 @@
                                         Color: =primarytext
                                         Font: =Font.Arial
                                         LayoutMinHeight: =20
-                                        Text: ="Documentos en Processo"
+                                        Text: ="Documentos en Proceso"
                                         ZIndex: =2
 
                             card2_div_title_home_op As groupContainer.horizontalAutoLayoutContainer:
