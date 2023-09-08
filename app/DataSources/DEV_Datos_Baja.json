@@ -32,6 +32,8 @@
       "Editor#Claims": "Modificado por Claims",
       "fecha": "fecha",
       "ID": "ID",
+      "id_documento": "id_documento",
+      "id_documento#Id": "id_documento Id",
       "Modified": "Modificado",
       "motivo": "motivo",
       "OData__ColorTag": "Etiqueta de color",
