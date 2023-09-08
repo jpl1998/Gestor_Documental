@@ -1774,7 +1774,7 @@
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Semibold
                     Size: =16
-                    Text: ="Documento en Proceso"
+                    Text: ="Resultado Aprobación"
                     Width: =Parent.Width
                     Y: =10
                     ZIndex: =1
