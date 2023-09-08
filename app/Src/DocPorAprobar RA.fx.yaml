@@ -3654,7 +3654,7 @@
                             
                         );
                         UpdateContext({varResultadoPopup: true})
-                    Text: ="Enviar Aprobación"
+                    Text: ="Aprobar Todo"
                     Visible: =IsBlank(varRevPrincipal) && IsBlank(varRevFlujograma) && IsBlank(varRevRcki)
                     Width: =412
                     X: =(Parent.Width-Self.Width)/2
