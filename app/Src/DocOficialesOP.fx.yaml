@@ -8241,7 +8241,7 @@
                 FontWeight: =FontWeight.Bold
                 Height: =35
                 Size: =16
-                Text: ="Difusión por CR"
+                Text: ="Difusión Masiva por Correo"
                 Width: =315
                 X: =(Parent.Width-Self.Width)/2
                 Y: =24
@@ -8362,6 +8362,65 @@
                 X: =456
                 Y: =75
                 ZIndex: =9
+
+            btnBuscarAreas As button:
+                BorderColor: =Self.Color
+                Color: =primary
+                Fill: =RGBA(255, 255, 255, 1)
+                Font: =Font.'Segoe UI'
+                Height: =44
+                PaddingBottom: =12
+                PaddingLeft: =163
+                PaddingRight: =133
+                PaddingTop: =12
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Text: ="Buscar Áreas"
+                Visible: =varDocEstado="Publicado"
+                Width: =412
+                X: =24
+                Y: =376
+                ZIndex: =10
+
+            Icon5BAreas As icon.Search:
+                Height: =20
+                Icon: =Icon.Search
+                Width: =20
+                X: =157
+                Y: =388
+                ZIndex: =11
+
+            btnRealizarDifusionC As button:
+                BorderColor: =Self.Color
+                Color: =primary
+                Fill: =RGBA(255, 255, 255, 1)
+                Font: =Font.'Segoe UI'
+                Height: =52
+                PaddingBottom: =8
+                PaddingLeft: =130
+                PaddingRight: =130
+                PaddingTop: =8
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Text: ="Realizar Difusión"
+                Visible: =varDocEstado="Publicado"
+                Width: =412
+                X: =456
+                Y: =624
+                ZIndex: =12
+
+            ContainerDifusionCr As groupContainer.manualLayoutContainer:
+                BorderStyle: =BorderStyle.None
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =480
+                Width: =412
+                X: =456
+                Y: =108
+                ZIndex: =13
 
     popup_revisar_entrega_8 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.None
