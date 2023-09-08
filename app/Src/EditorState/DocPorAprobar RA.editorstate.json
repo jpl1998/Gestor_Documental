@@ -7552,7 +7552,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "archivos_container_sidebar_docRev_op_7",
-      "ParentIndex": 2,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -38242,7 +38242,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "container_title_sidebar_docRev_op_7",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -88089,7 +88089,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "menu_sidebar_docRev_op_16",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

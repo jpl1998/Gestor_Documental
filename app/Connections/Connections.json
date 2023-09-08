@@ -1,4 +1,38 @@
 {
+  "104d61cb-0021-4011-bfd8-2343856e4315": {
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1653/1.0.1653.3403/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "e241a094-95cf-481b-a881-88d66c95707a": {
+          "value": "shared_sharepointonline"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "01fabcc6-211e-4628-8b46-6142c0238e5b"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_sharepointonline": {
+          "value": "e241a094-95cf-481b-a881-88d66c95707a"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "01fabcc6-211e-4628-8b46-6142c0238e5b"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "Eliminarfolderaldardebajadocumento"
+    ],
+    "dependencies": {
+      "shared_sharepointonline": "e241a094-95cf-481b-a881-88d66c95707a"
+    },
+    "dependents": [],
+    "id": "104d61cb-0021-4011-bfd8-2343856e4315"
+  },
   "12b1d73e-4286-4ac3-bd75-5fc5da4a8f04": {
     "connectionRef": {
       "displayName": "Office 365 Outlook",
@@ -478,7 +512,8 @@
     "dependents": [
       "18fddf26-ea91-41c9-b204-e7b144f28077",
       "382ed5b5-5084-4614-ac42-b8cd4f888e04",
-      "96a190aa-5ca6-4a65-adbd-d92255a9b8fc"
+      "96a190aa-5ca6-4a65-adbd-d92255a9b8fc",
+      "104d61cb-0021-4011-bfd8-2343856e4315"
     ],
     "id": "e241a094-95cf-481b-a881-88d66c95707a"
   },

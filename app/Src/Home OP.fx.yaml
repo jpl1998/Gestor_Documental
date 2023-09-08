@@ -923,7 +923,7 @@
                                                     Height: =Parent.Height
                                                     PaddingLeft: =10
                                                     Size: =9.5
-                                                    Text: =LookUp(DEV_Documento, ID= ThisItem.id_doc).Nombre
+                                                    Text: =LookUp(DEV_Documento, ID= ThisItem.id_doc).codigo
                                                     Width: =Parent.Width-Self.X
                                                     X: =45
                                                     ZIndex: =2
@@ -2388,7 +2388,9 @@
                     Height: =47
                     HoverFill: =ColorFade(red, -20%)
                     OnSelect: |-
-                        =UpdateContext({varPopupDarBaja:true})
+                        =Reset(comentario_baja_3);
+                        ResetForm(baja_attachment_form_3);
+                        UpdateContext({varPopupDarBaja:true})
                     Text: ="Dar Baja"
                     Visible: =varDocEstado="Publicado"
                     Width: =180
@@ -5650,10 +5652,12 @@
                             Usuario: User().FullName,
                             correo_usuario: User().Email,
                             fecha: Today(),
-                            motivo: comentario_baja_3.Text
+                            motivo: comentario_baja_3.Text,
+                            id_documento:{Id:varDocSide.ID , Value:varDocSide.ID}
                         },
                         baja_attachment_form_3.Updates
                     );
+                    Eliminarfolderaldardebajadocumento.Run(varDocSide.ID);
                     Set(varsidebarop,false);
                     UpdateContext({varPopupDarBaja:false})
                 Text: ="Dar Baja al Documento"
