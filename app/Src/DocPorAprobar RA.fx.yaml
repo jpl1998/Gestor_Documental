@@ -2836,7 +2836,7 @@
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Bold
                     Size: =16
-                    Text: ="Revisión Documento"
+                    Text: ="Aprobación Documento"
                     Width: =300
                     X: =(Parent.Width-Self.Width)/2
                     Y: =(Parent.Height-Self.Height)/2
@@ -3654,7 +3654,7 @@
                             
                         );
                         UpdateContext({varResultadoPopup: true})
-                    Text: ="Conforme Todo"
+                    Text: ="Enviar Aprobación"
                     Visible: =IsBlank(varRevPrincipal) && IsBlank(varRevFlujograma) && IsBlank(varRevRcki)
                     Width: =412
                     X: =(Parent.Width-Self.Width)/2
@@ -4391,7 +4391,7 @@
                 FillPortions: =1
                 FontWeight: =FontWeight.Bold
                 Size: =15
-                Text: ="Envio Exitoso"
+                Text: ="Envío Exitoso"
                 ZIndex: =1
 
             Image2_12 As image:
@@ -4408,7 +4408,7 @@
                 Align: =Align.Center
                 FillPortions: =1
                 Font: =Font.'Segoe UI'
-                Text: ="Documento enviado para su revisión"
+                Text: ="Resultado de aprobación enviado con éxito."
                 ZIndex: =4
 
             Button3_26 As button:

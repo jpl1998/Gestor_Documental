@@ -5103,7 +5103,7 @@
                 Align: =Align.Center
                 FillPortions: =1
                 Font: =Font.'Segoe UI'
-                Text: ="Documento enviado para su revisión"
+                Text: ="Resultado de revisión enviado con éxito."
                 ZIndex: =4
 
             Button3_7 As button:
