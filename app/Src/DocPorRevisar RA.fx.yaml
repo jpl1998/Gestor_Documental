@@ -500,6 +500,7 @@
                                             ID in Distinct(AddColumns(Filter(
                                                 DEV_Actor,
                                                 id_funcion.Value = "Revisor",
+                                                ind_activo = "Activo",
                                                 id_interlocutor.Value = Text(LookUp(DEV_Interlocutor, Email.Email=User().Email).ID)
                                                 ),"idInt",id_documento.Value),idInt),
                                             ID in Filter(
@@ -518,6 +519,10 @@
                                             IsBlank(varFilterMenu.proceso) || id_proceso.Value = varFilterMenu.proceso.Value,
                                             IsBlank(varFilterMenu.fechaDesde) || varFilterMenu.fechaDesde<=fecha,
                                             IsBlank(varFilterMenu.fechaHasta) || varFilterMenu.fechaHasta>=fecha,
+                                            ID in Filter(
+                                                DEV_Modificacion_estatus_proceso_doc,
+                                                ind_inact = "Activo" && id_estatus_documento.Value = "Por revisar" || id_estatus_documento.Value = "Observado"
+                                            ).id_doc,
                                             searchbar_docRev_ra.Text in Nombre
                                         )
                                     )
@@ -3170,7 +3175,7 @@
                         HoverColor: =primary
                         HoverFill: =RGBA(0, 0, 0, 0.15)
                         OnSelect: |-
-                            =UpdateContext({varObsItems:Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version, id_status_archivo.Value="4"), varRegistroObsPopup:true})
+                            =UpdateContext({varObsItems:Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version, id_status_archivo.Value="4"),  varObsDatos:ThisItem, varRegistroObsPopup:true})
                         PressedColor: =Self.Color
                         PressedFill: =
                         Size: =8
