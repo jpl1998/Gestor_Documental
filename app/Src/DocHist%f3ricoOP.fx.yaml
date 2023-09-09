@@ -452,7 +452,7 @@
                                         IsBlank(varFilterMenu.fechaHasta) || varFilterMenu.fechaHasta >= fecha,
                                         ID in Filter(
                                             DEV_Modificacion_estatus_proceso_doc,
-                                            ind_inact = "Activo" && Or(id_estatus_documento.Value = "Cancelado")
+                                            ind_inact = "Activo" && Or(id_estatus_documento.Value = "De baja")
                                         ).id_doc,
                                         searchbar_docRev_ra.Text in Nombre
                                     )
@@ -563,6 +563,7 @@
                                                 "Por aprobar", RGBA(180, 130, 0, 1),
                                                 "Por revisar",RGBA(180, 130, 0, 1),
                                                 "Observado", RGBA(214, 0, 0, 1),
+                                                "De baja", RGBA(214, 0, 0, 1),
                                                 "Aprobado",RGBA(44, 143, 112, 1),
                                                 "Publicado",RGBA(44, 143, 112, 1),
                                                 "Difundido",RGBA(44, 143, 112, 1))
@@ -572,6 +573,7 @@
                                                 "Por aprobar", RGBA(249, 249, 249, 1),
                                                 "Por revisar",RGBA(249, 249, 249, 1),
                                                 "Observado", RGBA(245, 218, 216, 1),
+                                                "De baja", RGBA(245, 218, 216, 1),
                                                 "Aprobado",RGBA(219, 238, 233, 1),
                                                 "Publicado",RGBA(219, 238, 233, 1),
                                                 "Difundido",RGBA(219, 238, 233, 1),ColorValue("#ffffff"))
@@ -4538,6 +4540,7 @@
                         "Documento Por revisar",RGBA(180, 130, 0, 1),
                         "Documento Observado", RGBA(214, 0, 0, 1),
                         "Documento Cancelado", RGBA(214, 0, 0, 1),
+                        "Documento De baja", RGBA(214, 0, 0, 1),
                         "Documento Aprobado",RGBA(44, 143, 112, 1),
                         "Documento Publicado",RGBA(44, 143, 112, 1),
                         "Documento Difundido",RGBA(44, 143, 112, 1))
@@ -4548,6 +4551,7 @@
                         "Documento Por revisar",RGBA(249, 249, 249, 1),
                         "Documento Observado", RGBA(245, 218, 216, 1),
                         "Documento Cancelado", RGBA(245, 218, 216, 1),
+                        "Documento De baja", RGBA(245, 218, 216, 1),
                         "Documento Aprobado", RGBA(219, 238, 233, 1),
                         "Documento Publicado", RGBA(219, 238, 233, 1),
                         "Documento Difundido", RGBA(219, 238, 233, 1))
