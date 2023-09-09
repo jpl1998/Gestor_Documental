@@ -1635,7 +1635,7 @@
                     cont6_informacion_sidebar_ra_3 As label:
                         Font: =Font.'Segoe UI'
                         Height: =24
-                        Size: =12
+                        Size: =11
                         Text: =varDocSide.id_tipo_docu.Value
                         Width: =(Parent.Width/3)*2 -20
                         ZIndex: =2
@@ -1966,21 +1966,6 @@
                         Width: =Parent.Width
                         Y: =69
                         ZIndex: =4
-
-                    obs_text_sidebar_ra_18 As label:
-                        Align: =Align.Center
-                        Color: =red
-                        Font: =Font.'Segoe UI'
-                        FontWeight: =FontWeight.Semibold
-                        Height: =24
-                        OnSelect: =Select(Parent)
-                        Size: =12
-                        Text: ="Observado"
-                        Visible: =!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version, id_status_archivo.Value="4"))
-                        Width: =120
-                        X: =293
-                        Y: =14
-                        ZIndex: =5
 
                     obs_icon_sidebar_ra_13 As icon.Information:
                         Color: =red
