@@ -2371,7 +2371,8 @@
                             'fecha y hora': Now(),
                             ind_inact:"Activo",
                             ind_mod:"i",
-                            id_doc:varDocSide.ID}
+                            id_doc:varDocSide.ID,
+                            entrega: varDocSide.entrega}
                         );
                         
                         Publicararchivosenbibliotecapublica.Run(varDocSide.ID);
