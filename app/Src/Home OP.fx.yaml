@@ -4490,6 +4490,13 @@
                                     FormEditRcki_2.Updates
                                 );
                                 
+                                UpdateIf(
+                                    DEV_Actor, id_documento.Value = Text(varDocID.ID),
+                                    {
+                                        ind_activo: "Inactivo"
+                                    }
+                                );
+                                
                                 Concurrent(
                                     //INSERTAR ELABORADORES
                                     ForAll(
@@ -4518,6 +4525,7 @@
                                                 version: varDocID.version,
                                                 id_interlocutor: {Id: LookUp(DEV_Interlocutor,Email.Email = user.email.Email).ID, Value: LookUp(DEV_Interlocutor,Email.Email = user.email.Email).ID},
                                                 id_funcion: {Id: 3, Value: 3},
+                                                ind_activo:"Activo",
                                                 entrega: varDocID.entrega
                                             }
                                         )
@@ -4549,6 +4557,7 @@
                                                 version: varDocID.version,
                                                 id_interlocutor: {Id: LookUp(DEV_Interlocutor,Email.Email = user.email.Email).ID, Value: LookUp(DEV_Interlocutor,Email.Email = user.email.Email).ID},
                                                 id_funcion: {Id: 1, Value: 1},
+                                                ind_activo:"Activo",
                                                 entrega: varDocID.entrega
                                             }
                                         )
@@ -4581,6 +4590,7 @@
                                                 version: varDocID.version,
                                                 id_interlocutor: {Id: LookUp(DEV_Interlocutor,Email.Email = user.email.Email).ID, Value: LookUp(DEV_Interlocutor,Email.Email = user.email.Email).ID},
                                                 id_funcion: {Id: 2, Value: 2},
+                                                ind_activo:"Activo",
                                                 entrega: varDocID.entrega
                                             }
                                         )

@@ -3240,7 +3240,8 @@
                                             id_interlocutor: {Id:LookUp(DEV_Interlocutor,ComboBox2_22.Selected.Email in Email[@Email],ID)
                                                             ,Value:LookUp(DEV_Interlocutor,ComboBox2_22.Selected.Email in Email[@Email],ID)},
                                             codigo:varDocID.codigo,
-                                            id_documento:{Id: varDocID.ID , Value:varDocID.ID} ,
+                                            id_documento:{Id: varDocID.ID , Value:varDocID.ID},
+                                            ind_activo:"Activo",
                                             version:varDocID.version,
                                             entrega: varDocID.entrega}),
                                         
@@ -3251,6 +3252,7 @@
                                                             ,Value:LookUp(DEV_Interlocutor,ComboBox2_22.Selected.Email in Email[@Email],ID)},
                                             codigo:varDocID.codigo,
                                             id_documento:{Id: varDocID.ID , Value:varDocID.ID} ,
+                                            ind_activo:"Activo",
                                             version:varDocID.version,
                                             entrega: varDocID.entrega
                                             }
@@ -3276,6 +3278,7 @@
                                                             ,Value:LookUp(DEV_Interlocutor,ComboBox2_23.Selected.Email in Email[@Email],ID)},
                                             codigo:varDocID.codigo,
                                             id_documento:{Id: varDocID.ID , Value:varDocID.ID} ,
+                                            ind_activo:"Activo",
                                             version:varDocID.version,
                                             entrega: varDocID.entrega}),
                                         
@@ -3286,6 +3289,7 @@
                                                             ,Value:LookUp(DEV_Interlocutor,ComboBox2_23.Selected.Email in Email[@Email],ID)},
                                             codigo:varDocID.codigo,
                                             id_documento:{Id: varDocID.ID , Value:varDocID.ID} ,
+                                            ind_activo:"Activo",
                                             version:varDocID.version,
                                             entrega: varDocID.entrega}
                                         )
@@ -3312,6 +3316,7 @@
                                                             ,Value:LookUp(DEV_Interlocutor,ComboBox2_24.Selected.Email in Email[@Email],ID)},
                                             codigo:varDocID.codigo,
                                             id_documento:{Id: varDocID.ID , Value:varDocID.ID} ,
+                                            ind_activo:"Activo",
                                             version:varDocID.version,
                                             entrega: varDocID.entrega}),
                                         
@@ -3322,6 +3327,7 @@
                                                             ,Value:LookUp(DEV_Interlocutor,ComboBox2_24.Selected.Email in Email[@Email],ID)},
                                             codigo:varDocID.codigo,
                                             id_documento:{Id: varDocID.ID , Value:varDocID.ID} ,
+                                            ind_activo:"Activo",
                                             version:varDocID.version,
                                             entrega: varDocID.entrega}
                                         )
@@ -6853,6 +6859,14 @@
                                     },
                                     FormEditRcki.Updates
                                 );
+                                
+                                UpdateIf(
+                                    DEV_Actor, id_documento.Value = Text(varDocID.ID),
+                                    {
+                                        ind_activo: "Inactivo"
+                                    }
+                                );
+                                
                                 Concurrent(
                                     //INSERTAR ELABORADORES
                                     ForAll(
@@ -6881,6 +6895,7 @@
                                                 version: varDocID.version,
                                                 id_interlocutor: {Id: LookUp(DEV_Interlocutor,Email.Email = user.email.Email).ID, Value: LookUp(DEV_Interlocutor,Email.Email = user.email.Email).ID},
                                                 id_funcion: {Id: 3, Value: 3},
+                                                ind_activo:"Activo",
                                                 entrega: varDocID.entrega
                                             }
                                         )
@@ -6913,6 +6928,7 @@
                                                 version: varDocID.version,
                                                 id_interlocutor: {Id: LookUp(DEV_Interlocutor,Email.Email = user.email.Email).ID, Value: LookUp(DEV_Interlocutor,Email.Email = user.email.Email).ID},
                                                 id_funcion: {Id: 1, Value: 1},
+                                                ind_activo:"Activo",
                                                 entrega: varDocID.entrega
                                             }
                                         )
@@ -6945,6 +6961,7 @@
                                                 version: varDocID.version,
                                                 id_interlocutor: {Id: LookUp(DEV_Interlocutor,Email.Email = user.email.Email).ID, Value: LookUp(DEV_Interlocutor,Email.Email = user.email.Email).ID},
                                                 id_funcion: {Id: 2, Value: 2},
+                                                ind_activo:"Activo",
                                                 entrega: varDocID.entrega
                                             }
                                         )
