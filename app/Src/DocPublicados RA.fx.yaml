@@ -1723,10 +1723,10 @@
                         PaddingTop: =0
                         Size: =8
                         Text: |-
-                            =If(!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version)),
+                            =If(!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version,entrega= varSelectedDoc.entrega)),
                             
-                            If(!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version, id_status_archivo.Value="2")),"Observado el ", "Aprobado el ") &
-                            LookUp(DEV_Modificacion_estatus_documento,ind_inact="Activo" && id_interlocutor.Value=ThisItem.id_interlocutor.Value && codigo=varSelectedDoc.codigo && version=varSelectedDoc.version).'fecha y hora',
+                            If(!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version,entrega= varSelectedDoc.entrega, id_status_archivo.Value="2")),"Observado el ", "Aprobado el ") &
+                            LookUp(DEV_Modificacion_estatus_documento,ind_inact="Activo" && id_interlocutor.Value=ThisItem.id_interlocutor.Value && codigo=varSelectedDoc.codigo && version=varSelectedDoc.version && entrega= varSelectedDoc.entrega).'fecha y hora',
                             LookUp(DEV_Interlocutor, ID = Value(ThisItem.id_interlocutor.Value)).Email.JobTitle)
                         VerticalAlign: =VerticalAlign.Top
                         Width: =Title1_30.Width
@@ -1744,15 +1744,15 @@
 
                     obs_text_sidebar_ra_6 As label:
                         Align: =Align.Center
-                        Color: =If(!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version, id_status_archivo.Value="2")),red,green)
+                        Color: =If(!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version,entrega= varSelectedDoc.entrega, id_status_archivo.Value="2")),red,green)
                         Font: =Font.'Segoe UI'
                         FontWeight: =FontWeight.Semibold
                         Height: =24
                         OnSelect: =Select(Parent)
                         Size: =12
                         Text: |-
-                            =If(!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version)),
-                            If(!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version, id_status_archivo.Value="2")), "Observado", "Conforme"))
+                            =If(!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version,entrega= varSelectedDoc.entrega)),
+                            If(!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version,entrega= varSelectedDoc.entrega, id_status_archivo.Value="2")), "Observado", "Conforme"))
                         Width: =120
                         X: =295
                         Y: =14
@@ -1763,7 +1763,7 @@
                         Height: =20
                         Icon: =Icon.Information
                         OnSelect: =Select(Parent)
-                        Visible: =!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version, id_status_archivo.Value="2"))
+                        Visible: =!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version,entrega= varSelectedDoc.entrega, id_status_archivo.Value="2"))
                         Width: =20
                         X: =288
                         Y: =16
@@ -1773,7 +1773,7 @@
                         Height: =15
                         Icon: =Icon.View
                         OnSelect: =Select(Parent)
-                        Visible: =!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version, id_status_archivo.Value="2"))
+                        Visible: =!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version,entrega= varSelectedDoc.entrega, id_status_archivo.Value="2"))
                         Width: =15
                         X: =293
                         Y: =40
@@ -1788,13 +1788,13 @@
                         HoverColor: =primary
                         HoverFill: =RGBA(0, 0, 0, 0.15)
                         OnSelect: |-
-                            =UpdateContext({varObsItems:Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version, id_status_archivo.Value="2"), varRegistroObsPopup:true})
+                            =UpdateContext({varObsItems:Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version,entrega= varSelectedDoc.entrega, id_status_archivo.Value="2"), varRegistroObsPopup:true})
                         PressedColor: =Self.Color
                         PressedFill: =
                         Size: =8
                         Text: ="Ver Observación"
                         Underline: =true
-                        Visible: =!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version, id_status_archivo.Value="2"))
+                        Visible: =!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version,entrega= varSelectedDoc.entrega, id_status_archivo.Value="2"))
                         Width: =110
                         X: =288
                         Y: =38
@@ -1804,7 +1804,7 @@
                         Height: =20
                         Image: =check
                         OnSelect: =Select(Parent)
-                        Visible: =IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version, id_status_archivo.Value="2"))
+                        Visible: =IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version,entrega= varSelectedDoc.entrega, id_status_archivo.Value="2"))
                         Width: =20
                         X: =288
                         Y: =16
@@ -1879,9 +1879,9 @@
                         PaddingTop: =0
                         Size: =8
                         Text: |-
-                            =If(!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version)),
-                            If(!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version, id_status_archivo.Value="4")),"Observado el ", "Aprobado el ") &
-                            LookUp(DEV_Modificacion_estatus_documento,ind_inact="Activo" && id_interlocutor.Value=ThisItem.id_interlocutor.Value && codigo=varSelectedDoc.codigo && version=varSelectedDoc.version).'fecha y hora',
+                            =If(!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version,entrega= varSelectedDoc.entrega)),
+                            If(!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version,entrega= varSelectedDoc.entrega, id_status_archivo.Value="4")),"Observado el ", "Aprobado el ") &
+                            LookUp(DEV_Modificacion_estatus_documento,ind_inact="Activo" && id_interlocutor.Value=ThisItem.id_interlocutor.Value && codigo=varSelectedDoc.codigo && version=varSelectedDoc.version && entrega= varSelectedDoc.entrega).'fecha y hora',
                             LookUp(DEV_Interlocutor, ID = Value(ThisItem.id_interlocutor.Value)).Email.JobTitle)
                         VerticalAlign: =VerticalAlign.Top
                         Width: =Title1_32.Width
@@ -1906,7 +1906,7 @@
                         OnSelect: =Select(Parent)
                         Size: =12
                         Text: ="Observado"
-                        Visible: =!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version, id_status_archivo.Value="4"))
+                        Visible: =!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version,entrega= varSelectedDoc.entrega, id_status_archivo.Value="4"))
                         Width: =120
                         X: =295
                         Y: =14
@@ -1917,7 +1917,7 @@
                         Height: =20
                         Icon: =Icon.Information
                         OnSelect: =Select(Parent)
-                        Visible: =!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version, id_status_archivo.Value="4"))
+                        Visible: =!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version,entrega= varSelectedDoc.entrega, id_status_archivo.Value="4"))
                         Width: =20
                         X: =288
                         Y: =16
@@ -1927,7 +1927,7 @@
                         Height: =15
                         Icon: =Icon.View
                         OnSelect: =Select(Parent)
-                        Visible: =!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version, id_status_archivo.Value="4"))
+                        Visible: =!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version,entrega= varSelectedDoc.entrega, id_status_archivo.Value="4"))
                         Width: =15
                         X: =293
                         Y: =40
@@ -1942,13 +1942,13 @@
                         HoverColor: =primary
                         HoverFill: =RGBA(0, 0, 0, 0.15)
                         OnSelect: |-
-                            =UpdateContext({varObsItems:Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version, id_status_archivo.Value="4"), varRegistroObsPopup:true})
+                            =UpdateContext({varObsItems:Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version,entrega= varSelectedDoc.entrega, id_status_archivo.Value="4"), varRegistroObsPopup:true})
                         PressedColor: =Self.Color
                         PressedFill: =
                         Size: =8
                         Text: ="Ver Observación"
                         Underline: =true
-                        Visible: =!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version, id_status_archivo.Value="4"))
+                        Visible: =!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version,entrega= varSelectedDoc.entrega, id_status_archivo.Value="4"))
                         Width: =110
                         X: =288
                         Y: =38
@@ -1963,7 +1963,7 @@
                         OnSelect: =Select(Parent)
                         Size: =12
                         Text: ="Conforme"
-                        Visible: =IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version, id_status_archivo.Value="4"))
+                        Visible: =IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version,entrega= varSelectedDoc.entrega, id_status_archivo.Value="4"))
                         Width: =120
                         X: =295
                         Y: =14
@@ -1973,7 +1973,7 @@
                         Height: =20
                         Image: =check
                         OnSelect: =Select(Parent)
-                        Visible: =IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version, id_status_archivo.Value="4"))
+                        Visible: =IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varSelectedDoc.codigo, version=varSelectedDoc.version,entrega= varSelectedDoc.entrega, id_status_archivo.Value="4"))
                         Width: =20
                         X: =288
                         Y: =16
@@ -2149,7 +2149,7 @@
 
                 archivos_gallery_sidebar_docRev_ra_4 As gallery.galleryVertical:
                     DelayItemLoading: =true
-                    Items: =Filter(DEV_Archivos, id_documento.Value = Text(varSelectedDoc.ID), version=varSelectedDoc.version, codigo= varSelectedDoc.codigo)
+                    Items: =Filter(DEV_Archivos, id_documento.Value = Text(varSelectedDoc.ID), version=varSelectedDoc.version,entrega= varSelectedDoc.entrega, codigo= varSelectedDoc.codigo)
                     Layout: =Layout.Vertical
                     LayoutMinHeight: =287
                     LayoutMinWidth: =320
