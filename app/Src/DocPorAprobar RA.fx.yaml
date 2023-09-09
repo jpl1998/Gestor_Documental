@@ -666,7 +666,7 @@
                                             Height: =Parent.Height*60%
                                             Icon: =Icon.View
                                             OnSelect: |-
-                                                =If(menu_filter_docRev_ra.Selected.Value="Pendientes",
+                                                =If(menu_filter_docRev_ra_2.Selected.Value="Pendientes",
                                                 UpdateContext({varSelectedDoc:ThisItem, varSidebarPopup:true}),
                                                 Set(varSidebarInformativoPopup, true);
                                                 Set(varDocSide, ThisItem);
@@ -817,6 +817,7 @@
                         =Filter(
                             DEV_Actor,
                             version = varSelectedDoc.version,
+                            entrega = varSelectedDoc.entrega,
                             id_documento.Value = Text(varSelectedDoc.ID),
                             id_funcion.Value = "Revisor"
                         )
@@ -976,6 +977,7 @@
                         =Filter(
                             DEV_Actor,
                             version = varSelectedDoc.version,
+                            entrega = varSelectedDoc.entrega,
                             id_documento.Value = Text(varSelectedDoc.ID),
                             id_funcion.Value = "Aprobador"
                         )
@@ -1135,6 +1137,7 @@
                         =Filter(
                             DEV_Actor,
                             version = varSelectedDoc.version,
+                            entrega = varSelectedDoc.entrega,
                             id_documento.Value = Text(varSelectedDoc.ID),
                             id_funcion.Value = "Elaborador"
                         )
@@ -1300,7 +1303,7 @@
 
                 archivos_gallery_sidebar_docRev_ra_3 As gallery.galleryVertical:
                     DelayItemLoading: =true
-                    Items: =Filter(DEV_Archivos, id_documento.Value = Text(varSelectedDoc.ID), version=varSelectedDoc.version, codigo= varSelectedDoc.codigo)
+                    Items: =Filter(DEV_Archivos, id_documento.Value = Text(varSelectedDoc.ID), version=varSelectedDoc.version, entrega = varSelectedDoc.entrega, codigo= varSelectedDoc.codigo)
                     Layout: =Layout.Vertical
                     LayoutMinHeight: =287
                     LayoutMinWidth: =320
@@ -1844,7 +1847,7 @@
 
                 archivos_gallery_sidebar_docRev_op_16 As gallery.galleryVertical:
                     DelayItemLoading: =true
-                    Items: =Filter(DEV_Archivos, id_documento.Value = Text(varDocSide.ID), version=varDocSide.version, codigo= varDocSide.codigo)
+                    Items: =Filter(DEV_Archivos, id_documento.Value = Text(varDocSide.ID), version=varDocSide.version, entrega= varDocSide.entrega, codigo= varDocSide.codigo)
                     Layout: =Layout.Vertical
                     LayoutMinHeight: =287
                     LayoutMinWidth: =320
@@ -2368,6 +2371,7 @@
                         =Filter(
                             DEV_Actor,
                             version = varDocSide.version,
+                            entrega= varDocSide.entrega,
                             id_documento.Value = Text(varDocSide.ID),
                             id_funcion.Value = "Aprobador"
                         )
@@ -2527,6 +2531,7 @@
                         =Filter(
                             DEV_Actor,
                             version = varDocSide.version,
+                            entrega= varDocSide.entrega,
                             id_documento.Value = Text(varDocSide.ID),
                             id_funcion.Value = "Elaborador"
                         )
@@ -2612,6 +2617,7 @@
                         =Filter(
                             DEV_Actor,
                             version = varDocSide.version,
+                            entrega= varDocSide.entrega,
                             id_documento.Value = Text(varDocSide.ID),
                             id_funcion.Value = "Revisor"
                         )
@@ -2887,7 +2893,7 @@
 
                     docPrincipal_revision_ra_5 As gallery.galleryVertical:
                         DelayItemLoading: =true
-                        Items: =Filter(DEV_Archivos, id_documento.Value = Text(varSelectedDoc.ID), version=varSelectedDoc.version, codigo= varSelectedDoc.codigo, tipo_documento="Principal")
+                        Items: =Filter(DEV_Archivos, id_documento.Value = Text(varSelectedDoc.ID), version=varSelectedDoc.version, entrega = varSelectedDoc.entrega, codigo= varSelectedDoc.codigo, tipo_documento="Principal")
                         Layout: =Layout.Vertical
                         LayoutMinHeight: =50
                         LayoutMinWidth: =300
@@ -3121,7 +3127,7 @@
 
                     docPrincipal_revision_ra_6 As gallery.galleryVertical:
                         DelayItemLoading: =true
-                        Items: =Filter(DEV_Archivos, id_documento.Value = Text(varSelectedDoc.ID), version=varSelectedDoc.version, codigo= varSelectedDoc.codigo, tipo_documento="Flujograma")
+                        Items: =Filter(DEV_Archivos, id_documento.Value = Text(varSelectedDoc.ID), version=varSelectedDoc.version, entrega = varSelectedDoc.entrega, codigo= varSelectedDoc.codigo, tipo_documento="Flujograma")
                         Layout: =Layout.Vertical
                         LayoutMinHeight: =50
                         LayoutMinWidth: =300
@@ -3354,7 +3360,7 @@
 
                     docPrincipal_revision_ra_7 As gallery.galleryVertical:
                         DelayItemLoading: =true
-                        Items: =Filter(DEV_Archivos, id_documento.Value = Text(varSelectedDoc.ID), version=varSelectedDoc.version, codigo= varSelectedDoc.codigo, tipo_documento="RCKI")
+                        Items: =Filter(DEV_Archivos, id_documento.Value = Text(varSelectedDoc.ID), version=varSelectedDoc.version, entrega = varSelectedDoc.entrega, codigo= varSelectedDoc.codigo, tipo_documento="RCKI")
                         Layout: =Layout.Vertical
                         LayoutMinHeight: =50
                         LayoutMinWidth: =300
@@ -3617,7 +3623,8 @@
                                     nro_mod: Coalesce(First(SortByColumns(Filter(DEV_Modificacion_estatus_documento, id_archivo.Value = First(varArchivoId).Value, codigo = archivo.codigo,version = archivo.version, id_interlocutor.Value =Text(varInterlocutorId)), "nro_mod",SortOrder.Descending)).nro_mod,0)+1,
                                     'fecha y hora':Now(),
                                     ind_inact: "Activo",
-                                    ind_mod: "i"
+                                    ind_mod: "i",
+                                    entrega: varSelectedDoc.entrega
                                 }
                             )
                         );
@@ -3645,7 +3652,8 @@
                                     ind_mod: "i",
                                     id_estatus_documento: {Id: 4, Value: 4},
                                     id_documento: {Id: varSelectedDoc.ID, Value: varSelectedDoc.ID},
-                                    id_doc:varSelectedDoc.ID
+                                    id_doc:varSelectedDoc.ID,
+                                    entrega: varSelectedDoc.entrega
                                 }
                             );
                             Necesidaddenotificarlaaprobacióntotaldeldocumento.Run(Concat(elaborador_evaluacion_sidebar_ra_1.AllItems, mail_elaborador_ra_4,";"),Concat(revisor_evaluacion_sidebar_ra_1.AllItems,mail_revisor_ra_2,";"),Concat(aprobador_evaluacion_sidebar_ra_1.AllItems,mail_aprobador_ra_1,";"),Now(),varSelectedDoc.ID,Concat(revisor_evaluacion_sidebar_ra_1.AllItems,id_interlocutor.Value,";"),Concat(aprobador_evaluacion_sidebar_ra_1.AllItems,id_interlocutor.Value,";"))
@@ -3699,7 +3707,8 @@
                                     nro_mod: Coalesce(First(SortByColumns(Filter(DEV_Modificacion_estatus_documento, id_archivo.Value = First(varArchivoId).Value, codigo = archivo.codigo,version = archivo.version, id_interlocutor.Value =Text(varInterlocutorId)), "nro_mod",SortOrder.Descending)).nro_mod,0)+1,
                                     'fecha y hora':Now(),
                                     ind_inact: "Activo",
-                                    ind_mod: "i"
+                                    ind_mod: "i",
+                                    entrega: varSelectedDoc.entrega
                                 }
                         );
                         If(Or(archivo.tipo_documento="Principal" && varRevPrincipal.estado="Observado", archivo.tipo_documento="Flujograma" && varRevFlujograma.estado="Observado", archivo.tipo_documento="RCKI" && varRevRcki.estado="Observado"),
@@ -3758,7 +3767,8 @@
                                     ind_mod: "i",
                                     id_estatus_documento: {Id: 3, Value: 3},
                                     id_documento: {Id: varSelectedDoc.ID, Value: varSelectedDoc.ID},
-                                    id_doc:varSelectedDoc.ID
+                                    id_doc:varSelectedDoc.ID,
+                                    entrega: varSelectedDoc.entrega
                                 }
                             );
                             Informarobservacionesdedocumento.Run(Concat(elaborador_evaluacion_sidebar_ra.AllItems,mail_elaborador_ra,";"),varSelectedDoc.codigo, varSelectedDoc.version, varSelectedDoc.Nombre, comentario_observacion_ra_3.Text)
@@ -3787,7 +3797,8 @@
                                     ind_mod: "i",
                                     id_estatus_documento: {Id: 4, Value: 4},
                                     id_documento: {Id: varSelectedDoc.ID, Value: varSelectedDoc.ID},
-                                    id_doc:varSelectedDoc.ID
+                                    id_doc:varSelectedDoc.ID,
+                                    entrega: varSelectedDoc.entrega
                                 }
                             );
                             Necesidaddenotificarlaaprobacióntotaldeldocumento.Run(Concat(elaborador_evaluacion_sidebar_ra_1.AllItems, mail_elaborador_ra_4,";"),Concat(revisor_evaluacion_sidebar_ra_1.AllItems,mail_revisor_ra_2,";"),Concat(aprobador_evaluacion_sidebar_ra_1.AllItems,mail_aprobador_ra_1,";"),Now(),varSelectedDoc.ID,Concat(revisor_evaluacion_sidebar_ra_1.AllItems,id_interlocutor.Value,";"),Concat(aprobador_evaluacion_sidebar_ra_1.AllItems,id_interlocutor.Value,";"))
@@ -3933,7 +3944,8 @@
                                     nro_mod: Coalesce(First(SortByColumns(Filter(DEV_Modificacion_estatus_documento, id_archivo.Value = First(varArchivoId).Value, codigo = archivo.codigo,version = archivo.version, id_interlocutor.Value =Text(varInterlocutorId)), "nro_mod",SortOrder.Descending)).nro_mod,0)+1,
                                     'fecha y hora':Now(),
                                     ind_inact: "Activo",
-                                    ind_mod: "i"
+                                    ind_mod: "i",
+                                    entrega: varSelectedDoc.entrega
                                 }
                             ),
                             Patch(
@@ -3974,7 +3986,8 @@
                             ind_mod: "i",
                             id_estatus_documento: {Id: 3, Value: 3},
                             id_documento: {Id: varSelectedDoc.ID, Value: varSelectedDoc.ID},
-                            id_doc:varSelectedDoc.ID
+                            id_doc:varSelectedDoc.ID,
+                            entrega: varSelectedDoc.entrega
                         }
                     );
                     Informarobservacionesdedocumento.Run(Concat(elaborador_evaluacion_sidebar_ra.AllItems,mail_elaborador_ra,";"),varSelectedDoc.codigo, varSelectedDoc.version, varSelectedDoc.Nombre, comentario_observacion_ra_3.Text);
