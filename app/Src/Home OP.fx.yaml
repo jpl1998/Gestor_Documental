@@ -3337,9 +3337,8 @@
 
                         FormEditPrincipal_2 As form:
                             DataSource: =DEV_Archivos
-                            DefaultMode: =If(varNewFormPrincipal, FormMode.New, FormMode.Edit)
+                            DefaultMode: =FormMode.New
                             Height: =106
-                            Item: =LookUp(DEV_Archivos, id_documento.Value = Text(varDocSide.ID) && codigo= varDocSide.codigo && version=varDocSide.version && tipo_documento="Principal")
                             NumberOfColumns: =1
                             Visible: =IsEmpty(PrincipalDataCardValue_6.Attachments)
                             Width: =500
@@ -3452,9 +3451,8 @@
 
                         FormEditFlujograma_2 As form:
                             DataSource: =DEV_Archivos
-                            DefaultMode: =If(varNewFormFlujograma, FormMode.New, FormMode.Edit)
+                            DefaultMode: =FormMode.New
                             Height: =111
-                            Item: =LookUp(DEV_Archivos, id_documento.Value = Text(varDocSide.ID) && codigo= varDocSide.codigo && version=varDocSide.version && tipo_documento="Flujograma")
                             NumberOfColumns: =1
                             Visible: =IsEmpty(FlujoDataCardValue_6.Attachments)
                             Width: =500
@@ -3568,9 +3566,8 @@
 
                         FormEditRcki_2 As form:
                             DataSource: =DEV_Archivos
-                            DefaultMode: =If(varNewFormRcki, FormMode.New, FormMode.Edit)
+                            DefaultMode: =FormMode.New
                             Height: =111
-                            Item: =LookUp(DEV_Archivos, id_documento.Value = Text(varDocSide.ID) && codigo= varDocSide.codigo && version=varDocSide.version && tipo_documento="RCKI")
                             NumberOfColumns: =1
                             Visible: =IsEmpty(RckiDataCardValue_6.Attachments)
                             Width: =500
@@ -4450,14 +4447,15 @@
                                             id_macroproceso: ComboBox2_42.Selected,
                                             Empresa: cbo_empresa_4.Selected,
                                             Solicitante: cbo_solicitante_8.Selected,
-                                            Dueno_Proceso: cbo_dueñoprocesso_4.Selected.Value
+                                            Dueno_Proceso: cbo_dueñoprocesso_4.Selected.Value,
+                                            entrega: varDocSide.entrega + 1
                                         }
                                     )
                                 );
                                 //DOCUMENTO PRINCIPAL
                                 Patch(
                                     DEV_Archivos,
-                                    LookUp(DEV_Archivos, id_documento.Value = Text(varDocSide.ID) && codigo= varDocSide.codigo && version=varDocSide.version && tipo_documento="Principal"),
+                                    Defaults(DEV_Archivos),
                                     {
                                         id_documento: {
                                             Id: varDocID.ID,
@@ -4466,14 +4464,15 @@
                                         codigo: varDocID.codigo,
                                         version: varDocID.version,
                                         descripcion: varDocID.Nombre,
-                                        tipo_documento: "Principal"
+                                        tipo_documento: "Principal",
+                                        entrega: varDocID.entrega
                                     },
                                     FormEditPrincipal_2.Updates
                                 );
                                 //FLUJOGRAMA
                                 Patch(
                                     DEV_Archivos,
-                                    LookUp(DEV_Archivos, id_documento.Value = Text(varDocSide.ID) && codigo= varDocSide.codigo && version=varDocSide.version && tipo_documento="Flujograma"),
+                                    Defaults(DEV_Archivos),
                                     {
                                         id_documento: {
                                             Id: varDocID.ID,
@@ -4482,14 +4481,15 @@
                                         codigo: varDocID.codigo,
                                         version: varDocID.version,
                                         descripcion: varDocID.Nombre,
-                                        tipo_documento: "Flujograma"
+                                        tipo_documento: "Flujograma",
+                                        entrega: varDocID.entrega
                                     },
                                     FormEditFlujograma_2.Updates
                                 );
                                 //RCKI
                                 Patch(
                                     DEV_Archivos,
-                                    LookUp(DEV_Archivos, id_documento.Value = Text(varDocSide.ID) && codigo= varDocSide.codigo && version=varDocSide.version && tipo_documento="RCKI"),
+                                    Defaults(DEV_Archivos),
                                     {
                                         id_documento: {
                                             Id: varDocID.ID,
@@ -4498,15 +4498,10 @@
                                         codigo: varDocID.codigo,
                                         version: varDocID.version,
                                         descripcion: varDocID.Nombre,
-                                        tipo_documento: "RCKI"
+                                        tipo_documento: "RCKI",
+                                        entrega: varDocID.entrega
                                     },
                                     FormEditRcki_2.Updates
-                                );
-                                
-                                //QUITAR ACTORES ANTERIORES
-                                RemoveIf(
-                                    DEV_Actor,
-                                    id_documento.Value = Text(varDocSide.ID) && codigo = varDocSide.codigo && version = varDocSide.version
                                 );
                                 
                                 Concurrent(
@@ -4536,7 +4531,8 @@
                                                 codigo: varDocID.codigo,
                                                 version: varDocID.version,
                                                 id_interlocutor: {Id: LookUp(DEV_Interlocutor,Email.Email = user.email.Email).ID, Value: LookUp(DEV_Interlocutor,Email.Email = user.email.Email).ID},
-                                                id_funcion: {Id: 3, Value: 3}
+                                                id_funcion: {Id: 3, Value: 3},
+                                                entrega: varDocID.entrega
                                             }
                                         )
                                     ),
@@ -4566,7 +4562,8 @@
                                                 codigo: varDocID.codigo,
                                                 version: varDocID.version,
                                                 id_interlocutor: {Id: LookUp(DEV_Interlocutor,Email.Email = user.email.Email).ID, Value: LookUp(DEV_Interlocutor,Email.Email = user.email.Email).ID},
-                                                id_funcion: {Id: 1, Value: 1}
+                                                id_funcion: {Id: 1, Value: 1},
+                                                entrega: varDocID.entrega
                                             }
                                         )
                                     ),
@@ -4597,14 +4594,15 @@
                                                 codigo: varDocID.codigo,
                                                 version: varDocID.version,
                                                 id_interlocutor: {Id: LookUp(DEV_Interlocutor,Email.Email = user.email.Email).ID, Value: LookUp(DEV_Interlocutor,Email.Email = user.email.Email).ID},
-                                                id_funcion: {Id: 2, Value: 2}
+                                                id_funcion: {Id: 2, Value: 2},
+                                                entrega: varDocID.entrega
                                             }
                                         )
                                     );
                                 );
                                 
                                 UpdateIf(
-                                    DEV_Modificacion_estatus_documento, codigo = varDocSide.codigo && version = varDocSide.version,
+                                    DEV_Modificacion_estatus_documento, codigo = varDocSide.codigo,
                                     {
                                         ind_inact: "Inactivo",
                                         ind_mod: "u"
@@ -4630,7 +4628,8 @@
                                     'fecha y hora': Now(),
                                     ind_inact:"Activo",
                                     ind_mod:"i",
-                                    id_doc:varDocID.ID}
+                                    id_doc:varDocID.ID,
+                                    entrega: varDocID.entrega}
                                 );
                                 
                                 Set(
