@@ -76422,36 +76422,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Home RA'.popup_revisar_entrega_4.container_revisar_entrega_4.Icon3_12.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Home RA'.popup_revisar_entrega_4.container_revisar_entrega_4.Icon3_12.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Home RA",
-                "type": "'Home RA'.popup_revisar_entrega_4.container_revisar_entrega_4.Icon3_12"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "'Home RA'.popup_revisar_entrega_4.container_revisar_entrega_4.Icon3_12.TabIndex"
                 }
               ],
@@ -76482,19 +76452,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Home RA'.popup_revisar_entrega_4.container_revisar_entrega_4.menu_sidebar_docRev_op_9.items_menu_sidebar_docRev_op_9.AccessibleLabel"
+                  "fullyQualifiedName": "'Home RA'.popup_revisar_entrega_4.container_revisar_entrega_4.Icon3_12.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Home RA'.popup_revisar_entrega_4.container_revisar_entrega_4.menu_sidebar_docRev_op_9.items_menu_sidebar_docRev_op_9.AccessibleLabel",
+                  "fullyQualifiedName": "'Home RA'.popup_revisar_entrega_4.container_revisar_entrega_4.Icon3_12.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Home RA",
-                "type": "'Home RA'.popup_revisar_entrega_4.container_revisar_entrega_4.menu_sidebar_docRev_op_9.items_menu_sidebar_docRev_op_9"
+                "type": "'Home RA'.popup_revisar_entrega_4.container_revisar_entrega_4.Icon3_12"
               }
             }
           ],
@@ -76542,19 +76512,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Home RA'.popup_revisar_entrega_4.container_revisar_entrega_4.archivos_gallery_sidebar_docRev_op_9.AccessibleLabel"
+                  "fullyQualifiedName": "'Home RA'.popup_revisar_entrega_4.container_revisar_entrega_4.menu_sidebar_docRev_op_9.items_menu_sidebar_docRev_op_9.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Home RA'.popup_revisar_entrega_4.container_revisar_entrega_4.archivos_gallery_sidebar_docRev_op_9.AccessibleLabel",
+                  "fullyQualifiedName": "'Home RA'.popup_revisar_entrega_4.container_revisar_entrega_4.menu_sidebar_docRev_op_9.items_menu_sidebar_docRev_op_9.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Home RA",
-                "type": "'Home RA'.popup_revisar_entrega_4.container_revisar_entrega_4.archivos_gallery_sidebar_docRev_op_9"
+                "type": "'Home RA'.popup_revisar_entrega_4.container_revisar_entrega_4.menu_sidebar_docRev_op_9.items_menu_sidebar_docRev_op_9"
               }
             }
           ],
@@ -76602,19 +76572,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Home RA'.popup_revisar_entrega_4.container_revisar_entrega_4.elaborador_evaluacion_sidebar_op_9.AccessibleLabel"
+                  "fullyQualifiedName": "'Home RA'.popup_revisar_entrega_4.container_revisar_entrega_4.archivos_gallery_sidebar_docRev_op_9.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Home RA'.popup_revisar_entrega_4.container_revisar_entrega_4.elaborador_evaluacion_sidebar_op_9.AccessibleLabel",
+                  "fullyQualifiedName": "'Home RA'.popup_revisar_entrega_4.container_revisar_entrega_4.archivos_gallery_sidebar_docRev_op_9.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Home RA",
-                "type": "'Home RA'.popup_revisar_entrega_4.container_revisar_entrega_4.elaborador_evaluacion_sidebar_op_9"
+                "type": "'Home RA'.popup_revisar_entrega_4.container_revisar_entrega_4.archivos_gallery_sidebar_docRev_op_9"
               }
             }
           ],
@@ -76662,19 +76632,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Home RA'.popup_revisar_entrega_4.container_revisar_entrega_4.revisor_evaluacion_sidebar_op_9.AccessibleLabel"
+                  "fullyQualifiedName": "'Home RA'.popup_revisar_entrega_4.container_revisar_entrega_4.elaborador_evaluacion_sidebar_op_9.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Home RA'.popup_revisar_entrega_4.container_revisar_entrega_4.revisor_evaluacion_sidebar_op_9.AccessibleLabel",
+                  "fullyQualifiedName": "'Home RA'.popup_revisar_entrega_4.container_revisar_entrega_4.elaborador_evaluacion_sidebar_op_9.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Home RA",
-                "type": "'Home RA'.popup_revisar_entrega_4.container_revisar_entrega_4.revisor_evaluacion_sidebar_op_9"
+                "type": "'Home RA'.popup_revisar_entrega_4.container_revisar_entrega_4.elaborador_evaluacion_sidebar_op_9"
               }
             }
           ],
@@ -76722,19 +76692,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Home RA'.popup_revisar_entrega_4.container_revisar_entrega_4.aprobador_evaluacion_sidebar_op_9.AccessibleLabel"
+                  "fullyQualifiedName": "'Home RA'.popup_revisar_entrega_4.container_revisar_entrega_4.revisor_evaluacion_sidebar_op_9.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Home RA'.popup_revisar_entrega_4.container_revisar_entrega_4.aprobador_evaluacion_sidebar_op_9.AccessibleLabel",
+                  "fullyQualifiedName": "'Home RA'.popup_revisar_entrega_4.container_revisar_entrega_4.revisor_evaluacion_sidebar_op_9.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Home RA",
-                "type": "'Home RA'.popup_revisar_entrega_4.container_revisar_entrega_4.aprobador_evaluacion_sidebar_op_9"
+                "type": "'Home RA'.popup_revisar_entrega_4.container_revisar_entrega_4.revisor_evaluacion_sidebar_op_9"
               }
             }
           ],
@@ -76776,6 +76746,36 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Home RA'.popup_revisar_entrega_4.container_revisar_entrega_4.aprobador_evaluacion_sidebar_op_9.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Home RA'.popup_revisar_entrega_4.container_revisar_entrega_4.aprobador_evaluacion_sidebar_op_9.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Home RA",
+                "type": "'Home RA'.popup_revisar_entrega_4.container_revisar_entrega_4.aprobador_evaluacion_sidebar_op_9"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 5
         },
         {
           "locations": [
