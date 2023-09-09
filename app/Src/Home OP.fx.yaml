@@ -5630,7 +5630,8 @@
                         'fecha y hora': Now(),
                         ind_inact:"Activo",
                         ind_mod:"i",
-                        id_doc:varDocSide.ID}
+                        id_doc:varDocSide.ID,
+                        entrega: varDocSide.entrega}
                     );
                     
                     Patch(
@@ -5990,7 +5991,33 @@
                 Height: =52
                 HoverFill: =ColorFade(primary,-20%)
                 OnSelect: |
-                    =Necesidaddenotificacióndedifusióndepublicacióndedocumentooficial.Run(Concat(Usuarios_difusion_2.SelectedItems,Mail,";"));
+                    =Set(varDifusion,
+                        Patch(
+                            DEV_Difusion,
+                            Defaults(DEV_Difusion),
+                            {
+                                nro_difusion: First(SortByColumns(Filter(DEV_Difusion,id_documento.Value=Text(varDocSide.ID)),"nro_difusion",SortOrder.Descending)).nro_difusion+1,
+                                tipo_difusion: "Por Usuario",
+                                fecha: Today(),
+                                id_documento: {Id:varDocSide.ID, Value:varDocSide.ID}
+                            }
+                        )
+                    );
+                    
+                    ForAll(
+                        Usuarios_difusion_2.SelectedItems As user,
+                        Patch(
+                            DEV_Difusion_Usuario,
+                            Defaults(DEV_Difusion_Usuario),
+                            {
+                                id_difusion: {Id: varDifusion.ID, Value: varDifusion.ID},
+                                Nombre: user.DisplayName,
+                                Cargo: user.JobTitle,
+                                Area: user.Department
+                            }
+                        )
+                    );
+                    Necesidaddenotificacióndedifusióndepublicacióndedocumentooficial.Run(Concat(Usuarios_difusion_2.SelectedItems,Mail,";"));
                     UpdateContext({varDifusionUsuario:false})
                 Size: =16
                 Text: ="Realizar Difusión"
@@ -6086,7 +6113,33 @@
                 Height: =52
                 HoverFill: =ColorFade(primary,-20%)
                 OnSelect: |-
-                    =Necesidaddenotificacióndedifusióndepublicacióndedocumentooficial.Run(CorreosDifusion.Text);
+                    =Set(varDifusion,
+                        Patch(
+                            DEV_Difusion,
+                            Defaults(DEV_Difusion),
+                            {
+                                nro_difusion: First(SortByColumns(Filter(DEV_Difusion,id_documento.Value=Text(varDocSide.ID)),"nro_difusion",SortOrder.Descending)).nro_difusion+1,
+                                tipo_difusion: "Masiva por correo",
+                                fecha: Today(),
+                                id_documento: {Id:varDocSide.ID, Value:varDocSide.ID}
+                            }
+                        )
+                    );
+                    
+                    ForAll(
+                        Split(CorreosDifusion.Text,";") As user,
+                        Patch(
+                            DEV_Difusion_Usuario,
+                            Defaults(DEV_Difusion_Usuario),
+                            {
+                                id_difusion: {Id: varDifusion.ID, Value: varDifusion.ID},
+                                Nombre: UsuáriosdoOffice365.UserProfileV2(user.Value).displayName,
+                                Cargo: UsuáriosdoOffice365.UserProfileV2(user.Value).jobTitle,
+                                Area: UsuáriosdoOffice365.UserProfileV2(user.Value).department
+                            }
+                        )
+                    );
+                    Necesidaddenotificacióndedifusióndepublicacióndedocumentooficial.Run(CorreosDifusion.Text);
                     UpdateContext({varDifusionCR:false})
                 Size: =16
                 Text: ="Realizar Difusión"
