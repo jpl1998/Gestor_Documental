@@ -55502,7 +55502,7 @@
                 },
                 "region": {
                   "charLength": 39,
-                  "charOffset": 578,
+                  "charOffset": 620,
                   "snippet": {
                     "text": "Value(user.'id_interlocutor: ID'.Value)"
                   }
@@ -55542,7 +55542,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 576,
+                  "charOffset": 618,
                   "snippet": {
                     "text": "="
                   }
@@ -55582,7 +55582,7 @@
                 },
                 "region": {
                   "charLength": 39,
-                  "charOffset": 1126,
+                  "charOffset": 1210,
                   "snippet": {
                     "text": "Value(user.'id_interlocutor: ID'.Value)"
                   }
@@ -55622,7 +55622,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 1124,
+                  "charOffset": 1208,
                   "snippet": {
                     "text": "="
                   }
@@ -55662,7 +55662,7 @@
                 },
                 "region": {
                   "charLength": 39,
-                  "charOffset": 1670,
+                  "charOffset": 1796,
                   "snippet": {
                     "text": "Value(user.'id_interlocutor: ID'.Value)"
                   }
@@ -55702,7 +55702,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 1668,
+                  "charOffset": 1794,
                   "snippet": {
                     "text": "="
                   }

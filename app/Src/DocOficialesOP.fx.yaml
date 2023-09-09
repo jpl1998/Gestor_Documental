@@ -5910,7 +5910,8 @@
                                             id_documento.Value = Text(varDocSide.ID),
                                             codigo = varDocSide.codigo,
                                             version = varDocSide.version,
-                                            id_funcion.Value = "Elaborador"
+                                            id_funcion.Value = "Elaborador",
+                                            entrega = varDocSide.entrega
                                         ) As user,
                                         Collect(
                                             colElaboradores,
@@ -5926,7 +5927,8 @@
                                             id_documento.Value = Text(varDocSide.ID),
                                             codigo = varDocSide.codigo,
                                             version = varDocSide.version,
-                                            id_funcion.Value = "Aprobador"
+                                            id_funcion.Value = "Aprobador",
+                                            entrega = varDocSide.entrega
                                         ) As user,
                                         Collect(
                                             colAprobadores,
@@ -5942,7 +5944,8 @@
                                             id_documento.Value = Text(varDocSide.ID),
                                             codigo = varDocSide.codigo,
                                             version = varDocSide.version,
-                                            id_funcion.Value = "Revisor"
+                                            id_funcion.Value = "Revisor",
+                                            entrega = varDocSide.entrega
                                         ) As user,
                                         Collect(
                                             colRevisores,

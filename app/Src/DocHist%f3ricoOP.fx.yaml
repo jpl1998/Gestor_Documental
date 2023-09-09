@@ -4117,6 +4117,7 @@
                         =Filter(
                             DEV_Actor,
                             version = varDocSide.version,
+                            entrega = varDocSide.entrega,
                             id_documento.Value = Text(varDocSide.ID),
                             id_funcion.Value = "Aprobador"
                         )
@@ -4257,7 +4258,7 @@
                         Text: |-
                             =If(!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version,entrega = varDocSide.entrega)),
                             If(!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version,entrega = varDocSide.entrega, id_status_archivo.Value="4")), "Observado", "Conforme"))
-                        Visible: =!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version,entrega = varDocSide.entrega, id_status_archivo.Value="4" || id_status_archivo.Value="3"))
+                        Visible: =!IsEmpty(Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version, entrega = varDocSide.entrega, id_status_archivo.Value="4" || id_status_archivo.Value="3"))
                         Width: =120
                         X: =293
                         Y: =14
@@ -4290,6 +4291,7 @@
                         =Filter(
                             DEV_Actor,
                             version = varDocSide.version,
+                            entrega = varDocSide.entrega,
                             id_documento.Value = Text(varDocSide.ID),
                             id_funcion.Value = "Elaborador"
                         )
@@ -4374,6 +4376,7 @@
                         =Filter(
                             DEV_Actor,
                             version = varDocSide.version,
+                            entrega = varDocSide.entrega,
                             id_documento.Value = Text(varDocSide.ID),
                             id_funcion.Value = "Revisor"
                         )
