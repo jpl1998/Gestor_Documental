@@ -3625,7 +3625,7 @@
 
                 archivos_gallery_sidebar_docRev_op As gallery.galleryVertical:
                     DelayItemLoading: =true
-                    Items: =Filter(DEV_Archivos, id_documento.Value = Text(varDocSide.ID), version=varDocSide.version, codigo= varDocSide.codigo)
+                    Items: =Filter(DEV_Archivos, id_documento.Value = Text(varDocSide.ID), version=varDocSide.version, codigo= varDocSide.codigo, entrega = varDocSide.entrega)
                     Layout: =Layout.Vertical
                     LayoutMinHeight: =287
                     LayoutMinWidth: =320
@@ -4248,6 +4248,7 @@
                         =Filter(
                             DEV_Actor,
                             version = varDocSide.version,
+                            entrega = varDocSide.entrega,
                             id_documento.Value = Text(varDocSide.ID),
                             id_funcion.Value = "Aprobador"
                         )
@@ -4421,6 +4422,7 @@
                         =Filter(
                             DEV_Actor,
                             version = varDocSide.version,
+                            entrega = varDocSide.entrega,
                             id_documento.Value = Text(varDocSide.ID),
                             id_funcion.Value = "Elaborador"
                         )
@@ -4505,6 +4507,7 @@
                         =Filter(
                             DEV_Actor,
                             version = varDocSide.version,
+                            entrega = varDocSide.entrega,
                             id_documento.Value = Text(varDocSide.ID),
                             id_funcion.Value = "Revisor"
                         )
