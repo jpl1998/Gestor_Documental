@@ -3011,7 +3011,10 @@
                         ZIndex: =2
 
                     archivo_open_container_sidebar_ra_21 As groupContainer.manualLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
                         DropShadow: =DropShadow.None
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
                         ZIndex: =3
 
                         open_archivo_icon_sidebar_16 As icon.OpenInNewWindow:
@@ -3042,7 +3045,10 @@
                             ZIndex: =2
 
                     archivo_download_container_sidebar_ra_21 As groupContainer.manualLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
                         DropShadow: =DropShadow.None
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
                         ZIndex: =4
 
                         download_archivo_icon_sidebar_16 As icon.OpenInNewWindow:

@@ -521,7 +521,7 @@
                                             IsBlank(varFilterMenu.fechaHasta) || varFilterMenu.fechaHasta>=fecha,
                                             ID in Filter(
                                                 DEV_Modificacion_estatus_proceso_doc,
-                                                ind_inact = "Activo" && id_estatus_documento.Value = "Por revisar" || id_estatus_documento.Value = "Observado"
+                                                ind_inact = "Activo" && (id_estatus_documento.Value = "Por revisar" || id_estatus_documento.Value = "Observado")
                                             ).id_doc,
                                             searchbar_docRev_ra.Text in Nombre
                                         )
