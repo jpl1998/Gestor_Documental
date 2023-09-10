@@ -4106,7 +4106,7 @@
                         HoverColor: =primary
                         HoverFill: =RGBA(0, 0, 0, 0.15)
                         OnSelect: |-
-                            =UpdateContext({varSelectedDofusion:ThisItem, varRevisarEntregaPopup:true})
+                            =UpdateContext({varSelectedDifusion:ThisItem, varRevisarDifusionPopup:true})
                         PressedColor: =Self.Color
                         PressedFill: =
                         Size: =10
@@ -9295,4 +9295,191 @@
                 X: =(Parent.Width-Self.Width)/2
                 Y: =297
                 ZIndex: =6
+
+    popup_revisar_difusion As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(0, 0, 0, 0.15)
+        Height: =768
+        Visible: =varRevisarDifusionPopup
+        Width: =1366
+        ZIndex: =27
+
+        Container34 As groupContainer.manualLayoutContainer:
+            Fill: =background
+            Height: =720
+            Width: =460
+            X: =(Parent.Width-Self.Width)/2
+            Y: =(Parent.Height-Self.Height)/2
+            ZIndex: =1
+
+            titulo_difusion As label:
+                Align: =Align.Center
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Bold
+                Size: =16
+                Text: ="Difusión N° " & varSelectedDifusion.nro_difusion
+                Width: =209
+                X: =(Parent.Width-Self.Width)/2
+                Y: =16
+                ZIndex: =1
+
+            Icon5 As icon.Cancel:
+                Color: =RGBA(0, 0, 0, 1)
+                Height: =30
+                Icon: =Icon.Cancel
+                OnSelect: |-
+                    =UpdateContext({varRevisarDifusionPopup:false})
+                PaddingBottom: =2
+                PaddingLeft: =2
+                PaddingRight: =2
+                PaddingTop: =2
+                Width: =30
+                X: =408
+                Y: =21
+                ZIndex: =2
+
+            fecha_difusion As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =25
+                Size: =12
+                Text: |-
+                    ="Fecha difusión:"
+                Width: =125
+                X: =19
+                Y: =64
+                ZIndex: =3
+
+            fecha_difusion_1 As label:
+                Font: =Font.'Segoe UI'
+                Height: =25
+                Size: =12
+                Text: =varSelectedDifusion.fecha
+                Width: =102
+                X: =144
+                Y: =64
+                ZIndex: =4
+
+            fecha_difusion_2 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =25
+                Size: =12
+                Text: |-
+                    ="Tipo:"
+                Width: =55
+                X: =251
+                Y: =64
+                ZIndex: =5
+
+            fecha_difusion_3 As label:
+                Font: =Font.'Segoe UI'
+                Height: =25
+                Size: =12
+                Text: =varSelectedDifusion.tipo_difusion
+                Width: =146
+                X: =306
+                Y: =64
+                ZIndex: =6
+
+            Button1 As button:
+                DisabledBorderColor: =RGBA(219, 219, 219, 1)
+                DisabledFill: =RGBA(255, 255, 255, 1)
+                DisplayMode: =DisplayMode.Disabled
+                Height: =584
+                Text: =""
+                Width: =412
+                X: =24
+                Y: =112
+                ZIndex: =7
+
+            titulo_difusion_1 As label:
+                Align: =Align.Center
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =25
+                Size: =12
+                Text: ="Lista de Difusión"
+                Width: =209
+                X: =(Parent.Width-Self.Width)/2
+                Y: =127
+                ZIndex: =8
+
+            titulo_difusion_2 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =26
+                Size: =12
+                Text: ="Usuarios"
+                Width: =148
+                X: =35
+                Y: =170
+                ZIndex: =9
+
+            Gallery2 As gallery.galleryVertical:
+                DelayItemLoading: =true
+                Height: =501
+                Items: =Filter(DEV_Difusion_Usuario,id_difusion.Value=Text(varSelectedDifusion.ID))
+                Layout: =Layout.Vertical
+                LoadingSpinner: =LoadingSpinner.Data
+                TemplateSize: =40
+                Width: =414
+                X: =24
+                Y: =195
+                ZIndex: =10
+
+                Label10 As label:
+                    Font: =Font.'Segoe UI'
+                    OnSelect: =Select(Parent)
+                    Size: =8
+                    Text: =ThisItem.Nombre
+                    Width: =168
+                    ZIndex: =1
+
+                Label10_1 As label:
+                    Font: =Font.'Segoe UI'
+                    OnSelect: =Select(Parent)
+                    Size: =8
+                    Text: =ThisItem.Cargo
+                    Width: =124
+                    X: =168
+                    ZIndex: =2
+
+                Label10_2 As label:
+                    Font: =Font.'Segoe UI'
+                    OnSelect: =Select(Parent)
+                    Size: =8
+                    Text: =ThisItem.Area
+                    Width: =112
+                    X: =292
+                    ZIndex: =3
+
+            Rectangle2 As rectangle:
+                Fill: =RGBA(0, 0, 0, 1)
+                Height: =1
+                Width: =388
+                X: =35
+                Y: =195
+                ZIndex: =11
+
+            titulo_difusion_3 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =26
+                Size: =12
+                Text: ="Cargo"
+                Width: =120
+                X: =186
+                Y: =170
+                ZIndex: =12
+
+            titulo_difusion_4 As label:
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =26
+                Size: =12
+                Text: ="Área"
+                Width: =116
+                X: =322
+                Y: =170
+                ZIndex: =13
 
