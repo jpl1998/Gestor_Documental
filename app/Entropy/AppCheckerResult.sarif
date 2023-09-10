@@ -52122,6 +52122,30 @@
               "message": {
                 "text": "Error occurred running rule app-InefficientDelayLoading."
               }
+            },
+            {
+              "associatedRule": {
+                "id": "app-InefficientDelayLoading",
+                "index": 11
+              },
+              "descriptor": {
+                "id": "app-InefficientDelayLoading"
+              },
+              "message": {
+                "text": "Error occurred running rule app-InefficientDelayLoading."
+              }
+            },
+            {
+              "associatedRule": {
+                "id": "app-InefficientDelayLoading",
+                "index": 11
+              },
+              "descriptor": {
+                "id": "app-InefficientDelayLoading"
+              },
+              "message": {
+                "text": "Error occurred running rule app-InefficientDelayLoading."
+              }
             }
           ]
         }
@@ -55263,7 +55287,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 1691,
+                  "charOffset": 1742,
                   "snippet": {
                     "text": "in"
                   }
@@ -55303,7 +55327,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 2196,
+                  "charOffset": 2247,
                   "snippet": {
                     "text": "in"
                   }
@@ -55343,7 +55367,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 2304,
+                  "charOffset": 2355,
                   "snippet": {
                     "text": "in"
                   }
@@ -55383,7 +55407,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 2729,
+                  "charOffset": 2780,
                   "snippet": {
                     "text": "in"
                   }
@@ -55423,7 +55447,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 2837,
+                  "charOffset": 2888,
                   "snippet": {
                     "text": "in"
                   }
@@ -55463,7 +55487,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 3286,
+                  "charOffset": 3337,
                   "snippet": {
                     "text": "in"
                   }
@@ -55503,7 +55527,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 3791,
+                  "charOffset": 3842,
                   "snippet": {
                     "text": "in"
                   }
@@ -55543,7 +55567,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 3899,
+                  "charOffset": 3950,
                   "snippet": {
                     "text": "in"
                   }
@@ -55583,7 +55607,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 4325,
+                  "charOffset": 4376,
                   "snippet": {
                     "text": "in"
                   }
@@ -55623,7 +55647,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 4433,
+                  "charOffset": 4484,
                   "snippet": {
                     "text": "in"
                   }
@@ -55663,7 +55687,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 5039,
+                  "charOffset": 5090,
                   "snippet": {
                     "text": "in"
                   }
@@ -55703,7 +55727,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 5544,
+                  "charOffset": 5595,
                   "snippet": {
                     "text": "in"
                   }
@@ -55743,7 +55767,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 5652,
+                  "charOffset": 5703,
                   "snippet": {
                     "text": "in"
                   }
@@ -55783,7 +55807,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 6078,
+                  "charOffset": 6129,
                   "snippet": {
                     "text": "in"
                   }
@@ -55823,7 +55847,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 6186,
+                  "charOffset": 6237,
                   "snippet": {
                     "text": "in"
                   }
@@ -76273,19 +76297,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "DocProcessoOP.popupformdoc.Container22.Container13_9.Container13_10.Container14_7.Container15_15.Container4.FiltroDuenoComboBox.AccessibleLabel"
+                  "fullyQualifiedName": "DocProcessoOP.popupformdoc.Container22.Container13_9.Container13_10.Container14_8.Container15_16.ComboBox2_13.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "DocProcessoOP.popupformdoc.Container22.Container13_9.Container13_10.Container14_7.Container15_15.Container4.FiltroDuenoComboBox.AccessibleLabel",
+                  "fullyQualifiedName": "DocProcessoOP.popupformdoc.Container22.Container13_9.Container13_10.Container14_8.Container15_16.ComboBox2_13.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "DocProcessoOP",
-                "type": "DocProcessoOP.popupformdoc.Container22.Container13_9.Container13_10.Container14_7.Container15_15.Container4.FiltroDuenoComboBox"
+                "type": "DocProcessoOP.popupformdoc.Container22.Container13_9.Container13_10.Container14_8.Container15_16.ComboBox2_13"
               }
             }
           ],
@@ -76303,19 +76327,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "DocProcessoOP.popupformdoc.Container22.Container13_9.Container13_10.Container14_7.Container15_15.cbo_dueñoprocesso.AccessibleLabel"
+                  "fullyQualifiedName": "DocProcessoOP.popupformdoc.Container22.Container13_9.Container13_10.Container14_8.Container15_17.ComboBox2_14.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "DocProcessoOP.popupformdoc.Container22.Container13_9.Container13_10.Container14_7.Container15_15.cbo_dueñoprocesso.AccessibleLabel",
+                  "fullyQualifiedName": "DocProcessoOP.popupformdoc.Container22.Container13_9.Container13_10.Container14_8.Container15_17.ComboBox2_14.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "DocProcessoOP",
-                "type": "DocProcessoOP.popupformdoc.Container22.Container13_9.Container13_10.Container14_7.Container15_15.cbo_dueñoprocesso"
+                "type": "DocProcessoOP.popupformdoc.Container22.Container13_9.Container13_10.Container14_8.Container15_17.ComboBox2_14"
               }
             }
           ],
@@ -76333,19 +76357,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "DocProcessoOP.popupformdoc.Container22.Container13_9.Container13_10.Container14_10.Container15_20.Container7.FiltroAlcanceComboBox.AccessibleLabel"
+                  "fullyQualifiedName": "DocProcessoOP.popupformdoc.Container22.Container13_9.Container13_10.Container14_11.Container15_22.TextInput2_2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "DocProcessoOP.popupformdoc.Container22.Container13_9.Container13_10.Container14_10.Container15_20.Container7.FiltroAlcanceComboBox.AccessibleLabel",
+                  "fullyQualifiedName": "DocProcessoOP.popupformdoc.Container22.Container13_9.Container13_10.Container14_11.Container15_22.TextInput2_2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "DocProcessoOP",
-                "type": "DocProcessoOP.popupformdoc.Container22.Container13_9.Container13_10.Container14_10.Container15_20.Container7.FiltroAlcanceComboBox"
+                "type": "DocProcessoOP.popupformdoc.Container22.Container13_9.Container13_10.Container14_11.Container15_22.TextInput2_2"
               }
             }
           ],
@@ -76363,19 +76387,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "DocProcessoOP.popupformdoc.Container22.Container13_9.Container13_10.Container14_10.Container15_20.ComboBox2_12.AccessibleLabel"
+                  "fullyQualifiedName": "DocProcessoOP.popupformdoc.Container22.Container13_9.Container13_10.Container14_11.Container15_23.DatePicker1_5.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "DocProcessoOP.popupformdoc.Container22.Container13_9.Container13_10.Container14_10.Container15_20.ComboBox2_12.AccessibleLabel",
+                  "fullyQualifiedName": "DocProcessoOP.popupformdoc.Container22.Container13_9.Container13_10.Container14_11.Container15_23.DatePicker1_5.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "DocProcessoOP",
-                "type": "DocProcessoOP.popupformdoc.Container22.Container13_9.Container13_10.Container14_10.Container15_20.ComboBox2_12"
+                "type": "DocProcessoOP.popupformdoc.Container22.Container13_9.Container13_10.Container14_11.Container15_23.DatePicker1_5"
               }
             }
           ],
@@ -76393,19 +76417,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "DocProcessoOP.popupformdoc.Container22.Container13_9.Container13_10.Container14_10.Container15_21.TextInput2_2.AccessibleLabel"
+                  "fullyQualifiedName": "DocProcessoOP.popupformdoc.Container22.Container13_9.Container13_10.Container14_10.Container15_21.Container7.FiltroAlcanceComboBox.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "DocProcessoOP.popupformdoc.Container22.Container13_9.Container13_10.Container14_10.Container15_21.TextInput2_2.AccessibleLabel",
+                  "fullyQualifiedName": "DocProcessoOP.popupformdoc.Container22.Container13_9.Container13_10.Container14_10.Container15_21.Container7.FiltroAlcanceComboBox.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "DocProcessoOP",
-                "type": "DocProcessoOP.popupformdoc.Container22.Container13_9.Container13_10.Container14_10.Container15_21.TextInput2_2"
+                "type": "DocProcessoOP.popupformdoc.Container22.Container13_9.Container13_10.Container14_10.Container15_21.Container7.FiltroAlcanceComboBox"
               }
             }
           ],
@@ -76423,19 +76447,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "DocProcessoOP.popupformdoc.Container22.Container13_9.Container13_10.Container14_11.Container15_22.DatePicker1_5.AccessibleLabel"
+                  "fullyQualifiedName": "DocProcessoOP.popupformdoc.Container22.Container13_9.Container13_10.Container14_10.Container15_21.ComboBox2_12.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "DocProcessoOP.popupformdoc.Container22.Container13_9.Container13_10.Container14_11.Container15_22.DatePicker1_5.AccessibleLabel",
+                  "fullyQualifiedName": "DocProcessoOP.popupformdoc.Container22.Container13_9.Container13_10.Container14_10.Container15_21.ComboBox2_12.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "DocProcessoOP",
-                "type": "DocProcessoOP.popupformdoc.Container22.Container13_9.Container13_10.Container14_11.Container15_22.DatePicker1_5"
+                "type": "DocProcessoOP.popupformdoc.Container22.Container13_9.Container13_10.Container14_10.Container15_21.ComboBox2_12"
               }
             }
           ],
@@ -76453,19 +76477,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "DocProcessoOP.popupformdoc.Container22.Container13_9.Container13_10.Container14_11.Container15_23.ComboBox2_13.AccessibleLabel"
+                  "fullyQualifiedName": "DocProcessoOP.popupformdoc.Container22.Container13_9.Container13_10.Container14_10.Container15_20.Container4.FiltroDuenoComboBox.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "DocProcessoOP.popupformdoc.Container22.Container13_9.Container13_10.Container14_11.Container15_23.ComboBox2_13.AccessibleLabel",
+                  "fullyQualifiedName": "DocProcessoOP.popupformdoc.Container22.Container13_9.Container13_10.Container14_10.Container15_20.Container4.FiltroDuenoComboBox.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "DocProcessoOP",
-                "type": "DocProcessoOP.popupformdoc.Container22.Container13_9.Container13_10.Container14_11.Container15_23.ComboBox2_13"
+                "type": "DocProcessoOP.popupformdoc.Container22.Container13_9.Container13_10.Container14_10.Container15_20.Container4.FiltroDuenoComboBox"
               }
             }
           ],
@@ -76483,19 +76507,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "DocProcessoOP.popupformdoc.Container22.Container13_9.Container13_10.Container14_8.Container15_16.ComboBox2_14.AccessibleLabel"
+                  "fullyQualifiedName": "DocProcessoOP.popupformdoc.Container22.Container13_9.Container13_10.Container14_10.Container15_20.cbo_dueñoprocesso.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "DocProcessoOP.popupformdoc.Container22.Container13_9.Container13_10.Container14_8.Container15_16.ComboBox2_14.AccessibleLabel",
+                  "fullyQualifiedName": "DocProcessoOP.popupformdoc.Container22.Container13_9.Container13_10.Container14_10.Container15_20.cbo_dueñoprocesso.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "DocProcessoOP",
-                "type": "DocProcessoOP.popupformdoc.Container22.Container13_9.Container13_10.Container14_8.Container15_16.ComboBox2_14"
+                "type": "DocProcessoOP.popupformdoc.Container22.Container13_9.Container13_10.Container14_10.Container15_20.cbo_dueñoprocesso"
               }
             }
           ],
@@ -88375,6 +88399,36 @@
                 "member": "AccessibleLabel",
                 "module": "DocPublicados RA",
                 "type": "'DocPublicados RA'.PopupFilter_ra_2.Container13_30.Container14_34.Container15_73.Container16_3.Container17_7.DatePicker1_9"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "DocProcessoOP.popupformdoc.Container22.Container13_9.Container13_10.Container14_7.Container15_15.GerenciaComboBox.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "DocProcessoOP.popupformdoc.Container22.Container13_9.Container13_10.Container14_7.Container15_15.GerenciaComboBox.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "DocProcessoOP",
+                "type": "DocProcessoOP.popupformdoc.Container22.Container13_9.Container13_10.Container14_7.Container15_15.GerenciaComboBox"
               }
             }
           ],
