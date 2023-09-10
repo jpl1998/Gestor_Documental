@@ -395,7 +395,7 @@
                                 LayoutMinHeight: =30
                                 PaddingLeft: =15
                                 Size: =10
-                                Text: ="F. Solicitud Aprobación"
+                                Text: ="F. de Baja"
                                 ZIndex: =4
 
                             Label2_143 As label:
@@ -544,7 +544,7 @@
                                         Height: =Parent.Height
                                         PaddingLeft: =10
                                         Size: =9.5
-                                        Text: =Text(ThisItem.fecha,"dd/mm/yyyy")
+                                        Text: =LookUp(DEV_Datos_Baja,id_documento.Value=Text(ThisItem.ID)).fecha
                                         Width: =140
                                         X: =50
                                         ZIndex: =4
@@ -8713,7 +8713,7 @@
                     Text: |-
                         =If(!IsEmpty(Filter(DEV_Modificacion_estatus_documento, id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version = varDocSide.version,entrega=varSelectedEntrega.entrega)),
                         If(!IsEmpty(Filter(DEV_Modificacion_estatus_documento, id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version = varDocSide.version,entrega=varSelectedEntrega.entrega, id_status_archivo.Value="2")),"Observado el ", "Aprobado el ") &
-                        LookUp(DEV_Modificacion_estatus_documento,id_interlocutor.Value=ThisItem.id_interlocutor.Value && codigo=varDocSide.codigo && version = varDocSide.version && entrega=varSelectedEntrega.entrega).'fecha y hora',
+                        LookUp(DEV_Modificacion_estatus_documento,id_interlocutor.Value=ThisItem.id_interlocutor.Value && codigo=varDocSide.codigo && version = varDocSide.version && entrega=varSelectedEntrega.entrega && (id_status_archivo.Value="2" || id_status_archivo.Value="1")).'fecha y hora',
                         LookUp(DEV_Interlocutor, ID = Value(ThisItem.id_interlocutor.Value)).Email.JobTitle)
                     VerticalAlign: =VerticalAlign.Top
                     Width: =Title1_51.Width
@@ -8775,7 +8775,7 @@
                     HoverColor: =primary
                     HoverFill: =RGBA(0, 0, 0, 0.15)
                     OnSelect: |-
-                        =UpdateContext({varObsItems:Filter(DEV_Modificacion_estatus_documento,id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version = varDocSide.version,entrega=varSelectedEntrega.entrega, id_status_archivo.Value="2"), varRegistroObsPopup:true})
+                        =UpdateContext({varObsItems:Filter(DEV_Modificacion_estatus_documento,id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version = varDocSide.version,entrega=varSelectedEntrega.entrega, id_status_archivo.Value="2"),varObsDatos:ThisItem, varRegistroObsPopup:true})
                     PressedColor: =Self.Color
                     PressedFill: =
                     Size: =8
@@ -8873,7 +8873,7 @@
                     Text: |-
                         =If(!IsEmpty(Filter(DEV_Modificacion_estatus_documento, id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version, entrega=varSelectedEntrega.entrega, id_status_archivo.Value="4" || id_status_archivo.Value="3")),
                         If(!IsEmpty(Filter(DEV_Modificacion_estatus_documento, id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version, entrega=varSelectedEntrega.entrega, id_status_archivo.Value="4")),"Observado el ", "Aprobado el ") &
-                        LookUp(DEV_Modificacion_estatus_documento,id_interlocutor.Value=ThisItem.id_interlocutor.Value && codigo=varDocSide.codigo && version=varDocSide.version && entrega=varSelectedEntrega.entrega).'fecha y hora',
+                        LookUp(DEV_Modificacion_estatus_documento,id_interlocutor.Value=ThisItem.id_interlocutor.Value && codigo=varDocSide.codigo && version=varDocSide.version && entrega=varSelectedEntrega.entrega && (id_status_archivo.Value="3" || id_status_archivo.Value="4")).'fecha y hora',
                         LookUp(DEV_Interlocutor, ID = Value(ThisItem.id_interlocutor.Value)).Email.JobTitle)
                     VerticalAlign: =VerticalAlign.Top
                     Width: =Title1_52.Width
@@ -8919,7 +8919,7 @@
                     HoverColor: =primary
                     HoverFill: =RGBA(0, 0, 0, 0.15)
                     OnSelect: |-
-                        =UpdateContext({varObsItems:Filter(DEV_Modificacion_estatus_documento, id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version, entrega=varSelectedEntrega.entrega, id_status_archivo.Value="4"), varRegistroObsPopup:true})
+                        =UpdateContext({varObsItems:Filter(DEV_Modificacion_estatus_documento, id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version, entrega=varSelectedEntrega.entrega, id_status_archivo.Value="4"),varObsDatos:ThisItem, varRegistroObsPopup:true})
                     PressedColor: =Self.Color
                     PressedFill: =
                     Size: =8
@@ -9086,7 +9086,8 @@
                 Font: =Font.'Segoe UI'
                 Height: =30
                 Size: =12
-                Text: ="text"
+                Text: |-
+                    =varObsDatos.'id_interlocutor: Nombre'.Value & " " & varObsDatos.'id_interlocutor: Apellido'.Value
                 Width: =280
                 X: =25
                 Y: =98

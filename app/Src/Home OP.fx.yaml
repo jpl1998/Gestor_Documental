@@ -6679,7 +6679,7 @@
                     Text: |-
                         =If(!IsEmpty(Filter(DEV_Modificacion_estatus_documento, id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version = varDocSide.version,entrega = varSelectedEntrega.entrega)),
                         If(!IsEmpty(Filter(DEV_Modificacion_estatus_documento, id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version = varDocSide.version,entrega = varSelectedEntrega.entrega, id_status_archivo.Value="2")),"Observado el ", "Aprobado el ") &
-                        LookUp(DEV_Modificacion_estatus_documento,id_interlocutor.Value=ThisItem.id_interlocutor.Value && codigo=varDocSide.codigo && version = varDocSide.version && entrega = varSelectedEntrega.entrega).'fecha y hora',
+                        LookUp(DEV_Modificacion_estatus_documento,id_interlocutor.Value=ThisItem.id_interlocutor.Value && codigo=varDocSide.codigo && version = varDocSide.version && entrega = varSelectedEntrega.entrega && (id_status_archivo.Value="1" || id_status_archivo.Value="2")).'fecha y hora',
                         LookUp(DEV_Interlocutor, ID = Value(ThisItem.id_interlocutor.Value)).Email.JobTitle)
                     VerticalAlign: =VerticalAlign.Top
                     Width: =Title1_57.Width
@@ -6839,7 +6839,7 @@
                     Text: |-
                         =If(!IsEmpty(Filter(DEV_Modificacion_estatus_documento, id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version, entrega=varSelectedEntrega.entrega, id_status_archivo.Value="4" || id_status_archivo.Value="3")),
                         If(!IsEmpty(Filter(DEV_Modificacion_estatus_documento, id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version, entrega=varSelectedEntrega.entrega, id_status_archivo.Value="4")),"Observado el ", "Aprobado el ") &
-                        LookUp(DEV_Modificacion_estatus_documento, id_interlocutor.Value=ThisItem.id_interlocutor.Value && codigo=varDocSide.codigo && version=varDocSide.version && entrega=varSelectedEntrega.entrega).'fecha y hora',
+                        LookUp(DEV_Modificacion_estatus_documento, id_interlocutor.Value=ThisItem.id_interlocutor.Value && codigo=varDocSide.codigo && version=varDocSide.version && entrega=varSelectedEntrega.entrega && (id_status_archivo.Value="4" || id_status_archivo.Value="3")).'fecha y hora',
                         LookUp(DEV_Interlocutor, ID = Value(ThisItem.id_interlocutor.Value)).Email.JobTitle)
                     VerticalAlign: =VerticalAlign.Top
                     Width: =Title1_58.Width
