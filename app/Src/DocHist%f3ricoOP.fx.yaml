@@ -604,7 +604,8 @@
                                             OnSelect: |-
                                                 =Set(varsidebarop,true);
                                                 Set(varDocEstado, LookUp(DEV_Modificacion_estatus_proceso_doc,codigo=ThisItem.codigo && version=ThisItem.version && ind_inact="Activo" && id_doc=ThisItem.ID,id_estatus_documento.Value));
-                                                Set(varDocSide,ThisItem)
+                                                Set(varDocSide,ThisItem);
+                                                Set(varDatosBaja, LookUp(DEV_Datos_Baja,id_documento.Value=Text(ThisItem.ID)))
                                             PaddingBottom: =3
                                             PaddingLeft: =3
                                             PaddingRight: =3
@@ -3700,302 +3701,512 @@
                     PaddingTop: =5
                     ZIndex: =1
 
-                item_informacion_sidebar_docRev_op_3 As groupContainer.horizontalAutoLayoutContainer:
-                    DropShadow: =DropShadow.None
-                    LayoutAlignItems: =LayoutAlignItems.Stretch
-                    LayoutJustifyContent: =LayoutJustifyContent.Center
-                    LayoutMinHeight: =24
-                    LayoutMinWidth: =250
-                    LayoutMode: =LayoutMode.Auto
-                    ZIndex: =2
-
-                    item_informacion_sidebar_ra_4 As label:
-                        Font: =Font.'Segoe UI'
-                        FontWeight: =FontWeight.Semibold
-                        Height: =24
-                        Size: =12
-                        Text: |-
-                            ="Cargado por:"
-                        Width: =(Parent.Width/3)+20
+                    menu_filter_informacion_sidebar_op_2 As gallery.galleryHorizontal:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        DelayItemLoading: =true
+                        Height: =40
+                        Items: =["Metadatos", "Datos de Baja"]
+                        LayoutMinHeight: =40
+                        LayoutMinWidth: =320
+                        LoadingSpinner: =LoadingSpinner.Data
+                        ShowScrollbar: =false
+                        TemplateSize: =100
                         ZIndex: =1
 
-                    cont_informacion_sidebar_ra_4 As label:
-                        Font: =Font.'Segoe UI'
-                        Height: =24
-                        Size: =12
-                        Text: =varDocSide.'Created By'.DisplayName
-                        Width: =(Parent.Width/3)*2 -20
-                        ZIndex: =2
+                        Button5_14 As button:
+                            BorderColor: =If(ThisItem.IsSelected, primary,Color.Transparent)
+                            Color: =If(ThisItem.IsSelected, primary, placeholder)
+                            Fill: =If(ThisItem.IsSelected, ColorFade(primary,0.9), Color.White)
+                            FocusedBorderThickness: =2
+                            Height: =24
+                            OnSelect: =Select(Parent)
+                            Size: =8
+                            Text: =ThisItem.Value
+                            Width: =97
+                            ZIndex: =1
 
-                item_informacion_sidebar_docRev_op_4 As groupContainer.horizontalAutoLayoutContainer:
+                ContainerMetadatos1 As groupContainer.verticalAutoLayoutContainer:
                     DropShadow: =DropShadow.None
                     LayoutAlignItems: =LayoutAlignItems.Stretch
-                    LayoutJustifyContent: =LayoutJustifyContent.Center
-                    LayoutMinHeight: =24
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
                     LayoutMinWidth: =250
                     LayoutMode: =LayoutMode.Auto
-                    ZIndex: =3
+                    Visible: =menu_filter_informacion_sidebar_op_2.Selected.Value="Metadatos"
+                    ZIndex: =13
 
-                    item2_informacion_sidebar_op_1 As label:
-                        Font: =Font.'Segoe UI'
-                        FontWeight: =FontWeight.Semibold
-                        Height: =24
-                        Size: =12
-                        Text: |-
-                            ="Empresa:"
-                        Width: =(Parent.Width/3)+20
+                    item_informacion_sidebar_docRev_op_3 As groupContainer.horizontalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        DropShadow: =DropShadow.None
+                        LayoutAlignItems: =LayoutAlignItems.Stretch
+                        LayoutJustifyContent: =LayoutJustifyContent.Center
+                        LayoutMinHeight: =24
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
                         ZIndex: =1
 
-                    cont2_informacion_sidebar_op_1 As label:
-                        Font: =Font.'Segoe UI'
-                        Height: =24
-                        Size: =12
-                        Text: =varDocSide.Empresa.Value
-                        Width: =(Parent.Width/3)*2 -20
+                        item_informacion_sidebar_ra_4 As label:
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =24
+                            Size: =12
+                            Text: |-
+                                ="Cargado por:"
+                            Width: =(Parent.Width/3)+20
+                            ZIndex: =1
+
+                        cont_informacion_sidebar_ra_4 As label:
+                            Font: =Font.'Segoe UI'
+                            Height: =24
+                            Size: =12
+                            Text: =varDocSide.'Created By'.DisplayName
+                            Width: =(Parent.Width/3)*2 -20
+                            ZIndex: =2
+
+                    item_informacion_sidebar_docRev_op_4 As groupContainer.horizontalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        DropShadow: =DropShadow.None
+                        LayoutAlignItems: =LayoutAlignItems.Stretch
+                        LayoutJustifyContent: =LayoutJustifyContent.Center
+                        LayoutMinHeight: =24
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
                         ZIndex: =2
 
-                item_informacion_sidebar_docRev_op_5 As groupContainer.horizontalAutoLayoutContainer:
+                        item2_informacion_sidebar_op_1 As label:
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =24
+                            Size: =12
+                            Text: |-
+                                ="Empresa:"
+                            Width: =(Parent.Width/3)+20
+                            ZIndex: =1
+
+                        cont2_informacion_sidebar_op_1 As label:
+                            Font: =Font.'Segoe UI'
+                            Height: =24
+                            Size: =12
+                            Text: =varDocSide.Empresa.Value
+                            Width: =(Parent.Width/3)*2 -20
+                            ZIndex: =2
+
+                    item_informacion_sidebar_docRev_op_5 As groupContainer.horizontalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        DropShadow: =DropShadow.None
+                        LayoutAlignItems: =LayoutAlignItems.Stretch
+                        LayoutJustifyContent: =LayoutJustifyContent.Center
+                        LayoutMinHeight: =24
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =3
+
+                        item3_informacion_sidebar_op_1 As label:
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =24
+                            Size: =12
+                            Text: |-
+                                ="Solicitante:"
+                            Width: =(Parent.Width/3)+20
+                            ZIndex: =1
+
+                        cont3_informacion_sidebar_op_1 As label:
+                            Font: =Font.'Segoe UI'
+                            Height: =24
+                            Size: =12
+                            Text: =varDocSide.Solicitante.DisplayName
+                            Width: =(Parent.Width/3)*2 -20
+                            ZIndex: =2
+
+                    item_informacion_sidebar_docRev_ra_38 As groupContainer.horizontalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        DropShadow: =DropShadow.None
+                        LayoutAlignItems: =LayoutAlignItems.Stretch
+                        LayoutJustifyContent: =LayoutJustifyContent.Center
+                        LayoutMinHeight: =24
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =4
+
+                        item4_informacion_sidebar_ra_4 As label:
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =24
+                            Size: =12
+                            Text: |-
+                                ="Código:"
+                            Width: =(Parent.Width/3)+20
+                            ZIndex: =1
+
+                        cont4_informacion_sidebar_ra_4 As label:
+                            Font: =Font.'Segoe UI'
+                            Height: =24
+                            Size: =12
+                            Text: =varDocSide.codigo
+                            Width: =(Parent.Width/3)*2 -20
+                            ZIndex: =2
+
+                    item_informacion_sidebar_docRev_ra_39 As groupContainer.horizontalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        DropShadow: =DropShadow.None
+                        LayoutAlignItems: =LayoutAlignItems.Stretch
+                        LayoutJustifyContent: =LayoutJustifyContent.Center
+                        LayoutMinHeight: =24
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =5
+
+                        item5_informacion_sidebar_ra_4 As label:
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =24
+                            Size: =12
+                            Text: |-
+                                ="Nombre:"
+                            Width: =(Parent.Width/3)+20
+                            ZIndex: =1
+
+                        cont5_informacion_sidebar_ra_4 As label:
+                            Font: =Font.'Segoe UI'
+                            Height: =24
+                            Size: =12
+                            Text: =varDocSide.Nombre
+                            Width: =(Parent.Width/3)*2 -20
+                            ZIndex: =2
+
+                    item_informacion_sidebar_docRev_ra_40 As groupContainer.horizontalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        DropShadow: =DropShadow.None
+                        LayoutAlignItems: =LayoutAlignItems.Stretch
+                        LayoutJustifyContent: =LayoutJustifyContent.Center
+                        LayoutMinHeight: =24
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =6
+
+                        item6_informacion_sidebar_ra_4 As label:
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =24
+                            Size: =12
+                            Text: |-
+                                ="Tipo Documento:"
+                            Width: =(Parent.Width/3)+20
+                            ZIndex: =1
+
+                        cont6_informacion_sidebar_ra_4 As label:
+                            Font: =Font.'Segoe UI'
+                            Height: =24
+                            Size: =12
+                            Text: =varDocSide.id_tipo_docu.Value
+                            Width: =(Parent.Width/3)*2 -20
+                            ZIndex: =2
+
+                    item_informacion_sidebar_docRev_ra_41 As groupContainer.horizontalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        DropShadow: =DropShadow.None
+                        LayoutAlignItems: =LayoutAlignItems.Stretch
+                        LayoutJustifyContent: =LayoutJustifyContent.Center
+                        LayoutMinHeight: =24
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =7
+
+                        item7_informacion_sidebar_ra_4 As label:
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =24
+                            Size: =12
+                            Text: |-
+                                ="Dueño de Proceso:"
+                            Width: =(Parent.Width/3)+20
+                            ZIndex: =1
+
+                        cont7_informacion_sidebar_ra_4 As label:
+                            Font: =Font.'Segoe UI'
+                            Height: =24
+                            Size: =12
+                            Text: =varDocSide.Dueno_Proceso
+                            Width: =(Parent.Width/3)*2 -20
+                            ZIndex: =2
+
+                    item_informacion_sidebar_docRev_ra_42 As groupContainer.horizontalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        DropShadow: =DropShadow.None
+                        LayoutAlignItems: =LayoutAlignItems.Stretch
+                        LayoutJustifyContent: =LayoutJustifyContent.Center
+                        LayoutMinHeight: =24
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =8
+
+                        item8_informacion_sidebar_ra_4 As label:
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =24
+                            Size: =12
+                            Text: |-
+                                ="Alcance:"
+                            Width: =(Parent.Width/3)+20
+                            ZIndex: =1
+
+                        cont8_informacion_sidebar_ra_4 As label:
+                            Font: =Font.'Segoe UI'
+                            Height: =24
+                            Size: =12
+                            Text: =varDocSide.id_alcance
+                            Width: =(Parent.Width/3)*2 -20
+                            ZIndex: =2
+
+                    item_informacion_sidebar_docRev_ra_43 As groupContainer.horizontalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        DropShadow: =DropShadow.None
+                        LayoutAlignItems: =LayoutAlignItems.Stretch
+                        LayoutJustifyContent: =LayoutJustifyContent.Center
+                        LayoutMinHeight: =24
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =9
+
+                        item9_informacion_sidebar_ra_4 As label:
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =24
+                            Size: =12
+                            Text: |-
+                                ="Versión:"
+                            Width: =(Parent.Width/3)+20
+                            ZIndex: =1
+
+                        cont9_informacion_sidebar_ra_4 As label:
+                            Font: =Font.'Segoe UI'
+                            Height: =24
+                            Size: =12
+                            Text: =varDocSide.version
+                            Width: =(Parent.Width/3)*2 -20
+                            ZIndex: =2
+
+                    item_informacion_sidebar_docRev_ra_44 As groupContainer.horizontalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        DropShadow: =DropShadow.None
+                        LayoutAlignItems: =LayoutAlignItems.Stretch
+                        LayoutJustifyContent: =LayoutJustifyContent.Center
+                        LayoutMinHeight: =24
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =10
+
+                        item10_informacion_sidebar_ra_4 As label:
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =24
+                            Size: =12
+                            Text: |-
+                                ="Fecha Documento:"
+                            Width: =(Parent.Width/3)+20
+                            ZIndex: =1
+
+                        cont10_informacion_sidebar_ra_4 As label:
+                            Font: =Font.'Segoe UI'
+                            Height: =24
+                            Size: =12
+                            Text: =varDocSide.fecha
+                            Width: =(Parent.Width/3)*2 -20
+                            ZIndex: =2
+
+                    item_informacion_sidebar_docRev_ra_45 As groupContainer.horizontalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        DropShadow: =DropShadow.None
+                        LayoutAlignItems: =LayoutAlignItems.Stretch
+                        LayoutJustifyContent: =LayoutJustifyContent.Center
+                        LayoutMinHeight: =24
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =11
+
+                        item11_informacion_sidebar_ra_4 As label:
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =24
+                            Size: =12
+                            Text: |-
+                                ="Macroproceso:"
+                            Width: =(Parent.Width/3)+20
+                            ZIndex: =1
+
+                        cont11_informacion_sidebar_ra_4 As label:
+                            Font: =Font.'Segoe UI'
+                            Height: =24
+                            Size: =12
+                            Text: =varDocSide.id_macroproceso.Value
+                            Width: =(Parent.Width/3)*2 -20
+                            ZIndex: =2
+
+                ContainerDatosBaja As groupContainer.verticalAutoLayoutContainer:
                     DropShadow: =DropShadow.None
                     LayoutAlignItems: =LayoutAlignItems.Stretch
-                    LayoutJustifyContent: =LayoutJustifyContent.Center
-                    LayoutMinHeight: =24
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
                     LayoutMinWidth: =250
                     LayoutMode: =LayoutMode.Auto
-                    ZIndex: =4
+                    Visible: =menu_filter_informacion_sidebar_op_2.Selected.Value="Datos de Baja"
+                    ZIndex: =14
 
-                    item3_informacion_sidebar_op_1 As label:
-                        Font: =Font.'Segoe UI'
-                        FontWeight: =FontWeight.Semibold
-                        Height: =24
-                        Size: =12
-                        Text: |-
-                            ="Solicitante:"
-                        Width: =(Parent.Width/3)+20
+                    item_informacion_sidebar_docRev_op_6 As groupContainer.horizontalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        DropShadow: =DropShadow.None
+                        FillPortions: =0
+                        Height: =45
+                        LayoutAlignItems: =LayoutAlignItems.Stretch
+                        LayoutJustifyContent: =LayoutJustifyContent.Center
+                        LayoutMinHeight: =24
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
                         ZIndex: =1
 
-                    cont3_informacion_sidebar_op_1 As label:
-                        Font: =Font.'Segoe UI'
-                        Height: =24
-                        Size: =12
-                        Text: =varDocSide.Solicitante.DisplayName
-                        Width: =(Parent.Width/3)*2 -20
+                        item_informacion_sidebar_ra_11 As label:
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =24
+                            Size: =12
+                            Text: |-
+                                ="Dado de baja por:"
+                            Width: =(Parent.Width/3)+20
+                            ZIndex: =1
+
+                        cont_informacion_sidebar_ra_11 As label:
+                            Font: =Font.'Segoe UI'
+                            Height: =24
+                            Size: =12
+                            Text: =varDatosBaja.Usuario
+                            Width: =(Parent.Width/3)*2 -20
+                            ZIndex: =2
+
+                    item_informacion_sidebar_docRev_op_7 As groupContainer.horizontalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        DropShadow: =DropShadow.None
+                        FillPortions: =0
+                        Height: =45
+                        LayoutAlignItems: =LayoutAlignItems.Stretch
+                        LayoutJustifyContent: =LayoutJustifyContent.Center
+                        LayoutMinHeight: =24
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
                         ZIndex: =2
 
-                item_informacion_sidebar_docRev_ra_38 As groupContainer.horizontalAutoLayoutContainer:
-                    DropShadow: =DropShadow.None
-                    LayoutAlignItems: =LayoutAlignItems.Stretch
-                    LayoutJustifyContent: =LayoutJustifyContent.Center
-                    LayoutMinHeight: =24
-                    LayoutMinWidth: =250
-                    LayoutMode: =LayoutMode.Auto
-                    ZIndex: =5
+                        item2_informacion_sidebar_op_2 As label:
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =24
+                            Size: =12
+                            Text: |-
+                                ="Fecha de baja:"
+                            Width: =(Parent.Width/3)+20
+                            ZIndex: =1
 
-                    item4_informacion_sidebar_ra_4 As label:
-                        Font: =Font.'Segoe UI'
-                        FontWeight: =FontWeight.Semibold
-                        Height: =24
-                        Size: =12
-                        Text: |-
-                            ="Código:"
-                        Width: =(Parent.Width/3)+20
-                        ZIndex: =1
+                        cont2_informacion_sidebar_op_2 As label:
+                            Font: =Font.'Segoe UI'
+                            Height: =24
+                            Size: =12
+                            Text: =varDatosBaja.fecha
+                            Width: =(Parent.Width/3)*2 -20
+                            ZIndex: =2
 
-                    cont4_informacion_sidebar_ra_4 As label:
-                        Font: =Font.'Segoe UI'
-                        Height: =24
-                        Size: =12
-                        Text: =varDocSide.codigo
-                        Width: =(Parent.Width/3)*2 -20
-                        ZIndex: =2
+                    item_informacion_sidebar_docRev_op_8 As groupContainer.horizontalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        DropShadow: =DropShadow.None
+                        FillPortions: =0
+                        Height: =45
+                        LayoutAlignItems: =LayoutAlignItems.Stretch
+                        LayoutJustifyContent: =LayoutJustifyContent.Center
+                        LayoutMinHeight: =24
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =3
 
-                item_informacion_sidebar_docRev_ra_39 As groupContainer.horizontalAutoLayoutContainer:
-                    DropShadow: =DropShadow.None
-                    LayoutAlignItems: =LayoutAlignItems.Stretch
-                    LayoutJustifyContent: =LayoutJustifyContent.Center
-                    LayoutMinHeight: =24
-                    LayoutMinWidth: =250
-                    LayoutMode: =LayoutMode.Auto
-                    ZIndex: =6
+                        item3_informacion_sidebar_op_2 As label:
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =24
+                            Size: =12
+                            Text: |-
+                                ="Motivo:"
+                            Width: =(Parent.Width/3)+20
+                            ZIndex: =1
 
-                    item5_informacion_sidebar_ra_4 As label:
-                        Font: =Font.'Segoe UI'
-                        FontWeight: =FontWeight.Semibold
-                        Height: =24
-                        Size: =12
-                        Text: |-
-                            ="Nombre:"
-                        Width: =(Parent.Width/3)+20
-                        ZIndex: =1
+                        cont3_informacion_sidebar_op_2 As label:
+                            Font: =Font.'Segoe UI'
+                            Height: =24
+                            Size: =12
+                            Text: =varDatosBaja.motivo
+                            Width: =(Parent.Width/3)*2 -20
+                            ZIndex: =2
 
-                    cont5_informacion_sidebar_ra_4 As label:
-                        Font: =Font.'Segoe UI'
-                        Height: =24
-                        Size: =12
-                        Text: =varDocSide.Nombre
-                        Width: =(Parent.Width/3)*2 -20
-                        ZIndex: =2
+                    item_informacion_sidebar_docRev_ra_100 As groupContainer.horizontalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        DropShadow: =DropShadow.None
+                        FillPortions: =0
+                        Height: =45
+                        LayoutAlignItems: =LayoutAlignItems.Stretch
+                        LayoutJustifyContent: =LayoutJustifyContent.Center
+                        LayoutMinHeight: =24
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =4
 
-                item_informacion_sidebar_docRev_ra_40 As groupContainer.horizontalAutoLayoutContainer:
-                    DropShadow: =DropShadow.None
-                    LayoutAlignItems: =LayoutAlignItems.Stretch
-                    LayoutJustifyContent: =LayoutJustifyContent.Center
-                    LayoutMinHeight: =24
-                    LayoutMinWidth: =250
-                    LayoutMode: =LayoutMode.Auto
-                    ZIndex: =7
+                        item4_informacion_sidebar_ra_11 As label:
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =24
+                            Size: =12
+                            Text: |-
+                                ="Sustento de Baja:"
+                            Width: =(Parent.Width/3)+20
+                            ZIndex: =1
 
-                    item6_informacion_sidebar_ra_4 As label:
-                        Font: =Font.'Segoe UI'
-                        FontWeight: =FontWeight.Semibold
-                        Height: =24
-                        Size: =12
-                        Text: |-
-                            ="Tipo Documento:"
-                        Width: =(Parent.Width/3)+20
-                        ZIndex: =1
+                        cont4_informacion_sidebar_ra_11 As label:
+                            FillPortions: =1
+                            Font: =Font.'Segoe UI'
+                            Height: =24
+                            LayoutMinWidth: =220
+                            Size: =12
+                            Text: =First(varDatosBaja.Attachments).DisplayName
+                            Width: =(Parent.Width/3)*2 -20
+                            ZIndex: =2
 
-                    cont6_informacion_sidebar_ra_4 As label:
-                        Font: =Font.'Segoe UI'
-                        Height: =24
-                        Size: =12
-                        Text: =varDocSide.id_tipo_docu.Value
-                        Width: =(Parent.Width/3)*2 -20
-                        ZIndex: =2
+                        archivo_download_container_sidebar_ra_28 As groupContainer.manualLayoutContainer:
+                            DropShadow: =DropShadow.None
+                            LayoutMinHeight: =24
+                            LayoutMinWidth: =24
+                            ZIndex: =3
 
-                item_informacion_sidebar_docRev_ra_41 As groupContainer.horizontalAutoLayoutContainer:
-                    DropShadow: =DropShadow.None
-                    LayoutAlignItems: =LayoutAlignItems.Stretch
-                    LayoutJustifyContent: =LayoutJustifyContent.Center
-                    LayoutMinHeight: =24
-                    LayoutMinWidth: =250
-                    LayoutMode: =LayoutMode.Auto
-                    ZIndex: =8
+                            download_archivo_icon_sidebar_10 As icon.OpenInNewWindow:
+                                Height: =16
+                                Icon: =Icon.Download
+                                Width: =16
+                                X: =(Parent.Width-Self.Width)/2
+                                Y: =(Parent.Height-Self.Height)/2
+                                ZIndex: =1
 
-                    item7_informacion_sidebar_ra_4 As label:
-                        Font: =Font.'Segoe UI'
-                        FontWeight: =FontWeight.Semibold
-                        Height: =24
-                        Size: =12
-                        Text: |-
-                            ="Dueño de Proceso:"
-                        Width: =(Parent.Width/3)+20
-                        ZIndex: =1
-
-                    cont7_informacion_sidebar_ra_4 As label:
-                        Font: =Font.'Segoe UI'
-                        Height: =24
-                        Size: =12
-                        Text: =varDocSide.Dueno_Proceso
-                        Width: =(Parent.Width/3)*2 -20
-                        ZIndex: =2
-
-                item_informacion_sidebar_docRev_ra_42 As groupContainer.horizontalAutoLayoutContainer:
-                    DropShadow: =DropShadow.None
-                    LayoutAlignItems: =LayoutAlignItems.Stretch
-                    LayoutJustifyContent: =LayoutJustifyContent.Center
-                    LayoutMinHeight: =24
-                    LayoutMinWidth: =250
-                    LayoutMode: =LayoutMode.Auto
-                    ZIndex: =9
-
-                    item8_informacion_sidebar_ra_4 As label:
-                        Font: =Font.'Segoe UI'
-                        FontWeight: =FontWeight.Semibold
-                        Height: =24
-                        Size: =12
-                        Text: |-
-                            ="Alcance:"
-                        Width: =(Parent.Width/3)+20
-                        ZIndex: =1
-
-                    cont8_informacion_sidebar_ra_4 As label:
-                        Font: =Font.'Segoe UI'
-                        Height: =24
-                        Size: =12
-                        Text: =varDocSide.id_alcance
-                        Width: =(Parent.Width/3)*2 -20
-                        ZIndex: =2
-
-                item_informacion_sidebar_docRev_ra_43 As groupContainer.horizontalAutoLayoutContainer:
-                    DropShadow: =DropShadow.None
-                    LayoutAlignItems: =LayoutAlignItems.Stretch
-                    LayoutJustifyContent: =LayoutJustifyContent.Center
-                    LayoutMinHeight: =24
-                    LayoutMinWidth: =250
-                    LayoutMode: =LayoutMode.Auto
-                    ZIndex: =10
-
-                    item9_informacion_sidebar_ra_4 As label:
-                        Font: =Font.'Segoe UI'
-                        FontWeight: =FontWeight.Semibold
-                        Height: =24
-                        Size: =12
-                        Text: |-
-                            ="Versión:"
-                        Width: =(Parent.Width/3)+20
-                        ZIndex: =1
-
-                    cont9_informacion_sidebar_ra_4 As label:
-                        Font: =Font.'Segoe UI'
-                        Height: =24
-                        Size: =12
-                        Text: =varDocSide.version
-                        Width: =(Parent.Width/3)*2 -20
-                        ZIndex: =2
-
-                item_informacion_sidebar_docRev_ra_44 As groupContainer.horizontalAutoLayoutContainer:
-                    DropShadow: =DropShadow.None
-                    LayoutAlignItems: =LayoutAlignItems.Stretch
-                    LayoutJustifyContent: =LayoutJustifyContent.Center
-                    LayoutMinHeight: =24
-                    LayoutMinWidth: =250
-                    LayoutMode: =LayoutMode.Auto
-                    ZIndex: =11
-
-                    item10_informacion_sidebar_ra_4 As label:
-                        Font: =Font.'Segoe UI'
-                        FontWeight: =FontWeight.Semibold
-                        Height: =24
-                        Size: =12
-                        Text: |-
-                            ="Fecha Documento:"
-                        Width: =(Parent.Width/3)+20
-                        ZIndex: =1
-
-                    cont10_informacion_sidebar_ra_4 As label:
-                        Font: =Font.'Segoe UI'
-                        Height: =24
-                        Size: =12
-                        Text: =varDocSide.fecha
-                        Width: =(Parent.Width/3)*2 -20
-                        ZIndex: =2
-
-                item_informacion_sidebar_docRev_ra_45 As groupContainer.horizontalAutoLayoutContainer:
-                    DropShadow: =DropShadow.None
-                    LayoutAlignItems: =LayoutAlignItems.Stretch
-                    LayoutJustifyContent: =LayoutJustifyContent.Center
-                    LayoutMinHeight: =24
-                    LayoutMinWidth: =250
-                    LayoutMode: =LayoutMode.Auto
-                    ZIndex: =12
-
-                    item11_informacion_sidebar_ra_4 As label:
-                        Font: =Font.'Segoe UI'
-                        FontWeight: =FontWeight.Semibold
-                        Height: =24
-                        Size: =12
-                        Text: |-
-                            ="Macroproceso:"
-                        Width: =(Parent.Width/3)+20
-                        ZIndex: =1
-
-                    cont11_informacion_sidebar_ra_4 As label:
-                        Font: =Font.'Segoe UI'
-                        Height: =24
-                        Size: =12
-                        Text: =varDocSide.id_macroproceso.Value
-                        Width: =(Parent.Width/3)*2 -20
-                        ZIndex: =2
+                            download_archivo_button_sidebar_10 As button:
+                                BorderColor: =primary
+                                BorderThickness: =1.5
+                                Fill: =RGBA(0, 0, 0, 0)
+                                FocusedBorderThickness: =2
+                                Height: =25
+                                HoverFill: =RGBA(0, 0, 0, 0.15)
+                                OnSelect: =Launch(First(varDatosBaja.Attachments).AbsoluteUri)
+                                PressedFill: =
+                                RadiusBottomLeft: =5
+                                RadiusBottomRight: =5
+                                RadiusTopLeft: =5
+                                RadiusTopRight: =5
+                                Text: =""
+                                Width: =25
+                                X: =(Parent.Width-Self.Width)/2
+                                Y: =(Parent.Height-Self.Height)/2
+                                ZIndex: =2
 
             evaluacion_container_sidebar_docRev_ra_7 As groupContainer.verticalAutoLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer
