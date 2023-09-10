@@ -4043,13 +4043,35 @@
                 LayoutMode: =LayoutMode.Auto
                 ZIndex: =4
 
-                title_rcki_popup As label:
-                    Font: =Font.'Segoe UI'
-                    FontWeight: =FontWeight.Semibold
+                Container36 As groupContainer.horizontalAutoLayoutContainer:
+                    DropShadow: =DropShadow.None
+                    FillPortions: =0
                     Height: =30
-                    Size: =12
-                    Text: ="RCKI"
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
                     ZIndex: =1
+
+                    title_rcki_popup As label:
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =30
+                        Size: =12
+                        Text: ="RCKI"
+                        Width: =80
+                        ZIndex: =1
+
+                    Icon7 As icon.Help:
+                        Color: =primary
+                        DisplayMode: =DisplayMode.View
+                        Height: =30
+                        Icon: =Icon.Help
+                        PaddingBottom: =5
+                        PaddingLeft: =5
+                        PaddingRight: =5
+                        PaddingTop: =5
+                        Tooltip: ="Riesgos, Controles, KPIs, Issues"
+                        ZIndex: =2
 
                 container_rcki_revision_ra As groupContainer.horizontalAutoLayoutContainer:
                     AlignInContainer: =AlignInContainer.SetByContainer
@@ -4057,7 +4079,7 @@
                     LayoutMinHeight: =40
                     LayoutMinWidth: =250
                     LayoutMode: =LayoutMode.Auto
-                    ZIndex: =2
+                    ZIndex: =3
 
                     docPrincipal_revision_ra_4 As gallery.galleryVertical:
                         DelayItemLoading: =true
