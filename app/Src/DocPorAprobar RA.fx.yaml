@@ -1725,7 +1725,7 @@
                     Height: =52
                     OnSelect: |-
                         =UpdateContext({varInterlocutorId: LookUp(DEV_Interlocutor, Email.Email=User().Email).ID, varRevPrincipal: Blank(), varRevFlujograma: Blank(), varRevRcki: Blank(), varRevisionPopup: true})
-                    Text: ="Empezar Aprobación"
+                    Text: =If(IsBlank(LookUp(aprobador_evaluacion_sidebar_ra_1.AllItems,mail_aprobador_ra_1.Text=User().Email).obs_text_sidebar_ra_8), "Empezar Revisión","Volver a Revisar")
                     Width: =384
                     X: =5
                     Y: =(Parent.Height-Self.Height)/2
