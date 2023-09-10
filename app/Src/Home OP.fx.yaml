@@ -581,7 +581,7 @@
                                     "Gallery1_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
                                         DelayItemLoading: =true
                                         Height: =240
-                                        Items: =SortByColumns(Filter(DEV_Modificacion_estatus_proceso_doc,ind_inact="Activo", id_estatus_documento.Value="Por aprobar" || id_estatus_documento.Value="Por revisar"  || id_estatus_documento.Value="Observado"),"fecha",SortOrder.Descending)
+                                        Items: =FirstN(SortByColumns(Filter(DEV_Modificacion_estatus_proceso_doc,ind_inact="Activo", id_estatus_documento.Value="Por aprobar" || id_estatus_documento.Value="Por revisar"  || id_estatus_documento.Value="Observado"),"fecha",SortOrder.Descending),5)
                                         Layout: =Layout.Vertical
                                         LoadingSpinner: =LoadingSpinner.Data
                                         TemplatePadding: =0
@@ -872,8 +872,8 @@
 
                                     "Gallery1_2 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
                                         DelayItemLoading: =true
-                                        Height: =Button4_4.Height
-                                        Items: =SortByColumns(Filter(DEV_Modificacion_estatus_proceso_doc,ind_inact="Activo", id_estatus_documento.Value="Publicado" || id_estatus_documento.Value="Aprobado"),"fecha",SortOrder.Ascending)
+                                        Height: =232
+                                        Items: =FirstN(SortByColumns(Filter(DEV_Modificacion_estatus_proceso_doc,ind_inact="Activo", id_estatus_documento.Value="Publicado" || id_estatus_documento.Value="Aprobado"),"fecha",SortOrder.Descending),5)
                                         Layout: =Layout.Vertical
                                         LoadingSpinner: =LoadingSpinner.Data
                                         TemplatePadding: =0
@@ -2703,6 +2703,63 @@
                             PaddingTop: =10
                             ZIndex: =2
 
+                            Label2_118 As label:
+                                AlignInContainer: =AlignInContainer.Stretch
+                                Color: =primarytext
+                                FontWeight: =FontWeight.Bold
+                                Height: =30
+                                LayoutMinHeight: =30
+                                Text: ="Gerencia *"
+                                ZIndex: =1
+
+                            GerenciaComboBox_2 As combobox:
+                                AlignInContainer: =AlignInContainer.Stretch
+                                BorderColor: =secondarytext
+                                BorderThickness: =1
+                                ChevronBackground: =RGBA(255, 255, 255, 1)
+                                ChevronFill: =primary
+                                ChevronHoverBackground: =
+                                ChevronHoverFill: =primary
+                                Color: =secondarytext
+                                DefaultSelectedItems: |-
+                                    ={Value: varDocSide.gerencia}
+                                DisplayFields: =["Value"]
+                                HoverBorderColor: =
+                                HoverColor: =RGBA(26, 26, 26, 1)
+                                HoverFill: =RGBA(215, 223, 240, 1)
+                                InputTextPlaceholder: ="Seleccione Opción"
+                                Items: =Distinct(DEV_Gerencia,Descripcion)
+                                LayoutMinWidth: =50
+                                PressedBorderColor: =secondarytext
+                                PressedColor: =RGBA(26, 26, 26, 1)
+                                PressedFill: =RGBA(0, 0, 0, 0)
+                                SearchFields: =["Value"]
+                                SearchItems: =Search(Distinct(DEV_Gerencia,Descripcion),GerenciaComboBox_2.SearchText,"Value")
+                                SelectMultiple: =false
+                                Size: =10
+                                ZIndex: =2
+
+                    Container14_89 As groupContainer.horizontalAutoLayoutContainer:
+                        DropShadow: =DropShadow.None
+                        Height: =100
+                        LayoutMinHeight: =50
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =4
+
+                        Container15_202 As groupContainer.verticalAutoLayoutContainer:
+                            DropShadow: =DropShadow.None
+                            Height: =100
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutMinHeight: =50
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            PaddingBottom: =10
+                            PaddingLeft: =10
+                            PaddingRight: =10
+                            PaddingTop: =10
+                            ZIndex: =1
+
                             Container8 As groupContainer.horizontalAutoLayoutContainer:
                                 FillPortions: =0
                                 Height: =30
@@ -2799,17 +2856,9 @@
                                 Width: =Parent.Width - 60
                                 X: =30
                                 Y: =
-                                ZIndex: =3
+                                ZIndex: =2
 
-                    Container14_89 As groupContainer.horizontalAutoLayoutContainer:
-                        DropShadow: =DropShadow.None
-                        Height: =100
-                        LayoutMinHeight: =50
-                        LayoutMinWidth: =250
-                        LayoutMode: =LayoutMode.Auto
-                        ZIndex: =4
-
-                        Container15_202 As groupContainer.verticalAutoLayoutContainer:
+                        Container15_203 As groupContainer.verticalAutoLayoutContainer:
                             DropShadow: =DropShadow.None
                             Height: =100
                             LayoutDirection: =LayoutDirection.Vertical
@@ -2820,7 +2869,7 @@
                             PaddingLeft: =10
                             PaddingRight: =10
                             PaddingTop: =10
-                            ZIndex: =1
+                            ZIndex: =2
 
                             Container23 As groupContainer.horizontalAutoLayoutContainer:
                                 FillPortions: =0
@@ -2924,38 +2973,6 @@
                                     ),ComboBox2_41.SearchText,"Value")
                                 SelectMultiple: =false
                                 Size: =10
-                                ZIndex: =3
-
-                        Container15_203 As groupContainer.verticalAutoLayoutContainer:
-                            DropShadow: =DropShadow.None
-                            Height: =100
-                            LayoutDirection: =LayoutDirection.Vertical
-                            LayoutMinHeight: =50
-                            LayoutMinWidth: =250
-                            LayoutMode: =LayoutMode.Auto
-                            PaddingBottom: =10
-                            PaddingLeft: =10
-                            PaddingRight: =10
-                            PaddingTop: =10
-                            ZIndex: =2
-
-                            Label2_207 As label:
-                                AlignInContainer: =AlignInContainer.Stretch
-                                Color: =primarytext
-                                FontWeight: =FontWeight.Bold
-                                Height: =30
-                                LayoutMinHeight: =30
-                                Text: ="Versión *"
-                                ZIndex: =1
-
-                            txtnombreedit_5 As text:
-                                AlignInContainer: =AlignInContainer.Stretch
-                                BorderColor: =secondarytext
-                                BorderThickness: =1
-                                Default: =varDocSide.version
-                                HoverBorderColor: =primary
-                                HoverFill: =RGBA(255, 255, 255, 1)
-                                Size: =10
                                 ZIndex: =2
 
                     Container14_92 As groupContainer.horizontalAutoLayoutContainer:
@@ -2979,6 +2996,38 @@
                             PaddingTop: =10
                             ZIndex: =1
 
+                            Label2_207 As label:
+                                AlignInContainer: =AlignInContainer.Stretch
+                                Color: =primarytext
+                                FontWeight: =FontWeight.Bold
+                                Height: =30
+                                LayoutMinHeight: =30
+                                Text: ="Versión *"
+                                ZIndex: =1
+
+                            txtnombreedit_5 As text:
+                                AlignInContainer: =AlignInContainer.Stretch
+                                BorderColor: =secondarytext
+                                BorderThickness: =1
+                                Default: =varDocSide.version
+                                HoverBorderColor: =primary
+                                HoverFill: =RGBA(255, 255, 255, 1)
+                                Size: =10
+                                ZIndex: =2
+
+                        Container15_205 As groupContainer.verticalAutoLayoutContainer:
+                            DropShadow: =DropShadow.None
+                            Height: =100
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutMinHeight: =50
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            PaddingBottom: =10
+                            PaddingLeft: =10
+                            PaddingRight: =10
+                            PaddingTop: =10
+                            ZIndex: =2
+
                             Label2_208 As label:
                                 AlignInContainer: =AlignInContainer.Stretch
                                 Color: =primarytext
@@ -3001,7 +3050,15 @@
                                 Size: =10
                                 ZIndex: =2
 
-                        Container15_205 As groupContainer.verticalAutoLayoutContainer:
+                    Container14_93 As groupContainer.horizontalAutoLayoutContainer:
+                        DropShadow: =DropShadow.None
+                        Height: =100
+                        LayoutMinHeight: =50
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =6
+
+                        Container15_206 As groupContainer.verticalAutoLayoutContainer:
                             DropShadow: =DropShadow.None
                             Height: =100
                             LayoutDirection: =LayoutDirection.Vertical
@@ -3012,7 +3069,7 @@
                             PaddingLeft: =10
                             PaddingRight: =10
                             PaddingTop: =10
-                            ZIndex: =2
+                            ZIndex: =1
 
                             Label2_209 As label:
                                 AlignInContainer: =AlignInContainer.Stretch
@@ -3050,15 +3107,7 @@
                                 Size: =10
                                 ZIndex: =2
 
-                    Container14_93 As groupContainer.horizontalAutoLayoutContainer:
-                        DropShadow: =DropShadow.None
-                        Height: =100
-                        LayoutMinHeight: =50
-                        LayoutMinWidth: =250
-                        LayoutMode: =LayoutMode.Auto
-                        ZIndex: =6
-
-                        Container15_206 As groupContainer.verticalAutoLayoutContainer:
+                        Container15_207 As groupContainer.verticalAutoLayoutContainer:
                             DropShadow: =DropShadow.None
                             Height: =100
                             LayoutDirection: =LayoutDirection.Vertical
@@ -3069,7 +3118,7 @@
                             PaddingLeft: =10
                             PaddingRight: =10
                             PaddingTop: =10
-                            ZIndex: =1
+                            ZIndex: =2
 
                             Label2_210 As label:
                                 AlignInContainer: =AlignInContainer.Stretch
@@ -3107,19 +3156,6 @@
                                 SelectMultiple: =false
                                 Size: =10
                                 ZIndex: =2
-
-                        Container15_207 As groupContainer.verticalAutoLayoutContainer:
-                            DropShadow: =DropShadow.None
-                            Height: =100
-                            LayoutDirection: =LayoutDirection.Vertical
-                            LayoutMinHeight: =50
-                            LayoutMinWidth: =250
-                            LayoutMode: =LayoutMode.Auto
-                            PaddingBottom: =10
-                            PaddingLeft: =10
-                            PaddingRight: =10
-                            PaddingTop: =10
-                            ZIndex: =2
 
                 Container14_94 As groupContainer.horizontalAutoLayoutContainer:
                     DropShadow: =DropShadow.None
@@ -4434,6 +4470,7 @@
                                             Empresa: cbo_empresa_4.Selected,
                                             Solicitante: cbo_solicitante_8.Selected,
                                             Dueno_Proceso: cbo_dueñoprocesso_4.Selected.Value,
+                                            gerencia: GerenciaComboBox_2.Selected.Value,
                                             entrega: varDocSide.entrega + 1
                                         }
                                     )
