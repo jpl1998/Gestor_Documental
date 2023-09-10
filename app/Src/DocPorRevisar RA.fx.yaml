@@ -2421,7 +2421,7 @@
                     Height: =52
                     OnSelect: |-
                         =UpdateContext({varInterlocutorId: LookUp(DEV_Interlocutor, Email.Email=User().Email).ID, varRevPrincipal: Blank(), varRevFlujograma: Blank(), varRevRcki: Blank(), varRevisionPopup: true})
-                    Text: ="Empezar Revisión"
+                    Text: =If(IsBlank(LookUp(revisor_evaluacion_sidebar_ra.AllItems,mail_revisor_ra.Text=User().Email).obs_text_sidebar_ra_12), "Empezar Revisión","Volver a Revisar")
                     Width: =384
                     X: =5
                     Y: =(Parent.Height-Self.Height)/2
@@ -3437,7 +3437,7 @@
                         HoverColor: =primary
                         HoverFill: =RGBA(0, 0, 0, 0.15)
                         OnSelect: |-
-                            =UpdateContext({varObsItems:Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version, entrega = varDocSide.entrega, id_status_archivo.Value="2"), varRegistroObsPopup:true})
+                            =UpdateContext({varObsItems:Filter(DEV_Modificacion_estatus_documento,ind_inact="Activo", id_interlocutor.Value=ThisItem.id_interlocutor.Value, codigo=varDocSide.codigo, version=varDocSide.version, entrega = varDocSide.entrega, id_status_archivo.Value="2"),varObsDatos:ThisItem, varRegistroObsPopup:true})
                         PressedColor: =Self.Color
                         PressedFill: =
                         Size: =8

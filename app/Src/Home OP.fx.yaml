@@ -1505,6 +1505,7 @@
                             ZIndex: =1
 
                 informacion_container As groupContainer.verticalAutoLayoutContainer:
+                    DropShadow: =DropShadow.None
                     LayoutAlignItems: =LayoutAlignItems.Stretch
                     LayoutDirection: =LayoutDirection.Vertical
                     LayoutMinHeight: =100
