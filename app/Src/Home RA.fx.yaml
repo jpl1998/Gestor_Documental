@@ -704,20 +704,35 @@
                                         DelayItemLoading: =true
                                         Height: =Button4_6.Height
                                         Items: |-
-                                            =SortByColumns(
-                                                Filter(
-                                                    DEV_Modificacion_estatus_proceso_doc,
-                                                    ind_inact = "Activo",
-                                                    id_estatus_documento.Value = "Por revisar",
-                                                    id_doc in Distinct(AddColumns(Filter(
-                                                        DEV_Actor,
-                                                        id_funcion.Value = "Revisor",
-                                                        ind_activo = "Activo",
-                                                        id_interlocutor.Value = Text(LookUp(DEV_Interlocutor, Email.Email=User().Email).ID)
-                                                        ),"idInt",id_documento.Value),idInt)
+                                            =FirstN(
+                                                SortByColumns(
+                                                    Filter(
+                                                        DEV_Modificacion_estatus_proceso_doc,
+                                                        ind_inact = "Activo",
+                                                        id_estatus_documento.Value = "Por revisar",
+                                                        id_doc in Distinct(
+                                                            AddColumns(
+                                                                Filter(
+                                                                    DEV_Actor,
+                                                                    id_funcion.Value = "Revisor",
+                                                                    ind_activo = "Activo",
+                                                                    id_interlocutor.Value = Text(
+                                                                        LookUp(
+                                                                            DEV_Interlocutor,
+                                                                            Email.Email = User().Email
+                                                                        ).ID
+                                                                    )
+                                                                ),
+                                                                "idInt",
+                                                                id_documento.Value
+                                                            ),
+                                                            idInt
+                                                        )
+                                                    ),
+                                                    "fecha",
+                                                    SortOrder.Ascending
                                                 ),
-                                                "fecha",
-                                                SortOrder.Ascending
+                                                5
                                             )
                                         Layout: =Layout.Vertical
                                         LoadingSpinner: =LoadingSpinner.Data
@@ -1015,20 +1030,22 @@
                                         DelayItemLoading: =true
                                         Height: =Button4_7.Height
                                         Items: |-
-                                            =SortByColumns(
-                                                Filter(
-                                                    DEV_Modificacion_estatus_proceso_doc,
-                                                    ind_inact = "Activo",
-                                                    id_estatus_documento.Value = "Por aprobar",
-                                                    id_doc in Distinct(AddColumns(Filter(
-                                                        DEV_Actor,
-                                                        id_funcion.Value = "Aprobador",
-                                                        ind_activo = "Activo",
-                                                        id_interlocutor.Value = Text(LookUp(DEV_Interlocutor, Email.Email=User().Email).ID)
-                                                        ),"idInt",id_documento.Value),idInt)
-                                                ),
-                                                "fecha",
-                                                SortOrder.Ascending
+                                            =FirstN(
+                                                SortByColumns(
+                                                    Filter(
+                                                        DEV_Modificacion_estatus_proceso_doc,
+                                                        ind_inact = "Activo",
+                                                        id_estatus_documento.Value = "Por aprobar",
+                                                        id_doc in Distinct(AddColumns(Filter(
+                                                            DEV_Actor,
+                                                            id_funcion.Value = "Aprobador",
+                                                            ind_activo = "Activo",
+                                                            id_interlocutor.Value = Text(LookUp(DEV_Interlocutor, Email.Email=User().Email).ID)
+                                                            ),"idInt",id_documento.Value),idInt)
+                                                    ),
+                                                    "fecha",
+                                                    SortOrder.Ascending
+                                                ),5
                                             )
                                         Layout: =Layout.Vertical
                                         LoadingSpinner: =LoadingSpinner.Data
@@ -1320,7 +1337,7 @@
                                         DelayItemLoading: =true
                                         Height: =Button4_8.Height
                                         Items: |-
-                                            =SortByColumns(
+                                            =FirstN(SortByColumns(
                                                 Filter(
                                                     DEV_Modificacion_estatus_proceso_doc,
                                                     ind_inact = "Activo",
@@ -1334,7 +1351,7 @@
                                                 ),
                                                 "fecha",
                                                 SortOrder.Descending
-                                            )
+                                            ),5)
                                         Layout: =Layout.Vertical
                                         LoadingSpinner: =LoadingSpinner.Data
                                         TemplatePadding: =0
@@ -1625,7 +1642,7 @@
                                         DelayItemLoading: =true
                                         Height: =Button4_9.Height
                                         Items: |-
-                                            =SortByColumns(
+                                            =FirstN(SortByColumns(
                                                 Filter(
                                                     DEV_Modificacion_estatus_proceso_doc,
                                                     ind_inact = "Activo",
@@ -1638,8 +1655,8 @@
                                                         ),"idInt",id_documento.Value),idInt)
                                                 ),
                                                 "fecha",
-                                                SortOrder.Ascending
-                                            )
+                                                SortOrder.Descending
+                                            ),5)
                                         Layout: =Layout.Vertical
                                         LoadingSpinner: =LoadingSpinner.Data
                                         TemplatePadding: =0

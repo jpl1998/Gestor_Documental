@@ -3832,7 +3832,7 @@
                         );
                         
                         UpdateContext({varResultadoPopup: true})
-                    Text: ="Enviar Revisión"
+                    Text: ="Enviar Aprobación"
                     Visible: =!observar_button_revision_ra_6.Visible
                     Width: =412
                     X: =(Parent.Width-Self.Width)/2
