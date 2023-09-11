@@ -6329,7 +6329,7 @@
                 FontWeight: =FontWeight.Semibold
                 Height: =43
                 Size: =12
-                Text: ="Insertar correos para difusión (separados por punto y coma)"
+                Text: ="Insertar correos para difusión (sin espacios y separados por punto y coma (;) )"
                 Width: =532
                 X: =40
                 Y: =75
@@ -6349,39 +6349,64 @@
                 ZIndex: =5
 
             Button9_4 As button:
+                DisplayMode: =If(" " in CorreosDifusion.Text || IsBlank(CorreosDifusion.Text), DisplayMode.Disabled, DisplayMode.Edit)
                 Fill: =primary
                 Font: =Font.'Segoe UI'
                 Height: =52
                 HoverFill: =ColorFade(primary,-20%)
                 OnSelect: |-
-                    =Set(varDifusion,
+                    =Set(
+                        varDifusion,
                         Patch(
                             DEV_Difusion,
                             Defaults(DEV_Difusion),
                             {
-                                nro_difusion: First(SortByColumns(Filter(DEV_Difusion,id_documento.Value=Text(varDocSide.ID)),"nro_difusion",SortOrder.Descending)).nro_difusion+1,
+                                nro_difusion: First(
+                                    SortByColumns(
+                                        Filter(
+                                            DEV_Difusion,
+                                            id_documento.Value = Text(varDocSide.ID)
+                                        ),
+                                        "nro_difusion",
+                                        SortOrder.Descending
+                                    )
+                                ).nro_difusion + 1,
                                 tipo_difusion: "Masiva por correo",
                                 fecha: Today(),
-                                id_documento: {Id:varDocSide.ID, Value:varDocSide.ID}
+                                id_documento: {
+                                    Id: varDocSide.ID,
+                                    Value: varDocSide.ID
+                                }
                             }
                         )
                     );
-                    
-                    ForAll(
-                        Split(CorreosDifusion.Text,";") As user,
-                        Patch(
-                            DEV_Difusion_Usuario,
-                            Defaults(DEV_Difusion_Usuario),
-                            {
-                                id_difusion: {Id: varDifusion.ID, Value: varDifusion.ID},
-                                Nombre: UsuáriosdoOffice365.UserProfileV2(user.Value).displayName,
-                                Cargo: UsuáriosdoOffice365.UserProfileV2(user.Value).jobTitle,
-                                Area: UsuáriosdoOffice365.UserProfileV2(user.Value).department
-                            }
-                        )
-                    );
-                    Necesidaddenotificacióndedifusióndepublicacióndedocumentooficial.Run(CorreosDifusion.Text, varDocSide.ID);
-                    UpdateContext({varDifusionCR:false})
+                    IfError(
+                        ForAll(
+                            Split(
+                                CorreosDifusion.Text,
+                                ";"
+                            ) As user,
+                            Patch(
+                                DEV_Difusion_Usuario,
+                                Defaults(DEV_Difusion_Usuario),
+                                {
+                                    id_difusion: {
+                                        Id: varDifusion.ID,
+                                        Value: varDifusion.ID
+                                    },
+                                    Nombre: UsuáriosdoOffice365.UserProfileV2(user.Value).displayName,
+                                    Cargo: UsuáriosdoOffice365.UserProfileV2(user.Value).jobTitle,
+                                    Area: UsuáriosdoOffice365.UserProfileV2(user.Value).department
+                                }
+                            )
+                        ),
+                        UpdateContext({popupErrorDifusion: true}),
+                        Necesidaddenotificacióndedifusióndepublicacióndedocumentooficial.Run(
+                            CorreosDifusion.Text,
+                            varDocSide.ID
+                        );
+                        UpdateContext({varDifusionCR: false})
+                    )
                 Size: =16
                 Text: ="Realizar Difusión"
                 Width: =412
@@ -7388,8 +7413,79 @@
                 Y: =170
                 ZIndex: =13
 
+    popupErrorDifusion As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(51, 51, 51, 0.27)
+        Height: =Parent.Height
+        Visible: =popupErrorDifusion
+        Width: =Parent.Width
+        ZIndex: =22
+
+        Container13_34 As groupContainer.verticalAutoLayoutContainer:
+            DropShadow: =DropShadow.Regular
+            Fill: =RGBA(246, 247, 251, 1)
+            Height: =280
+            LayoutAlignItems: =LayoutAlignItems.Stretch
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutGap: =10
+            LayoutMode: =LayoutMode.Auto
+            PaddingBottom: =20
+            PaddingLeft: =20
+            PaddingRight: =20
+            PaddingTop: =20
+            Width: =430
+            X: =(Parent.Width-Self.Width)/2
+            Y: =(Parent.Height-Self.Height)/2
+            ZIndex: =1
+
+            Label4_122 As label:
+                Align: =Align.Center
+                FillPortions: =1
+                FontWeight: =FontWeight.Bold
+                Size: =15
+                Text: ="Ocurrió un Error"
+                ZIndex: =1
+
+            Icon8 As icon.Error:
+                Color: =red
+                Icon: =Icon.Error
+                PaddingBottom: =5
+                PaddingLeft: =5
+                PaddingRight: =5
+                PaddingTop: =5
+                ZIndex: =2
+
+            Label4_123 As label:
+                Align: =Align.Center
+                FillPortions: =1
+                Font: =Font.'Segoe UI'
+                Text: ="Revisar que los correos ingresados estén correctos antes de enviar la Difusión"
+                ZIndex: =3
+
+            Button3_24 As button:
+                Fill: =primary
+                FillPortions: =1
+                OnSelect: |-
+                    =UpdateContext({popupErrorDifusion:false})
+                RadiusBottomLeft: =5
+                RadiusBottomRight: =5
+                RadiusTopLeft: =5
+                RadiusTopRight: =5
+                Size: =14
+                Text: ="OK"
+                ZIndex: =4
+
+        Icon1_36 As icon.Cancel:
+            Height: =20
+            Icon: =Icon.Cancel
+            OnSelect: |-
+                =UpdateContext({popupErrorDifusion:false})
+            Width: =20
+            X: =864
+            Y: =261
+            ZIndex: =2
+
     Label6 As label:
         Text: ="Desarrollo"
         X: =361
-        ZIndex: =22
+        ZIndex: =23
 
