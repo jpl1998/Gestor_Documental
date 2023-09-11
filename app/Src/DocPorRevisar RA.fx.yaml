@@ -4379,7 +4379,7 @@
                                     entrega: varSelectedDoc.entrega
                                 }
                             );
-                            NecesidaddeAprobacióndedocumento.Run(Concat(aprobador_evaluacion_sidebar_ra.AllItems,mail_aprobador_ra_7,";"),varSelectedDoc.codigo, varSelectedDoc.version, varSelectedDoc.Nombre, varSelectedDoc.id_tipo_docu.Value, varSelectedDoc.fecha)
+                            NecesidaddeAprobacióndedocumento.Run(Concat(aprobador_evaluacion_sidebar_ra.AllItems,mail_aprobador_ra_7,";"),varSelectedDoc.codigo, varSelectedDoc.version, varSelectedDoc.Nombre, varSelectedDoc.id_tipo_docu.Value, varSelectedDoc.Dueno_Proceso)
                         );
                         UpdateContext({varResultadoPopup: true})
                     Text: ="Conforme Todo"
@@ -4523,7 +4523,7 @@
                                     entrega: varSelectedDoc.entrega
                                 }
                             );
-                            NecesidaddeAprobacióndedocumento.Run(Concat(aprobador_evaluacion_sidebar_ra.AllItems,mail_aprobador_ra_7,";"),varSelectedDoc.codigo, varSelectedDoc.version, varSelectedDoc.Nombre, varSelectedDoc.id_tipo_docu.Value, varSelectedDoc.fecha)
+                            NecesidaddeAprobacióndedocumento.Run(Concat(aprobador_evaluacion_sidebar_ra.AllItems,mail_aprobador_ra_7,";"),varSelectedDoc.codigo, varSelectedDoc.version, varSelectedDoc.Nombre, varSelectedDoc.id_tipo_docu.Value, varSelectedDoc.Dueno_Proceso)
                         );
                         
                         UpdateContext({varResultadoPopup: true})

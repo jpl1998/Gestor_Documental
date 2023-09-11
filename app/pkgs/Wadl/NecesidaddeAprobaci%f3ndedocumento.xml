@@ -44,7 +44,7 @@
               <doc title="tipoDoc" />
             </param>
             <param style="plain" name="text_5" path="/text_5" type="xs:string" required="true">
-              <doc title="fechaSolicitud" />
+              <doc title="duenoProceso" />
             </param>
           </representation>
         </request>
