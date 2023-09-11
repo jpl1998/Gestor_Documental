@@ -7333,3 +7333,8 @@
                 Y: =170
                 ZIndex: =13
 
+    Label6 As label:
+        Text: ="Desarrollo"
+        X: =361
+        ZIndex: =22
+
