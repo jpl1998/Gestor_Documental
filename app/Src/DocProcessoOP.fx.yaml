@@ -1832,13 +1832,15 @@
                                 HoverColor: =RGBA(26, 26, 26, 1)
                                 HoverFill: =RGBA(215, 223, 240, 1)
                                 InputTextPlaceholder: ="Seleccione Opción"
-                                Items: =Distinct(DEV_Gerencia,Descripcion)
+                                Items: |-
+                                    =Distinct(Filter(DEV_Estructura_Organizativa_dos,'id_empresa: Descripcion'.Value = cbo_empresa.Selected.Value),GERENCIA)
                                 LayoutMinWidth: =50
                                 PressedBorderColor: =secondarytext
                                 PressedColor: =RGBA(26, 26, 26, 1)
                                 PressedFill: =RGBA(0, 0, 0, 0)
                                 SearchFields: =["Value"]
-                                SearchItems: =Search(Distinct(DEV_Gerencia,Descripcion),GerenciaComboBox.SearchText,"Value")
+                                SearchItems: |-
+                                    =Search(Distinct(Filter(DEV_Estructura_Organizativa_dos,'id_empresa: Descripcion'.Value = cbo_empresa.Selected.Value),GERENCIA),GerenciaComboBox.SearchText,"Value")
                                 SelectMultiple: =false
                                 Size: =10
                                 ZIndex: =2
@@ -1934,13 +1936,13 @@
                                     =Switch(
                                         FiltroDuenoComboBox.Selected.Value,
                                         "Gerencia",
-                                        Distinct(DEV_Estructura_Organizativa_dos,GERENCIA),
+                                        Distinct(Filter(DEV_Estructura_Organizativa_dos,'id_empresa: Descripcion'.Value = cbo_empresa.Selected.Value),GERENCIA),
                                         "Subgerencia",
-                                        Distinct(DEV_Estructura_Organizativa_dos,SUBGERENCIA),
+                                        Distinct(Filter(DEV_Estructura_Organizativa_dos,'id_empresa: Descripcion'.Value = cbo_empresa.Selected.Value),SUBGERENCIA),
                                         "Departamento",
-                                        Distinct(DEV_Estructura_Organizativa_dos,DPTO),
+                                        Distinct(Filter(DEV_Estructura_Organizativa_dos,'id_empresa: Descripcion'.Value = cbo_empresa.Selected.Value),DPTO),
                                         "Área",
-                                        Distinct(DEV_Estructura_Organizativa_dos,des_cen_cto)
+                                        Distinct(Filter(DEV_Estructura_Organizativa_dos,'id_empresa: Descripcion'.Value = cbo_empresa.Selected.Value),des_cen_cto)
                                     )
                                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                                 SearchFields: =["Value"]
@@ -1948,13 +1950,13 @@
                                     =Search(Switch(
                                         FiltroDuenoComboBox.Selected.Value,
                                         "Gerencia",
-                                        Distinct(DEV_Estructura_Organizativa_dos,GERENCIA),
+                                        Distinct(Filter(DEV_Estructura_Organizativa_dos,'id_empresa: Descripcion'.Value = cbo_empresa.Selected.Value),GERENCIA),
                                         "Subgerencia",
-                                        Distinct(DEV_Estructura_Organizativa_dos,SUBGERENCIA),
+                                        Distinct(Filter(DEV_Estructura_Organizativa_dos,'id_empresa: Descripcion'.Value = cbo_empresa.Selected.Value),SUBGERENCIA),
                                         "Departamento",
-                                        Distinct(DEV_Estructura_Organizativa_dos,DPTO),
+                                        Distinct(Filter(DEV_Estructura_Organizativa_dos,'id_empresa: Descripcion'.Value = cbo_empresa.Selected.Value),DPTO),
                                         "Área",
-                                        Distinct(DEV_Estructura_Organizativa_dos,des_cen_cto)
+                                        Distinct(Filter(DEV_Estructura_Organizativa_dos,'id_empresa: Descripcion'.Value = cbo_empresa.Selected.Value),des_cen_cto)
                                     ),cbo_dueñoprocesso.SearchText,"Value")
                                 SelectMultiple: =false
                                 Size: =10
@@ -2052,13 +2054,13 @@
                                         "Empresa",
                                         Choices(DEV_Documento[@Empresa]),
                                         "Gerencia",
-                                        Distinct(DEV_Estructura_Organizativa_dos,GERENCIA),
+                                        Distinct(Filter(DEV_Estructura_Organizativa_dos,'id_empresa: Descripcion'.Value = cbo_empresa.Selected.Value),GERENCIA),
                                         "Subgerencia",
-                                        Distinct(DEV_Estructura_Organizativa_dos,SUBGERENCIA),
+                                        Distinct(Filter(DEV_Estructura_Organizativa_dos,'id_empresa: Descripcion'.Value = cbo_empresa.Selected.Value),SUBGERENCIA),
                                         "Departamento",
-                                        Distinct(DEV_Estructura_Organizativa_dos,DPTO),
+                                        Distinct(Filter(DEV_Estructura_Organizativa_dos,'id_empresa: Descripcion'.Value = cbo_empresa.Selected.Value),DPTO),
                                         "Área",
-                                        Distinct(DEV_Estructura_Organizativa_dos,des_cen_cto)
+                                        Distinct(Filter(DEV_Estructura_Organizativa_dos,'id_empresa: Descripcion'.Value = cbo_empresa.Selected.Value),des_cen_cto)
                                     )
                                 LayoutMinWidth: =50
                                 PressedBorderColor: =secondarytext
@@ -2071,13 +2073,13 @@
                                         "Empresa",
                                         Choices(DEV_Documento[@Empresa]),
                                         "Gerencia",
-                                        Distinct(DEV_Estructura_Organizativa_dos,GERENCIA),
+                                        Distinct(Filter(DEV_Estructura_Organizativa_dos,'id_empresa: Descripcion'.Value = cbo_empresa.Selected.Value),GERENCIA),
                                         "Subgerencia",
-                                        Distinct(DEV_Estructura_Organizativa_dos,SUBGERENCIA),
+                                        Distinct(Filter(DEV_Estructura_Organizativa_dos,'id_empresa: Descripcion'.Value = cbo_empresa.Selected.Value),SUBGERENCIA),
                                         "Departamento",
-                                        Distinct(DEV_Estructura_Organizativa_dos,DPTO),
+                                        Distinct(Filter(DEV_Estructura_Organizativa_dos,'id_empresa: Descripcion'.Value = cbo_empresa.Selected.Value),DPTO),
                                         "Área",
-                                        Distinct(DEV_Estructura_Organizativa_dos,des_cen_cto)
+                                        Distinct(Filter(DEV_Estructura_Organizativa_dos,'id_empresa: Descripcion'.Value = cbo_empresa.Selected.Value),des_cen_cto)
                                     ),ComboBox2_12.SearchText,"Value")
                                 SelectMultiple: =false
                                 Size: =10
@@ -5163,13 +5165,15 @@
                                 HoverColor: =RGBA(26, 26, 26, 1)
                                 HoverFill: =RGBA(215, 223, 240, 1)
                                 InputTextPlaceholder: ="Seleccione Opción"
-                                Items: =Distinct(DEV_Gerencia,Descripcion)
+                                Items: |-
+                                    =Distinct(Filter(DEV_Estructura_Organizativa_dos,'id_empresa: Descripcion'.Value = cbo_empresa_1.Selected.Value),GERENCIA)
                                 LayoutMinWidth: =50
                                 PressedBorderColor: =secondarytext
                                 PressedColor: =RGBA(26, 26, 26, 1)
                                 PressedFill: =RGBA(0, 0, 0, 0)
                                 SearchFields: =["Value"]
-                                SearchItems: =Search(Distinct(DEV_Gerencia,Descripcion),GerenciaComboBox_1.SearchText,"Value")
+                                SearchItems: |-
+                                    =Search(Distinct(Filter(DEV_Estructura_Organizativa_dos,'id_empresa: Descripcion'.Value = cbo_empresa_1.Selected.Value),GERENCIA),GerenciaComboBox_1.SearchText,"Value")
                                 SelectMultiple: =false
                                 Size: =10
                                 ZIndex: =2
@@ -5263,13 +5267,13 @@
                                     =Switch(
                                         FiltroDuenoComboBox_3.Selected.Value,
                                         "Gerencia",
-                                        Distinct(DEV_Estructura_Organizativa_dos,GERENCIA),
+                                        Distinct(Filter(DEV_Estructura_Organizativa_dos,'id_empresa: Descripcion'.Value = cbo_empresa_1.Selected.Value),GERENCIA),
                                         "Subgerencia",
-                                        Distinct(DEV_Estructura_Organizativa_dos,SUBGERENCIA),
+                                        Distinct(Filter(DEV_Estructura_Organizativa_dos,'id_empresa: Descripcion'.Value = cbo_empresa_1.Selected.Value),SUBGERENCIA),
                                         "Departamento",
-                                        Distinct(DEV_Estructura_Organizativa_dos,DPTO),
+                                        Distinct(Filter(DEV_Estructura_Organizativa_dos,'id_empresa: Descripcion'.Value = cbo_empresa_1.Selected.Value),DPTO),
                                         "Área",
-                                        Distinct(DEV_Estructura_Organizativa_dos,des_cen_cto)
+                                        Distinct(Filter(DEV_Estructura_Organizativa_dos,'id_empresa: Descripcion'.Value = cbo_empresa_1.Selected.Value),des_cen_cto)
                                     )
                                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                                 SearchFields: =["Value"]
@@ -5277,13 +5281,13 @@
                                     =Search(Switch(
                                         FiltroDuenoComboBox_3.Selected.Value,
                                         "Gerencia",
-                                        Distinct(DEV_Estructura_Organizativa_dos,GERENCIA),
+                                        Distinct(Filter(DEV_Estructura_Organizativa_dos,'id_empresa: Descripcion'.Value = cbo_empresa_1.Selected.Value),GERENCIA),
                                         "Subgerencia",
-                                        Distinct(DEV_Estructura_Organizativa_dos,SUBGERENCIA),
+                                        Distinct(Filter(DEV_Estructura_Organizativa_dos,'id_empresa: Descripcion'.Value = cbo_empresa_1.Selected.Value),SUBGERENCIA),
                                         "Departamento",
-                                        Distinct(DEV_Estructura_Organizativa_dos,DPTO),
+                                        Distinct(Filter(DEV_Estructura_Organizativa_dos,'id_empresa: Descripcion'.Value = cbo_empresa_1.Selected.Value),DPTO),
                                         "Área",
-                                        Distinct(DEV_Estructura_Organizativa_dos,des_cen_cto)
+                                        Distinct(Filter(DEV_Estructura_Organizativa_dos,'id_empresa: Descripcion'.Value = cbo_empresa_1.Selected.Value),des_cen_cto)
                                     ),cbo_dueñoprocesso_1.SearchText,"Value")
                                 SelectMultiple: =false
                                 Size: =10
@@ -5379,13 +5383,13 @@
                                         "Empresa",
                                         Choices(DEV_Documento[@Empresa]),
                                         "Gerencia",
-                                        Distinct(DEV_Estructura_Organizativa_dos,GERENCIA),
+                                        Distinct(Filter(DEV_Estructura_Organizativa_dos,'id_empresa: Descripcion'.Value = cbo_empresa_1.Selected.Value),GERENCIA),
                                         "Subgerencia",
-                                        Distinct(DEV_Estructura_Organizativa_dos,SUBGERENCIA),
+                                        Distinct(Filter(DEV_Estructura_Organizativa_dos,'id_empresa: Descripcion'.Value = cbo_empresa_1.Selected.Value),SUBGERENCIA),
                                         "Departamento",
-                                        Distinct(DEV_Estructura_Organizativa_dos,DPTO),
+                                        Distinct(Filter(DEV_Estructura_Organizativa_dos,'id_empresa: Descripcion'.Value = cbo_empresa_1.Selected.Value),DPTO),
                                         "Área",
-                                        Distinct(DEV_Estructura_Organizativa_dos,des_cen_cto)
+                                        Distinct(Filter(DEV_Estructura_Organizativa_dos,'id_empresa: Descripcion'.Value = cbo_empresa_1.Selected.Value),des_cen_cto)
                                     )
                                 LayoutMinWidth: =50
                                 PressedBorderColor: =secondarytext
@@ -5398,13 +5402,13 @@
                                         "Empresa",
                                         Choices(DEV_Documento[@Empresa]),
                                         "Gerencia",
-                                        Distinct(DEV_Estructura_Organizativa_dos,GERENCIA),
+                                        Distinct(Filter(DEV_Estructura_Organizativa_dos,'id_empresa: Descripcion'.Value = cbo_empresa_1.Selected.Value),GERENCIA),
                                         "Subgerencia",
-                                        Distinct(DEV_Estructura_Organizativa_dos,SUBGERENCIA),
+                                        Distinct(Filter(DEV_Estructura_Organizativa_dos,'id_empresa: Descripcion'.Value = cbo_empresa_1.Selected.Value),SUBGERENCIA),
                                         "Departamento",
-                                        Distinct(DEV_Estructura_Organizativa_dos,DPTO),
+                                        Distinct(Filter(DEV_Estructura_Organizativa_dos,'id_empresa: Descripcion'.Value = cbo_empresa_1.Selected.Value),DPTO),
                                         "Área",
-                                        Distinct(DEV_Estructura_Organizativa_dos,des_cen_cto)
+                                        Distinct(Filter(DEV_Estructura_Organizativa_dos,'id_empresa: Descripcion'.Value = cbo_empresa_1.Selected.Value),des_cen_cto)
                                     ),ComboBox2_27.SearchText,"Value")
                                 SelectMultiple: =false
                                 Size: =10
