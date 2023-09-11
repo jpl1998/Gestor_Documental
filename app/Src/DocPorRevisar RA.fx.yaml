@@ -669,7 +669,7 @@
 
                                         Icon1_9 As icon.Edit:
                                             Height: =Parent.Height*60%
-                                            Icon: =Icon.View
+                                            Icon: =Icon.Edit
                                             OnSelect: |-
                                                 =If(menu_filter_docRev_ra.Selected.Value="Pendientes",
                                                 UpdateContext({varSelectedDoc:ThisItem, varSidebarPopup:true}),
