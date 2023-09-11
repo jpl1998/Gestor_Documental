@@ -3255,7 +3255,7 @@
                                             version:varDocID.version}
                                         )
                                     );
-                                    Necesidaddefirmaderevisor.Run(ComboBox2_23.Selected.Email, varDocID.codigo, varDocID.Nombre, varDocID.id_tipo_docu.Value, varDocID.fecha, varDocID.version)
+                                    Necesidaddefirmaderevisor.Run(ComboBox2_23.Selected.Email, varDocID.codigo, varDocID.Nombre, varDocID.id_tipo_docu.Value, varDocID.Dueno_Proceso, varDocID.version)
                                     )
                                 );
                                 
