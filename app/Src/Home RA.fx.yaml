@@ -640,6 +640,19 @@
                                         Text: ="Nombre"
                                         ZIndex: =2
 
+                                    Label4_94 As label:
+                                        Align: =Align.Center
+                                        Color: =secondarytext
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: =FontWeight.Semibold
+                                        Height: =Parent.Height
+                                        PaddingLeft: =10
+                                        Size: =9.5
+                                        Text: ="Versión"
+                                        Width: =65
+                                        X: =50
+                                        ZIndex: =3
+
                                     Label2_52 As label:
                                         Align: =Align.Center
                                         Color: =primarytext
@@ -649,7 +662,7 @@
                                         PaddingLeft: =15
                                         Size: =10
                                         Text: ="Tipo Documento"
-                                        ZIndex: =3
+                                        ZIndex: =4
 
                                     Label2_53 As label:
                                         Align: =Align.Center
@@ -660,7 +673,7 @@
                                         PaddingLeft: =15
                                         Size: =10
                                         Text: ="F. Solicitud Aprobación"
-                                        ZIndex: =4
+                                        ZIndex: =5
 
                                     Label2_54 As label:
                                         Align: =Align.Center
@@ -671,7 +684,7 @@
                                         PaddingLeft: =15
                                         Size: =10
                                         Text: ="Estado"
-                                        ZIndex: =5
+                                        ZIndex: =6
 
                                     Label2_55 As label:
                                         Color: =primarytext
@@ -680,7 +693,7 @@
                                         Size: =10
                                         Text: =""
                                         Width: =80
-                                        ZIndex: =6
+                                        ZIndex: =7
 
                                 Container4_6 As groupContainer.manualLayoutContainer:
                                     LayoutMinHeight: =50
@@ -795,10 +808,24 @@
                                                 FillPortions: =2
                                                 Font: =Font.'Segoe UI'
                                                 FontWeight: =FontWeight.Semibold
+                                                LayoutMinWidth: =305
                                                 PaddingLeft: =15
                                                 Size: =9.5
                                                 Text: =LookUp(DEV_Documento, Value(ThisItem.id_documento.Value)=ID).Nombre
                                                 ZIndex: =2
+
+                                            Label4_93 As label:
+                                                Align: =Align.Center
+                                                Color: =secondarytext
+                                                Font: =Font.'Segoe UI'
+                                                FontWeight: =FontWeight.Semibold
+                                                Height: =Parent.Height
+                                                PaddingLeft: =10
+                                                Size: =9.5
+                                                Text: =ThisItem.version
+                                                Width: =65
+                                                X: =50
+                                                ZIndex: =3
 
                                             Label3_23 As label:
                                                 Align: =Align.Center
@@ -813,7 +840,7 @@
                                                 Text: =LookUp(DEV_Documento, Value(ThisItem.id_documento.Value)=ID).id_tipo_docu.Value
                                                 Width: =281
                                                 Y: =-3
-                                                ZIndex: =3
+                                                ZIndex: =4
 
                                             Label4_16 As label:
                                                 Align: =Align.Center
@@ -827,14 +854,14 @@
                                                 Text: =Text(ThisItem.'fecha y hora',"dd/mm/yyyy")
                                                 Width: =140
                                                 X: =50
-                                                ZIndex: =4
+                                                ZIndex: =5
 
                                             Container13_11 As groupContainer.manualLayoutContainer:
                                                 AlignInContainer: =AlignInContainer.SetByContainer
                                                 LayoutMinHeight: =40
                                                 LayoutMinWidth: =40
                                                 Width: =80
-                                                ZIndex: =5
+                                                ZIndex: =6
 
                                                 Button2_3 As button:
                                                     BorderColor: =Self.Color
@@ -872,7 +899,7 @@
                                                 LayoutMinHeight: =40
                                                 LayoutMinWidth: =50
                                                 Width: =80
-                                                ZIndex: =6
+                                                ZIndex: =7
 
                                                 Icon1_47 As icon.Edit:
                                                     Height: =Parent.Height*60%
@@ -966,6 +993,19 @@
                                         Text: ="Nombre"
                                         ZIndex: =2
 
+                                    Label4_96 As label:
+                                        Align: =Align.Center
+                                        Color: =secondarytext
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: =FontWeight.Semibold
+                                        Height: =Parent.Height
+                                        PaddingLeft: =10
+                                        Size: =9.5
+                                        Text: ="Versión"
+                                        Width: =65
+                                        X: =50
+                                        ZIndex: =3
+
                                     Label2_58 As label:
                                         Align: =Align.Center
                                         Color: =primarytext
@@ -975,7 +1015,7 @@
                                         PaddingLeft: =15
                                         Size: =10
                                         Text: ="Tipo Documento"
-                                        ZIndex: =3
+                                        ZIndex: =4
 
                                     Label2_59 As label:
                                         Align: =Align.Center
@@ -986,7 +1026,7 @@
                                         PaddingLeft: =15
                                         Size: =10
                                         Text: ="F. Solicitud Aprobación"
-                                        ZIndex: =4
+                                        ZIndex: =5
 
                                     Label2_60 As label:
                                         Align: =Align.Center
@@ -1112,6 +1152,19 @@
                                                 Text: =LookUp(DEV_Documento, Value(ThisItem.id_documento.Value)=ID).Nombre
                                                 ZIndex: =2
 
+                                            Label4_95 As label:
+                                                Align: =Align.Center
+                                                Color: =secondarytext
+                                                Font: =Font.'Segoe UI'
+                                                FontWeight: =FontWeight.Semibold
+                                                Height: =Parent.Height
+                                                PaddingLeft: =10
+                                                Size: =9.5
+                                                Text: =ThisItem.version
+                                                Width: =65
+                                                X: =50
+                                                ZIndex: =3
+
                                             Label4_18 As label:
                                                 Align: =Align.Center
                                                 Color: =secondarytext
@@ -1124,7 +1177,7 @@
                                                 Text: =LookUp(DEV_Documento, Value(ThisItem.id_documento.Value)=ID).id_tipo_docu.Value
                                                 Width: =140
                                                 X: =50
-                                                ZIndex: =3
+                                                ZIndex: =4
 
                                             Label4_19 As label:
                                                 Align: =Align.Center
@@ -1138,13 +1191,13 @@
                                                 Text: =Text(ThisItem.'fecha y hora',"dd/mm/yyyy")
                                                 Width: =140
                                                 X: =50
-                                                ZIndex: =4
+                                                ZIndex: =5
 
                                             Container13_13 As groupContainer.manualLayoutContainer:
                                                 LayoutMinHeight: =40
                                                 LayoutMinWidth: =40
                                                 Width: =80
-                                                ZIndex: =5
+                                                ZIndex: =6
 
                                                 Button2_4 As button:
                                                     BorderColor: =Self.Color
@@ -1179,7 +1232,7 @@
                                                 LayoutMinHeight: =40
                                                 LayoutMinWidth: =50
                                                 Width: =80
-                                                ZIndex: =6
+                                                ZIndex: =7
 
                                                 Icon1_6 As icon.Edit:
                                                     Height: =Parent.Height*60%
@@ -1273,6 +1326,19 @@
                                         Text: ="Nombre"
                                         ZIndex: =2
 
+                                    Label4_98 As label:
+                                        Align: =Align.Center
+                                        Color: =secondarytext
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: =FontWeight.Semibold
+                                        Height: =Parent.Height
+                                        PaddingLeft: =10
+                                        Size: =9.5
+                                        Text: ="Versión"
+                                        Width: =65
+                                        X: =50
+                                        ZIndex: =3
+
                                     Label2_64 As label:
                                         Align: =Align.Center
                                         Color: =primarytext
@@ -1282,7 +1348,7 @@
                                         PaddingLeft: =15
                                         Size: =10
                                         Text: ="Tipo Documento"
-                                        ZIndex: =3
+                                        ZIndex: =4
 
                                     Label2_65 As label:
                                         Align: =Align.Center
@@ -1293,7 +1359,7 @@
                                         PaddingLeft: =15
                                         Size: =10
                                         Text: ="F. Solicitud Aprobación"
-                                        ZIndex: =4
+                                        ZIndex: =5
 
                                     Label2_66 As label:
                                         Align: =Align.Center
@@ -1417,6 +1483,19 @@
                                                 Text: =LookUp(DEV_Documento, Value(ThisItem.id_documento.Value)=ID).Nombre
                                                 ZIndex: =2
 
+                                            Label4_97 As label:
+                                                Align: =Align.Center
+                                                Color: =secondarytext
+                                                Font: =Font.'Segoe UI'
+                                                FontWeight: =FontWeight.Semibold
+                                                Height: =Parent.Height
+                                                PaddingLeft: =10
+                                                Size: =9.5
+                                                Text: =ThisItem.version
+                                                Width: =65
+                                                X: =50
+                                                ZIndex: =3
+
                                             Label4_21 As label:
                                                 Align: =Align.Center
                                                 Color: =secondarytext
@@ -1429,7 +1508,7 @@
                                                 Text: =LookUp(DEV_Documento, Value(ThisItem.id_documento.Value)=ID).id_tipo_docu.Value
                                                 Width: =140
                                                 X: =50
-                                                ZIndex: =3
+                                                ZIndex: =4
 
                                             Label4_22 As label:
                                                 Align: =Align.Center
@@ -1443,13 +1522,13 @@
                                                 Text: =Text(ThisItem.'fecha y hora',"dd/mm/yyyy")
                                                 Width: =140
                                                 X: =50
-                                                ZIndex: =4
+                                                ZIndex: =5
 
                                             Container13_15 As groupContainer.manualLayoutContainer:
                                                 LayoutMinHeight: =40
                                                 LayoutMinWidth: =40
                                                 Width: =80
-                                                ZIndex: =5
+                                                ZIndex: =6
 
                                                 Button2_5 As button:
                                                     BorderColor: =Self.Color
@@ -1484,7 +1563,7 @@
                                                 LayoutMinHeight: =40
                                                 LayoutMinWidth: =50
                                                 Width: =80
-                                                ZIndex: =6
+                                                ZIndex: =7
 
                                                 Icon1_7 As icon.Edit:
                                                     Height: =Parent.Height*60%
@@ -1578,6 +1657,19 @@
                                         Text: ="Nombre"
                                         ZIndex: =2
 
+                                    Label4_100 As label:
+                                        Align: =Align.Center
+                                        Color: =secondarytext
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: =FontWeight.Semibold
+                                        Height: =Parent.Height
+                                        PaddingLeft: =10
+                                        Size: =9.5
+                                        Text: ="Versión"
+                                        Width: =65
+                                        X: =50
+                                        ZIndex: =3
+
                                     title_tipodoc_publ_home_ra As label:
                                         Align: =Align.Center
                                         Color: =primarytext
@@ -1587,7 +1679,7 @@
                                         PaddingLeft: =15
                                         Size: =10
                                         Text: ="Tipo Documento"
-                                        ZIndex: =3
+                                        ZIndex: =4
 
                                     title_fsolicitud_publ_home_ra As label:
                                         Align: =Align.Center
@@ -1598,7 +1690,7 @@
                                         PaddingLeft: =15
                                         Size: =10
                                         Text: ="F. Solicitud Aprobación"
-                                        ZIndex: =4
+                                        ZIndex: =5
 
                                     title_estado_publ_home_ra As label:
                                         Align: =Align.Center
@@ -1722,6 +1814,19 @@
                                                 Text: =LookUp(DEV_Documento, Value(ThisItem.id_documento.Value)=ID).Nombre
                                                 ZIndex: =2
 
+                                            Label4_99 As label:
+                                                Align: =Align.Center
+                                                Color: =secondarytext
+                                                Font: =Font.'Segoe UI'
+                                                FontWeight: =FontWeight.Semibold
+                                                Height: =Parent.Height
+                                                PaddingLeft: =10
+                                                Size: =9.5
+                                                Text: =ThisItem.version
+                                                Width: =65
+                                                X: =50
+                                                ZIndex: =3
+
                                             Label4_24 As label:
                                                 Align: =Align.Center
                                                 Color: =secondarytext
@@ -1734,7 +1839,7 @@
                                                 Text: =LookUp(DEV_Documento, Value(ThisItem.id_documento.Value)=ID).id_tipo_docu.Value
                                                 Width: =140
                                                 X: =50
-                                                ZIndex: =3
+                                                ZIndex: =4
 
                                             Label4_25 As label:
                                                 Align: =Align.Center
@@ -1748,13 +1853,13 @@
                                                 Text: =Text(ThisItem.'fecha y hora',"dd/mm/yyyy")
                                                 Width: =140
                                                 X: =50
-                                                ZIndex: =4
+                                                ZIndex: =5
 
                                             Container13_17 As groupContainer.manualLayoutContainer:
                                                 LayoutMinHeight: =40
                                                 LayoutMinWidth: =40
                                                 Width: =80
-                                                ZIndex: =5
+                                                ZIndex: =6
 
                                                 Button2_6 As button:
                                                     BorderColor: =Self.Color
@@ -1793,7 +1898,7 @@
                                                 LayoutMinHeight: =40
                                                 LayoutMinWidth: =50
                                                 Width: =80
-                                                ZIndex: =6
+                                                ZIndex: =7
 
                                                 Icon1_8 As icon.Edit:
                                                     Height: =Parent.Height*60%

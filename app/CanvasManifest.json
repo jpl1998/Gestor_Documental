@@ -130,6 +130,7 @@
   "ScreenOrder": [
     "Home OP",
     "DocProcessoOP",
+    "DocPorPublicarOP",
     "DocOficialesOP",
     "DocHistóricoOP",
     "Home RA",

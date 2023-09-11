@@ -377,6 +377,19 @@
                                 Text: ="Nombre"
                                 ZIndex: =2
 
+                            Label4_121 As label:
+                                Align: =Align.Center
+                                Color: =secondarytext
+                                Font: =Font.'Segoe UI'
+                                FontWeight: =FontWeight.Semibold
+                                Height: =Parent.Height
+                                PaddingLeft: =10
+                                Size: =9.5
+                                Text: ="Versión"
+                                Width: =65
+                                X: =50
+                                ZIndex: =3
+
                             TipoDoc2_72 As label:
                                 Align: =Align.Center
                                 Color: =primarytext
@@ -386,7 +399,7 @@
                                 PaddingLeft: =15
                                 Size: =10
                                 Text: ="Tipo Documento"
-                                ZIndex: =3
+                                ZIndex: =4
 
                             FechaSoli2_73 As label:
                                 Align: =Align.Center
@@ -397,7 +410,7 @@
                                 PaddingLeft: =15
                                 Size: =10
                                 Text: ="F. Solicitud Revisión"
-                                ZIndex: =4
+                                ZIndex: =5
 
                             EstadoLabel2_74 As label:
                                 Align: =Align.Center
@@ -522,6 +535,19 @@
                                         Text: =ThisItem.Nombre
                                         ZIndex: =2
 
+                                    Label4_120 As label:
+                                        Align: =Align.Center
+                                        Color: =secondarytext
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: =FontWeight.Semibold
+                                        Height: =Parent.Height
+                                        PaddingLeft: =10
+                                        Size: =9.5
+                                        Text: =ThisItem.version
+                                        Width: =65
+                                        X: =50
+                                        ZIndex: =3
+
                                     Label4_110 As label:
                                         Align: =Align.Center
                                         Color: =secondarytext
@@ -534,7 +560,7 @@
                                         Text: =LookUp(DEV_TipoDocumento, ID =  ThisItem.id_tipo_docu.Id,Descripcion)
                                         Width: =140
                                         X: =50
-                                        ZIndex: =3
+                                        ZIndex: =4
 
                                     Label4_111 As label:
                                         Align: =Align.Center
@@ -548,13 +574,13 @@
                                         Text: =Text(ThisItem.fecha,"dd/mm/yyyy")
                                         Width: =140
                                         X: =50
-                                        ZIndex: =4
+                                        ZIndex: =5
 
                                     Container13_89 As groupContainer.manualLayoutContainer:
                                         LayoutMinHeight: =40
                                         LayoutMinWidth: =40
                                         Width: =80
-                                        ZIndex: =5
+                                        ZIndex: =6
 
                                         Button2_14 As button:
                                             BorderColor: =Self.Color
@@ -595,7 +621,7 @@
                                         LayoutMinHeight: =40
                                         LayoutMinWidth: =50
                                         Width: =80
-                                        ZIndex: =6
+                                        ZIndex: =7
 
                                         Icon1_50 As icon.Edit:
                                             Height: =Parent.Height*60%

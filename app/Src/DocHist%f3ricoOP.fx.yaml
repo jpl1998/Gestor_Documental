@@ -121,6 +121,7 @@
                     Items: |-
                         =Table({Name:"Home",Logo: 'Home (1)',Tela:'Home OP'},
                         {Name: "Doc. En Proceso",Logo: 'Document Sync', Tela:DocProcessoOP },
+                        {Name: "Doc. Por Publicar", Logo:'Document Text', Tela:DocPorPublicarOP },
                         {Name: "Doc. Oficiales", Logo:'Document Text', Tela:DocOficialesOP },
                         {Name: "Doc. Históricos", Logo:'Document SearchWhite', Tela: DocHistóricoOP })
                     Layout: =Layout.Vertical
@@ -220,7 +221,7 @@
                             FontWeight: =FontWeight.Semibold
                             PaddingBottom: =0
                             Size: =15
-                            Text: ="Documentos en Proceso"
+                            Text: ="Documentos Históricos"
                             ZIndex: =1
 
                         refresh_icon_5 As icon.Sync:
@@ -376,6 +377,19 @@
                                 Text: ="Nombre"
                                 ZIndex: =2
 
+                            Label4_92 As label:
+                                Align: =Align.Center
+                                Color: =secondarytext
+                                Font: =Font.'Segoe UI'
+                                FontWeight: =FontWeight.Semibold
+                                Height: =Parent.Height
+                                PaddingLeft: =10
+                                Size: =9.5
+                                Text: ="Versión"
+                                Width: =65
+                                X: =50
+                                ZIndex: =3
+
                             Label2_141 As label:
                                 Align: =Align.Center
                                 Color: =primarytext
@@ -385,7 +399,7 @@
                                 PaddingLeft: =15
                                 Size: =10
                                 Text: ="Tipo Documento"
-                                ZIndex: =3
+                                ZIndex: =4
 
                             Label2_142 As label:
                                 Align: =Align.Center
@@ -396,7 +410,7 @@
                                 PaddingLeft: =15
                                 Size: =10
                                 Text: ="F. de Baja"
-                                ZIndex: =4
+                                ZIndex: =5
 
                             Label2_143 As label:
                                 Align: =Align.Center
@@ -521,6 +535,19 @@
                                         Text: =ThisItem.Nombre
                                         ZIndex: =2
 
+                                    Label4_91 As label:
+                                        Align: =Align.Center
+                                        Color: =secondarytext
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: =FontWeight.Semibold
+                                        Height: =Parent.Height
+                                        PaddingLeft: =10
+                                        Size: =9.5
+                                        Text: =ThisItem.version
+                                        Width: =65
+                                        X: =50
+                                        ZIndex: =3
+
                                     Label4_56 As label:
                                         Align: =Align.Center
                                         Color: =secondarytext
@@ -533,7 +560,7 @@
                                         Text: =LookUp(DEV_TipoDocumento, ID =  ThisItem.id_tipo_docu.Id,Descripcion)
                                         Width: =140
                                         X: =50
-                                        ZIndex: =3
+                                        ZIndex: =4
 
                                     Label4_57 As label:
                                         Align: =Align.Center
@@ -547,13 +574,13 @@
                                         Text: =LookUp(DEV_Datos_Baja,id_documento.Value=Text(ThisItem.ID)).fecha
                                         Width: =140
                                         X: =50
-                                        ZIndex: =4
+                                        ZIndex: =5
 
                                     Container13_44 As groupContainer.manualLayoutContainer:
                                         LayoutMinHeight: =40
                                         LayoutMinWidth: =40
                                         Width: =80
-                                        ZIndex: =5
+                                        ZIndex: =6
 
                                         Button2_11 As button:
                                             BorderColor: =Self.Color
@@ -596,7 +623,7 @@
                                         LayoutMinHeight: =40
                                         LayoutMinWidth: =50
                                         Width: =80
-                                        ZIndex: =6
+                                        ZIndex: =7
 
                                         Icon1_23 As icon.Edit:
                                             Height: =Parent.Height*60%

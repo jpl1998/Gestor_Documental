@@ -121,6 +121,7 @@
                     Items: |-
                         =Table({Name:"Home",Logo: 'Home (1)',Tela:'Home OP'},
                         {Name: "Doc. En Proceso",Logo: 'Document Sync', Tela:DocProcessoOP },
+                        {Name: "Doc. Por Publicar", Logo:'Document Text', Tela:DocPorPublicarOP },
                         {Name: "Doc. Oficiales", Logo:'Document Textwhite', Tela:DocOficialesOP },
                         {Name: "Doc. Históricos", Logo:'Document Search' , Tela: DocHistóricoOP })
                     Layout: =Layout.Vertical
@@ -220,7 +221,7 @@
                             FontWeight: =FontWeight.Semibold
                             PaddingBottom: =0
                             Size: =15
-                            Text: ="Documentos en Proceso"
+                            Text: ="Documentos Oficiales"
                             ZIndex: =1
 
                         refresh_icon_4 As icon.Sync:
@@ -376,6 +377,19 @@
                                 Text: ="Nombre"
                                 ZIndex: =2
 
+                            Label4_90 As label:
+                                Align: =Align.Center
+                                Color: =secondarytext
+                                Font: =Font.'Segoe UI'
+                                FontWeight: =FontWeight.Semibold
+                                Height: =Parent.Height
+                                PaddingLeft: =10
+                                Size: =9.5
+                                Text: ="Versión"
+                                Width: =65
+                                X: =50
+                                ZIndex: =3
+
                             Label2_220 As label:
                                 Align: =Align.Center
                                 Color: =primarytext
@@ -385,7 +399,7 @@
                                 PaddingLeft: =15
                                 Size: =10
                                 Text: ="Tipo Documento"
-                                ZIndex: =3
+                                ZIndex: =4
 
                             Label2_221 As label:
                                 Align: =Align.Center
@@ -396,7 +410,7 @@
                                 PaddingLeft: =15
                                 Size: =10
                                 Text: ="F. Solicitud Aprobación"
-                                ZIndex: =4
+                                ZIndex: =5
 
                             Label2_222 As label:
                                 Align: =Align.Center
@@ -452,7 +466,7 @@
                                         IsBlank(varFilterMenu.fechaHasta) || varFilterMenu.fechaHasta >= fecha,
                                         ID in Filter(
                                             DEV_Modificacion_estatus_proceso_doc,
-                                            ind_inact = "Activo" && Or(id_estatus_documento.Value = "Publicado", id_estatus_documento.Value = "Difundido", id_estatus_documento.Value="Aprobado" )
+                                            ind_inact = "Activo" && Or(id_estatus_documento.Value = "Publicado", id_estatus_documento.Value = "Difundido" )
                                         ).id_doc,
                                         searchbar_docRev_ra.Text in Nombre
                                     )
@@ -521,6 +535,19 @@
                                         Text: =ThisItem.Nombre
                                         ZIndex: =2
 
+                                    Label4_89 As label:
+                                        Align: =Align.Center
+                                        Color: =secondarytext
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: =FontWeight.Semibold
+                                        Height: =Parent.Height
+                                        PaddingLeft: =10
+                                        Size: =9.5
+                                        Text: =ThisItem.version
+                                        Width: =65
+                                        X: =50
+                                        ZIndex: =3
+
                                     Label4_147 As label:
                                         Align: =Align.Center
                                         Color: =secondarytext
@@ -533,7 +560,7 @@
                                         Text: =LookUp(DEV_TipoDocumento, ID =  ThisItem.id_tipo_docu.Id,Descripcion)
                                         Width: =140
                                         X: =50
-                                        ZIndex: =3
+                                        ZIndex: =4
 
                                     Label4_148 As label:
                                         Align: =Align.Center
@@ -547,13 +574,13 @@
                                         Text: =Text(ThisItem.fecha,"dd/mm/yyyy")
                                         Width: =140
                                         X: =50
-                                        ZIndex: =4
+                                        ZIndex: =5
 
                                     Container13_130 As groupContainer.manualLayoutContainer:
                                         LayoutMinHeight: =40
                                         LayoutMinWidth: =40
                                         Width: =80
-                                        ZIndex: =5
+                                        ZIndex: =6
 
                                         Button2_17 As button:
                                             BorderColor: =Self.Color
@@ -594,7 +621,7 @@
                                         LayoutMinHeight: =40
                                         LayoutMinWidth: =50
                                         Width: =80
-                                        ZIndex: =6
+                                        ZIndex: =7
 
                                         Icon1_74 As icon.Edit:
                                             Height: =Parent.Height*60%
@@ -8187,7 +8214,7 @@
                             FontWeight: =FontWeight.Bold
                             Text: |-
                                 ="Difusión
-                                por CR"
+                                Masiva"
                             ZIndex: =2
 
                     Button4_29 As button:
