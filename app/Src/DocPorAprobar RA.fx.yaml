@@ -669,7 +669,7 @@
 
                                         Icon1_48 As icon.Edit:
                                             Height: =Parent.Height*60%
-                                            Icon: =Icon.Edit
+                                            Icon: =If(menu_filter_docRev_ra_2.Selected.Value="Pendientes",  Icon.Edit,Icon.View)
                                             OnSelect: |-
                                                 =If(menu_filter_docRev_ra_2.Selected.Value="Pendientes",
                                                 UpdateContext({varSelectedDoc:ThisItem, varSidebarPopup:true}),
