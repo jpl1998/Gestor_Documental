@@ -8357,7 +8357,7 @@
                             }
                         )
                     );
-                    Necesidaddenotificacióndedifusióndepublicacióndedocumentooficial.Run(Concat(Usuarios_difusion_4.SelectedItems,Mail,";"));
+                    Necesidaddenotificacióndedifusióndepublicacióndedocumentooficial.Run(Concat(Usuarios_difusion_4.SelectedItems,Mail,";"),varDocSide.ID);
                     UpdateContext({varDifusionUsuario:false})
                     
                 Size: =16
@@ -9292,7 +9292,7 @@
                             }
                         )
                     );
-                    Necesidaddenotificacióndedifusióndepublicacióndedocumentooficial.Run(CorreosDifusion_1.Text);
+                    Necesidaddenotificacióndedifusióndepublicacióndedocumentooficial.Run(CorreosDifusion_1.Text,varDocSide.ID);
                     UpdateContext({varDifusionCR:false})
                 Size: =16
                 Text: ="Realizar Difusión"

@@ -8435,7 +8435,7 @@
                 Height: =52
                 HoverFill: =ColorFade(primary,-20%)
                 OnSelect: |
-                    =Necesidaddenotificacióndedifusióndepublicacióndedocumentooficial.Run(Concat(Usuarios_difusion.SelectedItems,Mail,";"));
+                    =Necesidaddenotificacióndedifusióndepublicacióndedocumentooficial.Run(Concat(Usuarios_difusion.SelectedItems,Mail,";"),varDocSide.ID);
                     UpdateContext({varDifusionUsuario:false})
                 Size: =16
                 Text: ="Realizar Difusión"
