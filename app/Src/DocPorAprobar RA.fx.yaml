@@ -3824,7 +3824,7 @@
                                     entrega: varSelectedDoc.entrega
                                 }
                             );
-                            Informarobservacionesdedocumento.Run(Concat(elaborador_evaluacion_sidebar_ra.AllItems,mail_elaborador_ra,";"),varSelectedDoc.codigo, varSelectedDoc.version, varSelectedDoc.Nombre, comentario_observacion_ra_3.Text)
+                            Informarobservacionesdedocumento.Run(Concat(elaborador_evaluacion_sidebar_ra.AllItems,mail_elaborador_ra,";"),varSelectedDoc.ID)
                         );
                         If(
                             IsEmpty(Filter(aprobador_evaluacion_sidebar_ra_1.AllItems, IsBlank(obs_text_sidebar_ra_8.Text) || obs_text_sidebar_ra_8.Text ="Observado")),
@@ -4043,7 +4043,7 @@
                             entrega: varSelectedDoc.entrega
                         }
                     );
-                    Informarobservacionesdedocumento.Run(Concat(elaborador_evaluacion_sidebar_ra.AllItems,mail_elaborador_ra,";"),varSelectedDoc.codigo, varSelectedDoc.version, varSelectedDoc.Nombre, comentario_observacion_ra_3.Text);
+                    Informarobservacionesdedocumento.Run(Concat(elaborador_evaluacion_sidebar_ra.AllItems,mail_elaborador_ra,";"),varSelectedDoc.ID);
                     UpdateContext({varResultadoPopup: true})
                     );
                     UpdateContext({varObservacionPopup:false})

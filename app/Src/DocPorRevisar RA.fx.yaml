@@ -4405,7 +4405,7 @@
                                     entrega: varSelectedDoc.entrega
                                 }
                             );
-                            NecesidaddeAprobacióndedocumento.Run(Concat(aprobador_evaluacion_sidebar_ra.AllItems,mail_aprobador_ra_7,";"),varSelectedDoc.codigo, varSelectedDoc.version, varSelectedDoc.Nombre, varSelectedDoc.id_tipo_docu.Value, varSelectedDoc.Dueno_Proceso)
+                            NecesidaddeAprobacióndedocumento.Run(Concat(aprobador_evaluacion_sidebar_ra.AllItems,mail_aprobador_ra_7,";"),varSelectedDoc.ID)
                         );
                         UpdateContext({varResultadoPopup: true})
                     Text: ="Conforme Todo"
@@ -4518,7 +4518,7 @@
                                     id_doc:varSelectedDoc.ID,
                                     entrega: varSelectedDoc.entrega
                                 }
-                            );Informarobservacionesdedocumento.Run(Concat(elaborador_evaluacion_sidebar_ra.AllItems,mail_elaborador_ra,";"),varSelectedDoc.codigo, varSelectedDoc.version, varSelectedDoc.Nombre, comentario_observacion_ra.Text)
+                            );Informarobservacionesdedocumento.Run(Concat(elaborador_evaluacion_sidebar_ra.AllItems,mail_elaborador_ra,";"),varSelectedDoc.ID)
                             
                         );
                         If(
@@ -4549,7 +4549,7 @@
                                     entrega: varSelectedDoc.entrega
                                 }
                             );
-                            NecesidaddeAprobacióndedocumento.Run(Concat(aprobador_evaluacion_sidebar_ra.AllItems,mail_aprobador_ra_7,";"),varSelectedDoc.codigo, varSelectedDoc.version, varSelectedDoc.Nombre, varSelectedDoc.id_tipo_docu.Value, varSelectedDoc.Dueno_Proceso)
+                            NecesidaddeAprobacióndedocumento.Run(Concat(aprobador_evaluacion_sidebar_ra.AllItems,mail_aprobador_ra_7,";"),varSelectedDoc.ID)
                         );
                         
                         UpdateContext({varResultadoPopup: true})
@@ -4738,7 +4738,7 @@
                             entrega: varSelectedDoc.entrega
                         }
                     );
-                    Informarobservacionesdedocumento.Run(Concat(elaborador_evaluacion_sidebar_ra.AllItems,mail_elaborador_ra,";"),varSelectedDoc.codigo, varSelectedDoc.version, varSelectedDoc.Nombre, comentario_observacion_ra.Text);
+                    Informarobservacionesdedocumento.Run(Concat(elaborador_evaluacion_sidebar_ra.AllItems,mail_elaborador_ra,";"),varSelectedDoc.ID);
                     UpdateContext({varResultadoPopup: true})
                     );
                     UpdateContext({varObservacionPopup:false})

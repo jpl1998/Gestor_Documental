@@ -3413,7 +3413,10 @@
                             FillPortions: =1
                             LayoutMinHeight: =30
                             OnSelect: |-
-                                =UpdateContext({varNewFormPrincipal:false, varNewFormFlujograma:false, varNewFormRcki:false});
+                                =ResetForm(FormEditPrincipal_2);
+                                ResetForm(FormEditFlujograma_2);
+                                ResetForm(FormEditRcki_2);
+                                UpdateContext({varNewFormPrincipal:false, varNewFormFlujograma:false, varNewFormRcki:false});
                                 Set(varpopupformedit,false);
                                 Set(varpopupuploadeditdoc,true)
                             RadiusBottomLeft: =5

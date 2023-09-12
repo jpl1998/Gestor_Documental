@@ -8015,6 +8015,7 @@
                         },
                         baja_attachment_form_4.Updates
                     );
+                    Eliminarfolderaldardebajadocumento.Run(varDocSide.ID);
                     Set(varsidebarop,false);
                     UpdateContext({varPopupDarBaja:false})
                 Text: ="Dar Baja al Documento"
