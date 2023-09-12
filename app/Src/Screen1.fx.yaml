@@ -13,7 +13,7 @@ Screen1 As screen:
         Anexos_DataCard1 As typedDataCard.attachmentsEditCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="{Attachments}"
-            Default: =ThisItem.Anexos
+            Default: =
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@DEV_Archivos],DataSourceInfo.DisplayName,"{Attachments}")
             Fill: =RGBA(0, 0, 0, 0)
