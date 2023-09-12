@@ -502,7 +502,7 @@
                                         menu_filter_docRev_ra_2.Selected.Value = "Pendientes",
                                         Filter(
                                             DEV_Documento,
-                                            IsBlank(varFilterMenu.cargadoPor) || 'Created By'.Email = varFilterMenu.cargadoPor.Mail,
+                                            IsBlank(varFilterMenu.cargadoPor) || 'Creado por'.Email = varFilterMenu.cargadoPor.Mail,
                                             IsBlank(varFilterMenu.tipoDocumento) || id_tipo_docu.Value = varFilterMenu.tipoDocumento.Value,
                                             IsBlank(varFilterMenu.dueProceso) || Dueno_Proceso = varFilterMenu.dueProceso,
                                             IsBlank(varFilterMenu.alcance) || id_alcance= varFilterMenu.alcance,
@@ -524,7 +524,7 @@
                                         ),
                                         Filter(
                                                 DEV_Documento,
-                                                IsBlank(varFilterMenu.cargadoPor) ||  'Created By'.Email = varFilterMenu.cargadoPor.Mail,
+                                                IsBlank(varFilterMenu.cargadoPor) ||  'Creado por'.Email = varFilterMenu.cargadoPor.Mail,
                                                 IsBlank(varFilterMenu.tipoDocumento) || id_tipo_docu.Value = varFilterMenu.tipoDocumento.Value,
                                                 IsBlank(varFilterMenu.dueProceso) || Dueno_Proceso = varFilterMenu.dueProceso,
                                                 IsBlank(varFilterMenu.alcance) || id_alcance = varFilterMenu.alcance,
@@ -1360,7 +1360,7 @@
                         archivo_title_sidebar_docRev_ra_13 As label:
                             Font: =Font.'Segoe UI'
                             Size: =12
-                            Text: =First(ThisItem.Attachments).DisplayName
+                            Text: =First(ThisItem.'Datos adjuntos').DisplayName
                             Width: =304
                             ZIndex: =2
 
@@ -1385,7 +1385,7 @@
                                 FocusedBorderThickness: =2
                                 Height: =25
                                 HoverFill: =RGBA(0, 0, 0, 0.15)
-                                OnSelect: =Launch(Concatenate(First(ThisItem.Attachments).AbsoluteUri,"?web=1"))
+                                OnSelect: =Launch(Concatenate(First(ThisItem.'Datos adjuntos').AbsoluteUri,"?web=1"))
                                 PressedFill: =
                                 RadiusBottomLeft: =5
                                 RadiusBottomRight: =5
@@ -1418,7 +1418,7 @@
                                 FocusedBorderThickness: =2
                                 Height: =25
                                 HoverFill: =RGBA(0, 0, 0, 0.15)
-                                OnSelect: =Launch(First(ThisItem.Attachments).AbsoluteUri)
+                                OnSelect: =Launch(First(ThisItem.'Datos adjuntos').AbsoluteUri)
                                 PressedFill: =
                                 RadiusBottomLeft: =5
                                 RadiusBottomRight: =5
@@ -1464,7 +1464,7 @@
                         Font: =Font.'Segoe UI'
                         Height: =24
                         Size: =12
-                        Text: =varSelectedDoc.'Created By'.DisplayName
+                        Text: =varSelectedDoc.'Creado por'.DisplayName
                         Width: =(Parent.Width/3)*2 -20
                         ZIndex: =2
 
@@ -1904,7 +1904,7 @@
                         archivo_title_sidebar_docRev_ra_27 As label:
                             Font: =Font.'Segoe UI'
                             Size: =12
-                            Text: =First(ThisItem.Attachments).DisplayName
+                            Text: =First(ThisItem.'Datos adjuntos').DisplayName
                             Width: =304
                             ZIndex: =2
 
@@ -1929,7 +1929,7 @@
                                 FocusedBorderThickness: =2
                                 Height: =25
                                 HoverFill: =RGBA(0, 0, 0, 0.15)
-                                OnSelect: =Launch(Concatenate(First(ThisItem.Attachments).AbsoluteUri,"?web=1"))
+                                OnSelect: =Launch(Concatenate(First(ThisItem.'Datos adjuntos').AbsoluteUri,"?web=1"))
                                 PressedFill: =
                                 RadiusBottomLeft: =5
                                 RadiusBottomRight: =5
@@ -1962,7 +1962,7 @@
                                 FocusedBorderThickness: =2
                                 Height: =25
                                 HoverFill: =RGBA(0, 0, 0, 0.15)
-                                OnSelect: =Launch(First(ThisItem.Attachments).AbsoluteUri)
+                                OnSelect: =Launch(First(ThisItem.'Datos adjuntos').AbsoluteUri)
                                 PressedFill: =
                                 RadiusBottomLeft: =5
                                 RadiusBottomRight: =5
@@ -2008,7 +2008,7 @@
                         Font: =Font.'Segoe UI'
                         Height: =24
                         Size: =12
-                        Text: =varDocSide.'Created By'.DisplayName
+                        Text: =varDocSide.'Creado por'.DisplayName
                         Width: =(Parent.Width/3)*2 -20
                         ZIndex: =2
 
@@ -2951,7 +2951,7 @@
                                 AlignInContainer: =AlignInContainer.Stretch
                                 Font: =Font.'Segoe UI'
                                 Size: =12
-                                Text: =First(ThisItem.Attachments).DisplayName
+                                Text: =First(ThisItem.'Datos adjuntos').DisplayName
                                 Width: =195
                                 ZIndex: =2
 
@@ -2975,7 +2975,7 @@
                                     Fill: =RGBA(0, 0, 0, 0)
                                     Height: =25
                                     HoverFill: =RGBA(0, 0, 0, 0.14)
-                                    OnSelect: =Launch(Concatenate(First(ThisItem.Attachments).AbsoluteUri,"?web=1"))
+                                    OnSelect: =Launch(Concatenate(First(ThisItem.'Datos adjuntos').AbsoluteUri,"?web=1"))
                                     PressedFill: =
                                     RadiusBottomLeft: =5
                                     RadiusBottomRight: =5
@@ -3007,7 +3007,7 @@
                                     Fill: =RGBA(0, 0, 0, 0)
                                     Height: =25
                                     HoverFill: =RGBA(0, 0, 0, 0.15)
-                                    OnSelect: =Launch(First(ThisItem.Attachments).AbsoluteUri)
+                                    OnSelect: =Launch(First(ThisItem.'Datos adjuntos').AbsoluteUri)
                                     PressedFill: =
                                     RadiusBottomLeft: =5
                                     RadiusBottomRight: =5
@@ -3185,7 +3185,7 @@
                                 AlignInContainer: =AlignInContainer.Stretch
                                 Font: =Font.'Segoe UI'
                                 Size: =12
-                                Text: =First(ThisItem.Attachments).DisplayName
+                                Text: =First(ThisItem.'Datos adjuntos').DisplayName
                                 Width: =195
                                 ZIndex: =2
 
@@ -3209,7 +3209,7 @@
                                     Fill: =RGBA(0, 0, 0, 0)
                                     Height: =25
                                     HoverFill: =RGBA(0, 0, 0, 0.14)
-                                    OnSelect: =Launch(Concatenate(First(ThisItem.Attachments).AbsoluteUri,"?web=1"))
+                                    OnSelect: =Launch(Concatenate(First(ThisItem.'Datos adjuntos').AbsoluteUri,"?web=1"))
                                     PressedFill: =
                                     RadiusBottomLeft: =5
                                     RadiusBottomRight: =5
@@ -3241,7 +3241,7 @@
                                     Fill: =RGBA(0, 0, 0, 0)
                                     Height: =25
                                     HoverFill: =RGBA(0, 0, 0, 0.15)
-                                    OnSelect: =Launch(First(ThisItem.Attachments).AbsoluteUri)
+                                    OnSelect: =Launch(First(ThisItem.'Datos adjuntos').AbsoluteUri)
                                     PressedFill: =
                                     RadiusBottomLeft: =5
                                     RadiusBottomRight: =5
@@ -3440,7 +3440,7 @@
                                 AlignInContainer: =AlignInContainer.Stretch
                                 Font: =Font.'Segoe UI'
                                 Size: =12
-                                Text: =First(ThisItem.Attachments).DisplayName
+                                Text: =First(ThisItem.'Datos adjuntos').DisplayName
                                 Width: =195
                                 ZIndex: =2
 
@@ -3464,7 +3464,7 @@
                                     Fill: =RGBA(0, 0, 0, 0)
                                     Height: =25
                                     HoverFill: =RGBA(0, 0, 0, 0.14)
-                                    OnSelect: =Launch(Concatenate(First(ThisItem.Attachments).AbsoluteUri,"?web=1"))
+                                    OnSelect: =Launch(Concatenate(First(ThisItem.'Datos adjuntos').AbsoluteUri,"?web=1"))
                                     PressedFill: =
                                     RadiusBottomLeft: =5
                                     RadiusBottomRight: =5
@@ -3496,7 +3496,7 @@
                                     Fill: =RGBA(0, 0, 0, 0)
                                     Height: =25
                                     HoverFill: =RGBA(0, 0, 0, 0.15)
-                                    OnSelect: =Launch(First(ThisItem.Attachments).AbsoluteUri)
+                                    OnSelect: =Launch(First(ThisItem.'Datos adjuntos').AbsoluteUri)
                                     PressedFill: =
                                     RadiusBottomLeft: =5
                                     RadiusBottomRight: =5
@@ -4094,7 +4094,7 @@
                     Attachments_DataCard1_1 As typedDataCard.attachmentsEditCard:
                         BorderStyle: =BorderStyle.Solid
                         DataField: ="{Attachments}"
-                        Default: =ThisItem.Attachments
+                        Default: =ThisItem.'Datos adjuntos'
                         DisplayMode: =Parent.DisplayMode
                         DisplayName: =DataSourceInfo([@DEV_Observacion],DataSourceInfo.DisplayName,"{Attachments}")
                         Fill: =RGBA(0, 0, 0, 0)
@@ -4180,7 +4180,7 @@
                     Attachments_DataCard1_9 As typedDataCard.attachmentsEditCard:
                         BorderStyle: =BorderStyle.Solid
                         DataField: ="{Attachments}"
-                        Default: =ThisItem.Attachments
+                        Default: =ThisItem.'Datos adjuntos'
                         DisplayMode: =Parent.DisplayMode
                         DisplayName: =DataSourceInfo([@DEV_Observacion],DataSourceInfo.DisplayName,"{Attachments}")
                         Fill: =RGBA(0, 0, 0, 0)
@@ -4266,7 +4266,7 @@
                     Attachments_DataCard1_10 As typedDataCard.attachmentsEditCard:
                         BorderStyle: =BorderStyle.Solid
                         DataField: ="{Attachments}"
-                        Default: =ThisItem.Attachments
+                        Default: =ThisItem.'Datos adjuntos'
                         DisplayMode: =Parent.DisplayMode
                         DisplayName: =DataSourceInfo([@DEV_Observacion],DataSourceInfo.DisplayName,"{Attachments}")
                         Fill: =RGBA(0, 0, 0, 0)
@@ -4367,7 +4367,7 @@
                     Attachments_DataCard1_11 As typedDataCard.attachmentsEditCard:
                         BorderStyle: =BorderStyle.Solid
                         DataField: ="{Attachments}"
-                        Default: =ThisItem.Attachments
+                        Default: =ThisItem.'Datos adjuntos'
                         DisplayMode: =Parent.DisplayMode
                         DisplayName: =DataSourceInfo([@DEV_Observacion],DataSourceInfo.DisplayName,"{Attachments}")
                         Fill: =RGBA(0, 0, 0, 0)
@@ -4551,7 +4551,7 @@
                     PaddingRight: =0
                     PaddingTop: =0
                     Size: =12
-                    Text: =First(LookUp(DEV_Archivos, Value(ThisItem.id_archivo.Value)=ID).Attachments).DisplayName
+                    Text: =First(LookUp(DEV_Archivos, Value(ThisItem.id_archivo.Value)=ID).'Datos adjuntos').DisplayName
                     VerticalAlign: =VerticalAlign.Top
                     Width: =Parent.TemplateWidth - Image6_1.Width - 100
                     X: =56
@@ -4667,7 +4667,7 @@
                 Font: =Font.'Segoe UI'
                 Height: =30
                 Size: =12
-                Text: =First(LookUp(DEV_Observacion, id_archivo.Value=Text(docs_registro_obs_ra_1.Selected.id_archivo.Value) && ind_inact="Activo" && id_interlocutor.Value = Text(varObsDatos.id_interlocutor.Value)).Attachments).DisplayName
+                Text: =First(LookUp(DEV_Observacion, id_archivo.Value=Text(docs_registro_obs_ra_1.Selected.id_archivo.Value) && ind_inact="Activo" && id_interlocutor.Value = Text(varObsDatos.id_interlocutor.Value)).'Datos adjuntos').DisplayName
                 Width: =320
                 X: =25
                 Y: =archivo_title_registro_obs_popup_ra_2.Y+archivo_title_registro_obs_popup_ra_2.Height+10
@@ -4692,7 +4692,7 @@
                 Height: =20
                 HoverColor: =Self.Color
                 HoverFill: =RGBA(0, 0, 0, 0.15)
-                OnSelect: =Launch(First(LookUp(DEV_Observacion, id_archivo.Value=Text(docs_registro_obs_ra_1.Selected.id_archivo.Value) && ind_inact="Activo").Attachments).AbsoluteUri)
+                OnSelect: =Launch(First(LookUp(DEV_Observacion, id_archivo.Value=Text(docs_registro_obs_ra_1.Selected.id_archivo.Value) && ind_inact="Activo").'Datos adjuntos').AbsoluteUri)
                 PressedColor: =Self.Color
                 PressedFill: =RGBA(0, 0, 0, 0.15)
                 Size: =8
@@ -4826,7 +4826,7 @@
                     archivo_title_sidebar_docRev_ra_23 As label:
                         Font: =Font.'Segoe UI'
                         Size: =12
-                        Text: =First(ThisItem.Attachments).DisplayName
+                        Text: =First(ThisItem.'Datos adjuntos').DisplayName
                         Width: =304
                         ZIndex: =2
 
@@ -4851,7 +4851,7 @@
                             FocusedBorderThickness: =2
                             Height: =25
                             HoverFill: =RGBA(0, 0, 0, 0.15)
-                            OnSelect: =Launch(Concatenate(First(ThisItem.Attachments).AbsoluteUri,"?web=1"))
+                            OnSelect: =Launch(Concatenate(First(ThisItem.'Datos adjuntos').AbsoluteUri,"?web=1"))
                             PressedFill: =
                             RadiusBottomLeft: =5
                             RadiusBottomRight: =5
@@ -4884,7 +4884,7 @@
                             FocusedBorderThickness: =2
                             Height: =25
                             HoverFill: =RGBA(0, 0, 0, 0.15)
-                            OnSelect: =Launch(First(ThisItem.Attachments).AbsoluteUri)
+                            OnSelect: =Launch(First(ThisItem.'Datos adjuntos').AbsoluteUri)
                             PressedFill: =
                             RadiusBottomLeft: =5
                             RadiusBottomRight: =5
