@@ -482,7 +482,7 @@
                                             DEV_Modificacion_estatus_proceso_doc,
                                             ind_inact = "Activo" && Or(id_estatus_documento.Value = "Por revisar", id_estatus_documento.Value = "Por aprobar",id_estatus_documento.Value = "Observado")
                                         ).id_doc,
-                                        searchbar_docRev_ra.Text in Nombre
+                                        TextInput1.Text in Nombre
                                     )
                                 Layout: =Layout.Vertical
                                 LoadingSpinner: =LoadingSpinner.Data

@@ -468,7 +468,7 @@
                                             DEV_Modificacion_estatus_proceso_doc,
                                             ind_inact = "Activo" && Or(id_estatus_documento.Value = "Aprobado")
                                         ).id_doc,
-                                        searchbar_docRev_ra.Text in Nombre
+                                        TextInput1_4.Text in Nombre
                                     )
                                 Layout: =Layout.Vertical
                                 LoadingSpinner: =LoadingSpinner.Data
@@ -1313,7 +1313,8 @@
                                 fechaHasta: DatePicker1_20.SelectedDate
                             }
                             );
-                            Set(varpopupfilter,false)
+                            Set(varpopupfilter,false);
+                            Set(varUser,ComboBox2_78.Selected)
                         RadiusBottomLeft: =5
                         RadiusBottomRight: =5
                         RadiusTopLeft: =5
